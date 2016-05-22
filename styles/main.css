@@ -1,6 +1,11 @@
 body {
 	margin:0px;
-	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-family: 'Helvetica Neue', 'Open Sans', 'Times New Roman', Helvetica, Arial, sans-serif;
+	letter-spacing: 3px;
+	font-weight: bold;
+}
+* {
+   box-sizing:border-box;
 }
 div.navbar {
 	display:block;
@@ -22,9 +27,12 @@ div.logo {
 }
 div.search {
 	position: absolute;
-	right: 40px;
+	right: 300px;
 	top: 45px;
 	display: inline;
+	height:100px;
+	width:20px;
+
 }
 div.tabs {
 	position: absolute;
@@ -47,27 +55,44 @@ img.tab-image {
     transform: translate(30px, 0);
 }
 input {
-	-moz-border-radius: 15px;
- 	border-radius: 15px;
+	-moz-border-radius: 20px;
+ 	border-radius: 20px;
     border:solid 1px #eeeeee;
     padding: 10px;
-    padding-left:30px;    
-    background-color: #eeeeee;
+    padding-left:60px;    
+    background-color: transparent;
     color: #aaaaaa;
+    position: absolute;
+    left:0px;
+    z-index: 1;
 }
 input:focus {
     outline:none;
+}
+img.search-bar {
+	/*display: block;*/
+	position: absolute;
+	top:0px;
+	left:0px;
+	/*z-index: 2;*/
+	height:40px;
+	/*width:100px;*/
 }
 div.heading {
 	text-align: center;
 	padding: 50px;
 	padding-top: 120px;
+	color: #888888;
+	letter-spacing: 4px;
 }
 h1 {
 	margin: 0px;
+	padding: 3px;
 }
 h2 {
 	margin: 0px;
+	color: #cccccc;
+	padding: 3px;
 }
 h3 {
 	margin: 0px;
@@ -77,21 +102,25 @@ div.mainbody-midsection {
 }
 div.logistics-left {
 	display: inline-block;
-	width: 17%;
-	margin-left: 10%;
+	width: 25%;
+	margin-left: 5%;
 	text-align: center;
+	margin-bottom: 40px;
 	font-size: 9pt;
 }
 div.center-logo {
 	display: inline-block;
-	width:35%;
+	width:24%;
 	margin-right:6%;
 	margin-left:6%;
+	margin-top: 20px;
+	transform: translate(0, 20px);
 }
 div.logistics-right {
 	display: inline-block;
-	width: 17%;
+	width: 25%;
 	margin-right: 5%;
+	margin-bottom: 40px;
 	text-align: center;
 	font-size: 9pt;
 }
@@ -116,30 +145,39 @@ div.logistics-bottom {
 p.logistics {
 	font-size: 10pt;
 	padding: 8px;
+	font-style: bold;
 }
 p.logistics-small {
 	font-size: 8pt;
 	padding: 8px;
+	font-style: bold;
 }
 p.logistics-small-gray {
 	font-size: 8pt;
 	padding: 12px;
 	color: gray;
+	font-style: bold;
 }
 div.mainbody-piazza {
 	display: block;
 	text-align: center;
     left: 50%; 
     margin: 20px;
-    margin-left: 38%;
-    margin-right: 38%;
+    margin-left: 20%;
+    margin-right: 20%;
     padding: 4px;
     margin-bottom: 50px;
+}
+h3.piazza {
+	letter-spacing: 12px;
+	font-size: 24pt;
+	font-weight: normal;
 }
 
 div.bottom-panel {
 	background: #676767;
 	padding: 30px
+	font-weight:normal;
 }
 p.stay-in-touch {
 	padding:10px;
@@ -149,6 +187,7 @@ p.stay-in-touch {
 div.contact {
 	display: block;
 	height:40px;
+
 }
 img.contact-icon {
 	/*display: inline-block;*/
@@ -167,6 +206,18 @@ p.contact-text {
 	font-size: 12pt;
 	font-style: italic;
 	text-align: left;
-	top:50%;
+	top:30%;
     transform: translate(-55px,-50%);
+}
+p.start-dates {
+	font-weight: bold;
+}
+p.start-dates-italics {
+	font-weight: bold;
+	font-style: italic;
+}
+h3.piazza {
+	color: #66aaff;
+	font-size: 20pt;
+	letter-spacing: 6px;
 }
