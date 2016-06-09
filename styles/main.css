@@ -5,7 +5,7 @@ body {
 	overflow: hidden;
 	font-weight: bold;
 	background: white; /* For browsers that do not support gradients */
-	background:-webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #a7cfdf), color-stop(100%, #23538a));
+	background: -webkit-linear-gradient(45deg, #d6eff8, #e1c8c7); /* For Chrome? */
 	background: -webkit-linear-gradient(left bottom, #d6eff8, #e1c8c7); /* For Safari 5.1 to 6.0 */
 	background: -o-linear-gradient(top right, #d6eff8, #e1c8c7); /* For Opera 11.1 to 12.0 */
 	background: -moz-linear-gradient(top right, #d6eff8, #e1c8c7); /* For Firefox 3.6 to 15 */
