@@ -1,17 +1,25 @@
 <!DOCTYPE html>
 <html>
-<title>UCBUGG</title>
-<!-- <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans:i,b,bi" /> -->
-<link rel="stylesheet" type="text/css" href="styles/main.css">
 
+<head>
+	<title>UCBUGG</title>
+	<!-- <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans:i,b,bi" /> -->
+	<link rel="stylesheet" type="text/css" href="styles/main.css">
+	<script type="text/javascript" src="scripts/jquery.min.js"></script>
+	<script type="text/javascript" src="scripts/main.js"></script>
+	<script type="text/javascript">
+		$(function() {
+			Main.start();
+		});
+	</script>
+</head>
 <div class="navbar">
-<!--   -->
 	<div class="tabs">
-		<div class="tab">
+		<div class="tab" onclick="Main.home()">
 			<image class="tab-image" src="images/menu bar icons/home.svg"></image>
 			<p class="tab-text">HOME</p>
 		</div>
-		<div class="tab">
+		<div class="tab" onclick="Main.about()">
 			<image class="tab-image" src="images/menu bar icons/about.svg"></image>
 			<p class="tab-text">ABOUT</p>
 		</div>
@@ -36,12 +44,12 @@
 
 
 <div class="mainbody">
-	<div class="heading">
+	<section class="heading" id="home-header">
 		<h3> UC BERKELEY UNDERGRADUATE GRAPHICS GROUP </h3>
 		<h2> 3D MODELING AND ANIMATION</h2>
 		<h1> UCBUGG </h1>
-	</div>
-	<div class="mainbody-midsection">
+	</section>
+	<section class="mainbody-midsection" id="home-info">
 		<div class="info-buttons">
 			<div class="info-button">
 				<div class="button-heading">
@@ -59,9 +67,22 @@
 		<div class="fox-graphic">
 			<image src="images/home page/updated-fox-with-thicker-line-weight.svg"></image>
 		</div>
-	</div>
+	</section>
 
-	<div class="bottom-panel">
+	<section class="mainbody-midsection" id="about-info">
+		<h2> ABOUT US </h2>
+		<div class="about">
+			<p class="about-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			<image src="images/about/about-placeholder.png" class="about"></image>
+		</div>
+	</section>	
+
+	<section class="mainbody-midsection" id="about-facilitators">
+		<h2> CURRENT FA-SILLY-TATERS </h2>
+
+	</section>
+
+	<section class="bottom-panel">
 		<p class="stay-in-touch">STAY IN TOUCH</p>
 		<div class="contact">
 			<image src="images/social media icons/email.svg" class="contact-icon"></image>
@@ -75,7 +96,9 @@
 			<image src="images/social media icons/utub.svg" class="contact-icon"></image>
 			<p class="contact-text">fb.com/ucbugg</p>
 		</div>
-	</div>
+	</section>
+
+
 </div>
 
 </html>
