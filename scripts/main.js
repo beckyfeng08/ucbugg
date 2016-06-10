@@ -4,6 +4,8 @@ var Main = (function() {
 	var switchSpeed = 300;
 
 	var loadAbout = function() {
+		var mainbody = document.getElementById('mainbody');
+		mainbody.scrollTop=0;
 		// console.log("ABOUT CALLED");
 		$("#home-header").hide(switchSpeed);
 		$("#home-info").hide(switchSpeed);
@@ -11,7 +13,10 @@ var Main = (function() {
 		$("#about-facilitators").show(switchSpeed);
 	}
 	var loadHome = function() {
-		console.log("HOME CALLED");
+		var mainbody = document.getElementById('mainbody');
+		mainbody.scrollTop=0;
+		// console.log("HOME CALLED");
+		$("#mainbody").scrollTop();
 		$("#home-header").show(switchSpeed);
 		$("#home-info").show(switchSpeed);
 		$("#about-info").hide(switchSpeed);
