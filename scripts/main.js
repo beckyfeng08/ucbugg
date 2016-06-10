@@ -9,6 +9,7 @@ var Main = (function() {
 		$("#home-info").hide(switchSpeed);
 		$("#about-info").show(switchSpeed);
 		$("#about-facilitators").show(switchSpeed);
+		$("#home").style.backgroundColor = "transparent"
 	}
 	var loadHome = function() {
 		console.log("HOME CALLED");
@@ -16,6 +17,7 @@ var Main = (function() {
 		$("#home-info").show(switchSpeed);
 		$("#about-info").hide(switchSpeed);
 		$("#about-facilitators").hide(switchSpeed);
+		$("#about").style.backgroundColor = "transparent"
 	}
 
 	var start = function() {

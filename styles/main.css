@@ -42,6 +42,16 @@ div.tab {
 div.tab:hover {
 	background-color: #d4eefc;
 }
+div.blue-box {
+	background-color: #d4eefc
+}
+/*div#home {
+	background-color: #d4eefc;
+}
+div#about{
+
+}*/
+
 p {
 	margin: 0px;
 	text-align: center;
@@ -134,7 +144,7 @@ div.fox-graphic {
 }
 
 section.bottom-panel {
-	padding: 30px
+	padding: 30px;
 	font-weight:normal;
 	color: #e4ebef;
 	background-image: url("../images/stupidbottombannerhillsblahugh.svg");
