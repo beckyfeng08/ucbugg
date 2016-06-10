@@ -43,7 +43,7 @@ div.tab:hover {
 	background-color: #d4eefc;
 }
 div.blue-box {
-	background-color: #d4eefc
+	background: #d4eefc;
 }
 /*div#home {
 	background-color: #d4eefc;
@@ -60,7 +60,7 @@ p {
 	color: #a7a9ab;
 }
 img.tab-image {
-	height:40px;
+	height:30px;
 }
 section.heading {
 	text-align: center;
