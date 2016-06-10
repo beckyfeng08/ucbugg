@@ -4,7 +4,7 @@ var Main = (function() {
 	var switchSpeed = 300;
 
 	var loadAbout = function() {
-		var mainbody = document.getElementById('mainbody');
+		var mainbody = document.getElementById('mainbody'); //jquery failed me
 		mainbody.scrollTop=0;
 		// console.log("ABOUT CALLED");
 		$("#home-header").hide(switchSpeed);
@@ -13,7 +13,7 @@ var Main = (function() {
 		$("#about-facilitators").show(switchSpeed);
 	}
 	var loadHome = function() {
-		var mainbody = document.getElementById('mainbody');
+		var mainbody = document.getElementById('mainbody'); //jquery failed me
 		mainbody.scrollTop=0;
 		// console.log("HOME CALLED");
 		$("#mainbody").scrollTop();
