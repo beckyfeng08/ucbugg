@@ -55,7 +55,7 @@ div#about{
 p {
 	margin: 0px;
 	text-align: center;
-	font-size: 8pt;
+	font-size: 6pt;
 	font-weight: normal;
 	color: #a7a9ab;
 }
@@ -73,8 +73,8 @@ h1 {
 	padding: 0px;
 	color: #8dbfe7;
 	font-weight: normal;
-	font-size: 36pt;
-	letter-spacing: 10px
+	font-size: 30pt;
+	letter-spacing: 30px
 }
 h2 {
 	margin: 0px;
@@ -87,7 +87,7 @@ h3 {
 	margin: 0px;
 	color: #f1f1f2;
 	font-weight: normal;
-	font-size: 19pt;
+	font-size: 15pt;
 }
 
 ::-webkit-scrollbar {
