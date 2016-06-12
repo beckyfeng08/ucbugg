@@ -151,15 +151,7 @@ section.bottom-panel {
 	background-size: 100% 100%;
 	background-position: 0 0;
 	background-repeat: no-repeat;
-	padding-bottom: 70px;
-}
-p.stay-in-touch {
-	padding:10px;
-	padding-top: 150px;
-	color:white;
-	font-size: 16pt;
-	font-weight: bold;
-	letter-spacing: 5px;
+	padding-bottom: 100px;
 }
 div.contact {
 	display: block;
@@ -168,23 +160,14 @@ div.contact {
 }
 img.contact-icon {
 	/*display: inline-block;*/
-	width: 30px;
-	height: 30px;
+	width: 80px;
+	height: 80px;
 	padding: 5px;
 	/*position: relative;*/
 	float: left;
 	right:50%;
 	margin-left: 50%;
 	transform: translate(-130px,0);
-}
-p.contact-text {
-	color:#E4EBEF;
-	position: relative;
-	font-size: 12pt;
-	font-style: italic;
-	text-align: left;
-	top:30%;
-    transform: translate(-125px,-50%);
 }
 div.about {
 	display: inline-block;
