@@ -1,24 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Generator: Adobe Illustrator 18.1.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 1000 262.3" enable-background="new 0 0 1000 262.3" xml:space="preserve">
+	 viewBox="0 0 1000 168.5" enable-background="new 0 0 1000 168.5" xml:space="preserve">
 <g id="Layer_1">
-	<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="500" y1="16.047" x2="500" y2="276.9865">
-		<stop  offset="0.1717" style="stop-color:#EACBB1;stop-opacity:0.5"/>
-		<stop  offset="0.2028" style="stop-color:#EBC8AF;stop-opacity:0.5"/>
-		<stop  offset="0.401" style="stop-color:#F0B59F;stop-opacity:0.5"/>
-		<stop  offset="0.6003" style="stop-color:#F3A795;stop-opacity:0.5"/>
-		<stop  offset="0.7997" style="stop-color:#F69F8F;stop-opacity:0.5"/>
-		<stop  offset="1" style="stop-color:#F79D8D;stop-opacity:0.5"/>
-	</linearGradient>
-	<path fill="url(#SVGID_1_)" d="M0,39.1c0,0,48.3-8.9,128.2,7.3c58.3,11.8,58.3,11.8,106.4,11.8c75.6,0,90.3-13.8,137.2-18.6
-		c62.3-6.4,86.9-3.6,131.6-11.2s92.7-35,233.7-27s177,36.9,214.5,45.5c37.5,8.6,48.4,13.4,48.4,13.4v200.6H0V39.1z"/>
-	<linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="500" y1="68.806" x2="500" y2="262.2886">
-		<stop  offset="0" style="stop-color:#E8C09B"/>
-		<stop  offset="1" style="stop-color:#DC5566"/>
-	</linearGradient>
-	<path fill="url(#SVGID_2_)" d="M0,138.5c0,0,134.9-55.2,231.2-33.2c35.2,8.1,57.1,4.7,91.8-5.2c69.4-19.8,88.8-8.6,116-18.2
-		c34-12,122-22.1,185.5,0c58.1,20.2,131.8-6.6,194.5,25.2c62,31.4,82.1,12.2,138,23.2c33,6.5,43,0,43,0v132H0V138.5z"/>
+	<g>
+		<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="500" y1="4.0354" x2="500" y2="168.4963">
+			<stop  offset="0" style="stop-color:#E8C09B"/>
+			<stop  offset="1" style="stop-color:#DC5566"/>
+		</linearGradient>
+		<polygon fill="url(#SVGID_1_)" points="0,11.8 228.2,67.8 408.4,11.8 491.6,46 695,4 810.9,52.2 1000,4 1000,168.5 0,168.5 		"/>
+		<polyline fill="none" stroke="#F1F2F2" stroke-miterlimit="10" points="257.4,142.5 400.3,75.5 481,57.6 695,4 491.6,46 
+			365.5,64.6 408.4,11.8 		"/>
+		<polygon fill="none" stroke="#F1F2F2" stroke-miterlimit="10" points="0,36.7 233.3,117.4 0,11.8 		"/>
+		<polygon fill="none" stroke="#F1F2F2" stroke-miterlimit="10" points="233.3,117.4 365.5,64.6 476.4,48.3 491.6,46 438,24 
+			408.4,11.8 		"/>
+		<polygon fill="none" stroke="#F1F2F2" stroke-miterlimit="10" points="695,4 794.3,108.2 1000,17.5 1000,4 810.2,94.1 		"/>
+		<polyline fill="none" stroke="#F1F2F2" stroke-miterlimit="10" points="291.8,94.1 233.3,117.4 0,36.7 0,84.1 		"/>
+		<line fill="none" stroke="#F1F2F2" stroke-miterlimit="10" x1="365.5" y1="64.6" x2="400.3" y2="75.5"/>
+		<polyline fill="none" stroke="#F1F2F2" stroke-miterlimit="10" points="543.6,35.3 524.1,62.8 598.3,75.5 699.3,8.6 695,4 
+			603,36.7 485.7,75.5 400.3,75.5 		"/>
+		<polyline fill="none" stroke="#F1F2F2" stroke-miterlimit="10" points="699.3,8.6 804,168.5 901.6,50.7 1000,4 1000,96.5 
+			1000,168.5 804,168.5 		"/>
+		<polyline fill="none" stroke="#F1F2F2" stroke-miterlimit="10" points="633.4,52.2 783.2,117.4 854,108.2 1000,63.6 		"/>
+		<polyline fill="none" stroke="#F1F2F2" stroke-miterlimit="10" points="90.1,34 1,84.1 145.8,115.4 233.3,117.4 257.4,142.5 
+			378.8,101.6 461.3,91.7 485.7,75.5 		"/>
+		<polyline fill="none" stroke="#F1F2F2" stroke-miterlimit="10" points="128.7,43.7 145.8,115.4 257.4,142.5 262,168.5 355,168.5 
+			461.3,91.7 598.3,75.5 669.1,67.8 804,168.5 		"/>
+		<polyline fill="none" stroke="#F1F2F2" stroke-miterlimit="10" points="598.3,75.5 585,168.5 461.3,91.7 		"/>
+		<line fill="none" stroke="#F1F2F2" stroke-miterlimit="10" x1="669.1" y1="67.8" x2="723" y2="168.5"/>
+		<polyline fill="none" stroke="#F1F2F2" stroke-miterlimit="10" points="0,84.1 0,168.5 1000,168.5 1000,4 		"/>
+		<polyline fill="none" stroke="#F1F2F2" stroke-miterlimit="10" points="0,11.8 227,67.8 233.3,117.4 227,67.8 408.4,11.8 
+			439.8,53.7 		"/>
+		<polyline fill="none" stroke="#F1F2F2" stroke-miterlimit="10" points="147,115.4 2.8,168.5 262,168.5 		"/>
+		<polyline fill="none" stroke="#F1F2F2" stroke-miterlimit="10" points="1000,4 877,35.4 794.3,108.2 		"/>
+		<line fill="none" stroke="#F1F2F2" stroke-miterlimit="10" x1="901.6" y1="50.7" x2="943.7" y2="17.7"/>
+		<polyline fill="none" stroke="#F1F2F2" stroke-miterlimit="10" points="695,4 810.9,52.2 877,35.4 		"/>
+		<line fill="none" stroke="#F1F2F2" stroke-miterlimit="10" x1="810.9" y1="52.2" x2="810.2" y2="94.1"/>
+		<line fill="none" stroke="#F1F2F2" stroke-miterlimit="10" x1="975" y1="166.9" x2="940" y2="81.9"/>
+	</g>
 </g>
 <g id="notes" display="none">
 </g>
