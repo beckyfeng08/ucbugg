@@ -30,10 +30,10 @@ div.tabs {
 }
 div.tab {
 	display: inline-block;
-	width: 100px;
+	width: 80px;
 	height: auto;
-	margin-left: 2px;
-	margin-right: 2px;
+	margin-left: 20px;
+	margin-right: 20px;
 	padding-bottom: 10px;
 	padding-top: 10px;
 	background-color: transparent;
@@ -73,7 +73,7 @@ h1 {
 	padding: 0px;
 	color: #8dbfe7;
 	font-weight: normal;
-	font-size: 30pt;
+	font-size: 20pt;
 	letter-spacing: 30px
 }
 h2 {
@@ -115,22 +115,22 @@ div.info-button {
 	background-color: #f1f1f2;
 	border-radius: 30px;
 	left:50%;
-	width: 200px;
+	width: 220px;
 	margin: 0 auto;
 	margin-top: 20px;
 	padding: 3px;
 }
 img.info-icon {
-	width:65px;
+	width:40px;
 	display: inline-block;
-	height: 65px;
+	height: 40px;
 	vertical-align: middle;
 }
 p.info-text {
 	display: inline-block;
 	height: 100%;
 	vertical-align: middle;
-	font-size: 12pt;
+	font-size: 10pt;
 	color: #8dbfe7;
 	padding-right: 10px;
 }
