@@ -1,15 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Generator: Adobe Illustrator 18.1.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 16.8 25.7" enable-background="new 0 0 16.8 25.7" xml:space="preserve">
-<ellipse fill="none" stroke="#D1D3D4" stroke-miterlimit="10" cx="9.9" cy="23.4" rx="5.8" ry="0.8"/>
-<ellipse fill="none" stroke="#D1D3D4" stroke-width="0.75" stroke-miterlimit="10" cx="12.6" cy="4" rx="2.8" ry="2.6"/>
-<polygon fill="none" stroke="#D1D3D4" stroke-width="0.75" stroke-miterlimit="10" points="10.6,7.6 14.6,7.6 12.6,17.5 "/>
-<line fill="none" stroke="#D1D3D4" stroke-width="0.5" stroke-miterlimit="10" x1="9.9" y1="4" x2="15.4" y2="4"/>
-<line fill="none" stroke="#D1D3D4" stroke-width="0.5" stroke-miterlimit="10" x1="12.6" y1="1.5" x2="12.6" y2="6.6"/>
-<line fill="none" stroke="#D1D3D4" stroke-width="0.5" stroke-miterlimit="10" x1="12.6" y1="7.6" x2="12.6" y2="17.5"/>
-<circle fill="none" stroke="#D1D3D4" stroke-width="0.5" stroke-miterlimit="10" cx="12.6" cy="18.4" r="1.2"/>
-<polygon fill="none" stroke="#D1D3D4" stroke-width="0.75" stroke-miterlimit="10" points="12.6,18.9 12.6,20.9 5.6,20.9 "/>
-<line fill="none" stroke="#D1D3D4" stroke-width="0.25" stroke-miterlimit="10" x1="11.4" y1="18.4" x2="13.8" y2="18.4"/>
-<ellipse fill="none" stroke="#D1D3D4" stroke-width="0.25" stroke-miterlimit="10" cx="1.8" cy="21.3" rx="0.2" ry="2.1"/>
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 24.7 27.3" enable-background="new 0 0 24.7 27.3" xml:space="preserve">
+<g id="Layer_1">
+	<g>
+		<ellipse fill="none" stroke="#A7A9AC" stroke-miterlimit="10" cx="13.6" cy="24.5" rx="5.8" ry="0.8"/>
+		<ellipse fill="none" stroke="#A7A9AC" stroke-width="0.75" stroke-miterlimit="10" cx="16.4" cy="5.2" rx="2.8" ry="2.6"/>
+		<polygon fill="none" stroke="#A7A9AC" stroke-width="0.75" stroke-miterlimit="10" points="14.3,8.8 18.4,8.8 16.4,18.6 		"/>
+		<line fill="none" stroke="#A7A9AC" stroke-width="0.75" stroke-miterlimit="10" x1="13.6" y1="5.2" x2="19.1" y2="5.2"/>
+		<line fill="none" stroke="#A7A9AC" stroke-width="0.75" stroke-miterlimit="10" x1="16.4" y1="2.6" x2="16.4" y2="7.8"/>
+		<line fill="none" stroke="#A7A9AC" stroke-width="0.75" stroke-miterlimit="10" x1="16.4" y1="8.8" x2="16.4" y2="18.6"/>
+		<circle fill="none" stroke="#A7A9AC" stroke-width="0.5" stroke-miterlimit="10" cx="16.4" cy="19.5" r="1.2"/>
+		<polygon fill="none" stroke="#A7A9AC" stroke-width="0.75" stroke-miterlimit="10" points="16.4,20 16.4,22 9.4,22 		"/>
+		<line fill="none" stroke="#A7A9AC" stroke-width="0.5" stroke-miterlimit="10" x1="15.1" y1="19.5" x2="17.6" y2="19.5"/>
+		<ellipse fill="none" stroke="#A7A9AC" stroke-width="0.25" stroke-miterlimit="10" cx="5.5" cy="22.5" rx="0.2" ry="2.1"/>
+	</g>
+</g>
+<g id="notes" display="none">
+</g>
 </svg>
