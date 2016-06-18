@@ -15,7 +15,9 @@
 </head>
 <div class="navbar">
 	<div class="tabs">
-		<div class="blue-box"> </div>
+		<div class="blue-box-region"> 
+			<div class="blue-box" id="blue-box"> </div>
+		</div>
 		<div class="tab" id= "home" onclick="Main.home()">
 			<image class="tab-image" src="images/menu bar icons/home.svg"></image>
 			<p class="tab-text">HOME</p>
@@ -55,22 +57,22 @@
 			SHORT BLURB ABOUT US GOES HERE Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
 		</p>
 		<div class="info-buttons">
-			<div class="info-button">
+			<div class="info-button" id="schedule-button" onmouseover="Main.scheduleHover()" onmouseout="Main.scheduleOut()">
 				<div class="button-heading">
 					<image class="info-icon" src="images/home page/updated-schedule-icon.svg"></image>
-					<p class="info-text">SCHEDULE</p>
+					<p class="info-text" id="schedule-text">SCHEDULE</p>
 				</div>
 			</div>
-			<div class="info-button">
+			<div class="info-button" id="logistics-button" onmouseover="Main.logisticsHover()" onmouseout="Main.logisticsOut()">
 				<div class="button-heading">
 					<image class="info-icon" src="images/home page/updated-logistics-icon.svg"></image>
-					<p class="info-text">LOGISTICS</p>
+					<p class="info-text" id="logistics-text">LOGISTICS</p>
 				</div>
 			</div>
-			<div class="info-button">
+			<div class="info-button" id="piazza-button" onmouseover="Main.piazzaHover()" onmouseout="Main.piazzaOut()">
 				<div class="button-heading">
 					<image class="info-icon" src="images/home page/pizza.svg"></image>
-					<p class="info-text">PIAZZA</p>
+					<p class="info-text" id="piazza-text">PIAZZA</p>
 				</div>
 			</div>
 		</div>

@@ -6,6 +6,8 @@ body {
 	font-weight: bold;
 	min-height: 2000px;
 	background: white; /* For browsers that do not support gradients */
+	background-image: url("../images/gradient-bg.svg");
+	background-size: 100%;
 	background: -webkit-linear-gradient(45deg, #d6eff8, #e1c8c7); /* For Android? */
 	background: -webkit-linear-gradient(left bottom, #d6eff8, #e1c8c7); /* For Safari 5.1 to 6.0 */
 	background: -o-linear-gradient(top right, #d6eff8, #e1c8c7); /* For Opera 11.1 to 12.0 */
@@ -24,6 +26,7 @@ div.navbar {
 	margin: 0px;
 	padding: 0px;
     text-align: center;
+    z-index: 2;
 }
 
 div.tabs {
@@ -40,11 +43,27 @@ div.tab {
 	background-color: transparent;
     text-align: center;
 }
-div.tab:hover {
+/*div.tab:hover {
 	background-color: #d4eefc;
+}*/
+div.blue-box-region {
+	/*background: #ff0000;*/
+	text-align: center;
+	left:50%;
+	width: 600px;
+	height: 63px;
+	z-index: -2;
+	opacity: 1;
+	position: absolute;
+	transform: translateX(-300px);
 }
 div.blue-box {
 	background: #d4eefc;
+	position: absolute;
+	width: 80px;
+	height: 63px;
+	z-index: -1;
+	left: 2px;
 }
 /*div#home {
 	background-color: #d4eefc;
@@ -59,9 +78,13 @@ p {
 	font-size: 6pt;
 	font-weight: normal;
 	color: #a7a9ab;
+    z-index: 2;
+
 }
 img.tab-image {
 	height:30px;
+	z-index: 2;
+
 }
 section.heading {
 	text-align: center;
@@ -134,7 +157,9 @@ div.info-button {
 	background-color: #f1f1f2;
 	border-radius: 30px;
 	left:50%;
-	width: 220px;
+	display: block;
+	width: 175px;
+	height: 50px;
 	margin: auto auto;
 	margin-top: 20px;
 	margin-bottom: 60px;
@@ -142,13 +167,17 @@ div.info-button {
 	text-align: left;
 }
 div.button-heading {
-	margin-left: 30px;
+	margin-left: 5px;
+	pointer-events: none;
+
 }
 img.info-icon {
 	width:40px;
 	display: inline-block;
 	height: 40px;
 	vertical-align: middle;
+	pointer-events: none;
+
 }
 p.info-text {
 	display: inline-block;
@@ -158,6 +187,8 @@ p.info-text {
 	color: #8dbfe7;
 	padding-right: 10px;
 	text-align: left;
+	pointer-events: none;
+
 }
 
 div.fox-graphic {
