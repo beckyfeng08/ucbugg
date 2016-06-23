@@ -1,22 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Generator: Adobe Illustrator 18.1.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 19.6 20.8" enable-background="new 0 0 19.6 20.8" xml:space="preserve">
-<g>
-	<path fill="#F36E4D" d="M1,7.7l2.5-7.4c0.1-0.3,0.8-0.3,1,0L8,7.8L1,7.7z"/>
-	<path fill="#F36E4D" d="M11.4,7.8l3.3-7.5c0.1-0.3,0.8-0.3,1,0l2.7,7.5H11.4z"/>
-	<path fill="#FEDDBE" d="M2.7,7.8l1.2-3.1c0.2-0.4,0.8-0.4,1,0l1.3,3.1C6.3,8.1,6,8.4,5.7,8.4H3.2C2.8,8.4,2.6,8.1,2.7,7.8z"/>
-	<path fill="#FEDDBE" d="M13.5,7.8l1.5-3.1c0.2-0.4,0.8-0.4,1,0l1.2,3.1c0.1,0.3,0.2,0.7-0.2,0.7h-3.3C13.3,8.4,13.4,8.1,13.5,7.8z"
-		/>
-	<g>
-		<polygon fill="#FEDDBE" points="0.5,10 9.8,20.3 0,12.5 		"/>
-		<polygon fill="#F58752" points="1,7.7 9.8,20.3 0.4,10.6 		"/>
-		<polygon fill="#F3724E" points="5.3,7.7 9.8,20.3 1,7.7 		"/>
-		<polygon fill="#EF4346" points="9.8,20.3 9.8,7.7 5.3,7.7 		"/>
-		<polygon fill="#EF4346" points="9.8,7.7 13.8,7.7 9.8,20.3 		"/>
-		<polygon fill="#F3724E" points="9.8,20.3 18.4,7.8 13.8,7.7 		"/>
-		<polygon fill="#F58752" points="9.8,20.3 19.1,10.5 18.4,7.8 		"/>
-		<polygon fill="#FEDDBE" points="19.6,12.3 19.1,10.5 9.8,20.3 		"/>
-	</g>
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 32.3 25" enable-background="new 0 0 32.3 25" xml:space="preserve">
+<g id="bg__x2B__footer">
+</g>
+<g id="Layer_1">
+	<polygon fill="none" stroke="#FFFFFF" stroke-width="0.5" stroke-miterlimit="10" points="0.8,13.6 15.8,17.4 31.5,12.5 16.1,9.9 	
+		"/>
+	<polygon fill="none" stroke="#FFFFFF" stroke-miterlimit="10" points="9.5,5.8 9.5,17.9 15.8,20.3 22.8,17.7 22.8,5.8 16.2,3.8 	
+		"/>
+	<polyline opacity="0.28" fill="none" stroke="#FFFFFF" stroke-miterlimit="10" points="16.2,7.9 15.8,20.3 22.8,17.7 22.8,5.8 
+		16.2,7.9 9.5,5.8 	"/>
+	<polygon fill="#FFFFFF" points="22.8,5.8 16.2,3.8 9.5,5.8 16.2,7.9 	"/>
+</g>
+<g id="notes">
 </g>
 </svg>
