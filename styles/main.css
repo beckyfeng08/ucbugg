@@ -60,11 +60,12 @@ div.blue-box-region {
 }
 div.blue-box {
 	background: #d4eefc;
+	display: block;
 	position: absolute;
 	width: 80px;
 	height: 63px;
 	z-index: -1;
-	left: 2px;
+	left: 0px;
 }
 /*div#home {
 	background-color: #d4eefc;

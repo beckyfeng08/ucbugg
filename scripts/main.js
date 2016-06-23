@@ -14,7 +14,7 @@ var Main = (function() {
 		$("#about-info").show(switchSpeed);
 		$("#about-facilitators").show(switchSpeed);
 		// $("#home").style.backgroundColor = "transparent"
-	   	$("#blue-box").animate({left:'130px'}, switchSpeed);
+	   	$("#blue-box").animate({left:$("#about").position().left - $("#blue-box-region").position().left + 20 + "px"}, switchSpeed);
 	}
 	var loadHome = function() {
 		var mainbody = document.getElementById('mainbody'); //jquery failed me
@@ -27,12 +27,11 @@ var Main = (function() {
 		$("#about-info").hide(switchSpeed);
 		$("#about-facilitators").hide(switchSpeed);
 		// $("#about").style.backgroundColor = "transparent"
-	   	$("#blue-box").animate({left:'2px'}, switchSpeed);
+	   	$("#blue-box").animate({left:$("#home").position().left - $("#blue-box-region").position().left + 20 + "px"}, switchSpeed);
 	}
 	var loadLabs = function() {
 		var mainbody = document.getElementById('mainbody'); //jquery failed me
 		mainbody.scrollTop=0;
-		console.log("LABS CALLED");
 		$("#labs-header").show(switchSpeed);
 		$("#labs-pipeline").show(switchSpeed);
 		$("#about-info").hide(switchSpeed);
@@ -40,7 +39,7 @@ var Main = (function() {
 		$("#home-header").hide(switchSpeed);
 		$("#home-info").hide(switchSpeed);
 		// $("#about").style.backgroundColor = "transparent"
-	   	$("#blue-box").animate({left:'394px'}, switchSpeed);
+	   	$("#blue-box").animate({left:$("#labs").position().left - $("#blue-box-region").position().left + 20 + "px"}, switchSpeed);
 
 	}
 
