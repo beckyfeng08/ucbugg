@@ -1,7 +1,7 @@
 var Main = (function() {
 
 	var currentTab = "home";
-	var switchSpeed = 300;
+	var switchSpeed = 200;
 
 	var loadAbout = function() {
 		var mainbody = document.getElementById('mainbody'); //jquery failed me
@@ -9,6 +9,8 @@ var Main = (function() {
 		// console.log("ABOUT CALLED");
 		$("#home-header").hide(switchSpeed);
 		$("#home-info").hide(switchSpeed);
+		$("#labs-header").hide(switchSpeed);
+		$("#labs-pipeline").hide(switchSpeed);
 		$("#about-info").show(switchSpeed);
 		$("#about-facilitators").show(switchSpeed);
 		// $("#home").style.backgroundColor = "transparent"
@@ -18,13 +20,28 @@ var Main = (function() {
 		var mainbody = document.getElementById('mainbody'); //jquery failed me
 		mainbody.scrollTop=0;
 		// console.log("HOME CALLED");
-		$("#mainbody").scrollTop();
 		$("#home-header").show(switchSpeed);
 		$("#home-info").show(switchSpeed);
+		$("#labs-header").hide(switchSpeed);
+		$("#labs-pipeline").hide(switchSpeed);
 		$("#about-info").hide(switchSpeed);
 		$("#about-facilitators").hide(switchSpeed);
 		// $("#about").style.backgroundColor = "transparent"
 	   	$("#blue-box").animate({left:'2px'}, switchSpeed);
+	}
+	var loadLabs = function() {
+		var mainbody = document.getElementById('mainbody'); //jquery failed me
+		mainbody.scrollTop=0;
+		console.log("LABS CALLED");
+		$("#labs-header").show(switchSpeed);
+		$("#labs-pipeline").show(switchSpeed);
+		$("#about-info").hide(switchSpeed);
+		$("#about-facilitators").hide(switchSpeed);
+		$("#home-header").hide(switchSpeed);
+		$("#home-info").hide(switchSpeed);
+		// $("#about").style.backgroundColor = "transparent"
+	   	$("#blue-box").animate({left:'394px'}, switchSpeed);
+
 	}
 
 	var scheduleHover = function() {
@@ -53,8 +70,16 @@ var Main = (function() {
 		$("#piazza-text").hide(switchSpeed/1.5);
 	}
 
+	var resize = function() {
+		contactMargin = window.innerWidth/16 + "px";
+		console.log(contactMargin);
+	  	$(".contact-icon").css("margin-top", contactMargin);
+	}
+
 	var start = function() {
-		loadHome();
+		loadLabs();
+		resize();
+		$( window ).resize(resize);
 		$(".info-text").hide();
 		$(".info-button").width("50px");
 	};
@@ -64,6 +89,7 @@ var Main = (function() {
 
 		about: loadAbout,
 		home: loadHome,
+		labs: loadLabs,
 
 		scheduleHover: scheduleHover,
 		logisticsHover: logisticsHover,
