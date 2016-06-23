@@ -70,15 +70,15 @@ var Main = (function() {
 	}
 
 	var resize = function() {
-		contactMargin = window.innerWidth/16 + "px";
-		console.log(contactMargin);
-	  	$(".contact-icon").css("margin-top", contactMargin);
+		// contactMargin = window.innerWidth/16 + "px";
+		// console.log(contactMargin);
+	 //  	$(".contact-icon").css("margin-top", contactMargin);
 	}
 
 	var start = function() {
 		loadLabs();
 		resize();
-		$( window ).resize(resize);
+		// $( window ).resize(resize);
 		$(".info-text").hide();
 		$(".info-button").width("50px");
 	};
