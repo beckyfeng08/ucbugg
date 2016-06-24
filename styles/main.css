@@ -238,6 +238,9 @@ img.contact-icon {
 	background: #ffccbb;
 	border-radius: 30px;
 }
+img.contact-icon:hover {
+	background: #d4eefc;
+}
 div.about {
 	display: inline-block;
 }
