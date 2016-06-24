@@ -43,9 +43,9 @@ div.tab {
 	background-color: transparent;
     text-align: center;
 }
-/*div.tab:hover {
-	background-color: #d4eefc;
-}*/
+div.tab:hover {
+	background-color: #e2dad8;
+}
 div.blue-box-region {
 	/*background: #ff0000;*/
 	text-align: center;
