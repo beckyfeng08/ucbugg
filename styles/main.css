@@ -269,15 +269,21 @@ img.about {
 	border-style: solid;
 	border-width: 2px;
 	border-color: #939597;
+	min-width: 600px;
 }
 div.pipeline-row {
 	display: block;
 }
 div.pipeline-elem {
 	display: inline-block;
-	width: 23%;
+	width: 19%;
 	margin-top: 20px;
-	letter-spacing: 4px;
+	letter-spacing: .3vw;
+	white-space: nowrap;
+	overflow: hidden;
+}
+div.wide {
+	width: 29%;
 }
 div.pipeline-bubble, div.pipeline-header {
 	display: inline-block;
@@ -289,6 +295,8 @@ div.pipeline-bubble, div.pipeline-header {
 	padding-right: 21px;
 	padding-left: 21px;
 	margin: 20px;
+	margin-left: .1vw;
+	margin-right: .1vw;
 }
 
 div.pipeline-header {
