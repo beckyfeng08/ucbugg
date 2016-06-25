@@ -15,7 +15,9 @@
 </head>
 <div class="navbar">
 	<div class="tabs">
-		<div class="blue-box"> </div>
+		<div class="blue-box-region" id="blue-box-region"> 
+			<div class="blue-box" id="blue-box"> </div>
+		</div>
 		<div class="tab" id= "home" onclick="Main.home()">
 			<image class="tab-image" src="images/menu bar icons/home.svg"></image>
 			<p class="tab-text">HOME</p>
@@ -24,15 +26,15 @@
 			<image class="tab-image" src="images/menu bar icons/about.svg"></image>
 			<p class="tab-text">ABOUT</p>
 		</div>
-		<div class="tab">
+		<div class="tab" id="syllabus" onclick="Main.syllabus()">
 			<image class="tab-image" src="images/menu bar icons/syllabus.svg"></image>
 			<p class="tab-text">SYLLABUS</p>
 		</div>
-		<div class="tab">
+		<div class="tab" id="labs" onclick="Main.labs()">
 			<image class="tab-image" src="images/menu bar icons/labs.svg"></image>
 			<p class="tab-text">LABS</p>
 		</div>
-		<div class="tab">
+		<div class="tab" id="projects" onclick="Main.projects()">
 			<image class="tab-image" src="images/menu bar icons/projects.svg"></image>
 			<p class="tab-text">PROJECTS</p>
 		</div>
@@ -55,22 +57,22 @@
 			SHORT BLURB ABOUT US GOES HERE Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
 		</p>
 		<div class="info-buttons">
-			<div class="info-button">
+			<div class="info-button" id="schedule-button" onmouseover="Main.scheduleHover()" onmouseout="Main.scheduleOut()">
 				<div class="button-heading">
 					<image class="info-icon" src="images/home page/updated-schedule-icon.svg"></image>
-					<p class="info-text">SCHEDULE</p>
+					<p class="info-text" id="schedule-text">SCHEDULE</p>
 				</div>
 			</div>
-			<div class="info-button">
+			<div class="info-button" id="logistics-button" onmouseover="Main.logisticsHover()" onmouseout="Main.logisticsOut()">
 				<div class="button-heading">
 					<image class="info-icon" src="images/home page/updated-logistics-icon.svg"></image>
-					<p class="info-text">LOGISTICS</p>
+					<p class="info-text" id="logistics-text">LOGISTICS</p>
 				</div>
 			</div>
-			<div class="info-button">
+			<div class="info-button" id="piazza-button" onmouseover="Main.piazzaHover()" onmouseout="Main.piazzaOut()">
 				<div class="button-heading">
 					<image class="info-icon" src="images/home page/pizza.svg"></image>
-					<p class="info-text">PIAZZA</p>
+					<p class="info-text" id="piazza-text">PIAZZA</p>
 				</div>
 			</div>
 		</div>
@@ -79,7 +81,7 @@
 		</div>
 	</section>
 
-	<section class="mainbody-midsection" id="about-info">
+	<section class="heading" id="about-info">
 		<h2> ABOUT US </h2>
 		<div class="about">
 			<p class="about-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
@@ -92,6 +94,66 @@
 
 	</section>
 
+	<section class="heading" id="labs-header">
+		<h3> IN CLASS </h3>
+		<h2> LABS </h2>
+	</section>
+
+	<div class="mainbody-midsection" id="labs-pipeline">
+		<svg viewbox="0 0 100 100" preserveAspectRatio="none">
+			<line vector-effect="non-scaling-stroke"  x1="15" y1="28" x2="85", y2="28" style="stroke:rgb(147,149,151);stroke-width:2"/>
+			<line vector-effect="non-scaling-stroke"  x1="40" y1="28" x2="40", y2="84" style="stroke:rgb(147,149,151);stroke-width:2"/>
+			<line vector-effect="non-scaling-stroke"  x1="60" y1="28" x2="60", y2="84" style="stroke:rgb(147,149,151);stroke-width:2"/>
+			<line vector-effect="non-scaling-stroke"  x1="85" y1="28" x2="85", y2="84" style="stroke:rgb(147,149,151);stroke-width:2"/>
+			<line vector-effect="non-scaling-stroke"  x1="60" y1="56" x2="85", y2="56" style="stroke:rgb(147,149,151);stroke-width:2"/>
+			<line vector-effect="non-scaling-stroke"  x1="60" y1="84" x2="85", y2="84" style="stroke:rgb(147,149,151);stroke-width:2"/>
+		</svg>
+		<div class="pipeline-row">
+			<div class="pipeline-header pipeline-bubble"> INTRODUCTION TO MAYA </div>
+		</div>
+		<div class="pipeline-row"> 
+			<div class="pipeline-elem wide"> 
+				<div class="pipeline-bubble"> PRE-PRODUCTION </div>
+				<!-- This is an example of a dropdown element -->
+				<!-- <div class="pipeline-dropdown"> STORY </div> -->
+			</div>
+			<div class="pipeline-elem"> 
+				<div class="pipeline-bubble"> MODELING </div>
+			</div>
+			<div class="pipeline-elem"> 
+				<div class="pipeline-bubble"> SHADING </div>
+			</div>
+			<div class="pipeline-elem wide"> 
+			</div>
+		</div>
+		<div class="pipeline-row"> 
+			<div class="pipeline-elem wide"> 
+			</div>
+			<div class="pipeline-elem"> 
+				<div class="pipeline-bubble"> RIGGING </div>
+			</div>
+			<div class="pipeline-elem"> 
+				<div class="pipeline-bubble"> LIGHTING </div>
+			</div>
+			<div class="pipeline-elem wide"> 
+				<div class="pipeline-bubble"> POST-PRODUCTION </div>
+			</div>
+		</div>
+		<div class="pipeline-row"> 
+			<div class="pipeline-elem wide"> 
+			</div>
+			<div class="pipeline-elem"> 
+				<div class="pipeline-bubble"> ANIMATION </div>
+			</div>
+			<div class="pipeline-elem"> 
+				<div class="pipeline-bubble"> EFFECTS </div>
+			</div>
+			<div class="pipeline-elem wide"> 
+			</div>
+		</div>
+	</div>
+
+
 	<section class="bottom-panel">
 		<div class="contact">
 			<image src="images/social media icons/email.svg" class="contact-icon"></image>
@@ -103,7 +165,6 @@
 			<image src="images/social media icons/utub.svg" class="contact-icon"></image>
 		</div>
 	</section>
-
 
 </div>
 
