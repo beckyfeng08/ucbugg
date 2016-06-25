@@ -20,6 +20,7 @@ var Main = (function() {
 					$("#" + tabs[tab][i]).hide(switchSpeed);
 			}
 		}
+	   	$("#blue-box").animate({left:$("#"+activeTab).position().left - $("#blue-box-region").position().left + 20 + "px"}, switchSpeed);
 	}
 
 	var loadAbout = function() {
