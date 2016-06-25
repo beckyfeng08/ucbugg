@@ -2,6 +2,25 @@ var Main = (function() {
 
 	var currentTab = "home";
 	var switchSpeed = 200;
+	var tabs = {
+		"home":["home-header", "home-info"],
+		"about":["about-info", "about-facilitators"],
+		"syllabus":[],
+		"labs":["labs-header", "labs-pipeline"],
+		"projects":[]
+	}
+	var activeTab = "home";
+
+	var loadActiveTab = function() {
+		for (var tab in tabs) {
+			for (var i = 0; i < tabs[tab].length; i++) {
+				if (tab.equals(activeTab))
+					$("#" + tabs[tab][i]).show(switchSpeed);
+				else
+					$("#" + tabs[tab][i]).hide(switchSpeed);
+			}
+		}
+	}
 
 	var loadAbout = function() {
 		var mainbody = document.getElementById('mainbody'); //jquery failed me
@@ -76,7 +95,7 @@ var Main = (function() {
 	}
 
 	var start = function() {
-		loadLabs();
+		loadActiveTab();
 		resize();
 		// $( window ).resize(resize);
 		$(".info-text").hide();
