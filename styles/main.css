@@ -277,20 +277,26 @@ img.about {
 }
 div.pipeline-row {
 	display: block;
+	position: relative;
+	/*width: 100%;*/
 }
 div.pipeline-elem {
 	display: inline-block;
 	width: 19%;
 	margin-top: 20px;
+	padding-top: 20px;
+	padding-bottom: 20px;
 	letter-spacing: .3vw;
 	white-space: nowrap;
 	overflow: hidden;
+	padding-left: 2%;
+	padding-right: 2%;
 }
 div.wide {
 	width: 29%;
 }
 div.pipeline-bubble, div.pipeline-header {
-	display: inline-block;
+	display: block; 
 	height: 90%;
 	width: auto;
 	background-color: #f1f1f2;
@@ -298,7 +304,7 @@ div.pipeline-bubble, div.pipeline-header {
 	padding: 12px;
 	padding-right: 21px;
 	padding-left: 21px;
-	margin: 20px;
+	/*margin: 20px;*/
 	margin-left: .1vw;
 	margin-right: .1vw;
 }
@@ -306,9 +312,27 @@ div.pipeline-bubble, div.pipeline-header {
 div.pipeline-header {
 	margin: 0px;
 	transform: translateY(-25px);
+	display: inline-block;
 }
 
-div.pipeline-bubble:hover {
+div.pipeline-dropdown {
+	display: block;
+	background-color: #f2f2f2;
+	padding: 8px;
+	font-size: 10pt;
+	font-style: italic;
+	font-weight: normal;
+	color: #808284;
+	opacity: .7;
+	text-align: left;
+	padding-left: 10px;
+	letter-spacing: 2px;
+	white-space: normal;
+	margin-top: 2px;
+	margin-bottom: 2px;
+}
+
+div.pipeline-bubble:hover, div.pipeline-dropdown:hover {
 	background-color: #b2daee;
 }
 
