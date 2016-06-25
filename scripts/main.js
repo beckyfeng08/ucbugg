@@ -12,55 +12,41 @@ var Main = (function() {
 	var activeTab = "home";
 
 	var loadActiveTab = function() {
+		var mainbody = document.getElementById('mainbody'); //jquery failed me
+		mainbody.scrollTop=0;
+		console.log(activeTab);
 		for (var tab in tabs) {
 			for (var i = 0; i < tabs[tab].length; i++) {
-				if (tab.equals(activeTab))
+				if (tab === activeTab) {
 					$("#" + tabs[tab][i]).show(switchSpeed);
-				else
+				}
+				else {
 					$("#" + tabs[tab][i]).hide(switchSpeed);
+				}
 			}
 		}
 	   	$("#blue-box").animate({left:$("#"+activeTab).position().left - $("#blue-box-region").position().left + 20 + "px"}, switchSpeed);
 	}
 
-	var loadAbout = function() {
-		var mainbody = document.getElementById('mainbody'); //jquery failed me
-		mainbody.scrollTop=0;
-		// console.log("ABOUT CALLED");
-		$("#home-header").hide(switchSpeed);
-		$("#home-info").hide(switchSpeed);
-		$("#labs-header").hide(switchSpeed);
-		$("#labs-pipeline").hide(switchSpeed);
-		$("#about-info").show(switchSpeed);
-		$("#about-facilitators").show(switchSpeed);
-		// $("#home").style.backgroundColor = "transparent"
-	   	$("#blue-box").animate({left:$("#about").position().left - $("#blue-box-region").position().left + 20 + "px"}, switchSpeed);
-	}
 	var loadHome = function() {
-		var mainbody = document.getElementById('mainbody'); //jquery failed me
-		mainbody.scrollTop=0;
-		// console.log("HOME CALLED");
-		$("#home-header").show(switchSpeed);
-		$("#home-info").show(switchSpeed);
-		$("#labs-header").hide(switchSpeed);
-		$("#labs-pipeline").hide(switchSpeed);
-		$("#about-info").hide(switchSpeed);
-		$("#about-facilitators").hide(switchSpeed);
-		// $("#about").style.backgroundColor = "transparent"
-	   	$("#blue-box").animate({left:$("#home").position().left - $("#blue-box-region").position().left + 20 + "px"}, switchSpeed);
+		activeTab = "home";
+		loadActiveTab();
+	}
+	var loadAbout = function() {
+		activeTab = "about";
+		loadActiveTab();
+	}
+	var loadSyllabus = function() {
+		activeTab = "syllabus";
+		loadActiveTab();
 	}
 	var loadLabs = function() {
-		var mainbody = document.getElementById('mainbody'); //jquery failed me
-		mainbody.scrollTop=0;
-		$("#labs-header").show(switchSpeed);
-		$("#labs-pipeline").show(switchSpeed);
-		$("#about-info").hide(switchSpeed);
-		$("#about-facilitators").hide(switchSpeed);
-		$("#home-header").hide(switchSpeed);
-		$("#home-info").hide(switchSpeed);
-		// $("#about").style.backgroundColor = "transparent"
-	   	$("#blue-box").animate({left:$("#labs").position().left - $("#blue-box-region").position().left + 20 + "px"}, switchSpeed);
-
+		activeTab = "labs";
+		loadActiveTab();
+	}
+	var loadProjects = function() {
+		activeTab = "projects";
+		loadActiveTab();
 	}
 
 	var scheduleHover = function() {
@@ -109,6 +95,8 @@ var Main = (function() {
 		about: loadAbout,
 		home: loadHome,
 		labs: loadLabs,
+		projects: loadProjects,
+		syllabus: loadSyllabus,
 
 		scheduleHover: scheduleHover,
 		logisticsHover: logisticsHover,

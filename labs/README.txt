@@ -1,5 +1,5 @@
 DO NOT EDIT ANYTHING IN THE "CONFIG" OR "HTML" FOLDERS UNLESS YOU KNOW WHAT YOU ARE DOING.
-Those folders are automatically generated.
+Those files are automatically generated.
 
 Images and attached files must be in a folder with the same name as the file.
 
@@ -17,9 +17,9 @@ LAB INSTRUCTIONS:
 		HEADING LARGE:
 		HEADING MEDIUM:
 		HEADING SMALL:
-		
-	to insert an image, put the file name on its own line. Make sure the line ends with .png, .jpg, or .gif
-	Obviously, make sure the image is in the folder with the same name as the lab file name
+
+	to insert an image, put the file name on its own line. line must end with .png, .jpg, or .gif
+	make sure the image is in the folder with the same name as the lab file name
 
 	to insert a non-image file (like a .ma file), do FILE: filename.
 
