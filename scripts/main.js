@@ -19,9 +19,11 @@ var Main = (function() {
 			for (var i = 0; i < tabs[tab].length; i++) {
 				if (tab === activeTab) {
 					$("#" + tabs[tab][i]).show(switchSpeed);
+					$("#" + tab + "-image").attr("src", "images/menu bar icons/hover-"+tab+".svg");
 				}
 				else {
 					$("#" + tabs[tab][i]).hide(switchSpeed);
+					$("#" + tab + "-image").attr("src", "images/menu bar icons/"+tab+".svg");
 				}
 			}
 		}
