@@ -19,7 +19,6 @@ var appendLabsToPipeline = function() {
 	$(".pipeline-level").hide();
 
 	$(".pipeline-bubble").click(function(){
-		console.log(this);
 		$(this).siblings().toggle(200);
 		$(this).toggleClass('pipeline-bubble-highlighted');
 	});

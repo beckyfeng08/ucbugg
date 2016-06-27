@@ -19,14 +19,17 @@ var Main = (function() {
 				if (tab === activeTab) {
 					$("#" + tabs[tab][i]).show(switchSpeed);
 					$("#" + tab + "-image").attr("src", "images/menu bar icons/hover-"+tab+".svg");
+					$("#" + tab).css('pointer-events', 'none');
 				}
 				else {
 					$("#" + tabs[tab][i]).hide(switchSpeed);
 					$("#" + tab + "-image").attr("src", "images/menu bar icons/"+tab+".svg");
+					$("#" + tab).css('pointer-events', 'all');
 				}
 			}
 		}
 	   	$("#blue-box").animate({left:$("#"+activeTab).position().left - $("#blue-box-region").position().left + 20 + "px"}, switchSpeed);
+	   	// $("#" + activeTab).css('pointer-events', none);
 	}
 
 	var loadHome = function() {
