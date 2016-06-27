@@ -11,7 +11,8 @@ LAB INSTRUCTIONS:
 	top of labname.txt must contain
 		TITLE: title
 		CATEGORY: (which part of the pipeline)
-		LEVEL: (bugg or araknid)
+
+	Modify labs.js to include your lab
 
 	to make a heading, use either
 		HEADING LARGE:

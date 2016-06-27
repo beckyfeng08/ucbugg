@@ -1,20 +1,19 @@
 var Main = (function() {
 
-	var currentTab = "home";
 	var switchSpeed = 200;
 	var tabs = {
 		"home":["home-header", "home-info"],
 		"about":["about-info", "about-facilitators"],
-		"syllabus":[],
+		"syllabus":["placeholder"],
 		"labs":["labs-header", "labs-pipeline"],
-		"projects":[]
+		"projects":["placeholder"]
 	}
-	var activeTab = "home";
+	var activeTab = "labs";
 
 	var loadActiveTab = function() {
 		var mainbody = document.getElementById('mainbody'); //jquery failed me
 		mainbody.scrollTop=0;
-		console.log(activeTab);
+		// console.log(activeTab);
 		for (var tab in tabs) {
 			for (var i = 0; i < tabs[tab].length; i++) {
 				if (tab === activeTab) {
@@ -87,6 +86,7 @@ var Main = (function() {
 		loadActiveTab();
 		resize();
 		// $( window ).resize(resize);
+		appendLabsToPipeline();
 		$(".info-text").hide();
 		$(".info-button").width("50px");
 	};

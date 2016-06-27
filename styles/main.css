@@ -275,12 +275,13 @@ img.about {
 	border-color: #939597;
 	min-width: 600px;
 }
-div.pipeline-row {
+div.pipeline-row, div.pipeline-row-top {
 	display: block;
 	position: relative;
 	/*width: 100%;*/
+	transform: translateY(-50px);
 }
-div.pipeline-elem {
+div.pipeline-elem, div.pipeline-elem-header {
 	display: inline-block;
 	width: 19%;
 	margin-top: 20px;
@@ -291,6 +292,11 @@ div.pipeline-elem {
 	overflow: hidden;
 	padding-left: 2%;
 	padding-right: 2%;
+	vertical-align: top;
+}
+div.pipeline-elem-header {
+	width: 40%;
+	margin: 0;
 }
 div.wide {
 	width: 29%;
@@ -310,16 +316,16 @@ div.pipeline-bubble, div.pipeline-header {
 }
 
 div.pipeline-header {
-	margin: 0px;
+/*	margin: 0px;
 	transform: translateY(-25px);
-	display: inline-block;
+	display: inline-block;*/
 }
 
-div.pipeline-dropdown {
+div.pipeline-dropdown, div.pipeline-level {
 	display: block;
 	background-color: #f2f2f2;
 	padding: 8px;
-	font-size: 10pt;
+	font-size: 9pt;
 	font-style: italic;
 	font-weight: normal;
 	color: #808284;
@@ -328,11 +334,23 @@ div.pipeline-dropdown {
 	padding-left: 10px;
 	letter-spacing: 2px;
 	white-space: normal;
-	margin-top: 2px;
+	/*margin-top: 2px;*/
+	margin-right: 1px;
+	margin-left: 1px;
 	margin-bottom: 2px;
 }
 
-div.pipeline-bubble:hover, div.pipeline-dropdown:hover {
+div.pipeline-level {
+	font-size: 8pt;
+	opacity: .9;
+	font-style: normal;
+	font-weight: bold;
+	background-color: #d1edfc;
+	margin-bottom: 0px;
+	/*margin-top: 0px;*/
+}
+
+div.pipeline-bubble:hover, div.pipeline-dropdown:hover, div.pipeline-bubble-highlighted {
 	background-color: #b2daee;
 }
 

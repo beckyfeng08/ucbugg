@@ -6,6 +6,8 @@
 	<!-- <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans:i,b,bi" /> -->
 	<link rel="stylesheet" type="text/css" href="styles/main.css">
 	<script type="text/javascript" src="scripts/jquery.min.js"></script>
+	<script type="text/javascript" src="labs/labs.js"></script>
+	<script type="text/javascript" src="scripts/lab-processor.js"></script>
 	<script type="text/javascript" src="scripts/main.js"></script>
 	<script type="text/javascript">
 		$(function() {
@@ -108,20 +110,28 @@
 			<line vector-effect="non-scaling-stroke"  x1="60" y1="56" x2="85", y2="56" style="stroke:rgb(147,149,151);stroke-width:2"/>
 			<line vector-effect="non-scaling-stroke"  x1="60" y1="84" x2="85", y2="84" style="stroke:rgb(147,149,151);stroke-width:2"/>
 		</svg>
-		<div class="pipeline-row">
-			<div class="pipeline-header pipeline-bubble"> INTRODUCTION TO MAYA </div>
+		<div class="pipeline-row"  >
+			<div class="pipeline-elem-header" id="introduction-to-maya">
+				<div class="pipeline-header pipeline-bubble"> INTRODUCTION TO MAYA </div>
+			</div>
 		</div>
-		<div class="pipeline-row"> 
-			<div class="pipeline-elem wide"> 
-				<div class="pipeline-bubble"> PRE-PRODUCTION </div>
+		<div class="pipeline-row-top"> 
+			<div class="pipeline-elem wide" id="pre-production"> 
+				<div class="pipeline-bubble" > PRE-PRODUCTION </div>
 				<!-- This is an example of a dropdown element -->
 				<!-- <div class="pipeline-dropdown"> STORY </div> -->
 			</div>
-			<div class="pipeline-elem"> 
-				<div class="pipeline-bubble"> MODELING </div>
+			<div class="pipeline-elem" id="modeling"> 
+ 				<div class="pipeline-bubble" > MODELING </div>
+<!--			<div class="pipeline-level"> BASIC </div>
+				<div class="pipeline-dropdown"> BASIC MODELING </div>
+				<div class="pipeline-dropdown"> ADVANCED MODELING </div>
+				<div class="pipeline-level"> ADVANCED </div>
+				<div class="pipeline-dropdown"> HARD SURFACE MODELING </div>
+				<div class="pipeline-dropdown"> ORGANIC MODELING </div> -->
 			</div>
-			<div class="pipeline-elem"> 
-				<div class="pipeline-bubble"> SHADING </div>
+			<div class="pipeline-elem" id="shading"> 
+				<div class="pipeline-bubble" > SHADING </div>
 			</div>
 			<div class="pipeline-elem wide"> 
 			</div>
@@ -129,24 +139,24 @@
 		<div class="pipeline-row"> 
 			<div class="pipeline-elem wide"> 
 			</div>
-			<div class="pipeline-elem"> 
-				<div class="pipeline-bubble"> RIGGING </div>
+			<div class="pipeline-elem" id="rigging"> 
+				<div class="pipeline-bubble" > RIGGING </div>
 			</div>
-			<div class="pipeline-elem"> 
-				<div class="pipeline-bubble"> LIGHTING </div>
+			<div class="pipeline-elem" id="lighting"> 
+				<div class="pipeline-bubble" > LIGHTING </div>
 			</div>
-			<div class="pipeline-elem wide"> 
-				<div class="pipeline-bubble"> POST-PRODUCTION </div>
+			<div class="pipeline-elem wide" id="post-production"> 
+				<div class="pipeline-bubble" > POST-PRODUCTION </div>
 			</div>
 		</div>
 		<div class="pipeline-row"> 
 			<div class="pipeline-elem wide"> 
 			</div>
-			<div class="pipeline-elem"> 
-				<div class="pipeline-bubble"> ANIMATION </div>
+			<div class="pipeline-elem"id="animation"> 
+				<div class="pipeline-bubble" > ANIMATION </div>
 			</div>
-			<div class="pipeline-elem"> 
-				<div class="pipeline-bubble"> EFFECTS </div>
+			<div class="pipeline-elem"id="effects"> 
+				<div class="pipeline-bubble" > EFFECTS </div>
 			</div>
 			<div class="pipeline-elem wide"> 
 			</div>
