@@ -19,12 +19,15 @@ var Main = (function() {
 				if (tab === activeTab) {
 					$("#" + tabs[tab][i]).show(switchSpeed);
 					$("#" + tab + "-image").attr("src", "images/menu bar icons/hover-"+tab+".svg");
+					// $("#" + tab).mouseleave();
 					$("#" + tab).css('pointer-events', 'none');
+					$("#" + tab).css('background-color', 'transparent');
 				}
 				else {
 					$("#" + tabs[tab][i]).hide(switchSpeed);
 					$("#" + tab + "-image").attr("src", "images/menu bar icons/"+tab+".svg");
 					$("#" + tab).css('pointer-events', 'all');
+					// $("#" + tab).css('background-color', 'transparent');
 				}
 			}
 		}
@@ -92,6 +95,16 @@ var Main = (function() {
 		appendLabsToPipeline();
 		$(".info-text").hide();
 		$(".info-button").width("50px");
+		$(".tab").mouseenter(function() {
+			if ($(this)[0].id === activeTab) {
+				return;
+			}
+			$(this).css('background-color', "#e2dad8");
+		});
+		$(".tab").mouseleave(function() {
+			$(this).css('background-color', "transparent");
+		});
+			
 	};
 
 	return {
