@@ -86,13 +86,15 @@ var Main = (function() {
 		// contactMargin = window.innerWidth/16 + "px";
 		// console.log(contactMargin);
 	 //  	$(".contact-icon").css("margin-top", contactMargin);
+	 	correctPipelines();
 	}
 
 	var start = function() {
 		loadActiveTab();
 		resize();
-		// $( window ).resize(resize);
+		$( window ).resize(resize);
 		appendLabsToPipeline();
+		correctPipelines();
 		$(".info-text").hide();
 		$(".info-button").width("50px");
 		$(".tab").mouseenter(function() {

@@ -275,7 +275,7 @@ img.about {
 	border-color: #939597;
 	min-width: 600px;
 }
-div.pipeline-row, div.pipeline-row-top {
+div.pipeline-row {
 	display: block;
 	position: relative;
 	/*width: 100%;*/
