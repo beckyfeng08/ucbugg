@@ -1,4 +1,4 @@
-var toggleSpeed = 0;
+var toggleSpeed = 300;
 var appendLabsToPipeline = function() {
 	for (var pipelineElem in allLabs) {
 		if (allLabs[pipelineElem].araknid.length == 0) {
@@ -21,13 +21,15 @@ var appendLabsToPipeline = function() {
 
 	$(".pipeline-bubble").click(function(){
 		$(this).siblings().toggle(toggleSpeed);
+		var lineCorrection = window.setInterval(correctPipelines, 5);
 		$(this).toggleClass('pipeline-bubble-highlighted');
-		correctPipelines();
+		window.setTimeout(function() {
+			window.clearInterval(lineCorrection);
+		}, toggleSpeed+5);
 	});
 };
 
 var correctPipelines = function() {
-	console.log($("#preprodbubble").height());
 	heights = [($("#modeling").offset().top + 40 - $("#svg").offset().top)/$("#svg").height(),
 		($("#rigging").offset().top + 40 - $("#svg").offset().top)/$("#svg").height(),
 		($("#animation").offset().top + 40 - $("#svg").offset().top)/$("#svg").height()];

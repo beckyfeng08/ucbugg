@@ -329,7 +329,7 @@ div.pipeline-dropdown, div.pipeline-level {
 	font-style: italic;
 	font-weight: normal;
 	color: #808284;
-	opacity: .7;
+	/*opacity: .7;*/
 	text-align: left;
 	padding-left: 10px;
 	letter-spacing: 2px;
@@ -342,7 +342,7 @@ div.pipeline-dropdown, div.pipeline-level {
 
 div.pipeline-level {
 	font-size: 8pt;
-	opacity: .9;
+	/*opacity: ;*/
 	font-style: normal;
 	font-weight: bold;
 	background-color: #d1edfc;
