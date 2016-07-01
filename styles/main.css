@@ -44,7 +44,7 @@ div.tab {
     text-align: center;
 }
 /*div.tab:hover {
-	background-color: #d4eefc;
+	background-color: #e2dad8;
 }*/
 div.blue-box-region {
 	/*background: #ff0000;*/
@@ -56,14 +56,16 @@ div.blue-box-region {
 	opacity: 1;
 	position: absolute;
 	transform: translateX(-300px);
+	border-bottom: .25px solid #d3c5d7;
 }
 div.blue-box {
 	background: #d4eefc;
+	display: block;
 	position: absolute;
 	width: 80px;
 	height: 63px;
 	z-index: -1;
-	left: 2px;
+	left: 0px;
 }
 /*div#home {
 	background-color: #d4eefc;
@@ -107,7 +109,7 @@ h2 {
 	padding: 0px;
 	color: #8b8D90;
 	font-size: 28pt;
-	letter-spacing: 10px
+	letter-spacing: 10px;
 }
 h3 {
 	margin: 0px;
@@ -121,10 +123,12 @@ h3 {
 }
 div.mainbody {
 	overflow: auto;
-	margin-top:85px;
+	margin-top:63px;
 	position: absolute;
+	display: block;
 	width:100%;
 	height: 100%;
+	text-align: center;
 	/*overflow:hidden;*/
 }
 section.mainbody-midsection {
@@ -205,10 +209,12 @@ div.fox-graphic {
 
 section.bottom-panel {
 	padding: 30px;
+	display: block;
 	font-weight:normal;
 	color: #e4ebef;
 	width: 100%;
 	min-height:100px;
+	/*height: 100%;*/
 	/*height: 100%;*/
 	background-image: url("../images/stupidbottombannerhillsblahugh.svg");
 	background-size: 100%;
@@ -224,14 +230,16 @@ div.contact {
 img.contact-icon {
 	/*display: inline-block;*/
 	display: inline-block;
-	height:80px;
+	height:60px;
 	vertical-align: middle;
-	width: 80px;
-	/*height: 100%;*/
-	margin:auto auto;
-	margin-left: 30px;
-	padding-top: 30px;
-	margin-right: 30px;
+	width: 60px;
+	margin: 40px;
+	margin-top: 10vw;
+	background: #ffccbb;
+	border-radius: 30px;
+}
+img.contact-icon:hover {
+	background: #d4eefc;
 }
 div.about {
 	display: inline-block;
@@ -253,4 +261,116 @@ img.about {
 	padding: 20px;
 	padding-left: 3%; 
 	padding-right: 3%; 
+}
+
+#labs-pipeline {
+	position: relative;
+	display: inline-block;
+	text-align: center;
+	width: 90%;
+	margin-top: 20px;
+	padding-bottom: 20px;
+	border-style: solid;
+	border-width: 2px;
+	border-color: #939597;
+	min-width: 600px;
+}
+div.pipeline-row {
+	display: block;
+	position: relative;
+	/*width: 100%;*/
+	transform: translateY(-50px);
+}
+div.pipeline-elem, div.pipeline-elem-header {
+	display: inline-block;
+	width: 19%;
+	margin-top: 20px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	letter-spacing: .3vw;
+	white-space: nowrap;
+	overflow: hidden;
+	padding-left: 2%;
+	padding-right: 2%;
+	vertical-align: top;
+}
+div.pipeline-elem-header {
+	width: 40%;
+	margin: 0;
+}
+div.wide {
+	width: 29%;
+}
+div.pipeline-bubble, div.pipeline-header {
+	display: block; 
+	height: 90%;
+	width: auto;
+	background-color: #f1f1f2;
+	color: #939597;
+	padding: 12px;
+	padding-right: 21px;
+	padding-left: 21px;
+	/*margin: 20px;*/
+	margin-left: .1vw;
+	margin-right: .1vw;
+}
+
+div.pipeline-header {
+/*	margin: 0px;
+	transform: translateY(-25px);
+	display: inline-block;*/
+}
+
+div.pipeline-dropdown, div.pipeline-level {
+	display: block;
+	background-color: #f2f2f2;
+	padding: 8px;
+	font-size: 9pt;
+	font-style: italic;
+	font-weight: normal;
+	color: #808284;
+	/*opacity: .7;*/
+	text-align: left;
+	padding-left: 10px;
+	letter-spacing: 2px;
+	white-space: normal;
+	/*margin-top: 2px;*/
+	margin-right: 1px;
+	margin-left: 1px;
+	margin-bottom: 2px;
+}
+
+div.pipeline-level {
+	font-size: 8pt;
+	/*opacity: ;*/
+	font-style: normal;
+	font-weight: bold;
+	background-color: #d1edfc;
+	margin-bottom: 0px;
+	/*margin-top: 0px;*/
+}
+
+div.pipeline-bubble:hover, div.pipeline-dropdown:hover, div.pipeline-bubble-highlighted {
+	background-color: #b2daee;
+}
+
+div.pipeline-header {
+	padding: 15px;
+	padding-right: 30px;
+	padding-left: 30px;
+}
+
+svg {
+	/*width: 100%;*/
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	z-index: -1;
+}
+line {
+	stroke: #000;
+	stroke-width: 10;
+	vector-effect: non-scaling-stroke;
 }
