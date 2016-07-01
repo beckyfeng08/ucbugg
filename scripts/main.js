@@ -5,7 +5,7 @@ var Main = (function() {
 		"home":["home-header", "home-info"],
 		"about":["about-info", "about-facilitators"],
 		"syllabus":["placeholder"],
-		"labs":["labs-header", "labs-pipeline"],
+		"labs":["labs-header", "labs-pipeline", "lab"],
 		"projects":["placeholder"]
 	}
 	var activeTab = "labs";
