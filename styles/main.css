@@ -21,7 +21,7 @@ body {
 }
 div.navbar {
 	position: fixed;
-	min-width: 631px;
+	min-width: 980px;
 	width:100%;
 	margin: 0px;
 	padding: 0px;
@@ -29,8 +29,16 @@ div.navbar {
     z-index: 2;
 }
 
+img.logo {
+	display: inline-block;
+	position: absolute;
+	height: 40px;
+	left: 15px;
+	top: 8px;
+}
 div.tabs {
     text-align: center;
+    display: inline-block;
 }
 div.tab {
 	display: inline-block;
@@ -274,6 +282,7 @@ img.about {
 	border-width: 2px;
 	border-color: #939597;
 	min-width: 600px;
+	max-width: 1600px;
 }
 div.pipeline-row {
 	display: block;
