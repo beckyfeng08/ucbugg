@@ -56,13 +56,6 @@ var correctPipelines = function() {
 }
 
 var createLab = function(filename) {
-	// $("#lab").load("scripts/labs/user/basic_modeling.html");
-	// $("#lab").show();
-	var reader = new FileReader();
+	// console.log($("#"+filename.toLowerCase().replace(/\s/g, '')));
 
-    reader.onload = function(e) {
-        console.log(reader.result);
-    }
-
-    reader.readAsText(filename);
 }
