@@ -1,6 +1,6 @@
 allLabs = {
 	"introduction-to-maya": {
-		"bugg": ["introduction to maya", "getting maya", "playblasting", "using renderman on the lab machines"],
+		"bugg": ["introduction to maya", "getting maya"],
 		"araknid": []
 	},
 	"pre-production": {
@@ -16,7 +16,7 @@ allLabs = {
 		"araknid": ["advanced rigging 1", "advanced rigging 2"]
 	},
 	"animation": {
-		"bugg": ["basic animation", "advanced animation"],
+		"bugg": ["basic animation", "advanced animation", "playblasting"],
 		"araknid": ["character animation"]
 	},
 	"shading": {
@@ -32,7 +32,9 @@ allLabs = {
 		"araknid": []
 	},
 	"post-production":  {
-		"bugg": ["compositing"],
+		"bugg": ["using renderman on the lab machines", "compositing"],
 		"araknid": []
 	}
 };
+
+labContent = {};
