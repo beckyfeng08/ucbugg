@@ -32,9 +32,9 @@ div.navbar {
 img.logo {
 	display: inline-block;
 	position: absolute;
-	height: 40px;
-	left: 15px;
-	top: 8px;
+	height: 30px;
+	left: 30px;
+	top: 15px;
 }
 div.tabs {
     text-align: center;
