@@ -148,9 +148,10 @@ section.mainbody-midsection {
 p.home-blurb {
 	margin-left: 20%;
 	margin-right: 20%;
-	color:black;
-	font-size: 10pt;
-	text-align: justify;
+	color:#8b8D90;
+	font-size: 11pt;
+	text-align: center;
+	letter-spacing: 0px;
 }
 div.info-buttons {
 	text-align: center;
@@ -253,12 +254,15 @@ div.about {
 }
 p.about-text {
 	display:inline-block;
-	font-size: 10pt;
-	color:#555566;
+	font-size: 11pt;
+	color:#8b8D90;
 	width: 60%;
 	vertical-align: middle;
 	padding-left: 3%; 
 	padding-right: 3%; 
+	letter-spacing: 1px;
+	margin-top: 15px;
+	text-align: left;
 }
 img.about {
 	display: inline-block;
