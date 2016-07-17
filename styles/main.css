@@ -115,15 +115,15 @@ h1 {
 h2 {
 	margin: 0px;
 	padding: 0px;
-	color: #8b8D90;
-	font-size: 28pt;
-	letter-spacing: 10px;
+	color: #f1f1f2;
+	font-size: 22pt;
+	letter-spacing: 11px;
 }
 h3 {
 	margin: 0px;
-	color: #f1f1f2;
+	color: #8dbfe7;
 	font-weight: normal;
-	font-size: 15pt;
+	font-size: 12pt;
 }
 
 ::-webkit-scrollbar {
@@ -146,8 +146,8 @@ section.mainbody-midsection {
 	min-height: 35%;
 }
 p.home-blurb {
-	margin-left: 20%;
-	margin-right: 20%;
+	margin-left: 25%;
+	margin-right: 25%;
 	color:#8b8D90;
 	font-size: 11pt;
 	text-align: center;
@@ -173,8 +173,8 @@ div.info-button {
 	width: 175px;
 	height: 50px;
 	margin: auto auto;
-	margin-top: 20px;
-	margin-bottom: 60px;
+	margin-top: 45px;
+	margin-bottom: 25px;
 	padding: 5px;
 	text-align: left;
 }
@@ -210,7 +210,7 @@ div.fox-graphic {
 	text-align: center;
 	/*margin: 0 auto;*/
 	min-width: 350px;
-	margin-top: 50px;
+	margin-top: 20px;
 	margin-bottom: 50px;
 	vertical-align: middle;
 }
@@ -228,7 +228,7 @@ section.bottom-panel {
 	background-size: 100%;
 	background-position: 0 0;
 	background-repeat: no-repeat;
-	padding-bottom: 100px;
+	padding-bottom: 75px;
 	text-align: center;
 }
 div.contact {
