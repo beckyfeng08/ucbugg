@@ -105,12 +105,12 @@ section.heading {
 }
 h1 {
 	margin: 0px;
-	margin-top: 20px;
+	margin-top: 10px;
 	padding: 0px;
 	color: #8dbfe7;
 	font-weight: normal;
-	font-size: 20pt;
-	letter-spacing: 30px
+	font-size: 15pt;
+	letter-spacing: 10px
 }
 h2 {
 	margin: 0px;
@@ -146,11 +146,10 @@ section.mainbody-midsection {
 	min-height: 35%;
 }
 p.home-blurb {
-	margin-left: 10%;
-	margin-right: 10%;
+	margin-left: 20%;
+	margin-right: 20%;
 	color:black;
 	font-size: 10pt;
-	font-style: italic;
 	text-align: justify;
 }
 div.info-buttons {
@@ -254,9 +253,8 @@ div.about {
 }
 p.about-text {
 	display:inline-block;
-	font-size: 12pt;
+	font-size: 10pt;
 	color:#555566;
-	font-style: italic;
 	width: 60%;
 	vertical-align: middle;
 	padding-left: 3%; 
