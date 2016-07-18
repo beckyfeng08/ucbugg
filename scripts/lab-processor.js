@@ -56,6 +56,15 @@ var correctPipelines = function() {
 }
 
 var createLab = function(filename) {
-	// console.log($("#"+filename.toLowerCase().replace(/\s/g, '')));
-
+	console.log($("#"+filename.toLowerCase().replace(/\s/g, '')));
+	var onSuccess = function(data) {
+		// $("#lab").append("YOLOLOLOLO");
+    	$("#lab").append(data.responseText);
+    };
+    var onFailure = function(data) { 
+    	$("#lab").empty();
+    	$("#lab").append(data.responseText);
+        console.error('lab not found'); 
+    };
+    makeGetRequest('labs/' + filename.toLowerCase().replace(/\s/g, ''), onSuccess, onFailure);
 }

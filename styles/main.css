@@ -281,7 +281,7 @@ img.about {
 	border-style: solid;
 	border-width: 2px;
 	border-color: #939597;
-	min-width: 600px;
+	min-width: 800px;
 	max-width: 1600px;
 }
 div.pipeline-row {
@@ -296,7 +296,7 @@ div.pipeline-elem, div.pipeline-elem-header {
 	margin-top: 20px;
 	padding-top: 20px;
 	padding-bottom: 20px;
-	letter-spacing: .3vw;
+	letter-spacing: .24vw;
 	white-space: nowrap;
 	overflow: hidden;
 	padding-left: 2%;
@@ -317,11 +317,11 @@ div.pipeline-bubble, div.pipeline-header {
 	background-color: #f1f1f2;
 	color: #939597;
 	padding: 12px;
-	padding-right: 21px;
-	padding-left: 21px;
+	/*padding-right: 21px;*/
+	/*padding-left: 21px;*/
 	/*margin: 20px;*/
-	margin-left: .1vw;
-	margin-right: .1vw;
+	/*margin-left: .1vw;*/
+	/*margin-right: .1vw;*/
 }
 
 div.pipeline-header {
@@ -339,14 +339,14 @@ div.pipeline-dropdown, div.pipeline-level {
 	font-weight: normal;
 	color: #808284;
 	/*opacity: .7;*/
-	text-align: left;
+	text-align: center;
 	padding-left: 10px;
 	letter-spacing: 2px;
 	white-space: normal;
 	/*margin-top: 2px;*/
-	margin-right: 1px;
-	margin-left: 1px;
-	margin-bottom: 2px;
+	/*margin-right: 1px;*/
+	/*margin-left: 1px;*/
+	margin-bottom: 0px;
 }
 
 div.pipeline-level {
