@@ -8,7 +8,7 @@ var Main = (function() {
 		"labs":["labs-header", "labs-pipeline", "lab"],
 		"projects":["placeholder"]
 	}
-	var activeTab = "labs";
+	var activeTab = "home";
 
 	var loadActiveTab = function() {
 		var mainbody = document.getElementById('mainbody'); //jquery failed me
