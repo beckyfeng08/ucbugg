@@ -11,6 +11,7 @@
 	<script type="text/javascript" src="scripts/labs.js"></script>
 	<script type="text/javascript" src="scripts/main.js"></script>
 	<script type="text/javascript" src="scripts/lab-processor.js"></script>
+	<script type="text/javascript" src="scripts/syllabus-processor.js"></script>
 	<script type="text/javascript">
 		$(function() {
 			Main.start();
@@ -34,10 +35,10 @@
 		<div class="tab" id="syllabus" onclick="Main.syllabus()">
 			<image class="tab-image" id="syllabus-image" src="images/menu bar icons/syllabus.svg"></image>
 			<p class="tab-text">SYLLABUS</p>
-			<div class="navbar-dropdown" id-"dropdown-basic">
+			<div class="navbar-dropdown" id="dropdown-basic" onclick="Main.syllabusType = 'basic';updateSyllabus();">
 				<p>BASIC</p>
 			</div>
-			<div class="navbar-dropdown" id="dropdown-advanced">
+			<div class="navbar-dropdown" id="dropdown-advanced" onclick="Main.syllabusType = 'advanced';updateSyllabus();">
 				<p>ADVANCED</p>
 			</div>
 		</div>
@@ -200,6 +201,12 @@
 		<section id="projects-blurb">
 			Dis rite here be da awesome shits our lil buggs produce. check it out.
 		</section>
+
+		<section class="heading" id="syllabus-header">
+			<h3 id="syllabus-type"> BASIC </h3>
+			<h2> SYALLABUS</h2>
+		</section>
+
 
 
 		<section class="bottom-panel">

@@ -4,11 +4,12 @@ var Main = (function() {
 	var tabs = {
 		"home":["home-header", "home-info"],
 		"about":["about-info", "about-facilitators"],
-		"syllabus":["placeholder", "dropdown-basic", "dropdown-advanced"],
+		"syllabus":["syllabus-header", "dropdown-basic", "dropdown-advanced"],
 		"labs":["labs-header", "labs-pipeline", "lab"],
 		"projects":["projects-header", "projects-blurb", "projects-samples"]
 	}
 	var activeTab = "home";
+	var syllabusType = "basic";
 
 	var loadActiveTab = function() {
 		var mainbody = document.getElementById('mainbody'); //jquery failed me
@@ -19,15 +20,11 @@ var Main = (function() {
 				if (tab === activeTab) {
 					$("#" + tabs[tab][i]).show(switchSpeed);
 					$("#" + tab + "-image").attr("src", "images/menu bar icons/hover-"+tab+".svg");
-					// $("#" + tab).mouseleave();
-					$("#" + tab).css('pointer-events', 'none');
 					$("#" + tab).css('background-color', 'transparent');
 				}
 				else {
 					$("#" + tabs[tab][i]).hide(switchSpeed);
 					$("#" + tab + "-image").attr("src", "images/menu bar icons/"+tab+".svg");
-					$("#" + tab).css('pointer-events', 'all');
-					// $("#" + tab).css('background-color', 'transparent');
 				}
 			}
 		}
@@ -98,13 +95,13 @@ var Main = (function() {
 		$(".info-text").hide();
 		$(".info-button").width("50px");
 		$(".tab").mouseenter(function() {
+			if ($(this)[0].id === "syllabus") {
+				$(".navbar-dropdown").css('display', 'block');
+			}
 			if ($(this)[0].id === activeTab) {
 				return;
 			}
 			$(this).css('background-color', "#e2dad8");
-			if ($(this)[0].id === "syllabus") {
-				$(".navbar-dropdown").css('display', 'block');
-			}
 		});
 		$(".tab").mouseleave(function() {
 			$(this).css('background-color', "transparent");
