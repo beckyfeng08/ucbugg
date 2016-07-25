@@ -4,7 +4,8 @@ body {
 	letter-spacing: 3px;
 	overflow: hidden;
 	font-weight: bold;
-	min-height: 2000px;
+	overflow: hidden;
+	/*min-height: 2000px;*/
 	background: white; /* For browsers that do not support gradients */
 	background-image: url("../images/gradient-bg.svg");
 	background-size: 100%;
@@ -14,6 +15,14 @@ body {
 	background: -moz-linear-gradient(top right, #d6eff8, #e1c8c7); /* For Firefox 3.6 to 15 */
 	background: linear-gradient(to top right, #d6eff8, #e1c8c7); /* Standard syntax */
 	background-attachment: fixed;
+
+	scrollbar-face-color: #000000;
+	scrollbar-shadow-color: #2D2C4D;
+	scrollbar-highlight-color:transparent;
+	scrollbar-3dlight-color: transparent;
+	scrollbar-darkshadow-color: transparent;
+	scrollbar-track-color: transparent;
+	scrollbar-arrow-color: transparent;
 }
 * {
    box-sizing:border-box;
@@ -50,6 +59,11 @@ div.tab {
 	padding-top: 10px;
 	background-color: transparent;
     text-align: center;
+    vertical-align: top;
+}
+div.navbar-dropdown {
+	padding-top: 20px;
+	display: none;
 }
 /*div.tab:hover {
 	background-color: #e2dad8;
@@ -75,6 +89,15 @@ div.blue-box {
 	z-index: -1;
 	left: 0px;
 }
+/*div.scrollbar {
+	display: block;
+	position: absolute;
+	width: 10px;
+	height: 20px;
+	right: 0px;
+	top: 0px;
+	background-color: #939597;
+}*/
 /*div#home {
 	background-color: #d4eefc;
 }
@@ -127,9 +150,16 @@ h3 {
 }
 
 ::-webkit-scrollbar {
-    width: 0px;  /* remove scrollbar space */
+    width: 0px;   remove scrollbar space 
+    display: none;
+	/*transform: translateY(-63px);*/
+}
+#dumb-wrapper {
+	overflow: hidden;
 }
 div.mainbody {
+	overflow: -moz-scrollbars-none;
+	-ms-overflow-style: none;
 	overflow: auto;
 	margin-top:63px;
 	position: absolute;
@@ -385,3 +415,77 @@ line {
 	stroke-width: 10;
 	vector-effect: non-scaling-stroke;
 }
+
+p.lab {
+	margin-left: 10%;
+	margin-right: 10%;
+	font-style: normal;
+	font-size: 12pt;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	text-align: left;
+	letter-spacing: 1px;
+	color: #97999b;
+}
+
+h6.lab {
+	color: #f1f1f2;
+	font-size: 36pt;
+	letter-spacing: 11px;
+}
+
+h1.lab, h2.lab, h3.lab {
+	padding-top: 30px;
+	padding-bottom: 10px;
+	margin-left: 10%;
+	color: #8dbfe7;
+	font-size: 24pt;
+	letter-spacing: 8px;
+	text-align: left;
+	font-weight: normal;
+}
+
+h2.lab {
+	padding-top: 20px;
+	font-size: 18pt;
+}
+
+h3.lab {
+	font-size: 14pt;
+}
+
+a.lab-file {
+	display: inline-block;
+	padding: 15px;
+	padding-left: 30px;
+	padding-right: 30px;
+	margin: 20px;
+	color: #939597;
+	background-color: #f1f1f2;
+	/*text-decoration: none;*/
+	border-radius: 2px;
+
+}
+
+a.lab-file:hover {
+	background-color: #d4eefc;
+}
+img.lab-img {
+	margin: 20px;
+}
+
+#projects-samples {
+	margin-top: 50px;
+	margin-bottom: 80px;
+	height: 400px;
+}
+
+div.work {
+	display: inline-block;
+	width: 15%;
+	background-color: #999999;
+	height: 100%;
+	margin-right: 0px;
+	margin-left: 0px;
+}
+

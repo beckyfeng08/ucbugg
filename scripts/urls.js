@@ -13,7 +13,7 @@ var makeGetRequest = function(url, onSuccess, onFailure) {
    $.ajax({
        type: 'GET',
        url: apiUrl + url,
-       dataType: "json",
+       dataType: "html",
        success: onSuccess,
        error: onFailure
    });

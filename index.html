@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+<meta charset="utf-8"/>
 
 <head>
 	<title>UCBUGG</title>
@@ -8,8 +9,8 @@
 	<script type="text/javascript" src="scripts/jquery.min.js"></script>
 	<script type="text/javascript" src="scripts/urls.js"></script>
 	<script type="text/javascript" src="scripts/labs.js"></script>
-	<script type="text/javascript" src="scripts/lab-processor.js"></script>
 	<script type="text/javascript" src="scripts/main.js"></script>
+	<script type="text/javascript" src="scripts/lab-processor.js"></script>
 	<script type="text/javascript">
 		$(function() {
 			Main.start();
@@ -33,6 +34,12 @@
 		<div class="tab" id="syllabus" onclick="Main.syllabus()">
 			<image class="tab-image" id="syllabus-image" src="images/menu bar icons/syllabus.svg"></image>
 			<p class="tab-text">SYLLABUS</p>
+			<div class="navbar-dropdown" id-"dropdown-basic">
+				<p>BASIC</p>
+			</div>
+			<div class="navbar-dropdown" id="dropdown-advanced">
+				<p>ADVANCED</p>
+			</div>
 		</div>
 		<div class="tab" id="labs" onclick="Main.labs()">
 			<image class="tab-image" id="labs-image" src="images/menu bar icons/labs.svg"></image>
@@ -49,144 +56,164 @@
 	</div> -->
 </div>
 
+<!-- <div class="scrollbar"></div> -->
 
-<div class="mainbody" id="mainbody">
-	<section class="heading" id="home-header">
-		<h3> UC BERKELEY UNDERGRADUATE GRAPHICS GROUP </h3>
-		<h2> 3D MODELING AND ANIMATION</h2>
-	</section>
-	<section class="mainbody-midsection" id="home-info">
-		<p class="home-blurb"> 
-			The UC Berkeley Undergraduate Graphics Group (UCBUGG) is a casual bunch of students who want to introduce our fellow peers to the art of producing a 3D-animated short film. By offering both a basic and advanced curriculum, our course guides students of all skill levels through the production pipeline, using Autodesk Maya, Pixar's Renderman, and various Adobe software.
-			<br><br>
-			For more information regarding upcoming enrollment, check out our links below.
-		</p>
-		<div class="info-buttons">
-			<div class="info-button" id="schedule-button" onmouseover="Main.scheduleHover()" onmouseout="Main.scheduleOut()">
-				<div class="button-heading">
-					<image class="info-icon" src="images/home page/updated-schedule-icon.svg"></image>
-					<p class="info-text" id="schedule-text">SCHEDULE</p>
+
+<div id="dumb-wrapper">
+	<div class="mainbody" id="mainbody">
+		<section class="heading" id="home-header">
+			<h3> UC BERKELEY UNDERGRADUATE GRAPHICS GROUP </h3>
+			<h2> 3D MODELING AND ANIMATION</h2>
+		</section>
+		<section class="mainbody-midsection" id="home-info">
+			<p class="home-blurb"> 
+				The UC Berkeley Undergraduate Graphics Group (UCBUGG) is a casual bunch of students who want to introduce our fellow peers to the art of producing a 3D-animated short film. By offering both a basic and advanced curriculum, our course guides students of all skill levels through the production pipeline, using Autodesk Maya, Pixar's Renderman, and various Adobe software.
+				<br><br>
+				For more information regarding upcoming enrollment, check out our links below.
+			</p>
+			<div class="info-buttons">
+				<div class="info-button" id="schedule-button" onmouseover="Main.scheduleHover()" onmouseout="Main.scheduleOut()">
+					<div class="button-heading">
+						<image class="info-icon" src="images/home page/updated-schedule-icon.svg"></image>
+						<p class="info-text" id="schedule-text">SCHEDULE</p>
+					</div>
+				</div>
+				<div class="info-button" id="logistics-button" onmouseover="Main.logisticsHover()" onmouseout="Main.logisticsOut()">
+					<div class="button-heading">
+						<image class="info-icon" src="images/home page/updated-logistics-icon.svg"></image>
+						<p class="info-text" id="logistics-text">LOGISTICS</p>
+					</div>
+				</div>
+				<div class="info-button" id="piazza-button" onmouseover="Main.piazzaHover()" onmouseout="Main.piazzaOut()">
+					<div class="button-heading">
+						<image class="info-icon" src="images/home page/pizza.svg"></image>
+						<p class="info-text" id="piazza-text">PIAZZA</p>
+					</div>
 				</div>
 			</div>
-			<div class="info-button" id="logistics-button" onmouseover="Main.logisticsHover()" onmouseout="Main.logisticsOut()">
-				<div class="button-heading">
-					<image class="info-icon" src="images/home page/updated-logistics-icon.svg"></image>
-					<p class="info-text" id="logistics-text">LOGISTICS</p>
+			<div class="fox-graphic">
+				<image src="images/home page/focks.svg"></image>
+			</div>
+		</section>
+
+		<section class="heading" id="about-info">
+			<h2> ABOUT US </h2>
+			<div class="about">
+				<p class="about-text">UC Berkeley Undergraduate Graphics Group is a casual bunch of students at Berkeley who think the modern fusion of technology, art and entertainment is pretty darn cool, but an area where our university lacks in available coursework. Therefore we're teaching a class through the DeCal (Democratic Education at Cal) program to introduce our fellow students to the art of producing a 3D animated short film. 
+				<br><br>
+				Every semester, we guide students through creating a compelling story, where they collaborate in teams to bring their vision to life. We introduce speakers from companies like Pixar, Tippet Studios, and Dreamworks, and celebrate the finished shorts with a film screening and, of course, free pizza.
+				<br><br>
+				The great thing about UCBUGG is that taking our class isn't the end. We invite you to jump back in and join us, whether it is to work on advanced projects or teach your passion to another generation of UCBUGGers.</p>
+				<image src="images/about/boopeeee.gif" class="about"></image>
+			</div>
+		</section>	
+
+		<section class="mainbody-midsection" id="about-facilitators">
+			<h2> CURRENT FA-SILLY-TATORS </h2>
+
+		</section>
+
+		<section class="heading" id="labs-header">
+			<h3> IN CLASS </h3>
+			<h2> LABS </h2>
+		</section>
+
+		<div class="mainbody-midsection" id="labs-pipeline">
+			<svg id="svg" viewbox="0 0 100 100" preserveAspectRatio="none">
+				<line vector-effect="non-scaling-stroke" id="line1" x1="15" y1="28" x2="85", y2="28" style="stroke:rgb(147,149,151);stroke-width:2"/>
+				<line vector-effect="non-scaling-stroke" id="line2" x1="40" y1="28" x2="40", y2="84" style="stroke:rgb(147,149,151);stroke-width:2"/>
+				<line vector-effect="non-scaling-stroke" id="line3" x1="60" y1="28" x2="60", y2="84" style="stroke:rgb(147,149,151);stroke-width:2"/>
+				<line vector-effect="non-scaling-stroke" id="line4" x1="85" y1="28" x2="85", y2="84" style="stroke:rgb(147,149,151);stroke-width:2"/>
+				<line vector-effect="non-scaling-stroke" id="line5" x1="60" y1="56" x2="85", y2="56" style="stroke:rgb(147,149,151);stroke-width:2"/>
+				<line vector-effect="non-scaling-stroke" id="line6" x1="60" y1="84" x2="85", y2="84" style="stroke:rgb(147,149,151);stroke-width:2"/>
+			</svg>
+			<div class="pipeline-row"  >
+				<div class="pipeline-elem-header" id="introduction-to-maya">
+					<div class="pipeline-header pipeline-bubble"> INTRODUCTION TO MAYA </div>
 				</div>
 			</div>
-			<div class="info-button" id="piazza-button" onmouseover="Main.piazzaHover()" onmouseout="Main.piazzaOut()">
-				<div class="button-heading">
-					<image class="info-icon" src="images/home page/pizza.svg"></image>
-					<p class="info-text" id="piazza-text">PIAZZA</p>
+			<div class="pipeline-row"> 
+				<div class="pipeline-elem wide" id="pre-production"> 
+					<div class="pipeline-bubble" id="preprodbubble" > PRE-PRODUCTION </div>
+					<!-- This is an example of a dropdown element -->
+					<!-- <div class="pipeline-dropdown"> STORY </div> -->
+				</div>
+				<div class="pipeline-elem" id="modeling"> 
+	 				<div class="pipeline-bubble" > MODELING </div>
+	<!--			<div class="pipeline-level"> BASIC </div>
+					<div class="pipeline-dropdown"> BASIC MODELING </div>
+					<div class="pipeline-dropdown"> ADVANCED MODELING </div>
+					<div class="pipeline-level"> ADVANCED </div>
+					<div class="pipeline-dropdown"> HARD SURFACE MODELING </div>
+					<div class="pipeline-dropdown"> ORGANIC MODELING </div> -->
+				</div>
+				<div class="pipeline-elem" id="shading"> 
+					<div class="pipeline-bubble" > SHADING </div>
+				</div>
+				<div class="pipeline-elem wide"> 
+				</div>
+			</div>
+			<div class="pipeline-row"> 
+				<div class="pipeline-elem wide"> 
+				</div>
+				<div class="pipeline-elem" id="rigging"> 
+					<div class="pipeline-bubble" > RIGGING </div>
+				</div>
+				<div class="pipeline-elem" id="lighting"> 
+					<div class="pipeline-bubble" > LIGHTING </div>
+				</div>
+				<div class="pipeline-elem wide" id="post-production"> 
+					<div class="pipeline-bubble" > POST-PRODUCTION </div>
+				</div>
+			</div>
+			<div class="pipeline-row"> 
+				<div class="pipeline-elem wide"> 
+				</div>
+				<div class="pipeline-elem"id="animation"> 
+					<div class="pipeline-bubble" > ANIMATION </div>
+				</div>
+				<div class="pipeline-elem"id="effects"> 
+					<div class="pipeline-bubble" > EFFECTS </div>
+				</div>
+				<div class="pipeline-elem wide"> 
 				</div>
 			</div>
 		</div>
-		<div class="fox-graphic">
-			<image src="images/home page/focks.svg"></image>
-		</div>
-	</section>
 
-	<section class="heading" id="about-info">
-		<h2> ABOUT US </h2>
-		<div class="about">
-			<p class="about-text">UC Berkeley Undergraduate Graphics Group is a casual bunch of students at Berkeley who think the modern fusion of technology, art and entertainment is pretty darn cool, but an area where our university lacks in available coursework. Therefore we're teaching a class through the DeCal (Democratic Education at Cal) program to introduce our fellow students to the art of producing a 3D animated short film. 
-			<br><br>
-			Every semester, we guide students through creating a compelling story, where they collaborate in teams to bring their vision to life. We introduce speakers from companies like Pixar, Tippet Studios, and Dreamworks, and celebrate the finished shorts with a film screening and, of course, free pizza.
-			<br><br>
-			The great thing about UCBUGG is that taking our class isn't the end. We invite you to jump back in and join us, whether it is to work on advanced projects or teach your passion to another generation of UCBUGGers.</p>
-			<image src="images/about/boopeeee.gif" class="about"></image>
+		<div class="mainbody-midsection" id="lab">
+		<!-- dummy -->
 		</div>
-	</section>	
 
-	<section class="mainbody-midsection" id="about-facilitators">
-		<h2> CURRENT FA-SILLY-TATORS </h2>
+		<section class="heading" id="projects-header">
+			<h3> STUDENT </h3>
+			<h2> WORK <!-- WORK WORK WORK WORK  --></h2>
+		</section>
 
-	</section>
+		<section id="projects-samples">
+			<div class="work"> </div>
+			<div class="work"> </div>
+			<div class="work"> </div>
+			<div class="work"> </div>
+			<div class="work"> </div>
+		</section>
 
-	<section class="heading" id="labs-header">
-		<h3> IN CLASS </h3>
-		<h2> LABS </h2>
-	</section>
+		<section id="projects-blurb">
+			Dis rite here be da awesome shits our lil buggs produce. check it out.
+		</section>
 
-	<div class="mainbody-midsection" id="labs-pipeline">
-		<svg id="svg" viewbox="0 0 100 100" preserveAspectRatio="none">
-			<line vector-effect="non-scaling-stroke" id="line1" x1="15" y1="28" x2="85", y2="28" style="stroke:rgb(147,149,151);stroke-width:2"/>
-			<line vector-effect="non-scaling-stroke" id="line2" x1="40" y1="28" x2="40", y2="84" style="stroke:rgb(147,149,151);stroke-width:2"/>
-			<line vector-effect="non-scaling-stroke" id="line3" x1="60" y1="28" x2="60", y2="84" style="stroke:rgb(147,149,151);stroke-width:2"/>
-			<line vector-effect="non-scaling-stroke" id="line4" x1="85" y1="28" x2="85", y2="84" style="stroke:rgb(147,149,151);stroke-width:2"/>
-			<line vector-effect="non-scaling-stroke" id="line5" x1="60" y1="56" x2="85", y2="56" style="stroke:rgb(147,149,151);stroke-width:2"/>
-			<line vector-effect="non-scaling-stroke" id="line6" x1="60" y1="84" x2="85", y2="84" style="stroke:rgb(147,149,151);stroke-width:2"/>
-		</svg>
-		<div class="pipeline-row"  >
-			<div class="pipeline-elem-header" id="introduction-to-maya">
-				<div class="pipeline-header pipeline-bubble"> INTRODUCTION TO MAYA </div>
+
+		<section class="bottom-panel">
+			<div class="contact">
+				<image src="images/social media icons/email.svg" class="contact-icon"></image>
 			</div>
-		</div>
-		<div class="pipeline-row"> 
-			<div class="pipeline-elem wide" id="pre-production"> 
-				<div class="pipeline-bubble" id="preprodbubble" > PRE-PRODUCTION </div>
-				<!-- This is an example of a dropdown element -->
-				<!-- <div class="pipeline-dropdown"> STORY </div> -->
+			<div class="contact">
+				<image src="images/social media icons/fb.svg" class="contact-icon"></image>
 			</div>
-			<div class="pipeline-elem" id="modeling"> 
- 				<div class="pipeline-bubble" > MODELING </div>
-<!--			<div class="pipeline-level"> BASIC </div>
-				<div class="pipeline-dropdown"> BASIC MODELING </div>
-				<div class="pipeline-dropdown"> ADVANCED MODELING </div>
-				<div class="pipeline-level"> ADVANCED </div>
-				<div class="pipeline-dropdown"> HARD SURFACE MODELING </div>
-				<div class="pipeline-dropdown"> ORGANIC MODELING </div> -->
+			<div class="contact">
+				<image src="images/social media icons/utub.svg" class="contact-icon"></image>
 			</div>
-			<div class="pipeline-elem" id="shading"> 
-				<div class="pipeline-bubble" > SHADING </div>
-			</div>
-			<div class="pipeline-elem wide"> 
-			</div>
-		</div>
-		<div class="pipeline-row"> 
-			<div class="pipeline-elem wide"> 
-			</div>
-			<div class="pipeline-elem" id="rigging"> 
-				<div class="pipeline-bubble" > RIGGING </div>
-			</div>
-			<div class="pipeline-elem" id="lighting"> 
-				<div class="pipeline-bubble" > LIGHTING </div>
-			</div>
-			<div class="pipeline-elem wide" id="post-production"> 
-				<div class="pipeline-bubble" > POST-PRODUCTION </div>
-			</div>
-		</div>
-		<div class="pipeline-row"> 
-			<div class="pipeline-elem wide"> 
-			</div>
-			<div class="pipeline-elem"id="animation"> 
-				<div class="pipeline-bubble" > ANIMATION </div>
-			</div>
-			<div class="pipeline-elem"id="effects"> 
-				<div class="pipeline-bubble" > EFFECTS </div>
-			</div>
-			<div class="pipeline-elem wide"> 
-			</div>
-		</div>
+		</section>
+
 	</div>
-
-	<div class="mainbody-midsection" id="lab">
-	<!-- dummy -->
-	</div>
-
-
-	<section class="bottom-panel">
-		<div class="contact">
-			<image src="images/social media icons/email.svg" class="contact-icon"></image>
-		</div>
-		<div class="contact">
-			<image src="images/social media icons/fb.svg" class="contact-icon"></image>
-		</div>
-		<div class="contact">
-			<image src="images/social media icons/utub.svg" class="contact-icon"></image>
-		</div>
-	</section>
-
 </div>
-
 </html>

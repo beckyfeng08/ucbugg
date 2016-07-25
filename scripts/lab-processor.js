@@ -56,15 +56,30 @@ var correctPipelines = function() {
 }
 
 var createLab = function(filename) {
-	console.log($("#"+filename.toLowerCase().replace(/\s/g, '')));
+	// console.log($("#"+filename.toLowerCase().replace(/\s/g, '')));
 	var onSuccess = function(data) {
-		// $("#lab").append("YOLOLOLOLO");
-    	$("#lab").append(data.responseText);
+		// $("#labs-header").hide(200);
+		// $("#labs-pipeline").hide(200);
+
+    	$('#mainbody').animate({
+    		scrollTop: $("#labs-pipeline").height() + $("#labs-header").height() + 120
+    	}, 400);
+
+		// $("#labs-header").html('<h6 class="lab">' + filename + "</h6>");
+    	$("#lab").html(data);
+    	$("#lab").prepend('<section class="heading" id="labs-header">' + 
+			'<h6 class="lab"> ' + filename+ ' </h3> </section>');
+    	// $("#lab").append(data);
+    	// $('#mainbody').animate({
+    	// 	scrollTop: $("#labs-pipeline").height() + $("#labs-header").height()
+    	// }, 400);
+
     };
-    var onFailure = function(data) { 
+    var onFailure = function(data, textStatus, errorThrown) { 
     	$("#lab").empty();
-    	$("#lab").append(data.responseText);
+    	// $("#lab").append(data.responseText);
         console.error('lab not found'); 
+        console.log(textStatus, errorThrown);
     };
     makeGetRequest('labs/' + filename.toLowerCase().replace(/\s/g, ''), onSuccess, onFailure);
 }
