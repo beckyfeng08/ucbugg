@@ -17,7 +17,7 @@ for i in filter(lambda x: x[-3:] == "txt", os.listdir(LABSDIR)):
 			heading_map = {"LARGE": "h1", "MEDIU": "h2", "SMALL": "h3"}
 			tag = heading_map[line[8:13]]
 			output += "<" + tag + " class='lab'>" + line[15:].strip() + "</" + tag + ">"
-		elif line.strip()[-3:] in ("png", "jpg", "gif"):
+		elif line.strip()[-3:].lower() in ("png", "jpg", "gif"):
 			output += '<img src="' + APIURL + i[:-4] + "/" + line.strip() + '" class="lab-img">'
 		elif line[:4] == "FILE":
 			output += '<p></p><a href="' + i[:-4] + "/" + line[5:].strip() + '" class="lab-file" download>' +  line[5:].strip() + "</a>"

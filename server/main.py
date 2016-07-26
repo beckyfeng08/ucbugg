@@ -10,7 +10,8 @@ import os
 
 urls = (
     '/labs', 'list_labs',
-    '/labs/(.*)', 'get_lab'
+    '/labs/(.*)', 'get_lab',
+    '/syllabus/', 'get_syllabus'
 )
 
 app = web.application(urls, globals())
@@ -19,8 +20,7 @@ class list_labs:
     def GET(self):
         web.header('Access-Control-Allow-Origin',      '*')
         web.header('Access-Control-Allow-Credentials', 'true')
-        # print "something"
-        return "yolololoo"
+        return process_labs.html.keys()
 
 class get_lab:
     def GET(self, lab):
@@ -36,6 +36,10 @@ class get_lab:
         else:
             raise web.notfound();
 
+class get_syllabus:
+    def GET(self):
+        web.header('Content-Type', 'text/json')
+        
 
 if __name__ == "__main__":
     port = int(os.environ.get('PORT', 8080))

@@ -1,6 +1,6 @@
 var Main = (function() {
 
-	var switchSpeed = 200;
+	var switchSpeed = 0;
 	var tabs = {
 		"home":["home-header", "home-info"],
 		"about":["about-info", "about-facilitators"],
@@ -14,6 +14,7 @@ var Main = (function() {
 	var loadActiveTab = function() {
 		var mainbody = document.getElementById('mainbody'); //jquery failed me
 		mainbody.scrollTop=0;
+		// correctPipelines();
 		// console.log(activeTab);
 		for (var tab in tabs) {
 			for (var i = 0; i < tabs[tab].length; i++) {
@@ -28,8 +29,9 @@ var Main = (function() {
 				}
 			}
 		}
-	   	$("#blue-box").animate({left:$("#"+activeTab).position().left - $("#blue-box-region").position().left + 20 + "px"}, switchSpeed);
+	   	$("#blue-box").animate({left:$("#"+activeTab).position().left - $("#blue-box-region").position().left + 20 + "px"}, switchSpeed+200);
 	   	// $("#" + activeTab).css('pointer-events', none);
+		if (activeTab === "labs") window.setTimeout(correctPipelines, switchSpeed);
 	}
 
 	var loadHome = function() {
@@ -91,7 +93,8 @@ var Main = (function() {
 		resize();
 		$( window ).resize(resize);
 		appendLabsToPipeline();
-		correctPipelines();
+		window.setTimeout(correctPipelines, 10);
+		// correctPipelines();
 		$(".info-text").hide();
 		$(".info-button").width("50px");
 		$(".tab").mouseenter(function() {
