@@ -35,9 +35,9 @@ var appendLabsToPipeline = function() {
 };
 
 var correctPipelines = function() {
-	heights = [($("#modeling").offset().top + 40 - $("#svg").offset().top)/$("#svg").height(),
-		($("#rigging").offset().top + 40 - $("#svg").offset().top)/$("#svg").height(),
-		($("#animation").offset().top + 40 - $("#svg").offset().top)/$("#svg").height()];
+	heights = [($("#modeling").offset().top + 40 - $("#pipeline-svg").offset().top)/$("#pipeline-svg").height(),
+		($("#rigging").offset().top + 40 - $("#pipeline-svg").offset().top)/$("#pipeline-svg").height(),
+		($("#animation").offset().top + 40 - $("#pipeline-svg").offset().top)/$("#pipeline-svg").height()];
 	for (var i = 0; i < heights.length; i++) {
 		heights[i] *= 100;
 	}

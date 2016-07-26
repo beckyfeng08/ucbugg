@@ -411,7 +411,7 @@ div.pipeline-header {
 	padding-left: 30px;
 }
 
-svg {
+#pipeline-svg {
 	/*width: 100%;*/
 	position: absolute;
 	width: 100%;
@@ -499,3 +499,58 @@ div.work {
 	margin-left: 0px;
 }
 
+img.syllabus-icon {
+	width: 30px;
+	position: relative;
+	display: block;
+	margin: 0 auto;
+}
+
+img.ring {
+	width: 30px;
+	margin: 0 auto;
+	/*height: 30px;*/
+	/*text-align: center;*/
+	position: relative;
+	display: block;
+	margin-top: 8px;
+	margin-bottom: 20px;
+	/*margin-left:50%;*/
+}
+h3.date, h3.hyphen, h3.arrow {
+	font-style: italic;
+	color: #a7a9ac;
+}
+h3.arrow {
+	margin: 10px;
+	font-style: normal;
+}
+
+div.assignments {
+	margin-bottom: 30px;
+}
+p.due, p.assignment {
+	font-size: 10pt;
+	color: #BBBDC0;
+	padding: 4px;
+	/*margin-top: 5px;*/
+	width: 25%;
+	margin: 2px auto;
+}
+
+p.assignment {
+	font-style: italic;
+	margin: 5px auto;
+	background-color: #DAE0DC;
+
+}
+p.submit-button {
+	background-color: #b2daee;
+	color: #ebf7fd;
+	display: inline-block;
+	font-weight: normal;
+	font-size: 12pt;
+	margin: 0 auto;
+	margin-top: 30px;
+	padding: 20px;
+}

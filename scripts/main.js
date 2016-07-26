@@ -4,7 +4,7 @@ var Main = (function() {
 	var tabs = {
 		"home":["home-header", "home-info"],
 		"about":["about-info", "about-facilitators"],
-		"syllabus":["syllabus-header", "dropdown-basic", "dropdown-advanced"],
+		"syllabus":["syllabus-header", "syllabus-main", "dropdown-basic", "dropdown-advanced"],
 		"labs":["labs-header", "labs-pipeline", "lab"],
 		"projects":["projects-header", "projects-blurb", "projects-samples"]
 	}
@@ -96,7 +96,7 @@ var Main = (function() {
 		$(".info-button").width("50px");
 		$(".tab").mouseenter(function() {
 			if ($(this)[0].id === "syllabus") {
-				$(".navbar-dropdown").css('display', 'block');
+				$(".navbar-dropdown").show(100);//('display', 'block');
 			}
 			if ($(this)[0].id === activeTab) {
 				return;
@@ -106,9 +106,10 @@ var Main = (function() {
 		$(".tab").mouseleave(function() {
 			$(this).css('background-color', "transparent");
 			if ($(activeTab != "syllabus")) {
-				$(".navbar-dropdown").css('display', 'none');
+				$(".navbar-dropdown").hide(100);//('display', 'none');
 			}
 		});
+		// updateSyllabus();
 	};
 
 	return {
