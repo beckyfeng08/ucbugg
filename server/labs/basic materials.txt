@@ -1,0 +1,93 @@
+Homework for this week can be found at the end of the page. Acquaint yourself with materials and their attributes before attempting the assignment.
+
+Step 1: Install Renderman on your personal computer
+
+https://renderman.pixar.com/view/non-commercial-renderman
+
+Follow this link, press the DOWNLOAD & INSTALL button and follow the instructions. You’ll need to register an account on the forums to complete the installation. If you have trouble installing Renderman, please come to office hours so facilitators can help troubleshoot the issue.
+
+Once installed, open Maya. Go to Windows->Settings and Preferences
+Windows -> Plugin Manager
+Find and load RenderMan_for_Maya as well as OpenVDB
+
+plugin.png
+
+Step 2: Set the Scene
+A crucial part of shading is determining how your object interacts with light. As a result, you ought to design your shaders under similar lighting conditions that you’ll have in your short. At the very least, you’ll want a light source to see reflections.
+To start, you’ll want to create an environment light by clicking the icon shown below in the Renderman tab OR go to the Renderman menu->RMS Lights->Pxr Standard Env Map Light 
+
+light.png
+
+Using the attribute editor, you can assign an image file to change the color, intensity, and direction of the light. The link below contains a simple 3-point lighting setup which is useful for developing many different materials. Import the file to the scene you're using to test materials.
+
+Env_Three_Point_Lighting.maEnv_Three_Point_Lighting.ma
+DetailsDownload17 KB
+
+
+For transparent objects, add a plane to act as the ground. This helps you understand your object’s shadow and how it distorts light travelling through it. 
+
+Step 3: Materials
+Now that we’ve set the scene, we’ll start assigning materials to our object. Select your object in object mode and right click. Navigate down to Assign New Material. Use the search box (image) to narrow down to Renderman RIS materials which all start with “pxr.” It’s important that you limit yourself to these materials as they are designed to work best with our renderer and will be compatible with the lights we teach you later in the course.
+
+pxr.png
+
+From this menu, you have several choices for your material.
+PxrDisney – this is your Swiss army knife – PxrDisney can do most jobs you need it for and can be used almost any solid, opaque material.
+PxrLMMetal – this will give you a little more control over the metal and allows you to make more convincing replicas of real metals like gold and copper
+PxrLMGlass – this should be your go-to for transparent materials
+PxrLMSubsurface – Used for materials where light scatters below the surface of a material. Good for materials like skin and wax.
+
+These should cover most of your material needs for your short.
+
+Objects can use multiple materials by assigning materials to groups of faces. Note that you cannot assign multiple materials to the same face however.
+
+Once the material is applied, it will appear in the object’s attribute editor (usually the last tab in the list). If your object has a long history, it may be hard to hunt down. Alternatively, right click your object and click “material attributes” to jump straight to the material in the attribute editor.
+Test Rendering
+To see what your material will look like in your completed short, we need to render it. Rendering simulates the lighting in your scene and produces and image. To render, go to Renderman -> Render. This will open the program IT. IT will slowly fill in detail as it makes more and more calculations. You can set what camera you render from in "Renderman->Renderman Globals..." You can also adjust the image resolution from the global options. We'll go more in depth on rendering in the next few weeks.
+
+If you're making small changes to your material, you can use Renderman -> IPR Render. IPR Render will update your material changes on the fly so you don't have to stop and re-render each time.
+
+
+Editing Material Attributes
+Follow this link to a guide on material attributes. Scroll down to “Common Material Properties” for explanations on what some of the options and sliders do in the attribute editor. Understanding these attributes, particularly specular and roughness, will be crucial for this assignment and your animation. For now, don't worry about the section discussing hypershade.
+
+Textures and Patterns
+Finally, we want to discuss maps and textures. Instead of assigning a single value or color to an attribute we can assign an image or fractal. Fractals produce random noise which can help an object look less plastic or artificial. To add a map, click the checkerboard icon beside an attribute.
+
+checkerboard.png
+
+Maya comes with a lot of pre-built patterns for materials like wood, marble, and rock. Choose one that makes sense for your material.
+
+patterns.png
+
+frak.png
+
+After you choose, you’ll likely have some options to customize that pattern. Play with values and watch the preview image until you’re happy with the result. Explanations for these attributes can often be found through online resources like this:
+
+You can change how often your texture repeats over your material using the place2dTexture tab.
+
+place2d.png
+
+repeat.png
+
+By increasing both values by the same amount, your pattern will appear smaller but will tile more frequently to cover the same space. Inputting unequal values will cause the texture to stretch and distort sideways or vertically. You can use this to create new patterns.
+
+scaling.png
+
+You can use patterns to change more than just the color of your object. By assigning a black and white pattern to a “bump” or “normals” attribute, you can add fine details that would take forever to model by hand.
+
+displacement.png
+
+
+
+
+Remember! After you’ve made your material for your object, delete any additional lights or meshes you used to test it. If you plan on referencing these objects into your scene, they’ll bring the lights along and that can mess things up. 
+
+Your Homework:
+
+
+Using the materials you learned above, model and texture a sharpened pencil. You’ll need to include 5 different materials and keep in mind aspects like roughness as well as color.
+
+
+52677.jpg
+You don't need to make this exact pencil.
