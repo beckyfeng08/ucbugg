@@ -66,7 +66,7 @@ This week we'll be modeling fox using different techniques. It's up to you to us
 
 Download this side view of a fox to use as a reference.
 When modeling your own assets you'll be using your character sheets as a reference.
-external image hd01.jpgb9fcd555-9f35-4696-88dd-dad9ef2f66c3HD%20copy.jpg74048919-ba79-41d8-97fe-5ce9cc67d941Original.jpg
+original_fox.jpg
 
 
 
@@ -123,7 +123,8 @@ highlight.jpg
 See that I've selected all the faces including these front facing ones. I want to extrude these front facing faces but not the side ones.
 frontFaces.jpg
 
-So I shift-deselect just the side facing faces like so.deselct.png
+So I shift-deselect just the side facing faces like so.
+deselct.png
 
 
 And voila! You can't tell in this view but if you go back to perspective view, you'll see the front faces are highlighted. You can also tell by the manipulator in this image. I used the same technique on the edges to fit the cube along the side of the fox.
@@ -135,11 +136,12 @@ frontfacing.jpg
 BE SURE TO UNDERSTAND THIS CONCEPT BEFORE MOVING ON. Play around with selecting/deselecting edges and faces around with just the cube and look back and forth between side view and perspective view so that you are doing what you expect to be doing.
 The biggest gotcha here is that you might be selecting faces or edges behind what you see without realizing it.
 It might be helpful to go into Panels -> Layouts -> Two Panes Side by Side. So you can see your side view and perspective view at the same time.
+
 gotcha.png
 
+Next, use the hotkey CTL-E to extrude those faces and pull them to the front of the fox's arm.
 
-
-Next, use the hotkey CTL-E to extrude those faces and pull them to the front of the fox's arm.arm.jpg
+arm.jpg
 
 
 Extrude those same faces again and bring it up to the neck. You start to see why having the hotkeys QWER is so useful. While doing this, you switch between the translate, scale, and rotate tool constantly. In this example, I extruded, moved the faces near the neck, scaled down the faces to fit against the image, and rotated the faces so they fit along the curve of the fox's anatomy.
@@ -284,7 +286,8 @@ deleteFace.jpg
 
 
 
-Next, with your object selected, click Mesh -> Mirror Geometry -> Option Box. In my scene, I'm mirroring over the x axis to the negative side.mirror.jpg
+Next, with your object selected, click Mesh -> Mirror Geometry -> Option Box. In my scene, I'm mirroring over the x axis to the negative side.
+mirror.jpg
 
 
 
@@ -312,7 +315,8 @@ face2.jpg
 
 You can choose to do either the extrude method or the stitching method. Because the ear will be offset at an angle, I chose to use the stitching method because I can create the ear mesh freely and rotate it however I need to stitch it on. Depending on the situation, you'll want to use a different method. For example, I prefer using the extrude method for limbs because I can just extrude straight down.
 
-First, create a new cube. Like we did with the back leg, keep in mind how many vertices need to be stitched (in my case, 4 pairs) and match the cube with the reference image like so.ear1.jpg
+First, create a new cube. Like we did with the back leg, keep in mind how many vertices need to be stitched (in my case, 4 pairs) and match the cube with the reference image like so.
+ear1.jpg
 
 
 
