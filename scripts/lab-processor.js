@@ -69,6 +69,7 @@ var createLab = function(filename) {
     	$("#lab").html(data);
     	$("#lab").prepend('<section class="heading" id="labs-header">' + 
 			'<h6 class="lab"> ' + filename+ ' </h3> </section>');
+		updateHash("labs" + filename);
     	// $("#lab").append(data);
     	// $('#mainbody').animate({
     	// 	scrollTop: $("#labs-pipeline").height() + $("#labs-header").height()
@@ -82,4 +83,5 @@ var createLab = function(filename) {
         console.log(textStatus, errorThrown);
     };
     makeGetRequest('labs/' + filename.toLowerCase().replace(/\s/g, ''), onSuccess, onFailure);
+	updateHash("labs" + filename);
 }

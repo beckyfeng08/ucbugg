@@ -2,7 +2,9 @@
 
 import csv
 
-with open('syllabus.csv') as csvfile:
-	reader = csv.reader(csvfile)
-	for row in reader:
-		print row
+csvfile = open('syllabus.csv', 'rb').read().decode('utf-16')
+	# reader = csv.reader(csvfile)
+	# for row in reader:
+		# print row
+for line in csvfile.splitlines():
+	print line.split(',')

@@ -1,3 +1,13 @@
+var updateHash = function(hash) {
+	console.log(hash);
+	if(history.pushState) {
+	    history.pushState(null, null, '#'+ hash);
+	}
+	else {
+	    location.hash = '#'+ hash;
+	}
+}
+
 var Main = (function() {
 
 	var switchSpeed = 0;
@@ -9,9 +19,9 @@ var Main = (function() {
 		"projects":["projects-header", "projects-blurb", "projects-samples"]
 	}
 	var activeTab = "home";
-	var syllabusType = "basic";
 
 	var loadActiveTab = function() {
+		console.log("loadActiveTab called");
 		var mainbody = document.getElementById('mainbody'); //jquery failed me
 		mainbody.scrollTop=0;
 		// correctPipelines();
@@ -32,6 +42,11 @@ var Main = (function() {
 	   	$("#blue-box").animate({left:$("#"+activeTab).position().left - $("#blue-box-region").position().left + 20 + "px"}, switchSpeed+200);
 	   	// $("#" + activeTab).css('pointer-events', none);
 		if (activeTab === "labs") window.setTimeout(correctPipelines, switchSpeed);
+		if (activeTab === "syllabus") {
+			updateHash(activeTab + syllabusType);
+		} else {
+			updateHash(activeTab);
+		}
 	}
 
 	var loadHome = function() {
@@ -88,8 +103,34 @@ var Main = (function() {
 	 	correctPipelines();
 	}
 
+	var checkForHash = function() {
+		if(window.location.hash) {
+			var hash = window.location.hash.substring(1); //Puts hash in variable, and removes the # character
+			// console.log(hash, Object.keys(tabs));
+			if (hash in tabs) {
+				console.log("FROM CHECK FOR HASH: " + hash);
+				activeTab = hash;
+				loadActiveTab();
+			} else if (hash.startsWith("labs")) {
+				console.log(hash, hash.substring(4));
+				activeTab = "labs";
+				// loadActiveTab();
+				createLab(hash.substring(4));
+				updateHash(hash);
+			} else if (hash.startsWith("syllabus")) {
+				if (hash.substring(8) in {"basic":0, "advanced":0}) {
+					syllabusType = hash.substring(8);
+					activeTab = "syllabus";
+					updateSyllabus();
+					loadActiveTab();
+				}
+			}
+			// hash found
+		} else {
+			// No hash found
+		}
+	}
 	var start = function() {
-		loadActiveTab();
 		resize();
 		$( window ).resize(resize);
 		appendLabsToPipeline();
@@ -112,7 +153,8 @@ var Main = (function() {
 				$(".navbar-dropdown").hide(100);//('display', 'none');
 			}
 		});
-		// updateSyllabus();
+		checkForHash();
+		loadActiveTab();
 	};
 
 	return {
