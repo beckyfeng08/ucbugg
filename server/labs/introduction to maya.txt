@@ -1,19 +1,6 @@
-INTRODUCTION TO MAYA
-USER INTERFACE ORIENTATION
-
 Welcome to Maya! The purpose of this guide is to just give you a basic overview of what you're looking at when you open Maya. Consider this a guided tour through Maya's user interface, but feel free to experiment with any buttons/functions that look interesting to you.
 
-We'll go through the following:
-1. Basic UI terminology
-2. Creating objects
-3. Manipulating views
-4. Display options for the viewport
-5. Manipulating objects
-6. Different views of the scene
-7. A tiny bit of modeling
-
-
-BASIC UI TERMINOLOGY
+HEADING MEDIUM: BASIC UI TERMINOLOGY
 
 This is the viewport:
 viewport.jpg
@@ -39,7 +26,7 @@ dropdown_menu.png
 This changes the function of Maya to a different part of the pipeline. When it's in "modeling", most options in the topmost bar of your screen will be related to modeling. When it's "rigging" the options will be relevant to rigging, etc. This should give you an idea of how huge Maya's scope of capabilities is.
 
 
-CREATING OBJECTS
+HEADING MEDIUM: CREATING OBJECTS
 This part of the guide will take a brief look at how to make a polygon and edit its basic attributes.
 
 1. Make sure your dropdown menu is in Modeling mode
@@ -64,8 +51,7 @@ attribute_editor_2.png
 Notice how there's three boxes for every attribute: this is because there's three dimensions to every attribute (x, y, z). So if you edit those numbers, you should see the sphere changing in the viewport in a way that corresponds to the numbers you put. Feel free to explore changing numbers and seeing the effect on the sphere, or to change the sphere directly and see the effect on the numbers.
 
 
-MANIPULATING VIEWS
-
+HEADING MEDIUM: MANIPULATING VIEWS
 So now that you have an object, what if you want to take a look around the object?
 Here are some valuable functions that will help you move around the viewport with ease:
 
@@ -75,8 +61,7 @@ Here are some valuable functions that will help you move around the viewport wit
 - If the camera moves too far away/is too zoomed in or out, click on an object in your scene and press F. This will focus the camera on that object, centering it in the middle of the viewport so that you are reoriented once again.
 
 
-DISPLAY OPTIONS FOR THE VIEWPORT
-
+HEADING MEDIUM: DISPLAY OPTIONS FOR THE VIEWPORT
 - If you look in the area below the shelf, there should be a sequence of icons:
 icons_below_shelf.png
 
@@ -98,7 +83,7 @@ smoothed.png
 Notice how it almost looks like a different object? We'll get into this in the modeling section in a lot more detail. For now, just know that "3" will smooth an object and "1" will unsmooth it again.
 
 
-MANIPULATING OBJECTS
+HEADING MEDIUM: MANIPULATING OBJECTS
 Remember the toolbox on the left side of the screen? You can use it to manipulate your objects:
 all_tools.png
 
@@ -142,7 +127,7 @@ What if you want to delete an object?
 - Alternatively, you can click on the object's name in the list in the outliner and just press delete/backspace.
 
 
-DIFFERENT VIEWS OF THE SCENE
+HEADING MEDIUM: DIFFERENT VIEWS OF THE SCENE
 Since we are dealing with objects in three dimensions displayed on a 2d screen, it can be difficult to get a sense of depth of the objects you're making in the scene. Therefore, it is important to be cycling through views to make sure everything in the scene is exactly where you want it.
 
 Maya has plenty of options for this.
@@ -159,7 +144,7 @@ Hover your mouse over one of the views and press spacebar. That should make that
 If you want to get out of that, press spacebar again and you'll be back to the four screens. Hover over "persp" and press spacebar to go back to the 3d view.
 
 
-ALTERING PARTS OF AN OBJECT
+HEADING MEDIUM: ALTERING PARTS OF AN OBJECT
 - Make a polygon (sphere, cube, pipe, etc.)
 - Hold right click over it and you should see this:
 vertex_face_etc.png
@@ -172,7 +157,7 @@ The main buttons to pay attention to for now are "Vertex" "Edge" "Face" and "Obj
 - To go back to being able to manipulate the object as a whole, go into "Object Mode." Now the lines will be green, indicating that the object as a whole is being altered and not just specific parts of it.
 
 
-A TINY BIT OF MODELING
+HEADING MEDIUM: A TINY BIT OF MODELING
 - For the purpose of your application assignment (making a robot), here's a little bit of modeling tools to help you.
 
 From what you've seen in the previous section, it seems that the lines on an object dictate its shape--so how do you add lines/edges?

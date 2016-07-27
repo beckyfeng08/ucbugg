@@ -1,0 +1,252 @@
+Basic Animation
+
+In this lab you'll get familiar with the graph editor and set up your Maya work space. At the end you'll have all the tools you need to do your homework: a bouncing ball.
+
+basic_anim.zipbasic_anim.zip
+DetailsDownload33 KB
+
+
+Setting Up Maya
+
+1. Click the running guy at the bottom of Maya. This will bring up the animation preferences
+running.png
+
+2. Make sure playback speed is set to 24 frames per second (fps). This means that for every 24 frames, a second of animation occurs.
+24 fps is the animation industry standard.
+2.png
+3. In the left categories menu, go to Animation under Settings. Under tangents, make sure you're defaulting to weighted tangents. Also make sure in and out tangents default to flat. We'll explain these settings later.
+
+3.png
+
+
+
+
+
+Understanding the Graph Editor
+
+1. To get to the graph editor: Windows->Animation Editors -> Graph Editor
+2. What is this?
+
+The graph editor plots the motion of an object against time (frames) and allows us to play with that motion.
+If you don't have any objects selected the graph editor should be empty like this:
+8.png
+
+3. What's the red bar ?
+
+To understand the red bar, we need to understand the time slider at the bottom of Maya.
+
+9.png
+
+The start number is the frame at which your animation begins when you hit the play button.
+The end number is the frame at which your animation ends when you hit the play button.
+If you only want to see frames 35 to 177, change start to 35, and end to 177.
+
+To change the frame you're on you can either change the current number. Or simply left click drag across the timeline itself. Notice, that as you left click drag your mouse across the timeline, the red bar in the graph editor is moving. The red bar is the frame you're on.
+
+timesliderredline.gif
+
+4. How do I get anything on the graph editor?
+
+First, create a cube from the polygons menu.
+
+10.png
+
+With the cube selected, open the graph editor (if you closed it).
+
+11.png
+
+On the time slider, make sure you're at frame 1. You'll notice that the red bar is now at frame 1 as well.
+
+Now let's say, at frame 1, we want the box to be on top of the grid, like the grid is the floor. Use the move tool and move the box on top of the grid.
+12.png
+
+With the box selected, hit S. This will make a "key frame" at your current frame (should be frame 1). By hitting S, what we're saying is: "at frame 1, I want this box to be here"
+13.png
+
+A few things happened.
+At 1, we have a red tick mark at frame 1. This means that for whatever we have selected, we have a key frame at that frame.
+At 2, our channel box has turned red. This means that we have "keyed" aka set those attributes of the box at the current frame.
+At 3, the graph editor sensed that we made a key for all those attributes aka channels.
+
+Now lets say we want the box to move up in the air for half a second.
+
+Move to frame 12 (24 frames in a second, therefore 12 frames is half a second) on your time slider.
+Use the move tool to drag your box up in the Y direction.
+Hit S.
+You should now have two key frames. One at frame 1 (Box on ground), and another at frame 12 (Box in air).
+Hit play.
+boxUp.gif
+
+Now you have an animation. Lets check out what the upward motion of the box looks like in the graph editor.
+Since the upward motion was a translation in Y, go to the Translate Y channel in the graph editor (make sure your box is selected).
+BoxUpY.gif
+
+Lets look at this.
+
+1. As time passes, the red bar goes forward in time, indicating that we're moving forward in frames.
+2. The graph has two black dots which are the keys we put in at frame 1 and frame 12.
+3. The graph has a green curve called a spline connecting the keys.
+
+Ok cool, but why do we care about this graph? Again, on the x axis we have frames, and on the y axis we have magnitude.
+So lets say we want our box to go higher. Just grab the key at frame 12 and move it up (with the move tool selected)
+in the graph editor by left click dragging or middle mouse button dragging. To make sure the key only moves in one direction, hold down shift while moving. 
+
+boxUpHigher.gif
+
+Now lets say we want the box to reach that height, but later, like after a second. So lets drag that frame 12 key frame to frame 24.
+
+blockUpSlow.gif
+Can't see your whole animation? Make sure your time slider goes at least to frame 24.
+
+
+Now lets say we want the box to go down, then up.
+1. Go to frame 12
+2. Drag the box down to where you think the box should go down to.
+3. Hit S
+
+
+
+
+yo.gif
+
+
+Notice how we now have a new key frame at frame 12 on the graph editor that's at a lower magnitude than the initial key frame at frame 1.
+
+So now we know how to get our box somewhere at some time in one axis. But what if we want the box to do this up/down motion but also go forward?
+
+Go to the translate Z channel. What's happening here?
+
+1.png
+
+Why is the spline flat? Well, the box isn't moving in the Z axis. So the magnitude of the curve doesn't change.
+
+Lets have the box come towards the +Z direction until frame 18. From my camera's perspective that's towards the viewer.
+
+Animation.gif
+
+Stacking splines on top of each other like this to get the motion that you want is 3D animation at its core.
+
+Playing With Tangents
+
+Changing the time and magnitude of key frames isn't all that we can do in the graph editor. We can also change the curvature of the graph by playing with tangents.
+
+What's a tangent again? Its the purple thing that pops up in the graph editor when you select a black dot (key frame). The tangent allows you to manipulate the spline .
+
+7.png
+
+
+Unweighted tangents can't be pulled in and out, just rotated.
+unweightedTangent.gif
+
+
+On the other hand weighted tangents allow you to pull them in and out.
+
+weightedTangent.gif
+
+
+This gives us more control over the curve. Hence, in the first part of the tutorial we set the default tangent type to weighted!
+
+How do you manipulate the tangents?
+
+Notice that when you first create a weighted tangent you get something that looks like this.
+
+locked.png
+
+
+
+The large circles on the end mean that the tangent is weighted, but the weights are locked. This is a problem since changing weights allows us to pull the tangent handles in and out. With the tangent selected, right click in the graph editor and click Free Tangent Weights. The squares on the end means we can now pull the tangent in and out. Sweet.
+
+unlocked.png
+
+
+
+Notice the tangent has two sides. To play with a tangent around a key, select the key and then select one side of the tangent handle. Then left click drag or middle mouse drag to rotate and pull out the tangent handles.
+
+selectingdifferntsidesoftangent.gif
+
+As you can see from this gif from up above, when you play with one of the tangent handles, the other one goes with it. In other words, playing with one side of the tangent messes with the graph on both sides of the key frame.
+weightedTangent.gif
+
+But what if you want to only modify one side of the graph? Break the tangent handles by right clicking while having a tangent handle selected and hit Break Tangents.
+
+breaktangents.gif
+
+Don't think you have enough control with your current key tangents? Add another key right in the graph editor by navigating to the frame you want add the key on in your timeline, selecting your curve, right click -> insert key.
+insertkey.gif
+
+A great test to see if you have your tangent operations down is to create a spline in Paint or on paper and see if you can replicate it in your graph editor. Let me show you what I mean. Lets say I want to replicate this curve.
+
+splineDrawing.png
+
+Here's a youtube video of me doing it.
+
+
+
+
+
+Homework Part 1
+The first part of your homework is to generate a graph for this curve below starting from the key I set in the translate Y of the box at frame 1.
+
+
+Homework..png
+Once you open up spline_tracer.ma you should see this.
+
+spline_tracer.png
+
+Your job is to turn that into the curve above just like I did with the previous curve in the youtube video. Don't worry about the box. It's just there so you have something to attach the curves to.
+
+Curves
+
+Now that you know how to manipulate curves. What do they actually mean? Lets take a look at a few curves and see if we can describe the motion of an object just by looking at the graph.
+
+1.
+linear.png
+
+An object with a linear graph like this is moving at a constant rate. It's not slowing down or speeding up anywhere on this interval.
+
+linearBall.gif
+
+2.
+slowin.png
+
+An object with a graph like this is slowing into a stop. You'll notice that as you get closer to the end of the interval your position is changing less and less.
+
+slowin.gif
+
+3.
+slowout.png
+
+An object with a graph like this slows out of a stop into some type of motion. In other words, the object is accelerating.
+
+slowout.gif
+
+
+Using the three up above, can you tell why the ball moves the way it does for the curves in this gif?
+
+3ornjK3itVx9NZ3WUM.gif
+
+
+
+Homework part 2
+
+The second part of your homework is to animate a ball falling from a height. Your job is to make sure that the ball dissipates energy correctly until it comes to a stop naturally. I have your ball set up in ball_bounce.ma. I strongly recommend watching the ball jump youtube video I made for this rig to understand the mechanics of the ball rig:
+
+
+
+In case that isn't clear, here's what I submitted when I had this homework assignment. You only have to do 1 ball, but it can be any type of ball.
+If you're feeling overwhelmed, your ball doesn't have to move horizontally. However, it would be pretty hard to drop a ball and have it only move vertically.
+
+left to right: bowling ball, basket ball, ping pong ball, beach ball
+
+Approach: Here's how I'd approach this assignment.
+
+Step 1: Get the vertical motion down for the ball
+
+vertical.gif
+
+Step 2: Squash and Stretch
+squashstretch.gif
+
+Step 3: Horizontal motion
+
+horizontalmotion.gif

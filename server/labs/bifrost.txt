@@ -1,0 +1,111 @@
+This lab will go over the newest and easiest way to simulate liquids in Maya. This should be pretty short, but it should hopefully give you a starting point should you decide to include water in your short.
+
+
+Please download this bifrost_lab_initial.ma
+DetailsDownload85 KB
+ file, which contains an animated bowl and tub. In this lab, you will initialize the tub with a bit of water, fill the bowl dynamically, and then allow the water to simulate as you watch the bowl tip over and fall into the tub.
+
+HEADING MEDIUM: Familiarize yourself with the scene
+By now, hopefully you have completed the animation labs, and therefore know how to set your Playback Speed to "Real-Time (24fps)". (Hint: Google it).
+Press "Play" (alt + v) and watch the bowl.
+bowl.gif
+Your should look like this, but slower (long gifs are large).
+
+HEADING MEDIUM: Prepare your Bifrost Settings
+Make sure the "FX" menu is selected in the dropdown menu in the upper left (F5). Select Bifrost -> Bifrost Options. Make sure Background Processing is enabled. Set the Maximum RAM usage to something reasonable that won't crash your computer. I only have 12 GB of RAM on this laptop and usually have Photoshop and Chrome open, so I kept it at 6.00 GB. The higher you make it, the smoother your scene will run. I also changed the Disk location to use a larger hard drive.
+Bifrost.png
+
+HEADING MEDIUM: Set up Emitter Geometry
+In any fluid system, you need to specify what are called "emitters", which do exactly what you think they do. Make a small cube and put it in the bowl. This cube should be small enough to very comfortably float inside the bowl. Make a large cube and put it in the tub. The cube in the tub should be almost the size of the inner walls of the tubs, but not quite, Make sure it is slightly shorter. Mine looks like this:
+Bifrost2.png
+I turned on Xray so you can see better.
+
+Before doing anything, highlight everything except the bowl and do Modify -> Freeze Transformations. Obviously, you can't freeze transformations on the bowl because it's animated.
+
+Highlight everything and do Alt + Shift + D (Delete by Type -> History).
+
+HEADING MEDIUM: Create Solver and attach Emitters
+Now we're ready to set up a Bifrost liquid. This sets up a calculation engine that does a bunch of math with any objects in your scene. It contains its own parameters for various things like Gravity and Wind.
+
+Click the cube in the bowl and go to Bifrost -> Liquid. This step is what actually creates the Liquid, and having the cube selected conveniently also makes the cube an emitter. Maya also draws a bounding box around each bifrost liquid system, and the box should be around your cube now.
+Bifrost3.png
+Let's look at the outliner.
+outliner.png
+Select the box in the tub, select the wireframe bounding box from the last step, and go to Bifrost -> Add -> Emitter. This will tell the Bifrost solver that in addition to the cube from the last step, this large box will also emit particles.
+
+Lastly, open the channel box (with the large box selected) and you should see a new Bifrost section. Since unlike the last cube, we don't want this box to emit continuously, turn Bifrost Liquid Continuous Emission Off (type 0).
+Bifrost4.png
+
+Set your Playback Speed to play every frame. This is critical to running any effects system because the solver needs to calculate the value at each frame in order to extrapolate to the next frame. Select the liquid again (either by clicking the bounding box or from the outliner) and press Play. Notice a fast yellow bar grows and follows the time slider, while a slow green bar grows from the beginning. The yellow bar reflects the frames that have been submitted to the solver. The green bar reflects the frames that have completed and cached. Now if you scrub to any green frame, you can see the simulation at that time. Whenever you change an aspect of the simulation, this will recalculated. If you want to clear the cache manually, you can do so from the Bifrost Menu (Flush Scratch Cache).
+Bifrost6.png
+
+Select the large box and the small cube and turn Visibility -> Off in the channel box. You don't want these rendering.
+
+Notice that the particles fall through everything. This liquid system does not know the liquid is supposed to collide with the tub yet.
+Bifrost5.png
+We'll fix that soon, but first, let's look at some of the bifrost parameters.
+
+HEADING MEDIUM: Twiddling Display Parameters So Your Viewport Doesn't Take 57 Years
+
+Open the Attribute Editor and go to liquidShape1. Open the Display drop-down.
+Bifrost7.png
+The first thing you see is this.
+If you select Voxels, you get a slightly better representation of the final look, but it might make your graphics card cry (in other words, your viewport is gonna lag when you scrub).
+
+The default Particle Display menu is pretty good, but you can change the Max Particle Display count if your display is chugging. I turned the Point Size up to 3.0. Also,notice the blue-to-white color ramp under "Color Channel Remap". Above that, it shows "Color Channel": Velocity. This means that the color of the particle is proportional to how fast it's moving. This is the most useful (in my opinion) coloring scheme. No need to change anything.
+
+Under Voxel Display, you can also reduce this quality if your computer is dying.
+
+HEADING MEDIUM: Making the Bowl and Tub Collide with Water
+
+This step will finally stop the water from falling through everything. Select the tub and the liquid and do Bifrost -> Add -> Collider. Same with the bowl.
+Now, the water will behave as it should.
+pour.gif
+
+HEADING MEDIUM: Adding an Accelerator For No Reason
+You might notice that the water sticks to the bowl very strongly as it pours out. Let's pretend we don't like this, so we are going to add an accelerator to force the water away from the bowl. Accelerators are used to force your liquid in any direction with any amount of strength.
+
+Place a cube right where you want to redirect the liquid.
+Bifrost9.png
+Select both the cube and the liquid and do Bifrost -> Add -> Accelerator. Open the cube in the attribute editor and open the Bifrost menu at the bottom (and the Acceleration option under that). Looking at the view axis in the lower left of my screen, it looks like I want to push the water in the negative z and positive y directions. So set the direction to 0.00, 1.00, -1.00. Now the water should stick slightly less. Try playing with the direction magnitude.
+Bifrost10.png
+Don't forget the turn off the visibility of the Accelerator.
+
+HEADING MEDIUM: Stopping the Emitter Once the Bowl Drops
+By this point, you have probably noticed that the small cube emitter continues to pour even after the bowl drops.
+
+Let's fix this. Select the small cube emitter in the outliner, open it in the channel box, and go to the Bifrost Liquid Continuous Emission attribute. Notice this is set to on. With the large cube, we set it to off. With the small cube, we want to "animate" it from on to off. Go to the frame right before the bowl falls, right click on the words "Bifrost Liquid Continuous Emission", and do Key Selected. Then, move forward a frame or two, change the value to "0", and Key Selected again.
+Bifrost12.png
+
+HEADING MEDIUM: Kill Plane
+This is useful if you don't want the particles falling to infinity and crashing your computer. Select the liquid, and do Bifrost -> Add -> Kill Plane.
+
+Drag it down and put it under everything. Make it big enough to see, but Bifrost will assume it extends in all directions infinitely, so you don't need to make it huge.
+Bifrost13.png
+10. Tweaks
+Open your Liquid in the Attribute Editor and go to bifrostLiquidContainer1.
+There is a whole mess of options and parameters. I will go over the useful ones.
+Solver Attributes - Unchecking Enable will stop the solver entirely. You can also tweak the start frame and gravity. These should be self-explanatory.
+Resolution - You probably noticed that the water looks gooey and forms into large clumps and intersects with colliders. You can shrink these clumps by decreasing the Master Voxel Size. Be careful. Making this too low will make your calculation take years, but it's the best thing you can do for more realistic water.
+Foam - If you want foam, you can enable it. Most of the defaults work pretty well
+Caching - if this is not checked, it recalculates every time you press play.
+Surface Tension, Viscosity - Play with these if you feel like your liquid needs more of them. Water does not need viscosity, but a chocolate fountain might. Water should technically need surface tension, but it's usually not necessary.
+
+Go to Bifrost -> Compute and Cache to Disk. Make sure Write Mode is set to Write All. This will save your simulation.
+
+HEADING MEDIUM: Submission
+Turn down the Master Voxel Size in the Resolution (I used .4) and play your whole simulation one last time. This will take a while. Go nap.
+
+When you're done, make a playblast and attach it to your submission.
+
+
+HEADING MEDIUM: Rendering (optional for submission)
+Select the liquid and open the attribute editor. Go to Liquid Shape -> Bifrost Meshing and check Enable.
+Bifrost15.png
+This creates a mesh for your particle system. This is important because Renderman has no way to render the bifrost object, so it needs a mesh and a Renderman material. Add a PxrLMGlass, and make sure the "Thin" Option is checked in the material. This prevents it from looking black.
+Capture16.png
+
+Make sure the liquid itself has its visibility turned off (or Renderman will try to render it and only render the bounding box).
+
+Add whatever lighting you like and render.
+Bifrost14.png

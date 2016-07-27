@@ -1,0 +1,191 @@
+We’ve learned the basics of shading objects, for instance, making them shiny or matte. A lot of times though, objects have properties that are not uniform. Not everything is evenly shiny, smooth, or the same color. Basically, we know how to make a red bouncy ball, but we don’t know how to make an object with uneven colors and bumps across its surface, like a rock. And we certainly don’t know how to make something as intricate and detailed as a human face full of wrinkles and pores.
+
+
+The problem here is that it would be unfeasible to model each of these small details or apply separate materials for them. This is a problem solved by texturing.
+
+Textures are a way of adding detail or color to a 3D object, and they are created procedurally or taken directly from 2D images. They are then typically applied to the object by using Projection Mapping, or UV Mapping.
+
+UV Mapping
+Imagine you have a box of limited edition Star Wars cereal. The front of the box is really awesome because it has Darth Vader on it, and the back of the box is awesome because it has a game, and the side of the box is less awesome because it has the nutrition facts. If we wanted to express the 2D texture that we just described on this very simple 3D object, how would we do it?
+
+For simple polygons such as a rectangular prism, Maya is able to unwrap the 3D object residing in the X,Y,Z coordinate space into a 2D projection on U and V coordinates. For a model of a cereal box, we can deduce that the simplest way to unwrap the polygon is into its six faces.
+
+To visualize this you can do the following exercise. In Polygon mode, create a cube. This is essentially your cereal box. With your cube selected in object mode, click UVs in the top bar → UV editor. A new window should pop up, with the 2D UV map of your cube automatically unwrapped. For a model as simple as your cube, Maya is able to achieve an accurate UV map by default.
+
+
+
+The map is the outline of the six faces, while the grey background filling up the quadrant is the default material assigned to the model, “lambert1”. 
+
+
+
+In the UV editor, you can enter into face, vertex, shell, etc modes by holding down the RMB. You can also manipulate the map, its edges, faces, or vertices in similar fashion as you would to the model (translate, rotate, scale) in your main viewport.
+
+Note that when you manipulate the UV map, the geometry of your model does not change. You are simply altering the relationship of the areas on the model to correspond to areas on the 2D texture you wish to project. This will become clearer as we apply different textures.
+
+As your model becomes more complex, you will not be able to rely on Maya’s default UV mapping scheme as it will become less and less helpful, and oftentimes downright impossible for texturing. In such cases, one technique you can use for simpler geometric models is Projection Mapping.
+
+
+Projection Mapping
+Projection Mapping is an effective method of texturing models because it allows one to quickly determine the UV coordinates of a texture.
+
+The various possible Projection Maps that you can use on your model are under the “UV” tab on the top bar. These include:
+
+Planar Mapping
+Spherical Mapping 
+Cylindrical Mapping
+
+
+
+1. Planar Mapping
+Pic
+The image above shows a planar projection onto one side of the cube which captures the UV coordinates of that side. Given the UV coordinates we can now place a yellow fish texture as shown in the image. Notice that the Planar Map only portrays a single clean face.
+From planar mapping, it’s not a far stretch to achieve a box mapping.
+http://www.3dmax-tutorials.com/graphics/il_mod_uvw_map_box-2.jpg
+Pic1 
+However, in the image above, taking a planar mapping of a sphere model gives us “stretched” UV’s as you can see by the strips across the top and side of the sphere.
+In this case, it would be prudent to use Spherical Mapping.
+2. Spherical Mapping
+Pic 
+In a spherical mapping, the image is projected from all sides of the sphere so that no outstanding distortions occur at any face of the sphere.
+On the other hand, a spherical mapping would not be advantageous if we wanted to texture, for example, an arm. We want the projection to appear across the entire arm. In this case we would use Cylindrical Mapping.
+3. Cylindrical Mapping
+Pic2
+In a cylindrical mapping, the image is projected around the circumference of the cylinder, as well as the top and bottom caps. This prevents distortions in an arm, for example, so that all along the length the texture is consistent, not stretched.
+
+While these basic projection maps can be useful tools for specific types of geometries, Maya Bonus Tools provides more powerful tools to give you greater control of where you want to place your texture on yet more complex models.
+
+Take the example of the fox model from your Advanced Modeling Lab. The complexities of the fox model does not give as many clues as to how to project textures onto its 3D surface. If we go into UV→Automatic, Maya will by default make planar projections along north, south, east, west, top, and bottom orientations to produce this map:
+
+
+
+This may seem okay for a solid grey color at the moment, but introducing specific textures to corresponding regions becomes tricky along the outmost edges of each UV shell that was created in this map. To  illustrate this better, we gave the fox a checkered texture.
+
+
+As you can see, because the two halves of the fox’s UV shells are not aligned along the pattern texture, wherever the faces of each UV shell meet on the model of the fox, the textures will fail to match correctly. This can be seen all over the body, wherever Maya has made cuts to the UV to separate shells based on planar projections:
+
+
+For instance, where the legs meet the body.
+
+Where these faces meet are called “seams”. UV mapping always involves creating at least one seam that allows Maya to cut along in order to flatten the 3D model into 2D projection. Poorly placed seams, as in the above fox projection, will make really obvious any inconsistency in patterns or textures that are meant to be contiguous, as they will not match up properly. This will happen at any dramatic changes in the texture (here, a sharp difference between black and white squares).
+
+Strategically placed seams—seams in areas with no dramatic changes (solid colors, for example) and/or where they will not be visible to the camera in any scene of the film, allows the rest of the model to be textured evenly.
+
+Maya’s Bonus Tools tab in the top bar can help with this:
+
+FOX LAB: 
+Auto Unwrap UV tool
+
+The Auto Unwrap UV tool lets you have total control over where you would like to make cuts on the mesh to project.
+
+Let’s begin:
+
+Open your fox file.
+
+Select the mesh in object mode that you would like to unwrap UVs.
+
+Click Bonus Tools on Menu bar, then UV Editing → Auto Unwrap UVs Tool.
+
+
+
+
+A window like this should come up.
+
+
+With these settings selected, hit Enter Tool to begin making cuts.
+
+Your mesh should automatically turn teal and you should be in Edge mode.
+
+
+
+Click an edge to represent the “seam” at which we cut the 3D model to flatten it into a UV mapped image. 
+
+Here, we’ll make a seam beginning from the throat down the belly, to the tip of the tail. 
+
+
+
+
+We will also make cuts along the center of the insides of each of the fox’s legs, and around the bottom of its foot.
+
+
+
+At the head of the fox, we will make cuts similar to these below, where the seams are placed below the jaw and behind the ears. 
+
+
+Because the fox’s snout protrudes farther out in the Z axis, its UV map will smush it so that there is not much geometry for us to work with in detail. Thus, we will make a cut down the center of the snout:
+
+
+
+Once you’re satisfied, click Continue and Done to allow Maya to make the cuts along your highlighted borders. 
+
+In the UV editor, this should appear:
+
+
+
+
+As a result of this skinning method, Maya creates a new material called “unwrapCheckerShader”. We can now see that the checker pattern on the fox model is consistent over all the important, camera visible areas. Note that for human/humanoid characters who stand erect, it is more advantageous to place seams around the crown and down the perimeter of the head behind the ears, as those areas will be covered by hair. We go more into detail about UV mapping a human face in another lab (link at the end of this lab).
+
+
+
+
+
+Now we can export this UV map into an image editing software like Photoshop, where we can begin to paint on desired 2D textures onto this map. In the UV editor, select Image→ Create PSD Network all the way at the bottom.
+
+
+A new window should appear.
+
+
+
+
+
+Make sure the file path is your desired one. Maya automatically creates a file path in the “sourceimages” folder under: “maya/projects/default/sourceimages/”. 
+
+Since we will be rendering shorts in high quality film, make sure that the image size is large enough that when projected onto the character, the texture won’t become pixelated.
+
+Make sure to select color in attributes, and add it to the selected attributes column.
+
+Hit “Create”.
+
+Open Photoshop and your saved .psd file from the file path above.
+
+On the lower right hand side, you should have a layers panel that resembles the image below:
+
+
+
+The layer “UVSnapShot” contains the bounds of your UV map that you will use as a guide to painting textures onto the different areas of the mesh. It is seen as the white wireframe in your image.
+
+Create a layer by selecting the icon at the bottom of the layers panel of a piece of paper with a corner folded over.
+
+Click drag this layer “Layer 2” so that it is below “UVSnapShot”.
+
+Working from your new layer, you can begin painting or dragging in images for the texture of your fox.
+
+Once you are satisfied with your painting, delete all of the superfluous layers (UVSnapShot, unwrapCheckerShader, Layer 1, and Background) so that only your desired painted texture remains.
+
+Save your .psd file, and head back into Maya.
+
+If your texture is not showing up in the UV editor, go into Image → Update PSD Network
+
+If your texture is not showing up on your model, make sure you have the “Textured” mode selected
+
+
+
+ 
+
+Also, go into your Material Attributes by holding down RMB and selecting Material Attributes.
+
+Beside the “Color” slider, click the black arrow and make sure the File Attributes have the correct file path inputted.
+
+
+
+
+
+Hit Reload if the texture does not appear and all else is correctly inputted.
+
+Because we are rendering using Renderman, in your Material attributes, you will want to change the Material Type to pxrDisney, instead of Lambert:
+
+
+Once selected, in Base Color of your PxrDisney Shader, click the checker box to the right of the slider and select “PSD File” from the pop-up window.
+
+
+
+Finally, load the correct .psd texture file you created, and voilá, your textured fox is now complete!
