@@ -36,6 +36,7 @@ div.navbar {
 	padding: 0px;
     text-align: center;
     z-index: 2;
+    background: transparent !important;
 }
 
 img.logo {
@@ -487,7 +488,8 @@ img.lab-img {
 #projects-samples {
 	margin-top: 50px;
 	margin-bottom: 80px;
-	height: 400px;
+	height: 42.2vw;
+	display: block;
 }
 
 div.work {
@@ -495,15 +497,26 @@ div.work {
 	width: 15%;
 	background-color: #999999;
 	height: 100%;
-	margin-right: 0px;
-	margin-left: 0px;
+	margin-right: -2px;
+	margin-left: -2px;
 }
 
 img.syllabus-icon {
-	width: 30px;
+	width: 50px;
+	height: 50px;
+	padding: 5px;
 	position: relative;
 	display: block;
 	margin: 0 auto;
+	border-style: solid;
+	border-width: 2pt;
+	border-color: #a7a9ac;
+	border-radius: 25px;
+}
+p.syllabus-timeline-text {
+	margin-top: 5px;
+	font-size: 9pt;
+	color: #a7a9ac;
 }
 
 img.ring {
@@ -545,7 +558,7 @@ p.assignment {
 
 }
 p.submit-button {
-	background-color: #b2daee;
+	background-color: #62aaee;
 	color: #ebf7fd;
 	display: inline-block;
 	font-weight: normal;
@@ -553,4 +566,15 @@ p.submit-button {
 	margin: 0 auto;
 	margin-top: 30px;
 	padding: 20px;
+}
+
+#syllabus-timeline {
+	padding-bottom: 0px;
+	min-height: 0;
+}
+
+div.timeline-piece {
+	display: inline-block;
+	width: 7%;
+	text-align: center;
 }

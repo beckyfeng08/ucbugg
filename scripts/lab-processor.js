@@ -82,6 +82,6 @@ var createLab = function(filename) {
         console.error('lab not found'); 
         console.log(textStatus, errorThrown);
     };
-    makeGetRequest('labs/' + filename.toLowerCase().replace(/\s/g, ''), onSuccess, onFailure);
+    makeGetRequest('labs/' + filename.toLowerCase().replace(/\s/g, ''), "html", onSuccess, onFailure);
 	updateHash("labs" + filename);
 }

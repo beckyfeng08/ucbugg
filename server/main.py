@@ -3,6 +3,7 @@
 # MOST GHETTO BACKEND IN THE HISTORY OF BACKENDS
 # NOBODY PAID ME TO DO THIS
 import process_labs
+import process_syllabus
 import web
 import os
 
@@ -11,7 +12,7 @@ import os
 urls = (
     '/labs', 'list_labs',
     '/labs/(.*)', 'get_lab',
-    '/syllabus/', 'get_syllabus'
+    '/syllabus', 'get_syllabus'
 )
 
 app = web.application(urls, globals())
@@ -38,8 +39,11 @@ class get_lab:
 
 class get_syllabus:
     def GET(self):
+        web.header('Access-Control-Allow-Origin',      '*')
+        web.header('Access-Control-Allow-Credentials', 'true')
         web.header('Content-Type', 'text/json')
-        
+        return process_syllabus.json_syllabus
+
 
 if __name__ == "__main__":
     port = int(os.environ.get('PORT', 8080))

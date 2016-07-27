@@ -9,11 +9,11 @@ apiUrl = "http://localhost:8080/";
 * @param  {function} onFailure   callback method to execute upon request failure (non-200 status)
 * @return {None}
 */
-var makeGetRequest = function(url, onSuccess, onFailure) {
+var makeGetRequest = function(url, responseType, onSuccess, onFailure) {
    $.ajax({
        type: 'GET',
        url: apiUrl + url,
-       dataType: "html",
+       dataType: responseType,
        success: onSuccess,
        error: onFailure
    });

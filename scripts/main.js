@@ -1,5 +1,4 @@
 var updateHash = function(hash) {
-	console.log(hash);
 	if(history.pushState) {
 	    history.pushState(null, null, '#'+ hash);
 	}
@@ -21,11 +20,8 @@ var Main = (function() {
 	var activeTab = "home";
 
 	var loadActiveTab = function() {
-		console.log("loadActiveTab called");
 		var mainbody = document.getElementById('mainbody'); //jquery failed me
 		mainbody.scrollTop=0;
-		// correctPipelines();
-		// console.log(activeTab);
 		for (var tab in tabs) {
 			for (var i = 0; i < tabs[tab].length; i++) {
 				if (tab === activeTab) {
@@ -40,13 +36,13 @@ var Main = (function() {
 			}
 		}
 	   	$("#blue-box").animate({left:$("#"+activeTab).position().left - $("#blue-box-region").position().left + 20 + "px"}, switchSpeed+200);
-	   	// $("#" + activeTab).css('pointer-events', none);
 		if (activeTab === "labs") window.setTimeout(correctPipelines, switchSpeed);
 		if (activeTab === "syllabus") {
 			updateHash(activeTab + syllabusType);
 		} else {
 			updateHash(activeTab);
 		}
+		$(".navbar-dropdown").hide();
 	}
 
 	var loadHome = function() {
@@ -71,29 +67,29 @@ var Main = (function() {
 	}
 
 	var scheduleHover = function() {
-		$("#schedule-button").animate({width:"175px"}, switchSpeed/1.5);
-		$("#schedule-text").show(switchSpeed/1.5);
+		$("#schedule-button").animate({width:"175px"}, 150);
+		$("#schedule-text").show(150);
 	}
 	var scheduleOut = function() {
-		$("#schedule-button").animate({width:"60px"}, switchSpeed/1.5);
-		$("#schedule-text").hide(switchSpeed/1.5);
+		$("#schedule-button").animate({width:"60px"}, 150);
+		$("#schedule-text").hide(150);
 	}
 	var logisticsHover = function() {
-		$("#logistics-button").animate({width:"175px"}, switchSpeed/1.5);
-		$("#logistics-text").show(switchSpeed/1.5);
+		$("#logistics-button").animate({width:"175px"}, 150);
+		$("#logistics-text").show(150);
 		
 	}
 	var logisticsOut = function() {
-		$("#logistics-button").animate({width:"60px"}, switchSpeed/1.5);
-		$("#logistics-text").hide(switchSpeed/1.5);
+		$("#logistics-button").animate({width:"60px"}, 150);
+		$("#logistics-text").hide(150);
 	}
 	var piazzaHover = function() {
-		$("#piazza-button").animate({width:"145px"}, switchSpeed/1.5);
-		$("#piazza-text").show(switchSpeed/1.5);
+		$("#piazza-button").animate({width:"145px"}, 150);
+		$("#piazza-text").show(150);
 	}
 	var piazzaOut = function() {
-		$("#piazza-button").animate({width:"60px"}, switchSpeed/1.5);
-		$("#piazza-text").hide(switchSpeed/1.5);
+		$("#piazza-button").animate({width:"60px"}, 150);
+		$("#piazza-text").hide(150);
 	}
 
 	var resize = function() {
@@ -106,9 +102,7 @@ var Main = (function() {
 	var checkForHash = function() {
 		if(window.location.hash) {
 			var hash = window.location.hash.substring(1); //Puts hash in variable, and removes the # character
-			// console.log(hash, Object.keys(tabs));
 			if (hash in tabs) {
-				console.log("FROM CHECK FOR HASH: " + hash);
 				activeTab = hash;
 				loadActiveTab();
 			} else if (hash.startsWith("labs")) {
@@ -140,7 +134,7 @@ var Main = (function() {
 		$(".info-button").width("50px");
 		$(".tab").mouseenter(function() {
 			if ($(this)[0].id === "syllabus") {
-				$(".navbar-dropdown").show(100);//('display', 'block');
+				$(".navbar-dropdown").show(100);
 			}
 			if ($(this)[0].id === activeTab) {
 				return;
@@ -150,7 +144,7 @@ var Main = (function() {
 		$(".tab").mouseleave(function() {
 			$(this).css('background-color', "transparent");
 			if ($(activeTab != "syllabus")) {
-				$(".navbar-dropdown").hide(100);//('display', 'none');
+				$(".navbar-dropdown").hide(100);
 			}
 		});
 		checkForHash();
