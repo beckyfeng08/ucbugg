@@ -63,7 +63,7 @@ var createLab = function(filename) {
 
     	$('#mainbody').animate({
     		scrollTop: $("#labs-pipeline").height() + $("#labs-header").height() + 170
-    	}, 400);
+    	}, 600);
 
 		// $("#labs-header").html('<h6 class="lab">' + filename + "</h6>");
     	$("#lab").html(data);

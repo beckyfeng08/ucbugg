@@ -13,7 +13,7 @@ var Main = (function() {
 	var tabs = {
 		"home":["home-header", "home-info"],
 		"about":["about-info", "about-facilitators"],
-		"syllabus":["syllabus-header", "syllabus-main", "dropdown-basic", "dropdown-advanced"],
+		"syllabus":["syllabus-header", "syllabus-main", "syllabus-timeline", "dropdown-basic", "dropdown-advanced"],
 		"labs":["labs-header", "labs-pipeline", "lab"],
 		"projects":["projects-header", "projects-blurb", "projects-samples"]
 	}
@@ -39,6 +39,7 @@ var Main = (function() {
 		if (activeTab === "labs") window.setTimeout(correctPipelines, switchSpeed);
 		if (activeTab === "syllabus") {
 			updateHash(activeTab + syllabusType);
+			updateSyllabus();
 		} else {
 			updateHash(activeTab);
 		}
