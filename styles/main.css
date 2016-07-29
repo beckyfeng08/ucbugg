@@ -506,15 +506,16 @@ img.syllabus-icon, img.active-syllabus-icon, img.past-syllabus-icon {
 	height: 50px;
 	padding: 5px;
 	position: relative;
-	display: block;
+	display: inline-block;
 	margin: 0 auto;
 	border-style: solid;
 	border-width: 2pt;
 	border-color: #a7a9ac;
 	border-radius: 25px;
+	vertical-align: middle;
 }
 img.syllabus-icon:hover {
-	border-color: #d4eefc;
+	border-color: #f1f1f2;
 }
 p.syllabus-timeline-text {
 	margin-top: 5px;
@@ -536,6 +537,17 @@ img.ring {
 h3.date, h3.hyphen, h3.arrow {
 	font-style: italic;
 	color: #a7a9ac;
+	display: inline-block;
+	height: 50px;
+	margin-left: 20px;
+	margin-right: 20px;
+	vertical-align: middle;
+	padding-top: 15px;
+	width:75px;
+	text-align: left;
+}
+#tues-date {
+	text-align: right;
 }
 h3.arrow {
 	margin: 10px;
@@ -546,23 +558,29 @@ div.assignments {
 	margin-bottom: 50px;
 	margin-top: 40px;
 }
+div.due-dates {
+	margin-top: 20px;
+}
 p.due, a.assignment {
-	font-size: 10pt;
+	font-size: 14pt;
 	color: #ABADB0;
 	padding: 4px;
-	width: 25%;
+	width: 100%;
 	margin: 2px auto;
-	/*margin-top: 15px;*/
+	margin-top: 40px;
 }
 
 a.assignment {
-	display: block;
+	display: inline-block;
 	font-style: italic;
-	padding: 8px;
+	padding: 30px;
 	margin: 5px auto;
 	margin-top: 15px;
 	background-color: #DAE0DC;
 	text-decoration: none;
+	width: auto;
+	margin-left: 20%;
+	margin-right: 20%;
 
 }
 p.submit-button {
@@ -577,14 +595,32 @@ p.submit-button {
 }
 
 #syllabus-timeline {
+	display: inline-block;
 	padding-bottom: 0px;
 	min-height: 0;
-	margin-top: 50px;
+	margin: 0 auto;
+	margin-top: 80px;
 	margin-bottom: 30px;
+	/*margin-left: 40%;*/
+	width: 25%;
+	min-width: 300px;
+}
+
+#syllabus-left, #syllabus-right {
+	display: inline-block;
+	width: 30%;
+	vertical-align: top;
 }
 
 div.timeline-piece {
-	display: inline-block;
-	width: 7%;
+	display: block;
+	/*width: 7%;*/
 	text-align: center;
+	padding: 8px;
+	margin: 0 auto;
+	margin-top: 15px;
+}
+
+h1.syllabus-head {
+	font-size: 22pt;
 }

@@ -24,13 +24,6 @@ var setCurrentDate = function() {
 }
 
 var setInfo = function(date) {
-	var dateArr = date.split("/");
-	var tues = new Date(parseInt(dateArr[2]) + 2000, parseInt(dateArr[0]) - 1, parseInt(dateArr[1]));
-	var thur = new Date(parseInt(dateArr[2]) + 2000, parseInt(dateArr[0]) - 1, parseInt(dateArr[1])+2);
-	// console.log(date,tues.toString().split(" ")[1].toUpperCase(), thur.toString().split(" ")[1].toUpperCase());
-	$("#tues-date").html(tues.toString().split(" ")[1].toUpperCase() + " " + tues.getDate());
-	$("#thur-date").html(thur.toString().split(" ")[1].toUpperCase() + " " + thur.getDate());
-
 	var i = 1;
 	assType = syllabusType.charAt(0).toUpperCase() + syllabusType.slice(1);
 	// console.log(assType);
@@ -63,8 +56,17 @@ var updateContent = function() {
 		for (var i=0; i < keys.length; i++) {
 			// console.log(keys[i]);
 			iconType = syllabusType.charAt(0).toUpperCase() + syllabusType.slice(1) + " Icon";
+			var dateArr = keys[i].split("/");
+			var tues = new Date(parseInt(dateArr[2]) + 2000, parseInt(dateArr[0]) - 1, parseInt(dateArr[1]));
+			var thur = new Date(parseInt(dateArr[2]) + 2000, parseInt(dateArr[0]) - 1, parseInt(dateArr[1])+2);
+			// console.log(date,tues.toString().split(" ")[1].toUpperCase(), thur.toString().split(" ")[1].toUpperCase());
+			// $("#tues-date").html();
+			// $("#thur-date").html(thur.toString().split(" ")[1].toUpperCase() + " " + thur.getDate());
+
 			$("#syllabus-timeline").append('<div class="timeline-piece" id="button' + keys[i].split('/').join('') + '" onclick="setInfo(\'' + keys[i] + '\')">' +
+					'<h3 class="date" id="tues-date"> ' + tues.toString().split(" ")[1].toUpperCase() + " " + tues.getDate() + ' </h3>' + 
 					'<img src="images/syllabus icons/'+syllabusType+'/' + data[keys[i]][iconType] + '.svg" class="syllabus-icon">' + 
+					'<h3 class="date" id="thur-date"> ' + thur.toString().split(" ")[1].toUpperCase() + " " + thur.getDate() + ' </h3>' + 
 				'</div>');
 		}
 		var i = 0;
