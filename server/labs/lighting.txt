@@ -1,4 +1,4 @@
-LIGHTING GUIDE
+HEADING LARGE: INTRODUCTION
 
 Lighting is an essential part of the animation pipeline. There are lighting departments in animation and video game studios with people who are solely specialized to work on lighting. This is why we cover this part of the pipeline in UCBUGG.
 
@@ -7,7 +7,7 @@ The purpose of this guide is to provide you with as much information and example
 There are two demos after this guide in which I light the same scene in daytime and in nighttime. It applies many of the lessons in this guide in case you feel overwhelmed with information.
 
 
-CONSIDERATIONS BEFORE LIGHTING
+HEADING MEDIUM: CONSIDERATIONS BEFORE LIGHTING
 -It is considerably easier to gauge the effectiveness/final look of your light if your environments and characters are already textured. Lighting a gray scene with no colors will be of very little help. Textures interact with lighting (e.g. specular, anisotropy, etc.) so not having textures and working on lighting first will not take you very far.
 
 -If there are effects in your scene, it would be particularly helpful to, at this point, be capable of applying that effect for at least a frame to test how lighting interacts with it. Example: if one of your characters is a bear and you’re planning on using fur, be sure to test your lighting with the fur on since sometimes these effects change how the lights/shadows interact with the scene.
@@ -19,17 +19,18 @@ There are limitations to this: if you add/delete a light, IPR doesn’t update t
 -Renderman does not produce .png or .jpeg files! The two files types you’ll be dealing with are .exr and .tiff
 Let’s say you’re happy with a light setup and you’d like to render an actual full frame to test your light setup. The image that you’ll render will be .exr by default. Make sure to open this image in Photoshop to see the image accurately! If you open a .exr in Preview it’ll be super bright and desaturated, and if you open a .tiff in Preview it’ll be extra saturated and dark. Photoshop will show the photo accurately and that is what the final render will look like, so do not forget to only open these images in Photoshop!!
 
-TYPES OF LIGHTS COVERED IN THIS GUIDE:
+HEADING MEDIUM: TYPES OF LIGHTS COVERED IN THIS GUIDE
 -GeoArea Light
 -Environment Light
 -Daytime Environment Light
 
-GeoArea Light
+HEADING SMALL: GeoArea Light
 -GeoArea light produces light rays based on the shape of the light that you can specify (i.e. a rectangle area light will send light rays proportional to the shape and surface area of the rectangle.)
 
 
 Common options in the attribute editor that apply to all/most types of light:
--Primary visibility
+
+<b>Primary visibility</b>
 This is off by default in area lights but on by default in environment lights. In general you’d want this off if you don’t want the actual source of light visible in your scene. Having this on means that you can actually see the source of light as a lit panel:
 
 Untitled_primaryvisibility.png
@@ -37,13 +38,17 @@ Untitled_primaryvisibility.png
 If the Primary Visibility is unchecked, this is what you get:
 
 Untitled.png
--Shape
+
+<b>Shape</b>
 This changes your light type from rectangular (default) to any of the following: disk; sphere; cylinder; distant; spot
--Exposure
+
+<b>Exposure</b>
 This controls the intensity of light: low intensity makes the light darker/weaker, higher intensity makes the light brighter/stronger
--Color
+
+<b>Color</b>
 Changes the color of the light emitted
--Color Temperature
+
+<b>Color Temperature</b>
 You have to click “enable temperature” to use this function
 This is an alternative to using light color. Why? The theory behind this is that you can choose the temperature of light in terms of Kelvins and you’d get a more plausible/realistic color of light rather than risking choosing an unnatural color off the color wheel. Number references are below with their colors:
 kelvin-color-temperature.jpg
@@ -53,54 +58,54 @@ This is an image from the Renderman website that samples the color temperature t
 Kelvin Temperature - Renderman.png
 
 
--Shadows
+<b>Shadows</b>
 There’s a convenient box here called “Enable Shadows” that you can use to enable/disable shadows. This box is also in the light panel.
 Shadow color: what color is the shadow? If it’s a colored light, the shadow isn’t going to be a black shadow, so edit that in whichever way makes sense in your scene.
 Adaptive Shadows: it is conservative by default. Aggressive will result in FASTER renders but LOWER QUALITY (it’s basically tracing less rays).
 Important: only the logical light sources in your scene should produce shadows! If you add an area light to just generally make the scene brighter (like you will see in the example at the end of this guide) you should turn the shadows off if it’s in the opposite direction of the source of light. Otherwise you’ll confuse the viewers and they won’t understand what the other light source is.
 
--Barndoors
+<b>Barndoors</b>
 Imagine flaps around the edges of your light source, and you have control over how much you close a flap in on the light, defining the shape of the light produced.
 
 barndoors_viewport.png
 
 Use these to define the shape of light (example at the end of the guide: you can use barndoors on an area light that simulates light from a television in order to make the light coming from the television more rectangular and defined in shape.
 
-SPECIFIC LIGHT OPTIONS/NOTES FOR SPOTLIGHT AND DISTANT LIGHT
-Spotlight
--Core Angle
+HEADING SMALL: SPECIFIC LIGHT OPTIONS/NOTES FOR SPOTLIGHT AND DISTANT LIGHT
+<b>Spotlight</b>
+- Core Angle
 This determines the circumference of the spot that the spotlight creates: a higher value creates a bigger spot while a smaller value creates a smaller spot.
--Penumbra Angle
+- Penumbra Angle
 Imagine the penumbra as the outline to the spot: a penumbra of 0 means the circle has a really sharp outline, so it’s a perfect circle spot. A high penumbra means the outline of the spot is blurry, producing a much softer spotlight.
--Penumbra Exponent
+- Penumbra Exponent
 This determines the falloff of the penumbra angle. A penumbra exponent of 0 means that the penumbra will look a little smaller, decreasing the intensity of light around the outline of the spot. A high penumbra exponent means the light from the spot will be still strong around the outline of the spot.
 
-Distant (aka directional light)
+<b>Distant (aka directional light)</b>
 This is light from infinitely far away, and its direction completely depends on the ROTATION of the directional light. It does not matter how big or small the distant light is or where the distant light is placed, the ONLY thing that affects distant light is the direction you point it in your scene.
 
 Use distant light to simulate sunlight. That is a distant light’s primary source.
 
 
-ENVIRONMENT LIGHT
+HEADING SMALL: ENVIRONMENT LIGHT
 Environment light will create a large sphere around your scene. Light rays are created from every point on the sphere, sent inward to a central point.
 
-Environment Light Settings
--Primary Visibility
+<i>Environment Light Settings</i>
+<b>Primary Visibility</b>
 As opposed to area lights, this is turned on by default. This means that when you render an image, you will see the color in the “tint” tab below it on the sphere. So by default, you will see a white sphere in your scene if there isn’t anything in the background.
 Having this left as ON might be a problem for you. Why? Let’s say you render an image from inside a house, and there’s nothing outside the house in your scene. That patch of “nothingness” will be where you can see the environment sphere. If it’s white, then that patch will be white, and you won’t be able to replace it with a background of your choosing in Photoshop (good luck chroma-keying white away).
 Having this turned OFF will render that image with that patch of “nothingness” preserved as transparency, allowing you to go into Photoshop and add a background layer/image of your choosing instead of having the standard white color.
 
--Exposure
+<b>Exposure</b>
 As opposed to area lights, environment light’s exposure is set to 0 by default. A value of 0 means that it’s producing light at an intensity of 1 (people commonly confuse a value of 0 with the light being off—it’s not.) The higher the exposure, the more intense the light from the environment sphere will be.
 
--Environment Image
+<b>Environment Image</b>
 If you click on the folder icon, you will be able to open an image file, which will link that image to this sphere. The image will be stretched around the sphere and will serve as a “skybox.”
 Choose an HDR, high-resolution image if you plan on attaching an environment image. The image will be stretched around a huge sphere, so the higher the resolution, the less degradation in quality. Don’t look for these in google images and save them from there: these are actually images that download as .hdr files, not standard .png or .jpeg formats.
 The image will automatically color the light. Renderman/Maya understands this image as if it’s a set of colors that you place in front of a light source, therefore, Maya projects these colors into the light.
 -The other options are the same as the ones mentioned in the area lights.
 
 
-DAYTIME ENVIRONMENT LIGHT
+HEADING SMALL: DAYTIME ENVIRONMENT LIGHT
 Since Mental Ray had a default outdoor lighting map (Physical Sun and Sky) for a long time, Renderman has finally decided to throw its hat in the ring and now we have Daytime Environment Light.
 
 There is a fair bit of warning I’ve included after this section about using this light. Default light maps are problematic and too often misused in UCBUGG.
@@ -111,26 +116,26 @@ daytime_env_viewport.png
 
 There’s a compass and a sun for a reason: this represents the sun’s position in your scene.
 
-Daytime Environment Light Options
--Primary Visibility
+<i>Daytime Environment Light Options</i>
+<b>Primary Visibility</b>
 Same as the environment light. In this case, however, the sky and sun will not show up, producing that area instead as transparency, allowing you to add your own background.
 
--Exposure
+<b>Exposure</b>
 Same as before: this controls the intensity of light and, similar the normal environment light, it is 0 by default.
 
--Sun size
+<b>-Sun size</b>
 If Primary Visibility is ON, then you will be able to see the sun and the sky. This attribute then controls how big that sun is in your view.
 
--Direction Method:
-Vector:
+<b>Direction Method</b>
+- Vector:
 Insert the vector’s x, y, and z in the spaces below to position the sun
-Heliodon:
+- Heliodon:
 Renderman went over and above and simulated a heliodon for this lighting tool. Scroll down to the “Heliodon” tab and you will see spaces to enter the month, day, year, hour, time zone, latitude, and longitude that Renderman can calculate to give you an accurate position of the sun as it would be seen on Earth.
 
--Haziness
+<b>Haziness</b>
 Under the sky tab, this controls how clear the sky is. A value of 1.7 indicates the clearest sky, and a value of 10 is the other end.
 
--Sky tint
+<b>Sky tint</b>
 Gives a color to the sky.
 
 A word to the wise about Daytime Environment Light:
@@ -153,7 +158,7 @@ What should you do instead?
 -If your short takes place in an exterior location, make sure to have something in the distance indicating that there’s still a world beyond the small location of your short. Just having colored light in the sky is not enough to complete your environment. Too many shorts that take place outside do not show anything beyond the small street in the scene, implying that there’s a massive void/end of the world beyond the location of your short. Students fall into this trap many times because they use a default light map like Daytime Env. Light, so they’re too distracted by the sky to notice that they still need a sense of depth in their environment!
 
 
-MAKING GEOMETRY EMISSIVE
+HEADING MEDIUM: MAKING GEOMETRY EMISSIVE
 Aside from the normal system of Renderman lights, you can actually make any model in your scene produce light by itself.
 
 How do you do this?
@@ -161,7 +166,7 @@ Select the object.
 In the Renderman shelf, click on the “Make Selected Geometry Emissive” button.
 Alter its attributes the same way discussed above for other lights.
 
-LIGHT LINKING
+HEADING LARGE: LIGHT LINKING
 Live action filmmakers and cinematographers would kill to have this option in real life: creating a light source that only affects a specified list of surfaces/objects despite anything else being the pathway of the light. This is the process of light linking: you can specify which lights should affect which objects. You’re making lights in a virtual space, so you might as well enjoy disobeying the laws of physics, right?
 
 By default, all lights affect all objects. Light linking allows you to alter that.
@@ -185,11 +190,11 @@ Without editing the light linking, this is what the image would look like:
 
 light_linking_1.png
 
-3.For this example, I want to make the blue and red cubes stand out brighter than the white cube, so I created another area light and placed it at another angle.
+For this example, I want to make the blue and red cubes stand out brighter than the white cube, so I created another area light and placed it at another angle.
 
 Screen Shot 2015-11-16 at 2.20.58 PM.png
 
-4.However, if you render now, the whole scene will be brighter, which isn’t what I want. I just want the red cube and the blue cube to be brighter. Therefore, I will go into the light linking menu and I will make the second area light only affect the blue cube and red cube.
+However, if you render now, the whole scene will be brighter, which isn’t what I want. I just want the red cube and the blue cube to be brighter. Therefore, I will go into the light linking menu and I will make the second area light only affect the blue cube and red cube.
 
 Screen Shot 2015-11-16 at 2.22.02 PM.png
 
@@ -207,7 +212,7 @@ light_linking_3.png
 If you find yourself liking the lighting in some parts of your frame but not in others, consider using light linking to fix the parts that you don’t like.
 
 
-LIGHT PANEL
+HEADING LARGE: LIGHT PANEL
 After all this insanity, you need some kind of catch-all interface to be able to get a sense of all of your lighting, right? Renderman has you covered: the light panel.
 
 Select the light panel above in the Renderman shelf when you have a scene with several lights. If you don’t see a list of lights on the lower section of the panel, click on the lights in the left section labeled “Lights.” This will load whichever light you’ve selected into the panel below.
@@ -226,12 +231,12 @@ Also, if there’s too many lights and you’re just not sure what each light is
 Want to see the scene with all the lights on except for one or a few? Click the “Vis” box on the lights you don’t want to see and they’ll be turned off.
 
 
-DEMO 1 – LIGHTING AN INDOOR, DAYTIME SCENE
+HEADING LARGE: DEMO 1 – LIGHTING AN INDOOR, DAYTIME SCENE
 We’ll use the same scene for the daytime and nighttime scene just to control the variables in terms of how many changes you’ll see between the demos.
 
-You can download the scene (without the lights) from here: Demo_no_lights.ma.zipDemo_no_lights.ma.zip
-DetailsDownload5 MB
+You can download the scene (without the lights) from here:
 
+FILE: Demo_no_lights.ma
 
 This is what this scene looks like by default (everything is hidden except for polys for the sake of clarity). This is the Malcolm rig, so I’ll just refer to him as Malcolm from this point onward.
 
@@ -284,10 +289,10 @@ daytime_finished.png
 
 
 
-DEMO 2 – LIGHTING AN INDOOR, NIGHTTIME SCENE
-Download this scene and follow along this tutorial (same file for the daytime demo): Demo_no_lights.ma.zipDemo_no_lights.ma.zip
-DetailsDownload5 MB
+HEADING LARGE: DEMO 2 – LIGHTING AN INDOOR, NIGHTTIME SCENE
+Download this scene and follow along this tutorial (same file for the daytime demo): 
 
+FILE: Demo_no_lights.ma
 
 This is what the scene currently looks like. Same as with the daytime scene.
 
@@ -340,7 +345,7 @@ Step 5: Create an area light, put it behind Malcolm, a little closer to the lamp
 
 -If you render now, you’ll see that this light affects everything. We don’t want that. We want it to only affect Malcolm’s head/hair.
 
--Go to WindowàRelationship EditorsàLight LinkingàLight-Centric
+-Go to Window —> Relationship Editors —> Light Linking —> Light-Centric
 
 -Select the area light you created behind Malcolm and unlink it from everything.
 

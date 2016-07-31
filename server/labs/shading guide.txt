@@ -1,5 +1,5 @@
-Shading Guide and Tips
-Useful Links:
+HEADING LARGE: SHADING GUIDE AND TIPS
+<b> Useful Links:</b>
 
 http://renderman.pixar.com/resources/current/RenderMan/PxrDisney.html
 
@@ -8,59 +8,68 @@ http://renderman.pixar.com/resources/current/RenderMan/PxrLMGuide.html
 http://renderman.pixar.com/resources/current/RenderMan/risPatterns.html
 
 Feel free to explore this site and find useful examples. However, lessons outside of “RIS” will not necessarily be compatible with Maya or our render setup.
-Material Tools and Menus
 
--Rendering Options – (Windows -> Rendering Editors -> Render Settings) – The most important settings will be under Common. You can set the resolution of your frames, image type, which frames it should render, which camera is used, and where the images are saved. Changing the quality of images can be done under the Sampling tab and changing the number of Max Samples. Rendering in Renderman is done in a separate window called “IT.” IT will open when you click Renderman->Render or IPR Render. IPR render will constantly update and allow you to tweak texture properties and see how they’re changing on the fly.
+HEADING LARGE: MATERIAL TOOLS AND MENUS
 
--Test Lighting – Since a large part of materials is figuring out how they interact with light, it’s important to test under lighting conditions similar to those in your short. A quick way to create test lighting is to use an environment light. Renderman->RMSLights->Pxr Standard Env Map Light will create a giant sphere around your set which will project light inward. You can apply an image which will change the color and intensity of the light emitted from each part of the sphere.
+<b>Rendering Options</b> – (Windows -> Rendering Editors -> Render Settings)
+The most important settings will be under Common. You can set the resolution of your frames, image type, which frames it should render, which camera is used, and where the images are saved. Changing the quality of images can be done under the Sampling tab and changing the number of Max Samples. Rendering in Renderman is done in a separate window called “IT.” IT will open when you click Renderman->Render or IPR Render. IPR render will constantly update and allow you to tweak texture properties and see how they’re changing on the fly.
 
--Hypershade (for more advanced shaders) – This is a special organizer which keeps track of materials you created and allows you to build more complex textures in the node editor. To open a material in hypershade, select it in the scene or Material Browser and click this icon to see its connections.
+
+<b>Test Lighting</b>
+Since a large part of materials is figuring out how they interact with light, it’s important to test under lighting conditions similar to those in your short. A quick way to create test lighting is to use an environment light.
+Renderman -> RMSLights -> Pxr Standard Env Map Light will create a giant sphere around your set which will project light inward. You can apply an image which will change the color and intensity of the light emitted from each part of the sphere.
+
+
+<b>Hypershade</b> (for more advanced shaders)
+This is a special organizer which keeps track of materials you created and allows you to build more complex textures in the node editor. To open a material in hypershade, select it in the scene or Material Browser and click this icon to see its connections.
+
 hypershade1.png
-Hypershade Icon
+<center><i>Hypershade Icon</i></center>
+
+
 Hypershade2.png
-Hypershade menu location
+<center><i>Hypershade menu location</i></center>
 
 
 node.png
-"Show connections" button
+<center><i>“Show connections" button</i></center>
 
 
+<b>Main window</b>
+This uses a “Node Editor” interface which allows you to build materials by passing values between blocks which perform operations or generate visual components.
 
+<b>Navigation</b>
+Alt+Middle Mouse allows you to scroll around the area (much like regular Maya). Alt+Right Click or Scrolling allows you to zoom in/out.
 
+<b>Making New Nodes</b> 
+You can either dig for what you want using the drop-down Create menu or you can mouse over the main window and press Tab. This will allow you to start typing the name of a desired node and it will begin suggesting choices. This is a good way to explore and potentially find new, useful nodes.
 
+<b>Making Connections</b>
+If you just created a node, you will likely need to expand it in order to see what properties it can inherit or pass on. You can do this by clicking on the 3 horizontal bars at the top-right of the node.
 
-
-
-
-
-
-
--Main window – This uses a “Node Editor” interface which allows you to build materials by passing values between blocks which perform operations or generate visual components.
--Navigation – Alt+Middle Mouse allows you to scroll around the area (much like regular Maya). Alt+Right Click or Scrolling allows you to zoom in/out.
--Making New Nodes – You can either dig for what you want using the drop-down Create menu or you can mouse over the main window and press Tab. This will allow you to start typing the name of a desired node and it will begin suggesting choices. This is a good way to explore and potentially find new, useful nodes.
--Making Connections – If you just created a node, you will likely need to expand it in order to see what properties it can inherit or pass on. You can do this by clicking on the 3 horizontal bars at the top-right of the node.
 expand.png
-"Expand node" button
+<i>“Expand node" button</i>
 
 connections.png
-1 vs. 3 channels for black and white ouputs
+<i>1 vs. 3 channels for black and white outputs</i>
 
 
 The circle on the left of a property denotes a potential input while the right side denotes a potential output. Many are double sided and allow you to forward useful inputs further down your graph if they become useful later. This has the added benefit of reducing clutter to you don’t have to wire something from the back all the way to the front. The color of these circles tries to clarify what kind of information that property works with. While Specular is perfectly happy at a value of 1, the Color property doesn’t know what to do with a single value and tends to look for 3 values (often Red, Green, and Blue). Keep an eye out for warnings on the bottom of the main window in case you give a mismatched data type.
+
 If you want to pass a property from one node to another, simply click and drag from an output to an input. The connection forms an arrow to clarify the direction of information transfer. To keep things organized work left to right: your raw imported textures and nodes which give basic scaling information should be furthest left while the final, blue shader output should be furthest to the right.
--Material Viewer – This is useful for checking changes in appearance as you play with values in the attribute editor and add new nodes. Make sure you are using an appropriate renderer (i.e. Renderman/Mental Ray/Maya Hardware) for the kind of shader you’re building. Watch out! The Material Viewer’s frequent re-renders can sometimes be a heavy burden on your PC. If things are slowing down, you may want to close this window and do manual renders when you want to check on things
--Material Browser – This keeps track of all the materials used in your scene. It allows you to quickly navigate your materials, open multiple simultaneously (with Shift), and apply them to selected objects/faces in your scene by middle-mouse-dragging them.
 
+<b>Material Viewer</b>
+This is useful for checking changes in appearance as you play with values in the attribute editor and add new nodes. Make sure you are using an appropriate renderer (i.e. Renderman/Mental Ray/Maya Hardware) for the kind of shader you’re building. Watch out! The Material Viewer’s frequent re-renders can sometimes be a heavy burden on your PC. If things are slowing down, you may want to close this window and do manual renders when you want to check on things.
 
-
+<b>Material Browser</b> This keeps track of all the materials used in your scene. It allows you to quickly navigate your materials, open multiple simultaneously (with Shift), and apply them to selected objects/faces in your scene by middle-mouse-dragging them.
 
 browser.png
-Material Browser
+<i>Material Browser</i>
 
 
 ==
 ==
-Common Material Properties
+HEADING LARGE: COMMON MATERIAL PROPERTIES
 
 TIP: Holding your mouse still over slider names of Renderman materials tends to provide helpful definitions and examples
 Color (Base or Diffuse) – Sort of self-explanatory. While a single color can be selected, you can map various inputs to add noise or textures.
@@ -68,37 +77,40 @@ Specular – This refers to the material’s ability to reflect light. Smooth, p
 specular.png
 Specular values of 0, .5, and 1
 
-Roughness – This refers to a material’s ability to scatter and absorb light. Dull materials like rubber should have high roughness. Low roughness results in reflections of the object’s surroundings.
+<b>Roughness</b> – This refers to a material’s ability to scatter and absorb light. Dull materials like rubber should have high roughness. Low roughness results in reflections of the object’s surroundings.
 roughness.jpg
 Roughness values (0 .2 .4) in the front row, (.6 .8 1) in the back.
 
 
-Anisotropic – Most important when working with metals, anisotropy determines how specular highlights are distorted on the surface. In other words, it determines whether the shine is distorted as opposed to a perfect mirror. Extreme values of 1 and -1 work for materials like brushed metal. Negative values change the direction of the distortion.
+<b>Anisotropic</b> – Most important when working with metals, anisotropy determines how specular highlights are distorted on the surface. In other words, it determines whether the shine is distorted as opposed to a perfect mirror. Extreme values of 1 and -1 work for materials like brushed metal. Negative values change the direction of the distortion.
 aniso.jpg
 The light is stretched vertically on the left pot and radially on the right pot
 
-Subsurface – Used for waxy, cloudy materials. This can allow for more subtle, soft, realistic shaders where light can penetrate a little ways past the surface and bounce out with a different color. If you held a flashlight to your hand, the light would shine through as red in thinner areas. If you were to make a subsurface skin shader, you’d want your subsurface color to be red while the exterior would be a skin tone. You’d also want to change the “distance” at which these colors are dominant in order to change how far the light can reach through your object. Test subsurface shaders with a single, directional light source otherwise you won’t be able to notice the difference as the change would be applied equally across the object. Be careful, these shaders can contribute significantly to how long it takes to render a frame.
+<b>Subsurface</b> – Used for waxy, cloudy materials. This can allow for more subtle, soft, realistic shaders where light can penetrate a little ways past the surface and bounce out with a different color. If you held a flashlight to your hand, the light would shine through as red in thinner areas. If you were to make a subsurface skin shader, you’d want your subsurface color to be red while the exterior would be a skin tone. You’d also want to change the “distance” at which these colors are dominant in order to change how far the light can reach through your object. Test subsurface shaders with a single, directional light source otherwise you won’t be able to notice the difference as the change would be applied equally across the object. Be careful, these shaders can contribute significantly to how long it takes to render a frame.
 subsur.jpg
 
 
-Presence – This determines how much of your object is actually rendered and works similar to opacity. Values between 0-1 will give a fake-transparency effect as some light will pass through. Instead, it’s better to attach a map to this node with values of 1 and 0 which can create a cutout pattern by removing portions of the object.
+<b>Presence</b> – This determines how much of your object is actually rendered and works similar to opacity. Values between 0-1 will give a fake-transparency effect as some light will pass through. Instead, it’s better to attach a map to this node with values of 1 and 0 which can create a cutout pattern by removing portions of the object.
 presence.png
 Presence value .1 on the bottom left and a value of 1 at the top right
 
-Displacement – This will change the actual geometry of your models and add shape, detail, and noise. MSDisplacement will be your go-to node. Wire in fractals to the “displacement scalar”, tweak magnitude with the displacement amount, and wire it in to the final, blue shader node at the end as a displacement shader. Be careful, these changes can impact your render times if used excessively.
+<b>Displacement</b> – This will change the actual geometry of your models and add shape, detail, and noise. MSDisplacement will be your go-to node. Wire in fractals to the “displacement scalar”, tweak magnitude with the displacement amount, and wire it in to the final, blue shader node at the end as a displacement shader. Be careful, these changes can impact your render times if used excessively.
 displacement.png
 
-Bump/Normals – This allows you to apply more subtle changes to the contours of your model. Used to add small grooves or bumps, these properties take in image maps to illustrate changes in height or angle and determine the topography of your surface. This won't change the actual shape of your object but will make light behave as though there are grooves or scratches by casting shadows.
+<b>Bump/Normals</b> – This allows you to apply more subtle changes to the contours of your model. Used to add small grooves or bumps, these properties take in image maps to illustrate changes in height or angle and determine the topography of your surface. This won't change the actual shape of your object but will make light behave as though there are grooves or scratches by casting shadows.
 normals.png
 The same cloudy pattern is mapped to color (on the left) and normals (on the right)
 
 
 
-Useful Patterns and Operators (in Renderman)
+HEADING LARGE: USEFUL PATTERNS AND OPERATIONS (in Renderman)
 
-File (Texture) – This allows you to bring in images you’ve made and wire them into nodes
-Fractal Noise (Ex. PxrVoronoise, PxrFractal, PxrFlakes)
--Octaves/Layers – This will overlay repeated iterations of your fractal and help blend the noise - can help make things less grainy and make the resulting fractal more dense
-PxrBlend/PxrMix - Take in two color or map inputs and combine them. PxrMix has a property where you give it a range between 0-1 (or an array of values between 0-1 from a fractal). The will apply the more of the first input where there are values closer to 0 and more of the second input where the values are closer to 1. PxrBlend gives you the choice of several operators which you might recognize from image software like photoshop. In Blend, the alpha layer will help it determine how much of each input is applied.
+<b>File (Texture)</b> – This allows you to bring in images you’ve made and wire them into nodes
+
+<b>Fractal Noise</b> (Ex. PxrVoronoise, PxrFractal, PxrFlakes)
+-<i>Octaves/Layers</i> – This will overlay repeated iterations of your fractal and help blend the noise - can help make things less grainy and make the resulting fractal more dense
+
+<b>PxrBlend/PxrMix </b>- Take in two color or map inputs and combine them. PxrMix has a property where you give it a range between 0-1 (or an array of values between 0-1 from a fractal). The will apply the more of the first input where there are values closer to 0 and more of the second input where the values are closer to 1. PxrBlend gives you the choice of several operators which you might recognize from image software like photoshop. In Blend, the alpha layer will help it determine how much of each input is applied.
 LMLayer – A classification of materials with more specific types (separate materials for plastic, glass, metal, etc) which allow you to stack on additional layers. LMGlass will be useful because PxrDisney doesn’t handle transparency well. “LMLayer” is also a node which can take in most properties of a entire material and can be wired into the LMLayer attribute of the main material to blend their properties together. This allows you to build more complicated shaders.
-PxrClamp - This node gives you control over the maximum and minimum values of a map. This way you can use a fractal to vary roughness while still keeping the overall average roughness close to a desired value
+
+<b>PxrClamp</b> - This node gives you control over the maximum and minimum values of a map. This way you can use a fractal to vary roughness while still keeping the overall average roughness close to a desired value

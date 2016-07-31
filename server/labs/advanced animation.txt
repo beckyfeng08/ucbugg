@@ -1,10 +1,8 @@
-Advanced Animation
+HEADING LARGE: INTRODUCTION
 
-advanced_download.zipadvanced_download.zip
-DetailsDownload358 KB
+In this lab you'll learn how to animate a pendulum. To follow along, use <b>follow_along.mb</b> 
 
-
-In this lab you'll learn how to animate a pendulum. To follow along, use follow_along.mb 
+FILE: advanced_anim.zip
 
 When I say a pendulum I mean something like this: a base, and a chain that responds to the movements in the base.
 
@@ -17,6 +15,8 @@ So lets say we have the following
 left_motion_pendulum.gif
 
 How would the chain behave? Lets start with the top of the chain and work our way to the bottom.
+
+HEADING LARGE: CREATING BELIEVABLE MOTIONS
 
 As the platform moves left, the chain will actually rotate opposite the motion. In other words something like this:
 
@@ -41,6 +41,7 @@ Lets see what that looks like by hitting play.
 
 left_motion_pendulum_step4.gif
 
+HEADING LARGE: (DE)AMPLIFYING CURVES
 
 To me, that looks a little too intense. Lets deamplify the second links rotation. I do this by selecting the curve and typing in *=.5 in the second stats box. *=.5 means "for all the selected keys, multiply their magnitude by .5. This deamps our curve by half.
 
@@ -52,6 +53,7 @@ This is what it looks like now.
 
 left_motion_pendulum_step5.gif
 
+HEADING LARGE: SHIFTING FRAMES
 
 Notice however that right now we have a 1 to 1 relationship between the rotation in the first link and the second link. What I mean is that as the first link starts rotating clockwise, so does the second link. To create a more realistic flowing motion lets offset the rotation of the second link by a couple frames.
 
@@ -73,7 +75,7 @@ This is what my final version looks like.
 
 
 
-Your HW:
+HEADING LARGE: HOMEWORK
 
 In pendulum_assignment.mb you'll find an already animated pendulum base.
 pendulum_assignment.gif
@@ -87,4 +89,4 @@ If you're unsure about how a pendulum would move, I'd suggest checking out this 
 
 
 
-Send your completed assignment to homework@ucbugg.com
+Send your completed assignment to <b>homework@ucbugg.com</b>

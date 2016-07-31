@@ -4,7 +4,7 @@ allLabs = {
 		"araknid": []
 	},
 	"pre-production": {
-		"bugg": ["story"],
+		"bugg": ["pre-production"],
 		"araknid": []
 	},
 	"modeling": {
@@ -13,10 +13,10 @@ allLabs = {
 	},
 	"rigging": {
 		"bugg": ["basic rigging 1", "basic rigging 2", "blend shapes", "skinning"],
-		"araknid": ["advanced rigging 1", "advanced rigging 2"]
+		"araknid": ["advanced rigging", "rigging guide"]
 	},
 	"animation": {
-		"bugg": ["basic animation", "advanced animation", "playblasting"],
+		"bugg": ["basic animation", "advanced animation", "playblasts"],
 		"araknid": ["character animation"]
 	},
 	"shading": {

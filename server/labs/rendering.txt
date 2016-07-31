@@ -1,6 +1,6 @@
-HEADING LARGE: Using Renderman on the Lab Machines
+HEADING LARGE: USING RENDERMAN ON THE LAB MACHINES
 
-HEADING MEDIUM: Setting up the Environment Variables
+HEADING MEDIUM: SETTING UP THE ENVIRONMENT VARIABLES
 This is one annoying step that will have to be done before you can use the RenderMan for Maya plugin on the lab machines. The good news is once you do this once you won't have to do it again for the rest of the semester.
 
 1. Open up Finder, and hit Command-Shift-G. In the dialog that pops up, type '~/Library/Preferences/Autodesk/maya/2016' (if you are using a fresh account, this folder will not be created until you launch Maya for the first time). You will see a file called 'Maya.env'.
@@ -20,7 +20,7 @@ Save the file when you are done.
 3. Open up Maya and click Windows --> Settings and Preferences --> Plug-in Manager. At the top of the window you should notice there's a new entry called RenderMan_for_Maya.bundle. Click 'Loaded' and it should load into Maya (possibly with an error or two, probably nothing too worrisome). You should also click 'Auto load' and then go to File --> Save Preferences so you don't have to do this again! Maya will now load the RenderMan plugin every time you start it up.
 plugin manager.png
 
-HEADING MEDIUM: Getting More Space
+HEADING MEDIUM: GETTING MORE SPACE
 This may seem like an optional or annoying step, but it really isn't. By default, the the EECS instructional accounts do not have a much free storage space. The space that they do have will be eaten up quickly because Renderman will create a bunch of extra files every single time you click 'render'. In particular, it will generate .rib files for every frame of your scene, .tex files for every image texture, and .exr files for every rendered image you save.
 
 Long story short, this is how you get about 20 GB of scratch space on your account. This is generally still not enough to carry out entire jobs, so copy out frames as they're rendering and delete them when they're copied AS THE JOB IS GOING! It's still a lot better than the local CC folder though.
@@ -29,7 +29,7 @@ Now from cory, run the command '/share/b/bin/mkhometmpdir'. You can now close te
 There is now a folder on all the lab computers where you have unlimited storage. To access it, open up finder, hit command-shift-G, and go to '/home/tmp/[your account]'.
 Move your entire Maya Project folder here, and set the project to this new directory using File --> Set Project.
 
-HEADING MEDIUM: Rendering using Tractor
+HEADING LARGE: RENDERING USING TRACTOR
 To keep Tractor well organized, we ask that you name the scene as follows. This way you can easily see which scene is rendering on the Tractor screen.
 GROUPNAME - SCENE X OF TOTAL - DESCRIPTION
 ie: BANDITS - SCENE 8 of 21 - BREAKING VASE
@@ -41,7 +41,7 @@ Screen Shot 2015-12-01 at 4.25.10 PM.png
 
 You can watch the progress of your render job in realtime at http://york.cs.berkeley.edu/tv/. Simply enter your username, no password needed. Your files should be saved out in the /renderman/ folder within your project. There may be multiple subfolders within this one, sort them by 'Date modified' and you should be able to find the folder than Renderman most recently generated.
 
-HEADING MEDIUM: Rendering Shadows Separately
+HEADING LARGE: RENDERING SHADOWS SEPARATELY
 Note that you should only do this if your render is really slow. Also, this works best if the camera is still.
 
 Before you start, render the background without visibility of anything that moves (put all characters/moving objects in separate layer) and render ONE frame of this. Do not send this one frame to tractor. It should render fine on the mac you are using or your laptop by itself.
@@ -53,4 +53,4 @@ Before you start, render the background without visibility of anything that move
 5. Composite the _filtered image on top of the background image using whatever program you wish. We support After Effects in this class, so see the Compositing Lab for help with this.
 -Note: If you did not check "denoise" in the render settings, you might only get a regular image (not _filtered)
 
-Now you should be ready for and and all post production. Good job, you're almost done with you're shorts!
+Now you should be ready for and and all post production. Good job, you're almost done with your shorts!

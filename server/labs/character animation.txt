@@ -1,8 +1,6 @@
-Animation - Advanced Group
+HEADING LARGE: INTRODUCTION
 
-advanced_anim.zipadvanced_anim.zip
-DetailsDownload512 KB
-
+FILE: advanced_anim.zip
 
 In this lab we'll work on animating a vanilla walk. Walks are hard, and vanilla walks are even harder because you see them every day. So if your walk is off, someone will notice.
 
@@ -18,7 +16,7 @@ The most time consuming part of a walk is the legs and root. If you can get thos
 
 How do we break a walk down into pieces? It's most natural for me to think about it as a series of 3 poses with 2 crucial in betweens like so:
 
-williams_poses.jpeg
+williams_poses.jpg
 
 
 In other words, for a single step we have
@@ -41,7 +39,7 @@ Which controller is the root?
 root.png
 
 
-Step 1: Put in basic poses for whole cycle
+HEADING LARGE: PUT IN BASIC POSES FOR THE WHOLE CYCLE
 
 williams16s.jpg
 Lets just worry about the passing and contact poses for now
@@ -97,7 +95,7 @@ So the next question is, do we work on the root or legs first?
 
 Definitely the root. If you tried finessing the legs first, then when u did the root all the work on the legs would go to waste because the root affects the legs!
 
-Step 2: Translate Y of the Root | Up, down
+HEADING LARGE: TRANSLATE Y OF ROOT | UP, DOWN
 
 Right now your translate Y probably looks something like this:
 
@@ -138,7 +136,7 @@ Mike's version:
 
 step2.gif
 
-Step 3: Root Translate X | Side to Side
+HEADING SMALL: ROOT TRANSLATE X | SIDE TO SIDE
 
 As you can tell from the reference, when you walk, your root isn't moving in a straight line. It's swaying side to side. When you're passing with your left foot, your weight is on your right foot and vice versa. In other words, on your passing position, your root should be towards the foot that is planted ( in terms of the X direction). 
 
@@ -157,7 +155,7 @@ After I toned it down
 step3.gif
 
 
-Step 4: Hip Rotate X
+HEADING LARGE: HIP ROTATE X
 
 Which controller is the hip?
 
@@ -170,7 +168,7 @@ Mike's Version:
 step4.gif
 
 
-Step 5: Hip Rotate Y
+HEADING LARGE: HIP ROTATE Y
 
 The rotate Y of the hips is based on the weight you put on your legs. When your foot hits the ground, the hip on the side of that foot goes up hard. Likewise when your foot leaves the ground the hip on that leg drops hard.
 
@@ -186,7 +184,7 @@ Starting to look decent!
 
 step6.gif
 
-Step 6: Root cleanup
+HEADING MEDIUM: ROOT CLEANUP
 
 Make sure you still have those straights on the contact frames 1,17,33 and you have no levitating legs. If you do, I'd look at your Translate Y curve of your root to fix major issues like these.
 
@@ -194,7 +192,7 @@ Now that you have a handle on the root as a whole, go in and edit all your splin
 
 If everything checks out we're done with the root for now. You'll most likely come back to it when you see more of the picture for minor tweaks, but this is enough for us to do the legs.
 
-Step 7: Leg watching trick
+HEADING SMALL: LEG-WATCHING TRICK
 
 We're going to be doing a lot of leg watching in this next section which is a lot easier to do if the walk is in place.
 
@@ -238,7 +236,8 @@ Mike's version:
 
 step8.gif
 
-Step 9: Foot Take Off | Rotate X + Ball Roll + Toe Roll + TranslateY :(((((( This is the hard part
+HEADING LARGE: FOOT TAKE-OFF | ROTATE X + BALL ROLL + TOE ROLL + TRANSLATE Y
+:(((((( This is the hard part
 
 Do you see how the foot sticks on take off? The tools we have available to overcome that are Rotate X, Ball Roll, Toe Roll, Translate Y, and even Translate Z. A good peel off is hard to get.
 
@@ -284,7 +283,7 @@ step9polish.gif
 
 if you think I'm being pedantic, compare this to the peel off in step 8. Ew right?
 
-Step 10 Foot Translate X
+HEADING LARGE: FOOT TRANSLATE X
 
 Your feet don't move in straight lines, they usually arc out as they pass. As a rough guide the foot should be out the most within a few frames of it passing the other planted foot and then return to where it started to peel off from in terms of X position on contact.
 
@@ -296,14 +295,14 @@ Mike's version:
 
 step10.gif
 
-Step 11. Rotate Y of Foot
+HEADING LARGE: ROTATE Y OF FOOT
 
 This determines which way the toes point. You can have fun with this, but in general the toes point outwards as the foot arcs out and then point straight after the foot is fully planted.
 
 Mike's Version:
 step11.gif
 
-Step 12 Fixing knee pops
+HEADING MEDIUM: FIXING KNEE POPS
 
 Right now we have a knee pop problem.
 
@@ -329,7 +328,7 @@ Don't move the knee too much, this is a cheat we can use as animators to battle 
 Mike's version
 step12.gif
 
-Step 13 Copy Pasting
+HEADING LARGE: COPY-PASTING
 
 It's time to copy this leg into the other leg. Copy pasting splines is tricky and we have to set up first.
 

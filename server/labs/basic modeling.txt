@@ -1,6 +1,8 @@
+HEADING LARGE: INTRODUCTION
+
 This lab explores the basics of polygonal modeling in Maya through making a simple toilet prop. The lab gives detailed, rigorous step-by-step instructions, but feel free to follow them as closely or loosely as you want. However, definitely pay attention to all the different tools that are used, as the Advanced Modeling lab will build off of them.
 
-HEADING LARGE: Modeling the Bowl
+HEADING LARGE: MODELING THE BOWL
 
 First, let's make sure that interactive creation is turned off. From the menu at the top, go to Create → Polygon Primitives. Click the Interactive Creation entry on the menu to uncheck the box (if it is not already unchecked somehow). Now go ahead and create a cylinder: Create → Polygon Primitives → Cylinder.
 
@@ -15,8 +17,6 @@ Now change the cylinder options under INPUTS in the Channel Box. To show the cha
 Under where it says "INPUTS", there should be some text that says "polyCylinder1". Clicking on that will reveal a few different properties like "Radius" and "Height" with different values that you can change. Go ahead and change "Subdivisions Axis" to 10, and change "Subdivisions Caps" to 0. Your cylinder should change to look like the one below.
 
 3 - show inputs.png
-
-FILE: download_this.ma
 
 Switch to Face Mode by moving the mouse cursor over the cylinder , and holding down the right mouse button . When the menu pops up, drag the mouse cursor over 'Face' and release the right mouse button.
 
@@ -33,14 +33,15 @@ Use the right-click menu again to go into 'Edge' mode. Use the move tool and the
 By selecting the edges on both sides of the bowl and using the scale tool, we were able to maintain the bowl's symmetry. We could have made similar changes by just selecting each edge individually and using the move tool, but then we might have had to spend more time adjusting each edge to make it look right.
 While still in Edge mode, we can double-click on one of the bottom horizontal edges to select the whole ring. We want to extrude the bottom ring downwards to make the bowl deeper:
 
-HEADING MEDIUM: Extrude
+HEADING MEDIUM: EXTRUDE
 
 Go to Edit Mesh → Extrude.
 7 - select extrude.png
 
 If you want to undo an extrude, you must press undo twice.
 This will give you a weird manipulator. This manipulator doesn't always behave in an intuitive way so many people switch immediately to another tool (in this case, use the move tool *w*). Then move the automatically selected edges down.
-IMPORTANT NOTE
+
+HEADING SMALL: IMPORTANT NOTE
 Always make sure to move whatever you are extruding; if you extrude edges or faces, and you do not move them, they will remain in the same place as the original edges or faces, so you will only see one set of polygons where there are two. If you extrude and forget that you have done so, it can cause problems later on, and sometimes it's a little tricky to fix, so be careful!
 The best way to check if you have already extruded a piece of geometry is to select the relevant faces or edges, and use the move tool to shift them aside temporarily in order to "peek" behind them. If you move a face/edge and there's an identical one right where the one you moved was, you already extruded that region. The best solution is usually to press undo, but that only really works if you extruded recently. Otherwise, you'll have to select all the vertices of the faces that have been extruded accidentally, and use the Edit Mesh --> Merge tool (click the option box and choose a low threshold). If you're having trouble, be sure to ask a facilitator for help!
 8 - move down and sclae.png
@@ -53,7 +54,7 @@ In edge mode, do the double-click-select-edge-ring thing again, extrude the bott
 
 10 - extrude and tweak.png
 
-HEADING MEDIUM: Insert Edge Loop
+HEADING MEDIUM: INSERT EDGE LOOP
 
 Next we want to give it some bowl shape. This means we must add another edge-loop in the middle of the tapering portion. So with our mesh in edge mode, go to Mesh Tools → Insert Edge Loop
 
@@ -92,8 +93,7 @@ Flatten out the back using the scale tool to scale down along z (a nifty trick f
 
 Extrude back once more and then tweak the shape to be however you want the back of your toilet to look.
 
-HEADING LARGE: Modeling the Tank
-(back to top)
+HEADING LARGE: MODELING THE TANK
 
 Our next step is to make the tank on the back. We'll start with a cube: Create another cube and put it into position. Then in the channel box again under polyCube#, change the subdivisions all to 3. This gives us enough subdivisions to have sharper corners (if we smooth now, it will be too round).
 
@@ -104,7 +104,7 @@ Now tweak the shape of the tank. Remember, putting edge loops close together wil
 
 20 - tweak tank.png
 
-HEADING MEDIUM: Duplicate Face
+HEADING MEDIUM: DUPLICATE FACE
 
 The tank needs a lid. So, instead of creating a new cube and trying to get it to look like the current tank shape, we can just duplicate the top face of the tank.
 
@@ -125,8 +125,7 @@ To make the lid fit over the tank, scale it up a little. Also, sharpen the top a
 
 23 - finish tank lid.png
 
-HEADING LARGE: Modeling the Seat and Lid
-(back to top)
+HEADING LARGE: MODELING THE SEAT AND LID
 
 On to the toilet seat and lid! We'll use the same duplicate faces trick to duplicate the top faces of the bowl's shape. Once those faces are separated, we can then duplicate the new object by going into object mode, then going up to Edit Mesh --> Duplicate. Go ahead and name the lower object Seat and the top object Lid on the outliner.
 
@@ -146,7 +145,7 @@ Your lid object should now look something like this:
 
 27 - fill hole.png
 
-HEADING MEDIUM: Multi-Cut Tool
+HEADING MEDIUM: MULTI-CUT TOOL
 
 You'll notice that it has filled the hole with a 10-sided face. Usually we avoid faces with this many sides because smoothing a face like this behaves unpredictably. So, let's turn that face into 4 quads.(Quads meaning quadrilaterals.) We'll use the Multi-Cut tool for this. Go to Mesh Tools -> Multi-Cut.
 

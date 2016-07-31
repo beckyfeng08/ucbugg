@@ -1,20 +1,15 @@
+HEADING LARGE: INTRODUCTION
+
 Part II - Constraints, Controllers, and Skinning
 
 In the first rigging lab, we added a skeleton to a fox model. We're going to return to that project and make it easier to manipulate those joints and teach the mesh to deform according to how the joints move.
 
-TRY THIS FILE: fox_and_joints.mafox_and_joints.ma
-DetailsDownload398 KB
+FILE: fox_and_joints.ma
 
-
-fox_and_joints.ma.zipfox_and_joints.ma.zip
-DetailsDownload90 KB
-
-
-
+Where we left off:
 riglab1.png
-Where we left off
 
-Parent Constraint - Foot Controller:
+HEADING LARGE: PARENT CONSTRAINT - FOOT CONTROLLER
 
 Our fox should have a skeleton of oriented joints and IK handles for each of its legs. You might have noticed that the IK handles are a bit tricky to click in the maya window. We're going to create a controller which is easier to interact with and will drive the IK handle.
 
@@ -43,7 +38,8 @@ Now, if you've been animating the foot, you can always return it to its default 
 Now that the controller is parented, selecting the controller should also select the corresponding IK handle. Using the move tool with the controller should now move the IK handle and flex the knee joint.
 
 parent.png
-Pole Vector Constraint - Knee controller:
+
+HEADING LARGE: POLE VECTOR CONSTRAINT - KNEE CONTROLLER
 
 As we discussed last week, we don't have absolute control over where the knee points in an IK handle by default. To do so, we're going to create another controller that exists as a point in 3D space. Use Create -> Locator.
 
@@ -54,7 +50,7 @@ We're going to want to place this locator behind the leg at the height of the kn
 
 locatorpositioning.png
 
-Once the locator is where you want it, F R E E Z E - T R A N S F O R M A T I O N S. Remember, this needs to be done for every controller before it's attached. Going back and fixing uncleared channel boxes (either through undo's or deleting/recreating the controller) can cause additional issues so it's best to get it right the first time around. After freezing, we're going to add a Pole Vector constraint to our IK Handle. Generally, constraints work by selecting two entities and linking their transformations in some way. When applying contraints, order of selection matters. Select the "driver" first then select the "driven" second. In this case, our locator drives the IK direction so the locator is the driver and the IK is the driven. After selecting the locator and the IK Handle use Constrain -> Pole Vector. If you're having trouble clicking the IK Handle (use the IK itself rather than the new controller) it can be selected from the Outliner. If you don't see the "Constrain" menu, make sure this tab is set to "Rigging."
+Once the locator is where you want it, <b>F R E E Z E - T R A N S F O R M A T I O N S.</b> Remember, this needs to be done for every controller before it's attached. Going back and fixing uncleared channel boxes (either through undo's or deleting/recreating the controller) can cause additional issues so it's best to get it right the first time around. After freezing, we're going to add a Pole Vector constraint to our IK Handle. Generally, constraints work by selecting two entities and linking their transformations in some way. When applying contraints, order of selection matters. Select the "driver" first then select the "driven" second. In this case, our locator drives the IK direction so the locator is the driver and the IK is the driven. After selecting the locator and the IK Handle use Constrain -> Pole Vector. If you're having trouble clicking the IK Handle (use the IK itself rather than the new controller) it can be selected from the Outliner. If you don't see the "Constrain" menu, make sure this tab is set to "Rigging."
 
 
 rigging.png
@@ -70,7 +66,7 @@ point1.png
 point2.png
 
 
-Orient Constraint, Shared Pivots - Toe Controller:
+HEADING LARGE: ORIENT CONSTRAINT, SHARED PIVOTS - TOE CONTROLLER
 
 Even with all this control over the leg, you've likely noticed that the toe joint seems to point wherever it likes. This calls for another controller. Create a new NURBS circle and move it directly in front of the foot using orthographic views. I squished my ellipse down vertically with the scale tool to help communicate what part of the mesh it controls.
 
@@ -91,13 +87,13 @@ One downside to our current toe controller is that it gets left behind as the to
 
 
 dee.png
-Pivot mode: Note the white circle at the center
+<center><i>Pivot mode: Note the white circle at the center</i></center>
 
 In order to make sure that the controller pivot is the same as the joint we're going to use snap mode. Pressing "V" will toggle into snap mode. Now the pivot should pop around as you move it, trying to snap to significant points. One of those points should be the ankle joint. Double check that it is centered in the joint using orthographic views.
 
 
 vee.png
-Snap Mode: Note that the yellow square becomes a ring
+<center><i>Snap Mode: Note that the yellow square becomes a ring</i></center>
 
 
 snap.png
@@ -110,22 +106,20 @@ pivot.png
 Great job! Now do everything 3 more times to rig each leg. Yay quadrupeds! You can duplicate your existing controllers and move them over so they match. Just remember to FREEZE TRANSFORMATIONSSSSS
 
 
-Aim Constraint - Eye/Look Controller:
+HEADING LARGE: AIM CONSTRAINT - EYE/LOOK CONTROLLER
 
 Aim constraints rotate the driven object so that it is oriented towards a target (driver). These are very useful constraints but, alas, our fox lacks eyeballs to rig. I whipped some up for us to use. I think they illustrate how helpful it is to have eye sockets on your mesh. Unpack the archive and import the eyes.ma to your scene. Assign the image (.iff file) to the eyes by altering the color attribute of the eyes' material -> selecting "file" -> and clicking the folder icon.
-eyes.maeyes.ma
-DetailsDownload208 KB
 
+FILE: eyes.ma
 
-pSphereShape1_color.iffpSphereShape1_color.iff
-DetailsDownload367 KB
+FILE: pSphereShape1_color.iff
 
 
 
 Import the file into Maya and we can proceed with learning aim constraints.
 
 imsosorry.png
-It looks a bit surprised.
+<center><i>It looks a bit surprised.</i></center>
 
 
 Create a pair of NURBS circles and position them in front of the eyes. Use orthographic views so make sure they line up properly.
@@ -152,7 +146,7 @@ On yours, the smaller circles should look green. Otherwise it should be the same
 
 NOTE: If you are having problems where the eyes move away from the body when you parent the eyeballs to the head joint (by pressing p), try doing it the other way: parent the eyeballs to the head joint first AND THEN aim constrain the eyes.
 
-Forward Kinematics, Parent Constraints (FK) - Tail controllers
+HEADING LARGE: FORWARD KINEMATICS, PARENT CONSTRAINTS (FK) - TAIL CONTROLLERS
 
 We're going to make an FK rig for our fox tail. This will give us complete control over the rotation of the tail joints and will group them in a hierarchy from base to tip. Start by creating a NURBS circle and using "V" to snap them to the location of the tail joints. Duplicate and shift them down until each joint is accounted for. I scaled by ellipses vertically because I didn't want them to overlap when the tail swished side to side. Don't forget to freeze transformations on all of them.
 
@@ -169,7 +163,7 @@ FKt2.png
 
 
 
-More Parenting - Controller Hierarchy:
+HEADING LARGE: MORE PARENTING - CONTROLLER HIERARCHY
 
 There are some final tweaks we need to make before we're ready to apply the skeleton to the mesh. In the end, all of our controllers will be grouped under a single master controller.
 
@@ -227,7 +221,7 @@ everything.png
 Awesome job! Quadruped rigs are not easy but this example should help you apply controllers to your own characters.
 
 
-Skinning:
+HEADING LARGE: SKINNING
 
 
 Now that we have a better grasp on how to manipulate out skeleton, we're going to attach the skeleton to the mesh. Select your root joint and then the body mesh of the fox. Go to Skin -> Bind Skin and click the options box. The dialog should look something like this:
@@ -256,7 +250,7 @@ If you want to, you can experiment by adding controllers to the ears or explore 
 
 
 
-Additional steps - Limits + More/Better Controllers:
+HEADING LARGE: ADDITIONAL STEPS - LIMITS + MORE/BETTER CONTROLLERS
 
 At several points in the lab, more effective ways of rigging were hinted at. One way to make your rig more convenient for animators is to reduce the ways you can move controllers to only the ones that matter. IK controllers can be limited to movement and have their rotation locked. This way, animators won't confuse which kind of control they need. You can lock certain transformations by going to the channel box. Right clicking a channel like "Rotate X" will give you an option to lock the selected channel. You can highlight several channels at once and then right click to lock them all at the same time.
 

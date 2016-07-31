@@ -1,12 +1,10 @@
-Basic Animation
-
+HEADING LARGE: INTRODUCTION
 In this lab you'll get familiar with the graph editor and set up your Maya work space. At the end you'll have all the tools you need to do your homework: a bouncing ball.
 
-basic_anim.zipbasic_anim.zip
-DetailsDownload33 KB
+FILE: basic_anim.zip
 
 
-Setting Up Maya
+HEADING LARGE: SETTING UP MAYA
 
 1. Click the running guy at the bottom of Maya. This will bring up the animation preferences
 running.png
@@ -14,6 +12,7 @@ running.png
 2. Make sure playback speed is set to 24 frames per second (fps). This means that for every 24 frames, a second of animation occurs.
 24 fps is the animation industry standard.
 2.png
+
 3. In the left categories menu, go to Animation under Settings. Under tangents, make sure you're defaulting to weighted tangents. Also make sure in and out tangents default to flat. We'll explain these settings later.
 
 3.png
@@ -22,9 +21,10 @@ running.png
 
 
 
-Understanding the Graph Editor
+HEADING LARGE: UNDERSTANDING THE GRAPH EDITOR
 
-1. To get to the graph editor: Windows->Animation Editors -> Graph Editor
+1. To get to the graph editor: Windows -> Animation Editors -> Graph Editor
+
 2. What is this?
 
 The graph editor plots the motion of an object against time (frames) and allows us to play with that motion.
@@ -104,9 +104,6 @@ Now lets say we want the box to go down, then up.
 2. Drag the box down to where you think the box should go down to.
 3. Hit S
 
-
-
-
 yo.gif
 
 
@@ -126,7 +123,7 @@ Animation.gif
 
 Stacking splines on top of each other like this to get the motion that you want is 3D animation at its core.
 
-Playing With Tangents
+HEADING LARGE: PLAYING WITH TANGENTS
 
 Changing the time and magnitude of key frames isn't all that we can do in the graph editor. We can also change the curvature of the graph by playing with tangents.
 
@@ -184,18 +181,18 @@ Here's a youtube video of me doing it.
 
 
 
-Homework Part 1
+HEADING LARGE: HOMEWORK, PART 1 OF 2
 The first part of your homework is to generate a graph for this curve below starting from the key I set in the translate Y of the box at frame 1.
 
 
-Homework..png
+Homework.png
 Once you open up spline_tracer.ma you should see this.
 
 spline_tracer.png
 
 Your job is to turn that into the curve above just like I did with the previous curve in the youtube video. Don't worry about the box. It's just there so you have something to attach the curves to.
 
-Curves
+HEADING LARGE: CURVES
 
 Now that you know how to manipulate curves. What do they actually mean? Lets take a look at a few curves and see if we can describe the motion of an object just by looking at the graph.
 
@@ -227,7 +224,7 @@ Using the three up above, can you tell why the ball moves the way it does for th
 
 
 
-Homework part 2
+HEADING LARGE: HOMEWORK, PART 2 OF 2
 
 The second part of your homework is to animate a ball falling from a height. Your job is to make sure that the ball dissipates energy correctly until it comes to a stop naturally. I have your ball set up in ball_bounce.ma. I strongly recommend watching the ball jump youtube video I made for this rig to understand the mechanics of the ball rig:
 
