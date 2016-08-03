@@ -502,16 +502,16 @@ div.work {
 }
 
 img.syllabus-icon, img.active-syllabus-icon, img.past-syllabus-icon {
-	width: 50px;
-	height: 50px;
+	width: 100px;
+	height: 100px;
 	padding: 5px;
 	position: relative;
 	display: inline-block;
 	margin: 0 auto;
-	border-style: solid;
+/*	border-style: solid;
 	border-width: 2pt;
 	border-color: #a7a9ac;
-	border-radius: 25px;
+	border-radius: 25px;*/
 	vertical-align: middle;
 }
 img.syllabus-icon:hover {
@@ -534,64 +534,93 @@ img.ring {
 	margin-bottom: 20px;
 	/*margin-left:50%;*/
 }
-h3.date, h3.hyphen, h3.arrow {
+h3.date, h3.arrow, h3.hyphen {
 	font-style: italic;
 	color: #a7a9ac;
-	display: inline-block;
-	height: 50px;
+	display: block;
+	/*height: 50px;*/
 	margin-left: 20px;
 	margin-right: 20px;
 	vertical-align: middle;
-	padding-top: 15px;
-	width:75px;
+	/*padding-top: 15px;*/
+	/*width:75px;*/
+	text-align: center;
+}
+h3.hyphen {
+	display: block;
+	text-align: center;
+	/*font-weight: bold;*/
+	font-size: 20pt;
+	padding-bottom: 2px;
+}
+/*#tues-date {
+	display: block;
 	text-align: left;
 }
-#tues-date {
-	text-align: right;
-}
+#thur-date {
+	display: block;
+	text-align: left;
+}*/
 h3.arrow {
 	margin: 10px;
 	font-style: normal;
 }
-
+div.timeline-elem-piece, div.timeline-elem-piece-narrow {
+	display: inline-block;
+	text-align: center;
+	vertical-align: middle;
+	margin-left: 10px;
+	margin-right: 10px;
+	width: 25%;
+}
+div.timeline-elem-piece-narrow {
+	width: 15%;
+}
+p.weeknum {
+	font-size: 8pt;
+	margin-bottom: 15px;
+}
 div.assignments {
 	margin-bottom: 50px;
 	margin-top: 40px;
 }
 div.due-dates {
-	margin-top: 20px;
+	/*margin-top: 20px;*/
 }
 p.due, a.assignment {
-	font-size: 14pt;
+	font-size: 12pt;
 	color: #ABADB0;
 	padding: 4px;
 	width: 100%;
 	margin: 2px auto;
-	margin-top: 40px;
+	/*margin-top: 40px;*/
 }
 
 a.assignment {
-	display: inline-block;
+	display: block;
 	font-style: italic;
-	padding: 30px;
+	padding: 6px;
 	margin: 5px auto;
-	margin-top: 15px;
+	margin-top: 2px;
 	background-color: #DAE0DC;
 	text-decoration: none;
 	width: auto;
-	margin-left: 20%;
-	margin-right: 20%;
+	margin-left: 0%;
+	margin-right: 0%;
+	font-weight: normal;
 
 }
-p.submit-button {
+a.submit-button {
 	background-color: #62aaee;
 	color: #ebf7fd;
 	display: inline-block;
 	font-weight: normal;
 	font-size: 12pt;
 	margin: 0 auto;
-	margin-top: 50px;
-	padding: 20px;
+	margin-top: 5px;
+	padding: 15px;
+	padding-left: 20px;
+	padding-right: 20px;
 }
 
 #syllabus-timeline {
@@ -602,7 +631,7 @@ p.submit-button {
 	margin-top: 80px;
 	margin-bottom: 30px;
 	/*margin-left: 40%;*/
-	width: 25%;
+	width: 100%;
 	min-width: 300px;
 }
 
