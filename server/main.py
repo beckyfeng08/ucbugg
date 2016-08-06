@@ -12,8 +12,14 @@ import os
 urls = (
     '/labs', 'list_labs',
     '/labs/(.*)', 'get_lab',
-    '/syllabus', 'get_syllabus'
+    '/syllabus', 'get_syllabus',
+    '/', 'index'
 )
+
+class index:
+    def GET(self):
+        # redirect to the static file ...
+        raise web.seeother('/static/index.html')
 
 app = web.application(urls, globals())
 
