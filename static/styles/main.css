@@ -535,7 +535,8 @@ img.ring {
 	/*margin-left:50%;*/
 }
 h3.date, h3.arrow, h3.hyphen {
-	font-style: italic;
+	/*font-style: italic;*/
+	font-size: 18pt;
 	color: #a7a9ac;
 	display: block;
 	/*height: 50px;*/
@@ -577,7 +578,8 @@ div.timeline-elem-piece-narrow {
 	width: 15%;
 }
 p.weeknum {
-	font-size: 8pt;
+	font-size: 9pt;
+	font-weight: bold;
 	margin-bottom: 15px;
 }
 div.assignments {
@@ -588,7 +590,7 @@ div.due-dates {
 	/*margin-top: 20px;*/
 }
 p.due, a.assignment {
-	font-size: 12pt;
+	font-size: 10pt;
 	color: #ABADB0;
 	padding: 4px;
 	width: 100%;
@@ -597,7 +599,7 @@ p.due, a.assignment {
 }
 
 a.assignment {
-	display: block;
+	display: inline-block;
 	font-style: italic;
 	padding: 6px;
 	margin: 5px auto;
@@ -608,6 +610,8 @@ a.assignment {
 	margin-left: 0%;
 	margin-right: 0%;
 	font-weight: normal;
+	padding-left: 20px;
+	padding-right: 20px; 
 
 }
 a.submit-button {
@@ -618,9 +622,9 @@ a.submit-button {
 	font-size: 12pt;
 	margin: 0 auto;
 	margin-top: 5px;
-	padding: 15px;
-	padding-left: 20px;
-	padding-right: 20px;
+	padding: 10px;
+	padding-left: 15px;
+	padding-right: 15px;
 }
 
 #syllabus-timeline {
@@ -645,11 +649,21 @@ div.timeline-piece {
 	display: block;
 	/*width: 7%;*/
 	text-align: center;
-	padding: 8px;
+	padding-top: 25px;
+	padding-bottom: 25px;
 	margin: 0 auto;
-	margin-top: 15px;
+	margin-top: 0px;
+	margin-bottom: 60px;
 }
 
 h1.syllabus-head {
 	font-size: 22pt;
+}
+
+p.weektitle {
+	font-size: 20pt;
+	text-transform: uppercase;
+	font-weight: bold;
+	letter-spacing: 1px;
+	/*word-spacing: 99999px;*/
 }
