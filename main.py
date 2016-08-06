@@ -13,13 +13,18 @@ urls = (
     '/labs', 'list_labs',
     '/labs/(.*)', 'get_lab',
     '/syllabus', 'get_syllabus',
-    '/', 'index'
+    '/', 'index',
+    '/favicon.ico', 'fav'
 )
 
 class index:
     def GET(self):
         # redirect to the static file ...
         raise web.seeother('/static/index.html')
+
+class fav:
+    def GET(self):
+        return web.seeother('/static/favicon.ico')
 
 app = web.application(urls, globals())
 
