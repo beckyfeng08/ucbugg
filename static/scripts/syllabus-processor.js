@@ -107,6 +107,7 @@ var updateContent = function() {
 		$("#row" + collapseDate(activeDate)).css('background-color', "rgba(98, 170, 238, 0.09)");
 		$("#row" + collapseDate(activeDate)).children().children().css('color', "#fcfcfd");
 		$("#due-dates" + collapseDate(activeDate)).children().css('color', "#313132");
+		$("#due-dates" + collapseDate(activeDate)).find(".assignment").css('background-color', "#DAE0DC");
 		$("#row" + collapseDate(activeDate)).find(".date").css('font-weight', "bold");
 		// $("#row" + collapseDate(activeDate)).find("#icon").find(".weeknum").css('font-size', "16pt");
 		$(".submit-button").css('color', '#fcfcfd');

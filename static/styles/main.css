@@ -612,7 +612,8 @@ a.assignment {
 	padding: 6px;
 	margin: 5px auto;
 	margin-top: 2px;
-	background-color: #DAE0DC;
+	/*background-color: #DAE0DC;*/
+	background-color: rgba(100,100,100,.05);
 	text-decoration: none;
 	width: auto;
 	margin-left: 0%;
