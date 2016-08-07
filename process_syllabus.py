@@ -21,6 +21,8 @@ for i in range(1,len(arr)):
 		if not arr[i][j]:
 			continue
 		# print arr[i][j]
+		if arr[i][j][0] == "/":
+			arr[i][j] = "GROUP: " + arr[i][j][1:]
 		syllabus[week][categories[j]] = arr[i][j]
 
 json_syllabus = json.dumps(syllabus)

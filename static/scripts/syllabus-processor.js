@@ -103,6 +103,7 @@ var updateContent = function() {
 				'</div>');
 			setInfo(keys[i]);
 		}
+		console.log(keys);
 		$("#row" + collapseDate(activeDate)).css('background-color', "rgba(98, 170, 238, 0.09)");
 		$("#row" + collapseDate(activeDate)).children().children().css('color', "#fcfcfd");
 		$("#due-dates" + collapseDate(activeDate)).children().css('color', "#313132");
