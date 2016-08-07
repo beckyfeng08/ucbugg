@@ -89,7 +89,7 @@ var Main = (function() {
 	}
 	var logisticsClick = function() {
 		$("#logistics-button").animate({width:"240px"}, 150);
-		$("#logistics-button").animate({height:"160px"}, 150);
+		$("#logistics-button").animate({height:"145px"}, 150);
 		// $("#logistics-button").css('background-color', '#dcf2fe');
 		$("#logistics-info").show();
 	}
@@ -104,9 +104,7 @@ var Main = (function() {
 		$("#piazza-button").animate({width:"145px"}, 150);
 		$("#piazza-text").show(150);
 	}
-	var piazzaClick = function() {
-		// $("#piazza-button").animate({height:"200px"}, 150);
-	}
+
 	var piazzaOut = function() {
 		$("#piazza-button").animate({height:"50px"}, 150);
 		$("#piazza-button").animate({width:"60px"}, 150);
@@ -188,7 +186,6 @@ var Main = (function() {
 
 		scheduleClick: scheduleClick,
 		logisticsClick: logisticsClick,
-		piazzaClick: piazzaClick,
 
 		scheduleOut: scheduleOut,
 		logisticsOut: logisticsOut,

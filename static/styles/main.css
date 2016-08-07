@@ -206,7 +206,7 @@ div.info-buttons {
 	/*float: left;*/
 	/*margin: 0 auto;*/
 }
-div.info-button {
+div.info-button, a.info-button {
 	background-color: #f1f1f2;
 	border-radius: 30px;
 	left:50%;
@@ -218,6 +218,7 @@ div.info-button {
 	margin-bottom: 25px;
 	padding: 5px;
 	text-align: left;
+	text-decoration: none;
 }
 div.button-heading {
 	margin-left: 5px;
@@ -256,6 +257,18 @@ div.fox-graphic {
 	vertical-align: middle;
 }
 
+div.facilititty {
+	display: inline-block;
+	width: 18%;
+	margin-bottom: 50px;
+	margin-top: 50px;
+}
+img.sillytater {
+	width: 70%;
+	height: 70%;
+	border-radius: 75px;
+	margin-bottom: 20px;
+}
 section.bottom-panel {
 	padding: 30px;
 	display: block;
