@@ -2,3 +2,5 @@
 *.DS_Store
 server/venv/*
 *.pyc
+*/*.pyc
+.~lock.syllabus.csv#
