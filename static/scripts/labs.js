@@ -8,15 +8,15 @@ allLabs = {
 		"araknid": []
 	},
 	"modeling": {
-		"bugg": ["basic modeling", "advanced modeling"],
+		"bugg": ["modeling 1", "modeling 2"],
 		"araknid": ["hard surface modeling", "organic modeling"]
 	},
 	"rigging": {
-		"bugg": ["basic rigging 1", "basic rigging 2", "blend shapes", "skinning"],
+		"bugg": ["rigging 1", "rigging 2", "blend shapes", "skinning"],
 		"araknid": ["advanced rigging", "rigging guide"]
 	},
 	"animation": {
-		"bugg": ["basic animation", "advanced animation", "playblasts"],
+		"bugg": ["animation 1", "animation 2", "playblasts"],
 		"araknid": ["character animation"]
 	},
 	"shading": {
