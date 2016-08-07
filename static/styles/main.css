@@ -566,16 +566,24 @@ h3.arrow {
 	margin: 10px;
 	font-style: normal;
 }
-div.timeline-elem-piece, div.timeline-elem-piece-narrow {
+div.timeline-elem-piece, div.timeline-elem-piece-week, div.timeline-elem-piece-icon {
 	display: inline-block;
 	text-align: center;
 	vertical-align: middle;
 	margin-left: 10px;
 	margin-right: 10px;
-	width: 25%;
+	width: 22%;
+	padding-left: 30px;
+	padding-right: 30px;
+	min-width: 250px;
 }
-div.timeline-elem-piece-narrow {
-	width: 15%;
+div.timeline-elem-piece-icon, div.timeline-elem-piece-week {
+	width: 5%;
+	padding: 0;
+	min-width: 100px;
+}
+div.timeline-elem-piece-week {
+	width: 10%;
 }
 p.weeknum {
 	font-size: 9pt;
@@ -599,7 +607,7 @@ p.due, a.assignment {
 }
 
 a.assignment {
-	display: inline-block;
+	display: block;
 	font-style: italic;
 	padding: 6px;
 	margin: 5px auto;
@@ -615,7 +623,8 @@ a.assignment {
 
 }
 a.submit-button {
-	background-color: #62aaee;
+	/*background-color: #62aaee;*/
+	background-color: #ABADB0;
 	color: #ebf7fd;
 	display: inline-block;
 	font-weight: normal;
@@ -654,6 +663,7 @@ div.timeline-piece {
 	margin: 0 auto;
 	margin-top: 0px;
 	margin-bottom: 60px;
+	min-width: 780px;
 }
 
 h1.syllabus-head {

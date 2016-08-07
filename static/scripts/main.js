@@ -37,7 +37,7 @@ var Main = (function() {
 		}
 	   	$("#blue-box").animate({left:$("#"+activeTab).position().left - $("#blue-box-region").position().left + 20 + "px"}, switchSpeed+200);
 		if (activeTab === "labs") window.setTimeout(correctPipelines, switchSpeed);
-		if (activeTab === "syllabus") {
+		else if (activeTab === "syllabus") {
 			updateHash(activeTab + syllabusType);
 			updateSyllabus();
 		} else {
@@ -116,7 +116,7 @@ var Main = (function() {
 				if (hash.substring(8) in {"basic":0, "advanced":0}) {
 					syllabusType = hash.substring(8);
 					activeTab = "syllabus";
-					updateSyllabus();
+					// updateSyllabus();
 					loadActiveTab();
 				}
 			}

@@ -68,7 +68,6 @@ var setInfo = function(date) {
 
 var updateContent = function() {
 	var onSuccess = function(data) {
-		console.log(activeDate);
 		// console.log(data);
 		syllabusObj = data;
 		$("#syllabus-timeline").empty();
@@ -90,24 +89,27 @@ var updateContent = function() {
 			// $("#thur-date").html(thur.toString().split(" ")[1].toUpperCase() + " " + thur.getDate());
 			highlight = keys[i] == activeDate ? 'highlight' : 'normal';
 			$("#syllabus-timeline").append('<div class="timeline-piece" id="row' + collapseDate(keys[i]) + '" >' +
-					'<div class="timeline-elem-piece-narrow">'  +
+					'<div class="timeline-elem-piece-week">'  +
 					'<h3 class="date" id="tues-date"> ' + tues.toString().split(" ")[1].toUpperCase() + " " + tues.getDate() + ' </h3>' + 
 					'<h3 class="hyphen" > - </h3>' + 
 					'<h3 class="date" id="thur-date"> ' + thur.toString().split(" ")[1].toUpperCase() + " " + thur.getDate() + ' </h3>' + 
 					'</div>' + 
-					'<div class="timeline-elem-piece-narrow">'  +					
+					'<div class="timeline-elem-piece-icon" id="icon">'  +					
 					'<img src="images/syllabus icons/'+ highlight + "/" + syllabusType+'/' + data[keys[i]][iconType] + '.svg" class="syllabus-icon" id="syllabus-icon' + collapseDate(keys[i]) + '"">' + 
 					'<p class="weeknum"> WEEK ' + (i+1) + '</p>'  + 
 					'</div>' + 
 					'<div class="timeline-elem-piece" id="week-title' + collapseDate(keys[i]) + '"">  </div>' + 
-					'<div class="timeline-elem-piece" id="due-dates' + collapseDate(keys[i]) + '""> <a class="submit-button"> SUBMIT HERE </a> </div>' + 
+					'<div class="timeline-elem-piece" id="due-dates' + collapseDate(keys[i]) + '""> <a class="submit-button"  id="submit'+collapseDate(keys[i])+'"> SUBMIT HERE </a> </div>' + 
 				'</div>');
 			setInfo(keys[i]);
 		}
-		$("#row" + collapseDate(activeDate)).css('background-color', "rgba(220, 220, 140, 0.2)");
-		$("#row" + collapseDate(activeDate)).children().children().css('color', "#f1f1f2");
+		$("#row" + collapseDate(activeDate)).css('background-color', "rgba(98, 170, 238, 0.09)");
+		$("#row" + collapseDate(activeDate)).children().children().css('color', "#fcfcfd");
 		$("#due-dates" + collapseDate(activeDate)).children().css('color', "#313132");
-		$(".submit-button").css('color', '#f1f1f2');
+		$("#row" + collapseDate(activeDate)).find(".date").css('font-weight', "bold");
+		// $("#row" + collapseDate(activeDate)).find("#icon").find(".weeknum").css('font-size', "16pt");
+		$(".submit-button").css('color', '#fcfcfd');
+		$("#submit"+collapseDate(activeDate)).css('background-color', "#62aaee");
 		// $("#due-dates" + collapseDate(activeDate)).css('color', "#212122");
 		// $("#tues" + collapseDate(activeDate)).children().css('color', "#f1f1f2");
 		// setInfo(activeDate);
