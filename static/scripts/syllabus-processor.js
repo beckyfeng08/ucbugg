@@ -99,7 +99,7 @@ var updateContent = function() {
 					'<p class="weeknum"> WEEK ' + (i+1) + '</p>'  + 
 					'</div>' + 
 					'<div class="timeline-elem-piece" id="week-title' + collapseDate(keys[i]) + '"">  </div>' + 
-					'<div class="timeline-elem-piece" id="due-dates' + collapseDate(keys[i]) + '""> <a class="submit-button"  id="submit'+collapseDate(keys[i])+'"> SUBMIT HERE </a> </div>' + 
+					'<div class="timeline-elem-piece" id="due-dates' + collapseDate(keys[i]) + '""> <a class="submit-button" target="_blank" id="submit'+collapseDate(keys[i])+'"> SUBMIT HERE </a> </div>' + 
 				'</div>');
 			setInfo(keys[i]);
 		}
@@ -111,6 +111,8 @@ var updateContent = function() {
 		// $("#row" + collapseDate(activeDate)).find("#icon").find(".weeknum").css('font-size', "16pt");
 		$(".submit-button").css('color', '#fcfcfd');
 		$("#submit"+collapseDate(activeDate)).css('background-color', "#62aaee");
+		$("#submit"+collapseDate(activeDate)).css('font-weight', "bold");
+		$("#submit"+collapseDate(activeDate)).attr('href', data[activeDate]['Submit Link']);
 		// $("#due-dates" + collapseDate(activeDate)).css('color', "#212122");
 		// $("#tues" + collapseDate(activeDate)).children().css('color', "#f1f1f2");
 		// setInfo(activeDate);

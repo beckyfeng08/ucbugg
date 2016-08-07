@@ -625,6 +625,7 @@ a.assignment {
 a.submit-button {
 	/*background-color: #62aaee;*/
 	background-color: #ABADB0;
+	text-decoration: none;
 	color: #ebf7fd;
 	display: inline-block;
 	font-weight: normal;
