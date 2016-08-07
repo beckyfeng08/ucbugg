@@ -70,25 +70,45 @@ var Main = (function() {
 	var scheduleHover = function() {
 		$("#schedule-button").animate({width:"175px"}, 150);
 		$("#schedule-text").show(150);
+	}	
+	var scheduleClick = function() {
+		$("#schedule-button").animate({height:"120px"}, 150);
+		$("#schedule-info").show();
+		// $("#schedule-button").css('background-color', '#dcf2fe');
 	}
 	var scheduleOut = function() {
+		$(".button-info").hide();
+		$("#schedule-button").animate({height:"50px"}, 150);
 		$("#schedule-button").animate({width:"60px"}, 150);
 		$("#schedule-text").hide(150);
+		// $("#schedule-button").css('background-color', '#f1f1f2');
 	}
 	var logisticsHover = function() {
 		$("#logistics-button").animate({width:"175px"}, 150);
 		$("#logistics-text").show(150);
-		
+	}
+	var logisticsClick = function() {
+		$("#logistics-button").animate({width:"240px"}, 150);
+		$("#logistics-button").animate({height:"160px"}, 150);
+		// $("#logistics-button").css('background-color', '#dcf2fe');
+		$("#logistics-info").show();
 	}
 	var logisticsOut = function() {
+		$(".button-info").hide();
+		$("#logistics-button").animate({height:"50px"}, 150);
 		$("#logistics-button").animate({width:"60px"}, 150);
 		$("#logistics-text").hide(150);
+		// $("#logistics-button").css('background-color', '#f1f1f2');
 	}
 	var piazzaHover = function() {
 		$("#piazza-button").animate({width:"145px"}, 150);
 		$("#piazza-text").show(150);
 	}
+	var piazzaClick = function() {
+		// $("#piazza-button").animate({height:"200px"}, 150);
+	}
 	var piazzaOut = function() {
+		$("#piazza-button").animate({height:"50px"}, 150);
 		$("#piazza-button").animate({width:"60px"}, 150);
 		$("#piazza-text").hide(150);
 	}
@@ -132,6 +152,7 @@ var Main = (function() {
 		window.setTimeout(correctPipelines, 10);
 		// correctPipelines();
 		$(".info-text").hide();
+		$(".button-info").hide();
 		$(".info-button").width("50px");
 		$(".tab").mouseenter(function() {
 			if ($(this)[0].id === "syllabus") {
@@ -164,6 +185,10 @@ var Main = (function() {
 		scheduleHover: scheduleHover,
 		logisticsHover: logisticsHover,
 		piazzaHover: piazzaHover,
+
+		scheduleClick: scheduleClick,
+		logisticsClick: logisticsClick,
+		piazzaClick: piazzaClick,
 
 		scheduleOut: scheduleOut,
 		logisticsOut: logisticsOut,

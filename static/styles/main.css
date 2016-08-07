@@ -272,7 +272,7 @@ section.bottom-panel {
 	padding-bottom: 75px;
 	text-align: center;
 }
-div.contact {
+a.contact {
 	display: inline-block;
 	height:100%;
 }
@@ -366,7 +366,9 @@ div.pipeline-bubble, div.pipeline-header {
 	/*margin-left: .1vw;*/
 	/*margin-right: .1vw;*/
 }
-
+p.info-button-text {
+	font-size: 10pt;
+}
 div.pipeline-header {
 /*	margin: 0px;
 	transform: translateY(-25px);
