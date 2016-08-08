@@ -24,6 +24,9 @@ body {
 	scrollbar-track-color: transparent;
 	scrollbar-arrow-color: transparent;
 }
+a {
+	text-decoration: none;
+}
 * {
    box-sizing:border-box;
    margin: 0;
@@ -244,7 +247,6 @@ p.info-text {
 	pointer-events: none;
 
 }
-
 div.fox-graphic {
 	/*float: right;*/
 	display: inline-block;
