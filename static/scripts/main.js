@@ -88,8 +88,8 @@ var Main = (function() {
 		$("#logistics-text").show(150);
 	}
 	var logisticsClick = function() {
-		$("#logistics-button").animate({width:"240px"}, 150);
-		$("#logistics-button").animate({height:"145px"}, 150);
+		// $("#logistics-button").animate({width:"240px"}, 150);
+		$("#logistics-button").animate({height:"160px"}, 150);
 		// $("#logistics-button").css('background-color', '#dcf2fe');
 		$("#logistics-info").show();
 	}

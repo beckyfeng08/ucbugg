@@ -24,6 +24,9 @@ body {
 	scrollbar-track-color: transparent;
 	scrollbar-arrow-color: transparent;
 }
+a {
+	text-decoration: none;
+}
 * {
    box-sizing:border-box;
    margin: 0;
@@ -244,7 +247,6 @@ p.info-text {
 	pointer-events: none;
 
 }
-
 div.fox-graphic {
 	/*float: right;*/
 	display: inline-block;
@@ -268,6 +270,18 @@ img.sillytater {
 	height: 70%;
 	border-radius: 75px;
 	margin-bottom: 20px;
+}
+p.facilititty-info {
+	font-size: 8pt;
+	letter-spacing: 0px;
+	font-style: italic;
+	margin-top: 5px;
+}
+p.facilititty-body-text {
+	font-size: 10pt;
+	letter-spacing: 0px;
+	vertical-align: center;
+	margin-top: 10px;
 }
 section.bottom-panel {
 	padding: 30px;
@@ -315,8 +329,9 @@ p.about-text {
 	padding-left: 3%; 
 	padding-right: 3%; 
 	letter-spacing: 1px;
-	margin-top: 15px;
+	margin-top: 20px;
 	text-align: left;
+	margin-bottom: 20px;
 }
 img.about {
 	display: inline-block;
@@ -380,7 +395,8 @@ div.pipeline-bubble, div.pipeline-header {
 	/*margin-right: .1vw;*/
 }
 p.info-button-text {
-	font-size: 10pt;
+	font-size: 11pt;
+	letter-spacing: 0px;
 }
 div.pipeline-header {
 /*	margin: 0px;
