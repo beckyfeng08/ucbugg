@@ -519,15 +519,16 @@ img.lab-img {
 #projects-samples {
 	margin-top: 50px;
 	margin-bottom: 80px;
-	height: 42.2vw;
+	/*height: 42.2vw;*/
 	display: block;
 }
 
 div.work {
 	display: inline-block;
-	width: 15%;
+	width: 18%;
 	background-color: #999999;
-	height: 100%;
+	overflow: hidden;
+	height: 720px;
 	margin-right: -2px;
 	margin-left: -2px;
 }
