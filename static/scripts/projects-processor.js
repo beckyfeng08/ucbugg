@@ -1,3 +1,5 @@
+// the number after each filename is roughly where in teh image the focal point is
+// must be number between 0 and 1
 var screenshots = {
 	"2tailz.png": .5,
 	"dailycommute.png": .7,
