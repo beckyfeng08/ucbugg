@@ -174,7 +174,7 @@ var Main = (function() {
 			}
 		});
 		checkForHash();
-		// loadActiveTab();
+		loadActiveTab();
 	};
 
 	return {
