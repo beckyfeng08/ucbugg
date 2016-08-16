@@ -516,23 +516,28 @@ img.lab-img {
 	margin: 20px;
 }
 
-a.outlineh1 {
+a.outlineh1, a.outlineh2, a.outlineh3 {
+	color: #8dbfe7;
 	text-decoration: none;
 	font-weight: normal;
 	text-align: left;
+	display: block;
 	margin-left: 10%;
+	font-size: 16pt;
+	padding: 6px;
 }
 a.outlineh2 {
-	text-decoration: none;
-	font-weight: normal;
-	text-align: left;
-	margin-left: 13%;
+	color: #97999b;
+	/*color: #a3cceb;*/
+	font-size: 15pt;
+	/*font-weight: normal;*/
+	margin-left: 12%;
 }
 a.outlineh3 {
-	text-decoration: none;
-	font-weight: normal;
-	text-align: left;
-	margin-left: 16%;
+	/*color: #b1d8fc;*/
+	color: #ffffff;
+	font-size: 14pt;
+	margin-left: 14%;
 }
 
 #projects-samples {

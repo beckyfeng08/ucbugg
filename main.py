@@ -44,7 +44,7 @@ class get_lab:
         lab = lab.split("/")
         if lab[1] in os.listdir(process_labs.LABSDIR + lab[0]):
             web.header("Content-Type", "image/" + lab[1][-3:])
-            return web.seeother(process_labs.LABSDIR + lab[0] + "/" + lab[1])
+            return open(process_labs.LABSDIR + lab[0] + "/" + lab[1], "rb").read()
         else:
             raise web.notfound();
 
