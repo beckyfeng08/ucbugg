@@ -516,6 +516,25 @@ img.lab-img {
 	margin: 20px;
 }
 
+a.outlineh1 {
+	text-decoration: none;
+	font-weight: normal;
+	text-align: left;
+	margin-left: 10%;
+}
+a.outlineh2 {
+	text-decoration: none;
+	font-weight: normal;
+	text-align: left;
+	margin-left: 13%;
+}
+a.outlineh3 {
+	text-decoration: none;
+	font-weight: normal;
+	text-align: left;
+	margin-left: 16%;
+}
+
 #projects-samples {
 	margin-top: 50px;
 	margin-bottom: 80px;
