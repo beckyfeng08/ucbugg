@@ -524,15 +524,21 @@ img.lab-img {
 }
 
 div.work {
+	position: relative;
 	display: inline-block;
-	width: 18%;
-	background-color: #999999;
+	width: 10%;
+	/*background-color: #999999;*/
 	overflow: hidden;
-	height: 720px;
-	margin-right: -2px;
-	margin-left: -2px;
+	height: 540px;
+	margin-right: 10px;
+	margin-left: 10px;
 }
-
+img.projimg {
+	position: absolute;
+	left: 0;
+	top: 0;
+	margin-top: -30px;
+}
 img.syllabus-icon, img.active-syllabus-icon, img.past-syllabus-icon {
 	width: 100px;
 	height: 100px;

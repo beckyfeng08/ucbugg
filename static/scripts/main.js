@@ -36,10 +36,16 @@ var Main = (function() {
 			}
 		}
 	   	$("#blue-box").animate({left:$("#"+activeTab).position().left - $("#blue-box-region").position().left + 20 + "px"}, switchSpeed+200);
-		if (activeTab === "labs") window.setTimeout(correctPipelines, switchSpeed);
-		else if (activeTab === "syllabus") {
+		if (activeTab === "labs") {
+			window.setTimeout(correctPipelines, switchSpeed);
+			updateHash("labs");
+		} else if (activeTab === "syllabus") {
 			updateHash(activeTab + syllabusType);
 			updateSyllabus();
+		} else if (activeTab === "projects") {
+			initProjects();
+			// window.setInterval(updateProjects, 2000);
+			updateHash("projects")
 		} else {
 			updateHash(activeTab);
 		}
@@ -168,7 +174,7 @@ var Main = (function() {
 			}
 		});
 		checkForHash();
-		loadActiveTab();
+		// loadActiveTab();
 	};
 
 	return {
