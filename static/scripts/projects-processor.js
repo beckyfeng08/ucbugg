@@ -9,7 +9,7 @@ var screenshots = {
 	"sidewalkshuffle.png": .25,
 	"stars.png": .4,
 	"sweetvictory.png": .6,
-	"watercycle.png": .4,
+	"watercycle.png": .33,
 	"worlddomination.png": .35
 	// "dummy.png": .5
 }
@@ -17,6 +17,7 @@ var screenshots = {
 // veronica ignore everything below this
 
 var IMAGE_SIZE = [960, 540];
+var initialized = false;
 
 var screenshotKeys = Object.keys(screenshots);
 // shuffle screenshotKeys
@@ -24,26 +25,37 @@ var c=screenshotKeys.length; while(c)b=Math.random()*(--c+1)|0,d=screenshotKeys[
 var currentScreenshot = 0;
 
 var initProjects = function() {
-	// console.log("update projects called");
+	if (initialized) return;
+	initialized = true;
 	var keys = Object.keys(screenshots);
 	slices = $("#projects-samples").children();
 	while(currentScreenshot < screenshotKeys.length) {
 		slices.each(function() {
-			console.log($(this).width(),screenshots[screenshotKeys[currentScreenshot%screenshotKeys.length]], IMAGE_SIZE[0]);
+			console.log(currentScreenshot, slices.length);
 			$(this).append('<img src="' +
 				'images/projects/' + screenshotKeys[currentScreenshot%screenshotKeys.length] +
 				'" class="projimg" width="960" height="540" style="margin-left:' +
-				($(this).width()/2 - screenshots[screenshotKeys[currentScreenshot%screenshotKeys.length]]*IMAGE_SIZE[0]) + 
-				'px;">');
+				($(this).width()/2 - screenshots[screenshotKeys[currentScreenshot%screenshotKeys.length]]*IMAGE_SIZE[0]) + 'px; ' + 
+				'z-index: ' + Math.floor(currentScreenshot/slices.length) + ';">');
 			currentScreenshot++;
-			// $(this).children().each(function() {
-			// 	$(this).attr('src', 
-			// 		'images/projects/' + screenshotKeys[currentScreenshot]);
-			// 	// console.log($(this).parent().width(), screenshots[screenshotKeys[currentScreenshot]],IMAGE_SIZE[0] );
-			// 	$(this).css('margin-left', 
-			// 		$(this).parent().width()/2 - screenshots[screenshotKeys[currentScreenshot]]*IMAGE_SIZE[0]);
-			// 	currentScreenshot = (currentScreenshot+1) % screenshotKeys.length;
-			// });
 		});
 	}
+	window.setInterval(updateProjects, 4000);
+}
+
+var updateProjects = function() {
+	slices = $("#projects-samples").children();
+	slices.each(function() {
+		$(this).children().each(function() {
+			var curZ = $(this).css('z-index');
+			if (curZ == 0) {
+				curZ += $(this).parent().children().length;
+				$(this).css('opacity', 0);
+				$(this).animate({opacity:"1"}, 1000);
+			}
+			curZ--;
+			$(this).css('z-index', curZ);
+
+		});
+	});
 }
