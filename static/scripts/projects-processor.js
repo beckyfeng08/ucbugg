@@ -31,7 +31,6 @@ var initProjects = function() {
 	slices = $("#projects-samples").children();
 	while(currentScreenshot < screenshotKeys.length) {
 		slices.each(function() {
-			console.log(currentScreenshot, slices.length);
 			$(this).append('<img src="' +
 				'images/projects/' + screenshotKeys[currentScreenshot%screenshotKeys.length] +
 				'" class="projimg" width="960" height="540" style="margin-left:' +
