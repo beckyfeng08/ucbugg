@@ -5,12 +5,27 @@ var screenshots = {
 	"dailycommute.png": .75,
 	"generousghost.png":.35,
 	"herebedragons.png": .75,
-	"penguins.png": .5,
+	"penguins.png": .47,
 	"sidewalkshuffle.png": .25,
 	"stars.png": .4,
 	"sweetvictory.png": .6,
 	"watercycle.png": .33,
-	"worlddomination.png": .35
+	"worlddomination.png": .35,
+	"bandits.png": .5,
+	"curiousballoon.png": .15,
+	"elle.png": .5,
+	"extinguished.png": .35,
+	"fruitful.png": .63,
+	"goodnightbear.png": .45,
+	"horsepower.png": .75,
+	"industrialaccident.png": .45,
+	"nightmare.png": .47,
+	"papermagician.png": .25,
+	"sofly.png": .35,
+	"squirrelstory.png": .65,
+	"terrencegetsrekt.png": .55,
+	"yogasunset.png": .55
+
 	// "dummy.png": .5
 }
 
