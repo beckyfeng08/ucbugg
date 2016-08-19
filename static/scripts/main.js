@@ -175,6 +175,7 @@ var Main = (function() {
 		});
 		checkForHash();
 		loadActiveTab();
+		initProjects();
 	};
 
 	return {

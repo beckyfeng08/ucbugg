@@ -4,6 +4,8 @@
 # NOBODY PAID ME TO DO THIS
 import process_labs
 import process_syllabus
+import sys
+sys.path.insert(0, 'lib/')
 import web
 import os
 
@@ -60,3 +62,6 @@ if __name__ == "__main__":
     port = int(os.environ.get('PORT', 8080))
     # app.run(port=port)
     web.httpserver.runsimple(app.wsgifunc(), ("0.0.0.0", port))
+    # app = app.gaerun()
+    # app.cgirun()
+    # app = application.wsgifunc()
