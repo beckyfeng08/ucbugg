@@ -289,7 +289,7 @@ Add a nose horn if you want as well. Same procedure. Also, recall the way you pu
 Capture105.png
 I added a few spikes around the eye just for fun. Now the last step is the trickiest: Spikes along the back. This can be ridiculously time consuming if you do them one at a time, but if you do them all at once, it'll take less than a minute. Select a whole bunch of faces along the spine ridge, extrude out (Keep Faces Together -> Off), shrink, extrude in, shrink, extrude out (Divisions -> 4), pull to a good height for a spike, switch to move tool, soft select (radius = spike length), and pull backwards. This will give each individual spike a nice curve. If you don't let go of the extrude tool until the last step, all the spikes should still point normal to the torso like this:
 Capture106.png
-HEADING SMALL: FINAL NOTE
+HEADING LARGE: FINAL NOTE
 At this point, I decided to call it a day. Use the trick I mentioned earlier to find any non-quads and kill them. Add spikes until you're blue in the face. Add a fire simulation for extra credit (don't quote me on the "extra credit" part). Put in an eyeball (if you want). Dragons are scarier when their eyes aren't closed.
 Oh also, I didn't add teeth because the mouth is closed and I'm too lazy, but just do the exact same thing as the spine spikes.
 
