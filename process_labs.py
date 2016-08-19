@@ -1,7 +1,7 @@
 import os
 
 LABSDIR = "labs/"
-APIURL = "http://localhost:8080/labs/"
+APIURL = "http://ucbugg-140805.appspot.com/labs/"
 
 html = {}
 

@@ -1,4 +1,4 @@
-apiUrl = "http://localhost:8080/";
+apiUrl = "http://ucbugg-140805.appspot.com/";
 // console.log(urls);
 
 
