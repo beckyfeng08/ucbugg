@@ -1,7 +1,7 @@
 import os
 
 LABSDIR = "labs/"
-APIURL = "http://ucbugg-140805.appspot.com/labs/"
+IMGURL = "https://googledrive.com/host/0B1j-kstA_oRWYmZpVS1hbW4xV0k/"
 
 html = {}
 
@@ -20,7 +20,7 @@ for i in filter(lambda x: x[-3:] == "txt", os.listdir(LABSDIR)):
 			output += "<" + tag + " class='lab'>" + line[15:].strip() + "</" + tag + ">"
 			table_of_contents += '<a class="outline' + tag + '">' + line[15:].strip() + "</a>"
 		elif line.strip()[-3:].lower() in ("png", "jpg", "gif"):
-			output += '<img src="' + APIURL + i[:-4] + "/" + line.strip() + '" class="lab-img">'
+			output += '<img src="' + IMGURL + i[:-4] + "/" + line.strip() + '" class="lab-img">'
 		elif line[:4] == "FILE":
 			output += '<p></p><a href="' + i[:-4] + "/" + line[5:].strip() + '" class="lab-file" download>' +  line[5:].strip() + "</a>"
 		else:

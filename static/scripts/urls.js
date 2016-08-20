@@ -1,4 +1,4 @@
-apiUrl = "http://ucbugg-140805.appspot.com/";
+apiUrl = "http://" +  window.location.host+ "/";
 // console.log(urls);
 
 

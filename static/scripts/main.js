@@ -131,7 +131,7 @@ var Main = (function() {
 				activeTab = hash;
 				loadActiveTab();
 			} else if (hash.startsWith("labs")) {
-				console.log(hash, hash.substring(4));
+				// console.log(hash, hash.substring(4));
 				activeTab = "labs";
 				// loadActiveTab();
 				createLab(hash.substring(4));
