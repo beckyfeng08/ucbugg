@@ -6,6 +6,7 @@ IMGURL = "https://googledrive.com/host/0B1j-kstA_oRWYmZpVS1hbW4xV0k/"
 html = {}
 
 def update():
+	global html
 	html = {}
 	for i in filter(lambda x: x[-3:] == "txt", os.listdir(LABSDIR)):
 		rawlab = open(LABSDIR + i, "r")
@@ -32,4 +33,5 @@ def update():
 
 
 def get_html():
+	global html
 	return html

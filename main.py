@@ -1,10 +1,12 @@
 # [START app]
 import logging
 import process_labs
+import process_syllabus
 from flask import Flask
 
 app = Flask(__name__)
 
+process_labs.update()
 
 # @app.route('/')
 # def hello():
@@ -12,7 +14,21 @@ app = Flask(__name__)
 
 @app.route('/labs')
 def list_labs():
-    return "hi"#process_labs.get_html().keys()+ ""
+    return str(process_labs.get_html().keys())
+
+@app.route('/labs/<labname>')
+def get_lab(labname):
+    if labname in process_labs.get_html():
+        return process_labs.get_html()[labname]
+
+@app.route('/update')
+def update():
+    process_labs.update()
+    return ""
+
+@app.route('/syllabus')
+def get_syllabus():
+    return process_syllabus.json_syllabus
 
 
 @app.errorhandler(500)
