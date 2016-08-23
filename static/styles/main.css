@@ -5,6 +5,8 @@ body {
 	overflow: hidden;
 	font-weight: bold;
 	overflow: hidden;
+	height: 100%;
+	width: 100%;
 	/*min-height: 2000px;*/
 	background: white; /* For browsers that do not support gradients */
 	background-image: url("../images/gradient-bg.svg");
@@ -458,6 +460,22 @@ line {
 	vector-effect: non-scaling-stroke;
 }
 
+#lab {
+	/*height: 600px;*/
+}
+div.lab-outline {
+	display: inline-block;
+	width: 15%;
+	vertical-align: top;
+	height: auto;
+}
+div.lab-content {
+	display: inline-block;
+	width: 80%;
+	height: 800px;
+	overflow: scroll;
+}
+
 p.lab {
 	margin-left: 10%;
 	margin-right: 10%;
@@ -523,21 +541,21 @@ a.outlineh1, a.outlineh2, a.outlineh3 {
 	text-align: left;
 	display: block;
 	margin-left: 10%;
-	font-size: 16pt;
+	font-size: 12pt;
 	padding: 6px;
 }
 a.outlineh2 {
 	color: #97999b;
 	/*color: #a3cceb;*/
-	font-size: 15pt;
+	font-size: 11pt;
 	/*font-weight: normal;*/
-	margin-left: 12%;
+	margin-left: 15%;
 }
 a.outlineh3 {
 	/*color: #b1d8fc;*/
 	color: #ffffff;
-	font-size: 14pt;
-	margin-left: 14%;
+	font-size: 10pt;
+	margin-left: 20%;
 }
 
 #projects-samples {

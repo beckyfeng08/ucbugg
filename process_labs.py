@@ -29,6 +29,8 @@ def update():
 			else:
 				output += '<p class="lab">' + line.strip() + "</p>"
 		# output += "</html>"
+		table_of_contents = "<div class='lab-outline'>"+ table_of_contents + "</div>"
+		output = "<div class='lab-content'>" + output + "</div>"
 		html[i[:-4].replace(" ", "")] = table_of_contents + output
 
 
