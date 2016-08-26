@@ -34,7 +34,7 @@ def update():
 			elif line.strip()[-3:].lower() in ("png", "jpg", "gif"):
 				output += '<img src="' + IMGURL + i[:-4] + "/" + line.strip() + '" class="lab-img">'
 			elif line[:4] == "FILE":
-				output += '<p></p><a href="' + i[:-4] + "/" + line[5:].strip() + '" class="lab-file" download>' +  line[5:].strip() + "</a>"
+				output += '<p></p><a href="' + IMGURL + i[:-4] + "/" + line[5:].strip() + '" class="lab-file" download>' +  line[5:].strip() + "</a>"
 			else:
 				output += '<p class="lab">' + line.strip() + "</p>"
 		# output += "</html>"
