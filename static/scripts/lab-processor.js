@@ -75,10 +75,9 @@ var createLab = function(filename) {
     	$("#lab").prepend('<section class="heading" id="labs-header">' + 
 			'<h6 class="lab"> ' + filename+ ' </h3> </section>');
     	$(".lab-content").children().hide();
-		$(".scrollup").show();
     	scrollToSection(1);
 		updateHash("labs" + filename);
-		
+
     	// $("#lab").append(data);
     	// $('#mainbody').animate({
     	// 	scrollTop: $("#labs-pipeline").height() + $("#labs-header").height()
@@ -106,6 +105,10 @@ var createLab = function(filename) {
 
 var scrollToSection = function(sec) {
 	scrollToLab();
+	$("#next").show();
+	$("#previous").show();
+	if (sec == 1)
+		$("#previous").hide();
 	// console.log(sec);
 	$("#outline" + currentSection).css('color', "#97999b");
 	// console.log("currentSection is " + currentSection);

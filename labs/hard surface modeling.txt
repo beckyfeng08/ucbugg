@@ -75,7 +75,8 @@ Yuck. This is because all the edge flow breaks right before that face. Let's fix
 Using the multi-cut tool, connect all the edges across.
 multi_cutting.png
 
-Okay, here's an interesting situation that happened to me that might have also potentially happened to you depending on the clicks you made when tracing the CV curve. triangle_problem.png
+Okay, here's an interesting situation that happened to me that might have also potentially happened to you depending on the clicks you made when tracing the CV curve. 
+triangle_problem.png
 
 Do you see that triangle? This is bad. Quads and triangles do not go together! The whole model should be in quads, or it should all be in triangles, but no mixing between them. Here's how I'll fix this:
 Go to Mesh Tools-->Insert Edge Loop and click the option box.

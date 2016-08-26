@@ -766,7 +766,7 @@ p.weektitle {
 
 button.scrollup {
 	margin-top: 30px;
-	margin-bottom: 30px;
+	margin-bottom: 200px;
 	background-color: #62aaee;
 	border: none;
 	outline:none;
@@ -776,10 +776,16 @@ button.scrollup {
 #previous {
 	margin-left: 0;
 	text-align: left;
+	position: absolute;
+	display: inline;
+	left: 20%;
 	/*margin-right: 100px;*/
 }
 #next {
 	margin-right: 0;
 	text-align: right;
+	position: absolute;
+	display: inline;
+	right:5%;
 	/*margin-left: 100px;*/
 }
