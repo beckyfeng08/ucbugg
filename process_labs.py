@@ -33,8 +33,10 @@ def update():
 				# current_header_increment = 0
 			elif line.strip()[-3:].lower() in ("png", "jpg", "gif"):
 				output += '<img src="' + IMGURL + i[:-4] + "/" + line.strip() + '" class="lab-img">'
-			elif line.strip()[-3:].lower() in ("mp4", "mov", "avi"):
-				output += '<video class="lab-img" width="640" height="360" controls> <source src="' + IMGURL + i[:-4] + "/" + line.strip() + '" type="video/' + line.strip()[-3:].lower()+ '"> </video>'
+			elif line.strip()[-3:].lower() in ("mp4", "mov", "avi", "ogg", "ebm"):
+				extension = line.strip()[-3:].lower()
+				if extension == "ebm": extension = "webm"
+				output += '<video class="lab-img" width="640" height="360" controls> <source src="' + IMGURL + i[:-4] + "/" + line.strip() + '" type="video/' + extension+ '"> </video>'
 			elif line[:4] == "FILE":
 				output += '<p></p><a href="' + IMGURL + i[:-4] + "/" + line[5:].strip() + '" class="lab-file" download>' +  line[5:].strip() + "</a>"
 			else:
