@@ -423,3 +423,5 @@ Screen Shot 2016-04-09 at 4.04.46 PM.png
 
 Finally, you should have your final movie rendered! If you have any trouble with playback, please let us know by posting on Piazza or e-mailing us at staff@ucbugg.com. Congratulations on finishing your first 3D animated film!
 This is how my final render turned out (with no sound):
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/nuzHUsXbcoQ" frameborder="0" allowfullscreen></iframe>

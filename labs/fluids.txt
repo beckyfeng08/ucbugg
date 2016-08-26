@@ -91,4 +91,9 @@ Make sure this layer is selected. Set your render image file format to OpenEXR. 
 Open the rendered images as an image sequence in Photoshop. Tweak Exposure or Saturation if necessary, and render a video. Attach this video to your submission.
 
 Here is my result from this lab:
+fire_lab.mp4
+
+Here is my fire from lecture:
+fiyah.mp4
+
 
