@@ -13,7 +13,7 @@ allLabs = {
 	},
 	"rigging": {
 		"bugg": ["rigging 1", "rigging 2", "blend shapes", "skinning"],
-		"araknid": ["advanced rigging", "rigging guide"]
+		"araknid": ["advanced rigging 1", "rigging guide"]
 	},
 	"animation": {
 		"bugg": ["animation 1", "animation 2", "playblasts"],

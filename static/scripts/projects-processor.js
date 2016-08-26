@@ -46,10 +46,14 @@ var initProjects = function() {
 	slices = $("#projects-samples").children();
 	while(currentScreenshot < screenshotKeys.length) {
 		slices.each(function() {
+			var width = $(this).width()/2;
+			console.log(width);
+			if (width < 30) width = window.innerWidth * .05;
+			if (width < 30) width = 60; // failsafe
 			$(this).append('<img src="' +
 				'images/projects/' + screenshotKeys[currentScreenshot%screenshotKeys.length] +
 				'" class="projimg" width="960" height="540" style="margin-left:' +
-				($(this).width()/2 - screenshots[screenshotKeys[currentScreenshot%screenshotKeys.length]]*IMAGE_SIZE[0]) + 'px; ' + 
+				(width - screenshots[screenshotKeys[currentScreenshot%screenshotKeys.length]]*IMAGE_SIZE[0]) + 'px; ' + 
 				'z-index: ' + Math.floor(currentScreenshot/slices.length) + ';">');
 			currentScreenshot++;
 		});

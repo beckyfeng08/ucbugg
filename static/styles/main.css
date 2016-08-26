@@ -467,15 +467,16 @@ div.lab-outline {
 	display: inline-block;
 	width: 15%;
 	vertical-align: top;
-	height: auto;
+	/*height: auto;*/
 }
 div.lab-content {
 	display: inline-block;
+	position: relative;
 	width: 80%;
-	height: 800px;
-	overflow: scroll;
+	/*margin-left: 20%;*/
+	/*height: 800px;*/
+	/*overflow: scroll;*/
 }
-
 p.lab {
 	margin-left: 10%;
 	margin-right: 10%;
@@ -535,14 +536,15 @@ img.lab-img {
 }
 
 a.outlineh1, a.outlineh2, a.outlineh3 {
-	color: #8dbfe7;
+	/*color: #8dbfe7;*/
+	color: #97999b;
 	text-decoration: none;
 	font-weight: normal;
 	text-align: left;
 	display: block;
 	margin-left: 10%;
 	font-size: 12pt;
-	padding: 6px;
+	padding: 12px;
 }
 a.outlineh2 {
 	color: #97999b;
@@ -553,7 +555,8 @@ a.outlineh2 {
 }
 a.outlineh3 {
 	/*color: #b1d8fc;*/
-	color: #ffffff;
+	color: #97999b;
+	/*color: #ffffff;*/
 	font-size: 10pt;
 	margin-left: 20%;
 }
@@ -704,7 +707,7 @@ a.assignment {
 	padding-right: 20px; 
 
 }
-a.submit-button {
+a.submit-button, button.scrollup {
 	/*background-color: #62aaee;*/
 	background-color: #ABADB0;
 	text-decoration: none;
@@ -759,4 +762,24 @@ p.weektitle {
 	font-weight: bold;
 	letter-spacing: 1px;
 	/*word-spacing: 99999px;*/
+}
+
+button.scrollup {
+	margin-top: 30px;
+	margin-bottom: 30px;
+	background-color: #62aaee;
+	border: none;
+	outline:none;
+	height: 50px;
+}
+
+#previous {
+	margin-left: 0;
+	text-align: left;
+	/*margin-right: 100px;*/
+}
+#next {
+	margin-right: 0;
+	text-align: right;
+	/*margin-left: 100px;*/
 }
