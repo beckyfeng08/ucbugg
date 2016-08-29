@@ -72,11 +72,19 @@ var createLab = function(filename) {
 
 		// $("#labs-header").html('<h6 class="lab">' + filename + "</h6>");
     	$("#lab").html(data);
-    	$("#lab").prepend('<section class="heading" id="labs-header">' + 
-			'<h6 class="lab"> ' + filename+ ' </h3> </section>');
+ 
+		updateHash("labs" + filename.toLowerCase().replace(/\s/g, ''));
+
+		// console.log("filename: " + filename);
+		if (filename in labLookup) {
+			// console.log("wtf");
+			filename = labLookup[filename];
+		}
+		// console.log("filename: " + filename);
+		$("#lab").prepend('<section class="heading" id="labs-header">' + 
+			'<h6 class="lab"> ' + filename.toUpperCase() + ' </h3> </section>');
     	$(".lab-content").children().hide();
     	scrollToSection(1);
-		updateHash("labs" + filename);
 
     	// $("#lab").append(data);
     	// $('#mainbody').animate({

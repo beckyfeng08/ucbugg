@@ -1,4 +1,5 @@
 var updateHash = function(hash) {
+	console.log("hash is " + hash);
 	if(history.pushState) {
 	    history.pushState(null, null, '#'+ hash);
 	}

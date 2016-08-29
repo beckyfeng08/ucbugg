@@ -47,7 +47,7 @@ var initProjects = function() {
 	while(currentScreenshot < screenshotKeys.length) {
 		slices.each(function() {
 			var width = $(this).width()/2;
-			console.log(width);
+			// console.log(width);
 			if (width < 30) width = window.innerWidth * .05;
 			if (width < 30) width = 60; // failsafe
 			$(this).append('<img src="' +
