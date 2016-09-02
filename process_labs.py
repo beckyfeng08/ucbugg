@@ -45,6 +45,7 @@ def update():
 		table_of_contents = "<div class='lab-outline'>"+ table_of_contents + "</div>"
 		output = "<div class='lab-content'>" + output + "</section></div>"
 		html[i[:-4].replace(" ", "")] = table_of_contents + output
+	return "labs updated"
 
 
 def get_html():

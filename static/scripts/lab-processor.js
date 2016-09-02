@@ -120,10 +120,10 @@ var scrollToSection = function(sec) {
 	// console.log(sec);
 	$("#outline" + currentSection).css('color', "#97999b");
 	// console.log("currentSection is " + currentSection);
-	$("#labsection" + currentSection).hide(400);
+	$("#labsection" + currentSection).hide(250);
 	currentSection = sec;
 	// console.log("showing #labsection" + currentSection);
 	$("#outline" + currentSection).css('color', "#8dbfe7");
-	$("#labsection" + currentSection).show(400);
+	$("#labsection" + currentSection).show(250);
 }
 

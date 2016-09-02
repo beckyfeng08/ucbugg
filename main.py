@@ -7,6 +7,9 @@ from flask import Flask
 app = Flask(__name__)
 
 process_labs.update()
+process_syllabus.update()
+print process_syllabus.get()
+print "yolo"
 
 # @app.route('/')
 # def hello():
@@ -20,15 +23,19 @@ def list_labs():
 def get_lab(labname):
     if labname in process_labs.get_html():
         return process_labs.get_html()[labname]
+    return ""
 
 @app.route('/update')
 def update():
-    process_labs.update()
-    return ""
+	resp = ""
+	resp += process_labs.update() + "\n"
+	resp += process_syllabus.update() + "\n"
+	return resp
 
 @app.route('/syllabus')
 def get_syllabus():
-    return process_syllabus.json_syllabus
+	print process_syllabus.get()
+	return process_syllabus.get()
 
 
 @app.errorhandler(500)
