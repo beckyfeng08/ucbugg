@@ -36,7 +36,10 @@ def update():
 
 def getContent(labname):
   global labcontent
-  return labcontent[labname]
+  if labname in labcontent:
+    return labcontent[labname]
+  else:
+    return ""
 
 def getLabs():
   global allLabs

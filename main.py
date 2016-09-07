@@ -1,12 +1,12 @@
 # [START app]
 import logging
-import process_labs
+import parse_google_labs
 import process_syllabus
 from flask import Flask
 
 app = Flask(__name__)
 
-process_labs.update()
+parse_google_labs.update()
 process_syllabus.update()
 
 @app.route('/')
@@ -15,13 +15,11 @@ def hello():
 
 @app.route('/labs')
 def list_labs():
-    return str(process_labs.get_html().keys())
+    return str(parse_google_labs.getLabs())
 
 @app.route('/labs/<labname>')
 def get_lab(labname):
-    if labname in process_labs.get_html():
-        return process_labs.get_html()[labname]
-    return ""
+    return parse_google_labs.getContent(labname)
 
 @app.route('/update')
 def update():
