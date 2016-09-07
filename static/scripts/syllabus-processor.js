@@ -74,7 +74,7 @@ var updateContent = function() {
 		var keys = Object.keys(data);
 		keys.sort();
 		var i = 0;
-		while (keys[i] <= currentDate) {
+		while (keys[i].substring(0,5) <= currentDate.substring(0,5)) {
 			i++;
 		}
 		activeDate = keys[Math.max(i-1, 0)];

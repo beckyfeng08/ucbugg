@@ -8,8 +8,6 @@ app = Flask(__name__)
 
 process_labs.update()
 process_syllabus.update()
-print process_syllabus.get()
-print "yolo"
 
 @app.route('/')
 def hello():
@@ -34,7 +32,6 @@ def update():
 
 @app.route('/syllabus')
 def get_syllabus():
-	print process_syllabus.get()
 	return process_syllabus.get()
 
 
