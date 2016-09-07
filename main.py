@@ -8,9 +8,9 @@ app = Flask(__name__)
 
 process_labs.update()
 
-# @app.route('/')
-# def hello():
-#     return 'Hello World!'
+@app.route('/')
+def hello():
+    return 'Hello World!'
 
 @app.route('/labs')
 def list_labs():
