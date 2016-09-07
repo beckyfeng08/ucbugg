@@ -5,10 +5,10 @@ body {
 	overflow: hidden;
 	font-weight: bold;
 	overflow: hidden;
-	height: 100%;
-	width: 100%;
+	/*height: 100%;*/
+	/*width: 100%;*/
 	/*min-height: 2000px;*/
-	background: white; /* For browsers that do not support gradients */
+	background-color: #e1d8d7; /* For browsers that do not support shit */
 	background-image: url("../images/gradient-bg.svg");
 	background-size: 100%;
 	background: -webkit-linear-gradient(45deg, #d6eff8, #e1c8c7); /* For Android? */
@@ -17,6 +17,7 @@ body {
 	background: -moz-linear-gradient(top right, #d6eff8, #e1c8c7); /* For Firefox 3.6 to 15 */
 	background: linear-gradient(to top right, #d6eff8, #e1c8c7); /* Standard syntax */
 	background-attachment: fixed;
+	
 
 	scrollbar-face-color: #000000;
 	scrollbar-shadow-color: #2D2C4D;
@@ -270,7 +271,7 @@ div.facilititty {
 img.sillytater {
 	width: 70%;
 	height: 70%;
-	border-radius: 75px;
+	border-radius: 50%;
 	margin-bottom: 20px;
 }
 p.facilititty-info {
