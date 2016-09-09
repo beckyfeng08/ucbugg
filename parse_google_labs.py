@@ -7,15 +7,29 @@ api_key = 'AIzaSyC6oJ_00I7Ijm8SQ_yJnwmlwjOgmLzxF9M'
 http = urllib3.PoolManager()
 urllib3.disable_warnings()
 
+
+errorstr = ""
+
 def get_contents(fid):
-	global http
-	url = "https://www.googleapis.com/drive/v3/files?q='" + fid + "'+in+parents&key=" + api_key
-	return json.loads(http.request('GET', url).data)
+  global http
+  global errorstr
+  url = "https://www.googleapis.com/drive/v3/files?q='" + fid + "'+in+parents&key=" + api_key
+  try:
+    return json.loads(http.request('GET', url).data)
+  except:
+    errorstr += sys.exc_info()[0]
+    return json.loads("")
 
 def get_doc(fid):
-	global http
-	url = "https://docs.google.com/document/d/" + fid + "/export?formal=html"
-	return http.request('GET', url).data
+  global http
+  global errorstr
+  try:
+    url = "https://docs.google.com/document/d/" + fid + "/export?formal=html"
+    return http.request('GET', url).data
+  except:
+    errorstr += sys.exc_info()[0]
+    return ""
+
 
 root = get_contents(folder_id)
 allLabs = {}
@@ -25,6 +39,7 @@ def update():
   global root
   global allLabs
   global labcontent
+  global errorstr
   for pipeline in root['files']:
     allLabs[pipeline['name']] = {}
     for level in get_contents(pipeline['id'])['files']:
@@ -44,6 +59,10 @@ def getContent(labname):
 def getLabs():
   global allLabs
   return json.dumps(allLabs)
+
+def getErrors():
+  global errorstr
+  return "<p>" + errorstr.replace("\n", "</p> <p>") + "</p>"
 
 
 

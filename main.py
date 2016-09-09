@@ -6,7 +6,7 @@ from flask import Flask
 
 app = Flask(__name__)
 
-parse_google_labs.update()
+# parse_google_labs.update()
 process_syllabus.update()
 
 @app.route('/')
@@ -31,6 +31,10 @@ def update():
 @app.route('/syllabus')
 def get_syllabus():
 	return process_syllabus.get()
+
+@app.route('/showerrors')
+def errors():
+	return parse_google_labs.getErrors()
 
 
 @app.errorhandler(500)
