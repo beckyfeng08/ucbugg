@@ -55,6 +55,7 @@ img.logo {
 div.tabs {
     text-align: center;
     display: inline-block;
+    cursor: pointer;
 }
 div.tab {
 	display: inline-block;
@@ -79,6 +80,7 @@ div.navbar-dropdown {
 }
 p.tab-text {
 	padding-bottom: 7px;
+
 }
 div.navbar-dropdown:hover {
 	background-color: #d4eefc;
@@ -125,7 +127,7 @@ p {
 	text-align: center;
 	font-size: 6pt;
 	font-weight: normal;
-	color: #a7a9ab;
+	color: #5555555;
     z-index: 2;
 
 }
@@ -154,7 +156,7 @@ h1 {
 h2 {
 	margin: 0px;
 	padding: 0px;
-	color: #f1f1f2;
+	color: #fefeff;
 	font-size: 22pt;
 	letter-spacing: 11px;
 }
@@ -229,7 +231,7 @@ div.info-button, a.info-button {
 div.button-heading {
 	margin-left: 5px;
 	pointer-events: none;
-
+	cursor: pointer;
 }
 img.info-icon {
 	width:40px;
@@ -302,7 +304,7 @@ section.bottom-panel {
 	padding-bottom: 75px;
 	text-align: center;
 }
-a.contact {
+div.contact {
 	display: inline-block;
 	height:100%;
 }
@@ -320,18 +322,22 @@ img.contact-icon {
 img.contact-icon:hover {
 	background: #d4eefc;
 }
+a.nothing {
+	width: 0px;
+	height: 0px;
+}
 div.about {
 	display: inline-block;
 }
 p.about-text {
 	display:inline-block;
 	font-size: 11pt;
-	color:#8b8D90;
 	width: 60%;
 	vertical-align: middle;
 	padding-left: 3%; 
 	padding-right: 3%; 
 	letter-spacing: 1px;
+	color: #8b8D90;
 	margin-top: 20px;
 	text-align: left;
 	margin-bottom: 20px;
