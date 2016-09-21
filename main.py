@@ -2,11 +2,13 @@
 import logging
 import parse_google_labs
 import process_syllabus
+# import sys
 from flask import Flask
 
 app = Flask(__name__)
 
-# parse_google_labs.update()
+
+parse_google_labs.update()
 process_syllabus.update()
 
 @app.route('/')
@@ -34,7 +36,7 @@ def get_syllabus():
 
 @app.route('/showerrors')
 def errors():
-	return parse_google_labs.getErrors()
+	return parse_google_labs.getErrors() + "<p>" + ohshitohshit + "</p>"
 
 
 @app.errorhandler(500)
