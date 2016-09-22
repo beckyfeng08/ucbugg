@@ -32,7 +32,7 @@ def update():
 				# current_header += current_header_increment
 				# current_header_increment = 0
 			elif line.strip()[-3:].lower() in ("png", "jpg", "gif"):
-				output += '<img src="' + IMGURL + i[:-4] + "/" + line.strip() + '" class="lab-img">'
+				output += '<img src="' + IMGURL + i[:-4] + "/" + line.strip() + '" class="lab-img" onerror="this.src=this.src;">'
 			elif line.strip()[-3:].lower() in ("mp4", "mov", "avi", "ogg", "ebm"):
 				extension = line.strip()[-3:].lower()
 				if extension == "ebm": extension = "webm"
