@@ -117,6 +117,8 @@ var scrollToSection = function(sec) {
 	$("#previous").show();
 	if (sec == 1)
 		$("#previous").hide();
+	else if (sec == $(".lab-outline").children().length)
+		$("#next").hide();
 	// console.log(sec);
 	$("#outline" + currentSection).css('color', "#97999b");
 	// console.log("currentSection is " + currentSection);
