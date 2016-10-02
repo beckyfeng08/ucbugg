@@ -39,7 +39,8 @@ Delete the faces at the end of the neck and the faces on the x-y plane. You can 
 Now for my favorite tool: Sculpt Geometry! Go to Mesh Tools -> Sculpting Tools -> Smooth Tool. Make sure your brush size is reasonable, and smooth out the flat part of the body. Push the sides of the neck and tail in a little with soft select or other Sculpting Tools, but don't spend too much time. We'll be doing this more throughout the lab.
 Capture8.png
 The last thing we need to do is to prepare the Torso/Tail for the Arms, Legs, and Wings that will eventually be sewn in. Use your reference image to select three areas of the mesh, and delete a RECTANGULAR region for each hole. This means that each hole you delete should be a normal square or rectangle with no funky shapes. This is to make sure we don't have triangles when we sew the parts in.
-Note: Keep anatomy in mind. Fantastical models are grounded by believable anatomy - make sure you keep the shoulders and hips where the bones would connect in a real animal, not where the legs may appear to start in your image plane.Capture9.png
+Note: Keep anatomy in mind. Fantastical models are grounded by believable anatomy - make sure you keep the shoulders and hips where the bones would connect in a real animal, not where the legs may appear to start in your image plane.
+Capture9.png
 The mesh resolution might restrict exactly where you can place holes, but we can always fine tune it later as long as they are roughly in the right area.
 
 HEADING LARGE: ROUGHLY MODELING A FRONT LEG
