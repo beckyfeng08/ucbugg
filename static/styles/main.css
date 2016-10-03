@@ -542,6 +542,7 @@ a.lab-file:hover {
 }
 img.lab-img {
 	margin: 20px;
+	max-width: 100%;
 }
 
 a.outlineh1, a.outlineh2, a.outlineh3 {
