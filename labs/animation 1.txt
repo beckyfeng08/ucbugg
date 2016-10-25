@@ -175,9 +175,7 @@ A great test to see if you have your tangent operations down is to create a spli
 
 splineDrawing.png
 
-Here's a youtube video of me doing it.
-
-https://www.youtube.com/watch?v=rLIdHAbD_P8
+Here's a youtube video of me doing it: https://www.youtube.com/watch?v=rLIdHAbD_P8
 
 
 
