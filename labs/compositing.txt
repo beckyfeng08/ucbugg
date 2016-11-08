@@ -6,7 +6,7 @@ There are a few different compositing programs you can explore, but for the sake
 
 Because some of you may have already had experience in using Adobe After Effects and because this is a pretty thorough lab, I have split this up into different parts, so you can easily skip ahead where needed and go back where you would like.
 
-FILE: compositing_lab.zip
+<a href="https://drive.google.com/file/d/0B6h3FLpfC5gNWkFKNGxVM1J6cm8/view”>DOWNLOAD THE LAB HERE</a>
 
 HEADING LARGE: GETTING STARTED
 
