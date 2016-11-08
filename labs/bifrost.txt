@@ -11,11 +11,11 @@ bowl.gif
 Your animation should look like this, but slower.
 
 HEADING LARGE: SIMULATION SETTINGS
-Make sure that the “FX” menu set is selected in the dropdown menu in the upper left. Go to Bifrost -> Bifrost Options. Make sure Background Processing is enabled. Set the Maximum RAM usage to something reasonable that will not crash your computer, for instance ½ or ¾ of your RAM. If necessary, change the disk location to the larger drive if you need to use one – fluid simulations can easily output gigabytes of data. 
+Make sure that the "FX" menu set is selected in the dropdown menu in the upper left. Go to Bifrost -> Bifrost Options. Make sure Background Processing is enabled. Set the Maximum RAM usage to something reasonable that will not crash your computer, for instance 1/2 or 3/4 of your RAM. If necessary, change the disk location to the larger drive if you need to use one - fluid simulations can easily output gigabytes of data. 
 Bifrost.png
 
 HEADING MEDIUM: SET UP EMITTER GEOMETRY
-In order to add fluid to the scene we need to specify emitters – object from which the liquid particles will be generated. In this scene we would need two such objects – one to fill up the bowl and one to fill up the tub. Create a small cube and place it inside the bowl. Create a large cube and put it in the tub. In both cases, make sure that the cubes do not overlap with the geometry around them – imagine that the cube in the bowl should be able to comfortably float within it and the cube in the tub should be slightly smaller than the inner part of the tub. 
+In order to add fluid to the scene we need to specify emitters - objects from which the liquid particles will be generated. In this scene we would need two such emitters - one to fill up the bowl and one to fill up the tub. Create a small cube and place it inside the bowl. Create a large cube and put it in the tub. In both cases, make sure that the cubes do not overlap with the geometry around them - imagine that the cube in the bowl should be able to comfortably float within it and the cube in the tub should be slightly smaller than the inner part of the tub. 
 Bifrost2.png
 As usual, it is important to keep the scene clean. Select everything except for the bowl and Modify -> Freeze Transformations (the bowl cannot have transformations frozen because it is already animated). Now press Edit -> Delete All by Type -> History, in order to remove the construction history.  
 
@@ -33,9 +33,9 @@ Bifrost6.png
 Select the large box and the small cube and turn visibility off in the channel box. You don't want these rendering.
 Notice that the particles fall through everything. This liquid system does not know the liquid is supposed to collide with the tub yet.
 Bifrost5.png
-We'll fix that soon, but first let's look at some of the Bifrost’s parameters.
+We'll fix that soon, but first let's look at some of the Bifrost's parameters.
 
-HEADING MEDIUM: TWIDDLING DISPLAY PARAMETERS SO YOUR VIEWPORT DOESN’T TAKE FOREVER
+HEADING MEDIUM: TWIDDLING DISPLAY PARAMETERS SO YOUR VIEWPORT DOESN'T TAKE FOREVER
 Open the Attribute Editor and go to liquidShape1. Open the Display drop-down.
 Bifrost7.png
 The first thing you see is this.
