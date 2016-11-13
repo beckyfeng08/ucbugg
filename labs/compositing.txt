@@ -253,7 +253,7 @@ With effects, you have the option of (a) using Maya effects, (b) creating partic
 
 HEADING MEDIUM: IMPORTING FIRE
 
-Just like how you imported your shadow.mp4 into your Project tab earlier, you want to import the fire (fiyah.mp4), and, as routine, drag your new fiyah.mp4 into your FILM_NAME_HERE composition.
+Just like how you imported your shadow.mp4 into your Project tab earlier, you want to import the fire (fiyah.mp4), and, as routine, drag your new fiyah.mp4 into your FILM_NAME_HERE composition. To remove the black background in the .mp4 file, go to <i>Layers -> Blending Mode -> Lighten</i>
 
 I'm going to isolate the fire and the background so I can focus on adding effects on my fire without getting distracted by the fox. To do so, I turned visibility off on the fox and its shadow by clicking the eye symbol.
 
