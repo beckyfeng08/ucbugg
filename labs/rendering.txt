@@ -47,7 +47,7 @@ STEP 5: Create a new directory for tractor by typing 'mkdir tractor' then pressi
 
 STEP 6: Type 'chmod 777 tractor' then press enter. 
 
-STEP 7: Copy your project files to the tractor directory. To access this directory from Finder, open up Finder, press CMD + SHIFT + G and type '/home/tmp/YOUR_ACCOUNT'
+STEP 7: Copy your project files to the tractor directory. To access this directory from Finder, open up Finder, press CMD + SHIFT + G and type '/home/tmp/YOUR_ACCOUNT'. Make sure your project has it's own folder within tractor.
 
 STEP 8: Once your files have been transfered, go back to the terminal. If you have not quit out of the terminal and the terminal is still where it was during step 6, type 'cd tractor'. If you have quit out of the terminal, type 'cd home/tmp/YOUR_ACCOUNT/tractor'
 
@@ -60,6 +60,8 @@ STEP 10: Type 'umask 000' then press enter.
 STEP 11: Now you can reopen Maya. However, you must open it via the terminal in order for the permission settings we've changed above to work. This is why it was important to not have any Maya instances open before. To open Maya via the terminal, type "/Applications/Autodesk/maya2016/Maya.app/Contents/bin/maya" then press enter. 
 
 There you go! Tractor should now be working. Submit a test job of 5 frames to be sure. 
+
+NOTE: If you close the terminal, you lose the permisson settings (umask) that you just set. So, if you ever close the terminal but need to submit another job, you need to "cd /home/tmp/YOUR_ACCOUNT/tractor" then repeat steps 10 and 11 again. 
 
 HEADING MEDIUM: SUBMITTING A JOB TO TRACTOR
 
