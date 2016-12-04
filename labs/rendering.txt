@@ -47,7 +47,7 @@ Unfortunately, using Tractor on the lab machines causes some security issues for
 
 <b>STEP 6:</b> Type 'chmod 777 tractor' then press enter. 
 
-<b>STEP 7:</b> Copy your project files to this directory. To access this directory from Finder, open up Finder, press CMD + SHIFT + G and type 'home/tmp/YOUR_ACCOUNT'
+STEP 7: Copy your project files to the tractor directory. To access this directory from Finder, open up Finder, press CMD + SHIFT + G and type '/home/tmp/YOUR_ACCOUNT'. Make sure your project has it's own folder within tractor.
 
 <b>STEP 8:</b> Once your files have been transfered, go back to the terminal. If you have not quit out of the terminal and the terminal is still where it was during step 6, type 'cd tractor'. If you have quit out of the terminal, type 'cd home/tmp/YOUR_ACCOUNT/tractor'
 
@@ -61,6 +61,8 @@ Unfortunately, using Tractor on the lab machines causes some security issues for
 
 There you go! Tractor should now be working. Submit a test job of 5 frames to be sure. 
 
+NOTE: If you close the terminal, you lose the permisson settings (umask) that you just set. So, if you ever close the terminal but need to submit another job, you need to "cd /home/tmp/YOUR_ACCOUNT/tractor" then repeat steps 10 and 11 again. 
+
 HEADING MEDIUM: SUBMITTING A JOB TO TRACTOR
 
 Reminder that you must open up Maya via the terminal as described in the section above for Tractor to work. If you do not, your job will fail at pre-flight.
@@ -71,7 +73,9 @@ ie: BANDITS - SCENE 8 of 21 - BREAKING VASE
 
 Once you have done some test renders on the computer that you are using, you have figured out your optimal settings, and you want to push out some final frames for your animation, you are ready to use the fully operational power of the mac lab (hopefully, fingers crossed). If you need to speed up your render and separate the shadows (ask your facilitator if this is the case) read RENDERING SHADOWS SEPARATELY first before you submit your render to Tractor.
 
-Double check to make sure your rendering settings are configured correctly, then go to the Renderman --> Batch Render [option box]. In the dialog that pops up, make sure the appropriate options are selected:
+Make sure to set your projects to the correct folder (File >> Set Project). Double check to make sure your rendering settings are configured correctly. Go to Renderman Globals (first button on the Renderman bar) and change the settings accordingly. Remember, you should output .EXR images at HD720 with sampling at some value between 16-32. 
+
+Now you can start batch rendering. Go to the Renderman --> Batch Render [option box]. In the dialog that pops up, make sure the appropriate options are selected:
 Screen Shot 2015-12-01 at 4.25.10 PM.png
 
 You can watch the progress of your render job in realtime at http://york.cs.berkeley.edu/tv/. Simply enter your username, no password needed. Your files should be saved out in the /renderman/ folder within your project. There may be multiple subfolders within this one, sort them by 'Date modified' and you should be able to find the folder than Renderman most recently generated.
