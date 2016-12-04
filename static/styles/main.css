@@ -801,3 +801,17 @@ button.scrollup {
 	right:5%;
 	/*margin-left: 100px;*/
 }
+
+li {
+	margin-left: 13%;
+	margin-right: 10%;
+	font-style: normal;
+	font-size: 12pt;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	text-align: left;
+	letter-spacing: 1px;
+	color: #97999b;
+	font-weight: normal;
+	list-style-type: none;
+}

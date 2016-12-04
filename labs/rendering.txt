@@ -27,37 +27,37 @@ HEADING MEDIUM: SETTING UP TRACTOR ON THE LAB MACHINES
 
 Unfortunately, using Tractor on the lab machines causes some security issues for the department. So, in order to use Tractor, there are a couple steps you need to do first so that everyone can use the renderfarm without any security issues. 
 
-NOTE: These steps require you to use the terminal. I will try to lay them out as clearly as I can but please do not hesitate to ask a facilitator for help. Don't worry about how many steps there are, this should only take a couple of minutes. 
+<b>NOTE:</b> These steps require you to use the terminal. I will try to lay them out as clearly as I can but please do not hesitate to ask a facilitator for help. Don't worry about how many steps there are, this should only take a couple of minutes. 
 
-STEP 1: Quit Maya. You cannot have any instances of Maya open while you set up. 
+<b>STEP 1:</b> Quit Maya. You cannot have any instances of Maya open while you set up. 
 
-STEP 2: Create a tmp directory for your account. 
-	a. Open the terminal (type terminal into the search bar)
-	b. Type 'ssh YOUR_ACCOUNT@cory.eecs.berkeley.edu' then press enter.
-	c. Enter your password to log in. 
-	d. Type 'cd /home/tmp' then press enter. 
-	e. Type './mkhometmpdir' then press enter. 
-	f. Type 'logout' then press enter. 
+<b>STEP 2:</b> Create a tmp directory for your account. 
+<li> a. Open the terminal (type terminal into the search bar) </li>
+<li> b. Type 'ssh YOUR_ACCOUNT@cory.eecs.berkeley.edu' then press enter. </li>
+<li> c. Enter your password to log in.  </li>
+<li> d. Type 'cd /home/tmp' then press enter.  </li>
+<li> e. Type './mkhometmpdir' then press enter.  </li>
+<li> f. Type 'logout' then press enter.  </li>
 
-STEP 3: Type 'chmod 755 /home/tmp/YOUR_ACCOUNT' then press enter
+<b>STEP 3:</b> Type 'chmod 755 /home/tmp/YOUR_ACCOUNT' then press enter
 
-STEP 4: Go to your newly created directory by typing 'cd /home/tmp/YOUR_ACCOUNT'. 
+<b>STEP 4:</b> Go to your newly created directory by typing 'cd /home/tmp/YOUR_ACCOUNT'. 
 
-STEP 5: Create a new directory for tractor by typing 'mkdir tractor' then pressing enter. 
+<b>STEP 5:</b> Create a new directory for tractor by typing 'mkdir tractor' then pressing enter. 
 
-STEP 6: Type 'chmod 777 tractor' then press enter. 
+<b>STEP 6:</b> Type 'chmod 777 tractor' then press enter. 
 
-STEP 7: Copy your project files to this directory. To access this directory from Finder, open up Finder, press CMD + SHIFT + G and type 'home/tmp/YOUR_ACCOUNT'
+<b>STEP 7:</b> Copy your project files to this directory. To access this directory from Finder, open up Finder, press CMD + SHIFT + G and type 'home/tmp/YOUR_ACCOUNT'
 
-STEP 8: Once your files have been transfered, go back to the terminal. If you have not quit out of the terminal and the terminal is still where it was during step 6, type 'cd tractor'. If you have quit out of the terminal, type 'cd home/tmp/YOUR_ACCOUNT/tractor'
+<b>STEP 8:</b> Once your files have been transfered, go back to the terminal. If you have not quit out of the terminal and the terminal is still where it was during step 6, type 'cd tractor'. If you have quit out of the terminal, type 'cd home/tmp/YOUR_ACCOUNT/tractor'
 
-STEP 9: Type each of the following commands in seperately. 
-	a. "find . -type d -exec chmod 777 {} \;"
-	b. "find . -type f -exec chmod 666 {} \;"
+<b>STEP 9:</b> Type each of the following commands in seperately. 
+<li> a. "find . -type d -exec chmod 777 {} \;" </li>
+<li> b. "find . -type f -exec chmod 666 {} \;" </li>
 
-STEP 10: Type 'umask 000' then press enter. 
+<b>STEP 10:</b> Type 'umask 000' then press enter. 
 
-STEP 11: Now you can reopen Maya. However, you must open it via the terminal in order for the permission settings we've changed above to work. This is why it was important to not have any Maya instances open before. To open Maya via the terminal, type "/Applications/Autodesk/maya2016/Maya.app/Contents/bin/maya" then press enter. 
+<b>STEP 11:</b> Now you can reopen Maya. However, you must open it via the terminal in order for the permission settings we've changed above to work. This is why it was important to not have any Maya instances open before. To open Maya via the terminal, type "/Applications/Autodesk/maya2016/Maya.app/Contents/bin/maya" then press enter. 
 
 There you go! Tractor should now be working. Submit a test job of 5 frames to be sure. 
 
