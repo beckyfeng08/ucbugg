@@ -47,7 +47,7 @@ Unfortunately, using Tractor on the lab machines causes some security issues for
 
 <b>STEP 6:</b> Type 'chmod 777 tractor' then press enter. 
 
-STEP 7: Copy your project files to the tractor directory. To access this directory from Finder, open up Finder, press CMD + SHIFT + G and type '/home/tmp/YOUR_ACCOUNT'. Make sure your project has it's own folder within tractor.
+<b>STEP 7:</b> Copy your project files to the tractor directory. To access this directory from Finder, open up Finder, press CMD + SHIFT + G and type '/home/tmp/YOUR_ACCOUNT'. Make sure your project has it's own folder within tractor.
 
 <b>STEP 8:</b> Once your files have been transfered, go back to the terminal. If you have not quit out of the terminal and the terminal is still where it was during step 6, type 'cd tractor'. If you have quit out of the terminal, type 'cd home/tmp/YOUR_ACCOUNT/tractor'
 
