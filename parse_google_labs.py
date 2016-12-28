@@ -16,9 +16,12 @@ def get_contents(fid):
   global http
   global errorstr
   url = "https://www.googleapis.com/drive/v3/files?q='" + fid + "'+in+parents&key=" + api_key
+  logging.info("trying to access lab: " + str(fid))
+  logging.info("using this url: " + url)
   try:
     return json.loads(http.request('GET', url).data)
   except:
+    logging.error("Loading lab failed")
     # errorstr += "error: " + sys.exc_info()[0] + "\n"
     return {'files':[]}
 

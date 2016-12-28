@@ -44,6 +44,7 @@ enable==4.3.0
 enaml==0.9.8
 future==0.13.1
 futures==2.1.6
+gunicorn
 gevent==1.0.1
 gevent-websocket==0.9.3
 greenlet==0.4.4
