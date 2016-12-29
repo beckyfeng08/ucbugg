@@ -17,11 +17,8 @@ futures==2.1.6
 gunicorn
 gevent==1.0.1
 gevent-websocket==0.9.3
-h5py==2.3.1
 itsdangerous==0.24
-jdcal==1.0
 mock==1.0.1
-multipledispatch==0.4.7
 networkx==1.9.1
 ply==3.4
 psutil==2.1.1
