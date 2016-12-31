@@ -58,7 +58,7 @@ def update():
 			syllabus[week][categories[j]] = arr[i][j]
 
 	json_syllabus =  json.dumps(syllabus)
-	return "syllabus updated"
+	return json_syllabus
 
 def get():
 	global json_syllabus

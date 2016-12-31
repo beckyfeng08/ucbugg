@@ -1,6 +1,7 @@
 
 import os
-from flask import Flask, render_template, request, redirect, url_for
+from flask import Flask, render_template, request, redirect, url_for, session
+from flask.ext.session import Session
 
 import parse_google_labs
 import process_syllabus
@@ -15,8 +16,8 @@ app = Flask(__name__)
 # Routing for your application.
 ###
 
-parse_google_labs.update()
-process_syllabus.update()
+# parse_google_labs.update()
+# process_syllabus.update()
 
 
 @app.route('/')
@@ -25,7 +26,8 @@ def root():
 
 @app.route('/labs')
 def list_labs():
-    return str(parse_google_labs.getLabs())
+    labs = parse_google_labs.getLabs()
+    return str(labs)
 
 @app.route('/labs/<labname>')
 def get_lab(labname):
@@ -33,10 +35,12 @@ def get_lab(labname):
 
 @app.route('/update')
 def update():
-	resp = ""
-	resp += process_labs.update() + "\n"
-	resp += process_syllabus.update() + "\n"
-	return resp
+    resp = ""
+    parse_google_labs.update()
+    resp += parse_google_labs.getLabs() + "\n <p></p>"
+    # resp += parse_google_labs.update() + "\n"
+    resp += process_syllabus.update() + "\n"
+    return resp
 
 @app.route('/syllabus')
 def get_syllabus():

@@ -1,8 +1,7 @@
 # from pydrive.drive import GoogleDrive
 import urllib3
 import json
-# import sys
-import logging
+import sys
 
 folder_id = '0B1j-kstA_oRWZi1mTVhOWG00dDg'
 api_key = 'AIzaSyC6oJ_00I7Ijm8SQ_yJnwmlwjOgmLzxF9M'
@@ -16,13 +15,11 @@ def get_contents(fid):
   global http
   global errorstr
   url = "https://www.googleapis.com/drive/v3/files?q='" + fid + "'+in+parents&key=" + api_key
-  logging.info("trying to access lab: " + str(fid))
-  logging.info("using this url: " + url)
+  # print "trying to access lab: " + str(fid)
+  # print "using this url: " + url
   try:
     return json.loads(http.request('GET', url).data)
   except:
-    logging.error("Loading lab failed")
-    # errorstr += "error: " + sys.exc_info()[0] + "\n"
     return {'files':[]}
 
 def get_doc(fid):
@@ -35,17 +32,13 @@ def get_doc(fid):
     # errorstr += "error: " + sys.exc_info()[0] + "\n"
     return {'files':[]}
 
-
-root = get_contents(folder_id)
-errorstr += str(root)
 allLabs = {}
 labcontent = {}
 
 def update():
-  global root
+  root = get_contents(folder_id)
   global allLabs
   global labcontent
-  global errorstr
   try:
     for pipeline in root['files']:
       allLabs[pipeline['name']] = {}
@@ -56,9 +49,7 @@ def update():
           for f in get_contents(lab['id'])['files']:
             labcontent[lab['name'].replace(' ', '')] = get_doc(f['id'])
   except KeyError as err:
-    logging.info(err)
-
-  errorstr += "alllabs: " + str(allLabs) + "\n"
+    print err
 
 def getContent(labname):
   global labcontent
@@ -71,9 +62,6 @@ def getLabs():
   global allLabs
   return json.dumps(allLabs)
 
-def getErrors():
-  global errorstr
-  return "<p>" + errorstr.replace("\n", "</p> <p>") + "</p>"
 
 
 # update()
