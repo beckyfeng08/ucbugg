@@ -34,7 +34,7 @@ class GoogleLabController():
     def __init__(self, cache):
         self.cache = cache
         self.connection_manager = GoogleLabConnectionManager()
-        update()
+        self.update()
 
     # updates instance vars with raw html from google drive folder
     # TODO get_contents calls should be async. i'm lazy.
