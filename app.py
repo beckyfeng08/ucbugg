@@ -1,23 +1,21 @@
 
 import os
-from flask import Flask, render_template, request, redirect, url_for, session
-from flask.ext.session import Session
+from flask import Flask, render_template, request, redirect, url_for
 
-import parse_google_labs
+from parse_google_labs import GoogleLabController
 import process_syllabus
-import logging
+from werkzeug.contrib.cache import SimpleCache
 
 app = Flask(__name__)
-
+cache = SimpleCache()
 # app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY', 'this_should_be_configured')
 
 
 ###
 # Routing for your application.
 ###
-
-# parse_google_labs.update()
-# process_syllabus.update()
+lab_controller = GoogleLabController(cache)
+process_syllabus.update()
 
 
 @app.route('/')
@@ -26,18 +24,18 @@ def root():
 
 @app.route('/labs')
 def list_labs():
-    labs = parse_google_labs.getLabs()
+    labs = lab_controller.getLabs()
     return str(labs)
 
 @app.route('/labs/<labname>')
 def get_lab(labname):
-    return parse_google_labs.getContent(labname)
+    return lab_controller.getContent(labname)
 
 @app.route('/update')
 def update():
     resp = ""
-    parse_google_labs.update()
-    resp += parse_google_labs.getLabs() + "\n <p></p>"
+    lab_controller.update()
+    resp += lab_controller.getLabs() + "\n <p></p>"
     # resp += parse_google_labs.update() + "\n"
     resp += process_syllabus.update() + "\n"
     return resp
@@ -77,7 +75,6 @@ def page_not_found(error):
 @app.errorhandler(500)
 def server_error(e):
     # Log the error and stacktrace.
-    logging.exception('An error occurred during a request.')
     return 'An internal error occurred.', 500
 
 

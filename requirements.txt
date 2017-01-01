@@ -27,6 +27,7 @@ pyOpenSSL==0.14
 pycosat==0.6.1
 pycparser==2.10
 pycrypto==2.6.1
+pymemcache
 pyparsing==2.0.1
 pyreadline==2.0
 pyserial==2.7
