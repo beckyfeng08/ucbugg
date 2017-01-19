@@ -19,6 +19,8 @@ class GoogleLabConnectionManager():
       try:
         return json.loads(self.http.request('GET', url).data)
       except:
+        print "ERROR on LINE 23"
+        sys.stdout.flush()
         return {'files':[]}
 
     def get_contents_of_document(self, fid):
@@ -27,6 +29,8 @@ class GoogleLabConnectionManager():
         url = "https://docs.google.com/document/d/" + fid + "/export?formal=html"
         return self.http.request('GET', url).data
       except:
+        print "ERROR on LINE 32"
+        sys.stdout.flush()
         return {'files':[]}
 
 
