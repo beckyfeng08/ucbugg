@@ -16,22 +16,22 @@ class GoogleLabConnectionManager():
     #   print "trying to access lab: " + str(fid)
     #   print "using this url: " + url
     #   sys.stdout.flush()
-      try:
-        return json.loads(self.http.request('GET', url).data)
-      except:
-        print "ERROR on LINE 23"
-        sys.stdout.flush()
-        return {'files':[]}
+    #   try:
+      return json.loads(self.http.request('GET', url).data)
+    #   except:
+    #     print "ERROR on LINE 23"
+    #     sys.stdout.flush()
+    #     return {'files':[]}
 
     def get_contents_of_document(self, fid):
       global http
-      try:
-        url = "https://docs.google.com/document/d/" + fid + "/export?formal=html"
-        return self.http.request('GET', url).data
-      except:
-        print "ERROR on LINE 32"
-        sys.stdout.flush()
-        return {'files':[]}
+    #   try:
+      url = "https://docs.google.com/document/d/" + fid + "/export?formal=html"
+      return self.http.request('GET', url).data
+    #   except:
+    #     print "ERROR on LINE 32"
+    #     sys.stdout.flush()
+    #     return {'files':[]}
 
 
 
