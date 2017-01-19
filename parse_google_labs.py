@@ -13,8 +13,9 @@ class GoogleLabConnectionManager():
 
     def get_contents_of_folder(self, fid):
       url = "https://www.googleapis.com/drive/v3/files?q='" + fid + "'+in+parents&key=" + API_KEY
-      # print "trying to access lab: " + str(fid)
-      # print "using this url: " + url
+    #   print "trying to access lab: " + str(fid)
+    #   print "using this url: " + url
+    #   sys.stdout.flush()
       try:
         return json.loads(self.http.request('GET', url).data)
       except:
@@ -46,6 +47,8 @@ class GoogleLabController():
       lab_content = {}
       try:
         for pipeline in root['files']:
+          print "pipeline: ", pipeline
+          sys.stdout.flush()
           all_labs[pipeline['name']] = {}
           for level in get_folder(pipeline['id'])['files']:
             all_labs[pipeline['name']][level['name']] = []
@@ -62,10 +65,11 @@ class GoogleLabController():
     # needs to be fast because this is called when user clicks on lab
     def getContent(self, labname):
       lab_content = self.cache.get('lab_content')
-      if lab_content is not None and labname in lab_content:
-        return lab_content[labname]
-      else:
-        return "No Content Found"
+      if lab_content is None:
+          return "No Content Found"
+      if labname not in lab_content:
+          return "Lab Not Found"
+      return lab_content[labname]
 
     # returns json object that represents lab structure and names
     # this should be the basis for pipeline graphic
