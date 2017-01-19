@@ -51,10 +51,16 @@ class GoogleLabController():
           sys.stdout.flush()
           all_labs[pipeline['name']] = {}
           for level in get_folder(pipeline['id'])['files']:
+            print "  level: ", level
+            sys.stdout.flush()
             all_labs[pipeline['name']][level['name']] = []
             for lab in get_folder(level['id'])['files']:
+              print "    lab: ", lab
+              sys.stdout.flush()
               all_labs[pipeline['name']][level['name']].append(lab['name'])
               for f in get_folder(lab['id'])['files']:
+                print "      file: ", f
+                sys.stdout.flush()
                 lab_content[lab['name'].replace(' ', '')] = get_doc(f['id'])
         self.cache.set('all_labs', all_labs)
         self.cache.set('lab_content', lab_content)
