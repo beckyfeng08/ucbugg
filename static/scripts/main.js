@@ -1,4 +1,5 @@
 var updateHash = function(hash) {
+	// console.log("hash is " + hash);
 	if(history.pushState) {
 	    history.pushState(null, null, '#'+ hash);
 	}
@@ -14,7 +15,7 @@ var Main = (function() {
 		"home":["home-header", "home-info"],
 		"about":["about-info", "about-facilitators"],
 		"syllabus":["syllabus-header", "syllabus-timeline", "dropdown-basic", "dropdown-advanced"],
-		"labs":["labs-header", "labs-pipeline", "lab"],
+		"labs":["labs-header", "labs-pipeline", "lab", "scrollpipeline", "scrolloutline"],
 		"projects":["projects-header", "projects-blurb", "projects-samples"]
 	}
 	var activeTab = "home";
@@ -50,6 +51,7 @@ var Main = (function() {
 			updateHash(activeTab);
 		}
 		$(".navbar-dropdown").hide();
+		$(".scrollup").hide();
 	}
 
 	var loadHome = function() {
@@ -131,7 +133,7 @@ var Main = (function() {
 				activeTab = hash;
 				loadActiveTab();
 			} else if (hash.startsWith("labs")) {
-				console.log(hash, hash.substring(4));
+				// console.log(hash, hash.substring(4));
 				activeTab = "labs";
 				// loadActiveTab();
 				createLab(hash.substring(4));

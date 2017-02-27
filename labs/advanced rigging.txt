@@ -9,7 +9,8 @@ HEADING MEDIUM: ADVANCED CONCEPTS COVERED:
 
 
 HEADING LARGE: CHECKING ON WORK SO FAR
-1. You should have a skeleton that looks like this: fox_initial_Skeleton.png
+1. You should have a skeleton that looks like this: 
+fox_initial_Skeleton.png
 Notice that I did actually change one thing: the position of the root joint. Previously (in part 1 of the lab), the root joint was in the middle of the spine. That isn't too much trouble for creating a very basic rig, but for this rig we want to go a little bit more advanced, so let's make the hip joint the new root.
 To do this, select the hip joint, then go to Skeleton-->Reroot skeleton. Now the new root is the hip joint.
 
@@ -22,20 +23,24 @@ In case you don't remember, you should never be animating by directly selecting 
 
 1. Go to Create-->Nurbs Primitives-->Circle. Move that circle to one of the front feet (doesn't matter which one, you'll duplicate anyway when it's done).
 
-2. Match the pivot of the controller to the pivot of the foot joint. To do this, hold "d" and you'll see move arrows appear, allowing you to move the pivot of the controller. This isn't enough, however, because you really don't want to be eyeballing the pivot's correct location. So, also hold down "v" while holding down "d" and it'll snap the pivot to points (meaning that it will only allow you to place the pivot at certain points--not in between them). Match the pivot to exactly the middle of the foot joint. This is what the general process looks like: matching_joint_pivot.gif
+2. Match the pivot of the controller to the pivot of the foot joint. To do this, hold "d" and you'll see move arrows appear, allowing you to move the pivot of the controller. This isn't enough, however, because you really don't want to be eyeballing the pivot's correct location. So, also hold down "v" while holding down "d" and it'll snap the pivot to points (meaning that it will only allow you to place the pivot at certain points--not in between them). Match the pivot to exactly the middle of the foot joint. This is what the general process looks like: 
+matching_joint_pivot.gif
 
 Why did we just do what we did?
 We want the rotation of the circle to match the rotation of the foot joint. If their pivots don't match, they're not going to rotate from the same center point.
-This is what it would look like if the pivots were not matched (remember, this is WRONG): mismatched_pivot_effect.gif
+This is what it would look like if the pivots were not matched (remember, this is WRONG): 
+mismatched_pivot_effect.gif
 And it would actually get worse with carryover movements (i.e. if you do this for the head and then move the shoulders, the head controller would be even more off than it was before.)
 
 3. Resize the controller to get it to look like a more adequate controller for the foot. Perfect circle isn't very practical. You also don't want the controller intersecting with the mesh, so resize as needed. For mine, I made it a little more oval-like so that it fits better with the foot.
 
-4. Now, for the more advanced element of making controllers. Before getting into customizing your controller, I want to show you an example of why circle controllers for feet/legs suck. This is the situation you'll unfortunately find yourself in many times if you're using flat circles for feet controllers: controller_hidden_underground.gif
+4. Now, for the more advanced element of making controllers. Before getting into customizing your controller, I want to show you an example of why circle controllers for feet/legs suck. This is the situation you'll unfortunately find yourself in many times if you're using flat circles for feet controllers: 
+controller_hidden_underground.gif
 They're under the floor!! So accidentally you're going to find yourself leaving the controller on top of the floor so that you can see it. Then when you add your lights and render you'll realize that your character isn't completely touching the floor, so you're going to take all the translate-y animation curves and move them just a little down so that they are touching the floor. Not fun.
 Another potential problem: if all your controllers are circles, then when your character is in a position where their body parts are closer to each other (i.e. the character is crouching or squashing in preparation for a jump/run, etc.) you're going to find a bunch of circles, all intersecting, and you're going to wonder which controller corresponds to which body part. This can be incredibly annoying and an absolute waste of time. Now I'm going to show you how to avoid this.
 
-5. Hold right click on the circle controller and go to "Edit Points" (this same task can be done by selecting "controller vertex" instead by the way). Move around the points to get a controller that doesn't look flat and would be easy to select. Here's the process of making my own controller: making_circle_controller.gif
+5. Hold right click on the circle controller and go to "Edit Points" (this same task can be done by selecting "controller vertex" instead by the way). Move around the points to get a controller that doesn't look flat and would be easy to select. Here's the process of making my own controller: 
+making_circle_controller.gif
 You do NOT need to match the same shape as my controller! Just make something that is easy to see, that makes sense, and that is easily selectable.
 Tip: make the front end of the controller lowest (in line with the lowest part of the foot) so that if that's intersecting with the floor, at least you know the fox's foot is touching the floor.
 Make sure the pivot is still exactly in the middle of the foot joint if you've editor the controller as a whole.
@@ -57,12 +62,14 @@ Freeze transformations zero out a controller's attributes. So instead of its tra
 12. Now, for the fun part: make the rectangle into a rectangular prism (basically make it 3d). Go to the side orthographic view and click one point above the foot. Then, continue the line to behind the fox's foot (back to the point on the other side). When you're done with that side, move onto the "front" orthographic view and make the front rectangle of the controller. Again, you're basically making the outline of a box.
 It is absolutely okay to go over the same line more than once. In fact, it's necessary to be able to make a rectangular prism. So don't worry if you find yourself clicking on the same point again. Just focus on the result in this step: a rectangle.
 It is NOT okay to make it in separate lines. Connecting lines can be very tricky (we'll do it later in the lab when we're making custom locators) but that's going to be painful enough, so no need to go through the same ordeal now.
-Here's my process of making the box controller: updated_box_making.gif
+Here's my process of making the box controller: 
+updated_box_making.gif
 
 13. Match the pivot (by holding "d" and "v" and snapping the pivot to the middle of the back foot joint.)
 
 14. There can be further editing if you like. I find it helpful to have the upper part of the rectangle a little scaled in so that it isn't a standard rectangle (helps in identifying which way is up.) So go to "edit points" and grab the corners on the top side of the box and resize them inward.
-You'll want to click and drag a small box around the corners to select them. If you just click on them, there'll be overlapping points and disconnected points. Anyway, here's my process of resizing the controller top inward. Notice how I still need to center the pivot around the foot joint afterward (because I moved the whole controller): adjusting_foot_controller.gif
+You'll want to click and drag a small box around the corners to select them. If you just click on them, there'll be overlapping points and disconnected points. Anyway, here's my process of resizing the controller top inward. Notice how I still need to center the pivot around the foot joint afterward (because I moved the whole controller): 
+adjusting_foot_controller.gif
 
 15. When you're done shaping your controller, freeze transformations, delete history, and name it appropriately.
 
@@ -78,7 +85,8 @@ HEADING LARGE: ATTACHING THE CONTROLLERS TO THE FEET
 When you use normal parenting (i.e. clicking "p" or dragging one object under the other in the outliner) you select the child/driven FIRST and then the parent/driver.
 When you use any constraint under the constrain menu, it's the other way around: parent/driver FIRST and then child/driven SECOND.
 
-4. Now, try moving around the foot controller and rotating it. It should be behaving as expected, moving where it needs to move and rotating where it needs to rotate. Here's what it should look like: testing_parented_oriented_foot_controller.gif
+4. Now, try moving around the foot controller and rotating it. It should be behaving as expected, moving where it needs to move and rotating where it needs to rotate. Here's what it should look like: 
+testing_parented_oriented_foot_controller.gif
 
 5. Do the same for the other three feet: orient constrain the controllers to the feet joints (not the very final tip, just the foot joint) and parent the ik handles to the controllers.
 
@@ -91,7 +99,8 @@ This is even easier than the feet because it's one less step: there's no need to
 
 2. Then, select the controller, and then shift select the head joint, and go to Constrain-->Orient.
 
-3. This is what the head controller looks like for me. The joint where the pivot is the same joint that it's orient constrained to: head_controller_position.png
+3. This is what the head controller looks like for me. The joint where the pivot is the same joint that it's orient constrained to: 
+head_controller_position.png
 
 
 
@@ -110,7 +119,8 @@ The reason we want this is because Maya treats curves kind of like vectors: the 
 
 5. Freeze transformations on all the curves and then delete history. Also, center the pivot (select all the curves and go to Modify-->Center Pivot).
 
-6. Once you do that, select all the curves, and then go to Curves-->Attach and click the options box. Make sure you have these options: attach_curves_option.png
+6. Once you do that, select all the curves, and then go to Curves-->Attach and click the options box. Make sure you have these options: 
+attach_curves_option.png
 
 7. Now it should hopefully be one curve/object. I can resize it (and it won't get smaller when I freeze transform!), color it, customize it in any way I want. The important point, however, is that you now have a much more selectable, animator-friendly locator than the standard Maya locator.
 
@@ -123,7 +133,8 @@ Use the orthographic view to match up the position of the locator to the knee jo
 
 11. Now when you move up a foot, move around the locator and you will see how that gives you the ability to point the knee however you want.
 
-12. This is what my locators look like: locators_final_position.png
+12. This is what my locators look like: 
+locators_final_position.png
 
 
 
@@ -138,17 +149,22 @@ This will all be clearer as we proceed.
 
 1. Under the Rigging menu, go to Skeleton-->Create IK Spline Handle and click the options box. In the spline handle settings, uncheck the "auto parent curve." We're unchecking this because we'll actually need to directly interact with this curve a few times, and auto-parenting it to the IK handle will not allow us to do that.
 
-2. With the IK Spline Handle tool selected, select the root (hip) joint and then select the shoulder joint (the joint between the "shoulders" of the front legs). What you've created now isn't a standard IK handle, it's actually a spline. If you go into wireframe mode, you'll see the IK Spline handle (the locator-like object near the shoulder) and you'll also see a curve before it. That curve is the spline (the string in the analogy I used above). In the outliner, rename the curve created as "spline_curve". Just for reference, these are the two joints you should select: joints_to_spline.png
+2. With the IK Spline Handle tool selected, select the root (hip) joint and then select the shoulder joint (the joint between the "shoulders" of the front legs). What you've created now isn't a standard IK handle, it's actually a spline. If you go into wireframe mode, you'll see the IK Spline handle (the locator-like object near the shoulder) and you'll also see a curve before it. That curve is the spline (the string in the analogy I used above). In the outliner, rename the curve created as "spline_curve". Just for reference, these are the two joints you should select: 
+joints_to_spline.png
 
-3. The interesting part of the Ik Spline handle is this: select it in the outliner and then look at the channel box. Do you see the "roll" and "twist" channels? roll_and_twist_channels.png
+3. The interesting part of the Ik Spline handle is this: select it in the outliner and then look at the channel box. Do you see the "roll" and "twist" channels? 
+roll_and_twist_channels.png
 Try altering those (by the way, you don't need to be constantly putting numbers to see it in several positions, just click on the channel name itself "roll" or "twist" NOT the numbers box and middle mouse drag left and right on the viewport. You'll see the number increasing/decreasing. Middle mouse dragging to the right increases it, middle mouse dragging to the left decreases it.)
-Here's what altering them looks like: twist_roll_in_attributes.gif
+Here's what altering them looks like: 
+twist_roll_in_attributes.gif
 Notice how the "roll" option rolls the whole root (and as a result the whole rig) while the twist just turns the front part of the rig (the second joint you clicked when you first made the spline). We're only a few steps into the advanced side and you already have way more motion possible with your rig! However, no animator is going to want to go into the channels and keyframe from there. Again, we'll need controllers.
 
-4. Make sure the roll and twist attributes are back at 0. We're now going to make controllers for the twist and roll. Let's start with the roll. Make a controller (starting with a circle works well here, but if you want to make a box around the hip, that works too) and place it around the root/hip joint. My controller looks like this: hip_controller.png
+4. Make sure the roll and twist attributes are back at 0. We're now going to make controllers for the twist and roll. Let's start with the roll. Make a controller (starting with a circle works well here, but if you want to make a box around the hip, that works too) and place it around the root/hip joint. My controller looks like this: 
+hip_controller.png
 As always, run through the list of things you need to do: match its pivot to the root joint, freeze transformations, delete history, and name it accordingly.
 
-5. Create a controller for the shoulder joint. Mine looks like this: shoulders_controller.png
+5. Create a controller for the shoulder joint. Mine looks like this: 
+shoulders_controller.png
 Match pivot to the shoulder, freeze transformations, delete history, and rename the controller.
 
 6. This is where things get even more interesting. We're going to use an editor you've probably never used before. It's the Connection Editor. Go to Windows-->General Editors-->Connection Editor. When it opens, don't panic.
@@ -159,7 +175,8 @@ Match pivot to the shoulder, freeze transformations, delete history, and rename 
 
 9. Now what you have are the attributes of both the controller and the IK handle loaded side by side.
 
-10. What you want to do is link the "Rotate z" of the controller to the roll attribute. So, scroll down on the left column until you find a "rotate" button. Click on the + to its left to expand it, and it should show three sub-items: rotateX, rotateY, and rotateZ. Select the rotateZ button. It'll get highlighted and that's it for the left column. Scroll down in the right column until you find a "roll" attribute and select it. Now the rotate z of the hip controller and the roll attribute of the IK Spline handle are linked like this: connecting_roll.png
+10. What you want to do is link the "Rotate z" of the controller to the roll attribute. So, scroll down on the left column until you find a "rotate" button. Click on the + to its left to expand it, and it should show three sub-items: rotateX, rotateY, and rotateZ. Select the rotateZ button. It'll get highlighted and that's it for the left column. Scroll down in the right column until you find a "roll" attribute and select it. Now the rotate z of the hip controller and the roll attribute of the IK Spline handle are linked like this: 
+connecting_roll.png
 
 11. Now when you rotate the hip controller in the z direction, you're going to find that the "roll" attribute in the IK Spline handle is changing. The "roll" attribute will be highlighted in yellow as well, indicating that it's connected to an attribute in another object (in this case, the rotate z of the controller).
 
@@ -168,22 +185,28 @@ Match pivot to the shoulder, freeze transformations, delete history, and rename 
 13. Now you have controllers that enable you to roll and twist your rig. Lovely. Let's move on and add controllers that'll help accentuate squash and stretch for the rig. So, I explained previously that the spline is a like a string attached to two ends, and that the goal of having it is that you can pull different parts of it, right? That's what we're going to do now.
 We want to pull parts of the spline, not the whole thing. Therefore, we need to split the string up into parts. This process is called "clustering" and you'll be moving around clusters to affect specific parts of the spline.
 
-14. Find the IK Spline handle's curve in the outliner (the one you named spline_curve). With that curve selected, go to Select--> Cluster Curve. You'll find several "c" letters created on the curve, one at each joint. If you select one of these and move them, you'll find that they move the joints around them, exactly like pulling a string or pulling on a joint chain. This gives you a MASSIVE range of motion for your animation that is incredibly useful in having advanced animations. This is what these look like: clustered copy.png
+14. Find the IK Spline handle's curve in the outliner (the one you named spline_curve). With that curve selected, go to Select--> Cluster Curve. You'll find several "c" letters created on the curve, one at each joint. If you select one of these and move them, you'll find that they move the joints around them, exactly like pulling a string or pulling on a joint chain. This gives you a MASSIVE range of motion for your animation that is incredibly useful in having advanced animations. This is what these look like: 
+clustered copy.png
 
-15. Obviously, selecting the "c" letters wasn't very easy if you tried to move them. You probably had to zoom in and click and drag a small box around one to select it, or you selected it from the outliner. As always, when something is hard to directly interact with, we give it controllers that are much easier to interact with. So, create one controller for each "c" (just create one curved one and duplicate it once for each "c"). This is mine: cluster_controller_view_2.png
+15. Obviously, selecting the "c" letters wasn't very easy if you tried to move them. You probably had to zoom in and click and drag a small box around one to select it, or you selected it from the outliner. As always, when something is hard to directly interact with, we give it controllers that are much easier to interact with. So, create one controller for each "c" (just create one curved one and duplicate it once for each "c"). This is mine: 
+cluster_controller_view_2.png
 
-16. Center the pivot of the controller on the "c" that corresponds to it since that's what you're indirectly interacting with. Then, freeze transformations for the controller, delete its history. Now, select the controller first, and then shift select the cluster (the "c") that corresponds to it, and then do Constrain--> Point and select the option box. Make sure "maintain offset" is checked and then apply. Do the same for the rest of the controllers and their clusters. In the end, when you move one of the controllers, it should look something like this: moving_cluster_controllers.gif
+16. Center the pivot of the controller on the "c" that corresponds to it since that's what you're indirectly interacting with. Then, freeze transformations for the controller, delete its history. Now, select the controller first, and then shift select the cluster (the "c") that corresponds to it, and then do Constrain--> Point and select the option box. Make sure "maintain offset" is checked and then apply. Do the same for the rest of the controllers and their clusters. In the end, when you move one of the controllers, it should look something like this: 
+moving_cluster_controllers.gif
 
-17. Once every cluster has a controller, you're good to go for the spline. The next order of business is a center-of-gravity controller. Create a controller that either goes all the way around the middle of the fox, or exists above the fox. For me, I'm going to make a plus-sign controller that should be identifiable enough and I'm going to place it above the fox. This is what my controller looks like: making_cog_controller.gif
+17. Once every cluster has a controller, you're good to go for the spline. The next order of business is a center-of-gravity controller. Create a controller that either goes all the way around the middle of the fox, or exists above the fox. For me, I'm going to make a plus-sign controller that should be identifiable enough and I'm going to place it above the fox. This is what my controller looks like: 
+making_cog_controller.gif
 
-18. Select the spline_curve and then shift-select the CoG (center of gravity) controller and then press "p" to parent. Now when you move the CoG controller, you can see the whole body of the fox moves, except for its feet positions. This is essential to getting good squash and stretch, and for really accentuating walking/running/jumping/landing or basically any physical action where you can emphasize gravity's effect on the fox. This is what moving the CoG controller around looks like: moving_cog_controller.gif
+18. Select the spline_curve and then shift-select the CoG (center of gravity) controller and then press "p" to parent. Now when you move the CoG controller, you can see the whole body of the fox moves, except for its feet positions. This is essential to getting good squash and stretch, and for really accentuating walking/running/jumping/landing or basically any physical action where you can emphasize gravity's effect on the fox. This is what moving the CoG controller around looks like: 
+moving_cog_controller.gif
 
 
 
 HEADING LARGE: RIGGING THE TAIL
 1. I'm going to leave this one up to you: either make it an FK rig, an IK rig, or an IK Spline based on what you've learned so far.
 2. Create custom controller(s) depending on which rig you chose to make.
-3. I chose to make it an IK rig and here's what it looks like: moving_tail.gif
+3. I chose to make it an IK rig and here's what it looks like: 
+moving_tail.gif
 
 
 
@@ -193,11 +216,13 @@ HEADING LARGE: CLEANING UP
 1. Now we have a bunch of controllers everywhere. If you want to move the whole fox, it's going to be a nightmare. We need a master controller that controls everything. Again, as a beginner you're probably used to seeing one big circle for the master controller but that's a little inconvenient and you aren't a beginner anymore. It's nice to get in the habit of having more specific, easy to read controllers. For that purpose, many professional rigs use master controllers that are made to look like arrows, constantly reminding the animator of where the rig is pointing.
 Reminding the animator where it's pointing? Can't the animator just see that? Sometimes not! There are certain scenes where an animator may choose to animate the fox turning around, and can do so by turning the spine, and then the tail and head, and then the feet, etc. without ever turning the master controller (depending on the requirements of the shot). Therefore, an animator can end up with a position where the "forward" direction of the master controller is almost 180 degrees the opposite of the "forward" direction of the character's body. Having a perfect circle as a controller, or any shape that doesn't indicate directionality for that matter, wouldn't help in a situation like that. That's why an arrow is ideal.
 
-2. Use an EP curve, make sure it has the "1 Linear" option selected, and create an arrow that's big enough to be about the same size as the character's body. Here's what mine looks like: master_controller.png
+2. Use an EP curve, make sure it has the "1 Linear" option selected, and create an arrow that's big enough to be about the same size as the character's body. Here's what mine looks like: 
+master_controller.png
 
 3. Rename it as master_controller, freeze its transformations, and then delete its history.
 
-4. It's not a master controller if it doesn't control everything! So, I'm going to parent everything to the master controller. Everything in the outliner that isn't the fox model itself--drag it under the master_controller. To test if this has worked, resize the master controller up and down, everything should be resizing in proportion. If something is not resizing in proportion (i.e. changing weirdly when you resize) then you probably forgot to parent some component of the rig to the master controller. Here's the indication that the master controller parenting was a success: resizing_whole_rig.gif
+4. It's not a master controller if it doesn't control everything! So, I'm going to parent everything to the master controller. Everything in the outliner that isn't the fox model itself--drag it under the master_controller. To test if this has worked, resize the master controller up and down, everything should be resizing in proportion. If something is not resizing in proportion (i.e. changing weirdly when you resize) then you probably forgot to parent some component of the rig to the master controller. Here's the indication that the master controller parenting was a success: 
+resizing_whole_rig.gif
 
 5. Okay, other than the master controller, let's restrict motion where it's needed. Go to the hip controller, select the Translate X, Y, and Z channels of it in the channel box. Hold right click on them and select the "lock selected" button. Now, if you go to the move tool, the arrows will be grayed out--you can't move this controller anymore (unless you unlock these attributes). Do this for every controller: what motion do they not need? Lock the channels they don't need.
 Why do we do this? This is an essential part of rigging because this is considered to be the communication between the person rigging and the person animating. If I open your rig, it should easily spell out for me which motions are allowed and which ones aren't. I should NOT be able to move around the head, I should only be able to rotate it. If I accidentally go into the move tool and see that it's open, that means I'm allowed to move it (implying that you rigged it in a way where that motion is possible). Then when I do move it and realize it doesn't look any good (i.e. it wasn't rigged to move) then I'm distracted and I don't know what range of motion this rig was meant to have. Therefore, you should only allow motion where it should be allowed--don't leave things open "just in case" an animator needs that range of motion. That way, the person rigging is communicating to the animator HOW to use the rig.

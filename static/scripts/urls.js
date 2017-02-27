@@ -1,6 +1,5 @@
-apiUrl = "http://localhost:8080/";
-// console.log(urls);
-
+apiUrl = window.location.origin + "/";
+// console.log(apiUrl);
 
 /**
 * HTTP GET request 
@@ -10,6 +9,7 @@ apiUrl = "http://localhost:8080/";
 * @return {None}
 */
 var makeGetRequest = function(url, responseType, onSuccess, onFailure) {
+  // console.log(apiUrl + url);
    $.ajax({
        type: 'GET',
        url: apiUrl + url,

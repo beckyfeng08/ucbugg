@@ -5,8 +5,10 @@ body {
 	overflow: hidden;
 	font-weight: bold;
 	overflow: hidden;
+	/*height: 100%;*/
+	/*width: 100%;*/
 	/*min-height: 2000px;*/
-	background: white; /* For browsers that do not support gradients */
+	background-color: #e1d8d7; /* For browsers that do not support shit */
 	background-image: url("../images/gradient-bg.svg");
 	background-size: 100%;
 	background: -webkit-linear-gradient(45deg, #d6eff8, #e1c8c7); /* For Android? */
@@ -15,6 +17,7 @@ body {
 	background: -moz-linear-gradient(top right, #d6eff8, #e1c8c7); /* For Firefox 3.6 to 15 */
 	background: linear-gradient(to top right, #d6eff8, #e1c8c7); /* Standard syntax */
 	background-attachment: fixed;
+	
 
 	scrollbar-face-color: #000000;
 	scrollbar-shadow-color: #2D2C4D;
@@ -52,6 +55,7 @@ img.logo {
 div.tabs {
     text-align: center;
     display: inline-block;
+    cursor: pointer;
 }
 div.tab {
 	display: inline-block;
@@ -76,6 +80,7 @@ div.navbar-dropdown {
 }
 p.tab-text {
 	padding-bottom: 7px;
+
 }
 div.navbar-dropdown:hover {
 	background-color: #d4eefc;
@@ -122,7 +127,7 @@ p {
 	text-align: center;
 	font-size: 6pt;
 	font-weight: normal;
-	color: #a7a9ab;
+	color: #5555555;
     z-index: 2;
 
 }
@@ -151,7 +156,7 @@ h1 {
 h2 {
 	margin: 0px;
 	padding: 0px;
-	color: #f1f1f2;
+	color: #fefeff;
 	font-size: 22pt;
 	letter-spacing: 11px;
 }
@@ -226,7 +231,7 @@ div.info-button, a.info-button {
 div.button-heading {
 	margin-left: 5px;
 	pointer-events: none;
-
+	cursor: pointer;
 }
 img.info-icon {
 	width:40px;
@@ -268,7 +273,7 @@ div.facilititty {
 img.sillytater {
 	width: 70%;
 	height: 70%;
-	border-radius: 75px;
+	border-radius: 50%;
 	margin-bottom: 20px;
 }
 p.facilititty-info {
@@ -276,12 +281,14 @@ p.facilititty-info {
 	letter-spacing: 0px;
 	font-style: italic;
 	margin-top: 5px;
+	color: #a7a9ac;
 }
 p.facilititty-body-text {
 	font-size: 10pt;
 	letter-spacing: 0px;
 	vertical-align: center;
 	margin-top: 10px;
+	color: #a7a9ac;
 }
 section.bottom-panel {
 	padding: 30px;
@@ -299,7 +306,7 @@ section.bottom-panel {
 	padding-bottom: 75px;
 	text-align: center;
 }
-a.contact {
+div.contact {
 	display: inline-block;
 	height:100%;
 }
@@ -317,18 +324,22 @@ img.contact-icon {
 img.contact-icon:hover {
 	background: #d4eefc;
 }
+a.nothing {
+	width: 0px;
+	height: 0px;
+}
 div.about {
 	display: inline-block;
 }
 p.about-text {
 	display:inline-block;
 	font-size: 11pt;
-	color:#8b8D90;
 	width: 60%;
 	vertical-align: middle;
 	padding-left: 3%; 
 	padding-right: 3%; 
 	letter-spacing: 1px;
+	color: #8b8D90;
 	margin-top: 20px;
 	text-align: left;
 	margin-bottom: 20px;
@@ -458,6 +469,23 @@ line {
 	vector-effect: non-scaling-stroke;
 }
 
+#lab {
+	/*height: 600px;*/
+}
+div.lab-outline {
+	display: inline-block;
+	width: 15%;
+	vertical-align: top;
+	/*height: auto;*/
+}
+div.lab-content {
+	display: inline-block;
+	position: relative;
+	width: 80%;
+	/*margin-left: 20%;*/
+	/*height: 800px;*/
+	/*overflow: scroll;*/
+}
 p.lab {
 	margin-left: 10%;
 	margin-right: 10%;
@@ -514,30 +542,33 @@ a.lab-file:hover {
 }
 img.lab-img {
 	margin: 20px;
+	max-width: 100%;
 }
 
 a.outlineh1, a.outlineh2, a.outlineh3 {
-	color: #8dbfe7;
+	/*color: #8dbfe7;*/
+	color: #97999b;
 	text-decoration: none;
 	font-weight: normal;
 	text-align: left;
 	display: block;
 	margin-left: 10%;
-	font-size: 16pt;
-	padding: 6px;
+	font-size: 12pt;
+	padding: 12px;
 }
 a.outlineh2 {
 	color: #97999b;
 	/*color: #a3cceb;*/
-	font-size: 15pt;
+	font-size: 11pt;
 	/*font-weight: normal;*/
-	margin-left: 12%;
+	margin-left: 15%;
 }
 a.outlineh3 {
 	/*color: #b1d8fc;*/
-	color: #ffffff;
-	font-size: 14pt;
-	margin-left: 14%;
+	color: #97999b;
+	/*color: #ffffff;*/
+	font-size: 10pt;
+	margin-left: 20%;
 }
 
 #projects-samples {
@@ -652,6 +683,7 @@ p.weeknum {
 	font-size: 9pt;
 	font-weight: bold;
 	margin-bottom: 15px;
+	color:#a7a9ac;
 }
 div.assignments {
 	margin-bottom: 50px;
@@ -686,7 +718,7 @@ a.assignment {
 	padding-right: 20px; 
 
 }
-a.submit-button {
+a.submit-button, button.scrollup {
 	/*background-color: #62aaee;*/
 	background-color: #ABADB0;
 	text-decoration: none;
@@ -740,5 +772,46 @@ p.weektitle {
 	text-transform: uppercase;
 	font-weight: bold;
 	letter-spacing: 1px;
+	color: #a7a9ac;
 	/*word-spacing: 99999px;*/
+}
+
+button.scrollup {
+	margin-top: 30px;
+	margin-bottom: 200px;
+	background-color: #62aaee;
+	border: none;
+	outline:none;
+	height: 50px;
+}
+
+#previous {
+	margin-left: 0;
+	text-align: left;
+	position: absolute;
+	display: inline;
+	left: 20%;
+	/*margin-right: 100px;*/
+}
+#next {
+	margin-right: 0;
+	text-align: right;
+	position: absolute;
+	display: inline;
+	right:5%;
+	/*margin-left: 100px;*/
+}
+
+li {
+	margin-left: 13%;
+	margin-right: 10%;
+	font-style: normal;
+	font-size: 12pt;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	text-align: left;
+	letter-spacing: 1px;
+	color: #97999b;
+	font-weight: normal;
+	list-style-type: none;
 }

@@ -1,4 +1,5 @@
 var toggleSpeed = 100;
+var currentSection = 1;
 
 var appendLabsToPipeline = function() {
 	for (var pipelineElem in allLabs) {
@@ -32,6 +33,7 @@ var appendLabsToPipeline = function() {
 	$(".pipeline-dropdown").click(function() {
 		createLab($(this)[0].innerHTML);
 	});
+	$(".scrollup").hide();
 };
 
 var correctPipelines = function() {
@@ -55,25 +57,48 @@ var correctPipelines = function() {
 	$("#line6").attr('y2', heights[2]);
 }
 
+var scrollToLab = function() {
+	$('#mainbody').animate({
+    		scrollTop: $("#labs-pipeline").height() + $("#labs-header").height() + 170
+    	}, 600);
+}
+
 var createLab = function(filename) {
 	// console.log($("#"+filename.toLowerCase().replace(/\s/g, '')));
 	var onSuccess = function(data) {
 		// $("#labs-header").hide(200);
 		// $("#labs-pipeline").hide(200);
-
-    	$('#mainbody').animate({
-    		scrollTop: $("#labs-pipeline").height() + $("#labs-header").height() + 170
-    	}, 600);
+		scrollToLab();
 
 		// $("#labs-header").html('<h6 class="lab">' + filename + "</h6>");
     	$("#lab").html(data);
-    	$("#lab").prepend('<section class="heading" id="labs-header">' + 
-			'<h6 class="lab"> ' + filename+ ' </h3> </section>');
-		updateHash("labs" + filename);
+ 
+		updateHash("labs" + filename.toLowerCase().replace(/\s/g, ''));
+
+		// console.log("filename: " + filename);
+		if (filename in labLookup) {
+			// console.log("wtf");
+			filename = labLookup[filename];
+		}
+		// console.log("filename: " + filename);
+		$("#lab").prepend('<section class="heading" id="labs-header">' + 
+			'<h6 class="lab"> ' + filename.toUpperCase() + ' </h3> </section>');
+    	$(".lab-content").children().hide();
+    	scrollToSection(1);
+
     	// $("#lab").append(data);
     	// $('#mainbody').animate({
     	// 	scrollTop: $("#labs-pipeline").height() + $("#labs-header").height()
     	// }, 400);
+    	// $("#mainbody").scroll(function (e) {
+    	// 	if ($("#mainbody").scrollTop() > $("#labs-pipeline").height() + $("#labs-header").height() + 170) {
+    	// 		$(".lab-outline").css("position", "fixed");
+    	// 		$(".lab-outline").css("top", "80px");
+
+    	// 	} else {
+    	// 		$(".lab-outline").css("position", "relative");
+    	// 	}
+    	// });
 
     };
     var onFailure = function(data, textStatus, errorThrown) { 
@@ -85,3 +110,22 @@ var createLab = function(filename) {
     makeGetRequest('labs/' + filename.toLowerCase().replace(/\s/g, ''), "html", onSuccess, onFailure);
 	updateHash("labs" + filename);
 }
+
+var scrollToSection = function(sec) {
+	scrollToLab();
+	$("#next").show();
+	$("#previous").show();
+	if (sec == 1)
+		$("#previous").hide();
+	else if (sec == $(".lab-outline").children().length)
+		$("#next").hide();
+	// console.log(sec);
+	$("#outline" + currentSection).css('color', "#97999b");
+	// console.log("currentSection is " + currentSection);
+	$("#labsection" + currentSection).hide(250);
+	currentSection = sec;
+	// console.log("showing #labsection" + currentSection);
+	$("#outline" + currentSection).css('color', "#8dbfe7");
+	$("#labsection" + currentSection).show(250);
+}
+

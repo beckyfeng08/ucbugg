@@ -20,23 +20,62 @@ Save the file when you are done.
 3. Open up Maya and click Windows --> Settings and Preferences --> Plug-in Manager. At the top of the window you should notice there's a new entry called RenderMan_for_Maya.bundle. Click 'Loaded' and it should load into Maya (possibly with an error or two, probably nothing too worrisome). You should also click 'Auto load' and then go to File --> Save Preferences so you don't have to do this again! Maya will now load the RenderMan plugin every time you start it up.
 plugin manager.png
 
-HEADING MEDIUM: GETTING MORE SPACE
-This may seem like an optional or annoying step, but it really isn't. By default, the the EECS instructional accounts do not have a much free storage space. The space that they do have will be eaten up quickly because Renderman will create a bunch of extra files every single time you click 'render'. In particular, it will generate .rib files for every frame of your scene, .tex files for every image texture, and .exr files for every rendered image you save.
-
-Long story short, this is how you get about 20 GB of scratch space on your account. This is generally still not enough to carry out entire jobs, so copy out frames as they're rendering and delete them when they're copied AS THE JOB IS GOING! It's still a lot better than the local CC folder though.
-Open up terminal. Enter the command 'ssh [your account]@cory.eecs.berkeley.edu'. Enter your password to log into the server.
-Now from cory, run the command '/share/b/bin/mkhometmpdir'. You can now close terminal.
-There is now a folder on all the lab computers where you have unlimited storage. To access it, open up finder, hit command-shift-G, and go to '/home/tmp/[your account]'.
-Move your entire Maya Project folder here, and set the project to this new directory using File --> Set Project.
 
 HEADING LARGE: RENDERING USING TRACTOR
+
+HEADING MEDIUM: SETTING UP TRACTOR ON THE LAB MACHINES
+
+Unfortunately, using Tractor on the lab machines causes some security issues for the department. So, in order to use Tractor, there are a couple steps you need to do first so that everyone can use the renderfarm without any security issues. 
+
+<b>NOTE:</b> These steps require you to use the terminal. I will try to lay them out as clearly as I can but please do not hesitate to ask a facilitator for help. Don't worry about how many steps there are, this should only take a couple of minutes. 
+
+<b>STEP 1:</b> Quit Maya. You cannot have any instances of Maya open while you set up. 
+
+<b>STEP 2:</b> Create a tmp directory for your account. 
+<li> a. Open the terminal (type terminal into the search bar) </li>
+<li> b. Type 'ssh YOUR_ACCOUNT@cory.eecs.berkeley.edu' then press enter. </li>
+<li> c. Enter your password to log in.  </li>
+<li> d. Type 'cd /home/tmp' then press enter.  </li>
+<li> e. Type './mkhometmpdir' then press enter.  </li>
+<li> f. Type 'logout' then press enter.  </li>
+
+<b>STEP 3:</b> Type 'chmod 755 /home/tmp/YOUR_ACCOUNT' then press enter
+
+<b>STEP 4:</b> Go to your newly created directory by typing 'cd /home/tmp/YOUR_ACCOUNT'. 
+
+<b>STEP 5:</b> Create a new directory for tractor by typing 'mkdir tractor' then pressing enter. 
+
+<b>STEP 6:</b> Type 'chmod 777 tractor' then press enter. 
+
+<b>STEP 7:</b> Copy your project files to the tractor directory. To access this directory from Finder, open up Finder, press CMD + SHIFT + G and type '/home/tmp/YOUR_ACCOUNT'. Make sure your project has it's own folder within tractor.
+
+<b>STEP 8:</b> Once your files have been transfered, go back to the terminal. If you have not quit out of the terminal and the terminal is still where it was during step 6, type 'cd tractor'. If you have quit out of the terminal, type 'cd home/tmp/YOUR_ACCOUNT/tractor'
+
+<b>STEP 9:</b> Type each of the following commands in seperately. 
+<li> a. "find . -type d -exec chmod 777 {} \;" </li>
+<li> b. "find . -type f -exec chmod 666 {} \;" </li>
+
+<b>STEP 10:</b> Type 'umask 000' then press enter. 
+
+<b>STEP 11:</b> Now you can reopen Maya. However, you must open it via the terminal in order for the permission settings we've changed above to work. This is why it was important to not have any Maya instances open before. To open Maya via the terminal, type "/Applications/Autodesk/maya2016/Maya.app/Contents/bin/maya" then press enter. 
+
+There you go! Tractor should now be working. Submit a test job of 5 frames to be sure. 
+
+NOTE: If you close the terminal, you lose the permisson settings (umask) that you just set. So, if you ever close the terminal but need to submit another job, you need to "cd /home/tmp/YOUR_ACCOUNT/tractor" then repeat steps 10 and 11 again. 
+
+HEADING MEDIUM: SUBMITTING A JOB TO TRACTOR
+
+Reminder that you must open up Maya via the terminal as described in the section above for Tractor to work. If you do not, your job will fail at pre-flight.
+
 To keep Tractor well organized, we ask that you name the scene as follows. This way you can easily see which scene is rendering on the Tractor screen.
 GROUPNAME - SCENE X OF TOTAL - DESCRIPTION
 ie: BANDITS - SCENE 8 of 21 - BREAKING VASE
 
 Once you have done some test renders on the computer that you are using, you have figured out your optimal settings, and you want to push out some final frames for your animation, you are ready to use the fully operational power of the mac lab (hopefully, fingers crossed). If you need to speed up your render and separate the shadows (ask your facilitator if this is the case) read RENDERING SHADOWS SEPARATELY first before you submit your render to Tractor.
 
-Double check to make sure your rendering settings are configured correctly, then go to the Renderman --> Batch Render [option box]. In the dialog that pops up, make sure the appropriate options are selected:
+Make sure to set your projects to the correct folder (File >> Set Project). Double check to make sure your rendering settings are configured correctly. Go to Renderman Globals (first button on the Renderman bar) and change the settings accordingly. Remember, you should output .EXR images at HD720 with sampling at some value between 16-32. 
+
+Now you can start batch rendering. Go to the Renderman --> Batch Render [option box]. In the dialog that pops up, make sure the appropriate options are selected:
 Screen Shot 2015-12-01 at 4.25.10 PM.png
 
 You can watch the progress of your render job in realtime at http://york.cs.berkeley.edu/tv/. Simply enter your username, no password needed. Your files should be saved out in the /renderman/ folder within your project. There may be multiple subfolders within this one, sort them by 'Date modified' and you should be able to find the folder than Renderman most recently generated.

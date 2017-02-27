@@ -66,7 +66,8 @@ shrinking the ankle
 thinning the shin
 Capture14.png
 Use our trusty nonlinear -> bend deformer and roughly place the leg near the leg socket
-Capture15.pngThis looks quite silly. I hope it looks less silly when I'm done.
+Capture15.png
+This looks quite silly. I hope it looks less silly when I'm done.
 
 HEADING LARGE: ROUGHLY MODELING A WING ARM (NO MEMBRANE YET)
 The only thing that's different about the wing arm from the front leg is that I'm going to add weird bones jutting out of the elbow and the tip to support the wing membrane. This is sort of inspired by a bat wing, which is the closest real life thing I can think of to a dragon wing. So here is my plain wing (pun intended) without the extra bones:

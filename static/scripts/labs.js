@@ -13,7 +13,7 @@ allLabs = {
 	},
 	"rigging": {
 		"bugg": ["rigging 1", "rigging 2", "blend shapes", "skinning"],
-		"araknid": ["advanced rigging", "rigging guide"]
+		"araknid": ["advanced rigging 1", "rigging guide"]
 	},
 	"animation": {
 		"bugg": ["animation 1", "animation 2", "playblasts"],
@@ -38,3 +38,27 @@ allLabs = {
 };
 
 labContent = {};
+
+// THIS IS A TEMPORARY HACK AND WILL BE REPLACED
+// OR ELSE
+
+labLookup = {
+	"introductiontomaya": "introduction to maya", 
+	"modeling1": "modeling 1", 
+	"modeling2": "modeling 2", 
+	"hardsurfacemodeling": "hard surface modeling",
+	"organicmodeling": "organic modeling",
+	"rigging1": "rigging 1",
+	"rigging2": "rigging 2",
+	"blendshapes": "blend shapes",
+	"skinning": "skinning",
+	"advancedrigging1": "advanced rigging 1",
+	"riggingguide": "rigging guide",
+	"animation1": "animation 1",
+	"animation2": "animation 2",
+	"playblasts": "playblasts",
+	"characteranimation": "character animation",
+	"basicmaterials": "basic materials",
+	"uvmapping": "uv mapping",
+	"shadingguide": "shading guide"
+}

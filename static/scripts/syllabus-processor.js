@@ -44,8 +44,8 @@ var setCurrentDate = function() {
 var setInfo = function(date) {
 	var i = 1;
 	assType = syllabusType.charAt(0).toUpperCase() + syllabusType.slice(1);
-	$("#due-dates" + collapseDate(date)).prepend('<p class="due"> DUE <b>' + syllabusObj[date]['Tues Due'].substring(0,5) + '</b> for TUESDAY </p>' +
-						 '<p class="due"> DUE <b>' + syllabusObj[date]['Thurs Due'].substring(0,5) + '</b> for THURSDAY </p>');
+	$("#due-dates" + collapseDate(date)).prepend('<p class="due"> DUE <b>' + syllabusObj[date]['Tues Due'] + '</b> for TUESDAY </p>' +
+						 '<p class="due"> DUE <b>' + syllabusObj[date]['Thurs Due'] + '</b> for THURSDAY </p>');
 	// console.log(assType);
 	// $("#due-dates" + collapseDate(date)).empty();
 	while (assType + " Ass " + i in syllabusObj[date]) {
@@ -74,7 +74,7 @@ var updateContent = function() {
 		var keys = Object.keys(data);
 		keys.sort();
 		var i = 0;
-		while (keys[i] <= currentDate) {
+		while (i < keys.length && keys[i].substring(0,5) <= currentDate.substring(0,5)) {
 			i++;
 		}
 		activeDate = keys[Math.max(i-1, 0)];
@@ -103,7 +103,7 @@ var updateContent = function() {
 				'</div>');
 			setInfo(keys[i]);
 		}
-		console.log(keys);
+		// console.log(keys);
 		$("#row" + collapseDate(activeDate)).css('background-color', "rgba(98, 170, 238, 0.09)");
 		$("#row" + collapseDate(activeDate)).children().children().css('color', "#fcfcfd");
 		$("#due-dates" + collapseDate(activeDate)).children().css('color', "#313132");

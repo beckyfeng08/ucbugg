@@ -6,7 +6,7 @@ There are a few different compositing programs you can explore, but for the sake
 
 Because some of you may have already had experience in using Adobe After Effects and because this is a pretty thorough lab, I have split this up into different parts, so you can easily skip ahead where needed and go back where you would like.
 
-FILE: compositing_lab.zip
+<a href='https://drive.google.com/file/d/0B6h3FLpfC5gNWkFKNGxVM1J6cm8/view'>DOWNLOAD THE LAB HERE</a>
 
 HEADING LARGE: GETTING STARTED
 
@@ -252,7 +252,7 @@ With effects, you have the option of (a) using Maya effects, (b) creating partic
 
 HEADING MEDIUM: IMPORTING FIRE
 
-Just like how you imported your shadow.mp4 into your Project tab earlier, you want to import the fire (fiyah.mp4), and, as routine, drag your new fiyah.mp4 into your FILM_NAME_HERE composition.
+Just like how you imported your shadow.mp4 into your Project tab earlier, you want to import the fire (fiyah.mp4), and, as routine, drag your new fiyah.mp4 into your FILM_NAME_HERE composition. To remove the black background in the .mp4 file, go to <i>Layers -> Blending Mode -> Lighten</i>.
 
 I'm going to isolate the fire and the background so I can focus on adding effects on my fire without getting distracted by the fox. To do so, I turned visibility off on the fox and its shadow by clicking the eye symbol.
 
@@ -423,3 +423,5 @@ Screen Shot 2016-04-09 at 4.04.46 PM.png
 
 Finally, you should have your final movie rendered! If you have any trouble with playback, please let us know by posting on Piazza or e-mailing us at staff@ucbugg.com. Congratulations on finishing your first 3D animated film!
 This is how my final render turned out (with no sound):
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/nuzHUsXbcoQ" frameborder="0" allowfullscreen></iframe>
