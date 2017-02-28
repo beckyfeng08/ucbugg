@@ -24,7 +24,7 @@ The following window should pop up shortly:
 
 presetwindow.png
 
-Here, you can access all Renderman presets for materials and lights. To set up our scene, we’ll want to use the <b>Three Point<b> environment, which you can access under “Light Rigs”.
+Here, you can access all Renderman presets for materials and lights. To set up our scene, we’ll want to use the <b>Three Point</b> environment, which you can access under “Light Rigs”.
 
 If you hold down right-click on your desired preset, you will be able to import this into your scene. Once you do so, it will also show up in your outliner accordingly.
 
