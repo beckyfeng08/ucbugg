@@ -11,9 +11,9 @@ Because some of you may have already had experience in using Adobe After Effects
 
 HEADING LARGE: GETTING STARTED
 
-First, if you do not already have UC Berkeley's free Adobe CC software, please download that <a href=‘https://e5.onthehub.com/WebStore/ProductsByMajorVersionList.aspx?cmi_mnuMain_child=34109b7e-b838-dd11-abb7-0030485a6b08&cmi_mnuMain=49533fb2-fb34-e411-9403-b8ca3a5db7a1&ws=9abe8048-8117-e111-a703-f04da23e67f6&vsro=8'>here</a>. Once you have downloaded Adobe Creative Cloud, install Adobe After Effects (Ae). Note that previous versions of Ae are incompatible with the latest version. In other words, you will not be able to work on a project you made in After Effects CC 2015 in AE CC 2017.
+First, if you do not already have UC Berkeley's free Adobe CC software, please download that <a href='https://e5.onthehub.com/WebStore/ProductsByMajorVersionList.aspx?cmi_mnuMain_child=34109b7e-b838-dd11-abb7-0030485a6b08&cmi_mnuMain=49533fb2-fb34-e411-9403-b8ca3a5db7a1&ws=9abe8048-8117-e111-a703-f04da23e67f6&vsro=8'>here</a>. Once you have downloaded Adobe Creative Cloud, install Adobe After Effects (Ae). Note that previous versions of Ae are incompatible with the latest version. In other words, you will not be able to work on a project you made in After Effects CC 2015 in AE CC 2017.
 
-Second, if you do not have Quicktime installed, you will need to download that <a href=‘https://www.apple.com/quicktime/download/'>here</a>. All Mac computers should automatically have this installed, but to be able to render in H.264 on a Windows computer, you will need Quicktime.
+Second, if you do not have Quicktime installed, you will need to download that <a href='https://www.apple.com/quicktime/download/'>here</a>. All Mac computers should automatically have this installed, but to be able to render in H.264 on a Windows computer, you will need Quicktime.
 
 When you have that completed, let's move on to opening up the program.
 
