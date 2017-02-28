@@ -185,7 +185,7 @@ Something to keep in mind when modeling is whether you're going to smooth your m
 Here's a screenshot of my front leg smoothed out. I've lost a lot of the sharp bony edges of the foot so I'm going to want to add in more details to achieve that bony look. I'm also probably going to want to extrude certain faces out farther than what looks natural so that when I smooth my mesh, I can get the look of a jutting knuckle. But again, I'll worry about details later.
 smooth.jpg
 
-HEADING MEDIUM: STEP 3: BACK LEG (Stitching Method)
+HEADING LARGE: STEP 3: BACK LEG (Stitching Method)
 The stitching method works by merging vertices together. This means, the number of vertices on the area you're going to stitch onto MUST EQUAL the number of vertices of the area that is being stitched into the main mesh.
 
 Note that I have 6 vertices where the back leg mesh will fit in.
