@@ -242,7 +242,7 @@ Capture92.png
 While the head isn't quite done, it's ready to be sewn back onto the body. Again, we have to match vertices.
 Capture93.png
 Like we did for the front leg/hand connection, count the number of edges in each piece and add edge loops where necessary. I added 3 edge loops to the head. Aaaaaand FRANKENSTEIN IT UP. 
-Capture94..png
+Capture94.png
 
 HEADING LARGE: SCULPTING MUSCULATURE
 The last 2 steps should be the most fun and the most artistic.

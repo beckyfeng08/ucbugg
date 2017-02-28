@@ -64,7 +64,7 @@ Follow this link to a guide on material attributes. Scroll down to “Common Mat
 HEADING MEDIUM: TEXTURES AND PATTERNS
 Finally, we want to discuss maps and textures. Instead of assigning a single value or color to an attribute we can assign an image or fractal. Fractals produce random noise which can help an object look less plastic or artificial. To add a map, click the checkerboard icon beside an attribute.
 
-checkerboard.png
+checkerboard21.png
 
 Maya comes with a lot of pre-built patterns for materials like wood, marble, and rock. Choose one that makes sense for your material.
 
