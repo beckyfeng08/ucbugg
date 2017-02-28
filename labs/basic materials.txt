@@ -16,7 +16,7 @@ plugin.png
 
 HEADING LARGE: SET THE SCENE
 A crucial part of shading is determining how your object interacts with light. As a result, you ought to design your shaders under similar lighting conditions that you’ll have in your short. At the very least, you’ll want a light source to see reflections.
-To start, you’ll want to create an environment light by clicking the icon shown below in the Renderman tab OR go to the Renderman menu->RMS Lights->Pxr Standard Env Map Light 
+To start, you’ll want to create an environment light by clicking the icon shown below in the Renderman tab OR go to the Renderman menu->Lights->PxrDomeLight 
 
 light.png
 
