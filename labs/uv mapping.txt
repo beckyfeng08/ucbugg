@@ -2,7 +2,7 @@ HEADING LARGE: INTRODUCTION
 
 We’ve learned the basics of shading objects, for instance, making them shiny or matte. A lot of times though, objects have properties that are not uniform. Not everything is evenly shiny, smooth, or the same color. Basically, we know how to make a red bouncy ball, but we don’t know how to make an object with uneven colors and bumps across its surface, like a rock. And we certainly don’t know how to make something as intricate and detailed as a human face full of wrinkles and pores.
 
-uv1.png
+uv1new.png
 
 The problem here is that it would be unfeasible to model each of these small details or apply separate materials for them. This is a problem solved by texturing.
 
@@ -45,7 +45,8 @@ uv5.png
 
 The image above shows a planar projection onto one side of the cube which captures the UV coordinates of that side. Given the UV coordinates we can now place a yellow fish texture as shown in the image. Notice that the Planar Map only portrays a single clean face.
 From planar mapping, it’s not a far stretch to achieve a box mapping.
-http://www.3dmax-tutorials.com/graphics/il_mod_uvw_map_box-2.jpg
+
+uv5andahalf.jpg
 
 uv6.png 
 
