@@ -21,7 +21,7 @@ allLabs = {
 	},
 	"shading": {
 		"bugg": ["basic materials", "uv mapping", "shading guide"],
-		"araknid": []
+		"araknid": ["hypershade"]
 	},
 	"lighting": {
 		"bugg": ["lighting"],
