@@ -67,7 +67,7 @@ If you're making small changes to your material, you can use Renderman -> IPR Re
 
 
 HEADING LARGE: EDITING MATERIAL ATTRIBUTES
-Follow this link to a guide on material attributes. Scroll down to “Common Material Properties” for explanations on what some of the options and sliders do in the attribute editor. Understanding these attributes, particularly specular and roughness, will be crucial for this assignment and your animation. For now, don't worry about the section discussing hypershade.
+<a href='http://ucbugg.com/static/index.html#labsshadingguide'>Follow this link to a guide on material attributes.</a> Scroll down to “Common Material Properties” for explanations on what some of the options and sliders do in the attribute editor. Understanding these attributes, particularly specular and roughness, will be crucial for this assignment and your animation. For now, don't worry about the section discussing hypershade.
 
 HEADING MEDIUM: TEXTURES AND PATTERNS
 Finally, we want to discuss maps and textures. Instead of assigning a single value or color to an attribute we can assign an image or fractal. Fractals produce random noise which can help an object look less plastic or artificial. To add a map, click the checkerboard icon beside an attribute.
