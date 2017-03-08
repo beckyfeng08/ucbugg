@@ -14,7 +14,9 @@ Most important rule of blend shapes: when you create your duplicates, do NOT add
 Also, do NOT freeze transformations on the duplicates! Otherwise when your main model makes an expression as you move the slider, it'll also translate, which you do not want.
 
 HEADING LARGE: CREATING A BLEND SHAPE
-First, open up the faces.ma scene you downloaded in Maya. The scene consists of eleven models. The center model (selected below) is the neutral pose. Each one of the other model represents a specific facial expression on one side of the face: blendshapes_all_in_viewport.png
+First, open up the faces.ma scene you downloaded in Maya. The scene consists of eleven models. The center model (selected below) is the neutral pose. Each one of the other model represents a specific facial expression on one side of the face:
+
+blendshapes_all_in_viewport.png
 
 The right side (relative to the image) of the face is smiling.
 
@@ -22,11 +24,11 @@ The right side (relative to the image) of the face is smiling.
 
 To create your blend shape, first select all the expression models (except the center, neutral expression). Make sure to select the neutral expression last. If this model isn't selected last, the blend shape won't work correctly.
 
-With the models selected select Window → Animation Editors → Blend Shape.
+With the models selected select Window → Animation Editors → Shape Editor.
 
-Select Edit → Create BlendShape. The window will populate with a number of sliders.
+Select “Create Blend Shape”. The window will populate with a number of sliders.
 
-4.jpg
+4.png
 
 Center the screen on the middle face model (Select the model and press F). Play around with the newly-created sliders, sliding them up and down and back again. The face model should respond accordingly, closing its eyes, lowering its brow, and changing its mouth. Each slider controls the amount of blending between the base model and the targeted model. These sliders can be animated, a topic which will be covered later in the course.
 
