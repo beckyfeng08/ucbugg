@@ -22,7 +22,11 @@ At this point, you must switch your playback speed to Play Every Frame (in your 
 
 <b>Mental Ray:</b>
 Go to Windows -> Settings/Preferences -> Plugin Manager
-Make sure Mayatomr.mll is loaded. It should come with Maya, but if you cannot find Mayatomr.mll, visit this link: https://knowledge.autodesk.com/support/mental-ray/downloads/caas/downloads/content/mental-ray-plugin-for-maya-2016.html?_ga=1.161103613.1315064163.1442705715
+
+Make sure Mayatomr.mll is loaded. It should come with Maya 2016 and other previous versions of Maya, but if you cannot find Mayatomr.mll, visit this link: https://knowledge.autodesk.com/support/mental-ray/downloads/caas/downloads/content/mental-ray-plugin-for-maya-2016.html?_ga=1.161103613.1315064163.1442705715
+
+If you have Maya 2017, you’ll need to download Mental Ray in a separate place, linked here: http://www.nvidia.com/object/nvidia-mental-ray-products.html
+
 Capture3.png
 Pick this option to open Render Settings
 Capture4.png
