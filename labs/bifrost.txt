@@ -43,7 +43,13 @@ The first thing you see is this.
 If you select Voxels, you get a slightly better representation of the final look, but it might make your graphics card cry (in other words, your viewport is going to lag when you scrub). 
 The default Particle Display menu is pretty good, but you can change the Max Particle Display count if your display is chugging. I turned the Point Size up to 3.0. Also, notice the blue-to-white color ramp under "Color Channel Remap". Above that, it shows "Color Channel": Velocity. This means that the color of the particle is proportional to how fast it's moving. This is perhaps the most useful attribute to base the coloring scheme on. No need to change anything there.
 HEADING LARGE: MAKING THE BOWL AND TUB COLLIDE WITH WATER
-This step will finally stop the water from falling through everything. Select the tub and the liquid and click Bifrost -> Add -> Collider. Repeat the same with the bowl. Now the water will behave as it should.
+This step will finally stop the water from falling through everything. If you have Maya 2016 or otheprevious versions of Maya, select the tub and the liquid and click Bifrost -> Add -> Collider. Repeat the same with the bowl.
+
+If you have Maya 2017, select both the cube and the liquid and click Bifrost -> Add -> Motion Field. Select the BifrostMotionField in the outliner, go to the attribute editor and under the bifrostMotionFieldContainer1 tab go to the Field Direction attributes. Looking at the axis indicator on the lower left of the viewport, it looks like we want to push the water in the negative z and positive y directions. Set the direction to 0.00, 1.00, -1.00. Now the water should stick slightly less. Try playing with the direction magnitude.
+
+Don't forget the turn off the visibility of the cube after you are satisfied with the results.
+
+Now the water will behave as it should.
 pour.gif
 
 HEADING MEDIUM: ADDING AN ACCELERATOR
