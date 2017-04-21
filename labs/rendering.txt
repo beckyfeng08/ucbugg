@@ -1,25 +1,21 @@
-HEADING LARGE: USING RENDERMAN ON THE LAB MACHINES
+HEADING LARGE: RENDER SETTINGS
 
-HEADING MEDIUM: SETTING UP THE ENVIRONMENT VARIABLES
-This is one annoying step that will have to be done before you can use the RenderMan for Maya plugin on the lab machines. The good news is once you do this once you won't have to do it again for the rest of the semester.
+Here is a quick breakdown on the different render settings you can play around with. Go to "RenderMan >> Advanced RenderMan Controls"
 
-1. Open up Finder, and hit Command-Shift-G. In the dialog that pops up, type '~/Library/Preferences/Autodesk/maya/2016' (if you are using a fresh account, this folder will not be created until you launch Maya for the first time). You will see a file called 'Maya.env'.
+HEADING MEDIUM: COMMON RENDERMAN SETTINGS
+rendermancontrols.PNG
 
-2. Open the file in a text editor that has line numbers (Sublime Text 2 is a good choice) and add the following lines:
-"
-RMSTREE=/Applications/Pixar/RenderManStudio-20.3-maya2016
-RMANTREE=$RMSTREE/rmantree 
-MAYA_MODULE_PATH=$RMSTREE/etc 
-MAYA_PLUG_IN_PATH=$RMSTREE/plug-ins
-MAYA_SCRIPT_PATH=$RMSTREE/scripts 
-PYTHONPATH=$RMSTREE/scripts:$RMANTREE/bin:$PYTHONPATH 
-PATH=$RMANTREE/bin:$RMSTREE/bin:$PATH
-"
-Save the file when you are done.
+<li> 1. First, you want to make sure your image format is set to OpenEXR. Then, you should set your Frame/Animation ext to "name#.ext" so that you can render out more than one frame. Frame padding should be 4. </li>
+<li> 2. Set your frame range to what you want to render out. </li>
+<li> 3. Make sure you have the camera you want to render in renderable cameras. If you are using Tractor and you have more than one renderable camera, Tractor will render out a frame for each camera, so you should click the little trash button for each camera you do not want to render. If you are using Google Cloud, the option for camera in the Zync settings will only show whatever cameras you have here for renderable camera so it is alright to have more than one renderable camera. </li>
+<li> 4. If you are rendering the final short, make sure your image size is set to HD 1080. If you are not rendering your final short, you can use HD720 or HD540 to submit some tests. </li>
 
-3. Open up Maya and click Windows --> Settings and Preferences --> Plug-in Manager. At the top of the window you should notice there's a new entry called RenderMan_for_Maya.bundle. Click 'Loaded' and it should load into Maya (possibly with an error or two, probably nothing too worrisome). You should also click 'Auto load' and then go to File --> Save Preferences so you don't have to do this again! Maya will now load the RenderMan plugin every time you start it up.
-plugin manager.png
+HEADING MEDIUM: SAMPLING AND DENOISING
+sampling.PNG
 
+For sampling, everyone's shorts will probably have different values. Submit some test renders to figure out what the best sampling rate for your short is. Start at 16 samples, then go up by a factor of 2 (so 32, 64, 128 etc) until you render out something that looks like good enough quality. 16 or 32 samples should be good enough for most of you, especially if you turn on denoising in the features tab as shown below. Note that if you have denoising turned on, you will have two frames rendered out. One of the images will have "_filtered" appended to the end of the file name, and that will be the denoised image. It won't add to your render time so you should definitely make sure you have it set. 
+
+denoise.PNG
 
 HEADING LARGE: RENDERING USING TRACTOR
 
@@ -31,15 +27,12 @@ Unfortunately, using Tractor on the lab machines causes some security issues for
 
 <b>STEP 1:</b> Quit Maya. You cannot have any instances of Maya open while you set up. 
 
-<b>STEP 2:</b> Create a tmp directory for your account. 
-<li> a. Open the terminal (type terminal into the search bar) </li>
-<li> b. Type 'ssh YOUR_ACCOUNT@cory.eecs.berkeley.edu' then press enter. </li>
-<li> c. Enter your password to log in.  </li>
-<li> d. Type 'cd /home/tmp' then press enter.  </li>
-<li> e. Type './mkhometmpdir' then press enter.  </li>
-<li> f. Type 'logout' then press enter.  </li>
+<b>STEP 2:</b> Create a tmp directory for your account. To create your own  tmp directory, please login to
+        http://inst.eecs.berkeley.edu/webacct, click on the
+        'Account Details' or 'More' buttons, and then on
+        'Make /home/tmp Directory' on the next page.
 
-<b>STEP 3:</b> Type 'chmod 755 /home/tmp/YOUR_ACCOUNT' then press enter
+<b>STEP 3:</b> Open the terminal (type terminal into the search bar). Type 'chmod 755 /home/tmp/YOUR_ACCOUNT' then press enter
 
 <b>STEP 4:</b> Go to your newly created directory by typing 'cd /home/tmp/YOUR_ACCOUNT'. 
 
@@ -57,7 +50,7 @@ Unfortunately, using Tractor on the lab machines causes some security issues for
 
 <b>STEP 10:</b> Type 'umask 000' then press enter. 
 
-<b>STEP 11:</b> Now you can reopen Maya. However, you must open it via the terminal in order for the permission settings we've changed above to work. This is why it was important to not have any Maya instances open before. To open Maya via the terminal, type "/Applications/Autodesk/maya2016/Maya.app/Contents/bin/maya" then press enter. 
+<b>STEP 11:</b> Now you can reopen Maya. However, you must open it via the terminal in order for the permission settings we've changed above to work. This is why it was important to not have any Maya instances open before. To open Maya via the terminal, type "/Applications/Autodesk/maya2017/Maya.app/Contents/bin/maya" then press enter. 
 
 There you go! Tractor should now be working. Submit a test job of 5 frames to be sure. 
 
@@ -93,3 +86,45 @@ Before you start, render the background without visibility of anything that move
 -Note: If you did not check "denoise" in the render settings, you might only get a regular image (not _filtered)
 
 Now you should be ready for and and all post production. Good job, you're almost done with your shorts!
+
+HEADING LARGE: RENDERING USING GOOGLE CLOUD
+
+HEADING MEDIUM: SETTING UP GOOGLE CLOUD
+
+If you want/need more rendering power, you can use Zync Render, which is on Google Cloud. There are two ways to use this. First, you can sign up for a free trial that will give you $300 credit on each account. However, this requires you to put in your credit card (but don't worry, they won't charge you if you go over your credit!) We also have a setup through the school that gives $100 credit if you do not want to put in any credit card information. First, I'll walk you through setting up your own account, which will give you more autonomy, then I'll walk you through how to use the school account. 
+
+HEADING SMALL: SETTING UP YOUR OWN ZYNC RENDERING ACCOUNT
+
+Note: Please make sure to follow these instructions in the order they are given. Zync is still in beta and if you do this out of order, your project may not get set up correctly and you won't be able to render. 
+<b>STEP 1: </b> Go to <a href="console.cloud.google.com"> Google Cloud Console </a>. There should be a button on the top right that says "Sign up for free trial" and follow the next instructions. At some point in this registration, it'll ask for your credit card. Don't worry, google cloud isn't like all those other websites that require credit cards and it won't charge you when your trial is over. 
+
+<b>STEP 2: </b> Now go to <a href="zyncrender.com"> Zync's website </a> and click register. Create a website (you can name it anything you want) and put in whatever you like for "Your Company Name". Click Next, and then wait for the email confirming your registration. 
+
+<b>STEP 3: </b> Next, click on "Downloads" (or alternatively, <a href ="https://www.zyncrender.com/downloads/" >click here</a>). Download both the client app and the plugin for your OS. Follow the installation instructions for both. 
+
+<b>STEP 4: </b> Open up the client app. Now go to your zync website and login. If you don't have any red bars going across the bottom, you are all set. If you do, click on the bar and follow the instructions to solve the problem. 
+
+HEADING SMALL: SETTING UP A ZYNC ACCOUNT THROUGH THE SCHOOL
+
+TODO
+
+HEADING MEDIUM: SUBMITTING A JOB TO GOOGLE CLOUD
+
+Note: Make sure you don't have any whitespaces in your path. If you do, the render will fail. 
+
+<b>STEP 1:</b> Open up the Zync client app. Open up the file you would like to render. Make sure all of your render settings are correct (You can edit these under RenderMan >> Advanced RenderMan Controls). Under the Zync tab, click on the Zync logo. In both the client app and the Zync Submit window, make sure to log in to your google account that you previously registered with. 
+zync1.PNG
+
+<b>STEP 2: </b> There ae a variety of settings you can play around with in the Zync Submit window. Below, I will list the settings that I have changed from default or I think are important to note. 
+zync2.PNG
+	<li> a. Num. Machines refers to the number of computers you will have rendering at the same time. You can put any number you like here, but 50 is the max you can use at once. </li>
+	<li> b. Machine Type is the kind of computer you will use. In the screenshot above, I have it set to the cheapest option, which is the PREEMPTIBLE 16GB one. Feel free to use a more powerful computer if you have a heavy scene, but note that you will burn through your free credits faster. This computer is the one I'm using for CNM renders, so it will definitely be powerful enough for yours. </li>
+	<li> c. Make sure you check "Ignore Missing Plugin Errors". Maya has some weird problems sometimes so this will help us avoid those. </li>
+	<li> d. Project folder and output directory show where it is taking all the files from as well as where it will send the renders. Make sure that there is no whitespace in either of these, otherwise your render might fail. Don't just change the name in this line though. You have to actually change the file path. </li>
+	<li> e. Renderer should be set to Renderman. </li>
+	<li> f. Frame range should carry over from your render settings but it's still good to double check that you are rendering the correct frames. </li>
+	<li> g. Chunk size refers to how many frames Zync will give one machine. You should set this to 1 to get more done in less time. </li>
+	<li> h. If you have more render layers than default, select them here. Otherwise, just select "defaultRenderLayer". </li>
+	<li> i. You resolution should also carry through from your render settings. For your final short, you should be rendering in 1920x1080 but other resolutions are fine for testing purposes. </li>
+
+<b> STEP 3: </b> Hit "Launch Job". Go to your zync website to watch the progress of your renders. They should auto-download once they're done but you shouldn't turn off your computer while it is going, otherwise the files might not get downloaded.  
