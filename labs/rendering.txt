@@ -3,7 +3,7 @@ HEADING LARGE: RENDER SETTINGS
 Here is a quick breakdown on the different render settings you can play around with. Go to "RenderMan >> Advanced RenderMan Controls"
 
 HEADING MEDIUM: COMMON RENDERMAN SETTINGS
-rendermancontrols.PNG
+rendermancontrols.png
 
 <li> 1. First, you want to make sure your image format is set to OpenEXR. Then, you should set your Frame/Animation ext to "name#.ext" so that you can render out more than one frame. Frame padding should be 4. </li>
 <li> 2. Set your frame range to what you want to render out. </li>
@@ -11,11 +11,11 @@ rendermancontrols.PNG
 <li> 4. If you are rendering the final short, make sure your image size is set to HD 1080. If you are not rendering your final short, you can use HD720 or HD540 to submit some tests. </li>
 
 HEADING MEDIUM: SAMPLING AND DENOISING
-sampling.PNG
+sampling.png
 
 For sampling, everyone's shorts will probably have different values. Submit some test renders to figure out what the best sampling rate for your short is. Start at 16 samples, then go up by a factor of 2 (so 32, 64, 128 etc) until you render out something that looks like good enough quality. 16 or 32 samples should be good enough for most of you, especially if you turn on denoising in the features tab as shown below. Note that if you have denoising turned on, you will have two frames rendered out. One of the images will have "_filtered" appended to the end of the file name, and that will be the denoised image. It won't add to your render time so you should definitely make sure you have it set. 
 
-denoise.PNG
+denoise.png
 
 HEADING LARGE: RENDERING USING TRACTOR
 
@@ -113,10 +113,10 @@ HEADING MEDIUM: SUBMITTING A JOB TO GOOGLE CLOUD
 Note: Make sure you don't have any whitespaces in your path. If you do, the render will fail. 
 
 <b>STEP 1:</b> Open up the Zync client app. Open up the file you would like to render. Make sure all of your render settings are correct (You can edit these under RenderMan >> Advanced RenderMan Controls). Under the Zync tab, click on the Zync logo. In both the client app and the Zync Submit window, make sure to log in to your google account that you previously registered with. 
-zync1.PNG
+zync1.png
 
 <b>STEP 2: </b> There ae a variety of settings you can play around with in the Zync Submit window. Below, I will list the settings that I have changed from default or I think are important to note. 
-zync2.PNG
+zync2.png
 	<li> a. Num. Machines refers to the number of computers you will have rendering at the same time. You can put any number you like here, but 50 is the max you can use at once. </li>
 	<li> b. Machine Type is the kind of computer you will use. In the screenshot above, I have it set to the cheapest option, which is the PREEMPTIBLE 16GB one. Feel free to use a more powerful computer if you have a heavy scene, but note that you will burn through your free credits faster. This computer is the one I'm using for CNM renders, so it will definitely be powerful enough for yours. </li>
 	<li> c. Make sure you check "Ignore Missing Plugin Errors". Maya has some weird problems sometimes so this will help us avoid those. </li>
