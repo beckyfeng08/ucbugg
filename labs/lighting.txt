@@ -328,7 +328,7 @@ Step 3: Create an rect light and put it on the window. Scale, rotate, and positi
 - Change its exposure to 1.5-2. It’s barely an effect, but it’s certainly there.
 
 Step 4: Create an rect light and match it to the television’s position and size. Make sure it’s pointing at Malcolm.
-- Change the light’s exposure to 7.
+- Change the light’s exposure to .7 - 1.
 - Scroll down in the attribute editor until you reach light filters tab. Create a barndoor for the light. We’re going to add barndoors to really emphasize the fact that the light is coming from a small source (the television).
 - Change the barndoor parameters to these:
 Top: 105. Bottom: 95. Left: 100. Right: 100.
