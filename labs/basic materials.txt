@@ -16,23 +16,15 @@ plugin.png
 
 HEADING LARGE: SET THE SCENE
 A crucial part of shading is determining how your object interacts with light. As a result, you ought to design your shaders under similar lighting conditions that you’ll have in your short. At the very least, you’ll want a light source to see reflections.
-To start, you’ll want to create an environment light by going to your preset browser, which you can find in your “Renderman” tab.
+To start, you’ll want to create an environment light by clicking the icon shown below in the Renderman tab OR go to the Renderman menu->Lights->PxrDomeLight 
 
-preset.png
+light.png
 
-The following window should pop up shortly:
+Using the attribute editor, you can assign an image file to change the color, intensity, and direction of the light. The link below contains a simple 3-point lighting setup which is useful for developing many different materials. Import the file to the scene you're using to test materials.
 
-presetwindow.png
+FILE: Env_Three_Point_Lighting.ma
 
-Here, you can access all Renderman presets for materials and lights. To set up our scene, we’ll want to use the <b>Three Point</b> environment, which you can access under “Light Rigs”.
-
-If you hold down right-click on your desired preset, you will be able to import this into your scene. Once you do so, it will also show up in your outliner accordingly.
-
-importlight.png
-
-outliner.png
-
-Using the attribute editor, you can assign an image file to change the color, intensity, and direction of the light. For transparent objects, add a plane to act as the ground. This helps you understand your object’s shadow and how it distorts light travelling through it. 
+For transparent objects, add a plane to act as the ground. This helps you understand your object’s shadow and how it distorts light travelling through it. 
 
 HEADING LARGE: MATERIALS
 Now that we’ve set the scene, we’ll start assigning materials to our object.
