@@ -3,7 +3,7 @@ HEADING LARGE: RENDER SETTINGS
 Here is a quick breakdown on the different render settings you can play around with. Go to "RenderMan >> Advanced RenderMan Controls"
 
 HEADING MEDIUM: COMMON RENDERMAN SETTINGS
-rendermancontrols.png
+rendermancontrols.PNG
 
 <li> 1. First, you want to make sure your image format is set to OpenEXR. Then, you should set your Frame/Animation ext to "name#.ext" so that you can render out more than one frame. Frame padding should be 4. </li>
 <li> 2. Set your frame range to what you want to render out. </li>
