@@ -1,3 +1,4 @@
+:q
 <<<<<<< HEAD:labs/advanced rigging 1.txt
 HEADING LARGE: INTRODUCTION
 
