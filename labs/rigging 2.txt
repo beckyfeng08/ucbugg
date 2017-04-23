@@ -229,7 +229,10 @@ Now that we have a better grasp on how to manipulate out skeleton, we're going t
 
 skinning3.jpg
 
-If it doesn't, change it so it does. This guide will help you refine your skinning but also provides explanations for each of these options.
+If it doesn't, change it so it does.
+
+http://ucbugg.com/static/index.html#labsskinning
+This guide will help you refine your skinning but also provides explanations for each of these options.
 Click "Bind Skin" and start playing with your rig to discover why refining your skinning is important.
 
 dent.png
@@ -241,7 +244,10 @@ neck.png
 
 Moving the head around will reveal some weird neck stretching.
 
-Not quite what we're hoping for. In all of these cases, joints are effecting more of the mesh than they ought to. Luckily, we have tools that allow us to be more specific with how much mesh each joint controls. Unluckily, the process can be a bit tedious. The time invested in good skinning will certainly pay off and keep your characters from going noodly. Check out this guide on refining a character's skin weights. Use this guide to make the characters for your short a bit more easy to animate.
+Not quite what we're hoping for. In all of these cases, joints are effecting more of the mesh than they ought to. Luckily, we have tools that allow us to be more specific with how much mesh each joint controls. Unluckily, the process can be a bit tedious. The time invested in good skinning will certainly pay off and keep your characters from going noodly.
+
+http://ucbugg.com/static/index.html#labsskinning
+Check out this guide on refining a character's skin weights. Use this guide to make the characters for your short a bit more easy to animate.
 
 Double check to make sure everything was frozen properly and all your new controllers have names which help convey their location and purpose.
 We will NOT require that you refine the skinning on the fox. You're welcome to try for practice but even with the techniques described in the lab above, skinning a low-poly character can be very difficult. We'd prefer if you invested that time into improving the rigs/skinning of the characters in your animation. Submit your completed fox rig to homework@ucbugg.com.

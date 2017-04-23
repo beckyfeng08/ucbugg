@@ -2,7 +2,7 @@
 HEADING LARGE: INTRODUCTION
 Homework for this week can be found at the end of the page. Acquaint yourself with materials and their attributes before attempting the assignment.
 
-HEADING LARGE: INSTALLING RENDERMAN
+HEADING MEDIUM: INSTALLING RENDERMAN
 
 https://renderman.pixar.com/view/non-commercial-renderman
 
@@ -16,45 +16,65 @@ plugin.png
 
 HEADING LARGE: SET THE SCENE
 A crucial part of shading is determining how your object interacts with light. As a result, you ought to design your shaders under similar lighting conditions that you’ll have in your short. At the very least, you’ll want a light source to see reflections.
-To start, you’ll want to create an environment light by clicking the icon shown below in the Renderman tab OR go to the Renderman menu->RMS Lights->Pxr Standard Env Map Light 
+To start, you’ll want to create an environment light by going to your preset browser, which you can find in your “Renderman” tab.
 
-light.png
+preset.png
 
-Using the attribute editor, you can assign an image file to change the color, intensity, and direction of the light. The link below contains a simple 3-point lighting setup which is useful for developing many different materials. Import the file to the scene you're using to test materials.
+The following window should pop up shortly:
 
-FILE: Env_Three_Point_Lighting.ma
+presetwindow.png
 
-For transparent objects, add a plane to act as the ground. This helps you understand your object’s shadow and how it distorts light travelling through it. 
+Here, you can access all Renderman presets for materials and lights. To set up our scene, we’ll want to use the <b>Three Point</b> environment, which you can access under “Light Rigs”.
+
+If you hold down right-click on your desired preset, you will be able to import this into your scene. Once you do so, it will also show up in your outliner accordingly.
+
+importlight.png
+
+outliner.png
+
+Using the attribute editor, you can assign an image file to change the color, intensity, and direction of the light. For transparent objects, add a plane to act as the ground. This helps you understand your object’s shadow and how it distorts light travelling through it. 
 
 HEADING LARGE: MATERIALS
-Now that we’ve set the scene, we’ll start assigning materials to our object. Select your object in object mode and right click. Navigate down to Assign New Material. Use the search box (image) to narrow down to Renderman RIS materials which all start with “pxr.” It’s important that you limit yourself to these materials as they are designed to work best with our renderer and will be compatible with the lights we teach you later in the course.
+Now that we’ve set the scene, we’ll start assigning materials to our object.
+There are two ways to add a material to your object.
 
-pxr.png
+Select your object in object mode and right click. Navigate down to Assign New Material. Use the search box (image) to narrow down to Renderman RIS materials which all start with “pxr.” It’s important that you limit yourself to these materials as they are designed to work best with our renderer and will be compatible with the lights we teach you later in the course.
+
+pxr21.png
+
 
 From this menu, you have several choices for your material.
 <b>PxrDisney</b> – this is your Swiss army knife – PxrDisney can do most jobs you need it for and can be used almost any solid, opaque material.
 <b>PxrLMMetal</b> – this will give you a little more control over the metal and allows you to make more convincing replicas of real metals like gold and copper
 <b>PxrLMGlass</b> – this should be your go-to for transparent materials
 <b>PxrLMSubsurface</b> – Used for materials where light scatters below the surface of a material. Good for materials like skin and wax.
+Ultimately, the one that might be most convenient for you to use is the <b>PxrSurface</b> material, which can achieve most of the effects of the other materials listed above with a bit of tweaking to its attributes. PxrSurface also has the ability to layer different materials or textures.
+
+Another convenient way to add a material to your object is to navigate to your Renderman tab, and click on the circle icon with the star. This, by default, will add a PxrSurface material to your object.
+
+pxrsurface.png
 
 These should cover most of your material needs for your short.
 
 Objects can use multiple materials by assigning materials to groups of faces. Note that you cannot assign multiple materials to the same face however.
 
 Once the material is applied, it will appear in the object’s attribute editor (usually the last tab in the list). If your object has a long history, it may be hard to hunt down. Alternatively, right click your object and click “material attributes” to jump straight to the material in the attribute editor.
-Test Rendering
+
+HEADING MEDIUM: TEST RENDERING
 To see what your material will look like in your completed short, we need to render it. Rendering simulates the lighting in your scene and produces and image. To render, go to Renderman -> Render. This will open the program IT. IT will slowly fill in detail as it makes more and more calculations. You can set what camera you render from in "Renderman->Renderman Globals..." You can also adjust the image resolution from the global options. We'll go more in depth on rendering in the next few weeks.
 
 If you're making small changes to your material, you can use Renderman -> IPR Render. IPR Render will update your material changes on the fly so you don't have to stop and re-render each time.
 
 
 HEADING LARGE: EDITING MATERIAL ATTRIBUTES
+http://ucbugg.com/static/index.html#labsshadingguide
+
 Follow this link to a guide on material attributes. Scroll down to “Common Material Properties” for explanations on what some of the options and sliders do in the attribute editor. Understanding these attributes, particularly specular and roughness, will be crucial for this assignment and your animation. For now, don't worry about the section discussing hypershade.
 
-Textures and Patterns
+HEADING MEDIUM: TEXTURES AND PATTERNS
 Finally, we want to discuss maps and textures. Instead of assigning a single value or color to an attribute we can assign an image or fractal. Fractals produce random noise which can help an object look less plastic or artificial. To add a map, click the checkerboard icon beside an attribute.
 
-checkerboard.png
+checkerboard21.png
 
 Maya comes with a lot of pre-built patterns for materials like wood, marble, and rock. Choose one that makes sense for your material.
 
@@ -78,15 +98,11 @@ You can use patterns to change more than just the color of your object. By assig
 
 displacement.png
 
-
-
-
 Remember! After you’ve made your material for your object, delete any additional lights or meshes you used to test it. If you plan on referencing these objects into your scene, they’ll bring the lights along and that can mess things up. 
-
 
 HEADING LARGE: HOMEWORK
 Using the materials you learned above, model and texture a sharpened pencil. You’ll need to include 5 different materials and keep in mind aspects like roughness as well as color.
 
-
 52677.jpg
+
 You don't need to make this exact pencil.
