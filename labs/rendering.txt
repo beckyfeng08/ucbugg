@@ -113,11 +113,11 @@ zync2.png
 
 <b><i>IMPORTANT! IF THIS IS YOUR FIRST TIME SUBMITTING A JOB, PLEASE CALL OVER A FACILITATOR TO CHECK OVER YOUR RENDER SETTINGS BEFORE YOU CONTINUE!!</b></i>
 
-<b> STEP 3: </b> Hit "Launch Job". Go to your zync website to watch the progress of your renders. They should auto-download once they're done but you shouldn't turn off your computer while it is going, otherwise the files might not get downloaded.  
+<b> STEP 3: </b> Hit "Launch Job". Go to <a href='https://instzync1.zync.io'>https://instzync1.zync.io</a> to watch the progress of your renders. They should auto-download once they're done but you shouldn't turn off your computer while it is going, otherwise the files might not get downloaded.  
 
 HEADING SMALL: SETTING UP YOUR OWN ZYNC RENDERING ACCOUNT
 
-Note: Only set this up if you are in desperate need for more renders. Otherwise, the school accounts and tractor should be enough to render your short.
+<b><i>Note: Only set this up if you are in desperate need for more renders. Otherwise, the school accounts and tractor should be enough to render your short.</b></i>
 Please make sure to follow these instructions in the order they are given. Zync is still in beta and if you do this out of order, your project may not get set up correctly and you won't be able to render. 
 
 <b>STEP 1: </b> Go to <a href='https://console.cloud.google.com'> Google Cloud Console </a>. There should be a button on the top right that says "Sign up for free trial" and follow the next instructions. At some point in this registration, it'll ask for your credit card. Don't worry, google cloud isn't like all those other websites that require credit cards and it won't charge you when your trial is over. 
