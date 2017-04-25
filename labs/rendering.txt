@@ -85,7 +85,9 @@ Once you have your render settings set up, please call over a facilitator to mak
 
 <b>STEP 1:</b> Download the Zync client app and the Zync plugin from <a href='https://www.zyncrender.com/downloads/'>here</a>
 
-<b>STEP 2:</b> Start the Zync client app. Click on “Connection Settings” and under Zync Site Address, enter <i>https://instzync1.zync.io</i>. Click “Login With Google” and sign in with your Calnet account (your @berkeley.edu account)
+<b>STEP 2:</b> Start the Zync client app. Click on “Connection Settings” and under Zync Site Address, enter <i>https://instzync1.zync.io</i>. Click “Login With Google” and sign in with your Calnet account (your @berkeley.edu account). This should take you to a page where you need to authorize Zync to access a few things. Afterwards, your window should look like this:
+
+zyncIN.png
 
 <b>STEP 3:</b> Start Maya. If Maya was already opened when you were downloading the client and plugin, please restart the program.
 
