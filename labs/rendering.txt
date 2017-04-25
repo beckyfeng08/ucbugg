@@ -21,7 +21,7 @@ HEADING LARGE: RENDERING USING TRACTOR
 
 HEADING MEDIUM: SETTING UP TRACTOR ON THE LAB MACHINES
 
-Unfortunately, using Tractor on the lab machines causes some security issues for the department. So, in order to use Tractor, there are a couple steps you need to do first so that everyone can use the renderfarm without any security issues. 
+Unfortunately, using Tractor on the lab machines causes some security issues for the department. So, in order to use Tractor, there are a couple steps you need to do first so that everyone can use the render farm without any security issues. 
 
 <b>NOTE:</b> These steps require you to use the terminal. I will try to lay them out as clearly as I can but please do not hesitate to ask a facilitator for help. Don't worry about how many steps there are, this should only take a couple of minutes. 
 
@@ -91,40 +91,51 @@ HEADING LARGE: RENDERING USING GOOGLE CLOUD
 
 HEADING MEDIUM: SETTING UP GOOGLE CLOUD
 
-If you want/need more rendering power, you can use Zync Render, which is on Google Cloud. There are two ways to use this. First, you can sign up for a free trial that will give you $300 credit on each account. However, this requires you to put in your credit card (but don't worry, they won't charge you if you go over your credit!) We also have a setup through the school that gives $100 credit if you do not want to put in any credit card information. First, I'll walk you through setting up your own account, which will give you more autonomy, then I'll walk you through how to use the school account. 
-
-HEADING SMALL: SETTING UP YOUR OWN ZYNC RENDERING ACCOUNT
-
-Note: Please make sure to follow these instructions in the order they are given. Zync is still in beta and if you do this out of order, your project may not get set up correctly and you won't be able to render. 
-<b>STEP 1: </b> Go to <a href="console.cloud.google.com"> Google Cloud Console </a>. There should be a button on the top right that says "Sign up for free trial" and follow the next instructions. At some point in this registration, it'll ask for your credit card. Don't worry, google cloud isn't like all those other websites that require credit cards and it won't charge you when your trial is over. 
-
-<b>STEP 2: </b> Now go to <a href="zyncrender.com"> Zync's website </a> and click register. Create a website (you can name it anything you want) and put in whatever you like for "Your Company Name". Click Next, and then wait for the email confirming your registration. 
-
-<b>STEP 3: </b> Next, click on "Downloads" (or alternatively, <a href ="https://www.zyncrender.com/downloads/" >click here</a>). Download both the client app and the plugin for your OS. Follow the installation instructions for both. 
-
-<b>STEP 4: </b> Open up the client app. Now go to your zync website and login. If you don't have any red bars going across the bottom, you are all set. If you do, click on the bar and follow the instructions to solve the problem. 
+If you want/need more rendering power, you can use Zync Render, which is on Google Cloud. This is a more convenient option over tractor, but there are many issues that may also come with this. 
 
 HEADING SMALL: SETTING UP A ZYNC ACCOUNT THROUGH THE SCHOOL
 
-TODO
+Once you have your render settings set up, please call over a facilitator to make sure that everything looks correct to check you off. They will ask you for your @berkeley.edu e-mail to give you access to the Zync render farm.
+
+<b>STEP 1:</b> Download the Zync client app and the Zync plugin from <a href=“https//:download.zyncrender.com”>here</a>
+
+<b>STEP 2:</b> Start the Zync client app. Click on “Connection Settings” and under Zync Site Address, enter <i>https://instzync1.zync.io</i>. Click “Login With Google” and sign in with your Calnet account (your @berkeley.edu account)
+
+<b>STEP 3:</b> Start Maya. If Maya was already opened when you were downloading the client and plugin, please restart the program.
 
 HEADING MEDIUM: SUBMITTING A JOB TO GOOGLE CLOUD
 
-Note: Make sure you don't have any whitespaces in your path. If you do, the render will fail. 
+Note: Make sure you don't have any whitespaces in your path. If you do, the render will fail. Name your scenes by the following convention:
+<b>GROUPNAME_SCENE#OF#_DESCRIPTION</b>, i.e. “THEONLYSTAR_SCENE2OF17_LOOKINGATSKY” instead of “THE ONLY STAR - SCENE 2 OF 17 - LOOKING AT SKY”
 
-<b>STEP 1:</b> Open up the Zync client app. Open up the file you would like to render. Make sure all of your render settings are correct (You can edit these under RenderMan >> Advanced RenderMan Controls). Under the Zync tab, click on the Zync logo. In both the client app and the Zync Submit window, make sure to log in to your google account that you previously registered with. 
+<b>STEP 1:</b> Open up the Zync client app. Open up the file you would like to render. Make sure all of your render settings are correct (You can edit these under RenderMan >> Advanced RenderMan Controls). Under the Zync tab in your menu bar in Maya, click on the Zync logo. In both the client app and the Zync Submit window, make sure to log in to your google account that you previously registered with. 
 zync1.png
 
-<b>STEP 2: </b> There ae a variety of settings you can play around with in the Zync Submit window. Below, I will list the settings that I have changed from default or I think are important to note. 
+<b>STEP 2: </b> There are a variety of settings you can play around with in the Zync Submit window. Below, I will list the settings that I have changed from default or I think are important to note. 
 zync2.png
-	<li> a. Num. Machines refers to the number of computers you will have rendering at the same time. You can put any number you like here, but 50 is the max you can use at once. </li>
-	<li> b. Machine Type is the kind of computer you will use. In the screenshot above, I have it set to the cheapest option, which is the PREEMPTIBLE 16GB one. Feel free to use a more powerful computer if you have a heavy scene, but note that you will burn through your free credits faster. This computer is the one I'm using for CNM renders, so it will definitely be powerful enough for yours. </li>
-	<li> c. Make sure you check "Ignore Missing Plugin Errors". Maya has some weird problems sometimes so this will help us avoid those. </li>
-	<li> d. Project folder and output directory show where it is taking all the files from as well as where it will send the renders. Make sure that there is no whitespace in either of these, otherwise your render might fail. Don't just change the name in this line though. You have to actually change the file path. </li>
-	<li> e. Renderer should be set to Renderman. </li>
-	<li> f. Frame range should carry over from your render settings but it's still good to double check that you are rendering the correct frames. </li>
-	<li> g. Chunk size refers to how many frames Zync will give one machine. You should set this to 1 to get more done in less time. </li>
-	<li> h. If you have more render layers than default, select them here. Otherwise, just select "defaultRenderLayer". </li>
-	<li> i. You resolution should also carry through from your render settings. For your final short, you should be rendering in 1920x1080 but other resolutions are fine for testing purposes. </li>
+	<li> a. <b>Num. Machines</b> refers to the number of computers you will have rendering at the same time. You can put any number you like here, but 50 is the max you can use at once. </li>
+	<li> b. <b>Machine Type</b> is the kind of computer you will use. In the screenshot above, I have it set to the cheapest option, which is the PREEMPTIBLE 16GB one. </li>
+	<li> c. Make sure you check <b>“Ignore Missing Plugin Errors”</b>. Maya has some weird problems sometimes so this will help us avoid those. </li>
+	<li> d. <b>Project folder</b> and <b>output directory</b> show where it is taking all the files from as well as where it will send the renders. Make sure that there is no whitespace in either of these, otherwise your render might fail. Don't just change the name in this line though. You have to actually change the file path. </li>
+	<li> e. <b>Renderer</b> should be set to Renderman. </li>
+	<li> f. <b>Frame range</b> should carry over from your render settings but it's still good to double check that you are rendering the correct frames. </li>
+	<li> g. <b>Chunk size</b> refers to how many frames Zync will give one machine. You should set this to 1 to get more done in less time. </li>
+	<li> h. If you have more render layers than default, select them here. Otherwise, just select <b>“defaultRenderLayer”</b>. </li>
+	<li> i. Your <b>resolution</b> should also carry through from your render settings. For your final short, you should be rendering in 1920x1080 (Full HD) but other resolutions are fine for testing purposes. </li>
+
+<b><i>IMPORTANT! IF THIS IS YOUR FIRST TIME SUBMITTING A JOB, PLEASE CALL OVER A FACILITATOR TO CHECK OVER YOUR RENDER SETTINGS BEFORE YOU CONTINUE!!</b></i>
 
 <b> STEP 3: </b> Hit "Launch Job". Go to your zync website to watch the progress of your renders. They should auto-download once they're done but you shouldn't turn off your computer while it is going, otherwise the files might not get downloaded.  
+
+HEADING SMALL: SETTING UP YOUR OWN ZYNC RENDERING ACCOUNT
+
+Note: Only set this up if you are in desperate need for more renders. Otherwise, the school accounts and tractor should be enough to render your short.
+Please make sure to follow these instructions in the order they are given. Zync is still in beta and if you do this out of order, your project may not get set up correctly and you won't be able to render. 
+
+<b>STEP 1: </b> Go to <a href=“https://console.cloud.google.com"> Google Cloud Console </a>. There should be a button on the top right that says "Sign up for free trial" and follow the next instructions. At some point in this registration, it'll ask for your credit card. Don't worry, google cloud isn't like all those other websites that require credit cards and it won't charge you when your trial is over. 
+
+<b>STEP 2: </b> Now go to <a href=“https://zyncrender.com"> Zync's website </a> and click register. Create a website (you can name it anything you want) and put in whatever you like for "Your Company Name". Click Next, and then wait for the email confirming your registration. 
+
+<b>STEP 3: </b> Next, click on "Downloads" (or alternatively, <a href ="https://www.zyncrender.com/downloads/">click here</a>). Download both the client app and the plugin for your OS. Follow the installation instructions for both. 
+
+<b>STEP 4: </b> Open up the client app. Now go to your zync website and login. If you don't have any red bars going across the bottom, you are all set. If you do, click on the bar and follow the instructions to solve the problem. 
