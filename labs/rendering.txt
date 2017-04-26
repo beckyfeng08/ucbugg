@@ -81,7 +81,7 @@ If you want/need more rendering power, you can use Zync Render, which is on Goog
 
 HEADING SMALL: SETTING UP A ZYNC ACCOUNT THROUGH THE SCHOOL
 
-Once you have your render settings set up, please call over a facilitator to make sure that everything looks correct to check you off. They will ask you for your @berkeley.edu e-mail to give you access to the Zync render farm.
+<b>IMPORTANT: Once you have your render settings set up, please call over a facilitator to make sure that everything looks correct to check you off. They will ask you for your @berkeley.edu e-mail to give you access to the Zync render farm.</b<
 
 <b>STEP 1:</b> Download the Zync client app and the Zync plugin from <a href='https://www.zyncrender.com/downloads/'>here</a>
 
