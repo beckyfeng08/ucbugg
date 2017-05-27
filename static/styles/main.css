@@ -320,6 +320,7 @@ img.contact-icon {
 	margin-top: 10vw;
 	background: #ffccbb;
 	border-radius: 30px;
+	padding: 1px;
 }
 img.contact-icon:hover {
 	background: #d4eefc;
