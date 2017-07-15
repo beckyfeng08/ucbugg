@@ -1,5 +1,3 @@
-:q
-<<<<<<< HEAD:labs/advanced rigging 1.txt
 HEADING LARGE: INTRODUCTION
 
 Before following along with this lab, you should complete the basic rigging lab, which walks through the process of creating a skeleton for a fox and placing the ik handles. This is effectively part 2 of that lab, but as opposed to the advanced rigging lab, this one will rig the fox in a much more advanced way.
