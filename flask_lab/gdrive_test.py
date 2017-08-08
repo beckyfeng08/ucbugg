@@ -2,7 +2,13 @@
 
 from __future__ import print_function
 
-# obviously some imports are missing
+# some imports might still be missing
+import os
+import httplib2
+
+from oauth2client.file import Storage
+from apiclient.discovery import build
+from oauth2client.client import OAuth2WebServerFlow
 
 # should point to flask lab test in auto labs in website admin
 file_id = '1QMbV7A0iyms41ItPRGeYzjqnMAdmvkj0tGBGIWsY6tM'
