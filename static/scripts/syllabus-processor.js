@@ -113,7 +113,7 @@ var updateContent = function() {
 		$(".submit-button").css('color', '#fcfcfd');
 		$("#submit"+collapseDate(activeDate)).css('background-color', "#62aaee");
 		$("#submit"+collapseDate(activeDate)).css('font-weight', "bold");
-		$("#submit"+collapseDate(activeDate)).attr('href', data[activeDate]['Submit Link']);
+		$("#submit"+collapseDate(activeDate)).attr('href', 'mailto:homework@ucbugg.com');//data[activeDate]['Submit Link']);
 		// $("#due-dates" + collapseDate(activeDate)).css('color', "#212122");
 		// $("#tues" + collapseDate(activeDate)).children().css('color', "#f1f1f2");
 		// setInfo(activeDate);
