@@ -28,7 +28,7 @@ allLabs = {
 		"araknid": []
 	},
 	"effects": {
-		"bugg": ["bifrost", "fluids", "cloth"],
+		"bugg": ["bifrost", "fluids", "cloth", "paint effects"],
 		"araknid": []
 	},
 	"post-production":  {
