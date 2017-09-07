@@ -60,5 +60,6 @@ labLookup = {
 	"characteranimation": "character animation",
 	"basicmaterials": "basic materials",
 	"uvmapping": "uv mapping",
-	"shadingguide": "shading guide"
+	"shadingguide": "shading guide",
+	"painteffects": "paint effects"
 }
