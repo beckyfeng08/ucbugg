@@ -1,4 +1,4 @@
-HEADING LARGE: Introduction
+HEADING LARGE: INTRODUCTION
 
 Welcome to the Paint Effects Lab!
 
@@ -7,7 +7,7 @@ Paint effects are a handy library of built in geometry-creation algorithms in Ma
 In this lab, we’ll be creating and shading a paint effects tree for use with Renderman. The skills used here can be applied to any other paint effects object. 
 
 
-HEADING LARGE: Creating The Tree
+HEADING LARGE: CREATING THE TREE
 
 Open up a fresh scene in Maya, and create a grid-sized plane. Here, I’ve added some bumpiness to make it terrain-like, just for demonstration purposes. 
 
@@ -39,7 +39,7 @@ pfx07.png
 
 However, if we render using Renderman, we will find that the tree shows up grey. This is because the shaders assigned to the tree are built-in Maya shaders. In the next section, we will shade our tree using Renderman.
 
-HEADING LARGE: Shading the Tree
+HEADING LARGE: SHADING THE TREE
 
 Before we create our Renderman shaders, let’s go over the options here. If you would like to shade the tree using your own textures, that is perfectly fine. However, in this tutorial, I will use the built-in paint effects textures so that my rendered tree looks like the one I just created. Frankly, it’s much easier this way since the textures are already pre-matched to the object’s UV coordinates.
 
