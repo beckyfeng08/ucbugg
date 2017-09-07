@@ -3,6 +3,8 @@ As stated in lecture, the way you can break down what storyboarding is is simply
 
 Storyboarding is very helpful in terms of planning out how your final film is going to look, when the camera cuts are going to occur, how the characters should act. It is not only used in 3D animation, but also in live action films. Overall, storyboarding is extremely helpful when you have a tight schedule to finish your film.
 
+<b>THINK ABOUT STAKES, VULNERABILITY, AND PASSION!</b> Your staging and acting definitely affects how your audience perceives what these things are within your story, so make sure to use them to your advantage!
+
 The way this section will be structured is that in this first part, we will be talking about staging, and in the second part, acting. These are mostly going to be bullet point-esque notes that I’ve found useful in thinking about how to make the most of my storyboards for the story. So, let’s begin.
 
 HEADING MEDIUM: Staging (AKA Camera)
@@ -40,11 +42,11 @@ Staging and acting go hand-in-hand. You wouldn’t necessarily have a close up s
 HEADING MEDIUM: GOOD RESOURCES TO LEARN MORE ABOUT STORYBOARDING
 These were all recommended to me by professional storyboard artists, and are ultimately very great resources to follow.
 
-http://tobyshelton.blogspot.com/ - Toby Shelton is a storyboard artist who has worked at Disney, DreamWorks, and more. You can see a lot of his work on feature films here.
+<b>http://tobyshelton.blogspot.com/</b> - Toby Shelton is a storyboard artist who has worked at Disney, DreamWorks, and more. You can see a lot of his work on feature films here.
 
-http://sevencamels.blogspot.com/ - Recommended by many storyboard artists. Wonderful info and analysis on story
+<b>http://sevencamels.blogspot.com/</b> - Recommended by many storyboard artists. Wonderful info and analysis on story
 
-http://floobynooby.com/comp1.html - Goes into depth on the process of storyboarding. Great foundation topics and pointers.
+<b>http://floobynooby.com/comp1.html</b> - Goes into depth on the process of storyboarding. Great foundation topics and pointers.
 
 
 HEADING LARGE: PITCHING
@@ -59,4 +61,50 @@ Pitching is definitely one of the hardest parts that comes with storyboarding. Y
 - Practice with your storyboards and make sure the boards are clear and concise and don’t conflict with your verbal pitch
 
 HEADING MEDIUM: GREAT EXAMPLE OF PITCHING WITH STORYBOARDS
-https://vimeo.com/151242159 - Eric Goldberg is known best for his work at Disney and Warner Bros. In this video, he pitches an unproduced 1947 Donald Duck storyboard.
+<b>https://vimeo.com/151242159</b> - Eric Goldberg is known best for his work at Disney and Warner Bros. In this video, he pitches an unproduced 1947 Donald Duck storyboard.
+
+
+HEADING LARGE: VISUAL DEVELOPMENT
+We use the term ‘visual development’ to encompass all parts of design within story. It is a broad term, and it determines how the visual look of your final film will turn out. Where storyboarding plans out the stage and framing, visual development plans out the aesthetic.
+
+In general, vis dev artists like to see and reference art in any setting - whether it be from art books/museums/more. Referencing traditional art and analyzing how and why it is effective is going to be very very very very useful.
+
+HEADING MEDIUM: STYLE
+Don’t just pick any style that looks “cool”; style matters because you are building the world your characters are going to live in, and every choice should have a reason behind it. What is the entire look or feel of the short you are going for, and how does it underline the message of your story?
+
+Having good references helps define what you are going for, which will give the audience a clearer idea of what the world is and who the characters are.
+
+concept.png
+
+Here is a great resource to look at concept art:
+<b>https://characterdesignreferences.com/art-of-animation/</b>
+
+HEADING MEDIUM:CHARACTER DESIGN
+As you are thinking about your protagonist, the main question you want to have in mind is <b>”Who is your character, and how can their personality be visually explained?”</b>
+
+For example, if your character likes to pick fights, perhaps their hands would be more rugged or exaggeratedly large.
+
+char.png
+
+Ideally, write down the traits of your protagonist(s) - they need to have good characteristics that make them likeable. They also need flaws to make them relatable and clearly imperfect, since perfect people don’t have problems and are generally very boring.
+
+For example, let’s look at Poppy, the protagonist in DreamWork’s <i>Trolls</i>
+
+Poppy-1.png
+
+She is a very happy character, but her constant optimism and lighthearted take on the world eventually causes her downfall. Her likeability comes with having many friends - because she builds many friendships with the Trolls around her, you want to be friends with her as well. You root for her to succeed in the story because she is likeable, optimistic, and cares for the Trolls around her. She has a certain appeal to her, and her colors are extremely bright. Her flower crown indicates that she must be of royalty, and she is arguably the cutest character of all the Trolls in her village.
+
+Now, let’s look at Carl Frederickson, the protagonist in Pixar’s <i>UP</i>
+
+carl.png
+
+Clearly, he has many flaws - he’s old, cranky, and close-minded. But you sympathize with him because of Ellie’s death, and the montage at the beginning of the movie establishes that he is capable of fun and happiness. The beginning montage of <i>UP>/i> is absolutely brilliant in that it establishes why you should care for this character, despite that he is negative and guarded for much of the rest of the movie. The audience feels that they understand Carl because of this, and thus they root for his success. His box-like face not only symbolizes his reliability, but it also represents the cage of sadness he is trapped in after losing Ellie.
+
+HEADING MEDIUM: COLOR AND LIGHTING
+Think about the world you want to build. What is the message you are trying to send to your audience, and how can it be most effectively communicated? Is the moral of your story something that is bitter? Unhappy? Fun? Serious? What are the colors that come to mind when you think of these moods?
+
+Here are some fun websites to check out if you want to set a color palette for your short:
+<b>https://coolors.co/</b> - Make swatches or load your moodboard images into websites that will generate a color palette for you
+<b>http://www.color-hex.com/color-palettes/</b> - Generate color palettes based on keywords
+
+palette.png
