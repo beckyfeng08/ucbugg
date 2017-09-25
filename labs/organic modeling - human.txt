@@ -1,0 +1,278 @@
+HEADING LARGE: INTRODUCTION
+
+Alright, so you’ve decided to include a human character in your short. I will be introducing a new tool called Quad Draw that I find is super helpful to insure that your human character has the proper topology and edge flow for animation. Let’s get started.
+
+HEADING LARGE: SCULPTING
+
+The first thing we are going to do is start with a basic sphere. Give yourself enough edge loops so that you have a decent amount of resolution to work with. My sphere is set to have 48 Axis and Height divisions.
+
+image1.png
+
+Once you have created your sphere, we are going to roughly shape it into the head and neck of a human. You can do this however you like, but I find that the easiest way to do this is with the Sculpting tools. Here is a brief explanation of what the first four tools in the palette do.
+
+image2.png
+
+<b>SCULPT</b>
+Pulls up on the surface, or pushes in when inverted. This is very useful for defining shape in your character. Make sure to adjust the Strength of this tool by double-clicking it to open up the tool options as the default strength for this tool tends to be too high for most models.
+
+<b>SMOOTH</b>
+Smooth will make the topology of your mesh spread out more evenly as you draw over vertices. You can access the Smooth tool while you are using any sculpting tool by holding down the Shift key.
+
+<b>RELAX</b>
+Relax is very similar to smooth, but it will attempt to retain the shape of your model while spreading out your vertices.
+
+<b>GRAB</b>
+Grab lets you move whatever vertices fall underneath your brush. If you use this tool with a big radius, you can adjust the size and proportions of your mesh quickly. This is the tool I recommend using to block out your shape later.
+
+There are way more tools than just these 4, and I suggest you experiment with them, but these are the most important ones and are pretty much all you need to start making your character.
+
+image3.png
+
+Now that you know what all these tools do, let’s get started making something. I’m going to walk you through how to sculpt a human head. Before we start sculpting, 
+make sure to turn on X Symmetry by double clicking the Grab Tool and finding the Symmetry settings and setting your symmetry to Object-X.
+
+image4.png
+
+Now without caring about the current topology, I am going to push this sphere into a really really rough shape of the human head by using the grab tool and pulling down on the mesh to give a rough shoulder shape. I want to emphasize that you shouldn’t spend too long trying to get this perfect as this won’t be our final mesh. We will only be using it as a reference in the future. This will make more sense once we reach the Quad Draw Tool.
+
+image5.png
+
+image6.png
+
+Make sure to include some really rough indents where the eyes should be. I use the grab tool once again to pull out where the character’s nose should be and doing the opposite for the eyes. Make sure to pull out a chin and give your character a bit of a jawline. It’s useful to load up a picture of your character sheets as reference to get the correct shape.
+
+HEADING LARGE: QUAD DRAW
+
+Once you’ve shaped your sphere into a rather blobby looking human head shape, we are going to start building the actual mesh that you are going to use. The reason we need to do this is because the head blob that we just created doesn’t have anywhere near the correct edge flow that will allow us to easily animate it later. We are going to retopologize our mesh with the Quad Draw Tool. Quad Draw is a really cool feature that Maya has that lets you use another model as a reference for you to draw your topology on top of. This is a commonly used industry practice that allows artists to create their models without having to focus on the technical details of edge flow and topology until the end after all the creative parts are out of the way! 
+
+image7.png
+
+The first thing we need to do is make sure we let Maya know which file we are going to be using as our reference. Select your head blob and find the button at the top of the Maya tool shelf that looks like a Magnet that says “Make Live”. Push this button and it should switch from displaying “No Live Surface” to whatever the name of your mesh is.
+
+Alright, now before we get excited and start dropping points anywhere, let’s take a look at what our topology should look like. Head over to this link and take a look at the picture of the flattened out face. Pay attention to where the thick black circles are. These are called 5-poles where 5 edges intersect. They are placed at specific points to allow for a wide range of movement at those points. This website also has really nice videos that explain more about the theory behind the topology.
+
+http://hippydrome.com/MeshDesignFace.html
+
+Ok, let’s start dropping our points onto the mesh. Select the Quad Draw tool from the Mesh Tools drop down. Now if you click anywhere on your mesh, you should see a couple of green dots appear (If only one dot appears, your symmetry got turned off. Go back into your selection tool and turn Symmetry back to Object-X)
+
+We are going to start with the eyes. Make a ring of points around the indents where the eyes should go. There should be the same number of points on the top half as the bottom half (I used 5 points for the top eyelid, and 5 for the bottom eyelid).
+
+Now we are going to repeat this process and create another ring of points around the ones you just made (Use the exact same number of points that you used in the previous step)
+
+Now for some magic. Hold down the shift key and hover your mouse somewhere between 4 points. You should see a blue square appear. Click to place this quad between your 4 points and you should get something like this.
+
+image8.png
+
+image9.png
+
+Keep shift-clicking between your dots until all of the dots are gone and we have a nice blue ring of quads where the eyes should be.
+
+Now I’m going to add in the eyelids and bridge of the nose to connect the two rings. Copy the placement of my dots and fill them in with quads so you get something like this.
+
+image10.png
+
+If you feel like you need more edge loops to get something like this, fear not. Just hold down the Ctrl key and you should see green edge-loops appear when you hover over areas of your mesh. You can add in edge loops just with a couple of keypresses and a mouse click!
+
+Now I’m going to add more quads to the nose area like so and also add some quads to the side of the eyes so it looks like he’s wearing goggles.
+
+image11.png
+
+Now from those quads that are sticking out from the eyes, let’s create a ring all the way around the head and connect them to each other at the back.
+
+image12.png
+
+Now that we have the base for our eyes and nose, let’s move on to creating the mouth and we will connect the pieces together later. Repeat the same process you used to create the eye rings but this time only create one ring around the mouth of your character. Just like you did for the eyes.
+
+image13.png
+
+Now we are going to connect our nose to our mouth. Add in these dots as shown here and complete the quad.
+
+image14.png
+
+Now let’s extend this to make a complete circle around the model’s chin.
+
+image15.png
+
+Continue with another ring
+
+image16.png
+
+Now I completely cover up the nose by adding quads down to the mouth.
+
+image17.png
+
+image18.png
+
+Connect the mesh to the mouth. 
+
+image19.png
+
+image20.png
+
+Note that I had to add some edge loops to the bottom lip to make it connect evenly. Let’s add in edge loops to the top lip so that the number of points on the top lip are equal to the number on the bottom.
+
+image21.png
+
+Now I’m going to fill in the mouth.
+
+image22.png
+
+Notice how similar this is to the eyes from the start!
+
+Now I’m adding in quads that go around the eyes and that connect at the middle of the forehead.
+
+image23.png
+
+image24.png
+
+image25.png
+
+Now keep adding in more quads to bridge the gap between the eyes and the mouth.
+
+image26.png
+
+Keep filling in quads down the side of the face and connect them below the chin.
+
+image27.png
+
+image28.png
+
+Add more quads down the side of the face. 
+
+image29.png
+
+image30.png
+
+Start connecting it together at the back.
+
+image31.png
+
+Now fill in the top of the head and our head is complete! Notice I’ve also extended the loops all the way down along the neck as well.
+
+image32.png
+
+I’m going to close the holes for the eyes and mouth.
+
+image33.png
+
+Alright, we’re done with quad draw. Click on the magnet icon so that there is no longer a Live Object. Exit out of the Quad Draw tool and hide the mesh that you sculpted. This should leave you only with the mesh you drew with Quad Draw.
+
+image34.png
+
+Grab the bottom edge of your mesh and extrude down a few times to create the upper torso.
+
+image35.png
+
+image36.png
+
+Now grab faces where your character’s shoulders should be and extrude out. Notice that symmetry is still on (turn it on if it somehow got turned off).
+
+image37.png
+
+Add in an edgeloop here.
+
+image38.png
+
+image39.png
+
+Grab these faces (I had to move my edgeloop in towards the neck before I grabbed these) and extrude down.
+
+image40.png
+
+image41.png
+
+I’ve moved the faces out so that they are at an angle to the body and then I’ve extruded one more time. I scaled the face a bit to get it to be closer to an arm shape. I’ve also gone and adjusted some of my verts so that his shoulders and chest are slightly bigger.
+
+image42.png
+
+I’ve extruded the torso a bit more to be at about the same height as the wrists.
+
+image43.png
+
+image44.png
+
+Adding in more edge loops to the front of the torso and to the arms.
+
+I’m going to keep adjusting some verts. Let’s leave off modeling the hands for later. Let’s give him some legs to stand on now. 
+
+image45.png
+
+Use the Append to Poly tool to fill in the hole beneath him.
+
+image46.png
+
+Now use the Multi-Cut Tool to connect everything together. (Maya crashed here and I lost a ton of work so I had to redo a bunch of stuff so my model is slightly differently shaped but we’re going to ignore that).
+
+image47.png
+
+Grab faces along the bottom of the mesh like this and then extrude down.
+
+image48.png
+
+Add a bunch of edgeloops evenly spaced along the length of the legs. I would do some sculpting with the Grab tool again to make the legs less stick-like.
+
+image49.png
+
+You should get something like this.
+
+image50.png
+
+Grab those Faces where his feet should be and extrude out!
+
+image51.png
+
+I added some edgeloops to the feet and adjusted verts.
+
+You’re probably going to have to move a bunch of vertices around on your model. At this point, your model should have everything modeled except the hands. I would take this time to shape your model to match your Character Sheets as closely as possible. Add in edgeloops as needed to get more detail. Since I’m not using a character sheet I’m just going to adjust my model’s body a bit.
+
+image52.png
+
+image53.png
+
+Now for the hands I’ll be grabbing faces like these, and extruding 4 fingers.
+
+image54.png
+
+image55.png
+
+image56.png
+
+image57.png
+
+image58.png
+
+image59.png
+
+Now for the thumb, select faces here and extrude twice. Now that you have the fingers blocked out, go back and add in edgeloops along the length of all of your fingers.
+
+image60.png
+
+With some minimal adjustment of verts, we have a hand!
+
+Now let’s finish off some details in the face.
+
+image61.png
+
+Extrude the mouth in a couple of times to get a nice cavity.
+
+image62.png
+
+Grab these faces and extrude in to get your nostrils.
+
+
+image63.png
+
+Finally, extrude the eyes for some eye sockets.
+ 
+image64.png
+
+image65.png
+
+Alright you now have a water-tight base mesh for your human character. Now, your character is probably pretty misshapen right now (so is mine), but you now have the proper topology to sculpt your character. You can now use your sculpt tools on your mesh to push stuff around until it fits your character sheets.
+
+image66.png
+
+With a ton of sculpting your model can end up looking like this! Please note the topology on the model: keep in mind that you should have at least 3 edge loops at the joint area, and less concentrated edge loops where there are no joints. This is <b>SUPER</b> important for rigging and skinning, where one edge loop should NOT dictate your rig.
+
+Please submit a less rough version of your model to homework@ucbugg.com. We will NOT accept any misshapen human models.
+
