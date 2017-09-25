@@ -157,9 +157,11 @@ image33.png
 
 Alright, we’re done with quad draw. Click on the magnet icon so that there is no longer a Live Object. Exit out of the Quad Draw tool and hide the mesh that you sculpted. This should leave you only with the mesh you drew with Quad Draw.
 
-image34.png
+HEADING LARGE: CREATING THE BODY
 
 Grab the bottom edge of your mesh and extrude down a few times to create the upper torso.
+
+image34.png
 
 image35.png
 
@@ -274,5 +276,4 @@ image66.png
 
 With a ton of sculpting your model can end up looking like this! Please note the topology on the model: keep in mind that you should have at least 3 edge loops at the joint area, and less concentrated edge loops where there are no joints. This is <b>SUPER</b> important for rigging and skinning, where one edge loop should NOT dictate your rig.
 
-Please submit a less rough version of your model to homework@ucbugg.com. We will NOT accept any misshapen human models.
-
+Please submit a less rough version of your model to homework@ucbugg.com. We will NOT accept any misshapen human models, so please be sure to look up anatomy references or use your own character sheets as guides!
