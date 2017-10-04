@@ -1,100 +1,151 @@
-
 HEADING LARGE: INTRODUCTION
+
 Homework for this week can be found at the end of the page. Acquaint yourself with materials and their attributes before attempting the assignment.
+
+
 
 HEADING MEDIUM: INSTALLING RENDERMAN
 
-https://renderman.pixar.com/view/non-commercial-renderman
 
-Follow this link, press the <b>DOWNLOAD & INSTALL</b> button and follow the instructions. You’ll need to register an account on the forums to complete the installation. If you have trouble installing Renderman, please come to office hours so facilitators can help troubleshoot the issue.
+https://renderman.pixar.com/forum/register.php
+
+Follow this link to create a Renderman Forums account. You will need one in order to use the Non-commercial version of Renderman. Once you've created and verified your account, go to the following link:
+
+http://renderman.pixar.com/intro
+
+Log into the account you just created, and follow the instructions to download the Non-Commercial version of Renderman for Maya. You will need to fill out a survey; make sure to select Autodesk Maya as the 3D software you use, After Effects as the compositing software, and Tractor as the dispatcher software. 
+Once downloaded, execute the installer file.
+ 
+If you have trouble installing Renderman, please come to office hours so facilitators can help troubleshoot the issue.
+
+
 
 Once installed, open Maya. Go to Windows->Settings and Preferences
+
 Windows -> Plugin Manager
-Find and load RenderMan_for_Maya as well as OpenVDB
+
+Scroll down to find RenderMan_for_Maya and OpenVDB, and then check the "Loaded" and "Auto load" boxes for both. 
+ 
 
 plugin.png
 
+Once these plugins are loaded, you will notice a new RenderMan tab has appeared on your UI. 
+
+
 HEADING LARGE: SET THE SCENE
-A crucial part of shading is determining how your object interacts with light. As a result, you ought to design your shaders under similar lighting conditions that you’ll have in your short. At the very least, you’ll want a light source to see reflections.
-To start, you’ll want to create an environment light by clicking the icon shown below in the Renderman tab OR go to the Renderman menu->Lights->PxrDomeLight 
 
-light.png
+A crucial part of shading is determining how your object interacts with light. As a result, you should design your shaders under similar lighting conditions to your short. At the very least, you’ll want a light source to see reflections.
 
-Using the attribute editor, you can assign an image file to change the color, intensity, and direction of the light. The link below contains a simple 3-point lighting setup which is useful for developing many different materials. Import the file to the scene you're using to test materials.
+We will use one of the default light rigs that come with Renderman's preset browser. Open up the preset browser by clicking this button on the Renderman tab: 
 
-FILE: Env_Three_Point_Lighting.ma
+preset_browser_on_tab.png
 
-For transparent objects, add a plane to act as the ground. This helps you understand your object’s shadow and how it distorts light travelling through it. 
+The Preset browser is a handy library of pre-made materials and light setups. We will be using the Three Point light rig. Right click on it, and click import. 
+
+preset_browser_light.png
+
+Now that we have a good light setup, let's create some geometry that we can shade. Create a primitive polygon (it can be a cube, sphere, torus, etc.) and add a plane to act as the ground. This helps you understand your object’s shadow and how it distorts light traveling through it. 
+
 
 HEADING LARGE: MATERIALS
+
 Now that we’ve set the scene, we’ll start assigning materials to our object.
+
 There are two ways to add a material to your object.
 
-Select your object in object mode and right click. Navigate down to Assign New Material. Use the search box (image) to narrow down to Renderman RIS materials which all start with “pxr.” It’s important that you limit yourself to these materials as they are designed to work best with our renderer and will be compatible with the lights we teach you later in the course.
-
-pxr21.png
-
-
-From this menu, you have several choices for your material.
-<b>PxrDisney</b> – this is your Swiss army knife – PxrDisney can do most jobs you need it for and can be used almost any solid, opaque material.
-<b>PxrLMMetal</b> – this will give you a little more control over the metal and allows you to make more convincing replicas of real metals like gold and copper
-<b>PxrLMGlass</b> – this should be your go-to for transparent materials
-<b>PxrLMSubsurface</b> – Used for materials where light scatters below the surface of a material. Good for materials like skin and wax.
-Ultimately, the one that might be most convenient for you to use is the <b>PxrSurface</b> material, which can achieve most of the effects of the other materials listed above with a bit of tweaking to its attributes. PxrSurface also has the ability to layer different materials or textures.
-
-Another convenient way to add a material to your object is to navigate to your Renderman tab, and click on the circle icon with the star. This, by default, will add a PxrSurface material to your object.
+The first one is the easiest, and the one I recommend for all general UCBUGG purposes. Select your object in object mode, and then click on the ball with a star on it on the Renderman tab. This will add a PxrSurface shader to your object. This shader can be used for almost all materials. 
 
 pxrsurface.png
 
-These should cover most of your material needs for your short.
+The second option the following: Select your object in object mode and right click. Navigate down to Assign New Material. Use the search box (image) to narrow down to Renderman RIS materials which all start with “pxr.” It’s important that you limit yourself to these materials as they are designed to work best with our renderer and will be compatible with the lights we teach you later in the course.
 
-Objects can use multiple materials by assigning materials to groups of faces. Note that you cannot assign multiple materials to the same face however.
+pxr21.png
+
+From this menu, you have several choices for your material. The only shader you should be using is PxrSurface, since it's the newest one and is therefore compatible with our version of Renderman. There are also other deprecated shaders that you can use, including PxrDisney, PxrLMMetal, PxrLMGlass, and PxrLMSubsurface. You may want to experiment with these shaders if PxrSurface doesn't work for you.
+
+Objects can use multiple materials by assigning materials to groups of faces. Note that you cannot assign multiple materials to the same face, however.
 
 Once the material is applied, it will appear in the object’s attribute editor (usually the last tab in the list). If your object has a long history, it may be hard to hunt down. Alternatively, right click your object and click “material attributes” to jump straight to the material in the attribute editor.
 
+
 HEADING MEDIUM: TEST RENDERING
-To see what your material will look like in your completed short, we need to render it. Rendering simulates the lighting in your scene and produces and image. To render, go to Renderman -> Render. This will open the program IT. IT will slowly fill in detail as it makes more and more calculations. You can set what camera you render from in "Renderman->Renderman Globals..." You can also adjust the image resolution from the global options. We'll go more in depth on rendering in the next few weeks.
+
+To see what your material will look like in your completed short, we need to render it. Rendering produces an image by simulating light - it sends out virtual photons from the lights in your scene. The way these virtual photons bounce around your scene and end up hitting your camera determines the image that results. 
+
+To render, go to Renderman -> Render, or click the leftmost icon on the Renderman shelf. This will open the external program IT. IT will slowly fill in detail as it makes more iterations of its light calculations. You can set what camera you render from by clicking "Renderman->Renderman Globals...". You can also adjust the image resolution from the global options. We'll go more in depth on rendering in the next few weeks.
 
 If you're making small changes to your material, you can use Renderman -> IPR Render. IPR Render will update your material changes on the fly so you don't have to stop and re-render each time.
 
-
 HEADING LARGE: EDITING MATERIAL ATTRIBUTES
+
 http://ucbugg.com/static/index.html#labsshadingguide
 
 Follow this link to a guide on material attributes. Scroll down to “Common Material Properties” for explanations on what some of the options and sliders do in the attribute editor. Understanding these attributes, particularly specular and roughness, will be crucial for this assignment and your animation. For now, don't worry about the section discussing hypershade.
 
 HEADING MEDIUM: TEXTURES AND PATTERNS
-Finally, we want to discuss maps and textures. Instead of assigning a single value or color to an attribute we can assign an image or fractal. Fractals produce random noise which can help an object look less plastic or artificial. To add a map, click the checkerboard icon beside an attribute.
+
+Finally, we want to discuss maps and textures. Instead of assigning a single value or color to an attribute we can assign an image or procedural pattern. We have many procedural patterns to choose from, including wood, marble, rock and fractals. Fractals produce random noise which can help an object look less plastic or artificial. To add a map, click the checkerboard icon beside an attribute.
 
 checkerboard21.png
 
-Maya comes with a lot of pre-built patterns for materials like wood, marble, and rock. Choose one that makes sense for your material.
+Choose a pattern that makes sense for your material, or add a file by clicking the file icon.
+
+
 
 patterns.png
 
+
+
 frak.png
 
-After you choose, you’ll likely have some options to customize that pattern. Play with values and watch the preview image until you’re happy with the result. Explanations for these attributes can often be found through online resources like this:
+
+
+After you choose, you’ll likely have some options to customize that pattern. Play with values and watch the preview image until you’re happy with the result. Explanations for these attributes can often be found through online resources like this: 
+
+https://rmanwiki.pixar.com/display/REN/Pixar+Patterns
+
+
 
 You can change how often your texture repeats over your material using the place2dTexture tab.
 
+
+
 place2d.png
+
+
 
 repeat.png
 
+
+
 By increasing both values by the same amount, your pattern will appear smaller but will tile more frequently to cover the same space. Inputting unequal values will cause the texture to stretch and distort sideways or vertically. You can use this to create new patterns.
+
+
 
 scaling.png
 
-You can use patterns to change more than just the color of your object. By assigning a black and white pattern to a “bump” or “normals” attribute, you can add fine details that would take forever to model by hand.
+
+
+You can use patterns and textures to change more than just the color of your object - you can assign them to any attribute. For example, if I want my material to be shiny in some areas but not others, I can add a black and white fractal to the specular face color. The darker areas of the fractal correlate to less shininess, and the lighter areas of the image will be shinier. Also, by assigning a black and white pattern to a “bump” or “normals” attribute, you can add fine details that would take forever to model by hand.
+
+
 
 displacement.png
 
+
+
 Remember! After you’ve made your material for your object, delete any additional lights or meshes you used to test it. If you plan on referencing these objects into your scene, they’ll bring the lights along and that can mess things up. 
 
+
+
 HEADING LARGE: HOMEWORK
+
 Using the materials you learned above, model and texture a sharpened pencil. You’ll need to include 5 different materials and keep in mind aspects like roughness as well as color.
 
+
+
 52677.jpg
+
+
 
 You don't need to make this exact pencil.
