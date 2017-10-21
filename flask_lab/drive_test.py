@@ -72,7 +72,8 @@ def get_file_content(folder_id):
 	else:
 		#print( 'Files: ')
 		for file in fileList:
-			#print('{0} ({1})'.format(file['name'], file['id']))
+			# line below not necessary, just for test see
+			content.append('name: {0} ({1})'.format(file['name'], file['id']))
 			fileData = service.files().export( fileId=file['id'], mimeType="text/plain" ).execute()
 			content.append(fileData)
 
@@ -82,7 +83,7 @@ if __name__ == '__main__':
 	# should go to flask_test in website admin
 	# permission is on anyone can view at the moment
 	content = get_file_content("0Byl0o81BHtKgZy1EeEhRSDFmUEE")
-	print(content)
+	
 	for thing in content:
 		print(thing)
 		print()
