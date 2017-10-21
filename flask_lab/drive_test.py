@@ -16,7 +16,7 @@ try:
 except ImportError:
     flags = None
 
-SCOPES = 'https://www.googleapis.com/auth/drive.metadata.readonly'
+SCOPES = 'https://www.googleapis.com/auth/drive.readonly'
 CLIENT_SECRET_FILE = 'client_secret.json'
 APPLICATION_NAME = 'UCBUGG Lab Download Test'
 
@@ -53,20 +53,34 @@ def get_file_content(folder_id):
 	service = discovery.build('drive', 'v3', http=http)
 	
 	content = []
+
+	"""
+	perms = service.permissions().list(fileId=folder_id).execute()
+
+	print ("PERMISSIONS:")
+	for perm in perms["permissions"]:
+		for p in perm:
+		    print (p, perm[p])
 	
-	results = service.files().list( fields="nextPageToken, files(id, name)", q="'" + folder_id + "' " + "in parents" ).execute()
-	fileList = results.get('files', [])
+	print()
+	"""
+
+	folderResults = service.files().list( fields="nextPageToken, files(id, name)", q="'" + folder_id + "' " + "in parents" ).execute()
+	fileList = folderResults.get('files', [])
 	if not fileList:
 		print( 'no files found' )
 	else:
-		print( 'Files: ')
+		#print( 'Files: ')
 		for file in fileList:
-			print('{0} ({1})'.format(file['name'], file['id']))
+			#print('{0} ({1})'.format(file['name'], file['id']))
+			fileData = service.files().export( fileId=file['id'], mimeType="text/plain" ).execute()
+			content.append(fileData)
 
 	return content
 
 if __name__ == '__main__':
 	# should go to flask_test in website admin
+	# permission is on anyone can view at the moment
 	content = get_file_content("0Byl0o81BHtKgZy1EeEhRSDFmUEE")
 	print(content)
 	for thing in content:
