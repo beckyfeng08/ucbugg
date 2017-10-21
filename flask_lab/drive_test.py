@@ -5,7 +5,7 @@ from __future__ import print_function
 import httplib2
 import os
 
-from apiclient import discovery
+from apiclient import discovery, errors
 from oauth2client import client
 from oauth2client import tools
 from oauth2client.file import Storage
@@ -29,7 +29,7 @@ def get_credentials():
     Returns:
         Credentials, the obtained credential.
     """
-    home_dir = os.path.expanduser('.')
+    home_dir = os.path.expanduser('~')
     credential_dir = os.path.join(home_dir, '.credentials')
     if not os.path.exists(credential_dir):
         os.makedirs(credential_dir)
@@ -54,32 +54,20 @@ def get_file_content(folder_id):
 	
 	content = []
 	
-	page_token = None
-	while True:
-		try:
-			param = {}
-			if page_token:
-				param['pageToken'] = page_token
-			
-			children = service.files().list(q=folder_id+'+in+parents', **param).execute()
-
-			for child in children.get('files', []):
-				print('File Id: %s' % child['id'])
-				data = service.files().export(fileId=child['id'], mimeType='text/plain').execute();
-				content.append(data)
-				
-			page_token = children.get('nextPageToken')
-			
-			if not page_token:
-				break
-		except (errors.HttpError, error):
-			print('An error occurred: %s' % error)
-			break
+	results = service.files().list( fields="nextPageToken, files(id, name)", q="'" + folder_id + "' " + "in parents" ).execute()
+	fileList = results.get('files', [])
+	if not fileList:
+		print( 'no files found' )
+	else:
+		print( 'Files: ')
+		for file in fileList:
+			print('{0} ({1})'.format(file['name'], file['id']))
 
 	return content
 
 if __name__ == '__main__':
-	content = get_file_content("your_id_here")
+	# should go to flask_test in website admin
+	content = get_file_content("0Byl0o81BHtKgZy1EeEhRSDFmUEE")
 	print(content)
 	for thing in content:
 		print(thing)
