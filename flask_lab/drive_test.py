@@ -16,7 +16,7 @@ try:
 except ImportError:
     flags = None
 
-SCOPES = 'https://www.googleapis.com/auth/drive.readonly'
+SCOPES = 'https://www.googleapis.com/auth/drive.file'
 CLIENT_SECRET_FILE = 'client_secret.json'
 APPLICATION_NAME = 'UCBUGG Lab Download Test'
 
@@ -79,9 +79,21 @@ def get_file_content(folder_id):
 
 	return content
 
+def upload_file(folder_id, fileList):
+	# this requires drive.file in scopes
+	credentials = get_credentials()
+	http = credentials.authorize(httplib2.Http())
+	service = discovery.build('drive', 'v3', http=http)
+
+	for filename in fileList:
+	    metadata = {'name': filename, 'parents':[folder_id]}
+	    res = service.files().create(body=metadata, media_body=filename).execute()
+	    if res:
+	        print('Uploaded "%s" (%s)' % (filename, res['mimeType']))
+
+
 if __name__ == '__main__':
 	# should go to flask_test in website admin
-	# permission is on anyone can view at the moment
 	content = get_file_content("0Byl0o81BHtKgZy1EeEhRSDFmUEE")
 	
 	for thing in content:
