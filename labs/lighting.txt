@@ -15,42 +15,35 @@ HEADING MEDIUM: CONSIDERATIONS BEFORE LIGHTING
 -Keep testing your lighting through the camera. Who cares if there’s a really bright/really dark patch if it’s not visible in the final render? So apply the lights, and do test renders through the camera in your scene, not the perspective view.
 
 -Become familiar with IPR rendering because it will be your best friend in this process. IPR rendering is the third button on the Renderman shelf that says “Start IPR” when you hover over it. IPR rendering is basically a window that will open on the side (in a program called “It”) that will constantly update a test frame render with any changes you make in the scene. It is a really cool tool that will enable you to see changes. Example: if you change the intensity of one of your lights, check the IPR window and you’ll actually see the test render updating the image with the changed intensity.
-There are limitations to this: if you add/delete a light, IPR doesn’t update that. If you change a texture, if you add a new camera, or if there’s any other major changes in your scene that you’re not seeing get updated in the IPR, just close the IPR window and launch it again and it should be updated.
+While configuring your lighting, if you add/delete a light, IPR updates to reflect that. If you change a texture, if you add a new camera, or if there’s any other major changes in your scene that you’re not seeing get updated in the IPR, just close the IPR window and launch it again and it should be updated.
 -Renderman does not produce .png or .jpeg files! The two files types you’ll be dealing with are .exr and .tiff
 Let’s say you’re happy with a light setup and you’d like to render an actual full frame to test your light setup. The image that you’ll render will be .exr by default. Make sure to open this image in Photoshop to see the image accurately! If you open a .exr in Preview it’ll be super bright and desaturated, and if you open a .tiff in Preview it’ll be extra saturated and dark. Photoshop will show the photo accurately and that is what the final render will look like, so do not forget to only open these images in Photoshop!!
 
 HEADING MEDIUM: TYPES OF LIGHTS COVERED IN THIS GUIDE
--GeoArea Light
--Environment Light
--Daytime Environment Light
-
-HEADING SMALL: GeoArea Light
--GeoArea light produces light rays based on the shape of the light that you can specify (i.e. a rectangle area light will send light rays proportional to the shape and surface area of the rectangle.)
+- Area Lights (PxrRectLights, PxrDiskLights, PxrSphereLights)
+- Light Filters
+- Dome Light
+- Daytime Environment Light
 
 
-Common options in the attribute editor that apply to all/most types of light:
+HEADING SMALL: Area Light
+- Area lights are light sources that emit light based on a shape (Rectangle, Disk, Sphere). 
 
-<b>Primary visibility</b>
-This is off by default in area lights but on by default in environment lights. In general you’d want this off if you don’t want the actual source of light visible in your scene. Having this on means that you can actually see the source of light as a lit panel:
 
-Untitled_primaryvisibility.png
+HEADING MEDIUM: LIGHT ATTRIBUTES
+Common options in the Shape tab (in the attribute editor) that apply to all/most types of light.
 
-If the Primary Visibility is unchecked, this is what you get:
-
-Untitled.png
-
-<b>Shape</b>
-This changes your light type from rectangular (default) to any of the following: disk; sphere; cylinder; distant; spot
-
-<b>Exposure</b>
-This controls the intensity of light: low intensity makes the light darker/weaker, higher intensity makes the light brighter/stronger
-
-<b>Color</b>
+HEADING SMALL: BASIC TAB
+- Intensity
+Scales the contribution of a light linearly; computed using the physical falloff. Think of this as the wattage of a bulb light in your room. 
+- Exposure
+Specifies the exposure of the area light as a power of 2. Increasing the exposure by 1 will double the energy emitted by the light source. This tends to be set at a low value (from 0-2). If this is too high, it will blow out your scene (try it out to see what I mean). The higher the value, the closer the scene will be the light’s set color. 
+- Color
 Changes the color of the light emitted
-
-<b>Color Temperature</b>
-You have to click “enable temperature” to use this function
+- Color Temperature 
+You have to click “enable temperature” to use this feature
 This is an alternative to using light color. Why? The theory behind this is that you can choose the temperature of light in terms of Kelvins and you’d get a more plausible/realistic color of light rather than risking choosing an unnatural color off the color wheel. Number references are below with their colors:
+
 kelvin-color-temperature.jpg
 
 This is an image from the Renderman website that samples the color temperature tool:
@@ -58,18 +51,35 @@ This is an image from the Renderman website that samples the color temperature t
 Kelvin Temperature - Renderman.png
 
 
-<b>Shadows</b>
-There’s a convenient box here called “Enable Shadows” that you can use to enable/disable shadows. This box is also in the light panel.
+- Refine Tab 
+This deals more with getting the light to hit in specific ways. Increasing the “Emission Focus” make the light act like a spotlight. Changing the “Emission Focus Tint” to another color will make the area surrounding the lit area to change to that color. Another way to create a spotlight effect is to change the “Cone Angle”. Notice that the edges are pretty defined, so soften them with the “Cone Softness” (keep the value low). 
+
+- Shadows
+In the “Shadows” tab, the “enable shadows” box allows you to enable/disable shadows.
 Shadow color: what color is the shadow? If it’s a colored light, the shadow isn’t going to be a black shadow, so edit that in whichever way makes sense in your scene.
 Adaptive Shadows: it is conservative by default. Aggressive will result in FASTER renders but LOWER QUALITY (it’s basically tracing less rays).
-Important: only the logical light sources in your scene should produce shadows! If you add an area light to just generally make the scene brighter (like you will see in the example at the end of this guide) you should turn the shadows off if it’s in the opposite direction of the source of light. Otherwise you’ll confuse the viewers and they won’t understand what the other light source is.
+Important: only the logical light sources in your scene should produce shadows! If you add an area light to just generally make the scene brighter (like you will see in the example at the end of this guide) you should turn the shadows off if it’s in the opposite direction of the source of light. Otherwise this will confuse the viewers and they won’t understand what the other light source is.
 
-<b>Barndoors</b>
-Imagine flaps around the edges of your light source, and you have control over how much you close a flap in on the light, defining the shape of the light produced.
+HEADING MEDIUM: LIGHT FILTERS
+The only light filter we want to introduce are barn doors. 
+- Barndoors
+Located in the light filters tab. Select your light source, and then click PxrBarnLightFilter
 
-barndoors_viewport.png
 
-Use these to define the shape of light (example at the end of the guide: you can use barndoors on an area light that simulates light from a television in order to make the light coming from the television more rectangular and defined in shape.
+HEADING MEDIUM: CAMERA VISIBILITY
+
+Located in the Shape tab of the Attribute Editor. Go down to the VISIBILITY tab and check/uncheck “Camera Visibility”.
+This is off by default in area lights but on by default in environment lights. In general this is set to off if you don’t want the actual source of light visible in your scene. Having this on means that you can actually see the source of light as a lit panel:
+
+Untitled_primaryvisibility.png
+
+If the Camera Visibility is unchecked, this is what you get:
+
+Untitled.png
+
+
+====
+
 
 HEADING SMALL: SPECIFIC LIGHT OPTIONS/NOTES FOR SPOTLIGHT AND DISTANT LIGHT
 <b>Spotlight</b>
@@ -159,12 +169,14 @@ What should you do instead?
 
 
 HEADING MEDIUM: MAKING GEOMETRY EMISSIVE
-Aside from the normal system of Renderman lights, you can actually make any model in your scene produce light by itself.
+Aside from the normal system of Renderman lights, you can actually make any model in your scene produce light by itself. We do not recommend this method as it is very noisy. This is more for your information. 
 
 How do you do this?
-Select the object.
-In the Renderman shelf, click on the “Make Selected Geometry Emissive” button.
-Alter its attributes the same way discussed above for other lights.
+1) Select the object.
+2) In the Renderman shelf, click on the “PxrMeshLight” button. (5th from left button)
+3) Click the PxrBlack tab that shows up in the attribute editor, and click the link button (next to PxrMeshLightShape#)
+4) Alter its attributes the same way discussed above for other lights.
+
 
 HEADING LARGE: LIGHT LINKING
 Live action filmmakers and cinematographers would kill to have this option in real life: creating a light source that only affects a specified list of surfaces/objects despite anything else being the pathway of the light. This is the process of light linking: you can specify which lights should affect which objects. You’re making lights in a virtual space, so you might as well enjoy disobeying the laws of physics, right?
@@ -229,6 +241,78 @@ The most useful part of the light panel is the two columns before the attributes
 Also, if there’s too many lights and you’re just not sure what each light is contributing, go down the list, turning each light’s “Solo” on and see the light’s effect: is it too small to make an actual difference? If so, delete it. You’ll save rendering time.
 
 Want to see the scene with all the lights on except for one or a few? Click the “Vis” box on the lights you don’t want to see and they’ll be turned off.
+
+HEADING LARGE: DEMO 0 – LIGHTING AN INDOOR HALLWAY
+
+
+This lab is meant to familiarize you with the lighting workspace. There is no one right way to light a scene, so feel free to experiment with your scene. Open up the scene, and the view from Camera1, you ‘see’ that the four spheres appear to be the same size. But looking around in the perspective camera you notice that is not the case. We want to light the scene in order for us to see that there is depth in the scene. 
+
+First we will create a PxrDiskLight. The light is emitted in the direction of the arrow pointing out of the circle. Place it right under one of the holes in the ceiling. Ensure that the arrow is pointing downward toward the red floor (using the rotate tool of course). 
+
+l0.png
+
+In the attribute editor, for now we will keep the color to the standard white. Now set the intensity to some number between 35-45, think of this as the wattage on a bulb. For this lab be sure to set the exposure to 1. Do this process for the other two holes in the ceiling. 
+
+l1.png
+
+Now lets quickly test the render. Hit the render button (first button in Renderman Shelf). have a A program called “It” will pop up, and you can have a look at your lit scene.
+
+l2.png
+
+l3.png
+
+It looks good, but we can fine tune our lights a little more, perhaps by adding light filters. Barndoors are a type of light filter that can give more specification of how a light will interact with a scene. Click one of your lights and right click this button on the renderman shelf, and select PxrBarnLightFilter.
+
+l4.png
+
+You should see something like this:
+
+l5.png
+
+Select only the light filter (in the outliner, should be named PxrBarnLightFilter1 ), and with the move tool pull it down just a tiny bit. You will see that the barn lines converge to the center a little. 
+
+l6.png
+
+In the attribute editor, in barn shape adjust the radius to somewhere between 0.18 - 0.21.
+
+l7.png
+
+You will notice that the radius lines will converge more to the center. 
+
+l8.png
+
+<b>Do this process for the other two lights</b>
+
+Now hit render and see your realistic hotel hallway lighting! Looks awesome! You can add a little more variety by Enabling Temperature, you can simulate the effect of a indoor light bulb, which is typically 3500 Kelvin. Additionally changing the color of the light could give interesting effects, test out by changing the color of one of the lights to see the difference. 
+
+l9.png
+
+Applying color temperature 
+
+l10.png
+
+Anyone else reminded of Wong Kar-wai’s masterpiece In the Mood for Love (2000)?
+
+Just me? Okay. 
+
+Once satisfied with your lighting do the following: 
+
+DOWNLOAD PHOTOSHOP HERE
+If you have PhotoShop installed on your computer follow this method: 
+Save this EXR: Click File->Export File and save the corresponding EXR file somewhere you can access later. Open up the EXR in PhotoShop. A window should pop up, and you should select “As Transparency”. Now go to File->Export->Export As PNG. Now save that somewhere accessible, you will send this for grading. 
+
+If no access to PhotoShop:
+Simply take a screenshot of your It window and save it somewhere so you can send for grading. 
+
+
+Ensure that this image is saved. 
+Go into the outliner and select all three lights and all three farmdoors and click H. (if youre ambitious just delete them.) 
+
+Now we will create a directional light. Click on the Renderman shelf, right click the light button, and select PxrDistantLight. The interesting thing to note about this type of light is that its location in the scene does NOT matter, all that matters is the direction. Now, keeping the color at white, enable temperature and set it to 2500 Kelvin (this is typical of sunrise light). Hit render and see the shadows it produces on the wall with doors. 
+
+l11.png
+
+Follow the same process to save the image. 
 
 
 HEADING LARGE: DEMO 1 – LIGHTING AN INDOOR, DAYTIME SCENE
