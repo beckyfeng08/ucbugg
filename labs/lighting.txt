@@ -308,9 +308,15 @@ Simply take a screenshot of your It window and save it somewhere so you can send
 Ensure that this image is saved. 
 Go into the outliner and select all three lights and all three farmdoors and click H. (if youre ambitious just delete them.) 
 
-Now we will create a directional light. Click on the Renderman shelf, right click the light button, and select PxrDistantLight. The interesting thing to note about this type of light is that its location in the scene does NOT matter, all that matters is the direction. Now, keeping the color at white, enable temperature and set it to 2500 Kelvin (this is typical of sunrise light). Hit render and see the shadows it produces on the wall with doors. 
+Now we will create a directional light. Click on the Renderman shelf, right click the light button, and select PxrDistantLight. The interesting thing to note about this type of light is that its location in the scene does NOT matter, all that matters is the direction. 
 
 l11.png
+
+Now, keeping the color at white, enable temperature and set it to 2500 Kelvin (this is typical of sunrise light). Hit render and see the shadows it produces on the wall with doors. 
+
+l12.png
+
+l13.png
 
 Follow the same process to save the image. 
 
