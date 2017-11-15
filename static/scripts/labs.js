@@ -24,7 +24,7 @@ allLabs = {
 		"araknid": ["hypershade"]
 	},
 	"lighting": {
-		"bugg": ["lighting"],
+		"bugg": ["lighting 1, lighting 2"],
 		"araknid": []
 	},
 	"effects": {
