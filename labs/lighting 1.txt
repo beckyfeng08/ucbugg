@@ -16,7 +16,9 @@ HEADING MEDIUM: CONSIDERATIONS BEFORE LIGHTING
 
 -Become familiar with IPR rendering because it will be your best friend in this process. IPR rendering is the third button on the Renderman shelf that says “Start IPR” when you hover over it. IPR rendering is basically a window that will open on the side (in a program called “It”) that will constantly update a test frame render with any changes you make in the scene. It is a really cool tool that will enable you to see changes. Example: if you change the intensity of one of your lights, check the IPR window and you’ll actually see the test render updating the image with the changed intensity.
 While configuring your lighting, if you add/delete a light, IPR updates to reflect that. If you change a texture, if you add a new camera, or if there’s any other major changes in your scene that you’re not seeing get updated in the IPR, just close the IPR window and launch it again and it should be updated.
+
 -Renderman does not produce .png or .jpeg files! The two files types you’ll be dealing with are .exr and .tiff
+
 Let’s say you’re happy with a light setup and you’d like to render an actual full frame to test your light setup. The image that you’ll render will be .exr by default. Make sure to open this image in Photoshop to see the image accurately! If you open a .exr in Preview it’ll be super bright and desaturated, and if you open a .tiff in Preview it’ll be extra saturated and dark. Photoshop will show the photo accurately and that is what the final render will look like, so do not forget to only open these images in Photoshop!!
 
 HEADING MEDIUM: TYPES OF LIGHTS COVERED IN THIS GUIDE
@@ -26,7 +28,7 @@ HEADING MEDIUM: TYPES OF LIGHTS COVERED IN THIS GUIDE
 - Daytime Environment Light
 
 
-HEADING SMALL: Area Light
+HEADING SMALL: AREA LIGHT
 - Area lights are light sources that emit light based on a shape (Rectangle, Disk, Sphere). 
 
 
@@ -189,14 +191,14 @@ Let’s say you have a scene with three cubes:
 Screen Shot 2015-11-16 at 2.16.00 PM.png
 
 Do you see that area light? That’s going to affect all the cubes. This is how you get to choose which cubes it should affect:
-Go to WindowsàRelationship EditorsàLight LinkingàLight-Centric (or Object-Centric)
+Go to Windows -> Relationship Editors -> Light Linking -> Light-Centric (or Object-Centric)
 Light-Centric asks: which objects are affected by the selected light?
 If you have more objects than lights, this is probably the one you want to open (most likely the case)
 Object-Centric asks: which lights affect the selected object?
 If you have more lights than objects, this is probably the one you want to open
 Select a light. Do you see all the highlighted objects on the right? These are all the objects that are affected by the light you have selected. All the shaders below the objects do not actually matter since the objects ultimately determine what gets lit, not the shaders.
 
-Screen Shot 2015-11-16 at 3.03.18 PM.png
+lightcentric.png
 
 Without editing the light linking, this is what the image would look like:
 
@@ -204,11 +206,11 @@ light_linking_1.png
 
 For this example, I want to make the blue and red cubes stand out brighter than the white cube, so I created another area light and placed it at another angle.
 
-Screen Shot 2015-11-16 at 2.20.58 PM.png
+3cube2.png
 
 However, if you render now, the whole scene will be brighter, which isn’t what I want. I just want the red cube and the blue cube to be brighter. Therefore, I will go into the light linking menu and I will make the second area light only affect the blue cube and red cube.
 
-Screen Shot 2015-11-16 at 2.22.02 PM.png
+lightcentricfurreal.png
 
 This is the result:
 light_linking_2.png
@@ -298,7 +300,7 @@ Just me? Okay.
 
 Once satisfied with your lighting do the following: 
 
-DOWNLOAD PHOTOSHOP HERE
+<a href='https://software.berkeley.edu/adobe/'><b>DOWNLOAD PHOTOSHOP HERE</b>
 If you have PhotoShop installed on your computer follow this method: 
 Save this EXR: Click File->Export File and save the corresponding EXR file somewhere you can access later. Open up the EXR in PhotoShop. A window should pop up, and you should select “As Transparency”. Now go to File->Export->Export As PNG. Now save that somewhere accessible, you will send this for grading. 
 
