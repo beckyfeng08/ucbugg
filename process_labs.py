@@ -1,7 +1,7 @@
 import os
 
 LABSDIR = "labs/"
-IMGURL = "http://saurabhmitra.github.io/ucbugg/labs/"
+IMGURL = "https://raw.githubusercontent.com/saurabhmitra/ucbugg/master/labs/"
 
 html = {}
 
