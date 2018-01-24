@@ -212,14 +212,44 @@ p.home-blurb {
 	text-align: left;
 	letter-spacing: 0px;
 }
+
 p.announcements {
-	margin-left: 26%;
-	margin-right: 28%;
+	margin-left: 5%;
+	margin-right: 5%;
 	color:#7d7e81;
 	font-size: 11pt;
 	text-align: justify;
 	letter-spacing: 0px;
 }
+
+.speech-bubble { 
+
+	position: relative;
+	margin-left: 26%;
+	margin-right: 28%;
+	background: #f5f5f6; 
+	border-radius: 1.9em; 
+} 
+
+.speech-bubble:after { 
+	content: ''; 
+	position: absolute; 
+	bottom: 0; 
+	left: 50%; 
+	width: 0; 
+	height: 0; 
+	border: 20px solid transparent; 
+	border-top-color: #f5f5f6; 
+	border-bottom: 0; 
+	border-right: 0; 
+	margin-left: -10px; 
+	margin-bottom: -20px; 
+}
+
+tab { 
+	margin-left: 30px; 
+}
+
 div.info-buttons {
 	text-align: center;
 	display: inline-block;
