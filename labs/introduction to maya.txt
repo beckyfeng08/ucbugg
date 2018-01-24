@@ -21,7 +21,7 @@ getting_maya_activated.jpg
 
 HEADING MEDIUM: DOWNLOADING MAYA
 Once registration is complete, go back to http://students.autodesk.com/education/free-software/maya, log in with your newly created account, and fill out the second section.
-From the version drop-down menu, select Maya 2016.
+From the version drop-down menu, select Maya 2017. (Very important that you select 2017)
 
 Select "English" from the language drop-down.
 From the operating system drop-down menu, select which version you want to download. If you are on Windows, download either the 32-bit or 64-bit version, depending on your computer's processor. If you are on a Mac, just download the Mac OS X version. Make sure to write down your serial number and product, as you will need them during installation. Once you select your version, click the "broswer download" button. The download should start automatically, but if not, check the help links at the bottom of the page. Maya is a pretty big piece of software (2.0 GB) so make sure you have enough time to download the entire file. I suggest catching up on some reading while you wait.
@@ -29,10 +29,6 @@ Installing Maya
 Once your download is complete, simply run the installer and follow the on screen instructions. The installer will ask for the serial number from the previous section. After you enter your serial number and product key, Maya will install. You are now the proud owner of Maya 2016.
 A warning: Maya's activation process can take quite a while. If you encounter any errors, simply try again with the same data. It should eventually work.
 
-HEADING MEDIUM: INSTALLING MENTAL RAY (IMPORTANT)
-Once you have finished installing Maya, download the Mental Ray renderer plugin from this link: 
-http://knowledge.autodesk.com/support/maya/downloads/caas/downloads/content/mental-ray-plugin-for-maya-2016.html
-A renderer is how you will produce the images from your 3D scene that will be the frames of your animation! We will go more into depth about different renderers later in the semester.
 
 HEADING MEDIUM: MUDBOX
 While you're at it, you can download Mudbox using the account you have now created as well. Mudbox is not required for our class, but you may find it very useful and we have resources if you want to learn how to use it as well.
