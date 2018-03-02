@@ -31,7 +31,7 @@ var screenshots = {
 
 // veronica ignore everything below this
 
-var IMAGE_SIZE = [960, 540];
+var IMAGE_SIZE = [533, 300];
 var initialized = false;
 
 var screenshotKeys = Object.keys(screenshots);
@@ -52,7 +52,7 @@ var initProjects = function() {
 			if (width < 30) width = 60; // failsafe
 			$(this).append('<img src="' +
 				'images/projects/' + screenshotKeys[currentScreenshot%screenshotKeys.length] +
-				'" class="projimg" width="960" height="540" style="margin-left:' +
+				'" class="projimg" width="' + IMAGE_SIZE[0] + '" height="' + IMAGE_SIZE[1] + '" style="margin-left:' +
 				(width - screenshots[screenshotKeys[currentScreenshot%screenshotKeys.length]]*IMAGE_SIZE[0]) + 'px; ' + 
 				'z-index: ' + Math.floor(currentScreenshot/slices.length) + ';">');
 			currentScreenshot++;

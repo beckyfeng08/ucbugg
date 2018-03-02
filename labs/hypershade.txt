@@ -41,7 +41,7 @@ metpaint.PNG
 
 Once you're happy with your car paint we move on to the step where we ruin it.
 
-HEADING LARGE: LMLayers and Rust
+HEADING LARGE: LMLAYERS AND RUST
 
 If you look at your varnish LMLayer, you'll notice that it has an LMLayer input like your metal. This means we can apply additional layers to form more complex configurations. The varnish layer we made is designed to cover the entire metal and doesn't interfere with existing properties - it just adds a clear coat. The next layer we add will entirely overwrite material properties but only in the places we want it to.
 

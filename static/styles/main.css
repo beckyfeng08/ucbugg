@@ -158,13 +158,23 @@ h2 {
 	padding: 0px;
 	color: #fefeff;
 	font-size: 22pt;
-	letter-spacing: 11px;
+	letter-spacing: 9px;
 }
 h3 {
 	margin: 0px;
-	color: #8dbfe7;
-	font-weight: normal;
-	font-size: 12pt;
+	color: #7db6e4;
+	font-weight: 400;
+	font-size: 10.5pt;
+}
+h4 {
+	margin: 0px;
+	color: #f7a4ac;
+	text-align: left;
+	margin-left: 22%;
+	font-weight: 600;
+	font-size: 14pt;
+	letter-spacing: 2px
+
 }
 
 ::-webkit-scrollbar {
@@ -197,11 +207,49 @@ section.mainbody-midsection {
 p.home-blurb {
 	margin-left: 25%;
 	margin-right: 25%;
-	color:#8b8D90;
+	color:#7d7e81;
 	font-size: 11pt;
-	text-align: center;
+	text-align: left;
 	letter-spacing: 0px;
 }
+
+p.announcements {
+	margin-left: 5%;
+	margin-right: 5%;
+	color:#7d7e81;
+	font-size: 11pt;
+	text-align: justify;
+	letter-spacing: 0px;
+}
+
+.speech-bubble { 
+
+	position: relative;
+	margin-left: 35%;
+	margin-right: 35%;
+	background: #f5f5f6; 
+	border-radius: 1.9em; 
+} 
+
+.speech-bubble:after { 
+	content: ''; 
+	position: absolute; 
+	bottom: 0; 
+	left: 50%; 
+	width: 0; 
+	height: 0; 
+	border: 20px solid transparent; 
+	border-top-color: #f5f5f6; 
+	border-bottom: 0; 
+	border-right: 0; 
+	margin-left: -10px; 
+	margin-bottom: -20px; 
+}
+
+tab { 
+	margin-left: 30px; 
+}
+
 div.info-buttons {
 	text-align: center;
 	display: inline-block;
@@ -586,7 +634,7 @@ div.work {
 	width: 10%;
 	/*background-color: #999999;*/
 	overflow: hidden;
-	height: 500px;
+	height: 300px;
 	margin-right: 15px;
 	margin-left: 15px;
 }

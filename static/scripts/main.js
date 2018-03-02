@@ -16,7 +16,7 @@ var Main = (function() {
 		"about":["about-info", "about-facilitators"],
 		"syllabus":["syllabus-header", "syllabus-timeline", "dropdown-basic", "dropdown-advanced"],
 		"labs":["labs-header", "labs-pipeline", "lab", "scrollpipeline", "scrolloutline"],
-		"projects":["projects-header", "projects-blurb", "projects-samples"]
+		"projects":["projects-header", "projects-blurb", "projects-samples", "projects-featured", "horiz-rule"]
 	}
 	var activeTab = "home";
 

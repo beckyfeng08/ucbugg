@@ -1,0 +1,93 @@
+HEADING LARGE: INTRODUCTION
+
+Welcome to the Paint Effects Lab!
+
+Paint effects are a handy library of built in geometry-creation algorithms in Maya that you can use to procedurally create any number of useful pre-textured objects, from rocks and cobblestones to buildings, flowers and trees! They help speed up the production process immensely, especially when creating a scene full of unique organic objects.
+
+In this lab, we’ll be creating and shading a paint effects tree for use with Renderman. The skills used here can be applied to any other paint effects object. 
+
+
+HEADING LARGE: CREATING THE TREE
+
+Open up a fresh scene in Maya, and create a grid-sized plane. Here, I’ve added some bumpiness to make it terrain-like, just for demonstration purposes. 
+
+pfx01.png
+
+Now, select your plane, and click Generate > Make Paintable. This will designate our plane as geometry on which Paint Effects objects can be generated. 
+
+pfx02.png
+
+Let’s open up the Paint Effects library. Go to Windows > General Editors > Content Browser. You will get a window showing a bunch of Maya’s built in resources. For this lab, we’ll be making a tree, so navigate to the TreesMesh category, and double click on oakWhiteMedium.mel to select it. 
+
+pfx03.png
+
+With the tool selected, feel free to close the Content Browser. To create a tree, simply click and drag on the surface of your plane to “paint” it on top. 
+
+pfx04.png
+
+Now, if you look at your outliner, you will notice that a “stroke” object has been created. Maya doesn’t view this as a mesh, so we need to convert it to a geometric object in order to shade it and make it show up when we render our scene. To do this, go to Modify > Convert > Paint Effects to Polygons. 
+
+pfx05.png
+
+You can now see a mesh group has been created. If you expand it, you’ll find two objects - one for the tree’s trunk and branches, and another for its leaves. I would recommend deleting the stroke object at this point to de-clutter, since it’s not useful anymore.
+
+pfx06.png
+
+Our tree has been turned into a mesh, and as a result its textures are now visible in the viewport.
+
+pfx07.png
+
+However, if we render using Renderman, we will find that the tree shows up grey. This is because the shaders assigned to the tree are built-in Maya shaders. In the next section, we will shade our tree using Renderman.
+
+HEADING LARGE: SHADING THE TREE
+
+Before we create our Renderman shaders, let’s go over the options here. If you would like to shade the tree using your own textures, that is perfectly fine. However, in this tutorial, I will use the built-in paint effects textures so that my rendered tree looks like the one I just created. Frankly, it’s much easier this way since the textures are already pre-matched to the object’s UV coordinates.
+
+HEADING MEDIUM: Finding the Built-in Textures
+
+Maya comes with a folder of textures for use with Paint Effects. First, we need to find where that folder is and copy the textures we want to a more easily-accessible location.
+Let’s begin by finding the bark shader in the attribute editor. Select the bark mesh object in the viewport, and then scroll through the tabs in the attribute editor until you find the one that ends with “shader.” Now, scroll down to its color attribute and click on the black arrow icon next to it. 
+
+pfx08.png
+
+Now, you’ll be taken to either a ramp or a file tab. If you are looking at a ramp tab, simply click on the file tab next to it. You should then click on the yellow file icon next to “Image Name”.
+
+pfx09.png
+
+Now, copy the file path of the image, and navigate to it in your finder (if you’re using a Mac) or file explorer (if you’re using a PC).
+
+pfx10.png
+
+On a mac, these textures are in a hidden folder, so to view it you’ll need to type Command+Shift+G, and enter the copied file path. 
+
+pfx11.png
+pfx12.png
+
+You can then create a new folder in a more convenient location on your computer and copy these texture files over to it. Since I use paint effects often, I copied the entire folder over. The images we’ll need in this tutorial are oakWhiteBark.tif and oakLeaf.tif. 
+If you look at the leaf shader in the attribute editor, you’ll see that the color and transparency values are both linked to the same file: oakLeaf.tif. This will come in handy later!
+
+pfx13.png
+
+Now, assign your tree’s trunk and leaves their own individual PxrSurface shader, and name them accordingly. 
+Set your trunk’s diffuse color attribute to the copied over version of oakWhiteBark.tif, and tweak the rest of the shader’s values to your liking. Personally, I think it’s fine to leave it as is. 
+Next, set your leaves’ diffuse color attribute to oakLeaf.tif, and tweak the rest of the values accordingly. I like to bump up the specular color a bit since they’re shiny. 
+You’ll notice since we applied a new shader our tree’s leaves have become rectangular: 
+
+pfx14.png
+
+The transparency channel of oakLeaf.tif is what made them leaf-shaped before, since it was wired into the previous shader’s transparency attribute. To mimic that with a PxrSurface shader, we will use the presence attribute. Scroll down to the Globals category in the attribute editor, and click the checkerboard icon near the Presence attribute to wire in oakWhiteBark.tif. 
+If we were to render our tree right now, we would discover that some leaves show up completely black, despite being lit:
+
+pfx15.png
+
+This is because the leaves are simple planes with a “front” side and a “back” side, determined by the normals of the surface. The leaves whose “back” sides are facing towards the camera show up black here. To fix this, go to the Advanced section of the leaf shader’s Diffuse attributes and select Double Sided.
+
+pfx16.png
+
+A quick render shows us that the leaves now look good. Yay!
+
+pfx17.png
+
+You now have a nicely shaded paint effects tree. Feel free to scroll through the paint effects library and create/shade any of the objects there using the steps in this tutorial. You can make cobblestones for a street, grass for a terrain, flowers for a vase, and lots more! 
+
+pfx18.png

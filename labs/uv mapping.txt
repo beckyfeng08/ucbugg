@@ -92,7 +92,8 @@ Maya’s Bonus Tools tab in the top bar can help with this.
  
 HEADING LARGE: USING THE AUTO UNWRAP UV TOOL
 
-The Auto Unwrap UV tool lets you have total control over where you would like to make cuts on the mesh to project.
+The Auto Unwrap UV tool lets you have total control over where you would like to make cuts on the mesh to project. You will need to download Bonus Tools and load the plugin into Maya to access this tool here:
+https://apps.autodesk.com/en/Detail/Index?id=8115150172702393827&appLang=en&os=Win64
 
 Let’s begin:
 

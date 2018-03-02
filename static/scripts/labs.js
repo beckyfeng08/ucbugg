@@ -9,11 +9,11 @@ allLabs = {
 	},
 	"modeling": {
 		"bugg": ["modeling 1", "modeling 2"],
-		"araknid": ["hard surface modeling", "organic modeling"]
+		"araknid": ["hard surface modeling", "organic modeling - dragon", "organic modeling - human"]
 	},
 	"rigging": {
 		"bugg": ["rigging 1", "rigging 2", "blend shapes", "skinning"],
-		"araknid": ["advanced rigging 1", "rigging guide"]
+		"araknid": ["advanced rigging", "rigging guide"]
 	},
 	"animation": {
 		"bugg": ["animation 1", "animation 2", "playblasts"],
@@ -24,11 +24,11 @@ allLabs = {
 		"araknid": ["hypershade"]
 	},
 	"lighting": {
-		"bugg": ["lighting"],
+		"bugg": ["lighting 1", "lighting 2"],
 		"araknid": []
 	},
 	"effects": {
-		"bugg": ["bifrost", "fluids", "cloth"],
+		"bugg": ["bifrost", "fluids", "cloth", "paint effects"],
 		"araknid": []
 	},
 	"post-production":  {
@@ -60,5 +60,6 @@ labLookup = {
 	"characteranimation": "character animation",
 	"basicmaterials": "basic materials",
 	"uvmapping": "uv mapping",
-	"shadingguide": "shading guide"
+	"shadingguide": "shading guide",
+	"painteffects": "paint effects"
 }
