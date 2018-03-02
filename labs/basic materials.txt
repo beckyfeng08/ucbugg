@@ -38,7 +38,7 @@ A crucial part of shading is determining how your object interacts with light. A
 
 We will use one of the default light rigs that come with Renderman's preset browser. Open up the preset browser by clicking this button on the Renderman tab: 
 
-preset_browser_on_tab.png
+preset_browser_on_shelf.png
 
 The Preset browser is a handy library of pre-made materials and light setups. We will be using the Three Point light rig. Right click on it, and click import. 
 
