@@ -10,7 +10,7 @@ When it comes to character animation, the standard playback speed is 24 frames p
 HEADING LARGE: MAYA FLUIDS AND PRESETS
 In Maya, effects such as fire, explosions, flames, and smoke are created using dynamic fluid simulations system called Maya Fluids. While this system can also create liquid fluids such as water, we recommend using Maya Bifrost system because it is a tool that is dedicated specifically to such simulations. You can find Bifrost tutorial in a separate UCBUGG lab. 
 In this lab we will quickly create firepit using a preset. We could also create fire from scratch, but that may require hours of work and tweaking of numerous settings before we can achieve an acceptable look. Let us start by familiarizing ourselves with the scene. In the file provided you have a firepit mesh, a log mesh, and a camera set up for rendering. Start by duplicating the log and arranging the new copies into the shape you like. Here is an example.
-fire_lab_1.png
+fire_lab_one.png
 
 HEADING LARGE: FLUID FROM SCRATCH
 All fluid simulations in Maya need a container within which the sim takes place. A container is a 3D boundary outside of which simulation cannot take place. This container is the main component of the simulation with the majority of the settings. It consists of voxels, which you can think of as the three-dimensional pixels – the basic units of a 3D space. Decreasing the size of voxels, which is the same as increasing their number, results in a higher quality of simulation at the expense of simulation and rendering speeds. 
