@@ -1,102 +1,29 @@
-<<<<<<< HEAD
 HEADING LARGE: INTRODUCTION
+Welcome to the fire lab! 
+Download the starter file here
 
-This lab will go over how to add fire and smoke very quickly using presets.
+FILE: fire.ma
 
-Start off by downloading this file:
+HEADING LARGE: A NOTE ON PLAYBACK SPEED
+When it comes to character animation, the standard playback speed is 24 frames per second. This ensures that the animation will play at the real-time speed, possibly at the expense of dropping some frames that the computer cannot display quickly enough. Simulation engines, however, depend on taking a state of the system in one frame and doing the math to get to the next frame. Getting to this next frame might take several seconds, minutes, or hours, so we need to change the playback speed to play every frame. Early on, however, your simulation may be fast enough to play even faster than 24 frames per second, so the motion will look too fast. To avoid this, we need to cap the max playback speed at 24 frames per second. Do this by going to Windows -> Settings -> Preferences -> Settings -> Time Slider -> Playback or clicking the running man and a gear icon at the bottom right of the screen. Set playback speed to Play Every Frame, and Max Playback Speed to 24 fps x 1. 
 
-FILE: fluids_lab_initial.ma
+HEADING LARGE: MAYA FLUIDS AND PRESETS
+In Maya, effects such as fire, explosions, flames, and smoke are created using dynamic fluid simulations system called Maya Fluids. While this system can also create liquid fluids such as water, we recommend using Maya Bifrost system because it is a tool that is dedicated specifically to such simulations. You can find Bifrost tutorial in a separate UCBUGG lab. 
+In this lab we will quickly create firepit using a preset. We could also create fire from scratch, but that may require hours of work and tweaking of numerous settings before we can achieve an acceptable look. Let us start by familiarizing ourselves with the scene. In the file provided you have a firepit mesh, a log mesh, and a camera set up for rendering. Start by duplicating the log and arranging the new copies into the shape you like. Here is my example.
+fire_lab_1.png
+
+HEADING LARGE: FLUID FROM SCRATCH
+All fluid simulations in Maya need a container within which the sim takes place. A container is a 3D boundary outside of which simulation cannot take place. This container is the main component of the simulation with the majority of the settings. It consists of voxels, which you can think of as the three-dimensional pixels – the basic units of a 3D space. Decreasing the size of voxels, which is the same as increasing their number, results in a higher quality of simulation at the expense of simulation and rendering speeds. 
+Create a fluid by switching to FX menu set, and then going to Fluids -> 3D Container -> Option Box. Deselect Add Emitter and apply and close. This creates an empty container which you now need to fill with an emitter. Since we want to emit from logs we need to add them as emitters. However, we should only emit from one mesh, not several, which means we should first Mesh -> Combine all the logs (but leave out the pit). Select the combined log mesh and delete history, freeze transformations, and center the pivot. In the Outliner select Fluid Container (fluid1) and the logs geometry, then click Fluids -> Add/Edit Contents -> Emit From Object -> Option Box. Make sure emitter type is set for surface, Apply and close. If you play the animation, the fire would neither behave like fire nor will it look like it. Since it will take forever to adjust everything to get the final look, we will use a preset instead, and apply it to our models.
 
 
-This file should contain a club that slowly turns under a floating ball. We're going to light the tip of the club on fire and have the flames lick around the floating ball.
+HEADING LARGE: FLUID FROM PRESET
+Import the preset by clicking Fluids -> Get Example -> Fluid. Navigate to the Fire folder under the Fluid Examples. Right-click on the Turbulent Flame and press import. We now have two fluid containers and two fluid emitters. Delete your original fluid container (fluid1) and original emitter (fluidEmitter1), which should be parented under the logs in the outliner. Select the newly created fluid container (Flame), select the logs mesh, click Fluids -> Add/Edit Contents -> Emit From Object. The preset fluid container now emits from the logs and the torus which was imported as a part of the preset. Delete the torus and the emitter parented under it. You can now render the simulation and see how it looks. 
 
-By now, hopefully you have completed the animation labs, and therefore know how to set your Playback Speed to "Real-Time (24fps)". (Hint: Google it).
-Animation.gif
+HEADING LARGE: MODIFICATIONS
+There are a few things you may want to adjust or learn about in case you need further modifications. Situate the container so that the bottom part of it is at the floor. You can adjust the look of the fire by selecting the container, going to the Attribute Editor, and under the FlameShape modifying parameters in the Shading tab. You can adjust the quality of flames by manipulating the Base Resolution under Container Properties at the top of the attributes. If it is greyed out, check Keep Voxels Square options. Selecting the fluidEmitter tab in the Attribute Editor will give you access to the emission parameters, one of the most useful of which is Rate (Percent), which you can adjust to modify the intensity of the flames. 
 
-HEADING LARGE: MAKING A FLUID FROM SCRATCH
-To start off, make sure the FX menu is selected on the upper left (F5). Do Fluids -> 3D container. This should create a wireframe box around. You can use the option box and look at the settings, but this is not necessary.
-Capture.png
-Select the ball and the fluid container box and do Fluids -> Add/Edit Contents -> Emit From Object. Look in the option box and make sure it matches mine.
-Capture2.png
-At this point, you must switch your playback speed to Play Every Frame (in your animation settings). This ensures that frames won't skip, and when one frame skips, the solver cannot evaluate the frame after it. Now play your simulation. This looks nothing like a fire. To see what it looks like rendered, we are going to use a default Maya renderer called Mental Ray. If you cannot get Mental Ray working, you can also use Renderman, but it takes excessively long for fire and isn't really worth how much better it looks.
+HEADING LARGE: LAB SUBMISSION
+To submit the lab, upload your file with completed simulation to the website. 
 
-<b>Mental Ray:</b>
-Go to Windows -> Settings/Preferences -> Plugin Manager
 
-Make sure Mayatomr.mll is loaded. It should come with Maya 2016 and other previous versions of Maya, but if you cannot find Mayatomr.mll, visit this link: https://knowledge.autodesk.com/support/mental-ray/downloads/caas/downloads/content/mental-ray-plugin-for-maya-2016.html?_ga=1.161103613.1315064163.1442705715
-
-If you have Maya 2017, you’ll need to download Mental Ray in a separate place, linked here: http://www.nvidia.com/object/nvidia-mental-ray-products.html
-
-Capture3.png
-Pick this option to open Render Settings
-Capture4.png
-Make sure your settings match mine.
-Capture5.png
-Press the Render button (circled). IPR button is right next to it.
-
-Your fluid should look like mine.
-Capture7.png
-Congrats! You made a basic fluid that looks nothing like a fire. We can tweak 50 settings for a while until it does, but instead, we'll copy a built-in example.
-
-HEADING LARGE: USING AN EXAMPLE
-
-Making a decent-looking fire out of the basic fluid settings is slow and really difficult if you don't know what you're doing. To avoid all that, we can save a bunch of time by using examples. Clean the fluids from the outliner until it looks like mine.
-Capture8.png
-
-Go to Fluids -> Get Example -> Fluid. Select the "Fire" folder on the left and select the TurbulentFlame.ma
-Capture9.png
-Middle-mouse drag the TurbulentFlame.ma onto your scene. Press play. You should see a flaming donut.
-Animation2.gif
-We want the fluid to also come from the ball at the tip of the stick. Select the fluid bounding box and the ball and do Fluids -> Add/Edit Contents -> Emit From Object like before. Move the bounding box up to be around the tip of the club and the floating ball. We no longer need the donut, so delete the things I have selected from the outliner. Notice the TurbulentFlame:Flame remains (our flame system), and stick -> ball now has a fluid emitter under it.
-Capture11.png
-You should see this.
-
-HEADING LARGE: MAKING THE BALL COLLIDE
-
-Select the floating ball and the fluid and do Fluids -> Make Collide. Your flames should now lick around the floating ball.
-
-Try rendering a frame and seeing what it looks like with Mental Ray.
-Capture12.png
-It still doesn't look like fire, but at least it behaves correctly.
-
-HEADING LARGE: TWEAKING SHADING
-
-In this step, we'll actually fiddle with fluid shader settings to make it look better. IPR comes in handy (the mental ray IPR button is right next to the render button).
-
-Open the fluid in the Attribute Editor. There are a bunch of dropdown menus. I'll go over some of the important ones, but you won't have to tweak most of them thanks to the example we stole.
-
-Container Properties - Increasing the resolution will yield a higher quality fire. Not important until we are done. Boundary should be self-explanatory
-Contents Method - Keeping everything on Dynamic Grid yields the best results.
-Display - You can tweak these things if your Viewport is chugging, but fluids aren't too hard on the viewport.
-Dynamic Simulation - some physical parameters. Don't need to tweak these for this lab. Fire shouldn't have viscosity or friction.
-Auto-resize - makes the bounding box fit your fluid automatically. Useful for explosions. Not useful for controlled flames.
-Contents Details - Have fun twiddling these if you like. Make sure you only change one thing at a time. Effects can very quickly go out of control.
-Shading - The important one we're about to tweak
-
-Now is a good time to turn IPR on. Draw a box around the fire and it will render. You can try different dropoff shapes, but I like Sphere.
-Notice Color is black, as it should be.
-Incandescence maps Temperature to a range from a pale yellow to black. Changing the ramp and the offset has an effect on color.
-
-Opacity maps Density to the spike curve. Basically, when the density is below the value of the spike, it is invisible. This is to prevent low-density areas of the flame from appearing. Also, the curve falls off because after heating up sufficiently, fluids become less dense and rise out of the fire. Try changing the shape of the curve and the offset.
-
-After tweaking Opacity and Density, I changed my fire to this:
-Capture14.png
-And if you can't figure it out, my settings look like this:
-Capture17.png
-
-HEADING LARGE: CACHING YOUR SIMULATION
-You have probably noticed by now that you can't scrub around your animation. This is because the fluid recalculates every time you press play. In order to fix it, select your fluid, go to nCache -> Create New Cache -> Maya Fluid. This will calculate once and save your calculation to a file so you can scrub through the time slider, and it saves even when you close the file. Only do this when you are happy with the simulation, ideally after turning up the resolution within Container Properties (see Step 4).
-
-HEADING MEDIUM: RENDERING YOUR FRAMES
-
-Mental Ray is fast enough with this basic scenario to actually render the whole simulation in a reasonable amount of time. But let's pretend we were doing this with Renderman. You only want the fire to render in Mental Ray so you can composite it later with After Effects. Select the fluid, and at the bottom of the channel box, go to the "Render" tab. Pick Layers and Create Layer from Selected. This creates a new Layer called Layer 1. Call this layer Fire.
-
-Make sure this layer is selected. Set your render image file format to OpenEXR. Go ahead and switch to the Rendering menu set. Do Render -> Batch Render.
-
-Open the rendered images as an image sequence in Photoshop. Tweak Exposure or Saturation if necessary, and render a video. Attach this video to your submission.
-
-Here is my result from this lab:
-fire_lab.mp4
-
-Here is my fire from lecture:
-fiyah.mp4
