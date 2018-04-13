@@ -29,7 +29,7 @@ hi-res-wrap.gif
 
 HEADING MEDIUM: nCLOTH SKIRT
 
-Go back to frame 1. Delete history on the skirt again. This time, select FX menu in the upper left drop down, and do nCloth -> Create nCloth.
+Go back to frame 1. Delete history on the skirt again. This time, select FX menu in the upper left drop down, select the skirt and press nCloth -> Create nCloth.
 
 Press play and watch what happens.
 
@@ -71,9 +71,7 @@ Quality Settings - If you have some very difficult cloth (tight pants, fast move
 HEADING MEDIUM: CACHING
 You have probably noticed by now that if you scrub around, you get this complaint: 
 Warning: Nucleus evaluation skipped, frame change too large
-This is because maya needs to calculate cloth sequentially frame by frame. To have it calculate once and save the calculation, select the cloth, go to nCache -> Create New Cache -> nObject. You can change settings if you're not lazy. Do this for both the skirt and the cape.
+This is because maya needs to calculate cloth sequentially frame by frame. To have it calculate once and save the calculation, select the cloth, go to nCache -> Create New Cache -> nObject. Do this for both the skirt and the cape.
 
 HEADING LARGE: SUBMISSION
-Playblast your cloth and include a video with your submission email. Here is mine:
-
-You don't have to make the turntable.
+Playblast your cloth and include a video with your submission.

@@ -22,12 +22,11 @@ As usual, it is important to keep the scene clean. Select everything except for 
 
 HEADING LARGE: CREATE SOLVER AND ATTACH EMITTERS
 Now we are finally ready to set up the liquid itself. There are several tools created for the simulation of water in Maya. In this lab we will use the newest and most robust simulation engine called Bifrost.
-Selects the cube in the bowl and go to Bifrost -> Liquid. This step is what actually creates the Liquid, and having the cube selected conveniently also makes the cube an emitter. Maya also draws a bounding box around each Bifrost liquid system, so the box should be around your cube now.
+Selects the cube in the bowl and go to Bifrost Fluids -> Liquid. This step is what actually creates the Liquid, and having the cube selected conveniently also makes the cube an emitter. Maya also draws a bounding box around each Bifrost liquid system, so the box should be around your cube now.
 Bifrost3.png
 
-Select the box in the tub, select the wireframe bounding box from the last step, and go to Bifrost -> Add -> Emitter. This will tell the Bifrost solver that in addition to the cube from the last step, this large box will also emit particles.
+Select the box in the tub, select the wireframe bounding box from the last step, and go to Bifrost Fluids -> Add -> Emitter. This will tell the Bifrost solver that in addition to the cube from the last step, this large box will also emit particles.
 
-Bifrost4.png
 Set your Playback Speed to play every frame and Max Playback Speed to 24 fps. Select the liquid again (either by clicking the bounding box or from the outliner) and press play. Notice a fast yellow and a slow green bars grow on the time slider from the beginning. The yellow bar reflects the frames that have been submitted to the solver. The green bar reflects the frames that have completed and cached. Now if you scrub through the green frames you can see their simulation. Whenever you change any attributes of the simulation, these will be recalculated, which will be indicated by the change of the green frames on the time slider to dark green. If you want to clear the cache manually, you can do so by clicking Bifrost -> Flush Scratch Cache.
 Bifrost6.png
 Select the large box and the small cube and turn visibility off in the channel box. You don't want these rendering.
@@ -42,7 +41,7 @@ The first thing you see is this.
 If you select Voxels, you get a slightly better representation of the final look, but it might make your graphics card cry (in other words, your viewport is going to lag when you scrub).
 The default Particle Display menu is pretty good, but you can change the Max Particle Display count if your display is chugging. I turned the Point Size up to 3.0. Also, notice the blue-to-white color ramp under "Color Channel Remap". Above that, it shows "Color Channel": Velocity. This means that the color of the particle is proportional to how fast it's moving. This is perhaps the most useful attribute to base the coloring scheme on. No need to change anything there.
 HEADING LARGE: MAKING THE BOWL AND TUB COLLIDE WITH WATER
-This step will finally stop the water from falling through everything. Select the tub and the liquid and click Bifrost -> Add -> Collider. Repeat the same with the bowl.
+This step will finally stop the water from falling through everything. Select the tub and the liquid and click Bifrost Fluids -> Add -> Collider. Repeat the same with the bowl.
 
 Don't forget the turn off the visibility of the cube after you are satisfied with the results.
 
@@ -54,7 +53,7 @@ You might notice that the water sticks to the bowl very strongly as it pours out
 Place a cube right where you want to redirect the liquid.
 Bifrost9.png
 
-Select both the cube and the liquid and click Bifrost -> Add -> Motion Field. Select bifrostMotionField in the outliner, go to the attribute editor and under the bifrostMotionFieldContainer tab go to the Field Direction attributes.
+Select both the cube and the liquid and click Bifrost Fluids -> Add -> Motion Field. Select bifrostMotionField in the outliner, go to the attribute editor and under the bifrostMotionFieldContainer tab go to the Field Direction attributes.
 
 Looking at the axis indicator on the lower left of the viewport, it looks like we want to push the water in the negative z and positive y directions. Set the direction to 0.00, 1.00, -1.00. Now the water should stick slightly less. Try playing with the direction magnitude.
 Bifrost10.png
@@ -63,21 +62,22 @@ Don't forget the turn off the visibility of the cube after you are satisfied wit
 HEADING LARGE: MODIFICATIONS
 
 HEADING MEDIUM: KILL PLANE
-This is useful if you don't want any particles falling down to infinity and crashing your computer. Select the liquid, and click Bifrost -> Add -> Kill Plane.
+This is useful if you don't want any stray particles falling down to infinity and crashing your computer. Select the liquid, and click Bifrost Fluids -> Add -> Kill Plane.
 Drag it down and put it under everything. Make it big enough to see, but Bifrost will assume it extends in all directions infinitely, so you don't need to make it huge.
 Bifrost13.png
 
 HEADING MEDIUM: TWEAKS
-Open your Liquid in the Attribute Editor and go to bifrostLiquidContainer1.
-There is a whole mess of options and parameters. Below are some of the most useful ones.
-Solver Attributes - Unchecking Enable will stop the solver entirely. You can also tweak the start frame and gravity. These should be self-explanatory.
-Resolution - You probably noticed that the water looks gooey and forms into large clumps and intersects with colliders. You can shrink these clumps by decreasing the Master Voxel Size. Be careful. Making this too low will make your calculation take forever, but it's the best thing you can do for more realistic water.
-<b>Foam</b> - If you want foam, you can enable it. Most of the defaults work pretty well
-<b>Caching</b> - if this is not checked, solver recalculates simulation every time you press play.
-<b>Viscosity</b> - Play with this if you need to make your fluid thicker and more sticky, for instance if you want it to behave like honey.
+There are many attributes that you can use to modify the simulation. Here are the most useful ones in the Attribute Editor.
+
+Under bifrostLiquidContainer1:
+Container Attributes -> Enable checkbox turns on and off the entire solver. 
+Simulation Attributes start frame is where you can set your simulation to start at a different time.
+
+Under bifrostLiquidPropertiesContainer1:
+Master Voxel Size - controls the resolution of the simulation. The smaller the voxel size is, the higher is the resolution. Be careful, making this too low can make even a few seconds of simulation to take several days to simulate, but this is the best thing you can do for a more realistic water. 
 
 HEADING LARGE: SUBMISSION
-Go to Bifrost -> Compute and Cache to Disk. Make sure Write Mode is set to Write All. This will save your simulation.
+Go to Bifrost Fluids -> Compute and Cache to Disk -> Option Box. Make sure Write Mode is set to Write All. This will save your simulation.
 Set the Master Voxel Size in the Resolution to 0.5 and play your whole simulation one last time. This will take a while. Take a nap.
 When you're done, make a playblast and attach it to your submission.
 
