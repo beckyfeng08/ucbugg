@@ -11,9 +11,7 @@ Because some of you may have already had experience in using Adobe After Effects
 
 HEADING LARGE: GETTING STARTED
 
-First, if you do not already have UC Berkeley's free Adobe CC software, please download that <a href='https://e5.onthehub.com/WebStore/ProductsByMajorVersionList.aspx?cmi_mnuMain_child=34109b7e-b838-dd11-abb7-0030485a6b08&cmi_mnuMain=49533fb2-fb34-e411-9403-b8ca3a5db7a1&ws=9abe8048-8117-e111-a703-f04da23e67f6&vsro=8'>here</a>. Once you have downloaded Adobe Creative Cloud, install Adobe After Effects (Ae). Note that previous versions of Ae are incompatible with the latest version. In other words, you will not be able to work on a project you made in After Effects CC 2015 in AE CC 2017.
-
-Second, if you do not have Quicktime installed, you will need to download that <a href='https://www.apple.com/quicktime/download/'>here</a>. All Mac computers should automatically have this installed, but to be able to render in H.264 on a Windows computer, you will need Quicktime.
+First, if you do not already have UC Berkeley's free Adobe CC software, please download that at https://software.berkeley.edu/
 
 When you have that completed, let's move on to opening up the program.
 
@@ -24,7 +22,7 @@ By default, when you open up the program, Ae should already be in the Standard w
 
 Screen Shot 2016-04-04 at 2.41.31 PM.png
 
-With a blank project, you will need to create a new composition from the menu bar: Composition > New Composition (Cmd+N). This opens up the Composition Settings window. Use the HDTV 1080p 24 preset, as you want to keep your film at a high quality 16:9 ratio. Name your composition as you wish (preferably the title of your film).
+With a blank project, you will need to create a new composition from the menu bar: Composition > New Composition. This opens up the Composition Settings window. Use the HDTV 1080p 24 preset, as you want to keep your film at a high quality 16:9 ratio. Name your composition as you wish (preferably the title of your film).
 
 Screen Shot 2016-04-04 at 2.38.31 PM.png
 
@@ -38,7 +36,7 @@ HEADING MEDIUM: TOOLBAR
 
 toolboop.png
 
-In the standard workspace, you can find the toolbar at the very top of your window, just above the "Effect Controls" tab. Here, you can also change your workspace options on the right of the toolbar. Unless you plan on creating a snazzy live-action effects and 3D animation film hybrid, you will likely only use the Select tool (V) and the Text tool (Cmd+T) buttons.
+In the standard workspace, you can find the toolbar at the very top of your window, just above the "Effect Controls" tab. Here, you can also change your workspace options on the right of the toolbar. Unless you plan on creating a snazzy live-action effects and 3D animation film hybrid, you will likely only use the Select tool and the Text tool buttons.
 
 
 HEADING MEDIUM: LAYER TRANSFORMATION ATTRIBUTES
@@ -88,15 +86,13 @@ When you import a file that has layers within it (such as Photoshop or Illustrat
 
 Screen Shot 2016-04-10 at 4.50.34 PM.png
 
-You should keep your "Import Kind" as Composition and "Layer Options" as Editable Layer Styles, as I have in the screenshot above.
+You should select your "Import Kind" as Composition and "Layer Options" as Editable Layer Styles, as I have in the screenshot above.
 
 Ultimately, what this does is create a new composition from your newly imported file. Since you only need to render one composition, this creates a composition inception; you can think of "FILM_NAME_HERE" as your master composition that you will be exporting and your .psd/.ai files as sub-compositions that lie within the master composition.
 
 When you have different layers within your Photoshop or Illustrator file, you can adjust them individually as you do your single image layer files; you simply need to double-click on the composition file. This will lead to another tab of your "Toggle Switches/Modes" that lists all the attributes of said composition.
 
 So, with this, first, I'm going to drag my new matte painting into my master composition, FILM_NAME_HERE, that I put my renderman_static_backgroud in.
-
-IF YOU ARE PLANNING TO HAVE MATTE PAINTINGS, PLEASE MAKE SURE THEY MAINTAIN A 16:9 RATIO.
 
 matte.gif
 
@@ -352,11 +348,11 @@ Screen Shot 2016-04-11 at 1.18.59 PM.png
 
 As you can see, all I did was change the x value of the position. Because it is a large x value, there will also be a long translation over time, and I am able to successfully have my clouds move slowly across the screen.
 
-Finally, as a last touch, I'm going to keep my flag on the screen rather than simply cutting my film short. Unfortunately, as the flag disappears at the same time with the fox, we are unable to time remap the PNG Sequence. The way I plan to approach this is to duplicate the file (Cmd+D). Now, on the new, duplicated layer, I'm going to add a layer mask in it by going to Layer > Mask > New Mask.
+Finally, as a last touch, I'm going to keep my flag on the screen rather than simply cutting my film short. Unfortunately, as the flag disappears at the same time with the fox, we are unable to time remap the PNG Sequence. The way I plan to approach this is to duplicate the file. Now, on the new, duplicated layer, I'm going to add a layer mask in it by going to Layer > Mask > New Mask.
 
 Screen Shot 2016-04-11 at 1.36.58 PM.png
 
-Now, I'm going to be utilizing the Toolbar menu again and select the Eraser Tool (Cmd+B).
+Now, I'm going to be utilizing the Toolbar menu again and select the Eraser Tool.
 
 Screen Shot 2016-04-11 at 1.39.00 PM.png
 
@@ -403,28 +399,7 @@ http://www.flashkit.com/soundfx/
 
 HEADING LARGE: EXPORTING THE FILE
 
-Now that you're finally finished with compositing your short, you should export your film. To do so, go to File > Export > Add to Render Queue. Here, a new tab should pop up next to your project file titled Render Queue.
-
-Screen Shot 2016-04-09 at 3.34.12 PM.png
-
-On Output Module, click the Lossless option, and a window like this should pop up:
-
-Screen Shot 2016-04-09 at 3.53.32 PM.png
-
-Make sure that your settings at this part match mine. Now, under Video Output, click on Format Options. Another window should pop up.
-
-Your Video Codec should match the dimensions of your short; change it to H.264.
-
-Screen Shot 2016-04-11 at 2.33.38 PM.png
-
-Now, under Audio Output Auto, click on the Format Options, and change your Audio Codec to AAC. Press "OK" when you're done.
-
-Screen Shot 2016-04-09 at 4.02.20 PM.png
-
-Now that you're back to your Render Queue, just click the blue "Render" button at the top to render your final composition.
-
-Screen Shot 2016-04-09 at 4.04.46 PM.png
-
+Now that you're finally finished with compositing your short, you should export your film. To do so, go to File > Export > Add to Adobe Media Encoder Queue. In the program that opens, make sure that the export settings for your file are using H.264 file format. Once you're done checking the options, select your filename in the Adobe Media Encoder and press enter or File -> Start Queue. 
 
 Finally, you should have your final movie rendered! If you have any trouble with playback, please let us know by posting on Piazza or e-mailing us at staff@ucbugg.com. Congratulations on finishing your first 3D animated film!
 This is how my final render turned out (with no sound):
