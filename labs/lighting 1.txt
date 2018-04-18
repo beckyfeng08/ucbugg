@@ -245,11 +245,13 @@ Also, if there’s too many lights and you’re just not sure what each light is
 Want to see the scene with all the lights on except for one or a few? Click the “Vis” box on the lights you don’t want to see and they’ll be turned off.
 
 
-HEADING LARGE: LIGHTING AN INDOOR HALLWAY
+HEADING LARGE: LIGHTING ROOMS
 
 FILE: lightingLab.ma
 
 This lab is meant to familiarize you with the lighting workspace. There is no one right way to light a scene, so feel free to experiment with your scene.
+
+HEADING MEDIUM: Scene 1
 
 Open up the scene, and the view from the 'whiteroom' camera.
 
@@ -274,6 +276,8 @@ wr3.png
 
 Notice that the light source for the magenta and cyan light are "missing" now. This is because the emission focus value no longer aligns with the size of the source.
 
+HEADING MEDIUM: Scene 2
+
 
 Now lets go next door, and open the viewport from the "ballroom" camera. There is one light present in the scene, with Camera Visibility set to OFF. Here we will mess with the scale of light.
 
@@ -293,7 +297,7 @@ br4.png
 
 With the same light source, while have the intensity set to 1 and exposure to 6, scaling the size of the light source changes the amount of light that bounces in the scene.
 
-
+HEADING MEDIUM: Scene 3
 
 Now go to the viewport for the "hallway" camera.
 
@@ -352,9 +356,7 @@ Once satisfied with your lighting do the following:
 
 Open PhotoShop
 
-DOWNLOAD PHOTOSHOP HERE
 <a href='https://software.berkeley.edu/adobe/'><b>DOWNLOAD PHOTOSHOP HERE</b>
->>>>>>> e2f3e33d8cbec41a3fef5b15a49e94e2339fb16f:labs/lighting 1.txt
 If you have PhotoShop installed on your computer follow this method:
 Save this EXR: Click File->Export File and save the corresponding EXR file somewhere you can access later. Open up the EXR in PhotoShop. A window should pop up, and you should select “As Transparency”. Now go to File->Export->Export As PNG. Now save that somewhere accessible, you will send this for grading.
 
