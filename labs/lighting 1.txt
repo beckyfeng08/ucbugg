@@ -247,7 +247,7 @@ Want to see the scene with all the lights on except for one or a few? Click the 
 
 HEADING LARGE: LIGHTING AN INDOOR HALLWAY
 
-FILE: lighting_lab.ma
+FILE: lightingLab.ma
 
 This lab is meant to familiarize you with the lighting workspace. There is no one right way to light a scene, so feel free to experiment with your scene.
 
