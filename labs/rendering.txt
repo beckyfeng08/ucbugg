@@ -7,7 +7,7 @@ rendermancontrols.PNG
 
 <li> 1. First, you want to make sure your image format is set to <b>OpenEXR</b>. Then, you should set your Frame/Animation ext to "<b>name#.ext</b>" so that you can render out more than one frame. Frame padding should be 4. Your renders will be named like "SceneThree_0001.exr"</li>
 <li> 2. Set your frame range to what you want to render out. </li>
-<li> 3. Make sure you have the camera you want to render in renderable cameras. If you are using Tractor and you have more than one renderable camera, <b>Tractor will render out a frame for each camera<b>, so you should click the little trash button for each camera you <b>do not want to render<b>. If you are using Google Cloud, the option for camera in the Zync settings will only show whatever cameras you have here for renderable camera so it is alright to have more than one renderable camera. </li>
+<li> 3. Make sure you have the camera you want to render in renderable cameras. If you are using Tractor and you have more than one renderable camera, <b>Tractor will render out a frame for each camera</b>, so you should click the little trash button for each camera you <b>do not want to render</b>. If you are using Google Cloud, the option for camera in the Zync settings will only show whatever cameras you have here for renderable camera so it is alright to have more than one renderable camera. </li>
 <li> 4. If you are rendering the final short, make sure your image size is set to HD 1080. If you are not rendering your final short, you can use HD720 or HD540 to submit some tests. </li>
 
 HEADING MEDIUM: SAMPLING AND DENOISING
@@ -33,33 +33,34 @@ Using Tractor on the lab machines causes some security issues for the department
         'Make /home/tmp Directory' on the next page.
 
 <b>STEP 3:</b> Open the terminal on the linux machines (Applications->System Tools->MATE Terminal). Type: <br>
-chmod 755 /home/tmp/YOUR_ACCOUNT <br> then press enter
+<b>chmod 755 /home/tmp/YOUR_ACCOUNT</b> <br><br>
+then press enter
 
 <b>STEP 4:</b> Go to your newly created directory by typing:
 <br> <b>cd /home/tmp/YOUR_ACCOUNT</b> 
 
 <b>STEP 5:</b> Create a new directory for tractor by typing:<br> 
-<b>mkdir tractor</b><br>
+<b>mkdir tractor</b><br><br>
  then pressing enter. 
 
 At this point, we have created a folder tractor to host our Maya project folder. Now we need to ensure tractor will have permissions to write, read and edit files here. 
 
 <b>STEP 6:</b> Type:<br>
-<b>chmod 777 tractor</b><br>
+<b>chmod 777 tractor</b><br><br>
 then press enter. 
 
 <b>STEP 7:</b> Copy your project files to the tractor directory. To access this directory from Finder, open up Finder, press CMD + SHIFT + G and type: <br>
-<b>/home/tmp/YOUR_ACCOUNT</b> <br>
+<b>/home/tmp/YOUR_ACCOUNT</b> <br><br>
 Make sure your project has it's own folder within tractor.
 
 <b>STEP 8:</b> Once your files have been transfered, go back to the terminal. If you have not quit out of the terminal and the terminal is still where it was during step 6, type 'cd tractor'. If you have quit out of the terminal, type 'cd home/tmp/YOUR_ACCOUNT/tractor'
 
-<b>STEP 9:</b> More permission commands, type each of the following commands in seperately. 
+<b>STEP 9:</b> More permission commands, type each of the following commands in seperately. <br>
 <li> <b>find . -type d -exec chmod 777 {} \;</b> </li>
 <li> <b>find . -type f -exec chmod 666 {} \;</b> </li>
 
 <b>STEP 10:</b> Type:<br>
-<b>umask 000</b><br>
+<b>umask 000</b><br><br>
 then press enter. NOT UNMASK, BUT "UMASK". This part is especially important so your renders don't fail in preflight. 
 
 <b>STEP 11:</b> Now you can reopen Maya. However, <b>you must open it via the terminal</b> in order for the permission settings we've changed above to work. This is why it was important to not have any Maya instances open before. To open Maya via the terminal, type "/Applications/Autodesk/maya2017/Maya.app/Contents/bin/maya" then press enter. 
