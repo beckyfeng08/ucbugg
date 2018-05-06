@@ -33,7 +33,7 @@ body {
     position: relative;
     text-align: center;
     color: white;
-    font-family: 'Helvetica Neue','Open Sans',  Helvetica, Arial, sans-serif;
+    font-family: 'Yantramanav', 'Helvetica Neue','Open Sans',  Helvetica, Arial, sans-serif;
 
 }
 .centered {
@@ -41,8 +41,10 @@ body {
     position: absolute;
     top: 47%;
     left: 50%;
-    font-family: 'Helvetica Neue','Open Sans',  Helvetica, Arial, sans-serif;
-
+	color: #7db6e4;
+	font-weight: 400;
+	font-size: 15pt;
+	letter-spacing: 2px;
     transform: translate(-50%, -50%);
     font-size: 24px;
 }
