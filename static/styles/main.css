@@ -1,24 +1,35 @@
-@import url('https://fonts.googleapis.com/css?family=Yantramanav:300,400,700');
+@font-face {
+  font-family: 'AganeRoman';
+  src: url('../src/fonts/Agane/Agane-Roman-Sign.ttf') format('truetype');
+}
 
+@font-face {
+  font-family: 'AganeBold';
+  src: url('../src/fonts/Agane/Agane-Bold-Sign.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'AganeLight';
+  src: url('../src/fonts/Agane/Agane-Light.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'AganeExtraBold';
+  src: url('../src/fonts/Agane/Agane-ExtraBold-Sign.ttf') format('truetype');
+}
 
 body {
 	margin:0px;
-	font-family: 'Yantramanav','Helvetica Neue', 'Open Sans',  Helvetica, Arial, sans-serif;
-	letter-spacing: 2px;
+	font-family: 'AganeRoman','Source Sans Pro','Helvetica Neue', 'Open Sans',  Helvetica, sans-serif;
 	overflow: hidden;
-	/*height: 100%;*/
-	/*width: 100%;*/
-	/*min-height: 2000px;*/
-	background-color: #e1d8d7; /* For browsers that do not support shit */
-	background-image: url("../images/gradient-bg.svg");
-	background-size: 100%;
-	background: -webkit-linear-gradient(45deg, #d6eff8, #e1c8c7); /* For Android? */
-	background: -webkit-linear-gradient(left bottom, #d6eff8, #e1c8c7); /* For Safari 5.1 to 6.0 */
-	background: -o-linear-gradient(top right, #d6eff8, #e1c8c7); /* For Opera 11.1 to 12.0 */
-	background: -moz-linear-gradient(top right, #d6eff8, #e1c8c7); /* For Firefox 3.6 to 15 */
-	background: linear-gradient(to top right, #d6eff8, #e1c8c7); /* Standard syntax */
+  background-color: #e1c8c7;
+  background-image: url("../images/gradient-bg.svg");
+  background-size: 100%;
+  background: -webkit-linear-gradient(45deg, #d6eff8, #e1c8c7); /* For Android? */
+  background: -webkit-linear-gradient(left bottom, #d6eff8, #e1c8c7); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(top right, #d6eff8, #e1c8c7); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(top right, #d6eff8, #e1c8c7); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to top right, #d6eff8, #e1c8c7); /* Standard syntax */
 	background-attachment: fixed;
-	
+
 
 	scrollbar-face-color: #000000;
 	scrollbar-shadow-color: #2D2C4D;
@@ -28,23 +39,28 @@ body {
 	scrollbar-track-color: transparent;
 	scrollbar-arrow-color: transparent;
 }
+boddy {
+  background-image: url("../images/gradient-bg.svg");
+  background-size: 100%;
+  background: -webkit-linear-gradient(45deg, #d6eff8, #e1c8c7); /* For Android? */
+  background: -webkit-linear-gradient(left bottom, #d6eff8, #e1c8c7); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(top right, #d6eff8, #e1c8c7); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(top right, #d6eff8, #e1c8c7); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to top right, #d6eff8, #e1c8c7); /* Standard syntax */
+
+}
 
 .container {
     position: relative;
     text-align: center;
     color: white;
-    font-family: 'Yantramanav', 'Helvetica Neue','Open Sans',  Helvetica, Arial, sans-serif;
-
 }
 .centered {
 	color: #7db6e4;
     position: absolute;
     top: 47%;
     left: 50%;
-	color: #7db6e4;
-	font-weight: 400;
-	font-size: 15pt;
-	letter-spacing: 2px;
+		color: #7db6e4;
     transform: translate(-50%, -50%);
     font-size: 24px;
 }
@@ -66,13 +82,27 @@ div.navbar {
     z-index: 2;
     background: transparent !important;
 }
+div.nav-left{
+  padding: 1%;
+  color: #777777;
+  position: absolute;
+  margin-left: 8%;
+}
+div.nav-ucbugg{
+  margin-left: 5px;
+  float: left;
+  font-size: 32px;
+}
+div.nav-3dma{
+  margin-left: 10px;
+  float: left;
+  font-size: 15px;
+  text-align: left;
+}
 
 img.logo {
-	display: inline-block;
-	position: absolute;
 	height: 30px;
-	left: 30px;
-	top: 15px;
+  float: left;
 }
 div.tabs {
     text-align: center;
@@ -148,10 +178,8 @@ div#about{
 p {
 	margin: 0px;
 	text-align: center;
-	font-size: 6pt;
-	font-weight: normal;
 	color: #6d6f77;
-    z-index: 2;
+  z-index: 2;
 
 }
 img.tab-image {
@@ -162,9 +190,7 @@ img.tab-image {
 section.heading {
 	text-align: center;
 	padding: 50px;
-	/*padding-top: 120px;*/
 	padding-bottom: 20px;
-	letter-spacing: 8px;
 }
 h1 {
 	margin: 0px;
@@ -177,19 +203,16 @@ h1 {
 	letter-spacing: 10px
 }
 h2 {
-	font-family: 'Helvetica Neue';
 	margin: 0px;
 	padding: 0px;
-	color: #fefeff;
-	font-size: 22pt;
-	letter-spacing: 5px;
+	color: #ffffff;
+	font-size: 24pt;
 }
 h3 {
 	margin: 0px;
 	color: #7db6e4;
 	font-weight: 400;
 	font-size: 15pt;
-	letter-spacing: 2px;
 }
 h4 {
 	margin: 0px;
@@ -203,7 +226,7 @@ h4 {
 }
 
 ::-webkit-scrollbar {
-    width: 0px;   remove scrollbar space 
+    width: 0px;   remove scrollbar space
     display: none;
 	/*transform: translateY(-63px);*/
 }
@@ -230,50 +253,52 @@ section.mainbody-midsection {
 	min-height: 35%;
 }
 p.home-blurb {
-	margin-left: 25%;
-	margin-right: 25%;
-	color:#686970;
-	font-size: 12pt;
+	padding: 10px;
+	min-width: 740px;
+  max-width: 840px;
+	margin: auto;
+	color:#8b8D90;
+	font-size: 14pt;
+	line-height: 26px;
 	text-align: left;
-	letter-spacing: 0.5px;
-	font-weight: 300;
 }
 
 p.announcements {
 	margin-left: 5%;
 	margin-right: 5%;
 	color:#73747a;
-	font-size: 11pt;
+	font-size: 14pt;
 	text-align: justify;
 	letter-spacing: 0px;
+	overflow: auto;
 }
 
-.speech-bubble { 
-
+.speech-bubble {
+	overflow: auto;
 	position: relative;
 	margin-left: 35%;
 	margin-right: 35%;
-	background: #f5f5f6; 
-	border-radius: 1.9em; 
-} 
-
-.speech-bubble:after { 
-	content: ''; 
-	position: absolute; 
-	bottom: 0; 
-	left: 50%; 
-	width: 0; 
-	height: 0; 
-	border: 20px solid transparent; 
-	border-top-color: #f5f5f6; 
-	border-bottom: 0; 
-	border-right: 0; 
-	margin-left: -10px; 
-	margin-bottom: -20px; 
+	background: #f5f5f6;
+	border-radius: 1.9em;
 }
 
-tab { 
-	margin-left: 30px; 
+.speech-bubble:after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	width: 0;
+	height: 0;
+	border: 20px solid transparent;
+	border-top-color: #f5f5f6;
+	border-bottom: 0;
+	border-right: 0;
+	margin-left: -10px;
+	margin-bottom: -20px;
+}
+
+tab {
+	margin-left: 30px;
 }
 
 div.info-buttons {
@@ -408,13 +433,11 @@ div.about {
 }
 p.about-text {
 	display:inline-block;
-	font-size: 12pt;
-	font-weight: 300;
+	font-size: 14pt;
 	width: 60%;
 	vertical-align: middle;
-	padding-left: 3%; 
-	padding-right: 3%; 
-	letter-spacing: 0.5px;
+	padding-left: 3%;
+	padding-right: 3%;
 	color: #8b8D90;
 	margin-top: 20px;
 	text-align: left;
@@ -426,8 +449,8 @@ img.about {
 	width: 30%;
 	vertical-align: middle;
 	padding: 20px;
-	padding-left: 3%; 
-	padding-right: 3%; 
+	padding-left: 3%;
+	padding-right: 3%;
 }
 
 #labs-pipeline {
@@ -470,7 +493,7 @@ div.wide {
 	width: 29%;
 }
 div.pipeline-bubble, div.pipeline-header {
-	display: block; 
+	display: block;
 	height: 90%;
 	width: auto;
 	background-color: #f1f1f2;
@@ -571,7 +594,6 @@ p.lab {
 	margin-top: 10px;
 	margin-bottom: 10px;
 	text-align: left;
-	letter-spacing: 1px;
 	color: #97999b;
 }
 
@@ -792,7 +814,7 @@ a.assignment {
 	margin-right: 0%;
 	font-weight: normal;
 	padding-left: 20px;
-	padding-right: 20px; 
+	padding-right: 20px;
 
 }
 a.submit-button, button.scrollup {
