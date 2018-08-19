@@ -86,7 +86,7 @@ div.nav-left{
   padding: 1%;
   color: #777777;
   position: absolute;
-  margin-left: 8%;
+  margin-left: 1%;
 }
 div.nav-ucbugg{
   margin-left: 5px;
@@ -125,6 +125,7 @@ div.tab {
 	background-color: #e2dad8;
 }*/
 div.navbar-dropdown {
+	font-size: 10px;
 	padding: 10px;
 	display: none;
 	vertical-align: middle;
@@ -258,7 +259,7 @@ p.home-blurb {
   max-width: 840px;
 	margin: auto;
 	color:#8b8D90;
-	font-size: 14pt;
+	font-size: 12pt;
 	line-height: 26px;
 	text-align: left;
 }
@@ -267,7 +268,7 @@ p.announcements {
 	margin-left: 5%;
 	margin-right: 5%;
 	color:#73747a;
-	font-size: 14pt;
+	font-size: 12pt;
 	text-align: justify;
 	letter-spacing: 0px;
 	overflow: auto;
@@ -433,7 +434,7 @@ div.about {
 }
 p.about-text {
 	display:inline-block;
-	font-size: 14pt;
+	font-size: 12pt;
 	width: 60%;
 	vertical-align: middle;
 	padding-left: 3%;
