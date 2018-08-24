@@ -1,26 +1,9 @@
-@font-face {
-  font-family: 'AganeRoman';
-  src: url('../src/fonts/Agane/Agane-Roman-Sign.ttf') format('truetype');
-}
-
-@font-face {
-  font-family: 'AganeBold';
-  src: url('../src/fonts/Agane/Agane-Bold-Sign.ttf') format('truetype');
-}
-@font-face {
-  font-family: 'AganeLight';
-  src: url('../src/fonts/Agane/Agane-Light.ttf') format('truetype');
-}
-@font-face {
-  font-family: 'AganeExtraBold';
-  src: url('../src/fonts/Agane/Agane-ExtraBold-Sign.ttf') format('truetype');
-}
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
 
 body {
 	margin:0px;
-	font-family: 'AganeRoman','Source Sans Pro','Helvetica Neue', 'Open Sans',  Helvetica, sans-serif;
+	font-family: 'Source Sans Pro','Helvetica Neue','Open Sans', Helvetica, sans-serif;
 	overflow: hidden;
-
 }
 boddy {
   background-image: url("../images/gradient-bg.svg");
@@ -96,7 +79,6 @@ div.tabs {
 
 }
 div.tab {
-	background-color: #f7f7f7;
 	display: inline-block;
 	width: 80px;
 	height: 62px;
@@ -175,13 +157,15 @@ p {
 
 }
 img.tab-image {
-	height:25px;
+	padding: 4px;
+	border-radius: 5px;
+	background-color: #e3e3e3;
+	height:28px;
 	z-index: 2;
 }
 img.home-work {
-
-	margin-right: 20px;
-	border-radius: 6px;
+	margin-right: 30px;
+	border-radius: 10px;
 }
 section.heading {
 	text-align: center;
@@ -371,7 +355,7 @@ div.fox-graphic {
 
 div.facilititty {
 	display: inline-block;
-	width: 18%;
+	width: 15%;
 	margin-bottom: 50px;
 	margin-top: 50px;
 }
