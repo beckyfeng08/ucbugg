@@ -28,7 +28,6 @@ var Main = (function() {
 				if (tab === activeTab) {
 					$("#" + tabs[tab][i]).show(switchSpeed);
 					$("#" + tab + "-image").attr("src", "images/menu bar icons/hover-"+tab+".svg");
-					$("#" + tab).css('background-color', 'transparent');
 				}
 				else {
 					$("#" + tabs[tab][i]).hide(switchSpeed);

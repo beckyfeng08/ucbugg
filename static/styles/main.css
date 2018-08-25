@@ -66,7 +66,7 @@ div.nav-3dma{
 
 img.logo {
 	height: 30px;
-  float: left;
+  	float: left;
 }
 div.tabs {
     text-align: center;
@@ -81,10 +81,9 @@ div.tabs {
 div.tab {
 	display: inline-block;
 	width: 80px;
-	height: 62px;
+	height: 70px;
 	margin-left: 20px;
 	margin-right: 20px;
-	padding-bottom: 10px;
 	padding-top: 10px;
     text-align: center;
     vertical-align: top;
@@ -93,14 +92,13 @@ div.tab:hover {
 	background-color: #e2dad8;
 }
 div.navbar-dropdown {
-	font-size: 10px;
+	font-size: 11px;
 	padding: 10px;
 	display: none;
 	vertical-align: middle;
 	background-color: #e2dad8;
 }
 p.tab-text {
-	padding-bottom: 7px;
 	font-size: 10px;
 
 }
@@ -120,7 +118,7 @@ div.blue-box-region {
 	text-align: center;
 	left:50%;
 	width: 600px;
-	height: 63px;
+	height: 70px;
 	z-index: -2;
 	opacity: 1;
 	position: absolute;
@@ -132,7 +130,7 @@ div.blue-box {
 	display: block;
 	position: absolute;
 	width: 80px;
-	height: 63px;
+	height: 70px;
 	z-index: -1;
 	left: 0px;
 }
