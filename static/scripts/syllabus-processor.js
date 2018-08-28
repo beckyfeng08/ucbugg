@@ -11,6 +11,7 @@ var updateSyllabus = function(type) {
 		syllabusType = type;
 	}
 	updateHash("syllabus" + syllabusType);
+	//updateHash("syllabus.csv");
 	$("#syllabus-type").html(syllabusType.toUpperCase() + " UCBUGG");
 	updateContent();
 	// console.log(currentDate);
