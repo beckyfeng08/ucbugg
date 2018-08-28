@@ -4,6 +4,7 @@ var currentDate = "";
 var activeDate = "";
 var syllabusObj = {};
 
+// this is called when Syllabus is clicked. duh.
 var updateSyllabus = function(type) {
 	setCurrentDate();
 	if (type in syllabusTypes) {
@@ -68,7 +69,7 @@ var setInfo = function(date) {
 
 var updateContent = function() {
 	var onSuccess = function(data) {
-		// console.log(data);
+		//console.log(data);
 		syllabusObj = data;
 		$("#syllabus-timeline").empty();
 		var keys = Object.keys(data);

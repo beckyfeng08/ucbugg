@@ -9,7 +9,7 @@ apiUrl = window.location.origin + "/";
 * @return {None}
 */
 var makeGetRequest = function(url, responseType, onSuccess, onFailure) {
-  // console.log(apiUrl + url);
+   //console.log(apiUrl + url);
    $.ajax({
        type: 'GET',
        url: apiUrl + url,
