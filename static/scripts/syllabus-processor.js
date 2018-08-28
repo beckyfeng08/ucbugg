@@ -104,14 +104,14 @@ var updateContent = function() {
 			setInfo(keys[i]);
 		}
 		// console.log(keys);
-		$("#row" + collapseDate(activeDate)).css('background-color', "rgba(98, 170, 238, 0.09)");
+		$("#row" + collapseDate(activeDate)).css('background-color', "rgba(98, 170, 238, 0.79)");
 		$("#row" + collapseDate(activeDate)).children().children().css('color', "#fcfcfd");
 		$("#due-dates" + collapseDate(activeDate)).children().css('color', "#313132");
 		$("#due-dates" + collapseDate(activeDate)).find(".assignment").css('background-color', "#DAE0DC");
 		$("#row" + collapseDate(activeDate)).find(".date").css('font-weight', "bold");
 		// $("#row" + collapseDate(activeDate)).find("#icon").find(".weeknum").css('font-size', "16pt");
 		$(".submit-button").css('color', '#fcfcfd');
-		$("#submit"+collapseDate(activeDate)).css('background-color', "#62aaee");
+		$("#submit"+collapseDate(activeDate)).css('background-color', "#2d8de8");
 		$("#submit"+collapseDate(activeDate)).css('font-weight', "bold");
 		$("#submit"+collapseDate(activeDate)).attr('href', data[activeDate]['Submit Link']);
 		// $("#due-dates" + collapseDate(activeDate)).css('color', "#212122");
