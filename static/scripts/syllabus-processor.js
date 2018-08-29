@@ -10,8 +10,13 @@ var updateSyllabus = function(type) {
 	if (type in syllabusTypes) {
 		syllabusType = type;
 	}
+<<<<<<< HEAD
 	updateHash("syllabus" + syllabusType);
 	//updateHash("syllabus.csv");
+=======
+	//updateHash("sylfall2018" + syllabusType);//nothing
+	//updateHash("syllabus" + syllabusType);
+>>>>>>> syllabus-temp
 	$("#syllabus-type").html(syllabusType.toUpperCase() + " UCBUGG");
 	updateContent();
 	// console.log(currentDate);
@@ -70,7 +75,11 @@ var setInfo = function(date) {
 
 var updateContent = function() {
 	var onSuccess = function(data) {
+<<<<<<< HEAD
 		//console.log(data);
+=======
+		console.log(data);
+>>>>>>> syllabus-temp
 		syllabusObj = data;
 		$("#syllabus-timeline").empty();
 		var keys = Object.keys(data);
