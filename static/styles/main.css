@@ -38,6 +38,7 @@ a {
    box-sizing:border-box;
 }
 div.navbar {
+	background-color: #f7f7f7;
 	position: fixed;
 	min-width: 980px;
 	width:100%;
@@ -69,6 +70,7 @@ img.logo {
   	float: left;
 }
 div.tabs {
+	background-color: #f7f7f7;
     text-align: center;
     display: inline-block;
     cursor: pointer;
