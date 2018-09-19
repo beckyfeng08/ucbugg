@@ -2,7 +2,7 @@
 
 body {
 	margin:0px;
-	font-family: 'Avenir Next','Avenir'Source Sans Pro','Helvetica Neue','Open Sans', Helvetica, sans-serif;
+	font-family: 'Avenir Next','Avenir','Source Sans Pro','Helvetica Neue','Open Sans', Helvetica, sans-serif;
 	overflow: hidden;
 	background: -webkit-linear-gradient(45deg, #d6eff8, #e1c8c7); /* For Android? */
 	background: -webkit-linear-gradient(left bottom, #d6eff8, #e1c8c7); /* For Safari 5.1 to 6.0 */
