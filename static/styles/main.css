@@ -2,18 +2,16 @@
 
 body {
 	margin:0px;
-	font-family: 'Source Sans Pro','Helvetica Neue','Open Sans', Helvetica, sans-serif;
+	font-family: 'Avenir Next','Avenir'Source Sans Pro','Helvetica Neue','Open Sans', Helvetica, sans-serif;
 	overflow: hidden;
+	background: -webkit-linear-gradient(45deg, #d6eff8, #e1c8c7); /* For Android? */
+	background: -webkit-linear-gradient(left bottom, #d6eff8, #e1c8c7); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(top right, #d6eff8, #e1c8c7); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(top right, #d6eff8, #e1c8c7); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(to top right, #d6eff8, #e1c8c7); /* Standard syntax */
 }
 boddy {
-  background-image: url("../images/gradient-bg.svg");
   background-size: 100%;
-  background: -webkit-linear-gradient(45deg, #d6eff8, #e1c8c7); /* For Android? */
-  background: -webkit-linear-gradient(left bottom, #d6eff8, #e1c8c7); /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(top right, #d6eff8, #e1c8c7); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(top right, #d6eff8, #e1c8c7); /* For Firefox 3.6 to 15 */
-  background: linear-gradient(to top right, #d6eff8, #e1c8c7); /* Standard syntax */
-
 }
 
 .container {
@@ -38,17 +36,19 @@ a {
    box-sizing:border-box;
 }
 div.navbar {
-	background-color: #f7f7f7;
+	background-color: #f3e9e8;
 	position: fixed;
 	min-width: 980px;
 	width:100%;
 	margin: 0px;
-	padding: 0px;
     text-align: center;
     z-index: 2;
+
 }
 div.nav-left{
+  height: 100%;
   padding: 1%;
+  padding-top: 1.5%;
   color: #777777;
   position: absolute;
   margin-left: 1%;
@@ -56,7 +56,7 @@ div.nav-left{
 div.nav-ucbugg{
   margin-left: 5px;
   float: left;
-  font-size: 32px;
+  font-size: 30px;
 }
 div.nav-3dma{
   margin-left: 10px;
@@ -66,11 +66,10 @@ div.nav-3dma{
 }
 
 img.logo {
-	height: 30px;
+	height: 32px;
   	float: left;
 }
 div.tabs {
-	background-color: #f7f7f7;
     text-align: center;
     display: inline-block;
     cursor: pointer;
@@ -78,17 +77,19 @@ div.tabs {
 #home {
 	max-width: 840px;
 	margin:auto;
-
 }
 div.tab {
 	display: inline-block;
 	width: 80px;
-	height: 70px;
+	height: 80px;
 	margin-left: 20px;
 	margin-right: 20px;
-	padding-top: 10px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+
     text-align: center;
     vertical-align: top;
+    transition: 0.3s;
 }
 div.tab:hover {
 	background-color: #e2dad8;
@@ -102,21 +103,21 @@ div.navbar-dropdown {
 }
 p.tab-text {
 	font-size: 10px;
-
 }
 div.home-col {
+	color: #3e3f40;
 	padding:1%;
+	padding-right: 4%;
 	float: left;
 	width: 25%;
 	min-height: 350px;
 	text-align: left;
-	overflow: auto;
+	overflow: hidden;
 }
 div.navbar-dropdown:hover {
 	background-color: #d4eefc;
 }
 div.blue-box-region {
-	/*background: #ff0000;*/
 	text-align: center;
 	left:50%;
 	width: 600px;
@@ -125,14 +126,13 @@ div.blue-box-region {
 	opacity: 1;
 	position: absolute;
 	transform: translateX(-300px);
-	border-bottom: .25px solid #d3c5d7;
 }
 div.blue-box {
 	background: #d4eefc;
 	display: block;
 	position: absolute;
 	width: 80px;
-	height: 70px;
+	height: 80px;
 	z-index: -1;
 	left: 0px;
 }
@@ -152,7 +152,7 @@ div#about{
 }*/
 
 p {
-	color: #6d6f77;
+  color: #646669;
   z-index: 2;
 
 }
@@ -160,7 +160,7 @@ img.tab-image {
 	padding: 4px;
 	border-radius: 5px;
 	background-color: #e3e3e3;
-	height:28px;
+	height:40px;
 	z-index: 2;
 }
 img.home-work {
@@ -222,17 +222,22 @@ h5 {
 	overflow: hidden;
 }
 div.mainbody {
+	z-index: -100;
 	overflow: -moz-scrollbars-none;
 	-ms-overflow-style: none;
 	overflow: auto;
-	margin-top:63px;
+	padding-top:83px;
 	position: absolute;
 	display: block;
 	width:100%;
 	height: 100%;
-	padding-top: 20px;
 	text-align: center;
 	/*overflow:hidden;*/
+	background: -webkit-linear-gradient(45deg, #d6eff8, #e1c8c7); /* For Android? */
+	background: -webkit-linear-gradient(left bottom, #d6eff8, #e1c8c7); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(top right, #d6eff8, #e1c8c7); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(top right, #d6eff8, #e1c8c7); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(to top right, #d6eff8, #e1c8c7); /* Standard syntax */
 }
 section.mainbody-midsection {
 	text-align: center;
@@ -241,7 +246,7 @@ section.mainbody-midsection {
 	min-height: 35%;
 }
 p.home-blurb {
-	color: #000000;
+	color: #3e3f40;
 	padding: 10px;
 	min-width: 740px;
   	max-width: 840px;
@@ -252,7 +257,7 @@ p.home-blurb {
 }
 p.home-colm {
 	padding: 10px;
-	color: #000000;
+	color: #3e3f40;
 }
 
 
@@ -287,9 +292,6 @@ p.announcements {
 	margin-bottom: -20px;
 }
 
-tab {
-	margin-left: 30px;
-}
 
 div.info-buttons {
 	text-align: center;
@@ -415,6 +417,10 @@ img.contact-icon {
 img.contact-icon:hover {
 	background: #d4eefc;
 }
+img.group {
+	width: 45%;
+	border-radius: 150px;
+}
 a.nothing {
 	width: 0px;
 	height: 0px;
@@ -429,7 +435,7 @@ p.about-text {
 	vertical-align: middle;
 	padding-left: 3%;
 	padding-right: 3%;
-	color: #8b8D90;
+	color: #646669;
 	margin-top: 20px;
 	text-align: left;
 	margin-bottom: 20px;
@@ -585,7 +591,7 @@ p.lab {
 	margin-top: 10px;
 	margin-bottom: 10px;
 	text-align: left;
-	color: #97999b;
+	color: #646669;
 }
 
 h6.lab {
@@ -676,8 +682,8 @@ div.work {
 	/*background-color: #999999;*/
 	overflow: hidden;
 	height: 300px;
-	margin-right: 15px;
-	margin-left: 15px;
+	margin-right: 7px;
+	margin-left: 7px;
 }
 img.projimg {
 	position: absolute;

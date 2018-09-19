@@ -36,7 +36,9 @@ var Main = (function() {
 			}
 		}
 	   	$("#blue-box").animate({left:$("#"+activeTab).position().left - $("#blue-box-region").position().left + 20 + "px"}, switchSpeed+200);
-		if (activeTab === "labs") {
+		if (activeTab === "home") {
+			$("#blue-box").animate({left:$("#"+activeTab).position().left - $("#blue-box-region").position().left + 0 + "px"}, 0);
+		} else if (activeTab === "labs") {
 			window.setTimeout(correctPipelines, switchSpeed);
 			updateHash("labs");
 		} else if (activeTab === "syllabus") {
