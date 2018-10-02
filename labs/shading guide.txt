@@ -8,8 +8,7 @@ https://rmanwiki.pixar.com/display/REN/PxrSurface+in+Maya
 
 
 
-https://rmanwiki.pixar.com/display/REN/Pixar+Patterns
-
+https://rmanwiki.pixar.com/display/RFM/Pixar+Patterns
 
 
 https://rmanwiki.pixar.com/display/REN/Using+Displacement

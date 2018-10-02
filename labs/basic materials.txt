@@ -102,8 +102,7 @@ frak.png
 
 After you choose, you’ll likely have some options to customize that pattern. Play with values and watch the preview image until you’re happy with the result. Explanations for these attributes can often be found through online resources like this: 
 
-https://rmanwiki.pixar.com/display/REN/Pixar+Patterns
-
+https://rmanwiki.pixar.com/display/RFM/Pixar+Patterns
 
 
 You can change how often your texture repeats over your material using the place2dTexture tab.
@@ -141,6 +140,8 @@ Remember! After you’ve made your material for your object, delete any addition
 HEADING LARGE: HOMEWORK
 
 Using the materials you learned above, model and texture a sharpened pencil. You’ll need to include 5 different materials and keep in mind aspects like roughness as well as color.
+
+When working on your short films, <b>do not</b> assign separate shaders to different faces. However you can do this when you're working on the homework. 
 
 
 
