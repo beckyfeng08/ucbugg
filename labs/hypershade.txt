@@ -10,10 +10,10 @@ Create a sphere to act as your test object and right click the PxrSurface icon i
 
 Next, open Hypershade (Window->Rendering Editors->Hypershade). Select your PxrLayerSurface in the browser and press the expand button to isolate that node network.
 
-node.PNG
+node.png
 This will show incoming and outgoing connections.You can see that your layers are feeding into a mixer, which is feeding into a layerSurface.
 
-advanced1.PNG
+advanced1.png
 
 Each PxrLayer node is a big one. It has the potential to have the complexity of an entire material. We’re going to use the first layer to create our metal. 
 
@@ -69,7 +69,7 @@ Create a contrast node and wire the result of the fractal to one of the input va
 
 newadv2.png
 
-contrast.PNG
+contrast.png
 
 Unfortunately, our rust isn't quite the right color. Rust also isn't a constant color so just changing the attribute won't do the trick. Instead we're going to use more fractals. If we wired in a new fractal to the color attribute, the color would just range from black to white. Instead, we're going to use a PxrMix node. PxrMix takes in two colors (or whole maps if you want to get fancy) and will combine them according to the "mix" attribute. A value of 0 for mix will return the first input. A value of 1 will return the 2nd. Values in between will combine them in different ratios. By wiring our fractal to the mix, we'll get a healthy jumble between both colors. For my rust, I went with a red-orange and grey. See if you can make a better mix.
 
@@ -77,6 +77,6 @@ newadv3.png
 
 This is a rough render of my result.
 
-color.PNG
+color.png
 
 I hope this example helped you understand what Pixar shaders can be used for and prompts you to explore what other renderman nodes might help in your animation. Next time you create a node, just type "pxr" and scroll through the options. Try out things that sound interesting and see if you can figure out how they work. If you have questions on how to make other materials, ask a facilitator for help. Now that you understand how to navigate the node editor, it will be easier for us to guide you through more advanced techniques.
