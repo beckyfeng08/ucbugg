@@ -10,16 +10,17 @@ Create a sphere to act as your test object and right click the PxrSurface icon i
 
 Next, open Hypershade (Window->Rendering Editors->Hypershade). Select your PxrLayerSurface in the browser and press the expand button to isolate that node network.
 
-node.png
+node.PNG
+
 This will show incoming and outgoing connections.You can see that your layers are feeding into a mixer, which is feeding into a layerSurface.
 
-advanced1.png
+advanced1.PNG
 
 Each PxrLayer node is a big one. It has the potential to have the complexity of an entire material. We’re going to use the first layer to create our metal. 
 
 Click on the PxrLayer1 node, and start adjusting the Primary Specular and Rough Specular values in the attribute editor to create something like this:
 
-advanced2.png
+advanced2.PNG
 
 By bumping up the specularity/roughness of our shader, we're gonna make it look more metallic.
 If you test render your sphere right now, you'll notice that your materials don't actually appear on your object the way that you would expect. This is because we haven't actually applied our layer to our shader properly yet.
@@ -61,22 +62,22 @@ Click on the PxrLayerMixer node. Since we're now going to work on our second lay
 
 Next, click on your second PxrLayer node. Check the "Enable" boxes for diffuse, rough specular, and clear coat. Since our rust won't be shiny, turn up the diffuse and specular roughness and eliminate the thickness of the clear coat.
 
-advanced8.png
+adv8.png
 
 If you adjust the Layer 1 Mask value of your layer mixer, you'll notice that the two blend together gradually, which isn't what we're going for. We'd rather have the rust cover certain pieces of the mesh and leave the metal intact elsewhere. Using this attribute, you could create a custom UV map and hand-paint exactly where you want your rust to appear. For this example, we're going to apply the rust randomly. To do so, we're going to need a fractal. Click the checker box next to the Layer 1 mask slider, and create a PxrFractal node. 
 If you re-render, it will still look messy. The problem is, the fractal produces a range of values between 0 and 1. Any intermediate value between 0 and 1 will mix our materials. By increasing the contrast of our fractal, we can force it to have areas of just 1 or 0 effectively turning on and off our rust based on which parts of the fractal were darker. 
 Create a contrast node and wire the result of the fractal to one of the input values. In the attribute editor for the contrast node, you can increase the contrast (from a default 2). 4 should max things out sufficiently. Rendering now, you should have sectors where the paint is untouched and sectors where your rust layer is in charge.
 
-newadv2.png
+newadv2.PNG
 
-contrast.png
+contrast.PNG
 
 Unfortunately, our rust isn't quite the right color. Rust also isn't a constant color so just changing the attribute won't do the trick. Instead we're going to use more fractals. If we wired in a new fractal to the color attribute, the color would just range from black to white. Instead, we're going to use a PxrMix node. PxrMix takes in two colors (or whole maps if you want to get fancy) and will combine them according to the "mix" attribute. A value of 0 for mix will return the first input. A value of 1 will return the 2nd. Values in between will combine them in different ratios. By wiring our fractal to the mix, we'll get a healthy jumble between both colors. For my rust, I went with a red-orange and grey. See if you can make a better mix.
 
-newadv3.png
+newadv3.PNG
 
 This is a rough render of my result.
 
-color.png
+color.PNG
 
 I hope this example helped you understand what Pixar shaders can be used for and prompts you to explore what other renderman nodes might help in your animation. Next time you create a node, just type "pxr" and scroll through the options. Try out things that sound interesting and see if you can figure out how they work. If you have questions on how to make other materials, ask a facilitator for help. Now that you understand how to navigate the node editor, it will be easier for us to guide you through more advanced techniques.
