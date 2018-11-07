@@ -16,7 +16,6 @@ lFluid_fxtab.png
 
 In this lab we will quickly create firepit using a preset. We could also create fire from scratch, but that may require hours of work and tweaking of numerous settings before we can achieve an acceptable look. Let us start by familiarizing ourselves with the scene. In the file provided you have a firepit mesh, a log mesh, and a camera set up for rendering. Start by duplicating the log and arranging the new copies into the shape you like. Here is an example.
 
-lFluid_flameCam.png
 fire_lab_one.png
 
 HEADING LARGE: FLUID FROM SCRATCH
@@ -36,9 +35,9 @@ lFluids_meshCombine.png
 
 After the mesh combine, the outliner may look something like this:
 
-lFluids_meshHistory.png
+fFluids_meshHistory.png
 
-Lets clean up these history artifacts we don't need. Select the combined log mesh and delete history, freeze transformations, and center the pivot. 
+Lets clean up these history artifacts we don't need. Select the combined log mesh and <b>delete history</b>, freeze transformations, and center the pivot. The outliner should look like this after having clearing history. 
 
 lFluids_cleaned.png 
 
@@ -47,7 +46,6 @@ In the Outliner select Fluid Container (fluid1) and the logs geometry we just fi
 lFluids_emitfromObject.png
 
 Make sure emitter type is set for surface, Apply and close. If you play the animation, the fire would neither behave like fire nor will it look like it. Since it will take forever to adjust everything to get the final look, we will use a preset instead, and apply it to our models.
-
 
 HEADING LARGE: FLUID FROM PRESET
 We can save time by using a present. Import the preset by clicking Fluids -> Get Example -> Fluid. Navigate to the Fire folder under the Fluid Examples. Right-click on the Turbulent Flame and press import. We now have two fluid containers and two fluid emitters. 
@@ -61,4 +59,3 @@ There are a few things you may want to adjust or learn about in case you need fu
 
 HEADING LARGE: LAB SUBMISSION
 To submit the lab, upload your file with completed simulation to the website. 
-
