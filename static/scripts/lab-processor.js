@@ -75,9 +75,9 @@ var createLab = function(filename) {
  
 		updateHash("labs" + filename.toLowerCase().replace(/\s/g, ''));
 
-		// console.log("filename: " + filename);
+		console.log("filename: " + filename);
 		if (filename in labLookup) {
-			// console.log("wtf");
+			console.log("wtf");
 			filename = labLookup[filename];
 		}
 		// console.log("filename: " + filename);
@@ -104,9 +104,10 @@ var createLab = function(filename) {
     var onFailure = function(data, textStatus, errorThrown) { 
     	$("#lab").empty();
     	// $("#lab").append(data.responseText);
-        console.error('lab not found'); 
+        console.error('Lab Not Found'); 
         console.log(textStatus, errorThrown);
     };
+    console.log('labs/' + filename.toLowerCase().replace(/\s/g, ''))
     makeGetRequest('labs/' + filename.toLowerCase().replace(/\s/g, ''), "html", onSuccess, onFailure);
 	updateHash("labs" + filename);
 }
