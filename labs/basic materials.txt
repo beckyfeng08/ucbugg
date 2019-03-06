@@ -114,7 +114,7 @@ You can choose a color for a property by clicking the colored box next to its na
 
 properties1.jpg
 
-Press the little R icon to preview render in viewport. Now, play around with your object’s properties and try creating something interesting. Here I have created a shiny glass shape with some roughness. 
+Press the little R icon to preview render in viewport. Now, play around with your object’s properties and try creating something interesting. Here I have created a shiny glass shape with some roughness, by increasing glass refraction & reflection gain, changing the refraction color, lowering diffuse gain, and increasing glass roughness. Feel free to create any type of material you like.
 
 example_test_render.jpg
 
