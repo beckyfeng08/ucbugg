@@ -201,15 +201,15 @@ Finally, we have to apply our textures we created to our pxrsurface shader. Swit
 
 In general, to add any image to a shader attribute, click the checkerboard icon beside an attribute.
 
- Add a file by clicking the file icon:
+On the sidebar in the window that results, choose RenderMan->Pattern, then choose PxrTexture from the list on the right. 
 
-patterns.png
+pxrtexture.jpg
 
 The images we created will get plugged into Diffuse color and Specular Face Color. Click the checkerboard icon beside both attributes and add files to each. 
 
-Once the files are created, you should see a tab called “file1” or something similar in the attribute editor. Click the yellow folder icon to look up an image to apply to the attribute. 
+Once the files are created, you should see a tab called “PxrTexture1” or something similar in the attribute editor. Click the blue folder icon to look up an image to apply to the attribute. 
 
-file_icon.jpg
+file_icon2.jpg
 
 For the file plugged into diffuse color, select your color image, and for the file plugged into specular face color, select your metal-ness image. 
 
