@@ -132,7 +132,7 @@ Let’s learn how to UV map and create our own textures in the next section!
 
 HEADING LARGE: UV MAPPING & TEXTURE CREATION
 
-Download and open this file: 
+Download and open this file: (You may need to right click and hit "save as...")
 
 FILE: pencil.ma
 
@@ -228,7 +228,7 @@ When you’re shading objects for your short film, remember the following: After
 
 If you’re interested in learning more about shading in Maya, read the UCBUGG shading guide or advanced hyper shade lab.
 
-You will be required to submit the screenshot of playing around in the attribute editor, as well as the .ma file that you have been editing. Make sure to save your work in the following format: “FIRSTNAME_LASTNAME_HW6.ma”
+You will be required to submit the screenshot of playing around in the attribute editor, as well as the .ma file that you have been editing. Make sure to save your work in the following format: “SECTION_HW6_LASTNAMEFIRSTNAME.ma”
 
 
 
