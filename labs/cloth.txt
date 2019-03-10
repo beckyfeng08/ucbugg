@@ -58,6 +58,8 @@ We want the cape to billow in the wind a bit. Open the nucleus in the Attribute 
 HEADING LARGE: TWIDDLING THE CLOTH PARAMETERS
 The cloth is too stiff and the skirt is too weird. Here are some parameters you can twiddle for each clothShape (one for the cape and one for the skirt) in the attribute editor. Twiddle whatever you'd like and move onto the next step.
 I tried to include the most useful options. Make sure you only play with one setting at a time or your cloth will quickly get out of hand.
+Here's a useful website with detailed explanations and GIFs for every setting:
+https://mottosso.github.io/ncloth-reference/
 
 HEADING MEDIUM: COLLISIONS
 Collide - if this is not checked, it doesn't collide with anything
