@@ -32,10 +32,19 @@ Once you're happy with the placement, use Modify-> Freeze Transformations to zer
 
 cbox2.png
 
+Now might be a good time to name your controller (I named mine LFrontLeg_Ctl) and delete its history if you haven't already done so. 
+
 Now, if you've been animating the foot, you can always return it to its default position by entering zeros back in the channel box. The next step is to attach the controller to the IK Handle through "P" parenting. In modelling, we created a hierarchy of objects which followed each other by selecting the child object, then the parent, and pressing the "P" key.
 
+Why are we using "P" parenting and not a parent constraint? "P" parenting changes the hierarchy in our outliner and nests the child under the parent. We can't do this for joints because joints are already arranged in a hierarchy. "P" parenting the joints again would mess up their hierarchy. 
 
-Now that the controller is parented, selecting the controller should also select the corresponding IK handle. Using the move tool with the controller should now move the IK handle and flex the knee joint.
+However, IK handles actually live outside the joint hierarchy. You can see this in your outliner. LFrontLeg (my IK Handle) is not nested under cog (my root joint). 
+
+ik_outliner.png
+
+Select the child object (the IK handle), then the parent (your NURBS circle controller), and press the "P" key.
+
+Now that the controller is parented, selecting just the controller should also select the corresponding IK handle. Using the move tool with the controller should now move the IK handle and flex the knee joint. You'll also notice that the IK handle is now under the controller in the outliner. Although we could have achieved similar results with a parent constraint, "P" parenting here gives us more organization in our outliner.
 
 parent.png
 
