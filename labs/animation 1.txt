@@ -219,27 +219,97 @@ Using the three up above, can you tell why the ball moves the way it does for th
 
 HEADING LARGE: HOMEWORK, PART 2 OF 2
 
-The second part of your homework is to animate a ball falling from a height. Your job is to make sure that the ball dissipates energy correctly until it comes to a stop naturally. I have your ball set up in ball_bounce.ma. I strongly recommend watching the ball jump youtube video I made for this rig to understand the mechanics of the ball rig:
+The second part of your homework is to animate a ball falling from a height. Your job is to make sure that the ball dissipates energy correctly until it comes to a stop naturally.
 
-rig.mp4
-
-In case that isn't clear, here's what I submitted when I had this homework assignment. You only have to do 1 ball, but it can be any type of ball.
+In case that isn't clear, here's what I submitted when I had this homework assignment. You only have to do one ball, but it can be any type of ball.
 If you're feeling overwhelmed, your ball doesn't have to move horizontally. However, it would be pretty hard to drop a ball and have it only move vertically.
 
 sample.mp4
 
-left to right: bowling ball, basket ball, ping pong ball, beach ball
+left to right: bowling ball, basketball, ping pong ball, beach ball
 
 Approach: Here's how I'd approach this assignment.
 
-Step 1: Get the vertical motion down for the ball
+Step 1: Study reference footage
 
-vertical.gif
+Before you jump in and start animating, it’s always best to look at videos of what you’re animating. It’s even better if you can shoot a live-action video yourself, so you can incorporate the specificity you want in your animation. Also, keep in mind that animation is typically about 30% faster than live-action footage, so make sure you adjust your timing accordingly.
 
-Step 2: Squash and Stretch
+Here’s some reference footage I found for bouncing balls:
 
-squashstretch.gif
+https://youtu.be/01cm7H1QoJg (height and timing)
 
-Step 3: Horizontal motion
+https://youtu.be/dEMjMFD_XaU (spacing)
 
-horizontalmotion.gif
+https://youtu.be/zd2V4_FNMls (squash and stretch)
+
+You can also try playing videos on YouTube in slow motion or press the < and > keys to go frame by frame.
+
+Step 2: Understand the rig
+
+I like to play around with each controller until I understand what they do and know which ones I’ll need.
+
+ball_rig.png
+
+The large red arrow on the ground is the master controller. This is typically used for initially positioning your object in the scene. We’re not going to put any animation or keyframes on the master controller. Why not? Say we animate our ball bouncing to the right, but then we find out that we placed the ball on the wrong end of the scene and that it was supposed to bounce to the left. If I had set keys on the master controller, then I would have to either change a lot of my animation or deal with constraints and a new controller. If I didn’t set any keys on the master controller, then I can just move and rotate it to reposition my entire animation!
+
+The yellow circle is the main controller. This is what we’ll use to animate the ball’s motion and rotation. When we think about applying the bouncing ball to character animation, we’ll often think of the hip as a ball. This controller would correspond to a hip controller on a character.
+
+The blue circles squash and stretch the ball. You can move them to the sides too.
+
+Step 3: Get the vertical motion down for the ball
+
+This might be the most important step. You can usually tell how heavy something is just by watching its vertical motion. This is where I tend to spend most of my time.
+
+I can figure out the timing of each jump down by just setting keys at the top and bottom of each bounce. The amount of bounces required to dissipate the ball’s energy will depend on how high the ball started and what kind of ball it is. A tennis ball would bounce more times than a bowling ball.
+
+To get an idea of the spacing we should have, let’s look at this image from The Animator’s Survival Kit:
+
+ask1.png
+
+The ball should ease in and out of each high point, which is why there are more drawings in the high parts of this drawing. It should also accelerate as it approaches and leaves the ground. We can achieve this by editing our tangents in the graph editor. Here’s what my curve looks like:
+
+ty_curve.png 
+
+As with timing, spacing can look pretty different depending on the type of ball you are using. Here’s my animation so far:
+
+vertical.mov
+
+Step 4: Squash and Stretch
+
+Here’s another image from The Animator’s Survival Kit that demonstrates squash and stretch:
+
+ask2.png
+
+You’ll notice the ball is a perfect circle at the top of each arc. It stretches the most on the frames before and after impact, and it squashes on its impact frames. Try not to get carried away with too much squash and stretch. It’s best if it’s something that you feel but don’t really notice or get distracted by when you watch it. Here’s what my ball looks like with squash and stretch:
+
+squashstretch.mov
+
+Step 5: Horizontal motion
+
+I want my ball to move horizontally at a mostly constant speed. To do this, I only need two keys on my translate Z curve, one at the start and one at the end. I want my ball to roll to a stop, so I’ll put some ease in to the second key. Here’s what my translate Z curve looks like:
+
+tz_curve.png
+
+Here’s a neat trick that can help you check your arcs. Select the ball’s main controller (the yellow one), and go to the Animation tab in the shelf and press this button:
+
+motiontrail1.png
+
+This gives you a nice visual representation of your animation in your viewport:
+
+motiontrail2.png
+
+You can also move those white dots around to edit your keyframes if you like.
+
+Just make sure you hide or delete the motion trail when you’re not using it because it can slow down your playback speed.
+
+horizontalmotion.mov
+
+Step 6: Rotation
+
+The ball’s rotation will slow down at about the same speed as its horizontal motion. My ball’s rotation curve looks almost identical to its horizontal translation curve. You can judge whether you have the right amount of rotation by whether it looks like your ball is rolling or sliding at the end.
+
+rotation.mov
+
+For more practice, try animating a bowling ball or a beach ball. They’ll really give you a sense of how weight can change timing and spacing. Don’t forget to study reference footage.
+
+Now go to the Playblasts Lab and make a video of your animation!
