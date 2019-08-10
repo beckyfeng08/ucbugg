@@ -4,7 +4,7 @@ Welcome to Maya! The purpose of this guide is to just give you a basic overview 
 
 HEADING LARGE: GETTING MAYA
 
-While UCBUGG provides lab computer with Maya installed, it's really important to have your own copy on your computer so that you can work from home on your own schedule.
+While UCBUGG provides lab computers with Maya installed, it's really important to have your own copy on your computer so that you can work from home on your own schedule.
 This process will require that you have a valid berkeley.edu email address, so make sure you have it handy.
 Registering with Autodesk
 Open up a web browser and go to http://www.autodesk.com/education/free-software/maya.
