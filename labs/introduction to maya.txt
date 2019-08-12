@@ -4,16 +4,18 @@ Welcome to Maya! The purpose of this guide is to just give you a basic overview 
 
 HEADING LARGE: GETTING MAYA
 
-While UCBUGG provides lab computers with Maya installed, it's really important to have your own copy on your computer so that you can work from home on your own schedule.
-This process will require that you have a valid berkeley.edu email address, so make sure you have it handy.
-Registering with Autodesk
+While UCBUGG does provide lab computers with Maya installed, it's really important to have your own copy on your computer so that you can work from home on your own schedule.
+This process will require that you have a valid berkeley.edu email address so that you are able to download Autodesk Maya for free!
+
+HEADING MEDIUM:Registering with Autodesk
+
 Open up a web browser and go to http://www.autodesk.com/education/free-software/maya.
 
 getting_maya.png
 
 
 
-Click 'Create Account'. This link will take you to a registration page. Make sure to fill out the "Email" field with your berkeley.edu email address or this process will not work. Once you have filled out the form, hit "Submit"
+If you don't have an account with Autodesk already you will need to make one in order to download the software. Click 'Create Account'. This link will take you to a registration page. Make sure to fill out the "Email" field with your berkeley.edu email address or this process will not work. Once you have filled out the form, hit "Submit"
 
 Autodesk will register your account and send you an activation email. Registration can take a few minutes, so don't worry if the email doesn't show up instantly. Once you get your email, click on the included activation link. You should see a "Your account is now activated!" message.
 getting_maya_activated.jpg
@@ -21,12 +23,12 @@ getting_maya_activated.jpg
 
 HEADING MEDIUM: DOWNLOADING MAYA
 Once registration is complete, go back to http://students.autodesk.com/education/free-software/maya, log in with your newly created account, and fill out the second section.
-From the version drop-down menu, select Maya 2017. (Very important that you select 2017)
+From the version drop-down menu, select Maya 2018. (As of Fall 2019 we are using Maya 2018 to teach this course so its very important that you download the correct version).
 
 Select "English" from the language drop-down.
-From the operating system drop-down menu, select which version you want to download. If you are on Windows, download either the 32-bit or 64-bit version, depending on your computer's processor. If you are on a Mac, just download the Mac OS X version. Make sure to write down your serial number and product, as you will need them during installation. Once you select your version, click the "broswer download" button. The download should start automatically, but if not, check the help links at the bottom of the page. Maya is a pretty big piece of software (2.0 GB) so make sure you have enough time to download the entire file. I suggest catching up on some reading while you wait.
-Installing Maya
-Once your download is complete, simply run the installer and follow the on screen instructions. The installer will ask for the serial number from the previous section. After you enter your serial number and product key, Maya will install. You are now the proud owner of Maya 2016.
+From the operating system drop-down menu, select which version you want to download. If you are on Windows, download either the 32-bit or 64-bit version, depending on your computer's processor. If you are on a Mac, just download the Mac OS X version. Make sure to write down your serial number and product, as you will need them during installation. Once you select your version, click the "browser download" button. The download should start automatically, but if not, check the help links at the bottom of the page. Maya is a pretty big piece of software (2.0 GB) so make sure you have enough time to download the entire file. I suggest catching up on some reading while you wait.
+HEADING MEDIUM: Installing Maya
+Once your download is complete, simply run the installer and follow the on screen instructions. The installer will ask for the serial number from the previous section. After you enter your serial number and product key, Maya will install. You are now the proud owner of Maya!
 A warning: Maya's activation process can take quite a while. If you encounter any errors, simply try again with the same data. It should eventually work.
 
 
@@ -43,7 +45,7 @@ viewport.jpg
 
 The viewport is a representation of what's in your scene. Almost everything in your scene will be viewed in the viewport. Here you can manipulate objects, animate characters, and even make cool effects like fire, water, and shattering objects.
 
-The gray mesh in the middle is referred to as the grid. This grid is meant to orient you to your position. It will not be visible in the final video you produce.
+The gray plane in the middle of the viewport is referred to as the grid. This grid is meant to orient you to your position. It will not be visible in the final video you produce.
 
 <b>Shelf</b>
 shelf.png
@@ -66,9 +68,9 @@ HEADING LARGE: CREATING OBJECTS
 This part of the guide will take a brief look at how to make a polygon and edit its basic attributes.
 
 1. Make sure your dropdown menu is in Modeling mode
-2. Go to createàpolygon primitivesàsphere
+2. Go to create -> polygon primitives -> sphere
 create_sphere.png
-3. Click and drag on the viewport to create a sphere of custom size (the more you drag, the bigger it will be).
+3. A sphere will show up in the middle of your viewport. 
 - You can also do this through the polygons menu in the shelf:
 sphere_shelf.png
 4. If you want to undo the creation of the sphere, do Command + z (command + shift + z will redo)
@@ -86,15 +88,19 @@ attribute_editor_2.png
 
 Notice how there's three boxes for every attribute: this is because there's three dimensions to every attribute (x, y, z). So if you edit those numbers, you should see the sphere changing in the viewport in a way that corresponds to the numbers you put. Feel free to explore changing numbers and seeing the effect on the sphere, or to change the sphere directly and see the effect on the numbers.
 
+Another important function of the Attribute Editor is to allow you to change certain attributes or settings of the polygons you create. Click on "polySphere1" in the Attribute Editor; you will see certain attributes such as radius and subdivisions which can be easily changed to your needs. Different polygon primitives will have various attributes that you can change and experiment with.
+
+//INSERT NEW PICTURE HERE
+
 
 HEADING LARGE: MANIPULATING VIEWS
 So now that you have an object, what if you want to take a look around the object?
-Here are some valuable functions that will help you move around the viewport with ease:
+Here are some valuable functions that will help you move around the viewport with ease: (NOTE: many of these functions require the use of a computer mouse which is highly recommended if you are taking UCBUGG)
 
-- <b>Command/alt + left click drag</b> will rotate the viewport, allowing you the freedom to look in all angles
-- <b>Scrolling the wheel in and out</b> will zoom the viewport in/out. Alternatively, you can do command/alt + right click drag in and out and it will zoom in/out
+- <b>Command/alt + left click drag</b> will rotate the viewport, allowing you the freedom to look in all angles 
+- <b>Scrolling the mouse wheel in and out</b> will zoom the viewport in/out. Alternatively, you can do command/alt + right click drag in and out and it will zoom in/out
 - <b>Alt + middle mouse drag</b> (clicking on the actual mouse wheel and holding) will pan around the scene
-- If the camera moves too far away/is too zoomed in or out, click on an object in your scene and press <b>F</b>. This will focus the camera on that object, centering it in the middle of the viewport so that you are reoriented once again.
+- If the camera moves too far away/is too zoomed in or out, click on an object in your scene and press <b>F</b> while hovering over the viewport. This will focus the camera on that object, centering it in the middle of the viewport so that you are reoriented once again.
 
 
 HEADING MEDIUM: DISPLAY OPTIONS FOR THE VIEWPORT
@@ -138,7 +144,7 @@ The hotkeys for these (very simple but very useful to remember):
 
 
 What if you want to make a copy of an object?
-- Click on the polygon you made and press Command + d and the object will be duplicated at exactly the same point as the original object (which means it will be difficult to see). Now click "w" and move the duplicate out of the way so that you can see the two objects.
+- Click on the polygon you made and press <b>Command + d</b> and the object will be duplicated at exactly the same point as the original object (which means it will be difficult to see). Now click "w" and move the duplicate out of the way so that you can see the two objects.
 
 What if you want to select both objects at once?
 - There's two ways:
@@ -147,13 +153,13 @@ OR
 Click and drag a box around both objects and they'll both be selected
 
 What if you want to objects to become just one object?
-- Select both objects and go to meshàcombine
+- Select both objects and go to mesh -> combine
 combine.png
 
 Be careful with this though, since you will NOT be able to select the separate objects again until you separate them manually. They are now considered one object. (An alternate way to combine objects is parenting, but that's in the modeling section).
 
 What if you have a ton of objects in your scene and it's difficult to keep track of everything?
-- Maya has you covered. Go to windowsàoutliner
+- Maya has you covered. Go to windows -> outliner
 outliner.png
 
 This will then open a window that will show the default names of the objects in your scene, which isn't very useful if you have many objects. To remedy this, double click on one of the names of the objects listed in your outliner, and rename it something more appropriate (i.e. ball_1).
@@ -164,7 +170,7 @@ What if you want to delete an object?
 
 
 HEADING LARGE: DIFFERENT VIEWS OF THE SCENE
-Since we are dealing with objects in three dimensions displayed on a 2d screen, it can be difficult to get a sense of depth of the objects you're making in the scene. Therefore, it is important to be cycling through views to make sure everything in the scene is exactly where you want it.
+Since we are dealing with objects in three dimensions displayed on a 2d screen, it can be difficult to get a sense of depth of the objects you're making in the scene. Therefore, it is important to be cycling through different views to make sure everything in the scene is exactly where you want it.
 
 Maya has plenty of options for this.
 
@@ -177,7 +183,7 @@ Something important to keep in mind: everything but the "persp" view is in 2D, m
 
 Hover your mouse over one of the views and press spacebar. That should make that window take over the viewport.
 
-If you want to get out of that, press spacebar again and you'll be back to the four screens. Hover over "persp" and press spacebar to go back to the 3d view.
+If you want to get out of that view, press spacebar again and you'll be back to the four screens. Hover over "persp" and press spacebar to go back to the default 3d view.
 
 
 HEADING LARGE: ALTERING PARTS OF AN OBJECT
@@ -208,7 +214,7 @@ So if you go into "face" mode and just select a face and move it outward, it wil
 pull_face.png
 
 Notice how the surrounding faces get affected when you pull that one face out? What if you don't want them to be affected?
-The answer to that is the extrude tool.
+The answer to that is the <b>extrude tool.</b>
 
 Select the face, and instead of pulling it out immediately, go to edit —> mesh extrude and if you pull out the face, it will look like this:
 
