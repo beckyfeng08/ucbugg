@@ -90,7 +90,9 @@ Notice how there's three boxes for every attribute: this is because there's thre
 
 Another important function of the Attribute Editor is to allow you to change certain attributes or settings of the polygons you create. Click on "polySphere1" in the Attribute Editor; you will see certain attributes such as radius and subdivisions which can be easily changed to your needs. Different polygon primitives will have various attributes that you can change and experiment with.
 
-//INSERT NEW PICTURE HERE
+attribute_editor_3.png
+
+
 
 
 HEADING LARGE: MANIPULATING VIEWS
