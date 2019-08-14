@@ -212,6 +212,8 @@ edgeloop.png
 
 Now click on one of the edges of the polygon, and you'll find that a line has formed throughout the object perpendicular to the edge you selected. You have now added an edge loop. On a sphere this isn't very helpful, but in other situations, it is absolutely essential to be able to get your model where it needs to be.
 
+edgeloop_2.png
+
 What if you want to bring out a face without pulling the surrounding faces with it?
 So if you go into "face" mode and just select a face and move it outward, it will look something like this:
 pull_face.png
