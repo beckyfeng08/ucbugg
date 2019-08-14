@@ -40,7 +40,7 @@ Now let’s get on to using Maya.
 
 HEADING LARGE: BASIC UI TERMINOLOGY
 
-This is the viewport:
+The light gray area in the middle highlighted by the red rectangle is called the <b>viewport:</b>
 viewport.jpg
 
 The viewport is a representation of what's in your scene. Almost everything in your scene will be viewed in the viewport. Here you can manipulate objects, animate characters, and even make cool effects like fire, water, and shattering objects.
