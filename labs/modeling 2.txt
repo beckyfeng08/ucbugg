@@ -1,9 +1,11 @@
 HEADING LARGE: PROJECT SET-UP
 
+<b> Before we begin modeling, lets review some good practices you guys should get into the habit of doing whenever you model: </b>
+
 When you open Maya, you get the following window.
 Notice at the top, the bar says <b>“Student Version: untitled*”</b>
 Not only have you not assigned your scene a name, it also doesn't have a project associated with it.
-You're going to want to stay very organized with your project files and Maya has a project structure for you.
+You're going to want to stay very organized with your project files as you work on your shorts and (as mentioned in our project management lecture) Maya has a project structure for you.
 
 topBar.png
 
@@ -27,14 +29,14 @@ Now when you save your untitled scene, the prompt will automatically redirect yo
 To your left you can also use the dropdown menu to change which project this scene is set to.
 saveProject.png
 
-</b> Also, SAVE AS MAYA ASCII. MAYA ASCII IS THE FILE TYPE YOU WANT TO SAVE IT AS. SAVE YOUR SCENE AS A MAYA ASCII. USE MAYA ASCII TO SAVE YOUR SCENE.<b>
-
-
-The default setting for undo in Maya is 50 undos. Click Windows -> Settings/Preferences -> Preferences.
-On the left, there's a window of Categories. Under
-Settings, find Undo and change your Queue setting to Infinite.
+<b> Also, SAVE AS MAYA ASCII. MAYA ASCII IS THE FILE TYPE YOU WANT TO SAVE IT AS. SAVE YOUR SCENE AS A MAYA ASCII. USE MAYA ASCII TO SAVE YOUR SCENE.</b>
 
 HEADING MEDIUM: HANDY TOOLS
+
+The default setting for undo in Maya is 50 undos. Click Windows -> Settings/Preferences -> Preferences.
+
+On the left, there's a window of Categories. Under Settings, find Undo and change your Queue setting to Infinite.
+ 
 Hold down x: snap to grid when translating
 Hold down v: snap to vertex when translating
 Hold down j: snap tool for move, rotate, scale
@@ -52,11 +54,11 @@ Change your move tool settings so that retain component spacing is not checked.
 This will make snapping multiple vertices or edges much easier.
 retain.jpg
 
-
+Now, lets go onto the lab!
 
 
 HEADING LARGE: ADVANCED MODELING
-This week we'll be modeling fox using different techniques. It's up to you to use these techniques as you see fit!
+This week we'll be modeling a classic UCBUGG fox using different techniques. It's up to you to use these techniques as you see fit!
 (Edit: It ended up looking like a pig so be careful of copying me artistically.)
 
 Download this side view of a fox to use as a reference.
@@ -66,7 +68,8 @@ original_fox.jpg
 
 
 This is an example of how you can use a front and side reference sheet to help model your character. We'll be doing something similar.
-reference.png
+//UPDATE THIS PICTURE ITS FROM MAYA 2008?
+reference.png 
 
 
 
@@ -90,7 +93,10 @@ ImagePersp.jpg
 
 
 Go back to side view mode and we can start box modeling.
-Create a cube from the polygon primitives menu. For the love of all that is good and green on this sweet earth please don't use NURBS.
+Create a cube from the polygon primitives menu. 
+
+SIDE NOTE: For the love of all that is good and green on this sweet earth please don't use any NURBS Primitives when you are modeling. NURBS are a type of object in Maya that will essentially only show up in the viewport. That means anything made from a NURBS primitive will not show up in ANY renders, final images etc. They will become useful later on in the pipeline for rigging, however, for modeling we want to stay away from them!
+
 Go into the channel box and click Inputs to change the subdivision values to 2 for x,y,z.
 If you can't find the channel box, click the blue icon on the top right as seen below. Also, be sure that you have your cube selected.
 channel.jpg
@@ -105,20 +111,21 @@ xRay.png
 The key to box modeling is to start out very blocky and slowly adding more detail. Don't be afraid to have an abstract model for the majority of the time. Always have a reason for every edge loop you add. Avoid adding edge loops unless you're going to move, scale, or rotate it.
 
 HEADING LARGE: STEP 1: TORSO
-Start off with fitting your cube into the base of the torso. Notice that my edges end at the armpit and thigh of the legs. Keep in mind as you're modeling where edges along your model should go. (Arms, legs, head, etc.)
+Start off with fitting your cube into the base of the torso. Notice that my edges end at the armpit and thigh of the legs. As you're modeling, you want to keep in mind where you place edges along your model. A general good practice to keep good topology or "edge flow" is to place edges near the joints of the fox/thing you are modeling. (Arms, legs, head, etc.) Keeping good edge flow and placing your edges carefully will become more important when we get into rigging so do your best to keep things clean and organized as you model!
+
 BOX.jpg
 
+An important note: Although we are using a cube that has depth to it, in side view mode, it's hard to tell that you have edges/faces on top of each other. In other words, from the side view a cube looks just like a flat rectangle when it actually isn't. 
 
+To avoid the mistake of only selecting one half of the cubes' edges/face/vertices, use Shift-click+drag to select/deselect edges/faces.
 
-
-In side view mode, it's hard to tell that you have edges/faces on top of each other. Use Shift-click+drag to select/deselect edges/faces.
-Here I selected all the faces that you can see from side view but also the faces facing to the right that you can't see here.
+Here I selected all the faces that you can see from the side view but also the faces on the other side that you can't see from this angle.
 highlight.jpg
 
-See that I've selected all the faces including these front facing ones. I want to extrude these front facing faces but not the side ones.
+See that I've selected all the faces including these front facing ones. However, I want to only extrude these front facing faces, not the side ones.
 frontFaces.jpg
 
-So I shift-deselect just the side facing faces like so.
+So I Shift-click+drag again over the side faces to DESELECT.
 deselct.png
 
 
@@ -128,23 +135,29 @@ frontfacing.jpg
 
 
 
-BE SURE TO UNDERSTAND THIS CONCEPT BEFORE MOVING ON. Play around with selecting/deselecting edges and faces around with just the cube and look back and forth between side view and perspective view so that you are doing what you expect to be doing.
+<b> BE SURE TO UNDERSTAND THIS TECHNIQUE BEFORE MOVING ON. </b> 
+
+Play around with selecting/deselecting edges and faces around with just the cube and look back and forth between side view and perspective view so that you are doing what you expect to be doing.
 The biggest gotcha here is that you might be selecting faces or edges behind what you see without realizing it.
-It might be helpful to go into Panels -> Layouts -> Two Panes Side by Side. So you can see your side view and perspective view at the same time.
+It might be helpful to go into Panels -> Layouts -> Two Panes Side by Side. This is an easy way to see two views, or your side view and perspective view, at the same time!
 
 gotcha.png
 
-Next, use the hotkey CTL-E to extrude those faces and pull them to the front of the fox's arm.
+Next, extrude the front faces and pull them to the front of the fox's arm.
 
 arm.jpg
 
 
-Extrude those same faces again and bring it up to the neck. You start to see why having the hotkeys QWER is so useful. While doing this, you switch between the translate, scale, and rotate tool constantly. In this example, I extruded, moved the faces near the neck, scaled down the faces to fit against the image, and rotated the faces so they fit along the curve of the fox's anatomy.
+Extrude those same faces again and bring it up to the neck. 
+
 neck.jpg
+
+You start to see why having the hotkeys QWER memorized is so useful. While box modeling, you switch between the translate, scale, and rotate tool constantly. In this example, I extruded, moved the faces near the neck, scaled down the faces to fit against the image, and rotated the faces so they fit along the curve of the fox's anatomy.
 
 
 
 Recall from lecture when we talked about good edgeflow. You want to constantly maintain good edgeflow so I fixed mine by adding an edgeloop between the arm and neck which I scaled and moved to fit against the neck. I also moved some spacing on the torso and arm. Now everything looks somewhat evenly spaced and my edges are along the arms, legs, and neck.
+
 edgeflow.jpg
 
 
@@ -174,7 +187,8 @@ shoulder.jpg
 Then extrude the bottom face of the "shoulder" and use the side view to check out long it should be.
 upperArm.jpg
 
-I've already added edge loops already to even out the spacing. Notice that I added in another edge loop where the arm is bony from the knuckles. I may want to add more edge loops in the future but remember, we want to keep things blocky and abtract.
+Once again I want to add edge loops down the leg to even out the spacing. Notice that I added in another edge loop where the arm is bony from the knuckles. I may want to add more edge loops in the future but remember, we want to keep things blocky and abstract for now before adding details.
+
 lowerArm.jpg
 
 I extruded more faces, tweaked my edges, and got this.
@@ -182,7 +196,7 @@ foot.jpg
 
 Something to keep in mind when modeling is whether you're going to smooth your mesh or not. Often times, when modeling, I'll extrude muscular areas farther out than the reference sheet says. This is because when I smooth, it'll smooth down to where the muscle should end.
 
-Here's a screenshot of my front leg smoothed out. I've lost a lot of the sharp bony edges of the foot so I'm going to want to add in more details to achieve that bony look. I'm also probably going to want to extrude certain faces out farther than what looks natural so that when I smooth my mesh, I can get the look of a jutting knuckle. But again, I'll worry about details later.
+Here's a screenshot of my front leg smoothed out. I've lost a lot of the sharp bony edges of the foot so I'm going to want to add in more details and edge loops to achieve that bony look. But again, I'll worry about details later.
 smooth.jpg
 
 HEADING LARGE: STEP 3: BACK LEG (Stitching Method)
@@ -202,15 +216,18 @@ Like we did with the front leg, extrude faces, add edge loops, and adjust to mai
 backLeg.jpg
 
 Let's delete by type -> history of BOTH our objects just in case.
-Then, go into Face Mode, and delete the faces that will be facing each other when stitching on both objects.
+Then, go into Face Mode, and delete the faces that will be facing each other when stitching on both objects. 
+
+This is important to remember: if you were to merge/stitch the vertices together without deleting the faces on both objects first, you would end up with two faces on top of each other which will lead to bad topology and "manifold geometry". We definitely want to avoid that!
+
 deleteFaces1.jpg
 
 deleteFaces2.jpg
 
 
 
-Bring in your back leg object as close as possible to the fox mesh. Leave some space so that you can easily see which vertices match with each other. Select both objects, then click Mesh -> Combine.
-Now your two objects are treated as one.
+Bring in your back leg object as close as possible to the fox mesh. Leave some space so that you can easily see which vertices match with each other. Select both objects, then click Mesh -> Combine. 
+In order to merge vertices, Maya needs to consider the two objects as one.
 combine.png
 
 
@@ -228,10 +245,15 @@ mergeTocenter.png
 
 
 The vertices will snap to the space between them and become one. Do this for all 6 pairs of vertices and make sure your mesh is SEALED. When you're done stitching vertices make sure you don't have any gaps, otherwise, your skinning will be ruined.
+
 mergedVertices.jpg
 
 
+A good way to check if you have properly "stitched" the leg on, is to go the Shelf and click on the <b> Sculpting </b> tab. In the sculpting menu, you want to select the Grab Tool on the shelf (4th tool from the left). 
 
+sculpting_grabTool.png
+
+If Maya lets you sculpt on your fox mesh, that means that everything is good to go! If you get a red message at the bottom saying "Sculpting cannot be performed on manifold geometry", that means there is a problem with your fox's topology. It's probably a good idea to fix it now before moving on (ask a facilitator for help if you need!)
 
 This is what your mesh should look like so far. I've made some edits to the width of the back leg and moved edges around so that the transition to legs is a lot smoother.
 If I had a front plane reference image, I would use it to determine the width of the body and legs but for now, I'm just going to eyeball it.
@@ -241,7 +263,7 @@ smoothFin.jpg
 
 
 
-Let's see how are fox looks like with 4 legs. Go into top view mode, find the vertices that represent the very center of the fox and with your translate tool, hold down x which will "snap" your vertices to the nearest axis. Line up your vertices so that they line up with the slightly thicker line on the grid. This is so that we can mirror our current mesh over the correct axis. If your vertices aren't lined up on the axis line, you'll get overlapping faces or a gap between your faces.
+Let's see how our fox looks like with 4 legs. Go into top view mode, find the vertices that represent the very center of the fox and with your translate tool, hold down x which will "snap" your vertices to the nearest axis. Line up your vertices so that they line up with the slightly thicker line on the grid. This is so that we can mirror our current mesh over the correct axis. If your vertices aren't lined up on the axis line, you'll get overlapping faces or a gap between your faces.
 snaptoaxis.jpg
 
 
@@ -254,7 +276,7 @@ deleteFace.jpg
 
 
 Next, with your object selected, click Mesh -> Mirror Geometry -> Option Box. In my scene, I'm mirroring over the x axis to the negative side.
-mirror.jpg
+mirror.png
 
 
 
@@ -265,8 +287,9 @@ You can mirror geometry as often as you like! Use it to your advantage.
 
 
 
-HEADING LARGE: STEP 4: HEAD
-In your fox2.ma scene, delete history by type, and click Modify -> Freeze transformations.
+HEADING LARGE: STEP 4: HEAD & TAIL
+In your fox2.ma scene, delete history by type, center pivot (if its not centered) and click Modify -> Freeze transformations. Remember the shortcuts for these options as well as these are things you want to do in your files on a somewhat regular basis.
+
 Override your foxLatest.ma with this and Save As a new fox3.ma file.
 
 
@@ -304,8 +327,8 @@ ear7.jpg
 Select the faces that represent the inside of the ear, extrude, and scale inwards so your ear looks like this.
 ear8.jpg
 
-Extrude once more and push in towards the back of the ear. Extrude again and do the same thing to get two segments.
-EDIT: I realized that I had extruded too much into the ear so don't go as far back as I did here.
+Extrude and scale once more and push in towards the back of the ear to get two segments.
+
 ear9.jpg
 
 Select the top half of the faces and scale inwards to start tapering your ear. You can opt to use the soft select (hot key b) for this.
@@ -316,7 +339,7 @@ ear11.jpg
 Spend some time fixing edge flow and straightening out kinks.
 ear12.jpg
 
-Go into smooth mode and manipulate your ear to match against the image. You'll often find that your mesh is a LOT smaller than expected once you smooth it so you'll want to adjust. Don't worry if your mesh looks too big or too spiky when you're not in smooth mode but do try to straighten out the bigger kinks.
+Go into smooth mode and manipulate your ear to match against the image. You'll often find that your mesh is a LOT smaller than expected once you smooth it so you'll want to adjust. Don't worry if your mesh looks a little too spiky when you're not in smooth mode but do note that we want our hard surface mode to be less drastically different than our smooth mode so try to straighten out the bigger kinks.
 ear13.jpg
 
 Like we did with the back leg, bring your ear mesh close to where you'll be attaching it on the fox mesh.
@@ -394,14 +417,37 @@ nose6.jpg
 Scale, translate, etc. until your nose looks about right. I did a lot of tweaking around until I was satisfied.
 nose7.jpg
 
-On to the mouth! (Look at the advanced modeling lab to see a different method of making the head and mouth via extrusions)
+On to the mouth!
 Look for a cut along the mouth in side view.
 mouth1.jpg
 
 With that edge highlighted, click Edit Mesh -> Detach. Move the edges apart so you can differentiate from the top and bottom sections.
 mouth2.jpg
 
-To seal up the gaping hole, use Append to Polygon to close up the bottom jaw. Make sure not to seal the bottom section to the roof of the mouth.
+Our mouth has been made but now notice how we can see the inside of the fox from the mouth. Generally, if you ever see black polygons, that means that we are seeing the inside of the mesh which is something we NEVER want to do. 
+
+To seal up the gaping hole, go to <b> Mesh Tools -> Append to Polygon </b> 
+
+append to polygon.png
+
+As shown in lecture, Append to Polygon is a very useful tool to seal up holes in your mesh by creating new faces/vertices and appending them to the existing edges. For our case, we want to create faces over the bottom and top of the mouth.
+
+Let's start with closing the bottom jaw:
+
+First, rotate and move your camera so that you can see the inside of the fox's mouth. (interesting view isn't it)
+ 
+mouth2a - inside.png
+
+Then, with Append to Polygon on, select the left edge on the bottom jaw of the fox. Once you do, you should see purple lines and arrows indicating to you which other edges you can select to create a new face.
+
+mouth2b - selectEdge.png
+
+Now select the right edge on the bottom jaw of the fox to complete the appended face. 
+
+mouth2c - selectOtherEdge.png
+
+Then press enter to create the face.
+
 mouth3.jpg
 
 Continue using the Append to Polygon tool. It might be handy to use the g hotkey to go back to this tool easily.
@@ -462,11 +508,11 @@ tail7.jpg
 
 And finally, tweak, add edge loops, move vertices, all that good stuff to get in the DETAILS. This is including adding more edge loops at joints, rounding out sharp corners, and if you're feeling adventurous, making claws and teeth.
 
-This is what my fox looks like after a couple tweaks. This is where I'll stop for the purposes of this lab but it is FAR FROM FINISHED.
-For your models, we expect more detail. Good luck!
+This is what my fox looks like after a couple tweaks. This is where I'll stop for the purposes of this lab. 
+
 final.jpg
 
-HEADING SMALL: LECTURE TOPICS NOT COVERED BY THIS LAB:
+HEADING SMALL: LECTURE TOPICS NOT FULLY COVERED BY THIS LAB:
 <b>DEFORMERS</b>
 To create a deformer, go the the Deform menu, which has a list of useful deformers.
 Here are a few useful ones:
@@ -481,4 +527,4 @@ Once you are done applying a deformer to a mesh or a piece of a mesh, select you
 <b>SCULPT</b>
 Sculpting is better done in software like Zbrush (very expensive!) or Autodesk Mudbox (free for students!) but you can emulate these sculpting programs using the Mesh Tools -> Sculpting Tools. Play around with Sculpt, Smooth, and Grab. Make sure to mess with "Mirror" and "Invert" in the tool settings. The idea behind Sculpt and Grab is to pull and push in your mesh to achieve the bumps in organic models caused by muscle groups, bones, knuckles, and the like. The Smooth tool is particularly useful when your vertices/edges/faces are irregular in certain areas, even when your mesh is relatively low poly. It can often be a quick way to deal with messy topology.
 
-Try using the sculpt tool to reshape any parts of the fox you are unsatisfied with.
+At this point, feel free to use the Sculpting Tools (or any other tools) to make aesthetic changes to your fox. The more detail the better! 

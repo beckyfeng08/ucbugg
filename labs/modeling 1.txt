@@ -125,14 +125,6 @@ HEADING SMALL: SIDE NOTE on Smooth Preview Mode
 
 It's important to remember that pressing *3* to see your object in smooth mode represents a preview of your object and not the actual shape of your object. The real shape and form of your mesh is what you see when you press *1*. Therefore, you usually don't want the hard surface mode to be too DRASTICALLY different from the smooth preview mode. (The reason why can be a bit difficult to explain but just remember that this is good modeling practice)
 
-For example, comparing a default cube in its hard surface vs smooth preview mode, you can see that the two look VERY different:
-
-hardSurface_smooth_comparison.png
-
-So, similar to what we did to our toilet bowl, we would want to add a few edge loops to this cube so that the difference is less drastic.
-
-hardSurface_smooth_comparisonAFTER.png 
- 
 HEADING MEDIUM: More extruding
 
 Now, moving on, we are going to add the rear portion of the toilet. This requires extruding faces, so select the faces on the back part of the toilet and extrude further back.
