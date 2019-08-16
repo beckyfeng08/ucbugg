@@ -121,7 +121,9 @@ You'll notice that our smooth-preview removes some of the desired sharper corner
 
 16 - edge loops to shape.png
 
-SIDE NOTE: It's important to remember that pressing *3* to see your object in smooth mode represents a preview of your object and not the actual shape of your object. The real shape and form of your mesh is what you see when you press *1*. Therefore, you usually don't want the hard surface mode to be too DRASTICALLY different from the smooth preview mode. (The reason why can be a bit difficult to explain but just remember that this is good modeling practice)
+HEADING SMALL: SIDE NOTE on Smooth Preview Mode
+
+It's important to remember that pressing *3* to see your object in smooth mode represents a preview of your object and not the actual shape of your object. The real shape and form of your mesh is what you see when you press *1*. Therefore, you usually don't want the hard surface mode to be too DRASTICALLY different from the smooth preview mode. (The reason why can be a bit difficult to explain but just remember that this is good modeling practice)
 
 For example, comparing a default cube in its hard surface vs smooth preview mode, you can see that the two look VERY different:
 
