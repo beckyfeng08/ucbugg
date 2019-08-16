@@ -1,6 +1,6 @@
 HEADING LARGE: INTRODUCTION
 
-This lab explores the basics of polygon modeling in Maya by making a simple toilet prop. The lab gives detailed step-by-step instructions, but feel free to follow them as closely or loosely as you want. However, pay close attention to all of the different tools that are used, as the Advanced Modeling lab will build off of them.
+This lab explores the basics of polygon modeling in Maya by making a simple toilet prop. The lab gives detailed step-by-step instructions, but feel free to follow them as closely or loosely as you want. However, pay close attention to all of the different tools that are used, as the Advanced Modeling lab will build off of them. 
 
 HEADING LARGE: MODELING THE BOWL
 
@@ -18,19 +18,19 @@ Under where it says "INPUTS", there should be some text that says "polyCylinder1
 
 3 - show inputs.png
 
-Switch to Face Mode by moving the mouse cursor over the cylinder , and holding down the right mouse button . When the menu pops up, drag the mouse cursor over 'Face' and release the right mouse button.
+Switch to Face Mode by moving the mouse cursor over the cylinder , and holding down the right mouse button. When the menu pops up, drag the mouse cursor over 'Face' and release the right mouse button.
 
 Now that you are in face mode, you can select (left-click) and delete the caps on the top and bottom by pressing Backspace on the keyboard.
 
 4 - delete top and bottom faces.png
 
-Use the right-click menu and select 'Object'. This goes back out into object mode. Select the cylinder (should highlight green). Switch to the move tool by clicking on the button on the left side of the screen or hitting "w" on the keyboard and move the cylinder up a bit on the y-axis (drag the upward arrow). Then, switch to the scale tool (second button below move, or "r" on the keyboard) and drag the z-axis arrow a little bit to stretch it lengthwise, like in the picture below. This gives our cylinder a more ovular shape which is closer to a toilet bowl.
+Then, use the right-click menu and select 'Object'. This goes back out into object mode. Select the cylinder (should highlight green) and switch to the scale tool (last button in the toolbox, or "r" on the keyboard. Drag the y-axis (vertical) arrow downwards to make the cylinder thinner. Then scale the cylinder in the z-axis to stretch it lengthwise, like in the picture below. This gives our cylinder a more ovular shape which is closer to a toilet bowl.
 
 5 - stretch cylinder.png
 
-Since we are modeling a toilet bowl, we want the back of the bowl to be flatter rather than angled. However, as we make any further changes to our bowl, we want to remember to keep the object's symmetry. After all, we expect toilets in real life to be symmetrical so our model should most likely be symmetrical as well. In Maya 2018, rather than selecting edges/vertices/faces manually, there is an option to turn on symmetry while modeling an object.
+Since we are modeling a toilet bowl, we want the back of the bowl to be flatter rather than angled like it is now. However, before we make any further changes to our bowl, we want to remember to keep the object's symmetry. After all, we expect toilets in real life to be symmetrical so our model should most likely be symmetrical as well. In newer versions of Maya, rather than selecting edges/vertices/faces manually, there is an option to turn on symmetry while modeling an object.
 
-Look at the row of buttons above the shelf. To the far left of the dropdown menu you'll see another dropdown option with the words <b> Symmetry: Off </b> written (this makes sense since our symmetry is currently off).
+Look at the row of buttons above the shelf. To the far right of the dropdown menu you'll see another dropdown option with the words <b> Symmetry: Off </b> written (this makes sense since our symmetry is currently off).
 
 5a - shelf_symmetry.png
 
