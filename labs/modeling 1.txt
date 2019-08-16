@@ -72,7 +72,7 @@ This will give you a weird circular manipulator in the viewport. This manipulato
 
 8 - move down and sclae.png
 
-NOTE: In Maya 2018 there are MANY shortcuts to extruding. For example, you can perform the same action by selecting the bottom ring of edges and pressing <b> CMD + E </b> to extrude. An even shorter method is to select the edges, go back to the move tool, and press SHIFT while hovering over one of the arrows. You will see the words "EXTRUDE" show up near the arrow indicating that you can extrude the edge in that direction. Feel free to choose any of these three methods to extrude from this point forward.
+NOTE: In newer versions of Maya, there are MANY shortcuts to extruding. For example, you can perform the same action by selecting the bottom ring of edges and pressing <b> CMD + E </b> to extrude. An even shorter method is to select the edges, go back to the move tool, and press SHIFT while hovering over one of the arrows. You will see the words "EXTRUDE" show up near the arrow indicating that you can extrude the edge in that direction. Feel free to choose any of these three methods to extrude from this point forward.
 
 HEADING SMALL: IMPORTANT NOTE ON EXTRUDING
 The point of extrusion is to create a new set of edges/faces/vertices/ on top of the old ones that were selected. Therefore, always make sure to MOVE whatever you are extruding; if you extrude edges or faces, and you do not move them, they will remain in the same place as the original edges or faces. That means you will only see one set of polygons when there are actually two. If you extrude and forget that you have done so, it can lead to poor topology and can cause problems later on. Sometimes it's a little tricky to fix, so be careful!
