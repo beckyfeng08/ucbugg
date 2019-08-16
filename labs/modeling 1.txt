@@ -43,7 +43,7 @@ With your symmetry tool now on, hover back to the viewport and use the right-cli
 
 5c - symmetry_example.png
 
-Then use the scale tool and resize those edges by the x-axis (red arrow) so that the bowl is slightly flatter and wider in the back.
+Then use the move tool and move those edges along the x-axis (red arrow) so that the bowl is slightly flatter and wider in the back.
 
 6a - stretch back edges.png
 
@@ -54,7 +54,7 @@ In the past students have been somewhat confused at this step so just to clarify
 
 6c - comparison.png
 
-By using the symmetry tool and selecting the edges on back of the bowl, we were able to maintain the bowl's symmetry. We could have made similar changes by just selecting each edge individually and using the move tool, but then we might have had to spend more time adjusting each edge to make it look right.
+By using the symmetry tool and selecting the edges on back of the bowl, we were able to maintain the bowl's symmetry. We could have made similar changes by selecting each edge individually and using the move tool, but then we might have had to spend more time adjusting each side to make it look right.
 
 
 At this point you can turn your symmetry back off, however, for the rest of this lab remember that tool is easily at your disposal. Don't hesitate to use it!
@@ -76,6 +76,7 @@ NOTE: In Maya 2018 there are MANY shortcuts to extruding. For example, you can p
 
 HEADING SMALL: IMPORTANT NOTE ON EXTRUDING
 The point of extrusion is to create a new set of edges/faces/vertices/ on top of the old ones that were selected. Therefore, always make sure to MOVE whatever you are extruding; if you extrude edges or faces, and you do not move them, they will remain in the same place as the original edges or faces. That means you will only see one set of polygons when there are actually two. If you extrude and forget that you have done so, it can lead to poor topology and can cause problems later on. Sometimes it's a little tricky to fix, so be careful!
+
 The best way to check if you have already extruded a piece of geometry is to select the relevant faces or edges, and use the move tool to shift them aside temporarily in order to "peek" behind them. If you move a face/edge and there's an identical one right where the one you moved was, you already extruded that region. The best solution is usually to press undo, but that only really works if you extruded recently. Otherwise, you'll have to select all the vertices of the faces that have been extruded accidentally, and use the Edit Mesh --> Merge tool (click the option box and choose a low threshold). If you're having trouble, be sure to ask a facilitator for help and/or clarification!
 
 
@@ -83,7 +84,7 @@ Once you have extruded and scaled in the bottom edge, go into vertex-mode and tw
 
 9 - rectangular bottom.png
 
-In edge mode, double-click the bottom edge to once again select the entire ring of edges, extrude the bottom edge down, and then tweak the verts on that ring.
+After adjusting the vertices, go to edge mode, double-click the bottom edge to once again select the entire ring of edges, extrude the bottom edge down, and then tweak the verts on that ring.
 
 10 - extrude and tweak.png
 
@@ -117,7 +118,7 @@ You'll notice that our smooth-preview removes some of the desired sharper corner
 
 16 - edge loops to shape.png
 
-It's important to remember that pressing *3* to see your object in smooth mode represents a preview of your object and not the actual shape of your object. The real shape and form of your mesh is what you see when you press *1*. Therefore, you usually don't want the hard surface mode to be too DRASTICALLY different from the smooth preview mode. (The reason why can be a bit difficult to explain but just remember that this is good modeling practice)
+SIDE NOTE: It's important to remember that pressing *3* to see your object in smooth mode represents a preview of your object and not the actual shape of your object. The real shape and form of your mesh is what you see when you press *1*. Therefore, you usually don't want the hard surface mode to be too DRASTICALLY different from the smooth preview mode. (The reason why can be a bit difficult to explain but just remember that this is good modeling practice)
 
 For example, comparing a default cube in its hard surface vs smooth preview mode, you can see that the two look VERY different:
 
@@ -127,7 +128,7 @@ So, similar to what we did to our toilet bowl, we would want to add a few edge l
 
 hardSurface_smooth_comparisonAFTER.png 
  
-HEADING SMALL: More extruding
+HEADING MEDIUM: More extruding
 
 Now, moving on, we are going to add the rear portion of the toilet. This requires extruding faces, so select the faces on the back part of the toilet and extrude further back.
 
@@ -154,32 +155,42 @@ HEADING MEDIUM: DUPLICATE FACE
 
 The tank needs a lid. So, instead of creating a new cube and trying to get it to look like the current tank shape, we can just duplicate the top face of the tank.
 
-Select only the top face of tank and go to Edit Mesh. Under the section titled "Face" you should see "Duplicate".
+Select only the top faces of the tank and go to Edit Mesh. Under the section titled "Face" you should see "Duplicate".
 21b - duplicate faces location.png
 
-The new object is now highlighted in green. Like Extrude, Duplicate Face uses a weird manipulator, so switch to the Move tool again and left click on the new object to select it. Move it up a bit, then switch back into Face mode and scale it to make it sit nicely on top of the original tank.
+The new object is now highlighted in green. Like Extrude, Duplicate Face uses a weird manipulator, so switch to the Move tool again and left click on the new object to select it. Move it up a bit and scale it to make it sit nicely on top of the original tank.
 21 - duplicate face.png
 
-Select those faces and extrude the faces upwards to make the tank's lid shape. Notice, if you try to extrude downwards, the faces will all be black. This means the normals are facing the wrong direction. We'll talk more about normals later but for now, make sure all faces that are facing outwards are gray, not black.
+Move back to face mode and select only the top faces; extrude the faces upwards to make the tank's lid shape. Notice, if you try to extrude downwards, the faces will all be black. This means the normals are facing the wrong direction. We'll talk more about normals later but for now, make sure all faces that are facing outwards are gray, not black.
 
 22- extrude tank lid.png
 
 You may notice, after you return to object mode, that your pivot is no longer centered on the object. You can recenter it by going to Modify -> Center Pivot.
+
 23 - center pivot after tank lid.png
 
-To make the lid fit over the tank, scale it up a little. Also, sharpen the top and bottom of the lid a little by adding some more loops.
+There is also a convenient shortcut button for Center Pivot on your shelf under <b> Poly Modeling </b>
+
+23a - center pivot shortcut.png
+
+To make the lid fit over the tank, scale it out a little more. Also, sharpen the top and bottom of the lid a little by adding some more loops.
 
 23 - finish tank lid.png
 
 HEADING LARGE: MODELING THE SEAT AND LID
 
-On to the toilet seat and lid! We'll use the same duplicate faces trick to duplicate the top faces of the bowl's shape. Once those faces are separated, we can then duplicate the new object by going into object mode, then going up to Edit Mesh --> Duplicate. Go ahead and name the lower object Seat and the top object Lid on the outliner.
+On to the toilet seat and lid! 
+
+We'll use the same duplicate faces trick we used on the tank to duplicate the top faces of the bowl's shape. Once those faces are separated, we have the start of our seat, however we will need a duplicate of this object for the lid. Select the new object and press <b> CMD + D </b> to duplicate the entire object; move the second duplicate a little higher since the lid will go on top of the seat. Go ahead and name the lower object <b> Seat </b> and the top object <b> Lid </b> in the outliner.
 
 24 - duplicate seat lid.png
-I hid the second duplicate temporarily to work on the seat (that's up to you). You can hide something by selecting it and turning the visibility off in the channel box. You can turn it back on later by selecting it from the outliner (this is one of the reasons it is important to name your objects) and turning risibility back on. Just click on the box to the right of Visibility and type "on" or "off" depending on which you want to do. You can also press Ctrl + h.
+I hid the second duplicate (lid) temporarily to work on the seat (that's up to you). You can hide something by selecting it and turning the visibility off in the channel box. Just click on the box to the right of Visibility and type "on" or "off" depending on which you want to do. You can also select an object and press *H* as a shortcut. 
+
+You can turn it back on later by selecting it from the outliner (this is one of the reasons it is important to name your objects) and turning risibility back on, or by pressing *H* again.
+
 24b - toggle visibility.png
 
-To finish up the seat, scale the inner loop more inwards and then extrude the whole shape downwards. Add a loop near the bottom for a sharper edge. Then Add some loops on the top and move them up to get a rounder shaped top (more comfy for your butt). Then tweak to your liking (maybe scale it up so it slightly overhangs the bowl or something).
+To finish up the seat, scale the inner loop more inwards (so that the seat isn't too large for someone to realistically sit on) and then extrude the whole shape downwards. Add a loop near the bottom for a sharper edge. Then Add some loops on the top and move them up to get a rounder shaped top (more comfy for your butt). Then tweak to your liking (maybe scale it up so it slightly overhangs the bowl or something).
 
 25- finish seat.png
 
@@ -206,6 +217,21 @@ This tool is a little weird; here's how it works: First, left click on a vertex 
 30 - post multicut.png
 Do the same things we did to make the seat and tweak it until it looks right.
 31 - final seat.png
-Now we have a very basic toilet-looking object (without a flusher or hinges or bowl internals or a base). It is still in separate pieces. Once you are done and plan on using the toilet as an asset (no pun intended), it is recommended to combine them into one mesh or to group all the pieces. You can combine mesh pieces by selecting them and going to Mesh → Combine. You can group the pieces by selecting them and going to Edit → Group.
+
+Our toilet is almost complete. Remember from our project management lecture, however, that we want to make sure every asset in our project is clean and clear. Let's get into that good habit by doing some things before we leave:
+
+First, our toilet is still in separate pieces. Once you are done and plan on using the toilet as an asset (no pun intended), it is recommended to combine them into one mesh OR to group all the pieces. You can combine mesh pieces by selecting them and going to Mesh → Combine. You can group the pieces by selecting them and going to Edit → Group.
+
+It is up to you whether you would like to group or combine the different parts of your toilet, it usually depends on how you will be shading the object later on. For example, it's common practice to combine all the parts of a model that will be shaded with the same material later, and then group everything at the end. However, since you are most likely not using this asset for your short (unless you are in which case congrats you got a head start on your group work!!) we'll leave the decision to you.
+
+Second, make sure your outliner is organized and everything is clearly named!! This will become super important when you start modeling assets for your shorts
+
+Third, make sure you center pivot, delete history, and freeze transformations on your toilet. The shortcuts to each of these actions can be found on the shelf:
+
+31a - shortcut buttons.png
+
+Fourth: SAVE YOUR TOILET IF YOU HAVE NOT ALREADY! (save your file as often as you can)
+
+At last we have our final, beautiful toilet! However, notice that it's missing some of the details a real toilet would have (like a flusher or hinges or bowl internals or a base). Feel free to be creative at this point; add any more details that you would like to experiment with. For the purposes of this lab, however, we only expect the basic toilet shape like in the picture below:  
 
 32 - final model.png
