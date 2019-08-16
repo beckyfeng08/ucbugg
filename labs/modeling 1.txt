@@ -1,6 +1,6 @@
 HEADING LARGE: INTRODUCTION
 
-This lab explores the basics of polygonal modeling in Maya through making a simple toilet prop. The lab gives detailed, rigorous step-by-step instructions, but feel free to follow them as closely or loosely as you want. However, definitely pay attention to all the different tools that are used, as the Advanced Modeling lab will build off of them.
+This lab explores the basics of polygon modeling in Maya by making a simple toilet prop. The lab gives detailed step-by-step instructions, but feel free to follow them as closely or loosely as you want. However, pay close attention to all of the different tools that are used, as the Advanced Modeling lab will build off of them.
 
 HEADING LARGE: MODELING THE BOWL
 
@@ -20,37 +20,70 @@ Under where it says "INPUTS", there should be some text that says "polyCylinder1
 
 Switch to Face Mode by moving the mouse cursor over the cylinder , and holding down the right mouse button . When the menu pops up, drag the mouse cursor over 'Face' and release the right mouse button.
 
-Now that you are in face mode, you can select (left-click) and delete the caps by pressing Backspace on the keyboard.
+Now that you are in face mode, you can select (left-click) and delete the caps on the top and bottom by pressing Backspace on the keyboard.
 
 4 - delete top and bottom faces.png
 
-Use the right-click menu and select 'Object'. This goes back out into object mode. Select the cylinder (should highlight green). Switch to the move tool by clicking on the button on the left side of the screen or hitting "w" on the keyboard and move the cylinder up a bit on the y-axis (drag the upward arrow). Then, switch to the scale tool (second button below move, or "r" on the keyboard) and drag the z-axis arrow a little bit to stretch it lengthwise, like in the picture below.
+Use the right-click menu and select 'Object'. This goes back out into object mode. Select the cylinder (should highlight green). Switch to the move tool by clicking on the button on the left side of the screen or hitting "w" on the keyboard and move the cylinder up a bit on the y-axis (drag the upward arrow). Then, switch to the scale tool (second button below move, or "r" on the keyboard) and drag the z-axis arrow a little bit to stretch it lengthwise, like in the picture below. This gives our cylinder a more ovular shape which is closer to a toilet bowl.
 
 5 - stretch cylinder.png
 
-Use the right-click menu again to go into 'Edge' mode. Use the move tool and the scale tool on the vertical edges towards the back of the bowl so the bowl is slightly flatter and wider in back.
-6 - stretch back edges.png
-By selecting the edges on both sides of the bowl and using the scale tool, we were able to maintain the bowl's symmetry. We could have made similar changes by just selecting each edge individually and using the move tool, but then we might have had to spend more time adjusting each edge to make it look right.
-While still in Edge mode, we can double-click on one of the bottom horizontal edges to select the whole ring. We want to extrude the bottom ring downwards to make the bowl deeper:
+Since we are modeling a toilet bowl, we want the back of the bowl to be flatter rather than angled. However, as we make any further changes to our bowl, we want to remember to keep the object's symmetry. After all, we expect toilets in real life to be symmetrical so our model should most likely be symmetrical as well. In Maya 2018, rather than selecting edges/vertices/faces manually, there is an option to turn on symmetry while modeling an object.
+
+Look at the row of buttons above the shelf. To the far left of the dropdown menu you'll see another dropdown option with the words <b> Symmetry: Off </b> written (this makes sense since our symmetry is currently off).
+
+5a - shelf_symmetry.png
+
+Click on the small arrow to the left of this box to open the different symmetry options you can use with this tool. For now, we are going to turn on <b> Object X </b> symmetry.
+
+5b - symmetry_objectX.png
+
+
+With your symmetry tool now on, hover back to the viewport and use the right-click menu again to go into 'Edge' mode. Now when you use the select tool to select the left or right edge on the back of the cylinder, both edges will be selected. (like in the image below). 
+
+5c - symmetry_example.png
+
+Then use the scale tool and resize those edges by the x-axis (red arrow) so that the bowl is slightly flatter and wider in the back.
+
+6a - stretch back edges.png
+
+
+6b - stretch back edges.png
+
+In the past students have been somewhat confused at this step so just to clarify, here is a comparison image of what the bowl should look like before and after you've completed this step.
+
+6c - comparison.png
+
+By using the symmetry tool and selecting the edges on back of the bowl, we were able to maintain the bowl's symmetry. We could have made similar changes by just selecting each edge individually and using the move tool, but then we might have had to spend more time adjusting each edge to make it look right.
+
+
+At this point you can turn your symmetry back off, however, for the rest of this lab remember that tool is easily at your disposal. Don't hesitate to use it!
+
+Now, while still in Edge mode, we can double-click on one of the bottom horizontal edges to select the whole bottom ring. We want to extrude the bottom ring downwards to make the bowl deeper:
+
+6d - bottomEdge.png
 
 HEADING MEDIUM: EXTRUDE
 
 Go to Edit Mesh → Extrude.
 7 - select extrude.png
 
-If you want to undo an extrude, you must press undo twice.
-This will give you a weird manipulator. This manipulator doesn't always behave in an intuitive way so many people switch immediately to another tool (in this case, use the move tool *w*). Then move the automatically selected edges down.
+This will give you a weird circular manipulator in the viewport. This manipulator doesn't always behave in an intuitive way so many people switch immediately to another tool (in this case, use the move tool *w*). Then move the selected edges down.
 
-HEADING SMALL: IMPORTANT NOTE
-Always make sure to move whatever you are extruding; if you extrude edges or faces, and you do not move them, they will remain in the same place as the original edges or faces, so you will only see one set of polygons where there are two. If you extrude and forget that you have done so, it can cause problems later on, and sometimes it's a little tricky to fix, so be careful!
-The best way to check if you have already extruded a piece of geometry is to select the relevant faces or edges, and use the move tool to shift them aside temporarily in order to "peek" behind them. If you move a face/edge and there's an identical one right where the one you moved was, you already extruded that region. The best solution is usually to press undo, but that only really works if you extruded recently. Otherwise, you'll have to select all the vertices of the faces that have been extruded accidentally, and use the Edit Mesh --> Merge tool (click the option box and choose a low threshold). If you're having trouble, be sure to ask a facilitator for help!
 8 - move down and sclae.png
 
-Go into vertex-mode and tweak the bottom points to get a more rectangular base that many toilets tend to have.
+NOTE: In Maya 2018 there are MANY shortcuts to extruding. For example, you can perform the same action by selecting the bottom ring of edges and pressing <b> CMD + E </b> to extrude. An even shorter method is to select the edges, go back to the move tool, and press SHIFT while hovering over one of the arrows. You will see the words "EXTRUDE" show up near the arrow indicating that you can extrude the edge in that direction. Feel free to choose any of these three methods to extrude from this point forward.
+
+HEADING SMALL: IMPORTANT NOTE ON EXTRUDING
+The point of extrusion is to create a new set of edges/faces/vertices/ on top of the old ones that were selected. Therefore, always make sure to MOVE whatever you are extruding; if you extrude edges or faces, and you do not move them, they will remain in the same place as the original edges or faces. That means you will only see one set of polygons when there are actually two. If you extrude and forget that you have done so, it can lead to poor topology and can cause problems later on. Sometimes it's a little tricky to fix, so be careful!
+The best way to check if you have already extruded a piece of geometry is to select the relevant faces or edges, and use the move tool to shift them aside temporarily in order to "peek" behind them. If you move a face/edge and there's an identical one right where the one you moved was, you already extruded that region. The best solution is usually to press undo, but that only really works if you extruded recently. Otherwise, you'll have to select all the vertices of the faces that have been extruded accidentally, and use the Edit Mesh --> Merge tool (click the option box and choose a low threshold). If you're having trouble, be sure to ask a facilitator for help and/or clarification!
+
+
+Once you have extruded and scaled in the bottom edge, go into vertex-mode and tweak the bottom points to get a more rectangular base that many toilets tend to have. Remember at a step like this, the symmetry tool would be immensely helpful!
 
 9 - rectangular bottom.png
 
-In edge mode, do the double-click-select-edge-ring thing again, extrude the bottom edge down, and then tweak the verts on that ring.
+In edge mode, double-click the bottom edge to once again select the entire ring of edges, extrude the bottom edge down, and then tweak the verts on that ring.
 
 10 - extrude and tweak.png
 
@@ -70,10 +103,11 @@ Then we'll want to add another loop to be the bottom of the bowl (where the bowl
 13 - tweak bowl shape.png
 
 
-At the top now, let's give the lip some thickness. Select the lip and extrude, switch to scale tool and scale in. Then extrude again, switch to move tool, and move down.
+At the top now, let's give the lip some thickness. Select the lip and extrude, switch to the scale tool and scale in. Then extrude again, switch to move tool, and move down.
 
 14 - extrude bowl lip.png
 
+HEADING MEDIUM: SMOOTH PREVIEW MODE
 
 So far, we've had a very sharp/polygonized, cg-looking toilet. Usually they are smooth. Maya has a smooth-preview feature that will show you a catmull-clark subdivided version of the mesh. This means it'll be much smoother. Hit *3 to switch into smooth-preview mode. Hit *2 to switch into smooth-preview with non-smooth cage. Hit *1* to switch back out of smooth-preview.
 
@@ -83,7 +117,19 @@ You'll notice that our smooth-preview removes some of the desired sharper corner
 
 16 - edge loops to shape.png
 
-Now we are going to add the rear portion of the toilet. This requires extruding faces, so go to Edit Mesh -> Extrude. Select and extrude the faces on the back part of the toilet back further.
+It's important to remember that pressing *3* to see your object in smooth mode represents a preview of your object and not the actual shape of your object. The real shape and form of your mesh is what you see when you press *1*. Therefore, you usually don't want the hard surface mode to be too DRASTICALLY different from the smooth preview mode. (The reason why can be a bit difficult to explain but just remember that this is good modeling practice)
+
+For example, comparing a default cube in its hard surface vs smooth preview mode, you can see that the two look VERY different:
+
+hardSurface_smooth_comparison.png
+
+So, similar to what we did to our toilet bowl, we would want to add a few edge loops to this cube so that the difference is less drastic.
+
+hardSurface_smooth_comparisonAFTER.png 
+ 
+HEADING SMALL: More extruding
+
+Now, moving on, we are going to add the rear portion of the toilet. This requires extruding faces, so select the faces on the back part of the toilet and extrude further back.
 
 17 - extrude back.png
 
@@ -91,7 +137,7 @@ Flatten out the back using the scale tool to scale down along z (a nifty trick f
 
 18 - flatten back.png
 
-Extrude back once more and then tweak the shape to be however you want the back of your toilet to look.
+Extrude back once more and then tweak the shape to be however you want the back of your toilet to look. Remember that reference images are great for this purpose!
 
 HEADING LARGE: MODELING THE TANK
 

@@ -40,7 +40,7 @@ Now let’s get on to using Maya.
 
 HEADING LARGE: BASIC UI TERMINOLOGY
 
-The light gray area in the middle highlighted by the red rectangle is called the <b>viewport:</b>
+The light gray area highlighted by the red rectangle is called the <b>viewport:</b>
 viewport.jpg
 
 The viewport is a representation of what's in your scene. Almost everything in your scene will be viewed in the viewport. Here you can manipulate objects, animate characters, and even make cool effects like fire, water, and shattering objects.
@@ -221,7 +221,7 @@ pull_face.png
 Notice how the surrounding faces get affected when you pull that one face out? What if you don't want them to be affected?
 The answer to that is the <b>extrude tool.</b>
 
-Select the face, and instead of pulling it out immediately, go to edit —> mesh extrude and if you pull out the face, it will look like this:
+Select the face, and instead of pulling it out immediately, go to edit mesh -> extrude and if you pull out the face, it will look like this:
 
 extrude_face.png
 
