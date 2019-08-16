@@ -75,9 +75,12 @@ This will give you a weird circular manipulator in the viewport. This manipulato
 NOTE: In newer versions of Maya, there are MANY shortcuts to extruding. For example, you can perform the same action by selecting the bottom ring of edges and pressing <b> CMD + E </b> to extrude. An even shorter method is to select the edges, go back to the move tool, and press SHIFT while hovering over one of the arrows. You will see the words "EXTRUDE" show up near the arrow indicating that you can extrude the edge in that direction. Feel free to choose any of these three methods to extrude from this point forward.
 
 HEADING SMALL: IMPORTANT NOTE ON EXTRUDING
+
 The point of extrusion is to create a new set of edges/faces/vertices/ on top of the old ones that were selected. Therefore, always make sure to MOVE whatever you are extruding; if you extrude edges or faces, and you do not move them, they will remain in the same place as the original edges or faces. That means you will only see one set of polygons when there are actually two. If you extrude and forget that you have done so, it can lead to poor topology and can cause problems later on. Sometimes it's a little tricky to fix, so be careful!
 
 The best way to check if you have already extruded a piece of geometry is to select the relevant faces or edges, and use the move tool to shift them aside temporarily in order to "peek" behind them. If you move a face/edge and there's an identical one right where the one you moved was, you already extruded that region. The best solution is usually to press undo, but that only really works if you extruded recently. Otherwise, you'll have to select all the vertices of the faces that have been extruded accidentally, and use the Edit Mesh --> Merge tool (click the option box and choose a low threshold). If you're having trouble, be sure to ask a facilitator for help and/or clarification!
+
+If you wish to undo an extrusion, it is EXTREMELY important to press undo until you see the <b> UNDO: PolyExtrude </b> message below your viewport. Sometimes that will mean pressing undo twice; always be sure to check that you have properly undone an extrusion to avoid duplicate face/edges! 
 
 
 Once you have extruded and scaled in the bottom edge, go into vertex-mode and tweak the bottom points to get a more rectangular base that many toilets tend to have. Remember at a step like this, the symmetry tool would be immensely helpful!
