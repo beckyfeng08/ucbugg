@@ -191,11 +191,11 @@ We'll use the same duplicate faces trick we used on the tank to duplicate the to
 24 - duplicate seat lid.png
 I hid the second duplicate (lid) temporarily to work on the seat (that's up to you). You can hide something by selecting it and turning the visibility off in the channel box. Just click on the box to the right of Visibility and type "on" or "off" depending on which you want to do. You can also select an object and press *H* as a shortcut. 
 
-You can turn it back on later by selecting it from the outliner (this is one of the reasons it is important to name your objects) and turning risibility back on, or by pressing *H* again.
+You can turn it back on later by selecting it from the outliner (this is one of the reasons it is important to name your objects) and turning visibility back on, or by pressing *H* again.
 
 24b - toggle visibility.png
 
-To finish up the seat, scale the inner loop more inwards (so that the seat isn't too large for someone to realistically sit on) and then extrude the whole shape downwards. Add a loop near the bottom for a sharper edge. Then Add some loops on the top and move them up to get a rounder shaped top (more comfy for your butt). Then tweak to your liking (maybe scale it up so it slightly overhangs the bowl or something).
+To finish up the seat, scale the inner loop more inwards (so that the seat isn't too large for someone to realistically sit on) and then extrude the whole shape downwards. Add a loop near the bottom for a sharper edge. Then add some loops on the top and move them up to get a rounder shaped top (more comfy for your butt). Then tweak to your liking (maybe scale it up so it slightly overhangs the bowl or something).
 
 25- finish seat.png
 
@@ -229,7 +229,7 @@ First, our toilet is still in separate pieces. Once you are done and plan on usi
 
 It is up to you whether you would like to group or combine the different parts of your toilet, it usually depends on how you will be shading the object later on. For example, it's common practice to combine all the parts of a model that will be shaded with the same material later, and then group everything at the end. However, since you are most likely not using this asset for your short (unless you are in which case congrats you got a head start on your group work!!) we'll leave the decision to you.
 
-Second, make sure your outliner is organized and everything is clearly named!! This will become super important when you start modeling assets for your shorts
+Second, make sure your outliner is organized and everything is clearly named!! This will become super important when you start modeling assets for your shorts.
 
 Third, make sure you center pivot, delete history, and freeze transformations on your toilet. The shortcuts to each of these actions can be found on the shelf:
 
