@@ -199,8 +199,8 @@ uv25.png
 
 Hit Reload if the texture does not appear and all else is correctly inputted.
 
-Because we are rendering using Renderman (and not Maya), make sure you are inputting all your maps into your pxrSurface.
-Once selected, in Base Color of your pxrSurface shader, click the checker box to the right of the slider and select “PSD File” from the pop-up window.
+Because we are rendering using Renderman, make sure you are inputting all your maps into your pxrSurface.
+In Base Color of your pxrSurface shader, click the checker box to the right of the slider and select “PSD File” from the pop-up window.
 
 uv27.png
 
