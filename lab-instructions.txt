@@ -33,3 +33,7 @@ LAB INSTRUCTIONS:
 		to highlight text, use <mark> </mark>
 
 		to strikethrough text, use <del> </del>
+		
+		to create a hyperlink, use <a href="linknamehere">Your Text</a>
+
+		feel free to check out other HTML tags that work/are useful and add to this list :) 
