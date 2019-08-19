@@ -93,7 +93,7 @@ Set the Master Voxel Size in the Resolution to 0.5 and play your whole simulatio
 When you're done, make a playblast of your simulation and turn it in to bCourses.
 
 HEADING MEDIUM: Rendering (optional for submission)
-Select the liquid and open the attribute editor. Go to Liquid Shape -> Bifrost Meshing and check Enable.
+Select the liquid and open the attribute editor. Go to Liquid Shape > Bifrost Meshing and check Enable.
 Bifrost15.png
 This creates a mesh for your particle system. This is important because RenderMan has no way of rendering the Bifrost object, so it needs a mesh and a RenderMan material. Add a PxrSurface, go to the glass pane and set relection and refraction to 0.5, refraction color to cyan.
 
