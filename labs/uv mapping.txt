@@ -199,10 +199,7 @@ uv25.png
 
 Hit Reload if the texture does not appear and all else is correctly inputted.
 
-In your Material Attributes, you will want to ensure that you are inputting all your maps into your pxrSurface, not the Lambert shader:
-
-uv26.png
-
+Because we are rendering using Renderman (and not Maya), make sure you are inputting all your maps into your pxrSurface.
 Once selected, in Base Color of your pxrSurface shader, click the checker box to the right of the slider and select “PSD File” from the pop-up window.
 
 uv27.png
