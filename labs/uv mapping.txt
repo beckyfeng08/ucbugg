@@ -1,6 +1,10 @@
 HEADING LARGE: INTRODUCTION
 
-We’ve learned the basics of shading objects, for instance, making them shiny or matte. A lot of times though, objects have properties that are not uniform. Not everything is evenly shiny, smooth, or the same color. Basically, we know how to make a red bouncy ball, but we don’t know how to make an object with uneven colors and bumps across its surface, like a rock. And we certainly don’t know how to make something as intricate and detailed as a human face full of wrinkles and pores.
+This UV mapping guide and activity is designed to help you expand your understanding of UV mapping from the Basic Materials lab.
+
+HEADING SMALL: A quick recap of why we need to UV map: 
+
+We've learned the basics of shading objects, such as making them shiny or matte. A lot of times though, objects have properties that are not uniform. Not everything is evenly shiny, smooth, or the same color. Basically, we know how to make a red bouncy ball, but we don’t know how to make an object with uneven colors and bumps across its surface, like a rock. And we certainly don’t know how to make something as intricate and detailed as a human face full of wrinkles and pores.
 
 uv1new.png
 
@@ -13,11 +17,11 @@ Imagine you have a box of limited edition Star Wars cereal. The front of the box
 
 For simple polygons such as a rectangular prism, Maya is able to unwrap the 3D object residing in the X,Y,Z coordinate space into a 2D projection on U and V coordinates. For a model of a cereal box, we can deduce that the simplest way to unwrap the polygon is into its six faces.
 
-To visualize this you can do the following exercise. In Polygon mode, create a cube. This is essentially your cereal box. With your cube selected in object mode, click UVs in the top bar → UV editor. A new window should pop up, with the 2D UV map of your cube automatically unwrapped. For a model as simple as your cube, Maya is able to achieve an accurate UV map by default.
+To visualize this you can do the following exercise. First, create a cube. This is essentially your cereal box. With your cube selected in object mode, open the UV editor (Windows > Modeling Editors > UV Editor or UV > UV Editor or switch your workspace to the UV Editing workspace). 
 
-uv2.png
+uv_editing_workspace.jpg
 
-The map is the outline of the six faces, while the grey background filling up the quadrant is the default material assigned to the model, “lambert1”. 
+The UV editor open with the 2D UV map of your cube automatically unwrapped. For a model as simple as your cube, Maya is able to achieve an accurate UV map by default.
 
 uv3.png
 
@@ -29,13 +33,14 @@ As your model becomes more complex, you will not be able to rely on Maya’s def
 
 
 HEADING LARGE: PROJECTION MAPPING
+
 Projection Mapping is an effective method of texturing models because it allows one to quickly determine the UV coordinates of a texture.
 
 The various possible Projection Maps that you can use on your model are under the “UV” tab on the top bar. These include:
 
-<b>Planar Mapping</b>
-<b>Spherical Mapping</b>
-<b>Cylindrical Mapping</b>
+1. Planar Mapping
+2. Spherical Mapping
+3. Cylindrical Mapping
 
 uv4.png
 
@@ -50,7 +55,7 @@ uv5andahalf.jpg
 
 uv6.png 
 
-However, in the image above, taking a planar mapping of a sphere model gives us “stretched” UV’s as you can see by the strips across the top and side of the sphere.
+However, in the image above to the right, taking a planar mapping of a sphere model gives us “stretched” UV’s as you can see by the strips across the top and side of the sphere.
 In this case, it would be prudent to use Spherical Mapping.
 
 
@@ -68,13 +73,13 @@ uv8.png
 
 In a cylindrical mapping, the image is projected around the circumference of the cylinder, as well as the top and bottom caps. This prevents distortions in an arm, for example, so that all along the length the texture is consistent, not stretched.
 
-While these basic projection maps can be useful tools for specific types of geometries, Maya Bonus Tools provides more powerful tools to give you greater control of where you want to place your texture on yet more complex models.
+While these basic projection maps can be useful tools for specific types of geometries, <a href="https://apps.autodesk.com/en/Detail/Index?id=8115150172702393827&appLang=en&os=Win64">Maya Bonus Tools</a> provides more powerful tools to give you greater control of where you want to place your texture on yet more complex models.
 
 Take the example of the fox model from your Advanced Modeling Lab. The complexities of the fox model does not give as many clues as to how to project textures onto its 3D surface. If we go into UV→Automatic, Maya will by default make planar projections along north, south, east, west, top, and bottom orientations to produce this map:
 
 uv9.png
 
-This may seem okay for a solid grey color at the moment, but introducing specific textures to corresponding regions becomes tricky along the outmost edges of each UV shell that was created in this map. To  illustrate this better, we gave the fox a checkered texture.
+This may seem okay for a solid grey color at the moment, but introducing specific textures to corresponding regions becomes tricky along the outmost edges of each UV shell that was created in this map. To  illustrate this better, we can look at the fox with a checker-pattern texture.
 
 uv10.png
 
@@ -90,10 +95,10 @@ Strategically placed seams—seams in areas with no dramatic changes (solid colo
 
 Maya’s Bonus Tools tab in the top bar can help with this.
  
-HEADING LARGE: USING THE AUTO UNWRAP UV TOOL
+HEADING LARGE: ACTIVITY: USING THE AUTO UNWRAP UV TOOL
 
-The Auto Unwrap UV tool lets you have total control over where you would like to make cuts on the mesh to project. You will need to download Bonus Tools and load the plugin into Maya to access this tool here:
-https://apps.autodesk.com/en/Detail/Index?id=8115150172702393827&appLang=en&os=Win64
+The Auto Unwrap UV tool lets you have total control over where you would like to make cuts on the mesh to project. You will need to <a href="https://apps.autodesk.com/en/Detail/Index?id=8115150172702393827&appLang=en&os=Win64">download Bonus Tools here</a> and load the plugin into Maya to access this tool.
+
 
 Let’s begin:
 
@@ -180,7 +185,7 @@ Save your .psd file, and head back into Maya.
 
 If your texture is not showing up in the UV editor, go into Image → Update PSD Network
 
-If your texture is not showing up on your model, make sure you have the “Textured” mode selected
+If your texture is not showing up on your model, make sure you have the “Textured” mode selected. (Note: with different versions of Maya and Renderman, sometimes you still will not be able to see the texture in the UV editor.)
 
 uv23.png 
 
@@ -194,11 +199,11 @@ uv25.png
 
 Hit Reload if the texture does not appear and all else is correctly inputted.
 
-Because we are rendering using Renderman, in your Material attributes, you will want to change the Material Type to pxrDisney, instead of Lambert:
+In your Material Attributes, you will want to ensure that you are inputting all your maps into your pxrSurface, not the Lambert shader:
 
 uv26.png
 
-Once selected, in Base Color of your PxrDisney Shader, click the checker box to the right of the slider and select “PSD File” from the pop-up window.
+Once selected, in Base Color of your pxrSurface shader, click the checker box to the right of the slider and select “PSD File” from the pop-up window.
 
 uv27.png
 

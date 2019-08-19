@@ -96,14 +96,14 @@ The PxrSurface is the shader attached to your object that RenderMan uses when it
 
 Scroll through the attribute editor and look at the different dropdowns. 
 There are a bunch - but the most important ones are the following: 
-<pre>Diffuse: the base color of your object. </pre>
-<pre>Primary / Rough Specular: the highlights / metal-ness of your object.</pre>
-<pre>Clear coat: a transparent glazed look.</pre>
-<pre>Iridescence: a view-dependent scattering of light that creates a color-shift effect.</pre>
-<pre>Fuzz: a fuzzy effect that can simulate velvet or fuzzy fabrics.</pre>
-<pre>Subsurface Scattering / Single scatter: these make the shader translucent, so light can scatter around inside it. Subsurface scattering is useful for simulating skin, wax, marble, and other translucent (but not transparent) materials.</pre>
-<pre>Glow: Lets your shader emit light. Use this to create a lightbulb or anything glowing.</pre>
-<pre>Glass: For creating anything transparent, like glass, water, diamond, etc. </pre>
+<b>Diffuse:</b> the base color of your object.
+<b>Primary / Rough Specular:</b> the highlights / metal-ness of your object.
+<b>Clear coat:</b> a transparent glazed look.
+<b>Iridescence:</b> a view-dependent scattering of light that creates a color-shift effect.
+<b>Fuzz:</b> a fuzzy effect that can simulate velvet or fuzzy fabrics.
+<b>Subsurface Scattering / Single scatter:</b> these make the shader translucent, so light can scatter around inside it. Subsurface scattering is useful for simulating skin, wax, marble, and other translucent (but not transparent) materials.
+<b>Glow:</b> Lets your shader emit light. Use this to create a lightbulb or anything glowing.
+<b>Glass:</b> For creating anything transparent, like glass, water, diamond, etc.
 
 You can also check out <a href="https://rmanwiki.pixar.com/display/REN22/PxrSurface"> the Pixar documentation</a> for a full list of PxrSurface properties and visuals on what they all do. 
 
