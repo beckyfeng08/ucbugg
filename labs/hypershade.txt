@@ -1,8 +1,6 @@
 HEADING LARGE: INTRODUCTION
 
-Advanced Shading Lab: Nodes and Layers
-
-The objective of this lab is to clarify some of the tools at your disposal when it comes to shading your scenes. The materials you make in this lab are meant to get you in the habit of using fractal noise or custom image maps to control properties of your material. These customizations are made possible through hypershade, maya's node-based shading tool. Check this guide for an introduction to the essentials of the hypershade editor.
+The objective of this lab is to clarify some of the tools at your disposal when it comes to shading your scenes. The materials you make in this lab are meant to get you in the habit of using fractal noise or custom image maps to control properties of your material. These customizations are made possible through hypershade, Maya's node-based shading tool. Check  <a href="http://ucbugg.com/static/index.html#labsshadingguide">this guide</a> for an introduction to the essentials of the hypershade editor.
 
 In this lab, we will go through the process of creating a procedural iridescent metal material with rust. We're going to start by replicating the iridescent metallic part of our material.
 
@@ -38,7 +36,7 @@ Now, let's work on making our metal iridescent. Scroll down in your PixarLayer1'
 iridescence.png
 
 Next let's work on adding some nice flakes to our metal.
-Something that Pixar developed while working on cars was a method to add sparkles to their metallic paint. PxrFlakes is a pattern node which applies white spots in random configurations. PxrFlakes has two outputs, Result A and Result N. Result A gives an array of values ranging from 0-1. This can be useful for bump maps, or even color (If wired into red, blue, and green channels). We’re going to use result N. As its name implies, this provides a normal map based on the flakes. The “flake randomness” causes flakes/spots to change the direction they face, or their “normals.” When we wire in the Result N to our metal’s Bump Normals we should get sparkles. The idea is that the random flakes will either bounce light into or away from the camera causing a range of brightness which varies randomly across the surface. Right click and hold on your node graph area to get a wheel of options - the top should be "create node." Click create node, and go to renderman > pattern > PxrFlakes to create a PxrFlakes node. 
+Something that Pixar developed while working on Cars was a method to add sparkles to their metallic paint. PxrFlakes is a pattern node which applies white spots in random configurations. PxrFlakes has two outputs, Result A and Result N. Result A gives an array of values ranging from 0-1. This can be useful for bump maps, or even color (If wired into red, blue, and green channels). We’re going to use result N. As its name implies, this provides a normal map based on the flakes. The “flake randomness” causes flakes/spots to change the direction they face, or their “normals.” When we wire in the Result N to our metal’s Bump Normals we should get sparkles. The idea is that the random flakes will either bounce light into or away from the camera causing a range of brightness which varies randomly across the surface. Right click and hold on your node graph area to get a wheel of options - the top should be "Create Node." Click Create Node, and go to Renderman > Cattern > PxrFlakes to create a PxrFlakes node. 
 
 pxrflakes.png
 
@@ -46,13 +44,13 @@ Once your node appears in the graph, position it behind your first layer node. N
 
 setupWithFlakes.png
 
-Now, you've successfully wired a hyper shade node into another hyper shade node. Your PxrFlakes now affect the normal map of your first PxrLayer. 
+Now, you've successfully wired a hypershade node into another hypershade node. Your PxrFlakes now affect the normal map of your first PxrLayer. 
 Feel free to play with the frequency and flake size of your PxrFlakes node. Mine ended up looking like this:
 
 flakeySphere.png
 
 
-Once you're happy with your metallic material, let's now move on to the step where we ruin it.
+Once you're happy with your metallic material, let's move on to the step where we ruin it.
 
 HEADING LARGE: ADDING RUST
 
@@ -80,4 +78,5 @@ This is a rough render of my result.
 
 color.PNG
 
-I hope this example helped you understand what Pixar shaders can be used for and prompts you to explore what other renderman nodes might help in your animation. Next time you create a node, just type "pxr" and scroll through the options. Try out things that sound interesting and see if you can figure out how they work. If you have questions on how to make other materials, ask a facilitator for help. Now that you understand how to navigate the node editor, it will be easier for us to guide you through more advanced techniques.
+I hope this example helped you understand what Pixar shaders can be used for and prompts you to explore what other Renderman nodes might help in your animation. Next time you create a node, just type "pxr" and scroll through the options. Try out things that sound interesting and see if you can figure out how they work. If you have questions on how to make other materials, ask a facilitator for help. Now that you understand how to navigate the node editor, it will be easier for you to learn more advanced techniques.
+Please remember to turn in this lab on bCourses!
