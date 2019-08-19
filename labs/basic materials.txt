@@ -5,7 +5,7 @@ This lab is longer than most, so bear with us - shading is a complicated process
 
 HEADING MEDIUM: INSTALLING RENDERMAN
 
-Firstly, follow this link to create a Renderman Forums account:
+Firstly, if you haven't already done so, follow this link to create a Renderman Forums account:
 
 https://renderman.pixar.com/forum/register.php
 
@@ -96,16 +96,16 @@ The PxrSurface is the shader attached to your object that RenderMan uses when it
 
 Scroll through the attribute editor and look at the different dropdowns. 
 There are a bunch - but the most important ones are the following: 
-Diffuse: the base color of your object. 
-Primary / Rough Specular: The highlights / metal-ness of your object
-Clear coat: a transparent glazed look
-Iridescence: a view-dependent scattering of light that creates a color-shift effect
-Fuzz: a fuzzy effect that can simulate velvet or fuzzy fabrics.
-Subsurface Scattering / Single scatter: these make the shader translucent, so light can scatter around inside it. Subsurface scattering is useful for simulating skin, wax, marble, and other translucent (but not transparent) materials.
-Glow: Lets your shader emit light. Use this to create a lightbulb or anything glowing.
-Glass: For creating anything transparent, like glass, water, diamond, etc. 
+<pre>Diffuse: the base color of your object. </pre>
+<pre>Primary / Rough Specular: the highlights / metal-ness of your object.</pre>
+<pre>Clear coat: a transparent glazed look.</pre>
+<pre>Iridescence: a view-dependent scattering of light that creates a color-shift effect.</pre>
+<pre>Fuzz: a fuzzy effect that can simulate velvet or fuzzy fabrics.</pre>
+<pre>Subsurface Scattering / Single scatter: these make the shader translucent, so light can scatter around inside it. Subsurface scattering is useful for simulating skin, wax, marble, and other translucent (but not transparent) materials.</pre>
+<pre>Glow: Lets your shader emit light. Use this to create a lightbulb or anything glowing.</pre>
+<pre>Glass: For creating anything transparent, like glass, water, diamond, etc. </pre>
 
-See https://rmanwiki.pixar.com/display/REN22/PxrSurface for a full list of PxrSurface properties and visuals on what they all do. 
+You can also check out <a href="https://rmanwiki.pixar.com/display/REN22/PxrSurface"> the Pixar documentation</a> for a full list of PxrSurface properties and visuals on what they all do. 
 
 Each dropdown has multiple properties. Diffuse has Color, Roughness, and Gain, Primary Specular has Face Color, Edge Color, etc. Every property takes in a value - some take in RGB values (i.e. 3 numbers between 0-1), and some only take in black & white values (i.e. one number between 0-1). 
 In general, the “___ gain” property determines how much this attribute contributes to the shader as a whole. Turn this up to make the property actually show up.
@@ -118,7 +118,7 @@ Press the little R icon to preview render in viewport. Now, play around with you
 
 example_test_render.jpg
 
-Once you’ve created something to your liking, take a screenshot of your setup and save it in an easily-retrievable place. We will ask for the screenshot in the lab submission form.
+Once you’ve created something to your liking, <b>take a clear screenshot of your rendered setup</b> and save it in an easily-retrievable place. We will ask for the screenshot as part of your lab submission. If you need any help with rendering, remember to ask for help from the facilitators!
 
 HEADING MEDIUM: TEXTURES AND PATTERNS
 
@@ -132,11 +132,11 @@ Let’s learn how to UV map and create our own textures in the next section!
 
 HEADING LARGE: UV MAPPING & TEXTURE CREATION
 
-Download and open this file: (You may need to right click and hit "save as...")
+Download and open this file: (You may need to right click, hit "Save as...", and input .ma to save as a Maya file)
 
 FILE: pencil.ma
 
-You should see a pencil mesh sitting on top of a plane. The pencil has a PxrSurface shader already applied to it, called pencil_PxrSurface.
+You should see a pencil mesh sitting on top of a plane. The pencil has a PxrSurface shader already applied to it, called pencil_PxrSurface. Go ahead and add any quick lighting to the scene using the Preset browser.
 Let’s go into the UV mapping layout, to see the UV editor. On the top right, click the Workspace dropdown and choose “UV Editing”.
 
 uv_editing_workspace.jpg
@@ -219,16 +219,16 @@ pencil_shaded.jpg
 
 Congratulations, you have shaded your first object! Make sure to save your work.
 
-HEADING MEDIUM: WRAP-UP & SUBMISSION
+HEADING LARGE: WRAP-UP & SUBMISSION
 
 You can use patterns and textures to change more than just the color of your object - you can assign them to any attribute. For example, if I want my material to be transparent in some areas but not others, I can add a black and white fractal to the glass refraction gain property. The darker areas of the fractal correlate to less glassiness, and the lighter areas of the image will be glassier. Also, by assigning a black and white pattern to a “bump” or “normals” attribute, you can add fine details that would take forever to model by hand.
 
-When you’re shading objects for your short film, remember the following: After you’ve made your material for your object, delete any additional lights or meshes you used to test it. If you plan on referencing these objects into your scene, they’ll bring the lights along and that can clutter everything up really quickly. 
+When you’re shading objects for your short film, remember the following: after you’ve made your material for your object, <b>delete any additional lights or meshes you used to test it</b>. If you plan on referencing these objects into your scene, they’ll bring the lights along and that can clutter everything up really quickly. 
 
 
-If you’re interested in learning more about shading in Maya, read the UCBUGG shading guide or advanced hyper shade lab.
+If you’re interested in learning more about shading in Maya, read the UCBUGG Shading Guide or advanced Hypershade lab. 
 
-You will be required to submit the screenshot of playing around in the attribute editor, as well as the .ma file that you have been editing. Make sure to save your work in the following format: “SECTION_HW6_LASTNAMEFIRSTNAME.ma”
+You will be required to submit screenshots of your experiments in the Attribute Editor, as well as the pencil .ma file that you have been editing. Make sure to save your work in the following format: “SECTION_HW6_LASTNAMEFIRSTNAME.ma” and submit to bCourses!
 
 
 
