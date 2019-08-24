@@ -33,13 +33,22 @@ Import this image of top-down view of cello in the "top" orthographic view in th
 
 FILE: cello_top_view.zip
 
-Using the CV curve tool, trace the outline of the cello body (just the frame, nothing else).
-Trace HALF of the cello, so choose the left side/right side.
+Tip: Before I start any modeling I always like to bring my reference images on an image plane and put them on a separate layer. That way I can turn visibility off and on whenever I want. 
+
+The first important tool we will be using is called the <b> CV Curve Tool </b>
+
+This tool allows you to draw curves in Maya (the same way you might in Adobe Illustrator or a similar program) and create geometry from those curves. As a result, this tool becomes very helpful in modeling smoother/curvy objects like a cello body.
+
+Go to <b> Create -> Curve Tools -> CV Curve tool</b>. Trace the outline of the cello body (just the frame, nothing else).
+Since we can make our lives easier by duplicating/mirrororing curves, trace ONLY HALF of the cello, so choose the left side/right side.
 
 When tracing the outline, try not to click on points that are on the same longitudinal line, otherwise they'll be overlapping edge loops once you connect both sides using the multi-cut tool. The curve I made looks something like this - 
+
 full_half_curve.png
 
-Duplicate the curve (command + d) and move it up to the desired thickness of the cello. loft_curve_placement.png
+Duplicate the curve (command + d) and move it up to the desired thickness of the cello. 
+
+loft_curve_placement.png
 
 Select both curves, go to Surfaces-->Loft and click the option box. These should be your options -
 corrected_loft_options.png
@@ -55,32 +64,41 @@ What this option asks is: where should I place the vertices that define the shap
 Click apply and you should find a cool looking mesh new stretched between the two curves. This will be the side of the cello. If you don't like the thickness of it, undo and alter the height of the curve and loft again.
 
 Mirror geometry on the cello. You should end up with this
+
 mirrored_frame.png
-Merge vertices to make sure the two sides are connected (along the lower stitch)
+
+Merge vertices along the bottom stitch to make sure the two sides are connected 
+
 Connect the upper gap together by using the append to polygon tool
+
 appending_upper_gap.png
+
 If you click on the CV curves you made and move them around, you'll notice how they change the body of the cello. We don't need this anymore, so let's delete the curves. Now the mesh can only be altered through altering its faces/edges/vertices like a normal polygon.
 If you double click the upper or lower edges, only that ring of edges should be selected. If both are selected, it means that there are still some disconnected edges in the mesh. Double click on the bottom edge, and go to Mesh-->Fill Hole. It should look like this 
 
 fill_hole_result.png
 
-Tip: add the image plane to a layer and turn off its visibility for now since we don't need it for this step. To do this, open the channel box/layer editor. Then, select the object (or the image, or whatever it is you'd like to add to a layer) and go to Layers-->Create Layer From Selected. Then a "Layer1” will be created. If you click on the "V" button, that layer's visibility is going to be turned off. Rename the layer to something that makes sense. For this screenshot, I was adding the cello body to a layer since I'll also want to be able to turn that on/off when I start modeling other parts 
+At this point, it might be useful for me to add my cello body onto a layer of its own. That way I can also toggle the visibility of the body the way I do with my reference images. To do this, open the channel box/layer editor. Then, select the object (or the image, or whatever it is you'd like to add to a layer) and go to Layers-->Create Layer From Selected. Then a "Layer1” will be created. If you click on the "V" button, that layer's visibility is going to be turned off. Rename the layer to something that makes sense. 
 
 adding_body_to_layer.png
 
-A face is now created to fill the bottom hole of the cello. Now, even though this kind of looks okay as it is, there is a major problem: the edges do not flow through it! Want to see why this is bad? Click on the cello body, and press "3" to smooth.
+Now back to the modeling!
+
+Our cello body currently looks kind of okay the way it is. There is, however, a major problem: the edges on the side of the cello do not flow through it! Want to see why this is bad? Click on the cello body, and press "3" to smooth.
 
 smoothing_yuck.png
 
-Yuck. This is because all the edge flow breaks right before that face. Let's fix that.
-Using the multi-cut tool, connect all the edges across.
+Yuck! This goes back to the idea of having good edge flow and good topology. Right now, our edge flow is interrupted at the bottom face (and quite honestly terrible), and as a result the bottom face has WAY more than 4 vertices (which is something we never want). Let's fix that.
+
+Go to <b> Mesh Tools -> Multi Cut tool </b>. Using the multi-cut tool, connect all the edges across.
+
 multi_cutting.png
 
 Okay, here's an interesting situation that happened to me that might have also potentially happened to you depending on the clicks you made when tracing the CV curve. 
 triangle_problem.png
 
 Do you see that triangle? This is bad. Quads and triangles do not go together! The whole model should be in quads, or it should all be in triangles, but no mixing between them. Here's how I'll fix this:
-Go to Mesh Tools-->Insert Edge Loop and click the option box.
+Go to <b> Mesh Tools-->Insert Edge Loop </b> and click the option box.
 
 Make the edge loop "multiple" instead of "relative" and make the number of edges "1"
 Click on one of the many horizontal lines you just created when connecting the sides of the cello, and a vertical edge loop will run down the middle of the cello but it will stop near the end.
@@ -88,12 +106,13 @@ edge_loop_stopping_before_triangle.png
 
 Now, delete the triangle.
 deleting_triangle_face.png
+
 Go into vertex mode. Click the vertex in the middle (on the inside of the cello) and, while holding "v" (that's the "snap to vertex" option), move the vertex on top of the other one. It should snap in place like this
 
 snapping_vertex_to_fix_triangle.png
 
-Even though it looks complete, it isn't because the vertices aren't merged yet. Click and drag (make a small box) around the vertices and go to Edit Mesh-->Merge.
-Now we're good. When you smooth, it should look wrinkle-free.
+Even though it looks complete, it isn't because the vertices aren't merged yet. Click and drag (make a small box) around the vertices and go to <b> Edit Mesh-->Merge. </b>
+Now when you smooth, it should look wrinkle-free.
 We're going to extrude in order to give the cello its proper outline.
 Select all the faces on the SIDE of the cello
 
@@ -122,10 +141,10 @@ Merge all vertices (click and drag a box around the entire cello while in vertex
 Resize thickness depending on how thick you'd like the cello body to be.
 Edit any vertices you don't like. Since the outline of this cello is based on a curve, and every point of the curve is hand-placed, there's bound to be areas too sharp/too smooth, so go ahead and edit the location of some vertices. If you'd like, you can edit one side, delete the other side, and mirror geometry. There's bound to be many differences between your CV curve and the one I made, so this is a step in which you should edit the edges/vertices depending on what you have to make it look smoother.
 If you press "3" notice how some parts (specifically the frame) look too smooth. To fix this, I'm going to add edge loops to reinforce the angles. Here are the edge loops I'll add
+
 edge_loop_1.png
 edge_loop_2.png
 edge_loop_3.png
-edge_loop_4.png
 edge_loop_5.png
 Now if you smooth, look at how much more solid the outline looks like
 
@@ -163,7 +182,7 @@ Now that we've fixed one side of the cello, just delete the other half (the one 
 
 
 HEADING LARGE: MODELING THE FINGERBOARD
-Hide the cello body that we've worked on so far (add it to a layer and click the "V" button on its layer)
+Hide the cello body that we've worked on so far (click the "V" button on the layer we made earlier)
 Create a polygon cube, and match it to the cello's fingerboard. Something like this
 fingerboard_outline.png
 We are missing something essential, however: the side view. The shape of the fingerboard is correct, but we need to get it to be at the correct angle off the cello.
@@ -184,9 +203,10 @@ tailpiece_model.png
 When you're done with that, use the side image to get the angle of the tailpiece correct as well
 tailpiece_angle.png
 
+If you haven't already, I'd recommend putting all of your modeled pieces in different layers.
 
 HEADING LARGE: MODELING THE CELLO BRIDGE
-This is going to be a lot more complicated than the fingerboard and the tailpiece, so for the sake of simplicity, hide the layer that has everything you've modeled so far.
+This is going to be a lot more complicated than the fingerboard and the tailpiece, so for the sake of simplicity, hide everything you've modeled so far (using those great layers you made earlier).
 Import this image and place it in the the "top" view of the orthographic views
  
 FILE: cello_bridge.zip
