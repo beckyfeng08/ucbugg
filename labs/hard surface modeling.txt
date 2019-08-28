@@ -126,18 +126,27 @@ Delete the upper lip created as a result of the extrude. Delete these faces
 
 deleting_upper_lip.png
 
+So now we have the correct outline and shape of our cello body, however, the biggest problem right now is that our cello is hollow when most functioning cellos should NOT look like that. (This is where reference images come in handy). To fix our follow cello, we are going to do a few tricks!
+
 Add one edge loop going through exactly the middle of the cello body like this 
 
 edge_loop_halfway_through_side.png
 
-Delete the upper row faces from all around (shift click one face and then double click the one after it and the whole row should be selected).
-Now we're ready to extrude. Select all the faces in the middle of the cello (leaving the outer faces) and extrude the faces upward, just by a bit. Here's how much I extruded
+By doing so, we have split our cello body into two halves: "the upper half" appears hollow, while the "bottom half" looks covered. We want BOTH sides to look covered, so we are going to delete the upper half of the cello and then <b> Mirror Geometry </b> to fix this. 
+
+Delete the entire upper ring of faces of the cello (shift click one face and then double click the one after it and the whole row should be selected).
+
+Now we're going to extrude the bottom faces to give a slight indent in the cello (a nice detail to add.) Select all the faces in the middle of the cello (leaving the outer faces) and extrude the faces upward, just by a bit. Here's how much I extruded
 
 extruded_bottom.png
 
-Before moving on to the next step, (1) delete history, (2) freeze transformations, and (3) Modify-->Center Pivot. If you don't do this, chances are that the mirroring (the next step) will screw up.
+Before moving on to the next step, (1) delete history, (2) freeze transformations, and (3) Modify-->Center Pivot. If you don't do this, chances are that the mirroring (the next step) will screw up. (Remember the shortcut buttons to each of these actions)
+
+Now go to <b> Mesh -> Mirror </b>
+
 Mirror the cello in the positive y-axis to have both sides of the cello body.
-Merge all vertices (click and drag a box around the entire cello while in vertex mode, and go to Edit Mesh-->Merge)
+Make sure in the option box you have selected <b>"Merge Border Vertices"</b> and to double check afterwards that all the vertices are connected.
+
 Resize thickness depending on how thick you'd like the cello body to be.
 Edit any vertices you don't like. Since the outline of this cello is based on a curve, and every point of the curve is hand-placed, there's bound to be areas too sharp/too smooth, so go ahead and edit the location of some vertices. If you'd like, you can edit one side, delete the other side, and mirror geometry. There's bound to be many differences between your CV curve and the one I made, so this is a step in which you should edit the edges/vertices depending on what you have to make it look smoother.
 If you press "3" notice how some parts (specifically the frame) look too smooth. To fix this, I'm going to add edge loops to reinforce the angles. Here are the edge loops I'll add
@@ -177,7 +186,8 @@ edge_to_delete_for_jagged_bottom.png
 Make sure when you double click and delete the edge, you then go into vertex mode and delete its vertices as well! Otherwise, they'll still be there and the shape of the cello will not change. Alternatively, you can hold the ctrl button as you double click on the edges and press the backspace/delete button and that will delete the edges + the vertices.
 Look how much better it is now
 fixed_jagged_bottom.png
-Now do the same thing for the upper part of the cello.
+Now do the same thing for the upper corners of the cello.
+
 Now that we've fixed one side of the cello, just delete the other half (the one you did not edit) and you'll end up with a remaining quarter of a cello. Mirror it across and then mirror that to the bottom/top depending on which side you were working on. Merge all vertices. Now you should have a full cello body! finished_body.png Wrinkle free, uninterrupted edge flow, and efficient! Awesome!
 
 
@@ -218,20 +228,21 @@ So one of the more intuitive ways of modeling this object is using contour model
 bridge_start_plane.png
 By extruding the top edge, moving it up, adjusting its width, and then extruding again and doing the same thing again, you can work your way through the model. For example, several steps later you'll probably find yourself around this stage
 bridge_plane_progress_leg.png
-And it's pretty much this process all throughout the model. Same as with other models, I'm just going to focus on one side, and then when I'm done, I'll just mirror geo the side I made and connect them. After following this process for one half of the bridge, you should end up with something like this
+And it's pretty much this process all throughout the model. Same as with other models, I'm just going to focus on one side, and then when I'm done, I'll just mirror the geometry. After following this process for one half of the bridge, you should end up with something like this
 bridge_planes_1.png
 All of this literally started with one plane. All I did was extrude, edit edges and vertices, and extrude again and keep going. As you might notice, I broke it into two segments. I just personally found that easier as an approach than to try to keep it one object (it was just easier to visualize, and things got tricky as I approached the really rounded areas like the heart shape in the middle). You can split this into as many different segments as you like, as long as they're all connected in the end with consistent edge flow. Also, I didn't include many in-betweens because this will probably look different for you than it will for me, so I just thought I'd communicate the main idea.
 As is usual, once the segments are connected, mirror geometry to get the other side of the bridge and merge vertices as needed
+
 mirrored_bridge_mesh.png
-Then, duplicate the upper layer and move it down/up to the intended thickness of the bridge, kind of like what we did with the curves for the cello body
-Screen Shot 2016-02-13 at 12.28.52 AM.png
-We can't loft because these aren't surfaces/nurbs, they're polygons. So how are we going to connect the outer edges of both duplicates? We can append to polygon every edge, but that's going to take forever. Here's a very fast way of doing this: (1) extrude both outlines and (2) scale downward to get them close and (3) merge the vertices
-closing_bridge.gif
-Once they're connected, try smoothing out the bridge. It looks okay, but it's still too smooth to look like a solid object. For that, I'm going to place several edge loops in multiple places to reinforce the 90 degree angles. The closer you place an edge loop to a 90 degree angle, the more that angle will be emphasized. Here's where I'm placing the edge loops
+
+Since we started with a plane, you'll notice that the bottom of the bridge might have black faces which means those normals are "reversed". To fix this, all we need to do is select our bridge in object mode and then <b> extrude upwards.</b> You can extrude as far up as you need to get the thickness you like.
+  
+Once you have a thickness you are satisfied with, try smoothing out the bridge. It looks okay, but it's still too smooth to look like a solid object. For that, I'm going to place several edge loops in multiple places to reinforce the 90 degree angles. The closer you place an edge loop to a 90 degree angle, the more that angle will be emphasized. Here's where I'm placing the edge loops
 first_edge_loop.png
 second_edge_loop.png
 third_edge_loop.png
-Smooth and unsmooth as you do this to check your progress: is the model looking better/worse? Adjust accordingly. If you've noticed, I placed the edge loops on the top half, that's because when I'm done with the top half, I'll delete the lower half and I'll just mirror the geometry of the upper half downward instead of having to do double the work (also to get exact symmetry since these are hand-placed edge loops).
+Smooth and unsmooth as you do this to check your progress: is the model looking better/worse? Adjust accordingly. 
+
 Using the help of the reference images, place the bridge in its correct position on top of the cello body. Here's what it looks like for me
 bridge_correct_placement_smoothed.png
 
@@ -408,3 +419,5 @@ final_cello_wireframe_on_shaded.png
 
 And here's what it looks like just shaded, without the wireframe
 final_cello_shaded.png
+
+Remember to submit your model onto bcourses! Now take a well deserved break!!
