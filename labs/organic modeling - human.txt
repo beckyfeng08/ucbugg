@@ -6,9 +6,8 @@ Appologies if you are viewing this lab ahead of time. It is currently in the pro
 HEADING MEDIUM: INTRODUCTION
 TODO: add reminders to save throughout
 
-Alright, so you’ve decided to include a human character in your short. Modeling a human in Maya is a long process that can feel slow at times but, if you give it your time and patience, you can make incredible characters that can connect with your audience. Check out these amazing characters that have been made in past semesters of UCBUGG.
+Alright, so you’ve decided to include a human character in your short. Modeling a human in Maya is a long process that can feel slow at times but, if you give it your time and patience, you can make incredible characters that can connect with your audience. Check out these amazing characters that have been made in past semesters of UCBUGG! (Shoutout to Oliver Jek for making all of these shorts possible with the creation of this lab)
 
-TODO: find characters from past shorts and arange them in a grid
 pastcharacters.png
 
 HEADING MEDIUM: OUR WORKFLOW
