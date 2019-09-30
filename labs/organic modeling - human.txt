@@ -1,10 +1,11 @@
 HEADING LARGE: <b>Welcome to the Human Lab!</b>
 
 HEADING MEDIUM: INTRODUCITON
-<TODO> add reminders to save throughout
+TODO: add reminders to save throughout
 
 Alright, so you’ve decided to include a human character in your short. Modeling a human in Maya is a long process that can feel slow at times but, if you give it your time and patience, you can make incredible characters that can connect with your audience. Check out these amazing characters that have been made in past semesters of UCBUGG.
 
+TODO: find characters from past shorts and arange them in a grid
 pastcharacters.png
 
 HEADING MEDIUM: OUR WORKFLOW
@@ -36,11 +37,10 @@ character_sheet.png
 
 If you haven't made a character sheet already make sure to work with your team to create one as it is important to have a reference for proportions as well as a goal in mind when adapting to 3d. The next thing you will want to do is to set up 2 image planes with the front and side views of your sheet like so:
 
+TODO: take a screen shot of image planes in Maya
 sheet_in_maya.png
 
 HEADING LARGE: SCULPTING
-
-
 
 The first thing we are going to do is start with a basic sphere. Give yourself enough edge loops so that you have a decent amount of resolution to work with. My sphere is set to have 48 Axis and Height divisions.
 
