@@ -1,4 +1,10 @@
-HEADING LARGE: INTRODUCTION
+HEADING LARGE: <b>Welcome to the Human Lab!</b>
+
+HEADING SMALL: INTRODUCITON
+
+HEADING SMALL: OUR WORKFLOW
+
+HEADING SMALL: OTHER WORKFLOWS
 
 Alright, so you’ve decided to include a human character in your short. I will be introducing a new tool called Quad Draw that I find is super helpful to insure that your human character has the proper topology and edge flow for animation. Let’s get started.
 
