@@ -1,35 +1,46 @@
 HEADING LARGE: <b>Welcome to the Human Lab!</b>
 
 HEADING MEDIUM: INTRODUCITON
+<TODO> add reminders to save throughout
 
-Alright, so you’ve decided to include a human character in your short. I will be introducing a new tool called Quad Draw that I find is super helpful to insure that your human character has the proper topology and edge flow for animation. Let’s get started.
+Alright, so you’ve decided to include a human character in your short. Modeling a human in Maya is a long process that can feel slow at times but, if you give it your time and patience, you can make incredible characters that can connect with your audience. Check out these amazing characters that have been made in past semesters of UCBUGG.
+
+pastcharacters.png
 
 HEADING MEDIUM: OUR WORKFLOW
 
-The workflow we are going to be introducing in this lab is a mix of sculpting, quad draw retopology and working with subdivision surfaces all inside of Maya. There is a plethora of possiblity here and it really boils down to a matter of personal taste and the kinds of things you want to model. The steps we will be going through are: 
+The workflow we are going to be introducing in this lab is a mix of sculpting, retopology and working with subdivision surfaces all inside of Maya. There is a plethora of possiblity in teh tools you use and eventually it will boil down to a matter of personal taste and the kinds of things you want to model. For our purposes, the steps we will be going through in this lab are:
 <ol>
-	<li>Sculpting</li>
+	<li><b>1) Sculpting</b></li>
 		<ul>
       		<li>Block in the big shapes</li>
     	</ul>
-	<li>Retopology</li>
+	<li><b>2) Retopology</b></li>
 		<ul>
       		<li>Want to nail the topology here</li>
       		<li>We'll use QuadDraw and the muli-cut tool</li>
     	</ul>
-	<li>More Sculpting</li>
+	<li><b>3) More Sculpting</b></li>
 		<ul>
       		<li>Adding smaller details</li>
     	</ul>
 </ol>
 
-HEADING MEDIUM: OTHER WORKFLOWS
+By the end of this lab you will know how to create your own character from scratch incorporating both your artistic direction and a good topology that will streamline later parts of the pipeline. With that being said, lets get started!
 
-HEADING SMALL: The ZBrush Grey Monster Workflow
+HEADING LARGE: WORKING FROM CHARACTER SHEETS
 
-Say you are going for hyper realistic modeling where you have decided your main character's cheek pores are a key story element. In this case you probably want to look into other sculpting tools like Zbrush and Mudbox where you can sculpt in extremely high resolution (millions of polygons!), and condense that detail down into normal and displacement maps to be applied to a low resolution version of your model that won't kill whatever software are trying to animate and render in.
+In this lab, we will be working off of one of our own character sheets but keep in mind that this process is highly adaptable to your short's characters with their own stylization and proportions. Here is April, the character we will be creating:
+
+character_sheet.png
+
+If you haven't made a character sheet already make sure to work with your team to create one as it is important to have a reference for proportions as well as a goal in mind when adapting to 3d. The next thing you will want to do is to set up 2 image planes with the front and side views of your sheet like so:
+
+sheet_in_maya.png
 
 HEADING LARGE: SCULPTING
+
+
 
 The first thing we are going to do is start with a basic sphere. Give yourself enough edge loops so that you have a decent amount of resolution to work with. My sphere is set to have 48 Axis and Height divisions.
 
