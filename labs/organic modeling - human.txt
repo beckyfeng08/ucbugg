@@ -1,12 +1,33 @@
 HEADING LARGE: <b>Welcome to the Human Lab!</b>
 
-HEADING SMALL: INTRODUCITON
-
-HEADING SMALL: OUR WORKFLOW
-
-HEADING SMALL: OTHER WORKFLOWS
+HEADING MEDIUM: INTRODUCITON
 
 Alright, so you’ve decided to include a human character in your short. I will be introducing a new tool called Quad Draw that I find is super helpful to insure that your human character has the proper topology and edge flow for animation. Let’s get started.
+
+HEADING MEDIUM: OUR WORKFLOW
+
+The workflow we are going to be introducing in this lab is a mix of sculpting, quad draw retopology and working with subdivision surfaces all inside of Maya. There is a plethora of possiblity here and it really boils down to a matter of personal taste and the kinds of things you want to model. The steps we will be going through are: 
+<ol>
+	<li>Sculpting</li>
+		<ul>
+      		<li>Block in the big shapes</li>
+    	</ul>
+	<li>Retopology</li>
+		<ul>
+      		<li>Want to nail the topology here</li>
+      		<li>We'll use QuadDraw and the muli-cut tool</li>
+    	</ul>
+	<li>More Sculpting</li>
+		<ul>
+      		<li>Adding smaller details</li>
+    	</ul>
+</ol>
+
+HEADING MEDIUM: OTHER WORKFLOWS
+
+HEADING SMALL: The ZBrush Grey Monster Workflow
+
+Say you are going for hyper realistic modeling where you have decided your main character's cheek pores are a key story element. In this case you probably want to look into other sculpting tools like Zbrush and Mudbox where you can sculpt in extremely high resolution (millions of polygons!), and condense that detail down into normal and displacement maps to be applied to a low resolution version of your model that won't kill whatever software are trying to animate and render in.
 
 HEADING LARGE: SCULPTING
 
