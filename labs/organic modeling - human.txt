@@ -3,7 +3,7 @@ HEADING LARGE: <b>Welcome to the Human Lab!</b>
 under-construction.jpg
 Appologies if you are viewing this lab ahead of time. It is currently in the process of being updated
 
-HEADING MEDIUM: INTRODUCITON
+HEADING MEDIUM: INTRODUCTION
 TODO: add reminders to save throughout
 
 Alright, so you’ve decided to include a human character in your short. Modeling a human in Maya is a long process that can feel slow at times but, if you give it your time and patience, you can make incredible characters that can connect with your audience. Check out these amazing characters that have been made in past semesters of UCBUGG.
