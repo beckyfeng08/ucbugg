@@ -1,5 +1,8 @@
 HEADING LARGE: <b>Welcome to the Human Lab!</b>
 
+under-construction.jpg
+Appologies if you are viewing this lab ahead of time. It is currently in the process of being updated
+
 HEADING MEDIUM: INTRODUCITON
 TODO: add reminders to save throughout
 
