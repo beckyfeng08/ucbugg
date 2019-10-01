@@ -1,45 +1,6 @@
-HEADING LARGE: <b>Welcome to the Human Lab!</b>
+HEADING LARGE: INTRODUCTION
 
-under-construction.jpg
-Appologies if you are viewing this lab ahead of time. It is currently in the process of being updated
-
-HEADING MEDIUM: INTRODUCTION
-TODO: add reminders to save throughout
-
-Alright, so you’ve decided to include a human character in your short. Modeling a human in Maya is a long process that can feel slow at times but, if you give it your time and patience, you can make incredible characters that can connect with your audience. Check out these amazing characters that have been made in past semesters of UCBUGG! (Shoutout to Oliver Jek for making all of these shorts possible with the creation of this lab)
-
-pastcharacters.png
-
-HEADING MEDIUM: OUR WORKFLOW
-
-The workflow we are going to be introducing in this lab is a mix of sculpting, retopology and working with subdivision surfaces all inside of Maya. There is a plethora of possiblity in the tools you use and eventually it will boil down to a matter of personal taste and the kinds of things you want to model. For our purposes, this will include:
-<ol>
-	<li><b>1) Sculpting</b></li>
-		<ul>
-      		<li>We will use maya sculpting tools to block in big shapes</li>
-    	</ul>
-	<li><b>2) Retopology</b></li>
-		<ul>
-      		<li>We will use QuadDraw and the muli-cut tool to redefine our topology</li>
-    	</ul>
-	<li><b>3) More Sculpting</b></li>
-		<ul>
-      		<li>We will revisit the sculpting stage to add in smaller details</li>
-    	</ul>
-</ol>
-
-By the end of this lab you will know how to create your own character from scratch incorporating both your artistic direction and a good topology that will streamline later parts of the pipeline. With that being said, lets get started!
-
-HEADING LARGE: WORKING FROM CHARACTER SHEETS
-
-In this lab, we will be working off of one of our own character sheets but keep in mind that this process is highly adaptable to your short's characters with their own stylization and proportions. Here is April, the character we will be creating:
-
-character_sheet.png
-
-If you haven't made a character sheet already make sure to work with your team to create one as it is important to have a reference for proportions as well as a goal in mind when adapting to 3d. The next thing you will want to do is to set up 2 image planes with the front and side views of your sheet like so:
-
-TODO: take a screen shot of image planes in Maya
-sheet_in_maya.png
+Alright, so you’ve decided to include a human character in your short. I will be introducing a new tool called Quad Draw that I find is super helpful to insure that your human character has the proper topology and edge flow for animation. Let’s get started. 
 
 HEADING LARGE: SCULPTING
 
