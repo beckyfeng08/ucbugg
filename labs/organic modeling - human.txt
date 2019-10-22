@@ -1,6 +1,6 @@
 HEADING LARGE: INTRODUCTION
 
-Alright, so you’ve decided to include a human character in your short. I will be introducing a new tool called Quad Draw that I find is super helpful to insure that your human character has the proper topology and edge flow for animation. Let’s get started.
+Alright, so you’ve decided to include a human character in your short. I will be introducing a new tool called Quad Draw that I find is super helpful to insure that your human character has the proper topology and edge flow for animation. Let’s get started. 
 
 HEADING LARGE: SCULPTING
 
