@@ -112,30 +112,32 @@ default_locator copy.png
 You can find these by going to create-->locator.
 If there is a less visible, more annoyingly resistant-to-selection object in Maya than a locator, I do not know of it. I hate these. If you've ever animated you'll know that spending ten seconds looking for these inside the stomach of your character because they were parented to the feet controllers and the feet happened to be rotated and you need them to be far away in the shot you're working on and you can't find them and when you finally do you click and you accidentally click the mesh instead and then you try again and you fail and it sucks and AAAAAAAA you suddenly hate animation. These suck. They really do. They're lines, so they're difficult to select, and their color doesn't help. In fact, if you make them bigger and then freeze transformations, they will get smaller again! Because Maya.
 
-3. Here's what you should do instead: just like you custom-made controllers, custom-make a locator you can use for pointing the knees. One rig I downloaded online had diamonds for locators, and I LOVED using it because they were so easy to find and select. So for this example, I'm going to make a diamond. You can choose to follow with this shape or you can make something simpler if you like (as long as it's not 2d though and not tiny). I recommend following along with this gif though, since I'm going to be doing some line connections with Nurbs, and you might want to have that experience just so you know what you're dealing with when you're trying to connect curves. Here's the process of making the diamond: 
+Here's what you should do instead: 
+
+1. Just like you custom-made controllers, custom-make a locator you can use for pointing the knees. One rig I downloaded online had diamonds for locators, and I LOVED using it because they were so easy to find and select. So for this example, I'm going to make a diamond. You can choose to follow with this shape or you can make something simpler if you like (as long as it's not 2d though and not tiny). I recommend following along with this gif though, since I'm going to be doing some line connections with Nurbs, and you might want to have that experience just so you know what you're dealing with when you're trying to connect curves. Here's the process of making the diamond: 
 
 creating_diamond_controller.gif
 
-4. The final step of the diamond I made in the gif was selecting that final piece and duplicating it and rotating it. However, when you're done with that, you'll find that you still have separate pieces. Unfortunately, Nurbs are nowhere near as simple as polys when it comes to connecting vertices/combining meshes. So, here's a bit of a loop around connecting these: Select all the curves, and then, under the modeling menu, go to Curves-->Detach. This breaks down every line segment into its own curve.
+2. The final step of the diamond I made in the gif was selecting that final piece and duplicating it and rotating it. However, when you're done with that, you'll find that you still have separate pieces. Unfortunately, Nurbs are nowhere near as simple as polys when it comes to connecting vertices/combining meshes. So, here's a bit of a loop around connecting these: Select all the curves, and then, under the modeling menu, go to Curves-->Detach. This breaks down every line segment into its own curve.
 The reason we want this is because Maya treats curves kind of like vectors: the end point of one needs to be the beginning point of the next one if you were to connect them. Doing this with separate lines will be a lot easier. I spent way too much time trying to connect them as they are and the end result always chops off a line.
 
-5. Freeze transformations on all the curves and then delete history. Also, center the pivot (select all the curves and go to Modify-->Center Pivot).
+3. Freeze transformations on all the curves and then delete history. Also, center the pivot (select all the curves and go to Modify-->Center Pivot).
 
-6. Once you do that, select all the curves, and then go to Curves-->Attach and click the options box. Make sure you have these options: 
+4. Once you do that, select all the curves, and then go to Curves-->Attach and click the options box. Make sure you have these options: 
 attach_curves_option.png
 
-7. Now it should hopefully be one curve/object. I can resize it (and it won't get smaller when I freeze transform!), color it, customize it in any way I want. The important point, however, is that you now have a much more selectable, animator-friendly locator than the standard Maya locator.
+5. Now it should hopefully be one curve/object. I can resize it (and it won't get smaller when I freeze transform!), color it, customize it in any way I want. The important point, however, is that you now have a much more selectable, animator-friendly locator than the standard Maya locator.
 
-8. Place the locators behind the "knees" of the legs of the fox. In humans, you'd want them to be in front of the knees because human knees bend forward. For human elbows, you'd put them behind the elbows because they bend backward.
+6. Place the locators behind the "knees" of the legs of the fox. In humans, you'd want them to be in front of the knees because human knees bend forward. For human elbows, you'd put them behind the elbows because they bend backward.
 Use the orthographic view to match up the position of the locator to the knee joint. Do this by holding "v" and moving the locator to the exact middle point of the knee joint. Then go into persp when you're done, and if the locators are too close to the knees, move them backward.
 
-9. Duplicate the locator to the three other legs and do the same thing. Then freeze transformations on all of them, delete their history, and rename them appropriately.
+7. Duplicate the locator to the three other legs and do the same thing. Then freeze transformations on all of them, delete their history, and rename them appropriately.
 
-10. Now, to apply the locator's effect, select a locator, and then select its corresponding IK handle (the one it should affect) and then go to Constrain-->Pole Vector. Do this for the three other locators and IK handles as well.
+8. Now, to apply the locator's effect, select a locator, and then select its corresponding IK handle (the one it should affect) and then go to Constrain-->Pole Vector. Do this for the three other locators and IK handles as well.
 
-11. Now when you move up a foot, move around the locator and you will see how that gives you the ability to point the knee however you want.
+9. Now when you move up a foot, move around the locator and you will see how that gives you the ability to point the knee however you want.
 
-12. This is what my locators look like: 
+10. This is what my locators look like: 
 locators_final_position.png
 
 
