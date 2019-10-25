@@ -27,14 +27,11 @@ HEADING LARGE: UNDERSTANDING THE GRAPH EDITOR
 
 The graph editor plots the motion of an object against time (frames) and allows us to play with that motion.
 If you don't have any objects selected the graph editor should be empty like this:
-8.png
-
-<b> **Note that if you are using Maya 2017, your graph editor will look slightly different, as so:</b>
 2017.png
 
-3. What's the red bar?
+3. What's the yellow bar?
 
-To understand the red bar, we need to understand the time slider at the bottom of Maya.
+To understand the yellow bar, we need to understand the time slider at the bottom of Maya.
 
 9.png
 
@@ -127,7 +124,7 @@ HEADING LARGE: PLAYING WITH TANGENTS
 
 Changing the time and magnitude of key frames isn't all that we can do in the graph editor. We can also change the curvature of the graph by playing with tangents.
 
-What's a tangent again? Its the purple thing <b>(or orange, if you’re using 2017)</b> that pops up in the graph editor when you select a black dot (key frame). The tangent allows you to manipulate the spline .
+What's a tangent again? Its the small grey nodes that pop up in the graph editor when you select a key frame. The tangent allows you to manipulate the spline .
 
 7.png
 
@@ -142,12 +139,6 @@ weightedTangent.gif
 This gives us more control over the curve. Hence, in the first part of the tutorial we set the default tangent type to weighted!
 
 How do you manipulate the tangents?
-
-Notice that when you first create a weighted tangent you get something that looks like this.
-
-locked.png
-
-The large circles on the end mean that the tangent is weighted, but the weights are locked. This is a problem since changing weights allows us to pull the tangent handles in and out. With the tangent selected, right click in the graph editor and click Free Tangent Weights (Free Tangent Length in 2017). The squares on the end means we can now pull the tangent in and out. Sweet.
 
 unlocked.png
 
