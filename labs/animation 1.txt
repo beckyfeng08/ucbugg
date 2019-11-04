@@ -299,7 +299,7 @@ Step 6: Rotation
 
 The ball’s rotation will slow down at about the same speed as its horizontal motion. My ball’s rotation curve looks almost identical to its horizontal translation curve. You can judge whether you have the right amount of rotation by whether it looks like your ball is rolling or sliding at the end.
 
-rotation.mov
+rotation.gif
 
 For more practice, try animating a bowling ball or a beach ball. They’ll really give you a sense of how weight can change timing and spacing. Don’t forget to study reference footage.
 
