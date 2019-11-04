@@ -263,7 +263,7 @@ ty_curve.png
 
 As with timing, spacing can look pretty different depending on the type of ball you are using. Here’s my animation so far:
 
-vertical.mov
+vertical_NEW.gif
 
 Step 4: Squash and Stretch
 
@@ -273,7 +273,7 @@ ask2.png
 
 You’ll notice the ball is a perfect circle at the top of each arc. It stretches the most on the frames before and after impact, and it squashes on its impact frames. Try not to get carried away with too much squash and stretch. It’s best if it’s something that you feel but don’t really notice or get distracted by when you watch it. Here’s what my ball looks like with squash and stretch:
 
-squashstretch.mov
+squashstretch_NEW.gif
 
 Step 5: Horizontal motion
 
@@ -293,7 +293,7 @@ You can also move those white dots around to edit your keyframes if you like.
 
 Just make sure you hide or delete the motion trail when you’re not using it because it can slow down your playback speed.
 
-horizontalmotion.mov
+horizontalmotion_NEW.gif
 
 Step 6: Rotation
 
