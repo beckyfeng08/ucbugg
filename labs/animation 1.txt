@@ -273,7 +273,7 @@ ask2.png
 
 You’ll notice the ball is a perfect circle at the top of each arc. It stretches the most on the frames before and after impact, and it squashes on its impact frames. Try not to get carried away with too much squash and stretch. It’s best if it’s something that you feel but don’t really notice or get distracted by when you watch it. Here’s what my ball looks like with squash and stretch:
 
-squashstretch_NEW.gif
+squashandstretch_NEW.gif
 
 Step 5: Horizontal motion
 
