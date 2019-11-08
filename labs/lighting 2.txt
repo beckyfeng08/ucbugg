@@ -245,7 +245,7 @@ HEADING LARGE: HOMEWORK OPTION 1
 <b>DEMO 1 – LIGHTING AN INDOOR, DAYTIME SCENE</b>
 We’ll use the same scene for the daytime and nighttime scene just to control the variables in terms of how many changes you’ll see between the demos. 
 
-FILE: Demo_no_lights.ma
+FILE: demo_no_lights.ma
 
 This is what this scene looks like by default (everything is hidden except for polys for the sake of clarity). This is the Malcolm rig, so I’ll just refer to him as Malcolm from this point onward.
 
@@ -294,7 +294,7 @@ HEADING LARGE: HOMEWORK OPTION 2
 <b>DEMO 2 – LIGHTING AN INDOOR, NIGHTTIME SCENE</b>
 Download this scene and follow along this tutorial.
 
-FILE: Demo_no_lights.ma
+FILE: demo_no_lights.ma
 
 This is what the scene currently looks like.
 
