@@ -10,26 +10,82 @@ renderSettings.png
 
 If you don't see the Renderman tab, it's because the Renderman plugin is disabled. Make sure to go to the plug-in manager, and enable the Renderman plugin if it is not already enabled.
 
-HEADING MEDIUM: COMMON RENDERMAN SETTINGS
+HEADING MEDIUM: COMMON SETTINGS
 
-After opening the <b> Render Settings </b> tab you should see something like this:
+After opening the <b> Render Settings </b> tab you should see a gray window like this:
 
 commonSettings.png
 
-Pay attention to the areas outlined in red:
+These are your general or common render settings that apply to all renderers that you use. Pay attention to the areas outlined in red:
 
 <li> 1. First, you want to make sure that <b> Render Using </b> is set to <b> Renderman </b>.</li> 
 <li> 2. Next, make sure that you are in the <b> Common Tab </b> towards the top left. </li>
 <li> 3. Go to the FRAME RANGE section and change the settings to <b> Animation </b> if you want to render more than one frame. Then set the correct frame range of your scene. You can leave the other frame range settings as they were. </li>
-<li> 4. Go to the RENDERABLE CAMERA section. Make sure you have the correct camera you want to render in renderable cameras. If you see multiple cameras in that section you should click the little trash button for each camera you <b>do not want to render</b>. </li>
+<li> 4. Go to the RENDERABLE CAMERAS section. Make sure you have the correct camera you want to render in renderable cameras. If you see multiple cameras in that section you should click the little trash button for each camera you <b>do not want to render</b>. </li>
 <li> 5. Finally, go to the IMAGE SIZE section. If you are rendering for your final short, make sure your image size is set to HD 1080. If you are not rendering your final short, you can use HD720 or HD540 to submit some tests. </li>
 
-HEADING MEDIUM: SAMPLING AND DENOISING
+HEADING MEDIUM: RENDERMAN SETTINGS
+
+Now that we've set your common render settings, let's go into the <b> Renderman tab </b> on the top left and adjust some settings specific to Renderman.
+
+HEADING MEDIUM: SAMPLING
+
+Once you've clicked on the Renderman tab you should see a tab below that called <b> Sampling </b>.
+
 sampling.png
 
-For sampling, everyone's shorts will probably have different values. Submit some test renders to figure out what the best sampling rate for your short is. Start at 16 samples, then go up by a factor of 2 (so 32, 64, 128 etc) until you render out something that looks like good enough quality. 16 or 32 samples should be good enough for most of you, especially if you turn on denoising in the features tab as shown below. Note that if you have denoising turned on, you will have two frames rendered out. One of the images will have "_filtered" appended to the end of the file name, and that will be the denoised image. It won't add to your render time so you should definitely make sure you have it set. 
+Once again take note of all the settings highlighted in red:
 
-denoise.png
+For sampling, we recommend students sample at a range between 16-32. Submit some test renders to figure out what the best sampling rate for your short is. Start at 16 samples, then go up by a factor of 2 (so 32, 64, 128 etc) until you render out something that looks like good enough quality.
+
+DO NOT exceed 32 samples unless you are given permission by a facilitator to do so. Increasing your sample size will significantly increase your render time so don't go overboard with your samples.
+
+NOTE: Make sure you are changing your samples under the first section of the sampling tab and NOT under the IPR Samples section. Your IPR Sampling Rate will not have any effect on your final batch renders.
+
+Lastly, we want to make sure that we are using <b> PxrPathTracer </b> under the INTEGRATOR tab. Unless you are doing stylistic rendering of some kind, you will most likely never have to change this setting.
+
+HEADING MEDIUM: DENOISING
+
+Next go to the <b> AOVs </b> tab. It should look like this:
+
+denoise_NEW.png
+
+On the right you'll see a section titled Displays. Make sure your settings match mine in the above image: mainly, you want to make sure that you have a <b> Beauty </b> tab, and a Ci and a tab below it. These are all important for your final images to come out correctly.
+
+Below that in the DENOISE TAB, you'll see a <b> Denoise </b> option. By default, your renders won't have this option selected. Denoising is an important tool to help your renders come out without background render noise (as we discussed in lecture). 
+
+However, in the latest versions of Renderman there is a bug that is important to keep in mind: if your computer graphics card is not powerful enough for Renderman, sometimes the Denoise option will result in your final image coming out completely black. If this does happen to you, you'll have to come back here and uncheck the Denoise option and adjust your Sampling Rate if necessary to get out excess noise. 
+
+ 
+Note that if you have denoising turned on, you will have two frames rendered out. One of the images will have "_filtered" appended to the end of the file name, and that will be the denoised image. 
+
+HEADING MEDIUM: WORKSPACE
+
+The last important area to check is the <b> Workspace </b> tab.
+
+workspace.png
+
+In this tab we only need to check the <b> Image Output Directory and RIB Output Directory </b> settings. The image output directory is essentially the place where your final renders will be sent, and the RIB output directory is where Renderman will set up the RIB data that it needs to start rendering your images. By default, they are set to the <b> Images </b> and <b> Renderman </b> folder of your project window. It is fine to keep them there, however, sometimes it becomes easy to lose track of your renders if they get placed in your project folder. Additionally, renders are HEAVY files, and it might be best to not crowd your project space with renders but rather keep them in a separate place. I personally like to create a folder on my desktop for my local renders and that is where i redirect both my Image Output as well as my RIB Output. That way its easy to keep track of and I can easily put them on a hard drive for my teammates to access. 
+
+If you do decide to change your file outputs make sure you change BOTH the Image and RIB Outputs to <b> THE SAME PLACE </b>. It should look something like this:
+
+newOutputLocation.png
+
+It is important to remember that both of these filepaths <b> SHOULD NOT HAVE ANY SPACES, PERIODS, OR SPECIAL CHARACTERS </b> in them otherwise your job will most likely error.
+
+HEADING MEDIUM: SENDING OFF YOUR BATCH RENDER
+
+Once you've checked all of these settings you are ready to send off your Batch Render. Simply go to <b> Renderman -> Batch Render </b>.
+
+batchRender.png
+
+Maya will scroll through your animation in the timeline in order to generate the RIB files needed for rendering. Once they are done generating, another window like this should open up.
+
+batchRender_WINDOW.png
+
+This window allows you to monitor the status of your jobs, including the progress of individual frames. 
+
+You are now ready to Batch Render!
 
 HEADING LARGE: RENDERING USING TRACTOR
 
