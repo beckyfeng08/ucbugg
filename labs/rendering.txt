@@ -65,7 +65,9 @@ The last important area to check is the <b> Workspace </b> tab.
 
 workspace.png
 
-In this tab we only need to check the <b> Image Output Directory and RIB Output Directory </b> settings. The image output directory is essentially the place where your final renders will be sent, and the RIB output directory is where Renderman will set up the RIB data that it needs to start rendering your images. By default, they are set to the <b> Images </b> and <b> Renderman </b> folder of your project window. It is fine to keep them there, however, sometimes it becomes easy to lose track of your renders if they get placed in your project folder. Additionally, renders are HEAVY files, and it might be best to not crowd your project space with renders but rather keep them in a separate place. I personally like to create a folder on my desktop for my local renders and that is where i redirect both my Image Output as well as my RIB Output. That way its easy to keep track of and I can easily put them on a hard drive for my teammates to access. 
+In this tab we only need to check the <b> Image Output Directory and RIB Output Directory </b> settings. The image output directory is essentially the place where your final renders will be sent, and the RIB output directory is where Renderman will set up the RIB data that it needs to start rendering your images. By default, they are set to the <b> Images </b> and <b> Renderman </b> folder of your project window. 
+
+It is fine to keep them there, however, sometimes it becomes easy to lose track of your renders if they get placed in your project folder. Additionally, renders are HEAVY files, and it might be best to not crowd your project space with renders but rather keep them in a separate place. I personally like to create a folder on my desktop for my local renders and that is where i redirect both my Image Output as well as my RIB Output. That way its easy to keep track of and I can easily put them on a hard drive for my teammates to access. 
 
 If you do decide to change your file outputs make sure you change BOTH the Image and RIB Outputs to <b> THE SAME PLACE </b>. It should look something like this:
 
