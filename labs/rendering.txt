@@ -83,7 +83,7 @@ batchRender.png
 
 Maya will scroll through your animation in the timeline in order to generate the RIB files needed for rendering. Once they are done generating, another window like this should open up.
 
-batchRender_WINDOW.png
+batchRender_monitor.png
 
 This window allows you to monitor the status of your jobs, including the progress of individual frames. 
 
