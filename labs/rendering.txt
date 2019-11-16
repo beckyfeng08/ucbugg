@@ -50,7 +50,7 @@ Next go to the <b> AOVs </b> tab. It should look like this:
 
 denoise_NEW.png
 
-On the right you'll see a section titled Displays. Make sure your settings match mine in the above image: mainly, you want to make sure that you have a <b> Beauty </b> tab, and a Ci and a tab below it. These are all important for your final images to come out correctly.
+On the right you'll see a section titled Displays. Make sure your settings match mine in the above image: mainly, you want to make sure that you have a <b> Beauty </b> tab, and a <b> Ci</b>, <b> a </b> tab below it. These are all important for your final images to come out correctly.
 
 Below that in the DENOISE TAB, you'll see a <b> Denoise </b> option. By default, your renders won't have this option selected. Denoising is an important tool to help your renders come out without background render noise (as we discussed in lecture). 
 
