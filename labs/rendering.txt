@@ -92,49 +92,74 @@ You are now ready to Batch Render!
 
 HEADING LARGE: RENDERING USING GOOGLE CLOUD
 
-HEADING MEDIUM: SETTING UP GOOGLE CLOUD
+If you are trying to render a longer/more complex scene and need more rendering power, you can use <b> Zync Rendering </b>, which is on Google Cloud. Essentially, this means that you will be sending off your scenes to render on a render farm rather than on your local computer. This is a fairly powerful and convenient way to render,however,remember to account for things like download time and the wait queue for the computers to actually begin rendering. 
 
-If you want/need more rendering power, you can use Zync Render, which is on Google Cloud. This is a more convenient option over tractor, but there are many issues that may also come with this. 
+Also please keep in mind that our Zync Account is being shared amongst the ENTIRE CLASS. That means you should be mindful over how many jobs you send at a time and be extra careful that everything in your scene is FINALIZED before you send it off.
+
+HEADING MEDIUM: FINALIZING YOUR SCENE & RENDER SETTINGS
+
+Before you actually send off a job to Zync, you want to make certain that your scene is <b> one-hundred percent DONE </b>. This means that all the animation is finalized, all assets have their proper shading, the scene is lit etc. Once you have double and then triple-checked that you're scene is done, you want to set your <b> Render Settings </b>. 
+
+These settings would essentially be the same as the ones you set up for <b> Batch Rendering </b> so please make sure to revisit that section of the lab if you need a reminder on the important Renderman Settings. 
+
+Now that your scene is done AND your render settings are set up, make sure to do some local test renders to ensure that the final result looks the way you intend it to!
+
 
 HEADING SMALL: SETTING UP A ZYNC ACCOUNT THROUGH THE SCHOOL
 
 <b>IMPORTANT!! Once you have your render settings set up, PLEASE CALL OVER A FACILITATOR to make sure that everything looks correct to check you off. They will ask you for your @berkeley.edu e-mail to give you access to the Zync render farm. Otherwise, you will not be able to log in and continue following the steps.</b>
 
-<b>STEP 1:</b> Download the Zync client app and the Zync plugin from <a href='https://www.zyncrender.com/downloads/'>here</a>
+<b>STEP 1:</b> Download the Zync client app from <a href='https://www.zyncrender.com/downloads/'>here</a>
 
-<b>STEP 2:</b> Start the Zync client app. Click on “Connection Settings” and under Zync Site Address, enter <i>https://instzync1.zync.io</i>. Click “Login With Google” and sign in with your Calnet account (your @berkeley.edu account). This should take you to a page where you need to authorize Zync to access a few things. Afterwards, your window should look like this:
+<b>STEP 2:</b> Start the Zync client app. You get a message asking you to Install Plugins for Zync. Click yes and ensure that you select the correct version of Maya that you want to install the plugin for. If you are ever unsure if your plugins are updated or installed, simply click on the "Plugins" tab in the Zync Client app and make certain that all of your plugins are labeled as "OK".
 
-zyncIN.png
+zyncPlugins.png
 
-<b>STEP 3:</b> Start Maya. If Maya was already opened when you were downloading the client and plugin, please restart the program.
+<b>STEP 3:</b> Once you've checked that your plugins are installed. Go to the <b> Login </b> tab and click on “Connection Settings”. Under Zync Site Address, enter <b>https://ucbuggfa19.zync.io</b>. 
+
+<b>STEP 4:</b> Back on the Login tab, click “Login With Google” and sign in with your @berkeley.edu email. This should take you to a page where you need to authorize Zync to access a few things. Afterwards, your window should look like this:
+
+zyncConsole.png
+
+You now have everything properly setup for Zync Rendering!
+
 
 HEADING MEDIUM: SUBMITTING A JOB TO GOOGLE CLOUD
 
-Note: Make sure you don't have any whitespaces in your path. If you do, the render will fail. Name your scenes by the following convention:
-<b>GROUPNAME_SCENE#OF#_DESCRIPTION</b>, i.e. “THEONLYSTAR_SCENE2OF17_LOOKINGATSKY” instead of “THE ONLY STAR - SCENE 2 OF 17 - LOOKING AT SKY”
+Note: Make sure you don't have any whitespaces in your path. If you do, the render will fail. PLEASE NAME YOUR SCENES BY THE FOLLOWING CONVENTION BEFORE YOU SEND TO ZYNC:
+<b>GROUPNAME_SCENE#OF#</b> 
 
-<b>STEP 1:</b> Open up the Zync client app. Open up the file you would like to render. Make sure all of your render settings are correct (You can edit these under RenderMan >> Advanced RenderMan Controls). Under the Zync tab in your menu bar in Maya, click on the Zync logo. In both the client app and the Zync Submit window, make sure to log in to your google account that you previously registered with. 
+i.e. “POWEREDUP_SCENE2OF17.ma” instead of “Powered Up - SCENE 2 OF 17.ma”
+
+This way, you will ensure that you have NO SPACES in your scene names and facilitators can easily keep track of which groups are sending renders to Zync. If you send off scenes to render with names like (myscene.ma) they will most likely be canceled by a facilitator since it is impossible to tell which group is responsible for that render.
+
+<b>STEP 1:</b> If you don't already have the Zync Client app open, make sure to do that and make sure to log in with your Berkeley email. Open up the file you would like to render. Make sure all of your render settings are correct (You can edit these under RenderMan >> Render Settings). 
+
+You should now see a <b> Zync tab </b> in your menu bar in Maya (if not go into Windows -> Plug In Manager and ensure that Zync is loaded). Click on the Zync logo. 
+ 
 zync1.png
 
 <b>STEP 2: </b> There are a variety of settings you can play around with in the Zync Submit window. Below, I will list the settings that I have changed from default or I think are important to note. 
 zync2.png
-	<li> a. <b>Num. Machines</b> refers to the number of computers you will have rendering at the same time. You can put any number you like here, but 50 is the max you can use at once. </li>
+	<li> a. <b>Num. Machines</b> refers to the number of computers you will have rendering at the same time. Since we are sharing these machines as a class DO NOT EXCEED MORE THAN 5 MACHINES AT A TIME unless given permission by a facilitator. </li>
 	<li> b. <b>Machine Type</b> is the kind of computer you will use. In the screenshot above, I have it set to the cheapest option, which is the PREEMPTIBLE 16GB one. </li>
-	<li> c. Make sure you check <b>“Ignore Missing Plugin Errors”</b>. Maya has some weird problems sometimes so this will help us avoid those. </li>
-	<li> d. <b>Project folder</b> and <b>output directory</b> show where it is taking all the files from as well as where it will send the renders. Make sure that there is no whitespace in either of these, otherwise your render might fail. Don't just change the name in this line though. You have to actually change the file path. </li>
-	<li> e. <b>Renderer</b> should be set to Renderman. </li>
-	<li> f. <b>Frame range</b> should carry over from your render settings but it's still good to double check that you are rendering the correct frames. </li>
-	<li> g. <b>Chunk size</b> refers to how many frames Zync will give one machine. You should set this to 1 to get more done in less time. </li>
-	<li> h. If you have more render layers than default, select them here. Otherwise, just select <b>“defaultRenderLayer”</b>. </li>
-	<li> i. Your <b>resolution</b> should also carry through from your render settings. For your final short, you should be rendering in 1920x1080 (Full HD) but other resolutions are fine for testing purposes. </li>
+	<li> c. <b>Existing Project vs New Project</b> refers to the project that Zync makes when you send off a job. If this is the FIRST SCENE you are sending FOR YOUR GROUP. Then make a new project and name it after the title of your short. If your group has already sent off renders then you can find your project in the Existing Projects dropdown. </li>
+	<li> d. Make sure you check <b>“Ignore Missing Plugin Errors”</b>. Maya has some weird problems sometimes so this will help us avoid those. </li>
+	<li> e. <b>Project folder</b> and <b>output directory</b> show where it is taking all the files from as well as where it will send the renders. Make sure that there is no whitespace in either of these, otherwise your render might fail. Don't just change the name in this line though. You have to actually change the file path. </li>
+	<li> f. <b>Renderer</b> should be set to Renderman. </li>
+	<li> g. <b>Frame range</b> should carry over from your render settings but it's still good to double check that you are rendering the correct frames. </li>
+	<li> h. <b>Chunk size</b> refers to how many frames Zync will give one machine. You should set this to 1 to get more done in less time. </li>
+	<li> i. <b>Camera</b> refers to the camera in your scene that Zync will be rendering from so make sure this is the correct one. Also avoid having whitespaces in the camera name to avoid errors. </li>
+	<li> j. If you have more render layers than default, select them here. Otherwise, just select <b>“defaultRenderLayer”</b>. </li>
+	<li> k. Your <b>resolution</b> should also carry through from your render settings. For your final short, you should be rendering in 1920x1080 (Full HD) but other resolutions are fine for testing purposes. </li>
 
-<b><i>IMPORTANT! IF THIS IS YOUR FIRST TIME SUBMITTING A JOB, PLEASE CALL OVER A FACILITATOR TO CHECK OVER YOUR RENDER SETTINGS BEFORE YOU CONTINUE!!</b></i>
+<b><i>IMPORTANT! IF THIS IS YOUR FIRST TIME SUBMITTING A JOB, PLEASE CALL OVER A FACILITATOR TO CHECK OVER YOUR RENDER SETTINGS & ZYNC SETTINGS BEFORE YOU CONTINUE!!</b></i>
 
-<b> STEP 3: </b> Hit "Launch Job". Go to <a href='https://instzync1.zync.io'>https://instzync1.zync.io</a> to watch the progress of your renders. They should auto-download once they're done but you shouldn't turn off your computer while it is going, otherwise the files might not get downloaded.  
+<b> STEP 3: </b> Hit "Launch Job". Go to <a href='https://ucbuggfa19.zync.io'>https://ucbuggfa19.zync.io</a> to watch the progress of your renders. They should auto-download once they're done but you shouldn't turn off your computer while it is going, otherwise the files might not get downloaded.  
 
-HEADING SMALL: SETTING UP YOUR OWN ZYNC RENDERING ACCOUNT
+HEADING SMALL: SETTING UP A PERSONAL ZYNC RENDERING ACCOUNT
 
-<b><i>Note: Only set this up if you are in desperate need for more renders. Otherwise, the school accounts and tractor should be enough to render your short.</b></i>
+<b><i>Note: Only set this up if you are in desperate need for more renders. Otherwise, the school accounts should be enough to render your short.</b></i>
 Please make sure to follow these instructions in the order they are given. Zync is still in beta and if you do this out of order, your project may not get set up correctly and you won't be able to render. 
 
 <b>STEP 1: </b> Go to <a href='https://console.cloud.google.com'> Google Cloud Console </a>. There should be a button on the top right that says "Sign up for free trial" and follow the next instructions. At some point in this registration, it'll ask for your credit card. Don't worry, google cloud isn't like all those other websites that require credit cards and it won't charge you when your trial is over. 
