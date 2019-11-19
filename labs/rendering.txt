@@ -92,7 +92,7 @@ You are now ready to Batch Render!
 
 HEADING LARGE: RENDERING USING GOOGLE CLOUD
 
-If you are trying to render a longer/more complex scene and need more rendering power, you can use <b> Zync Rendering </b>, which is on Google Cloud. Essentially, this means that you will be sending off your scenes to render on a render farm rather than on your local computer. This is a fairly powerful and convenient way to render,however,remember to account for things like download time and the wait queue for the computers to actually begin rendering. 
+If you are trying to render a longer/more complex scene and need more rendering power, you can use <b> Zync Rendering </b>, which is on Google Cloud. Essentially, this means that you will be sending off your scenes to render on a render farm rather than on your local computer. This is a fairly powerful and convenient way to render, however, remember to account for things like download time and the wait queue for the computers to actually begin rendering. 
 
 Also please keep in mind that our Zync Account is being shared amongst the ENTIRE CLASS. That means you should be mindful over how many jobs you send at a time and be extra careful that everything in your scene is FINALIZED before you send it off.
 
@@ -111,7 +111,7 @@ HEADING SMALL: SETTING UP A ZYNC ACCOUNT THROUGH THE SCHOOL
 
 <b>STEP 1:</b> Download the Zync client app from <a href='https://www.zyncrender.com/downloads/'>here</a>
 
-<b>STEP 2:</b> Start the Zync client app. You get a message asking you to Install Plugins for Zync. Click yes and ensure that you select the correct version of Maya that you want to install the plugin for. If you are ever unsure if your plugins are updated or installed, simply click on the "Plugins" tab in the Zync Client app and make certain that all of your plugins are labeled as "OK".
+<b>STEP 2:</b> Start the Zync client app. You will get a message asking you to Install Plugins for Zync. Click yes and ensure that you select the correct version of Maya that you want to install the plugin for. If you are ever unsure if your plugins are updated or installed, simply click on the "Plugins" tab in the Zync Client app and make certain that all of your plugins are labeled as "OK".
 
 zyncPlugins.png
 
@@ -126,8 +126,9 @@ You now have everything properly setup for Zync Rendering!
 
 HEADING MEDIUM: SUBMITTING A JOB TO GOOGLE CLOUD
 
-Note: Make sure you don't have any whitespaces in your path. If you do, the render will fail. PLEASE NAME YOUR SCENES BY THE FOLLOWING CONVENTION BEFORE YOU SEND TO ZYNC:
-<b>GROUPNAME_SCENE#OF#</b> 
+Note: Make sure you don't have any whitespaces in your path. If you do, the render will fail. 
+
+PLEASE NAME YOUR SCENES BY THE FOLLOWING CONVENTION BEFORE YOU SEND TO ZYNC: <b>GROUPNAME_SCENE#OF#</b> 
 
 i.e. “POWEREDUP_SCENE2OF17.ma” instead of “Powered Up - SCENE 2 OF 17.ma”
 
@@ -155,7 +156,9 @@ zync2.png
 
 <b><i>IMPORTANT! IF THIS IS YOUR FIRST TIME SUBMITTING A JOB, PLEASE CALL OVER A FACILITATOR TO CHECK OVER YOUR RENDER SETTINGS & ZYNC SETTINGS BEFORE YOU CONTINUE!!</b></i>
 
-<b> STEP 3: </b> Hit "Launch Job". Go to <a href='https://ucbuggfa19.zync.io'>https://ucbuggfa19.zync.io</a> to watch the progress of your renders. They should auto-download once they're done but you shouldn't turn off your computer while it is going, otherwise the files might not get downloaded.  
+<b> STEP 3: </b> Hit "Launch Job". Go to <a href='https://ucbuggfa19.zync.io'>https://ucbuggfa19.zync.io</a> to watch the progress of your renders. They should auto-download once they're done but you shouldn't turn off your computer while it is going, otherwise the files might not get downloaded.
+
+You are now READY TO RENDER!!  
 
 HEADING SMALL: SETTING UP A PERSONAL ZYNC RENDERING ACCOUNT
 
