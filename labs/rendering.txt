@@ -180,12 +180,19 @@ So you might be wondering why you need this thing called a holdout to render a s
 
 Before you start, render ONE frame of everything that doesn't move (put all characters/moving objects in separate layer and hide them). Since it is only one frame, it will be quick enough to render locally.
 
-1. Make a duplicate mesh of the object you want shadows on
-2. With this mesh selected, click the holdout button in the renderman tab
-3. Make sure to only check "shadows" (You can also do reflections by leaving the other options checked. You can vary the look of the reflection by changing the roughness and specularity of the PxrSurface for the holdout object. However, if you chose to include reflections, we would recommend doing them in a separate pass to make compositing easier)
-5. Hide everything that doesn't move (put moving objects into a layer and hide it)
-6. Batch render (see previous section)
-7. Composite the _filtered image on top of the background image using whatever program you wish. We support After Effects in this class, so see the Compositing Lab for help with this.
+<b>STEP 1.</b> Make a duplicate mesh of the object you want shadows and reflections on
+<b>STEP 2.</b> With this mesh selected, click the holdout button in the renderman tab. You can find it right here:
+
+holdouts.png
+
+<b>STEP 3.</b> Hide everything that doesn't move
+A quick way to do this is to toggle the visibility of a display layer. You can find those in the layer editor, aka the menu that hangs out underneath the chanel box editor. First create a new layer by clicking the new layer button:
+chanelBoxLayerAdd.png
+Now with the objects you want to hide selected, right click this layer and click on "Add Selected Objects". After this, you can hide all of the objects at once by clicking the V icon on the layer which toggles its visibility
+visibleLayer.png
+
+<b>STEP 4.</b> Batch render (see previous section)
+<b>STEP 5.</b> Composite the _filtered image on top of the background image using whatever program you wish. We support After Effects in this class, so see the Compositing Lab for help with this.
 -Note: If you did not check "denoise" in the render settings, you might only get a regular image (not _filtered)
 
 For more details and example pictures, check out the Renderman doc page for holdouts <a href="https://rmanwiki.pixar.com/display/REN/Holdouts">here</a>
