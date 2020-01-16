@@ -3,14 +3,145 @@ HEADING LARGE: INTRODUCTION
 
 As explained during lecture, compositing is the part of the post-production pipeline in which one would compile all their different images and video layers together in order to create one cohesive film. Compositing comes in handy when you need to save time and when you need a way to "cheat" your special effects.
 
-There are a few different compositing programs you can explore, but for the sake of this course and free software access, we'll be using Adobe After Effects. You can download the program at: https://software.berkeley.edu/ 
+There are a few different compositing programs you can explore, but for the sake of this course and free software access, we'll be using Adobe After Effects. You can download the program at: https://software.berkeley.edu/. This lab was written for After Effects CC 2018, but the same functions exist in later versions of the program as well. Please contact a facilitator if you have any download or installation issues.
 
-In this lab, you will learn how to use After Effect's motion tracking capabilities to do a quick photo replacement. After completing this lab, you should be comfortable enough with using motion tracking in your own shorts to perform actions such as screen replacements or adding signs to walls.
+In this lab, you will learn how to use After Effect's motion tracking capabilities to do a quick photo replacement. After completing this lab, you should be comfortable enough with using motion tracking in your own shorts to perform actions such as screen replacements or adding signs to walls. The UCBUGG Basic section may use this lab as an "extra credit" replacement for a missed lab.
 
-I will assume you have some basic familiarity with the After Effects interface. If you would like a refresher, read through the first few sections of our Compositing - Layer Management lab.
+I will assume you have some basic familiarity with the After Effects interface, but in general this lab can be completed without any prior After Effects knowledge. If you would like a refresher on the interface, read through the first few sections of our Compositing - Layer Management lab.
 
 <a href='google.com'>DOWNLOAD THE LAB HERE</a>
 
 HEADING LARGE: LAB UNDER REVISION!
 
-HEADING LARGE: OPENING THE PROJECT
+As of Jan 16, 2020, this lab is under revision. It will be completed by Jan 21, 2020 (the first day of classes) - check back then for the complete lab!
+
+HEADING LARGE: PROJECT SETUP
+
+Included in the lab download are two files: Nickelstats.mp4 and spacesinfilepaths.png.
+
+Nickelstats.png
+
+spacesinfilepaths.png
+
+In this lab, we'll be creating our own version of the <a href = 'https://www.youtube.com/watch?v=sIlNIVXpIns'>Look at this Graph meme,</a> a spoof of Nickelback's <a href = 'https://www.youtube.com/watch?v=T3rXdeOvhNE'>Photograph</a> song. If you want to forgo these files and use your own instead, feel free to do so - however, you will only recieve extra credit for a .mp4 submission outside of your group short (ie you may not use your group project as a stand in for this lab).
+
+HEADING MEDIUM: IMPORTING YOUR FILES
+
+Let's begin by setting up our project files in a new project. In your After Effects window, start by saving your project in the lab folder using File > Save or CTRL/CMD + s. As with Maya, you should remember to <b>SAVE OFTEN</b>! 
+
+Now, let's import Nickelstats.mp4 and spacesinfilepaths.png. You can do this in a few different ways: 
+<ul>
+     <li>File > Import > File...</li>
+     <li>File > Import > Multiple Files...</li>
+     <li>Dragging and dropping </li>
+</ul>
+
+Your Project tab should now look like this: 
+
+001.PNG
+
+HEADING MEDIUM: CHANGING YOUR WORKSPACE
+
+In After Effects, much like Maya, you can change your workspace to have quick access to different menus, depending on what you need. For this lab, we'll be using the Motion Tracking workspace. To enable it, click these arrows on the Tools panel: 
+
+002.png
+
+Select Motion Tracking in the menu that opens. Now, you should be able to see a panel called Tracker on the right hand side of your interface: 
+
+003.png
+
+This Tracker panel will allow us to perform different kinds of motion tracking! We'll be learning how to use it in the following sections.
+
+HEADING LARGE: TRACKING THE VIDEO: TRANSFORM
+
+To create our own Nickelstats meme, we'll need to first track the picture frame. The video cuts a few times, so we'll need different trackers for these different shots. Let's perform a simple Transform tracking first.
+
+HEADING MEDIUM: CREATING THE TRACKER
+
+Add the Nickelstats.mp4 to your timeline. This will create an associated Nickelstats composition. Adjust your work area to the just the first shot in the video: 
+
+004.gif
+
+The beginning of the shot begins with a fade in and we don't actually see the photo frame, so we can't track from the very beginning of the video. Instead, I keep my Time Indicator at the end of the current Work Area, so we can track from the last frame to the first: 
+
+005.png
+
+Go to the Tracker panel and change the Motion Source from None to Nickelstats.mp4. Next, select the Nickelstats.mp4 layer in your Timeline. With the video selected, click the Track Motion button.
+
+006.png
+
+You should see some new options appear in the Tracker panel.
+
+007.png
+
+By selecting "Track Motion," you created a new tracker called Tracker 1. It should have the track type Transform and by default have the Position option selected. Since the photo frame in our video changes both position and rotation, we want to check the Rotation option as well. Now, if you look at your Nickelstats.mp4 Layer video, you'll be able to see two tracker points.
+
+008.png
+
+Each Tracker Point has a box on the inside, a box on the outside, and a crosshair in the middle: 
+
+009.png
+
+The box inside is called the <i>feature region</i>. This is the region that should contain some element, or feature, in the video to be tracked. It (the feature) should be distinguishable and trackable (ie, not disappear throughout the video) for best results. This is where contrast is incredibly important - the feature you want to track should be easily identifiable.
+
+The box outside is called the <i>search region</i>. This is the area that After Effects will search to locate the tracked feature. If the search region is too small, After Effects might not be able to find the right feature to track between frames. On the other hand, if your search region is too large, it will take a long time to search. Note that your feature of interest should be unique within the search region, but not necessarily within the entire frame.
+
+The crosshair in the center is called the <i>attach point</i>. This is where a <i>target</i> that follows the movement of your tracker will be attached. In our case, the target will be the spacesinfilepaths.png layer we will add later. For now, let's focus on setting up our feature regions and search regions correctly.
+
+<i>Note:</i> A set of tracker points is called a tracker! You can change the name of your tracker by clicking on the Options button, then renaming your tracker.
+
+015.png
+
+Before you continue, remember to save!
+
+HEADING MEDIUM: EDITING THE TRACKING POINTS
+
+Let's play around with adjusting the tracking points. You can move the entire point by clicking and dragging in the spaces in the tracking point, or change the size of the feature and search regions by clicking and dragging on the boxes.
+
+010.gif
+
+After you feel comfortable adjusting the tracking points, let's actually set them up on the two top corners of the (photo)graph. 
+
+<i>Note:</i> You can easily pan in After Effects by clicking and dragging using the middle mouse button.
+
+011.gif
+
+Notice how, since this video is relatively short, I use some pretty large feature and search regions. You can always adjust the size of these regions later.
+
+<i>Note:</i> Remember to save!
+
+HEADING MEDIUM: ANALYZING THE MOTION
+
+Now it's time to analyze the motion in our video. 
+
+012.png
+
+This step tells After Effects to search for pixels matching the feature region frame by frame. Since my time indicator is at the end of the clip I want to analyze, I'll select one of the two analyze backward options. You can either analyze just one frame at a time, which is useful for debugging between frames, or all the frames in the backward/forward direction. Generally, you'll want to begin by analyzing a large chunk of your video, then going back and updating frames where the tracker might have failed. So, I'll start by simply analyzing backward:
+
+013.png
+
+I stop analyzing when the (photo)graph exits the frame: 
+
+014.png
+
+Since the tracker takes a while to analyze, I'll save again just to be safe. 
+
+This is where you should check if your tracker has done a good job or not, and where your results might not match mine. Here are some tips for fixing some common issues:
+<ul>
+<li> If your tracker point(s) suddenly jumps to a different location, that might be because your search region or feature region was too small and the feature exited the search region between frames. In this case, After Effects had to guess the most similar feature in its search region to the feature you wanted, and it chose something that wasn't quite right. Enlarge your search region and analyze the clip again. </li>
+
+<li> If your tracker point(s) is flying around, it might be because there is not enough contrast to make the feature in your feature region very distinguishable. But you might be able to circumvent the issue by tracking some other feature with the same movement you want, then setting the attach point to be at the desired location. Unfortunately, if your frames simply do not have enough contrast, this might mean rerendering them.</li>
+
+<li> If your tracker point(s) is flying around, it might be because you have some options selected that don't make sense for the video you are trying to analyze.
+
+015.png
+
+Try adjusting the options in the resulting pop-up box, then analyze the clip again.
+</li>
+</ul>
+
+Once you're satisfied with the tracking, it's time to move on to adding our spacesinfilepaths.png!
+
+HEADING MEDIUM: MOTION TARGETS
+
+

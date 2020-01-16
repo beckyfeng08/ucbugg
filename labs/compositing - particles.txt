@@ -12,5 +12,3 @@ I will assume you have some basic familiarity with the After Effects interface. 
 <a href='google.com'>DOWNLOAD THE LAB HERE</a>
 
 HEADING LARGE: LAB UNDER REVISION!
-
-HEADING LARGE: OPENING THE PROJECT
