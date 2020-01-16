@@ -32,7 +32,7 @@ allLabs = {
 		"araknid": []
 	},
 	"post-production":  {
-		"bugg": ["rendering", "compositing"],
+		"bugg": ["rendering", "compositing - layer management", "compositing - motion tracking", "compositing - particles"],
 		"araknid": []
 	}
 };

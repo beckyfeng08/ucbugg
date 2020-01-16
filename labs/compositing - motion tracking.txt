@@ -1,0 +1,16 @@
+<<<<<<< HEAD
+HEADING LARGE: INTRODUCTION
+
+As explained during lecture, compositing is the part of the post-production pipeline in which one would compile all their different images and video layers together in order to create one cohesive film. Compositing comes in handy when you need to save time and when you need a way to "cheat" your special effects.
+
+There are a few different compositing programs you can explore, but for the sake of this course and free software access, we'll be using Adobe After Effects. You can download the program at: https://software.berkeley.edu/ 
+
+In this lab, you will learn how to use After Effect's motion tracking capabilities to do a quick photo replacement. After completing this lab, you should be comfortable enough with using motion tracking in your own shorts to perform actions such as screen replacements or adding signs to walls.
+
+I will assume you have some basic familiarity with the After Effects interface. If you would like a refresher, read through the first few sections of our Compositing - Layer Management lab.
+
+<a href='google.com'>DOWNLOAD THE LAB HERE</a>
+
+HEADING LARGE: LAB UNDER REVISION!
+
+HEADING LARGE: OPENING THE PROJECT
