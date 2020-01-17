@@ -23,7 +23,7 @@ Nickelstats.png
 
 spacesinfilepaths.png
 
-In this lab, we'll be creating our own version of the <a href = 'https://www.youtube.com/watch?v=sIlNIVXpIns'>Look at this Graph meme,</a> a spoof of Nickelback's <a href = 'https://www.youtube.com/watch?v=T3rXdeOvhNE'>Photograph</a> song. If you want to forgo these files and use your own instead, feel free to do so - however, you will only recieve extra credit for a .mp4 submission outside of your group short (ie you may not use your group project as a stand in for this lab).
+In this lab, we'll be creating our own version of the <a href = 'https://www.youtube.com/watch?v=sIlNIVXpIns'>Look at this Graph meme,</a> a spoof of Nickelback's <a href = 'https://www.youtube.com/watch?v=T3rXdeOvhNE'>Photograph</a> song. If you want to forgo these files and use your own instead, please feel free to do so! However, you will only recieve extra credit for a .mp4 submission outside of your group short (ie you may not use your group project as a stand in for this lab).
 
 HEADING MEDIUM: IMPORTING YOUR FILES
 
@@ -39,6 +39,10 @@ Now, let's import Nickelstats.mp4 and spacesinfilepaths.png. You can do this in 
 Your Project tab should now look like this: 
 
 001.PNG
+
+Pro tip: The Nickelstats.mp4 video is very repetitive and the music can quickly become very annoying. Go ahead and mute the sound since it won't be an important part of this lab.
+
+001_mute.png
 
 HEADING MEDIUM: CHANGING YOUR WORKSPACE
 
@@ -138,10 +142,59 @@ This is where you should check if your tracker has done a good job or not, and w
 
 Try adjusting the options in the resulting pop-up box, then analyze the clip again.
 </li>
+
+<li> If you feel like you're losing the tracking data every time you click away from your video layer and back, it might be because you have the wrong tracker selected. You can see a list of all your trackers under the Current Track dropdown. You might even have a few extra trackers that were made on accident - simply delete the ones you don't need by selecting it in the layer's properties as if it were an effect:
+
+016.png
 </ul>
 
 Once you're satisfied with the tracking, it's time to move on to adding our spacesinfilepaths.png!
 
 HEADING MEDIUM: MOTION TARGETS
+
+In this section, let's a new layer (spacesinfilepaths.png) which will follow the motion track we just created. First, add it to the composition timeline. 
+
+017.png
+
+Select your Nickelstats.mp4 layer and the tracker (in the Tracker panel) again. Click the Edit Target button under Motion Target: 
+
+018.png
+
+And select the layer you want to apply the motion to. 
+
+019.png
+
+Hit OK. Then, in the Tracker panel, hit Apply to apply the effect.
+
+020.png
+
+In the Motion Tracker Apply Options pop-up box, apply both the X and Y dimensions and hit OK. You should now be taken back to the Nickelstats composition, where you can see that the spacesinfilepaths.png is now tilted at the same angle as the (photo)graph!
+
+021.png
+
+Save, then go ahead and watch how your video looks so far.
+
+HEADING MEDIUM: FINAL ADJUSTMENTS
+
+Lastly, it's time to actually place spacesinfilepaths.png in the correct location on the picture frame and give it a fade in effect to match the rest of the video.
+
+To move the spacesinfilepaths.png, simply adjust its anchor point position. You can also adjust its scale!
+
+022.png
+
+And finally, let's have spacesinfilepaths.png fade in with the the rest of the video. Key its opacity, and have it change from 0% to 100%. You don't need to be very precise about this part to get a good look since the video is very quick.
+
+023.png
+
+Ta-da!!! You have now learned how to use trackers in After Effects and completed the most important section of this lab. 
+
+Nickelstats_part1.gif
+
+In the following section, we will continue motion tracking on the next shot in Nickelstats.mp4 - this time using a different tracker, the Perspective corner pin.
+
+
+HEADING LARGE: TRACKING THE VIDEO: PERSPECTIVE CORNER PIN
+
+Coming soon!
 
 
