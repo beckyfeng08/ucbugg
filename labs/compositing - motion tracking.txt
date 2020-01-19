@@ -11,10 +11,6 @@ I will assume you have some basic familiarity with the After Effects interface, 
 
 <a href='google.com'>DOWNLOAD THE LAB HERE</a>
 
-HEADING LARGE: LAB UNDER REVISION!
-
-As of Jan 16, 2020, this lab is under revision. It will be completed by Jan 21, 2020 (the first day of classes) - check back then for the complete lab!
-
 HEADING LARGE: PROJECT SETUP
 
 Included in the lab download are two files: Nickelstats.mp4 and spacesinfilepaths.png.
@@ -23,7 +19,9 @@ Nickelstats.png
 
 spacesinfilepaths.png
 
-In this lab, we'll be creating our own version of the <a href = 'https://www.youtube.com/watch?v=sIlNIVXpIns'>Look at this Graph meme,</a> a spoof of Nickelback's <a href = 'https://www.youtube.com/watch?v=T3rXdeOvhNE'>Photograph</a> song. If you want to forgo these files and use your own instead, please feel free to do so! However, you will only recieve extra credit for a .mp4 submission outside of your group short (ie you may not use your group project as a stand in for this lab).
+In this lab, we'll be creating our own version of the <a href = 'https://www.youtube.com/watch?v=sIlNIVXpIns'>Look at this Graph meme,</a> a spoof of Nickelback's <a href = 'https://www.youtube.com/watch?v=T3rXdeOvhNE'>Photograph</a> song. 
+
+If you want to forgo these files and use your own instead, please feel free to do so (go ahead and replace the files now)! However, you will only recieve extra credit for a .mp4 submission outside of your group short (ie you may not use your group project as a stand in for this lab).
 
 HEADING MEDIUM: IMPORTING YOUR FILES
 
@@ -243,6 +241,34 @@ Click apply in the Tracker Panel to apply your tracker, and watch how awesome yo
 
 HEADING MEDIUM: FINAL ADJUSTMENTS
 
-Here's what my clip looks like:
+Here's what my clip looks like (in slow motion):
 
+Nickelstats_part2.gif
 
+Overall, the tracker is doing pretty well! There's just two noticeable flaws in my video: firstly, Chad Kroeger's fingers are a bit covered by spacedsinfilepaths.png; secondly, near the end of the video, spacesinfilepaths.png stretches a little in the top right corner. Since this lab is a simple demonstration of motion tracking, having this in your submission is perfectly fine!
+
+If you really want to clean up your video, there are some tricks you can do. To fix the photo covering Kroeger's fingers, create a mask on spacesinfilepaths.png and key it to move with the fingers. <a href = 'https://www.youtube.com/watch?v=Ymrzv7EH0qs'>Here is a pretty good introduction to masking in After Effects.</a> On the other hand, to fix the little stretch on the top right hand corner of the replacement, you could try 1) adjusting the loction of the tracking pin in that corner, then reanalyzing the video; 2) manually changing the tracking pin's keyed position in the frames that look off; 3) tracking the outer edges of the photo frame instead, then scaling down the spacesinfilepaths.png layer; 4) learning how to use the (free, included with your AE download) Mocha AE plugin to perform some super advanced motion tracking and rotoscoping (<a href = 'https://www.youtube.com/watch?v=G7V0Mu9YyiY'>here's a super advanced example</a>); 5) any other fixes you can think of!
+
+Since the Nickelstats video is pretty simple and there's not much change in the photo frame's perspective, it's hard to see the full power of the perspective corner pin versus the transform tracker. However, for most cases involving screen/sign/billboard/etc. replacements, I recommend using this method to ensure your replacement matches the perspective of your renders.
+
+HEADING LARGE: FINAL TIPS
+
+Now, you should be done motion tracking the most important parts of the Nickelstats video. I highly recommend you try to track the last shot of the video on your own, to really check you understand how to use trackers. The challenge here is to figure out what points to track, since the photo frame is cut off and very out of focus in this shot!
+
+In addition, I recommend adjusting your motion target images/videos to integrate them more believably in your composites. Consider color correcting your image/video to match lighting, or overlaying a gradient layer with some blending mode that suits your needs. In the case you would like to replace a digital screen, consider adding a vignette and/or changing the blending mode of your replacement so screen glare can show through. If your object is in the foreground, you could add a blur effect to your image/video that will mimic an out-of-focus effect.
+
+HEADING LARGE: SUBMISSION
+
+For this lab, your submission should be an <b>.mp4 file of your final composite, with the naming format: Section_motiontracking_LastnameFirstname.</b> Since this is an extra credit assignment, please also indicate on the bCourses submission page which lab you would like to make up for.
+
+Before exporting your video, make sure that your file is ready to go. Watch your video once, checking to make sure that your sounds are unmuted and that there are no missing frames. 
+
+To export, go to File > Export > Add to Adobe Media Encoder Queue.
+
+032.png
+
+This should automatically open the Adobe Media Encoder software, which should have been automatically downloaded when you downloaded After Effects. If you do not have this program, simply open your Adobe Creative Cloud software and download it. Make sure you download the same version as your version of After Effects, as otherwise your programs won't recognize each other!
+
+The Adobe Media Encoder might take some time to open, so be patient and avoid spamming multiple export commands. Once it opens, check your export settings and make sure that you are using the <b>H.264 file format</b>. Once you're done checking the options, select your filename in the Adobe Media Encoder and press enter or File > Start Queue.
+
+If you have any questions please let us know by posting on Piazza or emailing us at staff@ucbugg.com. Congrats on finishing the lab!
