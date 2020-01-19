@@ -156,6 +156,10 @@ In this section, let's a new layer (spacesinfilepaths.png) which will follow the
 
 017.png
 
+Adjust the layer so that it only plays for the duration of our current work area.
+
+017_2.png
+
 Select your Nickelstats.mp4 layer and the tracker (in the Tracker panel) again. Click the Edit Target button under Motion Target: 
 
 018.png
@@ -190,11 +194,55 @@ Ta-da!!! You have now learned how to use trackers in After Effects and completed
 
 Nickelstats_part1.gif
 
-In the following section, we will continue motion tracking on the next shot in Nickelstats.mp4 - this time using a different tracker, the Perspective corner pin.
+In the following section, we will continue motion tracking on the next shot in Nickelstats.mp4 - this time using a different tracker, the perspective corner pin.
 
 
 HEADING LARGE: TRACKING THE VIDEO: PERSPECTIVE CORNER PIN
 
-Coming soon!
+In this section, we will motion track the next shot in Nickelstats.mp4 using the perspective corner pin tracker. In reality, since this lab is so simple, you could simply use the same technique we just used to complete this section as well, but it's good to learn new tools. The perspective corner pin is a more powerful tool that will let you track four points (instead of one or two). To use it, we will follow the same steps as before.
+
+HEADING MEDIUM: CREATING THE TRACKER
+
+Before creating the tracker, adjust the size of the work area to match the duration of the second shot. Then, select the Nickelstats.mp4 layer and click the Track Motion button. This will create a new tracker! Since I renamed my tracker from the previous section to "Transform," my new tracker was automatically named "Tracker 1". I'll change its name to "PerspCornerPin," so my list of trackers looks like this: 
+
+024.png
+
+Change the Track Type to Perspective corner pin. You should now see four track points. 
+
+025.png
+
+HEADING MEDIUM: EDITING THE TRACKING POINTS
+
+As before, move the tracking points so they each track a corner of the photo frame. Mine looks something like: 
+
+026.png
+
+HEADING MEDIUM: ANALYZING THE MOTION
+
+As before, let's analyze the motion in the clip. Depending on where your time indicator is, you'll have to analyze either forward, backward, or both. Mine was at the end of the clip, so I analyze backwards again. 
+
+027.gif
+
+Once you have a tracking motion that you like, we can proceed to adding a motion target.
+
+HEADING MEDIUM: MOTION TARGETS
+
+Since we've created a new tracker, we'll need another spacesinfilepaths.png layer to add our motion to. As before, add spacesinfilepaths.png to the composition and set its duration to be the size of your work area. Unfortunately, you might notice that your layers all share the same name as the source of the layer: 
+
+028.png
+
+This might be very confusing to work with, so we should rename the layers to something that makes more sense. You can do this by clicking the tab that says Source Name, right clicking the layer, and renaming it: 
+
+029.gif
+
+Now, let's specify the new layer as a motion target. 
+
+030.png
+
+Click apply in the Tracker Panel to apply your tracker, and watch how awesome your clip looks!
+
+HEADING MEDIUM: FINAL ADJUSTMENTS
+
+Here's what my clip looks like:
 
 
