@@ -9,7 +9,7 @@ In this lab, you will learn how to use After Effect's motion tracking capabiliti
 
 I will assume you have some basic familiarity with the After Effects interface, but in general this lab can be completed without any prior After Effects knowledge. If you would like a refresher on the interface, read through the first few sections of our Compositing - Layer Management lab.
 
-<a href='google.com'>DOWNLOAD THE LAB HERE</a>
+<a href = 'https://drive.google.com/file/d/1pGB8xeVQTX8Odhlg6WIEwXlVwHcPOulO/view?usp=sharing'>THE LAB HERE</a>
 
 HEADING LARGE: PROJECT SETUP
 
