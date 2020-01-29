@@ -14,7 +14,6 @@ Open up a web browser and go to http://www.autodesk.com/education/free-software/
 getting_maya.png
 
 
-
 If you don't have an account with Autodesk already you will need to make one in order to download the software. Click 'Create Account'. This link will take you to a registration page. Make sure to fill out the "Email" field with your berkeley.edu email address or this process will not work. Once you have filled out the form, hit "Submit"
 
 Autodesk will register your account and send you an activation email. Registration can take a few minutes, so don't worry if the email doesn't show up instantly. Once you get your email, click on the included activation link. You should see a "Your account is now activated!" message.
@@ -23,16 +22,19 @@ getting_maya_activated.jpg
 
 HEADING MEDIUM: DOWNLOADING MAYA
 Once registration is complete, go back to http://students.autodesk.com/education/free-software/maya, log in with your newly created account, and fill out the second section.
-From the version drop-down menu, select Maya 2018. (As of Fall 2019 we are using Maya 2018 to teach this course so its very important that you download the correct version).
+From the version drop-down menu, select Maya 2019. (As of Spring 2020, we are using Maya 2019 to teach this course. It is very important that you download the correct version).
 
 Select "English" from the language drop-down.
 From the operating system drop-down menu, select which version you want to download. If you are on Windows, download either the 32-bit or 64-bit version, depending on your computer's processor. If you are on a Mac, just download the Mac OS X version. Make sure to write down your serial number and product, as you will need them during installation. Once you select your version, click the "browser download" button. The download should start automatically, but if not, check the help links at the bottom of the page. Maya is a pretty big piece of software (2.0 GB) so make sure you have enough time to download the entire file. I suggest catching up on some reading while you wait.
+
 HEADING MEDIUM: Installing Maya
+
 Once your download is complete, simply run the installer and follow the on screen instructions. The installer will ask for the serial number from the previous section. After you enter your serial number and product key, Maya will install. You are now the proud owner of Maya!
+
 A warning: Maya's activation process can take quite a while. If you encounter any errors, simply try again with the same data. It should eventually work.
 
-
 HEADING MEDIUM: MUDBOX
+
 While you're at it, you can download Mudbox using the account you have now created as well. Mudbox is not required for our class, but you may find it very useful and we have resources if you want to learn how to use it as well.
 http://www.autodesk.com/education/free-software/mudbox
 
@@ -41,6 +43,7 @@ Now let’s get on to using Maya.
 HEADING LARGE: BASIC UI TERMINOLOGY
 
 The light gray area highlighted by the red rectangle is called the <b>viewport:</b>
+
 viewport.jpg
 
 The viewport is a representation of what's in your scene. Almost everything in your scene will be viewed in the viewport. Here you can manipulate objects, animate characters, and even make cool effects like fire, water, and shattering objects.
@@ -65,6 +68,7 @@ This changes the function of Maya to a different part of the pipeline. When it's
 
 
 HEADING LARGE: CREATING OBJECTS
+
 This part of the guide will take a brief look at how to make a polygon and edit its basic attributes.
 
 1. Make sure your dropdown menu is in Modeling mode
