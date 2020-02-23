@@ -1,14 +1,56 @@
 HEADING LARGE: INTRODUCTION
 
-Alright, so you’ve decided to include a human character in your short. I will be introducing a new tool called Quad Draw that I find is super helpful to insure that your human character has the proper topology and edge flow for animation. Let’s get started. 
+Although modeling a human character might seem like a big challenge at first, it is an incredibly rewarding experience and essential knowledge to have as advanced 3D Modelers! In this lab, we will be breaking down the general workflow, important concepts, and useful tools that all go into organic modeling. 
+
+Keep in mind that for this lab, we will be modeling a specific character we created (her name is April), but we ask that you follow this lab with your OWN character in mind. Most likely, this will be a character that you’ll be using in your short, but you are welcome to come up with another design if you’d like. (Original characters/concepts are preferred so that you are challenged to create a human model that does not already exist) 
+
+The point of this lab is to teach you the general concepts and workflow of organic modeling, therefore don’t worry about following every single step EXACTLY as we do it. Rather, try to consider the logic of what we do, and apply a similar logic to your own characters to get the end result you want.
+
+
+HEADING LARGE: GENERAL WORKFLOW
+
+Before we go into the actual modeling, we want to review the general workflow or process that goes into modeling human characters.
+
+There are many different workflows for creating human models, all of which are equally effective, but the workflow that we will be teaching looks something like this:
+
+<b> CHARACTER DESIGN/CONCEPTS -> SCULPTING -> RETOPOLOGY -> ADDING DETAILS </b>
+
+To explain in more detail: first we start with our character designs and sheets, next we create an initial sculpt of our character which serves as a base for our model, then we retopologize the model so that we make sure to maintain good edge flow and topology, and lastly, we insert the important details back into our model. 
+
+There are many powerful programs that are made specifically for the sculpting phase of modeling and allow artists to create HIGHLY detailed sculpts. However, since we primarily use Maya in this class, we will be doing this entire process in Maya. If you are interested in seriously going into character modeling in the future, then we recommend that you look into programs like Zbrush or Mudbox for organic sculpting, however in this class, we’ve seen many students create impressive models entirely with Maya.
+
+pastcharacters.png
+
+At this point, we already have our character designs ready so we are ready to go into the sculpting phase of modeling!
+
 
 HEADING LARGE: SCULPTING
 
-The first thing we are going to do is start with a basic sphere. Give yourself enough edge loops so that you have a decent amount of resolution to work with. My sphere is set to have 48 Axis and Height divisions.
+Once again, as we walk through these steps remember that you don’t have to follow exactly what I do; as long as you follow the general process you will be fine.
 
-image1.png
+The first thing we need to do is properly set up our scene. I am going to create two image planes perpendicular to each other and import my character sheets in like so:
 
-Once you have created your sphere, we are going to roughly shape it into the head and neck of a human. You can do this however you like, but I find that the easiest way to do this is with the Sculpting tools. Here is a brief explanation of what the first four tools in the palette do.
+Sculpting/01_characterSheets_setup.png
+
+Now that our scene is set up we are ready to begin sculpting. 
+
+We are going to start with a basic sphere. Give yourself enough edge loops so that you have a decent amount of resolution to work with. 
+
+Sculpting/02_simpleSphere.png
+
+Once you have created your sphere, you want to make sure to scale it down to properly match your character sheets.
+
+Sculpting/03_positionFRONT.png
+
+Sculpting/04_positionSIDE.png 
+
+If you haven’t already, at this point I would recommend turning on <b> X-Ray shading </b> to be able to see through your model. I would also recommend turning <b> Symmetry On<b>. This is very important to ensure that your model is SYMMETRICAL and maintains good topology on both sides.
+
+Sculpting/05_xray.png
+
+Sculpting/07_symmetryOn.png
+
+Now, we are going to roughly shape our sphere into the head and neck of our human. You can do this however you like, but I find that the easiest way to do this is with the Sculpting tools. Here is a brief explanation of what the first four tools in the palette do.
 
 image2.png
 
@@ -26,20 +68,53 @@ Grab lets you move whatever vertices fall underneath your brush. If you use this
 
 There are way more tools than just these 4, and I suggest you experiment with them, but these are the most important ones and are pretty much all you need to start making your character.
 
-image3.png
+Now without caring about the current topology, I am going to push this sphere into a really really rough shape of the human head by using various sculpting tools. I want to emphasize that <b> you shouldn’t spend too long trying to get this perfect as this won’t be our final mesh.</b> Our sculpt will inevitably look weird and blobby and that is totally fine since we will only be using it as a reference in the future. This will make more sense once we reach the Retopology phase of modeling.
 
-Now that you know what all these tools do, let’s get started making something. I’m going to walk you through how to sculpt a human head. Before we start sculpting, 
-make sure to turn on X Symmetry by double clicking the Grab Tool and finding the Symmetry settings and setting your symmetry to Object-X.
+First, I’m going to use the grab tool to sculpt the sphere into the rough face shape of April. Remember to refer to your character sheets for this step!
 
-image4.png
+Sculpting/08_basicShapeFRONT.png
 
-Now without caring about the current topology, I am going to push this sphere into a really really rough shape of the human head by using the grab tool and pulling down on the mesh to give a rough shoulder shape. I want to emphasize that you shouldn’t spend too long trying to get this perfect as this won’t be our final mesh. We will only be using it as a reference in the future. This will make more sense once we reach the Quad Draw Tool.
+Sculpting/09_basicShapeSIDE.png 
 
-image5.png
+Next, we are going to sculpt a basic nose shape. For this, I used a combination of the grab tool as well as moving individual edges and vertices. 
 
-image6.png
+Sculpting/10_sculptNose_a.png
 
-Make sure to include some really rough indents where the eyes should be. I use the grab tool once again to pull out where the character’s nose should be and doing the opposite for the eyes. Make sure to pull out a chin and give your character a bit of a jawline. It’s useful to load up a picture of your character sheets as reference to get the correct shape.
+Sculpting/12_sculptNose_c.png
+
+Sculpting/13_sculptNose_d.png
+
+Now we are going to include some really rough indents where the eyes should be. Once again, I used a combination of the sculpting tools and move tool with soft select on to push a very very basic eye socket shape into our sphere. Remember to refer back to your character sheets to get an idea of where you want to put the eye shape.
+
+Sculpting/14_sculptEyes_a.png
+
+Sculpting/15_sculptEyes_b.png
+
+Finally, we want to sculpt a basic neck and chin shape for April. The easiest way to do that is to select the ring of faces on the bottom of the sphere and extrude them downwards
+
+Sculpting/18_sculptNeck_b.png
+
+Sculpting/19_sculptNeck_c.png
+
+At this point, you might need to add in a few edge loops to be able to sculpt on the shape you just extruded down. 
+
+Sculpting/20_sculptNeck_d.png
+
+Now we can more easily sculpt this shape into a neck using the sculpting tools. This also creates a basic chin shape for April. 
+
+Sculpting/21_sculptNeck_e.png
+
+You want to make sure that you are switching between front and side view to ensure that your sculpt looks the way you want. 
+
+Sculpting/23_sculptNeck_g.png 
+
+After some tweaks here and there, this is what my rough sculpt of April looks like. REMEMBER THAT THIS SCULPT DOES NOT HAVE TO LOOK PERFECT so don’t spend too much time making it look pretty.
+
+Sculpting/24_finalSculpt_FRONT.png
+
+At this point, if you have not already, make sure that you rename your sculpt in your outliner.
+
+Sculpting/26_renameOutliner.png
 
 HEADING LARGE: QUAD DRAW
 
