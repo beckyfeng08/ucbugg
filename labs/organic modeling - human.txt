@@ -72,13 +72,13 @@ Now without caring about the current topology, I am going to push this sphere in
 
 First, I’m going to use the grab tool to sculpt the sphere into the rough face shape of April. Remember to refer to your character sheets for this step!
 
+If your grab tool radius is too large remember that you can change it by double-clicking on the tool icon and adjusting the size parameter. You can also hold down b and left-click and drag to adjust the brush size. 
+
 Sculpting/08_basicShapeFRONT.png
 
 Sculpting/09_basicShapeSIDE.png 
 
 Next, we are going to sculpt a basic nose shape. For this, I used a combination of the grab tool as well as moving individual edges and vertices. 
-
-Sculpting/10_sculptNose_a.png
 
 Sculpting/12_sculptNose_c.png
 
