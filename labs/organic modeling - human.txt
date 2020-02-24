@@ -118,119 +118,241 @@ Sculpting/26_renameOutliner.png
 
 HEADING LARGE: QUAD DRAW
 
-Once you’ve shaped your sphere into a rather blobby looking human head shape, we are going to start building the actual mesh that you are going to use. The reason we need to do this is because the head blob that we just created doesn’t have anywhere near the correct edge flow that will allow us to easily animate it later. We are going to retopologize our mesh with the Quad Draw Tool. Quad Draw is a really cool feature that Maya has that lets you use another model as a reference for you to draw your topology on top of. This is a commonly used industry practice that allows artists to create their models without having to focus on the technical details of edge flow and topology until the end after all the creative parts are out of the way! 
+At this point, we’ve completed the Sculpting stage of the modeling process, and now we’re going to move onto the <b>Retopology Phase.</b>
 
-image7.png
+Notice that the topology of our sculpted mesh is quite bad; if we actually tried to use this mesh for rigging or animation it would be a disaster. The way to fix this is to RETOPOLOGIZE our model, or essentially, create a new mesh with clean topology around the sculpt we just made. 
 
-The first thing we need to do is make sure we let Maya know which file we are going to be using as our reference. Select your head blob and find the button at the top of the Maya tool shelf that looks like a Magnet that says “Make Live”. Push this button and it should switch from displaying “No Live Surface” to whatever the name of your mesh is.
+There are a few goals to keep in mind when we retopologize a model: one, is to ensure that our model has <b>GOOD TOPOLOGY</b>, two is to ensure that the topology of our model is <b>SYMMETRICAL</b>, and three, is to ensure that our model not only has good edge flow, but that it has a <b> SPECIFIC EDGE FLOW </b> that makes rigging and animating much easier.
 
-Alright, now before we get excited and start dropping points anywhere, let’s take a look at what our topology should look like. Head over to this link and take a look at the picture of the flattened out face. Pay attention to where the thick black circles are. These are called 5-poles where 5 edges intersect. They are placed at specific points to allow for a wide range of movement at those points. This website also has really nice videos that explain more about the theory behind the topology.
+In the example image below, we can see that the retopologized version of this model has specific rings of edges in various regions of the face (i.e. the ring of edges around her eyes or her mouth). This is the specific kind of edge flow that we want our model to have and thankfully, retopologizing our model allows us to do that.
 
-http://hippydrome.com/MeshDesignFace.html
+Retopology/retopology.png
 
-Ok, let’s start dropping our points onto the mesh. Select the Quad Draw tool from the Mesh Tools drop down. Now if you click anywhere on your mesh, you should see a couple of green dots appear (If only one dot appears, your symmetry got turned off. Go back into your selection tool and turn Symmetry back to Object-X)
+Don’t worry if these regions of edges feel confusing right now, we will go over the important ones as we retopologize our model.
 
-We are going to start with the eyes. Make a ring of points around the indents where the eyes should go. There should be the same number of points on the top half as the bottom half (I used 5 points for the top eyelid, and 5 for the bottom eyelid).
+To get a more thorough explanation of good edge flow and the theory behind good topology, feel free to check out the website linked below.
 
-Now we are going to repeat this process and create another ring of points around the ones you just made (Use the exact same number of points that you used in the previous step)
+<a>http://hippydrome.com/MeshDesignFace.html</a>
 
-Now for some magic. Hold down the shift key and hover your mouse somewhere between 4 points. You should see a blue square appear. Click to place this quad between your 4 points and you should get something like this.
+Let’s get started!
 
-image8.png
+We are mainly going to use a tool called <b>Quad Draw</b> that is super helpful to ensure that our human character has the proper topology and edge flow for animation.
 
-image9.png
+Quad Draw is a really cool feature in Maya that lets you use another model as a reference to draw your new topology on. This is a commonly used industry practice that allows artists to create their models without having to focus on the technical details of edge flow and topology until the end after all the creative parts are out of the way! 
 
-Keep shift-clicking between your dots until all of the dots are gone and we have a nice blue ring of quads where the eyes should be.
 
-Now I’m going to add in the eyelids and bridge of the nose to connect the two rings. Copy the placement of my dots and fill them in with quads so you get something like this.
+The first thing we need to do is make sure we let Maya know which mesh we are going to be using as our reference. Select your head sculpt and find the button at the top of the Maya tool shelf that looks like a Magnet that says “Make Live”. Push this button and it should switch from displaying “No Live Surface” to the name of your mesh.
 
-image10.png
+Image7.png
 
-If you feel like you need more edge loops to get something like this, fear not. Just hold down the Ctrl key and you should see green edge-loops appear when you hover over areas of your mesh. You can add in edge loops just with a couple of keypresses and a mouse click!
+27_liveSurface.png
 
-Now I’m going to add more quads to the nose area like so and also add some quads to the side of the eyes so it looks like he’s wearing goggles.
+Now, to access the Quad Draw tool, go to <b> Mesh Tools -> Quad Draw </b>.
 
-image11.png
+Sculpting/28_quadDraw.png
 
-Now from those quads that are sticking out from the eyes, let’s create a ring all the way around the head and connect them to each other at the back.
+Ok, let’s start by dropping some initial points onto the mesh. With Quad Draw on, if you click anywhere on your mesh, you should see a couple of green dots appear. Remember that your symmetry should be ON at this point so any point you create on one side should appear on the other (unless you create a point in the center of the mesh).
 
-image12.png
+We are going to start at the base of the forehead (right above the nose bridge area). Make a series of points in this area (I made 6 points in my model).
 
-Now that we have the base for our eyes and nose, let’s move on to creating the mouth and we will connect the pieces together later. Repeat the same process you used to create the eye rings but this time only create one ring around the mouth of your character. Just like you did for the eyes.
+Retopology/01_points.png
 
-image13.png
+Now for some magic. Hold down the <b>shift key</b> and hover your mouse somewhere between the points you made. You should see a blue square appear. Left-click while holding shift to place this quad between your points and you should get something like this.
 
-Now we are going to connect our nose to our mouth. Add in these dots as shown here and complete the quad.
+Retopology/02_hover.png
 
-image14.png
+Retopology/03_square.png
 
-Now let’s extend this to make a complete circle around the model’s chin.
+We’ve just created a quad for what will become our brand new, clean mesh of our character. However, as you can imagine, it might become too tedious to have to create a bunch of points and shift/click a many MANY times to create an entire character. Thankfully, Quad Draw has a few incredible shortcuts that will make our lives so much easier.
 
-image15.png
+If you hold down <b>TAB</b> while you hover over an edge of the quad you just made, you should see it highlight green like this:
 
-Continue with another ring
+Retopology/04_tab.png
 
-image16.png
+Simply, left-click and drag out that highlighted edge while holding down TAB, and a brand new set of faces will extend down from the existing one. 
 
-Now I completely cover up the nose by adding quads down to the mouth.
+Retopology/05_newSquare.png
 
-image17.png
+Isn’t that amazing!!? This shortcut will definitely save you LOTS of time so make sure to use it often throughout this lab. (I did not know about this shortcut when I first used Quad Draw and my life was forever changed when I discovered it)
 
-image18.png
+I’m going to use our amazing shortcut to extend a few more squares down the nose bridge and forehead area.
 
-Connect the mesh to the mouth. 
+Retopology/06_moreSquares.png
 
-image19.png
+Continue creating more quads until you have a ring of faces going around the eye-to-nose region of the face. It should look something like an eye mask at this point. 
 
-image20.png
+Retopology/07_moreSquares2.png
 
-Note that I had to add some edge loops to the bottom lip to make it connect evenly. Let’s add in edge loops to the top lip so that the number of points on the top lip are equal to the number on the bottom.
+Retopology/08_eyeMask.png
 
-image21.png
+Notice that we have already successfully created the ring of edges that go around the outer eye socket area that appeared in the example image at the top of this section. This is just one of the important regions of the face that we need to consider, but thanks to Quad Draw, we’ve easily ensured that our model has the proper ring of edges in this area.
 
-Now I’m going to fill in the mouth.
+Right now, since I created my quads somewhat quickly, the vertices and edges of my quads are a bit crooked. This is also something that can be easily fixed, simply hover over an edge or vertex and drag it to adjust it’s position.
 
-image22.png
+There are two tips to keep in mind as we create our quads: 
 
-Notice how similar this is to the eyes from the start!
+1) create quads that are evenly spaced and sized
 
-Now I’m adding in quads that go around the eyes and that connect at the middle of the forehead.
+2) make your quads LARGER rather than smaller
 
-image23.png
+You can imagine that it would be super annoying to fill up an entire face mesh of quads if you create tiny squares compared to larger squares, so always start big and only add more edges/faces/vertices as you see fit.
 
-image24.png
+After some minor adjustments my eye mask looks something like this:
 
-image25.png
+Retopology/10_adjustedEyeMask.png
 
-Now keep adding in more quads to bridge the gap between the eyes and the mouth.
+Moving on, we are now going to fill in the area of the eye sockets with more quads. The number of faces you have might be different from mine but that is okay as long as you are able to create the smaller ring of faces inside the larger eye mask area you created from before.
 
-image26.png
+Retopology/11_smallerRing.png
 
-Keep filling in quads down the side of the face and connect them below the chin.
+Retopology/11_smallerRing_highlighted.png
 
-image27.png
+In my case, I had to add an extra edge in the nose bridge area to make it easier to fill in the eye socket. A handy shortcut for that while remaining in Quad Draw is to hold down <b>CTRL</b>; a green line should now appear when you hover over the mesh. Simple left-click while holding down control to add the edge in.
 
-image28.png
+Now fill in the last portion of the eye socket area with more quads. It should look something like this:
 
-Add more quads down the side of the face. 
+Retopology/12_filledSocket.png
 
-image29.png
+Again, don’t worry if your mesh doesn’t look EXACTLY like mine; as long as you are maintaining the same kind of edge flow in your model you will be fine. Before we move on, this is a good time to check that the edge flow of the eye area is the way we want it. I find the easiest way to check my edge flow is to use the Ctrl hotkey to add edges and hover over my mesh; if the edge flow looks as expected then you should be good to go.
 
-image30.png
+At this point, the important areas of edge flow on our model should look something like this:
 
-Start connecting it together at the back.
+Retopology/13_edgeFlow_highlights.png
 
-image31.png
+Now that you’ve checked the edge flow of the eye region, we can continue with our retopology. Go to the quads on the side of the eye mask area and extend them further towards the side of the head to look like this:
 
-Now fill in the top of the head and our head is complete! Notice I’ve also extended the loops all the way down along the neck as well.
+Retopology/14_side.png
 
-image32.png
+Retopology/15_extended.png
+Continue extending the quads on the side of the mesh until you create a full ring of faces that connects to the back of the head.
 
-I’m going to close the holes for the eyes and mouth.
+Retopology/16_moreExtended.png
 
-image33.png
+Retopology/17_connected.png
 
-Alright, we’re done with quad draw. Click on the magnet icon so that there is no longer a Live Object. Exit out of the Quad Draw tool and hide the mesh that you sculpted. This should leave you only with the mesh you drew with Quad Draw.
+Now, I am going to go back to the tip of the quads at April’s forehead, and I am going to extend those quads all the way around the head to the back of the neck.
+
+Retopology/18_extendUp.png
+
+Retopology/19_extendUp2.png
+
+Retopology/20_closedLoop.png
+
+Now we are going to continue filling in rings of quads that start from the tip of the forehead and go all the way to the back of the head.
+
+Retopology/21_moreRings.png
+
+Retopology/22_moreRings2.png
+
+Retopology/24_moreRings3.png
+
+After repeating this process a few times, your model should look something like this:
+
+Retopology/27_manyRings.png
+
+The top of my mesh currently has a gap in it like this:
+
+Retopology/29_topView.png
+
+There are many ways one could approach filling in this gap but for me this is what made the most sense, while maintaining good edge flow. First, I connect the quads on the top of the gap to the bottom of the gap (I had to add one or two edges to make sure that the number of vertices lined up exactly).
+
+Retopology/30_connecting.png
+
+Retopology/31_connecting2.png
+
+Next, I added some edges horizontally so that I could easily attach the middle section to the side vertices. In Quad Draw, you can easily merge two vertices by simply drawing one vertex into the other and they should automatically “stick” together.
+
+Retopology/32_lines.png
+
+Retopology/33_connect.png
+
+The top of the head should be filled in now, however in my case, since the placement of the edges were quite close together, some of my faces are no longer evenly spaced. Once again, Quad Draw has a helpful solution for this: by holding down <b>SHIFT</b> and left-clicking and dragging across the mesh, you can smooth out or “relax” the vertices of your mesh. This is an easy and quick way to evenly space out our faces and to get rid of any crooked lines.
+
+Retopology/34_smoothed.png
+
+With this, we are done retopologizing the top half of our character.
+
+Retopology/35_topHalf.png
+
+Now I am going to start on the bottom half of the face. I’m going to extend the quads on the nose bridge further down to create the full nose. 
+
+Retopology/36_noseExtend.png
+
+Retopology/37_noseExtend2.png
+
+Now that we have the nose area filled in, let’s move a bit further down and start working on the mouth. For this, we are going to repeat a similar process that we followed for the eyes/eye sockets. First, let’s create a ring of quads roughly around the mouth region. 
+
+Start by placing your initial points first and creating your first few quads.
+
+Retopology/38_placePoints.png
+
+Retopology/39_placeQuads.png
+
+Then, extend those quads out and downward to create a ring of faces around the mouth.
+
+Retopology/40_mouthRing.png
+
+Retopology/41_mouthRing2.png
+
+We are now going to fill in the mouth area we just created with more quads. This process is almost identical to what we did earlier to fill in the eyes.
+
+Retopology/43_mouthFilled.png
+
+
+Now we are going to connect the nose and mouth area; in my case, I had to add some edges in the nose to make sure the mouth and nose could be connected.
+
+Retopology/45_connectNoseMouth.png
+
+Now I’m going to build some quads on the side of the mouth so that we can eventually create a ring of faces going all the way back to the head. 
+
+Retopology/46_extendMouth.png
+
+I’m also going to further connect the mouth to the nose so that we can start to develop the cheek area. 
+
+Retopology/48_startCheek.png
+
+Retopology/49_extendCheek.png
+
+At this point, we are going to do a similar process that we did earlier in the top half of the head by creating an entire ring of quads that go from the side of the mouth and connect to the back of the head. I didn’t include many pictures of this since this process is identical to what we’ve done before, but at the end of this step my mesh looks something like this:
+
+Retopology/55_almostDone.png
+
+Now we want to start working on the chin and connecting it to the rest of the face. For me, this was easiest to do by first creating points towards the underside of the chin and connecting them to the sides of the face. It might look something like a strap under the chin.
+
+Retopology/57_chinBeginning.png
+
+Retopology/58_chinStrap.png
+
+We can now connect this strap to the rest of the face.
+
+Retopology/59_chinConnect.png
+
+At this point, we can start filling in the gaps between the face and the chin.
+Retopology/60_fillGap.png
+
+Retopology/61_fillGap.png
+
+Now, we can simply extend more quads into the neck region and connect these rings to the back of the mesh.
+
+Retopology/62_neck.png
+
+Retopology/63_neck.png
+
+Retopology/65_neckComplete.png
+
+And with that, we should have a completed retopologized face mesh with good edge flow! 
+
+Retopology/66_finishedQuadDraw.png
+
+Our mesh should be completely symmetrical as well. If you see that your mesh is for some reason not symmetrical, you can delete one half of the mesh and mirror the other side to ensure symmetry. 
+
+At this point, I would take the time to also smooth out or “relax” your mesh to make sure that your quads are more evenly spaced out. If you turn on soft select while holding shift, you can smooth out your mesh even faster!
+
+Retopology/67_softSelect.png
+
+After all of these steps, your final mesh should have topology that looks somewhat similar to this, HOWEVER, do not be worried if your model is not exactly the same as mine. Remember that the point of this lab is not to recreate the character I’m making but rather to apply this workflow to create the character you need.
+
+Retopology/68_retopo.png 
 
 HEADING LARGE: CREATING THE BODY
 
