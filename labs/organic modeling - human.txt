@@ -143,9 +143,9 @@ Quad Draw is a really cool feature in Maya that lets you use another model as a 
 
 The first thing we need to do is make sure we let Maya know which mesh we are going to be using as our reference. Select your head sculpt and find the button at the top of the Maya tool shelf that looks like a Magnet that says “Make Live”. Push this button and it should switch from displaying “No Live Surface” to the name of your mesh.
 
-Image7.png
+image7.png
 
-27_liveSurface.png
+Sculpting/27_liveSurface.png
 
 Now, to access the Quad Draw tool, go to <b> Mesh Tools -> Quad Draw </b>.
 
@@ -352,7 +352,7 @@ Retopology/67_softSelect.png
 
 After all of these steps, your final mesh should have topology that looks somewhat similar to this, HOWEVER, do not be worried if your model is not exactly the same as mine. Remember that the point of this lab is not to recreate the character I’m making but rather to apply this workflow to create the character you need.
 
-Retopology/68_retopo.png 
+Retopology/68_retopo.png
 
 HEADING LARGE: CREATING THE BODY
 
