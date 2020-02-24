@@ -354,6 +354,76 @@ After all of these steps, your final mesh should have topology that looks somewh
 
 Retopology/68_retopo.png
 
+HEADING LARGE: ADDING IN DETAILS
+
+After all of these steps we do have a mesh with the topology that we want, however the actual mesh itself might not look like what we want. At this point, my mesh looks a lot closer to a weird blob than it looks like April.
+
+Details/1.png
+
+That is why we are going to spend some time adding the details that we want for our characters. A majority of this happens with the use of extrusions and the sculpting tools so this shouldn’t be anything new. However keep in mind that at this point, individual artistic preference will be the strongest factor of what you do. Therefore the steps that I wrote and the images I included are more vague than what I included for the previous section, and you might find that you’ll be doing different steps than me to get the character that you want (which is perfectly fine!)
+
+The first detail I’m going to add is the ears: I’m going to select faces on the side of the head and extrude them outward. 
+
+Details/2.png
+
+Then I’m going to extrude in a few times to get the indent of the ear. Once again, feel free to do something similar or different than me.
+
+Details/3.png
+
+Next, I’m going to extrude near the ear region to actually get the eye socket indent. Select the ring of faces in the eye area and extrude inwards a few times. I also scaled and moved these faces a bit to get the exact eye shape that I wanted.
+
+Details/4.png
+
+Details/5.png
+
+Now, I’m going to use soft select and the move tool to bring out the upper and lower eyelid area. This adds a bit of detail to the April’s eyes and will make eye blendshapes easier in the future stages of the pipeline.
+
+Details/6.png
+
+My mesh looks something like this at this point.
+
+Details/7.png
+
+Now, I am going to repeat that same process for April’s mouth. Simply select the ring of faces in the mouth area and extrude them inwards.
+
+Details/8.png
+
+Details/9.png
+
+One technical thing that is important to remember is to extrude the mouth area far back into the skull of the character. The reason for this is that if your character were to have more complex mouth blendshapes for emoting or even speaking, it’s necessary to have a deeper indent in the mouth. This is called the “mouth bag” of the character (an unfortunate name I know), and it’s an important detail to remember when making human characters.
+
+Details/10.png
+
+Next, I am going to use the move tool to adjust the vertices around April’s mouth so that I can give them some more detail and don’t look as flat.
+
+Details/11.png
+
+This took me some time to get a result that I was happy with but after some adjustments my model looks like this:
+
+
+Details/12.png
+
+Finally, I am going to work on the nose: at the moment, it is a bit flat and undetailed so I’m going to start by adjusting the vertices in that area to better emphasize the nose bridge.
+
+Details/13.png
+
+Details/14.png
+
+After some adjusting, April’s nose looks something like this:
+
+Details/15.png
+
+Now, I’m going to extrude some of the faces inwards so that we can get the nostril’s shape.
+
+Details/16.png
+
+Details/17.png
+
+At this point, I spent some time sculpting and adjusting my model to look more like April and get a result that I was happy with. I probably spent more time than is advised for the lab since you have more work ahead of you, however, it is up to you at this point, how much more work you want to put into getting the details of the face right. For now, we can move onto the next section of the lab which is creating the body of the mesh.
+
+Details/18.png
+
+
 HEADING LARGE: CREATING THE BODY
 
 Grab the bottom edge of your mesh and extrude down a few times to create the upper torso.
