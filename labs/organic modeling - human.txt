@@ -376,7 +376,7 @@ Details/4.png
 
 Details/5.png
 
-Now, I’m going to use soft select and the move tool to bring out the upper and lower eyelid area. This adds a bit of detail to the April’s eyes and will make eye blendshapes easier in the future stages of the pipeline.
+Now, I’m going to use soft select and the move tool to bring out the upper and lower eyelid area. This adds a bit of detail to April’s eyes and will make eye blendshapes easier in the future stages of the pipeline.
 
 Details/6.png
 
