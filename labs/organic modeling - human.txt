@@ -544,3 +544,94 @@ image66.png
 With a ton of sculpting your model can end up looking like this! Please note the topology on the model: keep in mind that you should have at least 3 edge loops at the joint area, and less concentrated edge loops where there are no joints. This is <b>SUPER</b> important for rigging and skinning, where one edge loop should NOT dictate your rig.
 
 Please submit a less rough version of your model to the homework form. We will NOT accept any misshapen human models, so please be sure to look up anatomy references or use your own character sheets as guides!
+
+HEADING LARGE: CLOTHING & ACCESSORIES (Optional)
+
+At this point we have a mostly finished model with great topology and edge flow as well as the details we want in our character. The last step for us to have a complete model is to give our character some clothing and accessories. 
+
+<b>THIS PART OF THE LAB IS OPTIONAL</b> especially if you are not using the character you created for your short films. However if you do plan on using your character for your shorts, then I highly recommend you look through this section as a guide (unless you plan on having a naked and/or bald character o.0)
+
+HEADING MEDIUM: Clothing
+
+We’re going to start with sculpting on some clothes for April. I find that the easiest way to create clothes that ensures that they will easily fit your character and have better topology is to make the clothes directly from the body of the character. What that means is that I will be duplicating April’s mesh and keeping only the faces that I need for each specific item.
+
+Let’s start with her shirt.
+
+First, I’m going to duplicate April’s body mesh (remember that your objects should be NAMED IN YOUR OUTLINER). Then I’m going to delete the faces that I don’t want to be a part of her shirt mesh. I’m going to start with the arms.
+
+Accessories/1_shirt.png
+
+Accessories/2_shirt.png
+
+Then I’m going to delete the faces for her head and legs.
+
+Accessories/3_shirt.png
+
+Now that I have the basic shape that I want for the shirt, I’m going to use the sculpting tools to get the specific details to match my character sheets.
+
+Accessories/6_shirt.png
+
+With this, I have the look that I want for the shirt. I’m going to extrude the mesh of the shirt outwards so that we don’t see the reverse side of the normals.
+
+Accessories/7_shirt.png
+
+Now I’m going to adjust the shape of the sleeves a bit to give it more volume.
+
+Accessories/10_shirt.png
+
+We are going to repeat the same process for the pants (keep in mind that the process we laid out earlier can be done with almost any clothing item).
+
+Duplicate the body mesh again and delete the extraneous faces.
+
+Accessories/13_pant.png
+
+Sculpt and shape the clothing item how you see fit and then extrude outwards.
+
+Accessories/14_pant.png
+
+Now you can fit the clothing item onto your character. Make sure that the body mesh does not stick out of the clothes (if it does, make sure you go back and sculpt more on the clothes)
+
+Before you move on, make sure you name everything in your outliner.
+
+HEADING MEDIUM: Hair
+
+There are many many different ways to handle hair for a character in 3D animation, however for the sake of our class, most students simply sculpt on hair for their character so that’s what we’ll do here.
+
+If you are interested in experimenting with different styles of hair, feel free to look into programs like XGen (if you have the time).
+
+We are going to repeat the same process as earlier (i.e. duplicate the mesh, delete extraneous faces, and sculpt).
+
+First, I’m going to duplicate April’s mesh one more time and delete all of the other faces except for the top section.
+
+Accessories/16_hair.png
+
+At this point, this mesh might look something like a helmet on top of your character.
+
+Accessories/17_hair.png
+
+Now I’m going to select the bottom ring of faces and extrude them downwards.
+
+ Keep in mind the steps I am doing might be more specific to my character’s hair so feel free to branch off and do what you need for your character.
+
+Accessories/19_hair.png
+
+Now I’m going to add some more edge loops in the back to get more flexibility for sculpting.
+
+Accessories/20_hair.png
+
+At this point, I spent a lot of time sculpting the hair to get the shape that I wanted. This is where you need to utilize your own creative decisions and skills to get what you want for your character.
+
+For now, I am satisfied with this for the hair:
+
+Accessories/21_hair.png
+
+At long last, we have our completed character with great topology and great details. 
+
+Accessories/22_final.png
+
+Accessories/23_final.png
+
+Accessories/24_final.png
+
+Congrats on finishing the lab!! We know that it was a long one but we hope that you learned a lot about organic modeling in the process. Once again, feel free to spend as much time as you want to get your character to look the way you want. Make sure your outliner is clean and organized before you submit!
+
