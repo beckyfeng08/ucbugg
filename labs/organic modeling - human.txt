@@ -21,7 +21,11 @@ There are many powerful programs that are made specifically for the sculpting ph
 
 pastcharacters.png
 
-At this point, we already have our character designs ready so we are ready to go into the sculpting phase of modeling!
+At this point, we already have our character designs ready! Below is my character design for April, which is the character we will be modeling in this lab. 
+
+character_sheet.png
+
+We are ready to go into the sculpting phase of modeling!
 
 
 HEADING LARGE: SCULPTING
