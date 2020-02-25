@@ -1,48 +1,23 @@
-HEADING LARGE: PROJECT SET-UP
+HEADING LARGE: HANDY TOOLS (before we get started)
 
-<b> Before we begin modeling, lets review some good practices you guys should get into the habit of doing whenever you model: </b>
+<b> Before we begin modeling, lets review some helpful tools/hotkeys that you might find useful in this lab. 
 
-When you open Maya, you get the following window.
-Notice at the top, the bar says <b>“Student Version: untitled*”</b>
-Not only have you not assigned your scene a name, it also doesn't have a project associated with it.
-You're going to want to stay very organized with your project files as you work on your shorts and (as mentioned in our project management lecture) Maya has a project structure for you.
+HEADING MEDIUM: Infinite Undos
 
-topBar.png
+The default setting for undo in Maya is 50 undos which is not nearly enough. If you have not already done so, make sure to turn on INFINITE UNDOS NOW! 
 
-If you haven't already, click File -> Project Window to get a window like this.
-Click "New" on the right of Current Project.
-Change the Current Project field to your story group title.
+Click Windows -> Settings/Preferences -> Preferences.
 
-Maya already sets up folders like scenes, assets, images, etc. for you as well so you can stay organized.
-All your scene files should go in scenes, reference images can go in sourceimages, etc. As long as everyone in your group follows the same format, you can stay organized within your group.
-Hit Accept.
+On the left, there's a window of Categories. Under Settings, find Undo and change your Queue setting to Infinite
 
-setProject.png
-
-From this point on, every time you create a new scene, SET YOUR PROJECT.
-1. File -> Set Project
-2. When this window pops up, select the folder with your story group title.
-3. Click Set.
-setProject1.png
-
-Now when you save your untitled scene, the prompt will automatically redirect you to the Current Project which in this case is Story Group Title\scenes.
-To your left you can also use the dropdown menu to change which project this scene is set to.
-saveProject.png
-
-<b> Also, SAVE AS MAYA ASCII. MAYA ASCII IS THE FILE TYPE YOU WANT TO SAVE IT AS. SAVE YOUR SCENE AS A MAYA ASCII. USE MAYA ASCII TO SAVE YOUR SCENE.</b>
-
-HEADING MEDIUM: HANDY TOOLS
-
-The default setting for undo in Maya is 50 undos. Click Windows -> Settings/Preferences -> Preferences.
-
-On the left, there's a window of Categories. Under Settings, find Undo and change your Queue setting to Infinite.
+HEADING MEDIUM: Helpful Hotkeys
  
 Hold down x: snap to grid when translating
 Hold down v: snap to vertex when translating
 Hold down j: snap tool for move, rotate, scale
 Hold down g: opens last used tool (VERY USEFUL-so you don't have to constantly go to Edit Mesh -> blah)
 Scale tool to flatten/straighten edges/faces
-ctl-alt-s will save your file under the original file name + increment. (Fox.ma, ctl-alt-s, Fox_001.ma)
+ctl-alt-s will save your file under the original file name + increment. (Fox.ma, ctl-alt-s, Fox_V2.ma, Fox_latest.ma etc.)
 
 
 On your menu bar, you should see magnet icons. Those are the different snaps you can choose to have on at all times. 
@@ -68,8 +43,8 @@ original_fox.jpg
 
 
 This is an example of how you can use a front and side reference sheet to help model your character. We'll be doing something similar.
-//UPDATE THIS PICTURE ITS FROM MAYA 2008?
-reference.png 
+
+April_setup.png
 
 
 
