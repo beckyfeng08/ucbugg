@@ -591,6 +591,8 @@ Accessories/14_pant.png
 
 Now you can fit the clothing item onto your character. Make sure that the body mesh does not stick out of the clothes (if it does, make sure you go back and sculpt more on the clothes)
 
+Accessories/15_pant.png
+
 Before you move on, make sure you name everything in your outliner.
 
 HEADING MEDIUM: Hair
