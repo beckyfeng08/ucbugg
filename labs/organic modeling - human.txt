@@ -621,7 +621,9 @@ Now I’m going to add some more edge loops in the back to get more flexibility 
 
 Accessories/20_hair.png
 
-At this point, I spent a lot of time sculpting the hair to get the shape that I wanted. This is where you need to utilize your own creative decisions and skills to get what you want for your character.
+At this point, I spent a lot of time sculpting the hair to get the shape that I wanted. One tool that I found extremely helpful was the inflate tool in the sculpting tools shelf. This gave the hair some weight to it. 
+
+This is where you need to utilize your own creative decisions and skills to get what you want for your character.
 
 For now, I am satisfied with this for the hair:
 
