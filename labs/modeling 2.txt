@@ -48,15 +48,9 @@ April_setup.png
 
 
 
-To bring in your reference image, first move the downloaded fox image into the sourceimages folder of your project directory. This way, you stay organized and when you share project folders with your group members, you don't need to worry about updating file paths.
+To bring in your reference image, press spacebar in Maya to get out of Perspective mode and enter side view mode by pressing spacebar again while your cursor is over side view mode.
 
-Save your untitled Maya scene as a ASCII file type and call it fox1. Your top bar should look something like this.
-filePath.jpg
-
-
-
-In Maya, press spacebar to get out of Perspective mode and enter side view mode by pressing spacebar again while your cursor is over side view mode.
-Press View -> Image Plane -> Import Image and Maya should automatically open up a box to your sourceimages directory. Double click the foxReference.jpg image you saved. If you didn't go into side view mode, your reference image would have imported at whatever angle the camera was facing which would make the orthogonal views useless.
+Press View -> Image Plane -> Import Image and Maya should automatically open up a box to the sourceimages folder of your current project directory. Navigate to wherever you saved the reference image and double click it. If you didn't go into side view mode, your reference image would have imported at whatever angle the camera was facing which would make the orthogonal views useless.
 
 imagePlane.png
 
@@ -65,9 +59,10 @@ You should have an image plane with the fox in your scene now. I personally like
 ImagePersp.jpg
 
 
+And this point, it would be wise to save initially(if you haven't already). You will want to make it a regular habit to SAVE YOUR WORK!
 
+Go back to side view mode and we can start box modeling. 
 
-Go back to side view mode and we can start box modeling.
 Create a cube from the polygon primitives menu. 
 
 SIDE NOTE: For the love of all that is good and green on this sweet earth please don't use any NURBS Primitives when you are modeling. NURBS are a type of object in Maya that will essentially only show up in the viewport. That means anything made from a NURBS primitive will not show up in ANY renders, final images etc. They will become useful later on in the pipeline for rigging, however, for modeling we want to stay away from them!
