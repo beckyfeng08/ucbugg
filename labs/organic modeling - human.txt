@@ -428,126 +428,261 @@ At this point, I spent some time sculpting and adjusting my model to look more l
 Details/18.png
 
 
-HEADING LARGE: CREATING THE BODY
 
-Grab the bottom edge of your mesh and extrude down a few times to create the upper torso.
+HEADING LARGE: CREATING THE TORSO
 
-image34.png
+While the head is the most complex component of a human character model, that doesn’t mean that it’s time to skimp on the body. Good topology still applies, so let’s take a look at what it means to create a human body mesh that can be used for animation. 
 
-image35.png
+As mentioned before, industry practice generally follows a similar workflow we used for the head except for the entire character model--sculpting everything first then retopologizing in Maya. However, being able to model an organic character from the ground up is still a really useful skill and can give you a lot more insight into how good topology is created. There’s a million different workflows that someone could use to produce a model, so don’t feel like you have to use a single “correct” way. 
 
-image36.png
+For this section, instead of Quad Draw, we’ll be using the traditional box- and contour-modeling techniques taught in the basic labs, but going over a lot of tools that’ll make you a stronger character modeller.
 
-Now grab faces where your character’s shoulders should be and extrude out. Notice that symmetry is still on (turn it on if it somehow got turned off).
+Remember: when organic modeling in Maya it’s best to start as low poly as possible, and only add edge loops when needed to define important details. This is very similar to how painting or drawing works -- we start with the contours and shapes, and fill in detail as we refine different sections.
 
-image37.png
+As long as we have a low poly mesh that has good topology (and quads), we can easily use the Subdivide tool to make a higher poly version of the mesh. There is a Reduce tool, but it doesn’t work as nicely. It’s way easier to add detail later than it is to take it away once the model has become too complex.
 
-Add in an edgeloop here.
+With all that in mind, let’s start with a cube. 
 
-image38.png
+Body/body1.png
 
-image39.png
+Let’s scale the cube to be roughly the height of the torso up to the armpit area. Then, let’s add two edge loops. In the Tool Settings for the Insert Edge Loop tool, we can change the settings to Multiple Edge Loops and Use Equal Multiplier, setting the “Number of edge loops” to 2. We’ll end with something like the rectangular prism below, and we can adjust the shape of the cube like so:
 
-Grab these faces (I had to move my edgeloop in towards the neck before I grabbed these) and extrude down.
+Body/body1a.png
 
-image40.png
+Body/body1b.png
 
-image41.png
+This allows us to create a torso that will be slightly less box-y, since we’ve curved the front of the torso.  At this point, I also deleted the top and bottom faces of the torso, to make it easier to select the top and bottom edge loops. As a refresher, double clicking on an edge will select the edge loop that it is a part of.
 
-I’ve moved the faces out so that they are at an angle to the body and then I’ve extruded one more time. I scaled the face a bit to get it to be closer to an arm shape. I’ve also gone and adjusted some of my verts so that his shoulders and chest are slightly bigger.
+Next, let’s switch back to the front orthographic view and start adding and scaling edge loops to match the shape of the torso. Note how I placed the edge loops in a fairly even distribution, roughly defining the curve of the torso.
 
-image42.png
+Body/body2.png
 
-I’ve extruded the torso a bit more to be at about the same height as the wrists.
+Since this model is meant to be symmetrical, let’s add an edge loop down the middle. You can add an edge loop exactly in the middle of two edge loops by using the same Insert Edge Loop settings as above, but setting the “Number of edge loops” to 1 instead of 2. 
 
-image43.png
+This will later allow Maya to allow us to make edits across the axis of symmetry, and it’ll be easy to delete half the mesh and mirror it since we have this center edge loop.
 
-image44.png
+Body/body3.png
 
-Adding in more edge loops to the front of the torso and to the arms.
+ From this point on, make sure that the changes you’re making to the mesh are symmetrical. One easy way to ensure this is changing the symmetry to Object X in the Symmetry dropdown menu. One thing to keep in mind is that this Symmetry mode becomes increasingly inaccurate the more detailed your mesh becomes, so make sure to check that it’s actually working symmetrically each time you use it. 
 
-I’m going to keep adjusting some verts. Let’s leave off modeling the hands for later. Let’s give him some legs to stand on now. 
-
-image45.png
-
-Use the Append to Poly tool to fill in the hole beneath him.
-
-image46.png
-
-Now use the Multi-Cut Tool to connect everything together. (Maya crashed here and I lost a ton of work so I had to redo a bunch of stuff so my model is slightly differently shaped but we’re going to ignore that).
-
-image47.png
-
-Grab faces along the bottom of the mesh like this and then extrude down.
-
-image48.png
-
-Add a bunch of edgeloops evenly spaced along the length of the legs. I would do some sculpting with the Grab tool again to make the legs less stick-like.
-
-image49.png
-
-You should get something like this.
-
-image50.png
-
-Grab those Faces where his feet should be and extrude out!
-
-image51.png
-
-I added some edgeloops to the feet and adjusted verts.
-
-You’re probably going to have to move a bunch of vertices around on your model. At this point, your model should have everything modeled except the hands. I would take this time to shape your model to match your Character Sheets as closely as possible. Add in edgeloops as needed to get more detail. Since I’m not using a character sheet I’m just going to adjust my model’s body a bit.
-
-image52.png
-
-image53.png
-
-Now for the hands I’ll be grabbing faces like these, and extruding 4 fingers.
-
-image54.png
-
-image55.png
-
-image56.png
-
-image57.png
-
-image58.png
-
-image59.png
-
-Now for the thumb, select faces here and extrude twice. Now that you have the fingers blocked out, go back and add in edgeloops along the length of all of your fingers.
-
-image60.png
-
-With some minimal adjustment of verts, we have a hand!
-
-Now let’s finish off some details in the face.
-
-image61.png
-
-Extrude the mouth in a couple of times to get a nice cavity.
-
-image62.png
-
-Grab these faces and extrude in to get your nostrils.
+Body/symmetry.png
 
 
-image63.png
+Next, let’s switch to the side orthographic view. Of course, it’s going to look box-y from this view, since we only scaled to match the shape of the torso from the front.  
 
-Finally, extrude the eyes for some eye sockets.
+Body/body4.png
+
+Next, we’ll scale edge loops to match the side view of the torso. 
+
+Body/body5.png
+
+Let’s start thinking about where the legs are going to attach. Looking at anatomy references, we know that actually stick out of the “sides” of the torso, just below your hips. Let’s delete the faces there in order to make room for hips.
+
+Body/body5a.png
+
+Body/body5b.png
+
+Next, we need to actually connect the bottom of the torso. Let’s select the edges across this bottom area like so:
+
+Body/body5c.png
+
+Append to polygon won’t quite work here, since the edges aren’t all adjacent to one another. Instead , let’s use the <b>Bridge tool </b> to connect them.  
+
+Body/body5d.png
+
+I then adjusted the edges to round out the bottom. Think as if you’re creating a leotard, and you’re creating the loop that goes between the legs and connects on the other side.
+
+Body/body6.png
+
+Looking pretty good! 
+
+Next, let’s create the neck area. To do this, I selected the top-most edge loop and extruded it upwards, shrinking and rotating it slightly as I went. 
+
+Body/body7.png
+
+Body/body7b.png
+
+However, at this stage, the neck hole is pretty rectangular, since the torso itself is rectangular. We can use the <b> Circularize </b> tool to make this look more like a hole where our neck can attach.
+
+Body/circularize.png
+
+Body/body7c.png
+
+It’s time to start thinking about where the holes for the arms should go. Actually, there’s a pretty logical place, but let’s think about what we want the connecting object to look like. Since we’re going to be box modeling this arm and then stitching it on, the number of vertices on the object we’re attaching has to match the number of vertices of the hole we’re sewing on to. Right now, creating a hole here would create 6 vertices, which is a slightly funky number. Let’s add an edge loop (one on each side of the model, of course) so that we have 8 vertices around this region.
+
+Body/body8.png
+
+Now, we can delete those four faces and circularize the new arm holes.
+
+Body/body9.png
+
+That’s it for our torso for now! It’s pretty low poly at the moment, but it has the general shape that we want and it’ll allow us to easily attach the arms, legs, and neck later on. 
+
+
+
+HEADING LARGE: CREATING THE ARMS AND HANDS
+
+Thanks to symmetry, we really only need to create one arm / hand, then mirror it across the mesh. If you need a refresher on that workflow, check out the fox lab from basic UCBUGG. 
+
+Since we decided in the previous section that our arm would have 8 vertices along the side that we’re stitching, let’s start with a poly cylinder with 8 subdivision axes and 0 subdivision caps. We can rotate and position this cylinder next to an arm hole. 
+
+Body/body11.png
+
+Next, we’re going to extrude out this cylinder all the way to the wrist while following the reference images. Make sure to switch between orthographic views to make sure that you’re getting the shape accurate to your reference material. 
+
+Body/body12.png
+
+Next, let’s add some edge loops around areas that we anticipate will need to bend. You can also rotate these edge loops and move around vertices to get an elbow area that feels more physically accurate. 
+
+Once we’re done with this low poly arm, let’s move on to the hand.
+
+Hands are really tricky. Honestly, the hand I’m about to show you is perhaps not the Most Amazingly Humanly Accurate hand in the world, but let’s just make sure it has proper topology so that you can later make it into a nicer hand.
+
+First, let’s start with a cube that we’ll subdivide and scale so that it’s a bit trapezoidal and so that the number of vertices at the end match the number of vertices we want to attach to. Make sure to position it in the right area so that you can reference the character sheets as you go.
+
+Body/body14.png
+
+Next, let’s make some fingers. I created a cylinder with 8 sides, then moved and scaled it into the location of a finger.  Think about the number of joints in a finger as you add edge loops, since each joint will need to be able to bend. 
+
+Body/body15.png
+
+Let’s add some more edge loops around the joints and scale edges/faces to get this looking a bit more finger-esque.
+
+Body/body16.png
+
+Next, let’s duplicate this finger four more times, adjusting for each finger so that the size is correct. Look at a reference picture of a hand as you do this so that you can make sure the length of each finger and the placement of the joints is approximately correct.
+
+Body/body17.png
+
+Alright, so you may have noticed: there’s nowhere to attach these fingers to on the palm base that we made earlier. In fact, the palm base is so low poly, that even if we used the lowest poly quad mesh possible to represent a finger (a rectangular prism), there’s no way we’d have enough vertices or enough holes to fit these four fingers onto the palm base. So what’s the solution here? 
+
+Let’s use the Multi-Cut tool to add some new edges. That’ll get us to the 8 vertices per hole. To do this, I added an edge loop around the entire height of the palm base, then cut new edges in for each finger.
+
+Body/body18.png
+
+Body/body19.png
+
+Now we’re ready to delete these four faces to stitch our index finger on. There’s lots of different ways to stitch two meshes together, but my preferred method is using the Combine tool to combine the meshes then using the Target Weld tool to stitch the two objects together. Make sure that when you’re using Target Weld it’s always to connect two holes together--if you try to stitch a vertex that isn’t on the border of a hole, you’ve created non-manifold geometry (the bane of all modellers). 
+
+Body/targetWeld.png
+
+The Target Weld tool allows us to snap vertices or edges onto each other, merging the first selected item with the second selected item. Test it out for a bit if you’re uncertain how to use it, but it can be really helpful for merging with more control than the Merge or Merge to Center tools.
+
+Body/body20.png
+
+Let’s do this for all the fingers, now.
+
+Body/body21.png
+
+So great, we have all the fingers sewed on. However, in doing so, we’ve violated another rule--we now have all these faces with a crazy number of edges (way way way more than four)! There’s a number of different ways to resolve this, but what I did was I used the Multi-Cut tool to create quads like so: 
+
+Body/body22.png
+
+Remember to be really careful with using the Multi-Cut tool, since you can accidentally create vertices or edges that you didn’t intend to if you’re not cutting precisely where you want to. 
  
-image64.png
+Body/body23.png
 
-image65.png
+While this kind of funky topology is fine for an area like the knuckles, where a new component of the body begins without really needing to smoothly connect to the parts before it, we don’t want to continue this type of topology for the rest of the hand. I connected the new vertices all the way to the end of the hand with the Multi-Cut tool.
 
-Alright you now have a water-tight base mesh for your human character. Now, your character is probably pretty misshapen right now (so is mine), but you now have the proper topology to sculpt your character. You can now use your sculpt tools on your mesh to push stuff around until it fits your character sheets.
+Body/body24.png
 
-image66.png
+Do this for the bottom side of the hand too. Create new edges in the same pattern I showed above. Afterwards, we have a pretty decent looking hand. 
 
-With a ton of sculpting your model can end up looking like this! Please note the topology on the model: keep in mind that you should have at least 3 edge loops at the joint area, and less concentrated edge loops where there are no joints. This is <b>SUPER</b> important for rigging and skinning, where one edge loop should NOT dictate your rig.
+We can extrude a face at the base of the palm to serve as our thumb. This is a pretty rough one, so make sure to adjust yours later on.
 
-Please submit a less rough version of your model to the homework form. We will NOT accept any misshapen human models, so please be sure to look up anatomy references or use your own character sheets as guides!
+Body/body26.png
+
+A new problem has arisen! Even after doing our topology-fixing multi-cutting, we still ended up with more than 8 vertices on the loop that we meant to stitch onto the arm. Luckily, I ended up with 16 vertices where I wanted to stitch the hand on. The hole on my arm has 8 vertices, which is exactly half the number of vertices as the hand. That means that we can use the Subdivide tool and end up with the correct number of vertices. Since the arm was meant to match the torso, we will also need to Subdivide the torso when we stitch the arms on.
+
+Body/body25.png
+
+While this screenshot above doesn’t have vertices selected, we can use the Heads Up Display in Maya’s viewport to show the number of vertices (Verts) that we have selected. This is an easy way to verify that the holes on the meshes we’re stitching together have the same number of vertices. 
+
+Next, we’re going to stitch the arm onto the torso, then the hand onto the arm. My workflow here is again Combine then Target Weld. 
+
+Body/body27.png
+
+Body/body28.png
+
+Spend some time to add more edge loops and fix up the mesh. One helpful tool for fixing wonky looking faces is the Relax tool, found in the Sculpting shelf. This tool tries to regularize the faces within the brush radius, making the topology more regular and reducing the number of weirdly shaped faces on your mesh.
+
+Body/body29.png
+
+After finishing, I deleted half the mesh and mirrored it. Since our model is starting to get more complex, be wary of the Threshold setting when you merge--make sure that it’s high enough that it’ll merge all vertices across the border of the Mirrored geometry, but not so high that it combines vertices that you didn’t intend to combine. Before mirroring, always check that you have no overlapping / touching vertices when in hard surface mode (1 mode). 
+
+Body/body30.png
+
+I did a few more touch-ups to better define the areas where I sewed stuff on (such as creating a more defined armpit), and there’s definitely more that can be done! But for now, here’s our torso with our arms and hands attached. 
+
+Body/body33.png
+
+
+
+HEADING LARGE: CREATING THE LEGS AND FEET
+
+Honestly, a lot of the process for creating the legs is pretty similar to making the arms, so I’ll just drop these screenshots here and have brief explanations for the steps in between.
+
+Body/body34.png
+
+Let’s count the vertices at the hole and create a cylinder accordingly. We’ll position this cylinder and extrude it down in the shape of a leg, following the model sheets.
+
+Body/body36.png
+
+Body/body37.png
+
+Body/body38.png
+
+After some adjusting, let’s sew this leg on. After sewing, we can mirror so that our model can have two legs.
+
+Body/body39.png
+
+Body/body40.png
+
+Body/body41.png
+
+Body/body42.png
+
+Body/body43.png
+
+Let’s get started on the feet. I extruded down the bottoms of each leg, following the model sheet. Feet flare out from the ankles, so make sure to capture the general shape of things, even in a blocky way. Looking up reference images of feet can be really helpful, even if it may yield some...strange Google search results.
+
+Body/body44.png
+
+Body/body46.png
+
+When we’re ready to extrude the actual feet, I selected 5 faces at the bottom of the cylinder and extruded them forward. Why five, you ask? In a bit, we’re going to extrude these five faces again, but this time with “Keep Faces Together” off. This will allow us to create 5 toes.
+
+Body/body47.png
+
+Body/body48.png
+
+Body/body49.png
+
+Body/body50.png
+
+The general shape of the foot is here, so now it’s just a matter of moving vertices around then adding more edge loops to refine the shape.  
+
+Body/body51.png
+
+Body/body52.png
+
+Before this last image, I extruded the faces located at the knee area to make more defined kneecaps. I also moved around a lot of vertices on the feet in order to get the shape to look more like the reference images I had gathered. 
+
+Body/body53.png
+
+HEADING LARGE: FINISHING UP & SUBMISSION
+
+With the legs and feet done, all that’s left is to attach our head. Our head already has a certain number of vertices at the base, as does our hole that we’ve left for the neck. Add edge loops and fiddle with the mesh as needed to get to the right number of vertices at the border. In my case, I didn’t need to add anything, since all of these steps somehow ended up with 24 vertices on the holes for each side.
+
+Body/body54.png
+
+After more sculpting, we’ve gotten a completed human body model, which looks slightly terrifying because it is naked and textured and soulless. It’s a good start, though, and if we so desire we could continue to subdivide or add edge loops to the mesh to keep adding in more detail. Remember, though, less is more, and high poly meshes take longer to render. 
+
+Body/body55.png
+
+And there she is. 
+
+Please submit a cleaned up version of your model to the homework form. We will NOT accept any misshapen human models, so please be sure to look up anatomy references or use your own character sheets as guides!
 
 HEADING LARGE: CLOTHING & ACCESSORIES (Optional)
 
