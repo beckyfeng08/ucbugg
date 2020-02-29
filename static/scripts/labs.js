@@ -20,7 +20,7 @@ allLabs = {
 		"araknid": ["character animation"]
 	},
 	"shading": {
-		"bugg": ["basic materials", "uv mapping", "shading guide"],
+		"bugg": ["basic materials", "shading guide"],
 		"araknid": ["hypershade"]
 	},
 	"lighting": {
@@ -59,7 +59,6 @@ labLookup = {
 	"playblasts": "playblasts",
 	"characteranimation": "character animation",
 	"basicmaterials": "basic materials",
-	"uvmapping": "uv mapping",
 	"shadingguide": "shading guide",
 	"painteffects": "paint effects"
 }
