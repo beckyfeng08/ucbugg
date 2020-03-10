@@ -1,4 +1,4 @@
-HEADING LARGE: INTRODUCTION (Week 1)
+HEADING LARGE: INTRODUCTION 
 
 Before following along with this lab, you should complete the <b> RIGGING 1 LAB </b>, which walks through the process of creating a skeleton for a fox and placing the IK handles. We want you to revisit these steps so that you have a solid foundation of the very basic steps of rigging before moving into advanced methods. (That lab shouldn't take you very long so don't be too overwhelmed)
 
@@ -13,14 +13,14 @@ This lab is split into two weeks, so work only until the designated sections for
 - Using the Connection Editor (Week 2)
 
 
-HEADING LARGE: CHECKING ON WORK SO FAR
+HEADING LARGE: CHECKING ON WORK SO FAR (Week 1)
 
 <b>This is the start of the Week 1 section:</b>
 
-1. You should have a skeleton that looks like this: 
+1. After completing the Rigging 1 Lab, you should have a skeleton that looks like this: 
 fox_initial_Skeleton.png
-Notice that I did actually change one thing: the position of the root joint. Previously (in part 1 of the lab), the root joint was in the middle of the spine. That isn't too much trouble for creating a very basic rig, but for this rig we want to go a little bit more advanced, so let's make the hip joint the new root.
-To do this, select the hip joint, then go to Skeleton-->Reroot skeleton. Now the new root is the hip joint.
+Notice that I did actually change one thing: the position of the root joint. Previously (in Rigging 1), the root joint was in the middle of the spine. That isn't too much trouble for creating a very basic rig, but for this rig we want to go a little bit more advanced, so let's make the hip joint the new root.
+To do this, select the hip joint, then go to <b>Skeleton-->Reroot skeleton.</b> Now the new root is the hip joint.
 
 2. You also already have your ik handles. Make 100% sure that they're all set to the "rotate-plane" solver, NOT the single chain solver. To check this, select the ik handle, open the attribute editor, and check here:
 rotate_plane_attribute_editor.png
