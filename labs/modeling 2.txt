@@ -1,6 +1,6 @@
-HEADING LARGE: HANDY TOOLS (before we get started)
+HEADING LARGE: HANDY TOOLS
 
-<b> Before we begin modeling, lets review some helpful tools/hotkeys that you might find useful in this lab. 
+Before we begin modeling, lets review some helpful tools/hotkeys that you might find useful in this lab. 
 
 HEADING MEDIUM: Infinite Undos
 
