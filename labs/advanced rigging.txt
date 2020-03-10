@@ -1,14 +1,22 @@
-HEADING LARGE: INTRODUCTION
+HEADING LARGE: INTRODUCTION (Week 1)
 
-Before following along with this lab, you should complete the basic rigging lab, which walks through the process of creating a skeleton for a fox and placing the ik handles. This is effectively part 2 of that lab, but as opposed to the advanced rigging lab, this one will rig the fox in a much more advanced way.
+Before following along with this lab, you should complete the <b> RIGGING 1 LAB </b>, which walks through the process of creating a skeleton for a fox and placing the IK handles. We want you to revisit these steps so that you have a solid foundation of the very basic steps of rigging before moving into advanced methods. (That lab shouldn't take you very long so don't be too overwhelmed)
+
+This lab will effectively act as a continuation of the Rigging 1 lab, but as opposed to the "Rigging 2" lab you did in basic UCBUGG, you will now do the Advanced Rigging Lab in which you will rig the fox in a much more advanced way.
 
 HEADING MEDIUM: ADVANCED CONCEPTS COVERED:
-- Creating Custom Controllers and Locators
-- IK Splines
-- Using the Connection Editor
+
+This lab is split into two weeks, so work only until the designated sections for the appropriate week. 
+
+- Creating Custom Controllers and Locators (Week 1)
+- IK Splines (Week 2)
+- Using the Connection Editor (Week 2)
 
 
 HEADING LARGE: CHECKING ON WORK SO FAR
+
+<b>This is the start of the Week 1 section:</b>
+
 1. You should have a skeleton that looks like this: 
 fox_initial_Skeleton.png
 Notice that I did actually change one thing: the position of the root joint. Previously (in part 1 of the lab), the root joint was in the middle of the spine. That isn't too much trouble for creating a very basic rig, but for this rig we want to go a little bit more advanced, so let's make the hip joint the new root.
@@ -140,9 +148,13 @@ Use the orthographic view to match up the position of the locator to the knee jo
 10. This is what my locators look like: 
 locators_final_position.png
 
+<b> This is the end of the section for Week 1. Submit you're fox file with its custom controllers and locators onto bcourses and you will resume from the next section for next week.</b>
 
 
-HEADING LARGE: IK SPLINE FOR THE FOX'S SPINE
+HEADING LARGE: IK SPLINE FOR THE FOX'S SPINE (Week 2)
+
+<b>This is the start of the section for Week 2:</b>
+
 This is where things get interesting and a bit more advanced. If you've done rigging before, maybe the only new things you've seen so far are the custom controllers/locators, but this is where there's a clear division between a basic rig and more advanced one. Hold on, take your time, and carefully read through the instructions to understand what we're doing here.
 
 Before I begin this section, I think it'd be good to give a general picture of what we're doing here. In this section, we're going to be creating a spline for the fox's spine. A good way to think of a spine is to think of it like an elastic string. This string has a start and end point, kind of like anchors that serve to hold the string in place. The movement we're going for would be the equivalent of pulling/pushing on several points on the string.
@@ -239,3 +251,5 @@ And, you're done! Select the root joint, shift-select the mesh, and go to bind s
 Obviously there's going to be skinning issues, but we're not evil enough to make you skin a character that isn't going to be in your short.
 
 The skinning lab is available as a guide on how to skin your characters for your short. It isn't an assignment, it just runs through good practices, which options to use, etc.
+
+<b> This is the end of the advanced rigging lab! Submit your fox model onto bcourses with its rig and basic skinning applied.</b>
