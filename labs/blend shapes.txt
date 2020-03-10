@@ -81,7 +81,9 @@ Most important rule for this method: when you create your duplicates, do NOT add
 
 Also, do NOT freeze transformations on the duplicates! Otherwise when your main model makes an expression as you move the slider, it'll also translate, which you do not want.
 
-First, open up the faces.ma scene you downloaded in Maya. The scene consists of eleven models. The center model (selected below) is the neutral pose. Each one of the other model represents a specific facial expression on one side of the face: blendshapes_all_in_viewport.png
+First, open up the faces.ma scene you downloaded in Maya. The scene consists of eleven models. The center model (selected below) is the neutral pose. Each one of the other model represents a specific facial expression on one side of the face: 
+
+blendshapes_all_in_viewport.png
 
 The right side (relative to the image) of the face is smiling.
 
