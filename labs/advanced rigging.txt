@@ -148,7 +148,7 @@ Use the orthographic view to match up the position of the locator to the knee jo
 10. This is what my locators look like: 
 locators_final_position.png
 
-<b> This is the end of the section for Week 1. Submit you're fox file with its custom controllers and locators onto bcourses and you will resume from the next section for next week.</b>
+<b> This is the end of the section for Week 1. Submit your fox file with its custom controllers and locators onto bcourses and you will resume from the next section for next week.</b>
 
 
 HEADING LARGE: IK SPLINE FOR THE FOX'S SPINE (Week 2)
