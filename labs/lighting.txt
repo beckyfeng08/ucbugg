@@ -307,3 +307,131 @@ l12.png
 l13.png
 
 Follow the same process to save the image. 
+
+
+HEADING LARGE: DEMO 1 – LIGHTING AN INDOOR, DAYTIME SCENE
+We’ll use the same scene for the daytime and nighttime scene just to control the variables in terms of how many changes you’ll see between the demos.
+
+You can download the scene (without the lights) from here:
+
+FILE: Demo_no_lights.ma
+
+This is what this scene looks like by default (everything is hidden except for polys for the sake of clarity). This is the Malcolm rig, so I’ll just refer to him as Malcolm from this point onward.
+
+Screen Shot 2015-11-16 at 3.14.12 PM.png
+
+Before you light any scene, you should plan out what the sources of light will be. In this example, here’s what I’m thinking:
+-There’s sunlight coming in from the window. Since it’s sunlight it will be a distant light.
+-This light will likely be too sharp; we’ll need to soften that light by having other lights around the room to reduce the contrast.
+That’s what immediately jumps to mind. We can edit the lighting as we go along.
+
+Let’s start with the distant light
+-Create an area light and change its shape to “distant.” This will be our DIRECT sunlight. Again, it does not matter where you place a distant light. All that matters is the distant light’s rotation.
+-Make it bigger/move it where you can easily manipulate it.
+-Reduce its exposure to 4.
+-Give it these rotation values:
+Rotate X: 46. Rotate Y: -46. Rotate Z: -84.
+
+The direct sunlight is not enough to illuminate Malcolm (test it with an IPR for yourself if you want). We want a fill light for Malcolm’s face.
+-Create an area light and place it above the right arm (relative to Malcolm) of the armchair.
+
+-Make the light face Malcolm, but it shouldn’t be exactly 90 degrees. Give it a bit of a tilt inward toward Malcolm’s face just so that the shadow line isn’t straight down the middle of his face.
+
+-Decrease the light’s exposure to 5.
+
+-Since this light is mostly for Malcolm’s face, you should unlink the light from all objects and then link it to his face and hair mesh (refer to the light linking tutorial in the guide above if you’re having trouble with light linking)
+
+If you render now, you will see that this fill light has helped bring out Malcolm’s face a bit more. If it’s too intense, turn it lower or if it isn’t intense enough, move it closer to Malcolm’s face or raise the intensity.
+
+Here’s the next problem: the left side of Malcolm (relative to Malcolm) is too dark. Sunlight generally bounces around and makes an entire room bright. We will need a key light there to simulate the effect of the bouncing of the light around the room.
+-Create an area light, increase its size (8x bigger works well for me) and put it at a 45-degree angle facing Malcolm.
+
+-This area light should be on the opposite side of the window and at a similar distance from Malcolm as the television is
+
+-Turn down the exposure of this light to 5.
+
+-Scroll down the attribute editor, click on the “shadows” tab and check the “enable shadows” checkbox to disable the shadows.
+Wait a minute—why are we disabling shadows?
+Think about it: sunlight is coming from the window—that’s the main light. That’s the light that’s producing the shadows. How can there be a light (that IS NOT a light bulb/any artificial light) opposite the window produce shadows? It’ll look as if there’s some kind of spotlight there producing shadows, which goes against what we’re trying to do with this scene (daytime lighting only)
+
+-Final thing to do: unlink the lamp and the lampshade from this light. Why? We’re trying to direct the eye toward Malcolm. The lamp is metallic and will shine even with a slight amount of light. If it’s too bright, viewers will be distracted and they’ll want to look there instead of at Malcolm. Therefore, we unlink the lamp and lampshade from this key light so that the focus is still on Malcolm.
+
+This is what everything looks like in the viewport for me:
+
+Screen Shot 2015-11-16 at 6.42.21 PM.png
+
+
+This is what the final image looks like for me. It is far from done, but the point of this demo is to give you a good start at least. It's also noisy because I reduced the render samples (so that it doesn't take forever to render):
+
+daytime_finished.png
+
+
+
+HEADING LARGE: DEMO 2 – LIGHTING AN INDOOR, NIGHTTIME SCENE
+Download this scene and follow along this tutorial (same file for the daytime demo): 
+
+FILE: Demo_no_lights.ma
+
+This is what the scene currently looks like. Same as with the daytime scene.
+
+Screen Shot 2015-11-16 at 3.14.12 PM.png
+
+Just like the previous demo, before you light any scene, you should plan out what the sources of light will be. In this example, here’s what I’m thinking:
+-The light from the lamp should be visible, but obviously won’t be the main light because it’s not shining directly on Malcolm. This light will probably be colored yellow/orange.
+
+-There should probably be a tiny bit of light coming from the window to Malcolm’s left. It is nighttime, but there’s likely some moonlight/streetlight outside. This light will probably be white.
+
+-I’ve placed a rectangular polygon where the television would be. The camera is going to be looking at Malcolm, so we’re not going to be seeing the television. The main light source that’s going to illuminate Malcolm is going to be light from the television. This light will also be white.
+
+This, of course, does not mean that I am going to restrict myself to this initial interpretation: I’ll add/remove lights if needed as I’m going along, and so should you.
+
+Here are the parameters that will give you a good result. Feel free to experiment with these as you like. The ones posted below are the ones that produced the screenshot at the end of this demo. This does not mean that this is the only/best approach to light this scene.
+
+Step 1: Create a spotlight and place it inside the lampshade, where a lightbulb would be.
+-Face the spotlight downward so it’ll create a spot on the floor and a bit on the wall.
+-Leave its attributes the same except for the color: give it a slightly yellowish tint.
+
+Step 2: Duplicate the spotlight and point it straight upward.
+-This is because a lamp like this will create spots on the floor and on the ceiling due to the shape of its lampshade.
+
+Screen Shot 2015-11-16 at 3.18.48 PM.png
+These are two spotlights: one facing up, one facing down (they're overlapping, so it's a bit difficult to see).
+
+
+You should be launching a new IPR render between every two-three steps to see the effect of every change you’re making!
+
+Step 3: Create an area light and put it on the window. Scale, rotate, and position it so that it’s matching the window opening as if the light itself is the window pane.
+-Make sure the arrow of the area light is pointing inside the room (if it’s pointing outside the light will go there).
+-Give it a bit of a downward tilt since moonlight/streetlight would be taller than Malcolm, not parallel to the ground.
+-Change its exposure to 1.5-2. It’s barely an effect, but it’s certainly there.
+
+Step 4: Create an area light and match it to the television’s position and size. Make sure it’s pointing at Malcolm.
+-Change the light’s exposure to 7.
+-Now we are going to change the cone angle to really emphasize the fact that the light is coming from a small source (the television). Go to the refine tab of the light in the attribute editor.
+-Change the cone angle parameters to these:
+Cone angle: somewhere from 15-25. Softness:between 0.5-0.8
+These depend on the size of the area light! These angles will likely be different for you! If the spot that the light creates is too small/too big, edit the parameters to get a result like in the final image. The point is to constrict the area of light produced to roughly a square around Malcolm.
+
+So far this is what the viewport looks like:
+Screen Shot 2015-11-16 at 3.20.44 PM.png
+
+
+If you IPR render from the camera (NOT the perspective view), you’ll see that the image is mostly there. Here’s a cool touch that will make the image look better.
+
+Step 5: Create an area light, put it behind Malcolm, a little closer to the lamp than directly behind Malcolm, and at a bit of a height so that it’s just slightly pointing down at Malcolm’s hair. This is a backlight for Malcolm: its primary point is to give Malcolm a bit of an illuminated outline, separating his dark hair from the dark background by a little bit.
+-Turn this light’s exposure to 2.5. This light is a subtle one that shouldn’t be too strong.
+
+-If you render now, you’ll see that this light affects everything. We don’t want that. We want it to only affect Malcolm’s head/hair.
+
+-Go to Window —> Relationship Editors —> Light Linking —> Light-Centric
+
+-Select the area light you created behind Malcolm and unlink it from everything.
+
+-With the same light selected, open the Malcolm node in the “illuminated objects” column and expand the second node (Malcolm_v109:grpGeo). Select the second item (Malcolm_v109:head) and the twelfth item (Malcolm_v109:hairFlatTop). Now the light will only affect Malcolm’s head and hair.
+
+Make an IPR render. If everything looks okay, you might want to batch render a single image to produce a high quality, final image. It should look something like this:
+
+
+nighttime_finished.png
+
+Malcolm is in the empire business…
