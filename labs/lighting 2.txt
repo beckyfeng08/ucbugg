@@ -244,11 +244,11 @@ We’ll use the same scene for the daytime and nighttime scene just to control t
 
 You can download the scene (without the lights) from here:
 
-FILE: Demo_no_lights.ma
+FILE: demo_no_lights.ma
 
 This is what this scene looks like by default (everything is hidden except for polys for the sake of clarity). This is the Malcolm rig, so I’ll just refer to him as Malcolm from this point onward.
 
-Screen Shot 2015-11-16 at 3.14.12 PM.png
+helloMalcolm.png
 
 Before you light any scene, you should plan out what the sources of light will be. In this example, here’s what I’m thinking:
 -There’s sunlight coming in from the window. Since it’s sunlight it will be a distant light.
@@ -288,8 +288,7 @@ Think about it: sunlight is coming from the window—that’s the main light. Th
 
 This is what everything looks like in the viewport for me:
 
-Screen Shot 2015-11-16 at 6.42.21 PM.png
-
+viewportMalcolm.png
 
 This is what the final image looks like for me. It is far from done, but the point of this demo is to give you a good start at least. It's also noisy because I reduced the render samples (so that it doesn't take forever to render):
 
@@ -300,11 +299,11 @@ daytime_finished.png
 HEADING LARGE: DEMO 2 – LIGHTING AN INDOOR, NIGHTTIME SCENE
 Download this scene and follow along this tutorial (same file for the daytime demo): 
 
-FILE: Demo_no_lights.ma
+FILE: demo_no_lights.ma
 
 This is what the scene currently looks like. Same as with the daytime scene.
 
-Screen Shot 2015-11-16 at 3.14.12 PM.png
+helloMalcolm.png
 
 Just like the previous demo, before you light any scene, you should plan out what the sources of light will be. In this example, here’s what I’m thinking:
 -The light from the lamp should be visible, but obviously won’t be the main light because it’s not shining directly on Malcolm. This light will probably be colored yellow/orange.
@@ -324,7 +323,8 @@ Step 1: Create a spotlight and place it inside the lampshade, where a lightbulb 
 Step 2: Duplicate the spotlight and point it straight upward.
 -This is because a lamp like this will create spots on the floor and on the ceiling due to the shape of its lampshade.
 
-Screen Shot 2015-11-16 at 3.18.48 PM.png
+lampshade.png
+
 These are two spotlights: one facing up, one facing down (they're overlapping, so it's a bit difficult to see).
 
 
