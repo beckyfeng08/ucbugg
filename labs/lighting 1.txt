@@ -62,11 +62,6 @@ Shadow color: what color is the shadow? If it’s a colored light, the shadow is
 Adaptive Shadows: it is conservative by default. Aggressive will result in FASTER renders but LOWER QUALITY (it’s basically tracing less rays).
 Important: only the logical light sources in your scene should produce shadows! If you add an area light to just generally make the scene brighter (like you will see in the example at the end of this guide) you should turn the shadows off if it’s in the opposite direction of the source of light. Otherwise this will confuse the viewers and they won’t understand what the other light source is.
 
-HEADING MEDIUM: LIGHT FILTERS
-The only light filter we want to introduce are barn doors.
-- Barndoors
-Located in the light filters tab. Select your light source, and then click PxrBarnLightFilter
-
 
 HEADING MEDIUM: CAMERA VISIBILITY
 
@@ -318,25 +313,13 @@ l2.png
 
 l3.png
 
-It looks good, but we can fine tune our lights a little more, perhaps by adding light filters. Barndoors are a type of light filter that can give more specification of how a light will interact with a scene. Click one of your lights and right click this button on the renderman shelf, and select PxrBarnLightFilter.
+It looks good, but we can fine tune our lights a little more, perhaps by adjusting the Cone Angle. Cone Angle can give more specification on how a light will interact with a scene. Click one of your lights and in the Attribute Editor go to "Refine". You will see a slider for Cone Angle and Cone Softness.
 
-l4.png
+cone.png
 
-You should see something like this:
+Adjust the radius to somewhere from 60 and 80 play around with the softness to your liking. It should look something like this:
 
-l5.png
-
-Select only the light filter (in the outliner, should be named PxrBarnLightFilter1 ), and with the move tool pull it down just a tiny bit. You will see that the barn lines converge to the center a little.
-
-l6.png
-
-In the attribute editor, in barn shape adjust the radius to somewhere between 0.18 - 0.21.
-
-l7.png
-
-You will notice that the radius lines will converge more to the center.
-
-l8.png
+cone_angle.png
 
 <b>Do this process for the other two lights</b>
 
