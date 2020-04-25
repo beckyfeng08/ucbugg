@@ -1,8 +1,8 @@
 HEADING LARGE: RENDERING OVERVIEW
-So you are at last done with your animation/modeling/rigging/shading etc. and are finally READY TO RENDER. This rendering lab will guide you through some of the accessible ways that you can render your short films. The main methods we will discuss are:
+So you are at last done with your animation/modeling/rigging/shading etc. and are finally READY TO RENDER!! This rendering lab will guide you through some of the accessible ways that you can render your short films. The main methods we will discuss are:
 
-- Batch Rendering (Rendering on your local computer)
-- Zync Rendering (Rendering on the Cloud/Render Farm)
+- <b>Batch Rendering</b> (Rendering on your local computer)
+- <b>Zync Rendering</b> (Rendering on the Cloud/Render Farm)
 
 In the final section of this lab, we also discuss Rendering your Shadows on a Separate Layer which might be helpful to save some computing power! 
 
@@ -122,7 +122,7 @@ Now that your scene is done AND your render settings are set up, make sure to do
 
 HEADING SMALL: SETTING UP A ZYNC ACCOUNT THROUGH THE SCHOOL
 
-<b>IMPORTANT!! Once you have your render settings set up, PLEASE CALL OVER A FACILITATOR/SEND THEM YOUR RENDER SETTINGS to make sure that everything looks correct. Once they have verified your Render Settings, they will ask you for your @berkeley.edu e-mail to give you access to the Zync render farm. Otherwise, you will not be able to log in and continue following the steps.</b>
+<b>IMPORTANT!! Once you have your render settings set up, PLEASE CONTACT A FACILITATOR/SEND THEM YOUR RENDER SETTINGS to make sure that everything looks correct. Once they have verified your Render Settings, they will ask you for your @berkeley.edu e-mail to give you access to the Zync render farm. Otherwise, you will not be able to log in and continue following the steps.</b>
 
 <b>STEP 1:</b> Download the Zync client app from <a href='https://www.zyncrender.com/downloads/'>here</a>
 
