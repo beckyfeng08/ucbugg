@@ -9,8 +9,6 @@ In this lab, you will learn how to use After Effect's particle playground to cre
 
 I will assume you have some basic familiarity with the After Effects interface. If you would like a refresher, read through the first few sections of our Compositing - Layer Management lab.
 
-<a href='google.com'>DOWNLOAD THE LAB HERE</a>
-
 HEADING LARGE: PROJECT SETUP
 
 Let’s start by downloading the lab files - the only external file you will need is <b> snow_day.exr </b>, an OpenEXR image file of the background we are going to composite onto.
@@ -19,7 +17,7 @@ FILE: snow_day.exr
 
 Open a new After Effects Project File and create a new Composition - there should be a graphic for <b> New Composition </b> displayed pretty prominently in the UI, but if not, navigate to <b> Composition > New Composition </b>. Let’s rename our new comp <i> particles </i>, and update the settings so it looks like this:
 
-comp_settings.png
+comp_settings.PNG
 
 <b> Import </b> the media file we just downloaded by using <b> ⌘+ i </b> or <b> CTRL + i </b> and drag it onto the particles comp icon in the Project Panel. You should see the snow_day.exr file appear in the project timeline near the bottom of your screen.
 
@@ -35,7 +33,7 @@ To start working in our magical <b> s i m u l a t i o n </b>, we’ll first make
 
 This should create a very different situation in the viewport - you should see a black background and a blue floor grid (kind of reminds me of Maya!) and a new particle system in the middle of the screen. If you move the playhead of the timeline around a little, you can see what looks like a fountain of fireworks - very cool, but not quite the “shape” of the snowstorm we want. Let’s fix that!
 
-particle_world_overview.png
+particle_world_overview.PNG
 
 There are a few attribute tabs you can see within the Particle World effects window. Let’s start by looking under the <b> Producer </b> tab.
 
