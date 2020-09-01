@@ -19,6 +19,9 @@ boddy {
     text-align: center;
     color: white;
 }
+.container img {
+	max-width: 800px;
+}
 .centered {
 	color: #7db6e4;
     position: absolute;
@@ -38,7 +41,7 @@ a {
 div.navbar {
 	background-color: #f3e9e8;
 	position: fixed;
-	min-width: 980px;
+	/* min-width: 980px; */
 	width:100%;
 	margin: 0px;
     text-align: center;
@@ -74,10 +77,12 @@ div.tabs {
     display: inline-block;
     cursor: pointer;
 }
-#home {
+
+#content-home {
 	max-width: 840px;
 	margin:auto;
 }
+
 div.tab {
 	display: inline-block;
 	width: 80px;
@@ -86,10 +91,10 @@ div.tab {
 	margin-right: 20px;
 	padding-top: 5px;
 	padding-bottom: 5px;
-
-    text-align: center;
-    vertical-align: top;
-    transition: 0.3s;
+  text-align: center;
+  vertical-align: top;
+  transition: 0.3s;
+	object-fit: scale-down;
 }
 div.tab:hover {
 	background-color: #e2dad8;
@@ -106,13 +111,23 @@ p.tab-text {
 }
 div.home-col {
 	color: #3e3f40;
-	padding:1%;
-	padding-right: 4%;
+	/* padding:1%;
+	padding-right: 4%; */
 	float: left;
 	width: 25%;
-	min-height: 350px;
+	min-height: 300px;
 	text-align: left;
 	overflow: hidden;
+}
+
+div.home-col p {
+	margin-top:0px;
+	margin-bottom:0px;
+	padding-right: 40px;
+}
+
+div.col-wide {
+	width: 200%;
 }
 div.navbar-dropdown:hover {
 	background-color: #d4eefc;
@@ -131,7 +146,7 @@ div.blue-box {
 	background: #d4eefc;
 	display: block;
 	position: absolute;
-	width: 80px;
+	width: 20%;
 	height: 80px;
 	z-index: -1;
 	left: 0px;
@@ -154,7 +169,6 @@ div#about{
 p {
   color: #646669;
   z-index: 2;
-
 }
 img.tab-image {
 	padding: 4px;
@@ -208,7 +222,7 @@ h4 {
 h5 {
 	text-align: left;
 	font-size: 20px;
-	min-width: 740px;
+	/* min-width: 740px; */
   	max-width: 840px;
 	margin: auto;
 	text-align: left;
@@ -248,14 +262,14 @@ section.mainbody-midsection {
 p.home-blurb {
 	color: #3e3f40;
 	padding: 10px;
-	min-width: 740px;
+	/* min-width: 740px; */
   	max-width: 840px;
 	margin: auto;
 	font-size: 12pt;
 	text-align: left;
 	margin-bottom: 2%;
 }
-p.home-colm {
+p.home-col {
 	padding: 10px;
 	color: #3e3f40;
 }
@@ -363,8 +377,8 @@ div.facilititty {
 	margin-top: 50px;
 }
 img.sillytater {
-	width: 70%;
-	height: 70%;
+	width: 150px;
+	height: 150px;
 	border-radius: 50%;
 	margin-bottom: 20px;
 }
@@ -460,7 +474,7 @@ img.about {
 	border-style: solid;
 	border-width: 2px;
 	border-color: #939597;
-	min-width: 800px;
+	/* min-width: 800px; */
 	max-width: 1600px;
 }
 div.pipeline-row {
@@ -672,7 +686,31 @@ a.outlineh3 {
 	margin-bottom: 80px;
 	/*height: 42.2vw;*/
 	display: block;
-	min-width: 620px;
+	/* min-width: 620px; */
+}
+
+#projects-featured {
+	max-width: 960px;
+	margin: 0 auto;
+}
+
+.vid-wrap {
+	overflow:hidden;
+	 padding-bottom:56.25%;
+	 position:relative;
+	 object-position: center;
+	 height:0;
+	 /* max-width: 960px; */
+	 /* height: auto;
+	 width: 100%; */
+}
+
+.vid-wrap iframe{
+	left:0;
+	top:0;
+	height:100%;
+	width:100%;
+	position:absolute;
 }
 
 div.work {
@@ -910,4 +948,97 @@ li {
 	color: #97999b;
 	font-weight: normal;
 	list-style-type: none;
+}
+
+@media (max-width: 1100px) {
+	div.tabs {
+		margin-top: 60px;
+		width: 100%;
+		height: 80px;
+		display: grid;
+		grid-template-columns: repeat(5, 1fr);
+		grid-gap: 10px;
+		object-position: center;
+		justify-items: center;
+	}
+	div.nav-left {
+		/* display: inline-block; */
+		margin: 0 auto;
+		padding: 10px;
+		width: 100%;
+		height: 50px;
+	}
+	div.blue-box-region {
+		/* height: 140px; */
+		width: 100%
+	}
+	div.blue-box {
+		display: none;
+	}
+	div.tab {
+		justify-self: center;
+		text-align: center;
+		/* min-width: 50px; */
+		width: auto;
+		height: auto;
+		object-fit: cover;
+		object-position: left;
+		margin: 0;
+		padding: 0;
+		padding-left: 10px;
+		padding-right: 10px;
+		/* overflow: hidden; */
+		/* padding: 0px; */
+	}
+
+	div.mainbody {
+		padding-top: 150px;
+	}
+
+	section.bottom-panel {
+		background-position: 0 100%;
+		/* margin-bottom: 0; */
+	}
+
+	img.tab-image {
+		display: block;
+		margin: 0 auto;
+	}
+}
+
+@media (max-width: 490px) {
+	div.mainbody p {
+		margin: 0 20px;
+	}
+
+	div.home-col p {
+		margin: 0;
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+	div.info-buttons {
+		width: 100%;
+	}
+	div.home-col {
+		padding-top: 30px;
+		text-align: center;
+		width: 100%;
+		min-height: 0px;
+	}
+	div.col-wide {
+		width: 100%;
+	}
+	div.home-col h5 {
+		text-align: center;
+	}
+  #about-info {
+		padding-left: 0px;
+		padding-right: 0px;
+	}
+	/* img.tab-image {
+		height: auto;
+		width: 100%	;
+	} */
+
+
 }

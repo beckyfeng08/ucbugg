@@ -35,7 +35,7 @@ var Main = (function() {
 				}
 			}
 		}
-	   	$("#blue-box").animate({left:$("#"+activeTab).position().left - $("#blue-box-region").position().left + 20 + "px"}, switchSpeed+200);
+	   	$("#blue-box").animate({left:$("#"+activeTab).position().left - $("#blue-box-region").position().left + 0 + "px"}, switchSpeed+200);
 		if (activeTab === "home") {
 			$("#blue-box").animate({left:$("#"+activeTab).position().left - $("#blue-box-region").position().left + 0 + "px"}, 0);
 		} else if (activeTab === "labs") {
@@ -79,7 +79,7 @@ var Main = (function() {
 	var scheduleHover = function() {
 		$("#schedule-button").animate({width:"175px"}, 150);
 		$("#schedule-text").show(150);
-	}	
+	}
 	var scheduleClick = function() {
 		$("#schedule-button").animate({height:"120px"}, 150);
 		$("#schedule-info").show();
