@@ -30,9 +30,7 @@ From the operating system drop-down menu, select which version you want to downl
 
 HEADING MEDIUM: Installing Maya
 
-Once your download is complete, simply run the installer and follow the on screen instructions. The installer will give you the option to sign into your Autodesk account to activate the product. We recommend signing in, since it's easier, but you can also find your serial number in your Autodesk account if you go the website and look at your account information. After you sign in or enter your serial number and product key, Maya will install. You are now the proud owner of Maya!
-
-A warning: Maya's activation process can take quite a while. If you encounter any errors, simply try again with the same data. It should eventually work.
+Once your download is complete, simply run the installer and follow the on screen instructions. The installer will give you the option to sign into your Autodesk account to activate the product. As of Fall 2020, Autodesk is no longer allowing educational accounts to activate by serial number. After you sign in, Maya will resume its installation. You are now the proud owner of Maya!
 
 HEADING MEDIUM: MUDBOX
 
