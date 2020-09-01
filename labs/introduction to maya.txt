@@ -26,11 +26,11 @@ getting_maya_select.png
 From the version drop-down menu, select Maya 2020. (As of Fall 2020, we are using Maya 2020 to teach this course. It is very important that you download the correct version).
 
 Select "English" from the language drop-down.
-From the operating system drop-down menu, select which version you want to download. Make sure to write down your serial number and product, as you will need them during installation. Once you select your version, click the "INSTALL" button. The download should start automatically. Maya is a pretty big piece of software (2.0+ GB) so make sure you have enough time and space to download the entire program.
+From the operating system drop-down menu, select which version you want to download. Once you select your version, click the "INSTALL" button. Or, if you want an installer that work offline, use the dropdown and choose "DOWNLOAD" instead. The download should start automatically. Maya is a pretty big piece of software (3.0+ GB) so make sure you have enough time and space to download the entire program.
 
 HEADING MEDIUM: Installing Maya
 
-Once your download is complete, simply run the installer and follow the on screen instructions. The installer will ask for the serial number from the previous section. After you enter your serial number and product key, Maya will install. You are now the proud owner of Maya!
+Once your download is complete, simply run the installer and follow the on screen instructions. The installer will give you the option to sign into your Autodesk account to activate the product. We recommend signing in, since it's easier, but you can also find your serial number in your Autodesk account if you go the website and look at your account information. After you sign in or enter your serial number and product key, Maya will install. You are now the proud owner of Maya!
 
 A warning: Maya's activation process can take quite a while. If you encounter any errors, simply try again with the same data. It should eventually work.
 
