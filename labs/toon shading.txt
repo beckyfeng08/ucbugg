@@ -1,0 +1,5 @@
+HEADING LARGE: INTRODUCTION
+
+This lab explores how to get a cell shading effect in Maya.
+
+intro_close.png

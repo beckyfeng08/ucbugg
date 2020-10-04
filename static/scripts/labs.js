@@ -21,7 +21,7 @@ allLabs = {
 	},
 	"shading": {
 		"bugg": ["basic materials", "shading guide"],
-		"araknid": ["hypershade"]
+		"araknid": ["hypershade", "toon shading"]
 	},
 	"lighting": {
 		"bugg": ["lighting 1", "lighting 2"],
@@ -43,9 +43,9 @@ labContent = {};
 // OR ELSE
 
 labLookup = {
-	"introductiontomaya": "introduction to maya", 
-	"modeling1": "modeling 1", 
-	"modeling2": "modeling 2", 
+	"introductiontomaya": "introduction to maya",
+	"modeling1": "modeling 1",
+	"modeling2": "modeling 2",
 	"hardsurfacemodeling": "hard surface modeling",
 	"organicmodeling": "organic modeling",
 	"rigging1": "rigging 1",
@@ -61,4 +61,5 @@ labLookup = {
 	"basicmaterials": "basic materials",
 	"shadingguide": "shading guide",
 	"painteffects": "paint effects"
+	"toonshading": "toon shading"
 }
