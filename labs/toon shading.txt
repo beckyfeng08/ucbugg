@@ -26,8 +26,22 @@ In this lab, toon shading is just using special shaders in Arnold, the built-in 
 
 HEADING LARGE: Getting Started
 Download the toon shader lab here and set your project to it:
-ToonShaderLab.
+FILE: ToonShaderLab.
 
 Open ToonShadingLab_Start.ma. You should see a sphere, a human, and a directional light.
 
 getting_started_0.png
+
+
+
+
+
+HEADING LARGE: Set the Renderer to Arnold
+
+The toon shaders we are using are part of Arnold, the default renderer that Maya comes with, so let’s set our current renderer to that. Open render settings by clicking on the icon with the clapboard and the gear.
+
+set_renderer_to_arnold_0.png
+
+Set the renderer to Arnold:
+
+set_renderer_to_arnold_1.png
