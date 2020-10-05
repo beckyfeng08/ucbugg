@@ -282,7 +282,7 @@ HEADING SMALL: Sheen
 For a microfiber “velvety” look
 
 
-For more details check the official toon shader <a href="https://docs.arnoldrenderer.com/display/A5AFMUG/Toon">documentation</a>.
+For more details check the official toon shader <a href="https://docs.arnoldrenderer.com/display/A5AFMUG/Toon" target="_blank">documentation</a>.
 
 
 
@@ -324,7 +324,7 @@ Ex: Clip from Land of the Lustrous, an almost fully CGI anime. Faces drawn in 2D
 
 <img src="https://raw.githubusercontent.com/saurabhmitra/ucbugg/gh-pages/labs/toon%20shading/2d3d_0.gif" style="width:60%;height:60%;">
 
-Cool optional read: <a href="https://sites.psu.edu/ayfunthingsarefun/2018/01/23/cgi-in-land-of-the-lustrous/">Land of the Lustrous BTS</a>
+Cool optional read: <a href="https://sites.psu.edu/ayfunthingsarefun/2018/01/23/cgi-in-land-of-the-lustrous/" target="_blank">Land of the Lustrous BTS</a>
 
 Ex: Clip of Mel-chan from 3DMA. 3DMA (3D Modeling and Animation) is a student organization in UC Berkeley (Join us!). Mel-chan is the human form of Mel, 3DMA’s fox mascot. Face and hair drawn in 2D.
 
