@@ -66,6 +66,11 @@ In the attribute editor for the sphere, you should see that an aiToon shader has
 
 basic_toon_shading_3.png
 
+
+
+
+
+
 HEADING MEDIUM: Base Colors
 Find the Base section of the toon shader.
 
@@ -114,3 +119,34 @@ basic_toon_shading_13.png
 This is what happens when I change the grey to a light brown.
 
 basic_toon_shading_14.png
+
+
+
+
+
+HEADER MEDIUM: Edges
+Find the Edge section of the toon shader.
+
+edge_0.png
+
+The default parameters are actually perfect. The only reason why they aren’t showing up is because we need a contour filter.
+
+edge_1.png
+
+Open up the render settings again
+
+edge_2.png
+
+Open up the Filter section
+
+edge_3.png
+
+Set the filter to Contour.
+
+edge_4.png
+
+If you render the scene now, it looks like this.
+
+edge_5.png
+
+You can edit the line width and color in the toon shader.
