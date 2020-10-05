@@ -64,26 +64,44 @@ basic_toon_shading_2.png
 
 In the attribute editor for the sphere, you should see that an aiToon shader has been attached to the sphere.
 
-basic_toon_shading_3 .png
+basic_toon_shading_3.png
 
 HEADING MEDIUM: Base Colors
 Find the Base section of the toon shader.
 
+basic_toon_shading_4.png
+
 Set Color to any color you want. I’ll set mine to red.
+
+basic_toon_shading_5.png
 
 This is what it looks like if you render the scene now.
 
+basic_toon_shading_6.png
+
 The colors are incorrect and we want a sharper cutoff between the lights and darks of the sphere. To fix this, let’s add a ramp to the base color (This is easier to explain after it’s seen, so let’s set it up and explain later). Click the grid icon next to the Tonemap attribute.
+
+basic_toon_shading_7.png
+
 Select Ramp
+
+basic_toon_shading_8.png
 
 In the ramp, set interpolation to None (since we want no interpolation), and drag the white circle to the middle of the ramp
 
+basic_toon_shading_9.png
+
 You should end up with a ramp that’s half black and half white.
+
+basic_toon_shading_10.png
 
 Click on the black circle and set the Selected Color from black to a lighter grey.
 
+basic_toon_shading_11.png
+
 If you render the scene now, it looks like this.
 
+basic_toon_shading_12.png
 
 Explanation: What’s going on is that for the lighter parts of the sphere, the ramp’s white is mixed with the original red color (still the original red), and in the darker parts of the sphere, the ramp’s grey is mixed with the original red color (a darker red).
 
@@ -91,4 +109,8 @@ The x-axis of the ramp represents dark to light. You could actually add more tha
 
 This is what happens when I change the grey to a light blue.
 
+basic_toon_shading_13.png
+
 This is what happens when I change the grey to a light brown.
+
+basic_toon_shading_14.png
