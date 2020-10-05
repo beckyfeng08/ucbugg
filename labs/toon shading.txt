@@ -205,19 +205,19 @@ The eye highlights (the little circles on his pupils) are going to be the same s
 
 Select the eye highlights.
 
-highlights_0.png
+<img src="https://raw.githubusercontent.com/saurabhmitra/ucbugg/gh-pages/labs/toon%20shading/highlights_0.png" style="width:60%;height:60%;">
 
 Instead of a toon shader, assign an aiFlat shader to them.
 
-highlights_1.png
+<img src="https://raw.githubusercontent.com/saurabhmitra/ucbugg/gh-pages/labs/toon%20shading/highlights_1.png" style="width:60%;height:60%;">
 
 In the aiFlat shader, the color attribute should already be white.
 
-highlights_2.png
+<img src="https://raw.githubusercontent.com/saurabhmitra/ucbugg/gh-pages/labs/toon%20shading/highlights_2.png" style="width:60%;height:60%;">
 
 If you render the scene now, it looks like this. It looks the same as before, but now the eye highlights will be this shade of white no matter what the lighting conditions are.
 
-highlights_3.png
+<img src="https://raw.githubusercontent.com/saurabhmitra/ucbugg/gh-pages/labs/toon%20shading/highlights_3.png" style="width:60%;height:60%;">
 
 
 
@@ -226,33 +226,33 @@ highlights_3.png
 HEADING LARGE: Attaching Image Textures
 We are going to attach a texture to a toon shader. Select the pupils and assign a toon shader to them.
 
-texture_0.png
+<img src="https://raw.githubusercontent.com/saurabhmitra/ucbugg/gh-pages/labs/toon%20shading/texture_0.png" style="width:60%;height:60%;">
 
 In the Base section, click on the grid icon next to the Color attribute.
 
-texture_1.png
+<img src="https://raw.githubusercontent.com/saurabhmitra/ucbugg/gh-pages/labs/toon%20shading/texture_1.png" style="width:60%;height:60%;">
 
 Select File
 
-texture_2.png
+<img src="https://raw.githubusercontent.com/saurabhmitra/ucbugg/gh-pages/labs/toon%20shading/texture_2.png" style="width:60%;height:60%;">
 
 Click on the folder icon.
 
-texture_3.png
+<img src="https://raw.githubusercontent.com/saurabhmitra/ucbugg/gh-pages/labs/toon%20shading/texture_3.png" style="width:60%;height:60%;">
 
 In the "sourceimages" folder, select the png file called GrunkPupil
 
-texture_4.png
+<img src="https://raw.githubusercontent.com/saurabhmitra/ucbugg/gh-pages/labs/toon%20shading/texture_4.png" style="width:60%;height:60%;">
 
 If you render the scene now, it looks like this. The colors may look a bit off since you haven't created a ramp in the base colors section.
 
-texture_5.png
+<img src="https://raw.githubusercontent.com/saurabhmitra/ucbugg/gh-pages/labs/toon%20shading/texture_5.png" style="width:60%;height:60%;">
 
 Continue setting up the shader as you normally would (ex: base color ramp, edge. You probably won’t need rim lighting, though).
 
 When you render the scene now, it looks like this.
 
-intro_close.png
+<img src="https://raw.githubusercontent.com/saurabhmitra/ucbugg/gh-pages/labs/toon%20shading/intro_close.png" style="width:60%;height:60%;">
 
 
 
@@ -290,11 +290,11 @@ How you render your toon shaders depends on if you want to render images with al
 HEADING MEDIUM: Quick Crash course on rendering with Arnold
 Open the render settings window. In the Common tab, set up everything as you would with Renderman. You can set the render image type here.
 
-image_sequences_0.png
+<img src="https://raw.githubusercontent.com/saurabhmitra/ucbugg/gh-pages/labs/toon%20shading/image_sequences_0.png" style="width:60%;height:60%;">
 
 In the Arnold Render tab, there is a Camera (AA) field. In a nutshell, this field controls the overall quality of the render. For toon shading, 1 is low quality (use for render previews), and 3 is good generally. If your render seems noisy, feel free to turn it up even more.
 
-image_sequences_1.png
+<img src="https://raw.githubusercontent.com/saurabhmitra/ucbugg/gh-pages/labs/toon%20shading/image_sequences_1.png" style="width:60%;height:60%;">
 
 In the Rendering menu set, go to Render > Render Sequence. The images will be rendered to the “images” folder of the currently set project.
 
@@ -305,3 +305,41 @@ HEADING MEDIUM: Rendering with Alpha Channel
 Render as exr images. Alpha channel is supported in Arnold EXR image sequence renders.
 However, you will need to render twice. When the filter is set to Contour, Arnold only renders edges. When the filter is set to the default Gaussian filter, Arnold renders everything but edges.
 You will have to render one pass with the Contour filter and another pass with the Gaussian filter. Then composite the edges over everything else.
+
+
+
+
+
+HEADING LARGE: (optional read) Cool Stuff You Can Do With Toon Shading: Combining 2D and 3D Animation
+
+Toon shading makes it easier to combine 2D and 3D animation by making the two styles look more consistent. There are many ways to combine 2D and 3D animation.
+
+HEADING MEDIUM: Faces
+Do you suck at modeling, rigging or animating faces in 3D? Well why not just do it in 2D? Sometimes its easier to draw faces than to model them. Also in 3D, every facial change needs to be accounted for with a rig control and/or blendshape. In 2D animation, however, subtle changes in expressions can be accomplished with just a few pen strokes.
+
+Ex: Clip from Land of the Lustrous, an almost fully CGI anime. Faces drawn in 2D.
+
+<img src="https://raw.githubusercontent.com/saurabhmitra/ucbugg/gh-pages/labs/toon%20shading/2d3d_0.png" style="width:60%;height:60%;">
+
+Optional read: Cool BTS in producing Land of the Lustrous:
+https://sites.psu.edu/ayfunthingsarefun/2018/01/23/cgi-in-land-of-the-lustrous/
+
+Ex: Clip of Mel-chan from 3DMA. 3DMA (3D Modeling and Animation) is a student organization in UC Berkeley (Join us!). Mel-chan is the human form of Mel, 3DMA’s fox mascot. Face and hair drawn in 2D.
+
+<img src="https://raw.githubusercontent.com/saurabhmitra/ucbugg/gh-pages/labs/toon%20shading/2d3d_1.png" style="width:60%;height:60%;">
+
+HEADING MEDIUM: Characters in 2D, Backgrounds in 3D
+2D animation studios often keep their characters in 2D and create backgrounds in 3D. This technique is great if you have a moving camera. No need to redraw the background every frame.
+
+Ex: Clip from the The Promised Neverland. Background is CGI
+
+<img src="https://raw.githubusercontent.com/saurabhmitra/ucbugg/gh-pages/labs/toon%20shading/2d3d_2.png" style="width:60%;height:60%;">
+
+Ex: Clip from the Attack on Titan. Background is CGI.
+
+<img src="https://raw.githubusercontent.com/saurabhmitra/ucbugg/gh-pages/labs/toon%20shading/2d3d_3.png" style="width:60%;height:60%;">
+
+HEADING MEDIUM: Rotoscoping over 3D animation
+Rotoscoping is an animation technique of tracing over parts of existing footage (in this case 3D animation) frame by frame. It can make putting 2D characters in 3D environments easier. Anime studio Ufotable (the studio behind the Fate series and Demon Slayer) sometimes does this.
+
+<img src="https://raw.githubusercontent.com/saurabhmitra/ucbugg/gh-pages/labs/toon%20shading/2d3d_4.png" style="width:60%;height:60%;">
