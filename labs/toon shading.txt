@@ -124,29 +124,67 @@ basic_toon_shading_14.png
 
 
 
-HEADER MEDIUM: Edges
+HEADING MEDIUM: Edges
 Find the Edge section of the toon shader.
 
 edge_0.png
 
 The default parameters are actually perfect. The only reason why they aren’t showing up is because we need a contour filter.
 
-edge_1.png
-
 Open up the render settings again
 
-edge_2.png
+edge_1.png
 
 Open up the Filter section
 
-edge_3.png
+edge_2.png
 
 Set the filter to Contour.
 
-edge_4.png
+edge_3.png
 
 If you render the scene now, it looks like this.
 
-edge_5.png
+edge_4.png
 
 You can edit the line width and color in the toon shader.
+
+
+
+
+HEADING MEDIUM: Rim Light
+Find the Rim Lighting section in the toon shader.
+
+rim_light_0.png
+
+Set the light color to white.
+
+rim_light_1.png
+
+If you render the scene now, it looks like this.
+
+rim_light_2.png
+
+Currently, the rim light fades gradually to the center of the sphere. We want a sharper cutoff between the lightest and darkest parts of the rim light. Sound familiar? We need another ramp!
+
+Attach a ramp to the Color attribute by clicking on the grid icon next to it. Select Ramp in the menu that pops up. Again, make a half black half white ramp.
+
+rim_light_3.png
+
+If you render the scene now, it looks like this.
+
+rim_light_4.png
+
+We want the rim light to be thinner. There are two ways to do this.
+1. Decrease the white part of the ramp.
+
+rim_light_5.png
+
+Or
+2. Back in the toon shader’s Rim Lighting section, decrease the Width parameter (I find that 0.4 works well)
+
+rim_light_6.png
+
+If you render the scene now, it looks like this.
+
+rim_light_7.png
