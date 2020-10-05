@@ -12,12 +12,11 @@ Great control of colors in your scene.
 
 HEADING MEDIUM: Cons of toon shading:
 Takes a bit of setup even for basic features
-High likelihood of an uncanny effect (See Uncanny 2D CG)
 Particular to this lab: In this lab, toon shading is done with Arnold, the built-in renderer in Maya, not Renderman. If you want to combine toon shading and Renderman features, you will have to do some compositing in post.
 Also particular to this lab: rendering toon shading with alpha channel requires 2 render passes.
 
 HEADING MEDIUM: Pipeline
-In this lab, toon shading is just using special shaders in Arnold, the built-in renderer in Maya. You can start toon shading as soon as you are done modeling your assets. You only need to unwrap UVs if you are attaching an image texture to the asset (see Attaching Image Textures/Shading the Pupils). Toon shading will require extra steps in rendering and compositing if you want to render image sequences with alpha channel (see Rendering Image Sequences).
+In this lab, toon shading is just using special shaders in Arnold, the built-in renderer in Maya. You can start toon shading as soon as you are done modeling your assets. You only need to unwrap UVs if you are attaching an image texture to the asset (see Attaching Image Textures). Toon shading will require extra steps in rendering and compositing if you want to render image sequences with alpha channel (see Rendering Image Sequences).
 
 
 
@@ -29,7 +28,7 @@ FILE: ToonShaderLab.zip
 
 Open ToonShadingLab_Start.ma. You should see a sphere, a human, and a directional light.
 
-<img src="https://raw.githubusercontent.com/saurabhmitra/ucbugg/gh-pages/labs/toon%20shading/getting_started_0.png" style="width:60%;height:60%;">" style="width:50%;height:50%;">
+<img src="https://raw.githubusercontent.com/saurabhmitra/ucbugg/gh-pages/labs/toon%20shading/getting_started_0.png" style="width:60%;height:60%;">
 
 
 
@@ -92,9 +91,13 @@ Select Ramp
 
 <img src="https://raw.githubusercontent.com/saurabhmitra/ucbugg/gh-pages/labs/toon%20shading/basic_toon_shading_8.png" style="width:60%;height:60%;">
 
-In the ramp, set interpolation to None (since we want no interpolation), and drag the white circle to the middle of the ramp
+In the ramp, set interpolation to None (since we want no interpolation).
 
 <img src="https://raw.githubusercontent.com/saurabhmitra/ucbugg/gh-pages/labs/toon%20shading/basic_toon_shading_9.png" style="width:60%;height:60%;">
+
+Drag the white circle to the middle of the ramp.
+
+<img src="https://raw.githubusercontent.com/saurabhmitra/ucbugg/gh-pages/labs/toon%20shading/basic_toon_shading_9b.png" style="width:60%;height:60%;">
 
 You should end up with a ramp that’s half black and half white.
 
@@ -193,7 +196,7 @@ If you render the scene now, it looks like this.
 
 
 HEADING LARGE: Shade the character!
-Try shading all of the character except his pupils and eye highlights. Colors are up to you. You can select individual faces and assign toon shaders to them to make his skin and suit different colors. (Applying different shaders to different faces on one model is actually considered bad practice, but seems to work fine for toon shaders)
+Try shading all of the character except his pupils and eye highlights. Colors are up to you. You can select individual faces and assign toon shaders to them to make his skin and suit different colors. (Applying different shaders to different faces on one model is actually considered bad practice, but it works fine for toon shaders)
 
 <img src="https://raw.githubusercontent.com/saurabhmitra/ucbugg/gh-pages/labs/toon%20shading/intro_far.png" style="width:60%;height:60%;">
 
@@ -260,23 +263,24 @@ When you render the scene now, it looks like this.
 
 HEADING LARGE: Other Toon Shading Sections
 
-HEADING MEDIUM: Silhouette
+HEADING SMALL: Silhouette
 A bit like edges, but only covers the outline of the model, while edges can appear on hard edges not on the boundaries of the model as well
 
-HEADING MEDIUM: Specular
+HEADING SMALL: Specular
 For reflections and shiny objects. I recommend adding a ramp to its tonemap for sharper highlight areas.
 
-HEADING MEDIUM: Transmission
+HEADING SMALL: Transmission
 For glass and transparent objects. Make sure Opacity is checked in the model’s render stats. Also, the weight attribute in the specular section must be greater than 0.0 or Transmission will have no effect at all.
 
-HEADING MEDIUM: Emission
+HEADING SMALL: Emission
 For a glowing effect
 
-HEADING MEDIUM: Geometry
+HEADING SMALL: Geometry
 Connect normal maps here
 
-HEADING MEDIUM: Sheen
+HEADING SMALL: Sheen
 For a microfiber “velvety” look
+
 
 For more details check the official toon shader documentation:
 https://docs.arnoldrenderer.com/display/A5AFMUG/Toon
@@ -319,27 +323,27 @@ Do you suck at modeling, rigging or animating faces in 3D? Well why not just do 
 
 Ex: Clip from Land of the Lustrous, an almost fully CGI anime. Faces drawn in 2D.
 
-<img src="https://raw.githubusercontent.com/saurabhmitra/ucbugg/gh-pages/labs/toon%20shading/2d3d_0.png" style="width:60%;height:60%;">
+<img src="https://raw.githubusercontent.com/saurabhmitra/ucbugg/gh-pages/labs/toon%20shading/2d3d_0.gif" style="width:60%;height:60%;">
 
 Optional read: Cool BTS in producing Land of the Lustrous:
 https://sites.psu.edu/ayfunthingsarefun/2018/01/23/cgi-in-land-of-the-lustrous/
 
 Ex: Clip of Mel-chan from 3DMA. 3DMA (3D Modeling and Animation) is a student organization in UC Berkeley (Join us!). Mel-chan is the human form of Mel, 3DMA’s fox mascot. Face and hair drawn in 2D.
 
-<img src="https://raw.githubusercontent.com/saurabhmitra/ucbugg/gh-pages/labs/toon%20shading/2d3d_1.png" style="width:60%;height:60%;">
+<img src="https://raw.githubusercontent.com/saurabhmitra/ucbugg/gh-pages/labs/toon%20shading/2d3d_1.gif" style="width:60%;height:60%;">
 
 HEADING MEDIUM: Characters in 2D, Backgrounds in 3D
 2D animation studios often keep their characters in 2D and create backgrounds in 3D. This technique is great if you have a moving camera. No need to redraw the background every frame.
 
 Ex: Clip from the The Promised Neverland. Background is CGI
 
-<img src="https://raw.githubusercontent.com/saurabhmitra/ucbugg/gh-pages/labs/toon%20shading/2d3d_2.png" style="width:60%;height:60%;">
+<img src="https://raw.githubusercontent.com/saurabhmitra/ucbugg/gh-pages/labs/toon%20shading/2d3d_2.gif" style="width:60%;height:60%;">
 
 Ex: Clip from the Attack on Titan. Background is CGI.
 
-<img src="https://raw.githubusercontent.com/saurabhmitra/ucbugg/gh-pages/labs/toon%20shading/2d3d_3.png" style="width:60%;height:60%;">
+<img src="https://raw.githubusercontent.com/saurabhmitra/ucbugg/gh-pages/labs/toon%20shading/2d3d_3.gif" style="width:60%;height:60%;">
 
 HEADING MEDIUM: Rotoscoping over 3D animation
 Rotoscoping is an animation technique of tracing over parts of existing footage (in this case 3D animation) frame by frame. It can make putting 2D characters in 3D environments easier. Anime studio Ufotable (the studio behind the Fate series and Demon Slayer) sometimes does this.
 
-<img src="https://raw.githubusercontent.com/saurabhmitra/ucbugg/gh-pages/labs/toon%20shading/2d3d_4.png" style="width:60%;height:60%;">
+<img src="https://raw.githubusercontent.com/saurabhmitra/ucbugg/gh-pages/labs/toon%20shading/2d3d_4.gif" style="width:60%;height:60%;">
