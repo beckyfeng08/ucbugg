@@ -4,7 +4,7 @@ This lab explores how to get a cell shading effect in Maya.
 
 intro_far.png
 
-<img src="https://raw.githubusercontent.com/saurabhmitra/ucbugg/gh-pages/labs/toon%20shading/intro_close.png" style="width:20%;height:auto;">
+<img src="https://raw.githubusercontent.com/saurabhmitra/ucbugg/gh-pages/labs/toon%20shading/intro_close.png" style="max-height:50%;">
 
 HEADING MEDIUM: Pros of toon shading:
 Renders super fast (< 1 min per frame generally)
@@ -188,3 +188,11 @@ rim_light_6.png
 If you render the scene now, it looks like this.
 
 rim_light_7.png
+
+
+
+
+HEADING LARGE: Shade the character!
+Try shading all of the character except his pupils and eye highlights. Colors are up to you. You can select individual faces and assign toon shaders to them to make his skin and suit different colors. (Applying different shaders to different faces on one model is actually considered bad practice, but seems to work fine for toon shaders)
+
+intro_far.p
