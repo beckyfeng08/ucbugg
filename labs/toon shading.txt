@@ -2,7 +2,7 @@ HEADING LARGE: INTRODUCTION
 
 This lab explores how to get a cell shading effect in Maya.
 
-<img src="https://raw.githubusercontent.com/saurabhmitra/ucbugg/gh-pages/labs/toon%20shading/intro_far" style="width:60%;height:60%;">
+<img src="https://raw.githubusercontent.com/saurabhmitra/ucbugg/gh-pages/labs/toon%20shading/intro_far.png" style="width:60%;height:60%;">
 
 <img src="https://raw.githubusercontent.com/saurabhmitra/ucbugg/gh-pages/labs/toon%20shading/intro_close.png" style="width:60%;height:60%;">
 
@@ -60,11 +60,11 @@ Let’s attach a toon shader to the sphere. Hold down the right mouse button on 
 
 Under the Arnold, Shader tab, select aiToon.
 
-basic_toon_shading_2.png
+<img src="https://raw.githubusercontent.com/saurabhmitra/ucbugg/gh-pages/labs/toon%20shading/basic_toon_shading_2.png" style="width:60%;height:60%;">
 
 In the attribute editor for the sphere, you should see that an aiToon shader has been attached to the sphere.
 
-basic_toon_shading_3.png
+<img src="https://raw.githubusercontent.com/saurabhmitra/ucbugg/gh-pages/labs/toon%20shading/basic_toon_shading_3.png" style="width:60%;height:60%;">
 
 
 
@@ -74,39 +74,39 @@ basic_toon_shading_3.png
 HEADING LARGE: Base Colors
 Find the Base section of the toon shader.
 
-basic_toon_shading_4.png
+<img src="https://raw.githubusercontent.com/saurabhmitra/ucbugg/gh-pages/labs/toon%20shading/basic_toon_shading_4.png" style="width:60%;height:60%;">
 
 Set Color to any color you want. I’ll set mine to red.
 
-basic_toon_shading_5.png
+<img src="https://raw.githubusercontent.com/saurabhmitra/ucbugg/gh-pages/labs/toon%20shading/basic_toon_shading_5.png" style="width:60%;height:60%;">
 
 This is what it looks like if you render the scene now.
 
-basic_toon_shading_6.png
+<img src="https://raw.githubusercontent.com/saurabhmitra/ucbugg/gh-pages/labs/toon%20shading/basic_toon_shading_6.png" style="width:60%;height:60%;">
 
 The colors are incorrect and we want a sharper cutoff between the lights and darks of the sphere. To fix this, let’s add a ramp to the base color (This is easier to explain after it’s seen, so let’s set it up and explain later). Click the grid icon next to the Tonemap attribute.
 
-basic_toon_shading_7.png
+<img src="https://raw.githubusercontent.com/saurabhmitra/ucbugg/gh-pages/labs/toon%20shading/basic_toon_shading_7.png" style="width:60%;height:60%;">
 
 Select Ramp
 
-basic_toon_shading_8.png
+<img src="https://raw.githubusercontent.com/saurabhmitra/ucbugg/gh-pages/labs/toon%20shading/basic_toon_shading_8.png" style="width:60%;height:60%;">
 
 In the ramp, set interpolation to None (since we want no interpolation), and drag the white circle to the middle of the ramp
 
-basic_toon_shading_9.png
+<img src="https://raw.githubusercontent.com/saurabhmitra/ucbugg/gh-pages/labs/toon%20shading/basic_toon_shading_9.png" style="width:60%;height:60%;">
 
 You should end up with a ramp that’s half black and half white.
 
-basic_toon_shading_10.png
+<img src="https://raw.githubusercontent.com/saurabhmitra/ucbugg/gh-pages/labs/toon%20shading/basic_toon_shading_10.png" style="width:60%;height:60%;">
 
 Click on the black circle and set the Selected Color from black to a lighter grey.
 
-basic_toon_shading_11.png
+<img src="https://raw.githubusercontent.com/saurabhmitra/ucbugg/gh-pages/labs/toon%20shading/basic_toon_shading_11.png" style="width:60%;height:60%;">
 
 If you render the scene now, it looks like this.
 
-basic_toon_shading_12.png
+<img src="https://raw.githubusercontent.com/saurabhmitra/ucbugg/gh-pages/labs/toon%20shading/basic_toon_shading_12.png" style="width:60%;height:60%;">
 
 Explanation: What’s going on is that for the lighter parts of the sphere, the ramp’s white is mixed with the original red color (still the original red), and in the darker parts of the sphere, the ramp’s grey is mixed with the original red color (a darker red).
 
@@ -114,11 +114,11 @@ The x-axis of the ramp represents dark to light. You could actually add more tha
 
 This is what happens when I change the grey to a light blue.
 
-basic_toon_shading_13.png
+<img src="https://raw.githubusercontent.com/saurabhmitra/ucbugg/gh-pages/labs/toon%20shading/basic_toon_shading_13.png" style="width:60%;height:60%;">
 
 This is what happens when I change the grey to a light brown.
 
-basic_toon_shading_14.png
+<img src="https://raw.githubusercontent.com/saurabhmitra/ucbugg/gh-pages/labs/toon%20shading/basic_toon_shading_14.png" style="width:60%;height:60%;">
 
 
 
@@ -127,25 +127,25 @@ basic_toon_shading_14.png
 HEADING LARGE: Edges
 Find the Edge section of the toon shader.
 
-edge_0.png
+<img src="https://raw.githubusercontent.com/saurabhmitra/ucbugg/gh-pages/labs/toon%20shading/edge_0.png" style="width:60%;height:60%;">
 
 The default parameters are actually perfect. The only reason why they aren’t showing up is because we need a contour filter.
 
 Open up the render settings again
 
-edge_1.png
+<img src="https://raw.githubusercontent.com/saurabhmitra/ucbugg/gh-pages/labs/toon%20shading/edge_1.png" style="width:60%;height:60%;">
 
 Open up the Filter section
 
-edge_2.png
+<img src="https://raw.githubusercontent.com/saurabhmitra/ucbugg/gh-pages/labs/toon%20shading/edge_2.png" style="width:60%;height:60%;">
 
 Set the filter to Contour.
 
-edge_3.png
+<img src="https://raw.githubusercontent.com/saurabhmitra/ucbugg/gh-pages/labs/toon%20shading/edge_3.png" style="width:60%;height:60%;">
 
 If you render the scene now, it looks like this.
 
-edge_4.png
+<img src="https://raw.githubusercontent.com/saurabhmitra/ucbugg/gh-pages/labs/toon%20shading/edge_4.png" style="width:60%;height:60%;">
 
 You can edit the line width and color in the toon shader.
 
@@ -155,39 +155,39 @@ You can edit the line width and color in the toon shader.
 HEADING LARGE: Rim Light
 Find the Rim Lighting section in the toon shader.
 
-rim_light_0.png
+<img src="https://raw.githubusercontent.com/saurabhmitra/ucbugg/gh-pages/labs/toon%20shading/rim_light_0.png" style="width:60%;height:60%;">
 
 Set the light color to white.
 
-rim_light_1.png
+<img src="https://raw.githubusercontent.com/saurabhmitra/ucbugg/gh-pages/labs/toon%20shading/rim_light_1.png" style="width:60%;height:60%;">
 
 If you render the scene now, it looks like this.
 
-rim_light_2.png
+<img src="https://raw.githubusercontent.com/saurabhmitra/ucbugg/gh-pages/labs/toon%20shading/rim_light_2.png" style="width:60%;height:60%;">
 
 Currently, the rim light fades gradually to the center of the sphere. We want a sharper cutoff between the lightest and darkest parts of the rim light. Sound familiar? We need another ramp!
 
 Attach a ramp to the Color attribute by clicking on the grid icon next to it. Select Ramp in the menu that pops up. Again, make a half black half white ramp.
 
-rim_light_3.png
+<img src="https://raw.githubusercontent.com/saurabhmitra/ucbugg/gh-pages/labs/toon%20shading/rim_light_3.png" style="width:60%;height:60%;">
 
 If you render the scene now, it looks like this.
 
-rim_light_4.png
+<img src="https://raw.githubusercontent.com/saurabhmitra/ucbugg/gh-pages/labs/toon%20shading/rim_light_4.png" style="width:60%;height:60%;">
 
 We want the rim light to be thinner. There are two ways to do this.
 1. Decrease the white part of the ramp.
 
-rim_light_5.png
+<img src="https://raw.githubusercontent.com/saurabhmitra/ucbugg/gh-pages/labs/toon%20shading/rim_light_5.png" style="width:60%;height:60%;">
 
 Or
 2. Back in the toon shader’s Rim Lighting section, decrease the Width parameter (I find that 0.4 works well)
 
-rim_light_6.png
+<img src="https://raw.githubusercontent.com/saurabhmitra/ucbugg/gh-pages/labs/toon%20shading/rim_light_6.png" style="width:60%;height:60%;">
 
 If you render the scene now, it looks like this.
 
-rim_light_7.png
+<img src="https://raw.githubusercontent.com/saurabhmitra/ucbugg/gh-pages/labs/toon%20shading/rim_light_7.png" style="width:60%;height:60%;">
 
 
 
@@ -195,7 +195,7 @@ rim_light_7.png
 HEADING LARGE: Shade the character!
 Try shading all of the character except his pupils and eye highlights. Colors are up to you. You can select individual faces and assign toon shaders to them to make his skin and suit different colors. (Applying different shaders to different faces on one model is actually considered bad practice, but seems to work fine for toon shaders)
 
-intro_far.png
+<img src="https://raw.githubusercontent.com/saurabhmitra/ucbugg/gh-pages/labs/toon%20shading/intro_far.png" style="width:60%;height:60%;">
 
 
 
