@@ -4,7 +4,7 @@ This lab explores how to get a cell shading effect in Maya.
 
 intro_far.png
 
-<img src="https://raw.githubusercontent.com/saurabhmitra/ucbugg/gh-pages/labs/toon%20shading/intro_close.png" style="height:75%;width:auto;">
+<img src="https://raw.githubusercontent.com/saurabhmitra/ucbugg/gh-pages/labs/toon%20shading/intro_close.png" style="width:50%;height:50%;">
 
 HEADING MEDIUM: Pros of toon shading:
 Renders super fast (< 1 min per frame generally)
@@ -226,14 +226,27 @@ highlights_3.png
 HEADING LARGE: Attaching Image Textures/Shading the Pupils
 We are going to attach a texture to a toon shader. Select the pupils and assign a toon shader to them.
 
+texture_0.png
 
 In the Base section, click on the grid icon next to the Color attribute.
 Select File
 
+texture_1.png
+
 Click on the folder icon.
+
+texture_2.png
 
 In the sourceimages folder, select GrunkPupil.png
 
-Continue setting up the shader as you normally would (you probably won’t need rim lighting).
+texture_3.png
+
+If you render the scene now, it looks like this. The colors may look a bit off since you haven't created a ramp in the base colors section.
+
+texture_4.png
+
+Continue setting up the shader as you normally would (ex: base color ramp, edge. You probably won’t need rim lighting, though).
 
 When you render the scene now, it looks like this.
+
+intro_close.png
