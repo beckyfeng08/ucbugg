@@ -2,4 +2,20 @@ HEADING LARGE: INTRODUCTION
 
 This lab explores how to get a cell shading effect in Maya.
 
+<img src="intro_far.jpg" width="500">
+
 intro_close.png
+
+HEADING MEDIUM: Pros of toon shading:
+Renders super fast (< 1 min per frame generally)
+Great control of colors in your scene.
+Some people dig the style
+
+HEADING MEDIUM: Cons of toon shading:
+Takes a bit of setup even for basic features
+High likelihood of an uncanny effect (See Uncanny 2D CG)
+Particular to this lab:
+In this lab, toon shading is done with Arnold, the built-in renderer in Maya, not Renderman. If you want to combine toon shading and Renderman features, you may have to do some compositing in post.
+
+HEADING MEDIUM: Pipeline
+In this lab, toon shading is just using special shaders in Arnold, the built-in renderer in Maya. You can start toon shading as soon as you are done modeling your assets. You only need to unwrap UVs if you are attaching an image texture to the asset (see Attaching Image Textures/Shading the Pupils). Toon shading will require extra steps in rendering and compositing if you want to render image sequences with alpha channel (see Rendering Image Sequences).
