@@ -318,7 +318,7 @@ HEADING LARGE: (optional read) Cool Stuff You Can Do With Toon Shading: Combinin
 Toon shading makes it easier to combine 2D and 3D animation by making the two styles look more consistent. There are many ways to combine 2D and 3D animation.
 
 HEADING MEDIUM: Faces
-Do you suck at modeling, rigging or animating faces in 3D? Well why not just do it in 2D? Sometimes its easier to draw faces than to model them. Also in 3D, every facial change needs to be accounted for with a rig control and/or blendshape. In 2D animation, however, subtle changes in expressions can be accomplished with just a few pen strokes.
+Do you suck at modeling, rigging or animating faces in 3D? Well why not just do it in 2D? Sometimes it's easier to draw faces than to model them. Also in 3D, every facial change needs to be accounted for with a rig control and/or blendshape. In 2D animation, however, subtle changes in expressions can be accomplished with just a few pen strokes.
 
 Ex: Clip from Land of the Lustrous, an almost fully CGI anime. Faces drawn in 2D.
 
