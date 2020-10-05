@@ -280,3 +280,28 @@ For a microfiber “velvety” look
 
 For more details check the official toon shader documentation:
 https://docs.arnoldrenderer.com/display/A5AFMUG/Toon
+
+
+
+
+HEADING LARGE: Rendering Image Sequences
+How you render your toon shaders depends on if you want to render images with alpha channel (transparency).
+
+HEADING MEDIUM: Quick Crash course on rendering with Arnold
+Open the render settings window. In the Common tab, set up everything as you would with Renderman. You can set the render image type here.
+
+image_sequences_0.png
+
+In the Arnold Render tab, there is a Camera (AA) field. In a nutshell, this field controls the overall quality of the render. For toon shading, 1 is low quality (use for render previews), and 3 is good generally. If your render seems noisy, feel free to turn it up even more.
+
+image_sequences_1.png
+
+In the Rendering menu set, go to Render > Render Sequence. The images will be rendered to the “images” folder of the currently set project.
+
+HEADING MEDIUM: Rendering without Alpha Channel
+Render as png images.
+
+HEADING MEDIUM: Rendering with Alpha Channel
+Render as exr images. Alpha channel is supported in Arnold EXR image sequence renders.
+However, you will need to render twice. When the filter is set to Contour, Arnold only renders edges. When the filter is set to the default Gaussian filter, Arnold renders everything but edges.
+You will have to render one pass with the Contour filter and another pass with the Gaussian filter. Then composite the edges over everything else.
