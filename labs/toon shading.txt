@@ -29,7 +29,7 @@ FILE: ToonShaderLab.zip
 
 Open ToonShadingLab_Start.ma. You should see a sphere, a human, and a directional light.
 
-getting_started_0.png
+<img src="https://raw.githubusercontent.com/saurabhmitra/ucbugg/gh-pages/labs/toon%20shading/getting_started_0.png" style="width:50%;height:50%;">
 
 
 
@@ -200,8 +200,8 @@ intro_far.png
 
 
 
-HEADING LARGE: Shading the Eye Highlights
-The eye highlights (the little circles on his pupils) are going to be white no matter what and they don’t need edges. There is a convenient shortcut shader for that: a Flat shader!
+HEADING LARGE: Flat Shaders
+The eye highlights (the little circles on his pupils) are going to be the same shade of white no matter what and they don’t need edges. There is a convenient shortcut shader for that: a Flat shader!
 
 Select the eye highlights.
 
@@ -223,7 +223,7 @@ highlights_3.png
 
 
 
-HEADING LARGE: Attaching Image Textures/Shading the Pupils
+HEADING LARGE: Attaching Image Textures
 We are going to attach a texture to a toon shader. Select the pupils and assign a toon shader to them.
 
 texture_0.png
