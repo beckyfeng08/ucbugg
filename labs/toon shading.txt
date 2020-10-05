@@ -2,9 +2,9 @@ HEADING LARGE: INTRODUCTION
 
 This lab explores how to get a cell shading effect in Maya.
 
-<img src="https://raw.githubusercontent.com/saurabhmitra/ucbugg/gh-pages/labs/toon%20shading/intro_far.png" width="500">
+<img src="https://raw.githubusercontent.com/saurabhmitra/ucbugg/gh-pages/labs/toon%20shading/intro_far.png" max-height=75%>
 
-intro_close.png
+<img src="https://raw.githubusercontent.com/saurabhmitra/ucbugg/gh-pages/labs/toon%20shading/intro_close.png" max-height=75%>
 
 HEADING MEDIUM: Pros of toon shading:
 Renders super fast (< 1 min per frame generally)
