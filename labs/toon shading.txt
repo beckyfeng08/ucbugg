@@ -282,8 +282,7 @@ HEADING SMALL: Sheen
 For a microfiber “velvety” look
 
 
-For more details check the official toon shader documentation:
-https://docs.arnoldrenderer.com/display/A5AFMUG/Toon
+For more details check the official toon shader <a href="https://docs.arnoldrenderer.com/display/A5AFMUG/Toon">documentation</a>.
 
 
 
