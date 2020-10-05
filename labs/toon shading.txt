@@ -240,7 +240,7 @@ Click on the folder icon.
 
 texture_3.png
 
-In the sourceimages folder, select GrunkPupil.png
+In the "sourceimages" folder, select the png file called GrunkPupil
 
 texture_4.png
 
@@ -253,3 +253,30 @@ Continue setting up the shader as you normally would (ex: base color ramp, edge.
 When you render the scene now, it looks like this.
 
 intro_close.png
+
+
+
+
+
+HEADING LARGE: Other Toon Shading Sections
+
+HEADING MEDIUM: Silhouette
+A bit like edges, but only covers the outline of the model, while edges can appear on hard edges not on the boundaries of the model as well
+
+HEADING MEDIUM: Specular
+For reflections and shiny objects. I recommend adding a ramp to its tonemap for sharper highlight areas.
+
+HEADING MEDIUM: Transmission
+For glass and transparent objects. Make sure Opacity is checked in the model’s render stats. Also, the weight attribute in the specular section must be greater than 0.0 or Transmission will have no effect at all.
+
+HEADING MEDIUM: Emission
+For a glowing effect
+
+HEADING MEDIUM: Geometry
+Connect normal maps here
+
+HEADING MEDIUM: Sheen
+For a microfiber “velvety” look
+
+For more details check the official toon shader documentation:
+https://docs.arnoldrenderer.com/display/A5AFMUG/Toon
