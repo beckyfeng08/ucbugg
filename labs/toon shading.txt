@@ -229,21 +229,24 @@ We are going to attach a texture to a toon shader. Select the pupils and assign 
 texture_0.png
 
 In the Base section, click on the grid icon next to the Color attribute.
-Select File
 
 texture_1.png
 
-Click on the folder icon.
+Select File
 
 texture_2.png
 
-In the sourceimages folder, select GrunkPupil.png
+Click on the folder icon.
 
 texture_3.png
 
-If you render the scene now, it looks like this. The colors may look a bit off since you haven't created a ramp in the base colors section.
+In the sourceimages folder, select GrunkPupil.png
 
 texture_4.png
+
+If you render the scene now, it looks like this. The colors may look a bit off since you haven't created a ramp in the base colors section.
+
+texture_5.png
 
 Continue setting up the shader as you normally would (ex: base color ramp, edge. You probably won’t need rim lighting, though).
 
