@@ -325,8 +325,7 @@ Ex: Clip from Land of the Lustrous, an almost fully CGI anime. Faces drawn in 2D
 
 <img src="https://raw.githubusercontent.com/saurabhmitra/ucbugg/gh-pages/labs/toon%20shading/2d3d_0.gif" style="width:60%;height:60%;">
 
-Optional read: Cool BTS in producing Land of the Lustrous:
-https://sites.psu.edu/ayfunthingsarefun/2018/01/23/cgi-in-land-of-the-lustrous/
+Optional read: <a href="https://sites.psu.edu/ayfunthingsarefun/2018/01/23/cgi-in-land-of-the-lustrous/">Cool BTS look in producing Land of the Lustrous</a>
 
 Ex: Clip of Mel-chan from 3DMA. 3DMA (3D Modeling and Animation) is a student organization in UC Berkeley (Join us!). Mel-chan is the human form of Mel, 3DMA’s fox mascot. Face and hair drawn in 2D.
 
