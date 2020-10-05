@@ -7,14 +7,14 @@ intro_far.png
 <img src="https://raw.githubusercontent.com/saurabhmitra/ucbugg/gh-pages/labs/toon%20shading/intro_close.png" style="width:50%;height:50%;">
 
 HEADING MEDIUM: Pros of toon shading:
-Renders super fast (< 1 min per frame generally)
+Renders super fast (< 1 min per frame generally). A good choice if you don't have access to high performance hardware or cloud rendering resources.
 Great control of colors in your scene.
-Some people dig the style
 
 HEADING MEDIUM: Cons of toon shading:
 Takes a bit of setup even for basic features
 High likelihood of an uncanny effect (See Uncanny 2D CG)
-Particular to this lab: In this lab, toon shading is done with Arnold, the built-in renderer in Maya, not Renderman. If you want to combine toon shading and Renderman features, you may have to do some compositing in post.
+Particular to this lab: In this lab, toon shading is done with Arnold, the built-in renderer in Maya, not Renderman. If you want to combine toon shading and Renderman features, you will have to do some compositing in post.
+Also particular to this lab: rendering toon shading with alpha channel requires 2 render passes.
 
 HEADING MEDIUM: Pipeline
 In this lab, toon shading is just using special shaders in Arnold, the built-in renderer in Maya. You can start toon shading as soon as you are done modeling your assets. You only need to unwrap UVs if you are attaching an image texture to the asset (see Attaching Image Textures/Shading the Pupils). Toon shading will require extra steps in rendering and compositing if you want to render image sequences with alpha channel (see Rendering Image Sequences).
@@ -29,7 +29,7 @@ FILE: ToonShaderLab.zip
 
 Open ToonShadingLab_Start.ma. You should see a sphere, a human, and a directional light.
 
-<img src="https://raw.githubusercontent.com/saurabhmitra/ucbugg/gh-pages/labs/toon%20shading/getting_started_0.png" style="width:50%;height:50%;">
+<img src="https://raw.githubusercontent.com/saurabhmitra/ucbugg/gh-pages/labs/toon%20shading/<img src="https://raw.githubusercontent.com/saurabhmitra/ucbugg/gh-pages/labs/toon%20shading/getting_started_0.png" style="width:50%;height:50%;">" style="width:50%;height:50%;">
 
 
 
@@ -39,11 +39,11 @@ HEADING LARGE: Set the Renderer to Arnold
 
 The toon shaders we are using are part of Arnold, the default renderer that Maya comes with, so let’s set our current renderer to that. Open render settings by clicking on the icon with the clapboard and the gear.
 
-set_renderer_to_arnold_0.png
+<img src="https://raw.githubusercontent.com/saurabhmitra/ucbugg/gh-pages/labs/toon%20shading/set_renderer_to_arnold_0.png" style="width:50%;height:50%;">
 
 Set the renderer to Arnold:
 
-set_renderer_to_arnold_1.png
+<img src="https://raw.githubusercontent.com/saurabhmitra/ucbugg/gh-pages/labs/toon%20shading/set_renderer_to_arnold_1.png" style="width:50%;height:50%;">
 
 
 
