@@ -2,9 +2,9 @@ HEADING LARGE: INTRODUCTION
 
 This lab explores how to get a cell shading effect in Maya.
 
-<img src="https://raw.githubusercontent.com/saurabhmitra/ucbugg/gh-pages/labs/toon%20shading/intro_far.png" height=20% width=auto>
+intro_far.png
 
-<img src="https://raw.githubusercontent.com/saurabhmitra/ucbugg/gh-pages/labs/toon%20shading/intro_close.png" style=max-height:20%;">
+<img src="https://raw.githubusercontent.com/saurabhmitra/ucbugg/gh-pages/labs/toon%20shading/intro_close.png" style="width:20%;height:auto;">
 
 HEADING MEDIUM: Pros of toon shading:
 Renders super fast (< 1 min per frame generally)
@@ -49,7 +49,7 @@ set_renderer_to_arnold_1.png
 
 
 
-HEADING LARGE: Basic Toon Shading
+HEADING LARGE: Creating a Toon Shader
 This lab will cover 3 main parts of toon shading: base colors, edges (the outline of color around objects), and rim light (the edge of light around objects)
 
 basic_toon_shading_0.png
@@ -71,7 +71,7 @@ basic_toon_shading_3.png
 
 
 
-HEADING MEDIUM: Base Colors
+HEADING LARGE: Base Colors
 Find the Base section of the toon shader.
 
 basic_toon_shading_4.png
@@ -124,7 +124,7 @@ basic_toon_shading_14.png
 
 
 
-HEADING MEDIUM: Edges
+HEADING LARGE: Edges
 Find the Edge section of the toon shader.
 
 edge_0.png
@@ -152,7 +152,7 @@ You can edit the line width and color in the toon shader.
 
 
 
-HEADING MEDIUM: Rim Light
+HEADING LARGE: Rim Light
 Find the Rim Lighting section in the toon shader.
 
 rim_light_0.png
