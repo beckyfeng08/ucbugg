@@ -2,9 +2,9 @@ HEADING LARGE: INTRODUCTION
 
 This lab explores how to get a cell shading effect in Maya.
 
-intro_far.png
+<img src="https://raw.githubusercontent.com/saurabhmitra/ucbugg/gh-pages/labs/toon%20shading/intro_far" style="width:60%;height:60%;">
 
-<img src="https://raw.githubusercontent.com/saurabhmitra/ucbugg/gh-pages/labs/toon%20shading/intro_close.png" style="width:50%;height:50%;">
+<img src="https://raw.githubusercontent.com/saurabhmitra/ucbugg/gh-pages/labs/toon%20shading/intro_close.png" style="width:60%;height:60%;">
 
 HEADING MEDIUM: Pros of toon shading:
 Renders super fast (< 1 min per frame generally). A good choice if you don't have access to high performance hardware or cloud rendering resources.
@@ -29,7 +29,7 @@ FILE: ToonShaderLab.zip
 
 Open ToonShadingLab_Start.ma. You should see a sphere, a human, and a directional light.
 
-<img src="https://raw.githubusercontent.com/saurabhmitra/ucbugg/gh-pages/labs/toon%20shading/<img src="https://raw.githubusercontent.com/saurabhmitra/ucbugg/gh-pages/labs/toon%20shading/getting_started_0.png" style="width:50%;height:50%;">" style="width:50%;height:50%;">
+<img src="https://raw.githubusercontent.com/saurabhmitra/ucbugg/gh-pages/labs/toon%20shading/getting_started_0.png" style="width:60%;height:60%;">" style="width:50%;height:50%;">
 
 
 
@@ -39,11 +39,11 @@ HEADING LARGE: Set the Renderer to Arnold
 
 The toon shaders we are using are part of Arnold, the default renderer that Maya comes with, so let’s set our current renderer to that. Open render settings by clicking on the icon with the clapboard and the gear.
 
-<img src="https://raw.githubusercontent.com/saurabhmitra/ucbugg/gh-pages/labs/toon%20shading/set_renderer_to_arnold_0.png" style="width:50%;height:50%;">
+<img src="https://raw.githubusercontent.com/saurabhmitra/ucbugg/gh-pages/labs/toon%20shading/set_renderer_to_arnold_0.png" style="width:60%;height:60%;">
 
 Set the renderer to Arnold:
 
-<img src="https://raw.githubusercontent.com/saurabhmitra/ucbugg/gh-pages/labs/toon%20shading/set_renderer_to_arnold_1.png" style="width:50%;height:50%;">
+<img src="https://raw.githubusercontent.com/saurabhmitra/ucbugg/gh-pages/labs/toon%20shading/set_renderer_to_arnold_1.png" style="width:60%;height:60%;">
 
 
 
@@ -52,11 +52,11 @@ Set the renderer to Arnold:
 HEADING LARGE: Creating a Toon Shader
 This lab will cover 3 main parts of toon shading: base colors, edges (the outline of color around objects), and rim light (the edge of light around objects)
 
-basic_toon_shading_0.png
+<img src="https://raw.githubusercontent.com/saurabhmitra/ucbugg/gh-pages/labs/toon%20shading/basic_toon_shading_0.png" style="width:60%;height:60%;">
 
 Let’s attach a toon shader to the sphere. Hold down the right mouse button on the sphere and in the menu that appears, select Assign New Material.
 
-basic_toon_shading_1.png
+<img src="https://raw.githubusercontent.com/saurabhmitra/ucbugg/gh-pages/labs/toon%20shading/basic_toon_shading_1.png" style="width:60%;height:60%;">
 
 Under the Arnold, Shader tab, select aiToon.
 
