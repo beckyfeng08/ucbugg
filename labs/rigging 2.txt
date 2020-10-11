@@ -117,7 +117,9 @@ Great job! Now do everything 3 more times to rig each leg. Yay quadrupeds! You c
 
 HEADING LARGE: AIM CONSTRAINT - EYE/LOOK CONTROLLER
 
-Aim constraints rotate the driven object so that it is oriented towards a target (driver). These are very useful constraints but, alas, our fox lacks eyeballs to rig. I whipped some up for us to use. I think they illustrate how helpful it is to have eye sockets on your mesh. Unpack the archive and import the eyes.ma to your scene. Assign the image (.iff file) to the eyes by altering the color attribute of the eyes' material -> selecting "file" -> and clicking the folder icon.
+Aim constraints rotate the driven object so that it is oriented towards a target (driver). These are very useful constraints but, alas, our fox lacks eyeballs to rig. I whipped some up for us to use. I think they illustrate how helpful it is to have eye sockets on your mesh. Download and import eyes.ma to your scene. A black-and-white eye texture may be applied to the eyeballs automatically. If it is not, assign each eyeball a Lambert shader (right click -> Assign New Material -> Lambert), attach a file to the Color attribute (click checker box -> File) and load pSphereShape1_color.iff into the "Image Name" field.
+
+Reminder: in this class, we use PxrSurfaces to shade objects for our final renders, since these are compatible with RenderMan. Other materials, like Lambert shaders, should only be used for visualizations in the viewport.
 
 FILE: eyes.ma
 
@@ -150,8 +152,8 @@ Now that they're parented, moving the larger controller will also move the small
 
 
 shifty.png
-On yours, the smaller circles should look green. Otherwise it should be the same.
 
+On yours, the smaller circles should look green. Otherwise, it should be the same.
 
 NOTE: If you are having problems where the eyes move away from the body when you parent the eyeballs to the head joint (by pressing p), try doing it the other way: parent the eyeballs to the head joint first AND THEN aim constrain the eyes.
 
@@ -199,16 +201,16 @@ hmm2.png
 This controller should also move the head. That seems like a reasonable thing for a head controller to do. Since it's already snapped to the head joint, Constrain -> Orient the two. Make sure to click the driver (controller) first this time. It's easy to forget since we've been "P" parenting for a while. With that done, the head joints should follow along.
 
 normalfox.png
-A perfectly normal fox
+A perfectly normal fox.
 
 
-Next we're going to make a Center-of-Gravity controller. Make a new ellipse and have it wrap around the upper half of the fox.
+Next we're going to make a Center-of-Gravity (COG) controller. Make a new ellipse and have it wrap around the upper half of the fox.
 
 
 belly.png
 
 
-I'm sure you've already frozen transformations. Good for you. I didn't even need to remind you. Using "P" parenting, we're going to have the center-of-gravity (or COG) be the parent of the head controller, root joint,* and the controller for the base of the tail. Parent them one at a time, selecting the COG controller second (because it's the parent). Since the base of the tail controls all the other tail controllers, your COG controller should pretty much control everything but the locators and your feet. When you move this controller, the fox hunkers down or leans to the side.
+I'm sure you've already frozen transformations. Good for you. I didn't even need to remind you. Using "P" parenting, we're going to have the COG be the parent of the head controller, root joint*, and the controller for the base of the tail. Parent them one at a time, selecting the COG controller second (because it's the parent). Since the base of the tail controls all the other tail controllers, your COG controller should pretty much control everything but the locators and your feet. When you move this controller, the fox hunkers down or leans to the side.
 
 
 *The highest joint in the hierarchy - In this case it's the joint directly in front of the hips.
@@ -222,7 +224,7 @@ As mentioned above, the only controllers that get left behind are the feet and l
 
 master.png
 
-Again, awesome job on remembering to freeze transformations. Making your own rigs will go much smoother now that you're in the habit of doing that. One by one, parent the foot controllers to the new master controller using P. Since we're not using the "Constrain" tab, it goes child-> parent or FootController -> MasterController. The master controller will also be the parent of each controller and our COG controller. After all of those are added, the master controller should select the entire rig.
+Again, awesome job on remembering to freeze transformations. Making your own rigs will go much smoother now that you're in the habit of doing that. One by one, parent the foot controllers to the new master controller using P. Since we're not using the "Constrain" tab, it goes child-> parent or FootController -> MasterController. The master controller will also be the parent of each locator and of our COG controller. After all of those are added, the master controller should select the entire rig.
 
 
 everything.png
@@ -233,15 +235,13 @@ Awesome job! Quadruped rigs are not easy but this example should help you apply 
 HEADING LARGE: SKINNING
 
 
-Now that we have a better grasp on how to manipulate out skeleton, we're going to attach the skeleton to the mesh. Select your root joint and then the body mesh of the fox. Go to Skin -> Bind Skin and click the options box. The dialog should look something like this:
+Now that we have a better grasp on how to manipulate our skeleton, we're going to attach the skeleton to the mesh. Select your root joint and then the body mesh of the fox. Go to Skin -> Bind Skin and click the options box. The dialog should look something like this:
 
 
 skinning3.jpg
 
-If it doesn't, change it so it does.
+If it doesn't, change it so it does. Our <a href="http://ucbugg.com/static/index.html#labsskinning">Skinning Guide</a> provides explanations for each of these options.
 
-http://ucbugg.com/static/index.html#labsskinning
-This guide will help you refine your skinning but also provides explanations for each of these options.
 Click "Bind Skin" and start playing with your rig to discover why refining your skinning is important.
 
 dent.png
@@ -255,13 +255,12 @@ Moving the head around will reveal some weird neck stretching.
 
 Not quite what we're hoping for. In all of these cases, joints are effecting more of the mesh than they ought to. Luckily, we have tools that allow us to be more specific with how much mesh each joint controls. Unluckily, the process can be a bit tedious. The time invested in good skinning will certainly pay off and keep your characters from going noodly.
 
-http://ucbugg.com/static/index.html#labsskinning
-Check out this guide on refining a character's skin weights. Use this guide to make the characters for your short a bit more easy to animate.
+Check out the <a href="http://ucbugg.com/static/index.html#labsskinning">Skinning Guide</a> to learn how to refine a character's skin weights. Use this guide to make the characters for your short a bit more easy to animate.
 
 Double check to make sure everything was frozen properly and all your new controllers have names which help convey their location and purpose.
-We will NOT require that you refine the skinning on the fox. You're welcome to try for practice but even with the techniques described in the lab above, skinning a low-poly character can be very difficult. We'd prefer if you invested that time into improving the rigs/skinning of the characters in your animation. Submit your completed fox rig to homework@ucbugg.com.
+We will NOT require that you refine the skinning on the fox. You're welcome to try for practice but even with the techniques described in the lab above, skinning a low-poly character can be very difficult. We'd prefer if you invested that time into improving the rigs/skinning of the characters in your animation.
 
-If you want to, you can experiment by adding controllers to the ears or explore some of the techniques listed below.
+If you want to, you can experiment by adding controllers to the ears or explore some of the techniques listed on the next page.
 
 
 
