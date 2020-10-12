@@ -140,22 +140,20 @@ neato.png
 
 Say it with me now: freeze transformations! When working on your personal models, make sure the eyes are frozen too. Select a controller then the corresponding eye and use Constrain -> Aim Constrain. Repeat for the other eye. The fox is now suspicious of the controllers and will try its best to watch them at all times. Move the controllers around and test things.
 
+Note: if the eyeballs flip around or stare off at a weird angle as soon as you apply the aim constraint, click on the Aim Constraint option box and check the "Maintain offset" checkbox.
+
 o_______o.png
 
 While moving them separately can look fun and silly, it would be useful to have a way to move them both at the same time. Our controllers will need controllers. Create a new NURBS circle and line it up with our two eye controllers.
 
 moreneat.png
 
-To make things work properly we're going to need to use the parenting tool we used when modelling. When using "P" parenting, remember to Child -> Parent which is pretty much the opposite of what we've been doing for operations in the Constraint menu (i.e. Driver ->Driven). Select a smaller circle, then the larger one and press "P." Do the same with the other controller.Generally, when linking controllers to each other (rather than joints) we will use this form of parenting because it makes useful hierarchies.
+To make things work properly we're going to need to use the parenting tool we used when modeling. When using "P" parenting, remember to Child -> Parent which is pretty much the opposite of what we've been doing for operations in the Constraint menu (i.e. Driver -> Driven). Select a smaller circle, then the larger one and press "P." Do the same with the other controller. Generally, when linking controllers to each other (rather than joints) we will use this form of parenting because it makes useful hierarchies.
 
 Now that they're parented, moving the larger controller will also move the smaller controllers.
 
 
 shifty.png
-
-On yours, the smaller circles should look green. Otherwise, it should be the same.
-
-NOTE: If you are having problems where the eyes move away from the body when you parent the eyeballs to the head joint (by pressing p), try doing it the other way: parent the eyeballs to the head joint first AND THEN aim constrain the eyes.
 
 HEADING LARGE: FORWARD KINEMATICS, PARENT CONSTRAINTS (FK) - TAIL CONTROLLERS
 
@@ -191,7 +189,7 @@ We never actually created a connection between the eyes and the rest of the fox.
 
 
 collar.png
-It should looks something like a loose collar
+It should looks something like a loose collar.
 
 Now parent each eye and the larger component of the eye controller (one at a time) to the head controller using P. When you move them, the eyes and controller should swivel. The mesh still doesn't so it might look a bit weird. We're getting to that step soon.
 
@@ -199,6 +197,8 @@ Now parent each eye and the larger component of the eye controller (one at a tim
 hmm2.png
 
 This controller should also move the head. That seems like a reasonable thing for a head controller to do. Since it's already snapped to the head joint, Constrain -> Orient the two. Make sure to click the driver (controller) first this time. It's easy to forget since we've been "P" parenting for a while. With that done, the head joints should follow along.
+
+Note: if the orient constraint is doing weird things to the head joint, refer to the <b>frequent reminder</b>, given throughout this lab, on how to get controllers ready for use.
 
 normalfox.png
 A perfectly normal fox.
