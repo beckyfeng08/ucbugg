@@ -257,8 +257,8 @@ When you render the scene now, it looks like this.
 
 <img src="https://raw.githubusercontent.com/saurabhmitra/ucbugg/gh-pages/labs/toon%20shading/intro_close.png" style="width:60%;height:60%;">
 
-
-
+HEADING LARGE: Submission
+You can now submit the lab at this point. Please submit a screenshot of a full body render of your character as well as a .zip file of the entire project folder.
 
 
 HEADING LARGE: Other Toon Shading Sections
