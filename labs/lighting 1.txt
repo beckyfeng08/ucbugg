@@ -271,6 +271,16 @@ wr3.png
 
 Notice that the light source for the magenta and cyan light are "missing" now. This is because the emission focus value no longer aligns with the size of the source.
 
+Once satisfied with your lighting do the following:
+
+Open PhotoShop
+
+<a href='https://software.berkeley.edu/adobe/'><b>DOWNLOAD PHOTOSHOP HERE</b></a>
+If you have PhotoShop installed on your computer follow this method:
+Save this EXR: Click File->Export File and save the corresponding EXR file somewhere you can access later. Open up the EXR in PhotoShop. A window should pop up, and you should select “As Transparency”. Now go to File->Export->Export As PNG. Now save that somewhere accessible, you will send this for grading.
+
+Ensure that this image is saved before moving on!
+
 HEADING MEDIUM: Scene 2
 
 
@@ -291,6 +301,8 @@ Scaling it up to 1.4 - 1.5:
 br4.png
 
 With the same light source, while have the intensity set to 1 and exposure to 6, scaling the size of the light source changes the amount of light that bounces in the scene.
+
+Save another image here.
 
 HEADING MEDIUM: Scene 3
 
@@ -335,16 +347,8 @@ Anyone else reminded of Wong Kar-wai’s masterpiece In the Mood for Love (2000)
 
 Just me? Okay.
 
-Once satisfied with your lighting do the following:
+Save another image here.
 
-Open PhotoShop
-
-<a href='https://software.berkeley.edu/adobe/'><b>DOWNLOAD PHOTOSHOP HERE</b>
-If you have PhotoShop installed on your computer follow this method:
-Save this EXR: Click File->Export File and save the corresponding EXR file somewhere you can access later. Open up the EXR in PhotoShop. A window should pop up, and you should select “As Transparency”. Now go to File->Export->Export As PNG. Now save that somewhere accessible, you will send this for grading.
-
-
-Ensure that this image is saved.
 Go into the outliner and select all three lights and all three farmdoors and click H. (if youre ambitious just delete them.)
 
 Now we will create a directional light. Click on the Renderman shelf, right click the light button, and select PxrDistantLight. The interesting thing to note about this type of light is that its location in the scene does NOT matter, all that matters is the direction.
@@ -358,3 +362,5 @@ l12.png
 l13.png
 
 Follow the same process to save the image.
+
+By the end of this lab, you should have 4 renders! One in the whiteroom, one in the ballroom, and two in the hallway.
