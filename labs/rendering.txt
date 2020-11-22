@@ -1,19 +1,16 @@
 HEADING LARGE: RENDERING OVERVIEW
-So you are at last done with your animation/modeling/rigging/shading etc. and are finally READY TO RENDER!! This rendering lab will guide you through some of the accessible ways that you can render your short films. The main methods we will discuss are:
+So you are at last done with your animation/modeling/rigging/shading etc. and are finally READY TO RENDER!! This rendering lab will guide you through the entire <b>Batch Rendering</b> process (rendering on your local computer).
 
-- <b>Batch Rendering</b> (Rendering on your local computer)
-- <b>Zync Rendering</b> (Rendering on the Cloud/Render Farm)
+<b>Cloud Rendering</b> is also available this semester. You should still follow along with the "Render Settings" section of this lab before uploading jobs to the cloud. For more information, please follow along with this <a href="https://docs.google.com/document/d/1pVxzuMMktaG0x_Kt-pLAYqit0EboGIGSAgSYCKGq3eE/edit?usp=sharing">guide</a>.
 
-In the final section of this lab, we also discuss Rendering your Shadows on a Separate Layer which might be helpful to save some computing power! 
+In the final section of this lab, we also discuss how to render your shadows on a separate <b>layer</b>, which might be helpful to save some computing power!
 
 
-HEADING LARGE: BATCH RENDER SETTINGS
+HEADING LARGE: RENDER SETTINGS
 
-Batch rendering is a great option that allows you to render scenes on your local machine rather than sending them off onto a Render Farm. Keep in mind that batch rendering will take longer than most other forms of rendering so it's a good idea to render smaller or less complex scenes locally (we usually recommend scenes around or less than 70 frames). More complex or longer scenes can be saved for Cloud Rendering which is discussed later in this lab.
+Here is a quick breakdown on the different render settings that are important to remember before you send off your jobs.
 
-Here is a quick breakdown on the different render settings that are important to remember before you send off your jobs. 
-
-Go to <b> RenderMan -> Render Settings</b>. 
+Go to <b> RenderMan -> Render Settings</b>.
 
 renderSettings.png
 
@@ -27,7 +24,7 @@ commonSettings.png
 
 These are your general or common render settings that apply to all renderers that you use. Pay attention to the areas outlined in red:
 
-<li> 1. First, you want to make sure that <b> Render Using </b> is set to <b> Renderman </b>.</li> 
+<li> 1. First, you want to make sure that <b> Render Using </b> is set to <b> Renderman </b>.</li>
 <li> 2. Next, make sure that you are in the <b> Common Tab </b> towards the top left. </li>
 <li> 3. Go to the FRAME RANGE section and change the settings to <b> Animation </b> if you want to render more than one frame. Then set the correct frame range of your scene. You can leave the other frame range settings as they were. </li>
 <li> 4. Go to the RENDERABLE CAMERAS section. Make sure you have the correct camera you want to render in renderable cameras. If you see multiple cameras in that section you should click the little trash button for each camera you <b>do not want to render</b>. </li>
@@ -43,13 +40,13 @@ Once you've clicked on the Renderman tab you should see a tab below that called 
 
 sampling_NEW.png
 
-Once again take note of all the settings highlighted in red:
-
 For sampling, we recommend students sample at a range between 16-32. Submit some test renders to figure out what the best sampling rate for your short is. Start at 16 samples, then go up by a factor of 2 (so 32, 64, 128 etc) until you render out something that looks like good enough quality.
 
 DO NOT exceed 32 samples unless you are given permission by a facilitator to do so. Increasing your sample size will significantly increase your render time so don't go overboard with your samples.
 
 NOTE: Make sure you are changing your samples under the first section of the sampling tab and NOT under the IPR Samples section. Your IPR Sampling Rate will not have any effect on your final batch renders.
+
+The "Max Depth" parameter sets the maximum number of times we allow each light ray to bounce in the scene, and should normally be set to a value of 7 or 8. There is rarely a need to exceed 10 bounces.
 
 Lastly, we want to make sure that we are using <b> PxrPathTracer </b> under the INTEGRATOR tab. Unless you are doing stylistic rendering of some kind, you will most likely never have to change this setting.
 
@@ -69,20 +66,24 @@ Below that in the DENOISE TAB, you'll see a <b> Denoise </b> option which you ca
 
 <b> HOWEVER PLEASE NOTE: </b>
 
-If your computer graphics card is not powerful enough, sometimes the Denoise option will <b>result in your final image coming out completely black.</b> If this does happen to you, you will have to come back to this option to <b> TURN DENOISE OFF </b> and adjust your Sampling Rate if necessary to get out excess noise. 
+Often the Denoise option will <b>result in your final image coming out completely black.</b> If this does happen to you, you will have to come back to this option to <b> TURN DENOISE OFF </b> and increase your Sampling Rate if necessary to remove excess noise.
 
- 
-Note that if you have denoising turned on, you will have two frames rendered out. One of the images will have "_filtered" appended to the end of the file name, and that will be the denoised image. 
+
+Note that if you have denoising turned on, you will have two frames rendered out. One of the images will have "_filtered" appended to the end of the file name, and that will be the denoised image.
+
+HEADING LARGE: LOCAL BATCH RENDERING
+
+Local batch rendering is a great option that allows you to render scenes on your local machine rather than sending them off onto a Render Farm. Keep in mind that local rendering will probably take longer than remote, and could (literally) render you laptop unusable for several hours. Therefore, it's a good idea to try rendering large/complex scenes remotely.
 
 HEADING MEDIUM: WORKSPACE
 
-The last important area to check is the <b> Workspace </b> tab.
+For local Batch Rendering, the last thing you'll need to check out in Render Settings is the <b> Workspace </b> tab.
 
 workspace.png
 
-In this tab we only need to check the <b> Image Output Directory and RIB Output Directory </b> settings. The image output directory is essentially the place where your final renders will be sent, and the RIB output directory is where Renderman will set up the RIB data that it needs to start rendering your images. By default, they are set to the <b> Images </b> and <b> Renderman </b> folder of your project window. 
+In this tab we only need to check the <b> Image Output Directory and RIB Output Directory </b> settings. The image output directory is essentially the place where your final renders will be sent, and the RIB output directory is where Renderman will set up the RIB data that it needs to start rendering your images. By default, they are set to the <b> Images </b> and <b> Renderman </b> folder of your project window.
 
-It is fine to keep them there, however, sometimes it becomes easy to lose track of your renders if they get placed in your project folder. Additionally, renders are HEAVY files, and it might be best to not crowd your project space with renders but rather keep them in a separate place. I personally like to create a folder on my desktop for my local renders and that is where I redirect both my Image Output as well as my RIB Output. That way its easy to keep track of and I can easily put them on a hard drive for my teammates to access. 
+It is fine to keep them there, however, sometimes it becomes easy to lose track of your renders if they get placed in your project folder. Additionally, renders are HEAVY files, and it might be best to not crowd your project space with renders but rather keep them in a separate place. I personally like to create a folder on my desktop for my local renders and that is where I redirect both my Image Output as well as my RIB Output. That way its easy to keep track of and I can easily put them on a hard drive for my teammates to access.
 
 If you do decide to change your file outputs make sure you change BOTH the Image and RIB Outputs to <b> THE SAME PLACE </b>. It should look something like this:
 
@@ -92,7 +93,7 @@ It is important to remember that both of these filepaths <b> SHOULD NOT HAVE ANY
 
 HEADING MEDIUM: SENDING OFF YOUR BATCH RENDER
 
-Once you've checked all of these settings you are ready to send off your Batch Render. Simply go to <b> Renderman -> Batch Render </b>.
+Once you've checked all of these settings <b>and have rendered a few test frames</b>, you are ready to send off your Batch Render. Simply go to <b> Renderman -> Batch Render </b>.
 
 batchRender.png
 
@@ -100,117 +101,45 @@ Maya will scroll through your animation in the timeline in order to generate the
 
 batchRender_monitor.png
 
-This window allows you to monitor the status of your jobs, including the progress of individual frames. 
+This window allows you to monitor the status of your jobs, including the progress of individual frames.
 
-You are now ready to Batch Render!
-
-
-HEADING LARGE: RENDERING USING GOOGLE CLOUD
-
-If you are trying to render a longer/more complex scene and need more rendering power, you can use <b> Zync Rendering </b>, which is on Google Cloud. Essentially, this means that you will be sending off your scenes to render on a render farm rather than on your local computer. This is a fairly powerful and convenient way to render, however, remember to account for things like download time and the wait queue for the computers to actually begin rendering. 
-
-Also please keep in mind that our Zync Account is being shared amongst the ENTIRE CLASS. That means you should be mindful over how many jobs you send at a time and be extra careful that everything in your scene is FINALIZED before you send it off.
-
-HEADING MEDIUM: FINALIZING YOUR SCENE & RENDER SETTINGS
-
-Before you actually send off a job to Zync, you want to make certain that your scene is <b> one-hundred percent DONE </b>. This means that all the animation is finalized, all assets have their proper shading, the scene is lit etc. Once you have double and then triple-checked that you're scene is done, you want to set your <b> Render Settings </b>. 
-
-These settings would essentially be the same as the ones you set up for <b> Batch Rendering </b> so please make sure to revisit that section of the lab if you need a reminder on the important Renderman Settings. 
-
-Now that your scene is done AND your render settings are set up, make sure to do some local test renders to ensure that the final result looks the way you intend it to!
-
-
-HEADING SMALL: SETTING UP A ZYNC ACCOUNT THROUGH THE SCHOOL
-
-<b>IMPORTANT!! Once you have your render settings set up, PLEASE CONTACT A FACILITATOR/SEND THEM YOUR RENDER SETTINGS to make sure that everything looks correct. Once they have verified your Render Settings, they will ask you for your @berkeley.edu e-mail to give you access to the Zync render farm. Otherwise, you will not be able to log in and continue following the steps.</b>
-
-<b>STEP 1:</b> Download the Zync client app from <a href='https://www.zyncrender.com/downloads/'>here</a>
-
-<b>STEP 2:</b> Start the Zync client app. You will get a message asking you to Install Plugins for Zync. Click yes and ensure that you select the correct version of Maya that you want to install the plugin for. If you are ever unsure if your plugins are updated or installed, simply click on the "Plugins" tab in the Zync Client app and make certain that all of your plugins are labeled as "OK".
-
-zyncPlugins.png
-
-<b>STEP 3:</b> Once you've checked that your plugins are installed. Go to the <b> Login </b> tab and click on “Connection Settings”. Under Zync Site Address, enter <b>https://ucbuggsp20.zync.io</b>. 
-
-<b>STEP 4:</b> Back on the Login tab, click “Login With Google” and sign in with your @berkeley.edu email. This should take you to a page where you need to authorize Zync to access a few things. Afterwards, your window should look like this:
-
-zyncConsole.png
-
-You now have everything properly setup for Zync Rendering!
-
-
-HEADING MEDIUM: SUBMITTING A JOB TO GOOGLE CLOUD
-
-<b> Note: Make sure you don't have any whitespaces in your path. If you do, the render will fail.</b> 
-
-PLEASE NAME YOUR SCENES BY THE FOLLOWING CONVENTION BEFORE YOU SEND TO ZYNC: <b>GROUPNAME_SCENE#OF#</b> 
-
-i.e. “POWEREDUP_SCENE2OF17.ma” instead of “Powered Up - SCENE 2 OF 17.ma”
-
-This way, you will ensure that you have NO SPACES in your scene names AND facilitators can easily keep track of which groups are sending renders to Zync. If you send off scenes to render with names like (myscene.ma) they will most likely be canceled by a facilitator since it is impossible to tell which group is responsible for that render.
-
-<b>STEP 1:</b> If you don't already have the Zync Client app open, make sure to do that and make sure to log in with your Berkeley email. Open up the file you would like to render. Make sure all of your render settings are correct (You can edit these under RenderMan >> Render Settings). 
-
-You should now see a <b> Zync tab </b> in your menu bar in Maya (if not go into Windows -> Plug In Manager and ensure that Zync is loaded). Click on the Zync logo. 
- 
-zync1.png
-
-<b>STEP 2: </b> There are a variety of settings to keep in mind before you send a job to Zync. Make sure to CAREFULLY READ THE GUIDELINES BELOW! 
-zync2.png
-	<li> a. <b>Num. Machines</b> refers to the number of computers you will have rendering at the same time. Since we are sharing these machines as a class DO NOT EXCEED MORE THAN 5 MACHINES AT A TIME unless given permission by a facilitator. </li>
-	<li> b. <b>Machine Type</b> is the kind of computer you will use. In the screenshot above, I have it set to the cheapest option, which is the PREEMPTIBLE 16GB one. </li>
-	<li> c. <b>Existing Project vs New Project</b> refers to the project that Zync makes when you send off a job. If this is the FIRST SCENE you are sending FOR YOUR GROUP. Then make a new project and name it after the title of your short. If your group has already sent off renders then you can find your project in the Existing Projects dropdown. </li>
-	<li> d. Make sure you check <b>“Ignore Missing Plugin Errors”</b>. Maya has some weird problems sometimes so this will help us avoid those. </li>
-	<li> e. <b>Project folder</b> and <b>output directory</b> show where it is taking all the files from as well as where it will send the renders. Make sure that there is no whitespace in either of these, otherwise your render might fail. Don't just change the name in this line though. You have to actually change the file path. </li>
-	<li> f. <b>Renderer</b> should be set to Renderman. </li>
-	<li> g. <b>Frame range</b> should carry over from your render settings but it's still good to double check that you are rendering the correct frames. </li>
-	<li> h. <b>Chunk size</b> refers to how many frames Zync will give one machine. You should set this to 1 to get more done in less time. </li>
-	<li> i. <b>Camera</b> refers to the camera in your scene that Zync will be rendering from so make sure this is the correct one. Also avoid having whitespaces in the camera name to avoid errors. </li>
-	<li> j. If you have more render layers than default, select them here. Otherwise, just select <b>“defaultRenderLayer”</b>. </li>
-	<li> k. Your <b>resolution</b> should also carry through from your render settings. For your final short, you should be rendering in 1920x1080 (Full HD) but other resolutions are fine for testing purposes. </li>
-
-<b><i>IMPORTANT! IF THIS IS YOUR FIRST TIME SUBMITTING A JOB, PLEASE CALL OVER A FACILITATOR TO CHECK OVER YOUR RENDER SETTINGS & ZYNC SETTINGS BEFORE YOU CONTINUE!!</b></i>
-
-<b> STEP 3: </b> Hit "Launch Job". Go to <a href='https://ucbuggsp20.zync.io'>https://ucbuggsp20.zync.io</a> to watch the progress of your renders. They should auto-download once they're done but you shouldn't turn off your computer while it is going, otherwise the files might not get downloaded.
-
-You are now READY TO RENDER!!  
-
-HEADING SMALL: SETTING UP A PERSONAL ZYNC RENDERING ACCOUNT
-
-<b><i>Note: Only set this up if you are in desperate need for more renders. Otherwise, the school accounts should be enough to render your short.</b></i>
-Please make sure to follow these instructions in the order they are given. Zync is still in beta and if you do this out of order, your project may not get set up correctly and you won't be able to render. 
-
-<b>STEP 1: </b> Go to <a href='https://console.cloud.google.com'> Google Cloud Console </a>. There should be a button on the top right that says "Sign up for free trial" and follow the next instructions. At some point in this registration, it'll ask for your credit card. Don't worry, google cloud isn't like all those other websites that require credit cards and it won't charge you when your trial is over. 
-
-<b>STEP 2: </b> Now go to <a href='https://zyncrender.com'> Zync's website </a> and click register. Create a website (you can name it anything you want) and put in whatever you like for "Your Company Name". Click Next, and then wait for the email confirming your registration. 
-
-<b>STEP 3: </b> Next, click on "Downloads" (or alternatively, <a href ='https://www.zyncrender.com/downloads/'>click here</a>). Download both the client app and the plugin for your OS. Follow the installation instructions for both. 
-
-<b>STEP 4: </b> Open up the client app. Now go to your zync website and login. If you don't have any red bars going across the bottom, you are all set. If you do, click on the bar and follow the instructions to solve the problem. 
+You may want to wait to check the first frame before leaving your computer to do its thing. If at any point you decide that the renders coming out are not correct, you can right click on the job and either pause or delete it.
 
 HEADING LARGE: RENDERING SHADOWS SEPARATELY
-There are a few reasons you might want to render your shadows separately from your background. Most likely you have a static camera and are saving big on rendertime by not rerendering your incredible but also unchanging background EVERY frame. Another reason you might want to do this is if you are immersing a CG object in a real scene. In either case you've come to the right place. Remember, this works best if the camera is still.
 
-So you might be wondering why you need this thing called a holdout to render a shadow. The answer is that normally you wouldn't. In the usual case, your moving objects are rendered in the same go as everything else in your scene so the path tracer correctly calculates all of the shadows and reflections between everything in the scene. However, in our special case we want to avoid rendering parts of the scene but keep the shadows and reflections from the objects we did decide to render. Thus we need something that will be used to collect shadows and reflections while also not appearing in the render. This is the holdout!
+Throughout the semester, we've been warning you about the rendering headaches caused by moving cameras. Now that you've all done such a great job limiting yourself mostly to still cameras, it's time to reap the rewards of your restraint!
 
-Before you start, render ONE frame of everything that doesn't move (put all characters/moving objects in separate layer and hide them). Since it is only one frame, it will be quick enough to render locally.
+There are a few reasons you might want to render your shadows separately from your background. Most likely, if you have a static camera, you can save big on render time by not re-rendering your incredible but also unchanging background EVERY frame. Another reason you might want to do this is if you are immersing a CG object in a real scene. In either case you've come to the right place. Remember, this works best if the camera is still.
+
+So you might be wondering why you need this thing called a holdout to render a shadow. In the usual case, your moving objects are rendered in the same go as everything else in your scene, so the path tracer correctly calculates all of the shadows and reflections between everything in the scene. However, we want to avoid rendering parts of the scene more than once, but keep the shadows and reflections from the objects we did decide to render. Thus we need something that will be used to collect shadows and reflections while also not appearing in the render. This is the holdout!
+
+HEADING MEDIUM: DISPLAY LAYERS
+
+Before you start rendering the shadows, we want to render ONE frame of everything that <b>doesn't move</b>.
+
+To hide the moving objects, put them in a separate layer using the Layer Editor (aka the menu that hangs out underneath the Channel Box).
+
+First create a new display layer by clicking the new layer button:
+chanelBoxLayerAdd.png
+Now with the objects you want to hide selected, right click this layer and click on "Add Selected Objects". After this, you can hide all of these objects at once by clicking the V icon on the layer (toggling its visibility).
+visibleLayer.png
+While you're at it, repeat this process to create another layer with only the <b>non-moving objects</b>. So you can tell them apart, rename each layer by double clicking the layer name.
+
+With the moving objects hidden, render one beautiful background frame. Since it is only one frame, it will be quick enough to render locally.
+
+HEADING MEDIUM: HOLDOUTS
+
+Now let's render those shadows:
 
 <b>STEP 1.</b> Make a duplicate mesh of the object you want shadows and reflections on
-<b>STEP 2.</b> With this mesh selected, click the holdout button in the renderman tab. You can find it right here:
+<b>STEP 2.</b> With this mesh selected, click the holdout button in the Renderman tab. You can find it right here:
 
 holdouts.png
 
-<b>STEP 3.</b> Hide everything that doesn't move
-A quick way to do this is to toggle the visibility of a display layer. You can find those in the layer editor, aka the menu that hangs out underneath the chanel box editor. First create a new layer by clicking the new layer button:
-chanelBoxLayerAdd.png
-Now with the objects you want to hide selected, right click this layer and click on "Add Selected Objects". After this, you can hide all of the objects at once by clicking the V icon on the layer which toggles its visibility
-visibleLayer.png
-
-<b>STEP 4.</b> Batch render (see previous section)
-<b>STEP 5.</b> Composite the _filtered image on top of the background image using whatever program you wish. We support After Effects in this class, so see the Compositing Lab for help with this.
--Note: If you did not check "denoise" in the render settings, you might only get a regular image (not _filtered)
+<b>STEP 3.</b> Hide the layer of objects that don't move
+<b>STEP 4.</b> Run some tests and batch render (see previous sections)
+<b>STEP 5.</b> Composite the image sequence on top of the background image using whatever program you wish. We support After Effects in this class, so see the Compositing Lab for help with this.
 
 For more details and example pictures, check out the Renderman doc page for holdouts <a href="https://rmanwiki.pixar.com/display/REN/Holdouts">here</a>
 
-Now you should be ready for and and all post production. Good job, you're almost done with your shorts!
-
+Good job, you're almost done with your shorts!
