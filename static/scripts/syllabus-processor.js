@@ -25,7 +25,7 @@ var setCurrentDate = function() {
 	// var options = { year: "2-digit", month: "2-digit", day: "2-digit"};
 	// currentDate = new Intl.DateTimeFormat("en-US", options).format();
 
-	// SAFARI I CANT BELIEVE THE SHIT I DO FOR YOU 
+	// SAFARI I CANT BELIEVE THE SHIT I DO FOR YOU
 	var today = new Date();
 	var dd = today.getDate();
 	var mm = today.getMonth()+1; //January is 0!
@@ -33,10 +33,10 @@ var setCurrentDate = function() {
 	var yy = today.getFullYear()%100;
 	if(dd<10){
 	    dd='0'+dd
-	} 
+	}
 	if(mm<10){
 	    mm='0'+mm
-	} 
+	}
 	currentDate = mm + "/" + dd + "/" + yy;
 	// UNCOMMENT THIS NEXT LINE TO TEST DIFFERENT DATES
 	// currentDate = '09/30/16';
@@ -55,8 +55,8 @@ var setInfo = function(date) {
 		if (assType + " Link " + i in syllabusObj[date]) {
 			hrefStr = 'href="' + syllabusObj[date][assType + " Link " + i] + '"';
 		}
-		$("#due-dates"+ collapseDate(date)).prepend('<a class="assignment" target="_blank"' + hrefStr + '>' + 
-								  syllabusObj[date][assType + " Ass " + i] + 
+		$("#due-dates"+ collapseDate(date)).prepend('<a class="assignment" target="_blank"' + hrefStr + '>' +
+								  syllabusObj[date][assType + " Ass " + i] +
 								  ' </a>');
 
 		i++;
@@ -91,16 +91,16 @@ var updateContent = function() {
 			highlight = keys[i] == activeDate ? 'highlight' : 'normal';
 			$("#syllabus-timeline").append('<div class="timeline-piece" id="row' + collapseDate(keys[i]) + '" >' +
 					'<div class="timeline-elem-piece-week">'  +
-					'<h3 class="date" id="tues-date"> ' + tues.toString().split(" ")[1].toUpperCase() + " " + tues.getDate() + ' </h3>' + 
-					'<h3 class="hyphen" > - </h3>' + 
-					'<h3 class="date" id="thur-date"> ' + thur.toString().split(" ")[1].toUpperCase() + " " + thur.getDate() + ' </h3>' + 
-					'</div>' + 
-					'<div class="timeline-elem-piece-icon" id="icon">'  +					
-					'<img src="images/syllabus icons/'+ highlight + "/" + syllabusType+'/' + data[keys[i]][iconType] + '.svg" class="syllabus-icon" id="syllabus-icon' + collapseDate(keys[i]) + '"">' + 
-					'<p class="weeknum"> WEEK ' + (i+1) + '</p>'  + 
-					'</div>' + 
-					'<div class="timeline-elem-piece" id="week-title' + collapseDate(keys[i]) + '"">  </div>' + 
-					'<div class="timeline-elem-piece" id="due-dates' + collapseDate(keys[i]) + '""> <a class="submit-button" target="_blank" id="submit'+collapseDate(keys[i])+'"> SUBMIT HERE </a> </div>' + 
+					'<h3 class="date" id="tues-date"> ' + tues.toString().split(" ")[1].toUpperCase() + " " + tues.getDate() + ' </h3>' +
+					'<h3 class="hyphen" > - </h3>' +
+					'<h3 class="date" id="thur-date"> ' + thur.toString().split(" ")[1].toUpperCase() + " " + thur.getDate() + ' </h3>' +
+					'</div>' +
+					'<div class="timeline-elem-piece-icon" id="icon">'  +
+					'<img src="images/syllabus icons/'+ highlight + "/" + syllabusType+'/' + data[keys[i]][iconType] + '.svg" class="syllabus-icon" id="syllabus-icon' + collapseDate(keys[i]) + '"">' +
+					'<p class="weeknum"> WEEK ' + (i+1) + '</p>'  +
+					'</div>' +
+					'<div class="timeline-elem-piece" id="week-title' + collapseDate(keys[i]) + '"">  </div>' +
+					'<div class="timeline-elem-piece" id="due-dates' + collapseDate(keys[i]) + '"">  </div>' + 
 				'</div>');
 			setInfo(keys[i]);
 		}
@@ -119,10 +119,10 @@ var updateContent = function() {
 		// $("#tues" + collapseDate(activeDate)).children().css('color', "#f1f1f2");
 		// setInfo(activeDate);
     };
-    var onFailure = function(data, textStatus, errorThrown) { 
+    var onFailure = function(data, textStatus, errorThrown) {
     	$("#lab").empty();
     	// $("#lab").append(data.responseText);
-        console.error('syllabus not found'); 
+        console.error('syllabus not found');
         console.log(textStatus, errorThrown);
     };
     makeGetRequest('syllabus', 'json', onSuccess, onFailure)
