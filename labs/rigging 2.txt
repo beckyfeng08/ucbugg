@@ -32,13 +32,13 @@ Once you're happy with the placement, use Modify-> Freeze Transformations to zer
 
 cbox2.png
 
-Now might be a good time to name your controller (I named mine LFrontLeg_Ctl) and delete its history if you haven't already done so. 
+Now might be a good time to name your controller (I named mine LFrontLeg_CON) and delete its history if you haven't already done so.
 
-Now, if you've been animating the foot, you can always return it to its default position by entering zeros back in the channel box. The next step is to attach the controller to the IK Handle through "P" parenting. In modelling, we created a hierarchy of objects which followed each other by selecting the child object, then the parent, and pressing the "P" key.
+Now, if you've been animating the foot, you can always return it to its default position by entering zeros back in the channel box. The next step is to attach the controller to the IK Handle through "P" parenting. In modeling, we created a hierarchy of objects which followed each other by selecting the child object, then the parent, and pressing the "P" key.
 
-Why are we using "P" parenting and not a parent constraint? "P" parenting changes the hierarchy in our outliner and nests the child under the parent. We can't do this for joints because joints are already arranged in a hierarchy. "P" parenting the joints again would mess up their hierarchy. 
+Why are we using "P" parenting and not a parent constraint? "P" parenting changes the hierarchy in our outliner and nests the child under the parent. We can't do this for joints because joints are already arranged in a hierarchy. "P" parenting the joints again would mess up their hierarchy.
 
-However, IK handles actually live outside the joint hierarchy. You can see this in your outliner. LFrontLeg (my IK Handle) is not nested under cog (my root joint). 
+However, IK handles actually live outside the joint hierarchy. You can see this in your outliner. LFrontLeg (my IK Handle) is not nested under cog (my root joint).
 
 ik_outliner.png
 
@@ -59,10 +59,12 @@ We're going to want to place this locator behind the leg at the height of the kn
 
 locatorpositioning.png
 
-Once the locator is where you want it, <b>F R E E Z E - T R A N S F O R M A T I O N S.</b> Remember, this needs to be done for every controller before it's attached. Going back and fixing uncleared channel boxes (either through undo's or deleting/recreating the controller) can cause additional issues so it's best to get it right the first time around. After freezing, we're going to add a Pole Vector constraint to our IK Handle. Generally, constraints work by selecting two entities and linking their transformations in some way. When applying contraints, order of selection matters. Select the "driver" first then select the "driven" second. In this case, our locator drives the IK direction so the locator is the driver and the IK is the driven. After selecting the locator and the IK Handle use Constrain -> Pole Vector. If you're having trouble clicking the IK Handle (use the IK itself rather than the new controller) it can be selected from the Outliner. If you don't see the "Constrain" menu, make sure this tab is set to "Rigging."
+Once the locator is where you want it, <b>F R E E Z E - T R A N S F O R M A T I O N S.</b> Remember, this needs to be done for every controller before it's attached. Going back and fixing uncleared channel boxes (either through undo's or deleting/recreating the controller) can cause additional issues so it's best to get it right the first time around. After freezing, we're going to add a Pole Vector constraint to our IK Handle. Generally, constraints work by selecting two entities and linking their transformations in some way. When applying contraints, order of selection matters. Select the "driver" first then select the "driven" second. In this case, our locator drives the IK direction so the locator is the driver and the IK is the driven. After selecting the locator and the IK Handle (NOT the new IK controller) use Constrain -> Pole Vector.
 
+Notes: If you're having trouble clicking the IK Handle, it can be selected from the outliner. If you don't see the "Constrain" menu, make sure this tab is set to "Rigging."
 
 rigging.png
+
 
 buddies.png
 
@@ -218,16 +220,24 @@ I'm sure you've already frozen transformations. Good for you. I didn't even need
 
 nofeet.png
 
+
 As mentioned above, the only controllers that get left behind are the feet and locators. Create another NURBS circle around the entire fox.
 
 
-
 master.png
+
 
 Again, awesome job on remembering to freeze transformations. Making your own rigs will go much smoother now that you're in the habit of doing that. One by one, parent the foot controllers to the new master controller using P. Since we're not using the "Constrain" tab, it goes child-> parent or FootController -> MasterController. The master controller will also be the parent of each locator and of our COG controller. After all of those are added, the master controller should select the entire rig.
 
 
 everything.png
+
+
+Take a look at my completed outliner and compare it to your own. Note that everything except for the fox mesh is parented under the master controller. If any of your controllers seem to be parented incorrectly, one simple fix is to drag the controller to its correct position in the outliner. To parent objects using the outliner, press and drag the icon next to the object name, then release while hovering over the correct "parent" object. While you don't need to imitate the particular naming convention I used, do make sure that all of your controllers, joints, IK handles, and locators are named in a way that would be easy for anyone using your rig to follow!
+
+
+outliner_01.png
+
 
 Awesome job! Quadruped rigs are not easy but this example should help you apply controllers to your own characters.
 
