@@ -1,4 +1,5 @@
-﻿HEADING LARGE: INTRODUCTION
+please work
+HEADING LARGE: INTRODUCTION
 
 This lab is meant to introduce a fundamental Maya concept that we admittedly gloss over in the basic curriculum: node-based representations and Maya’s Node Editor. Nodes are fundamental to getting more advanced with rigging, shading, and many other parts of the pipeline. They’re also used in a lot of 3D programs, and mastering one node-based system can help you a lot with moving to other software with similar workflows.
 
@@ -10,7 +11,7 @@ First off, let’s talk about nodes from a conceptual standpoint. Describing a 3
 
 figure1.png
 
-Let’s think about some properties of a 3D object. We have the positions of all the vertices, the edges connecting said vertices, and the faces which connect multiple edges. Additionally, we have the position of the object in our 3D space and other data such as rotations and scaling. We might describe its material, which, in RenderMan, is some combination of attributes such as its diffuse color, specularity, subsurface, and a host of smaller attributes. 
+Let’s think about some properties of a 3D object. We have the positions of all the vertices, the edges connecting said vertices, and the faces which connect multiple edges. Additionally, we have the position of the object in our 3D space and other data such as rotations and scaling. We might describe its material, which, in RenderMan, is some combination of attributes such as its diffuse color, specularity, subsurface, and a host of smaller attributes.
 
 If you’ve ever opened a .ma file in a text editor, you’ll notice all of this information typed out line by line in order to describe what’s in the file you’re looking at. Of course, editing a 3D object by editing those lines of text individually is probably not the most efficient way to work with a 3D object, and that’s where Maya comes in. Nodes are how Maya organizes all of this information about an object or scene into something that a viewer can understand.
 
