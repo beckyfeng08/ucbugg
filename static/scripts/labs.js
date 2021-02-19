@@ -9,7 +9,7 @@ allLabs = {
 	},
 	"modeling": {
 		"bugg": ["modeling 1", "modeling 2"],
-		"araknid": ["hard surface modeling", "organic modeling - dragon", "organic modeling - human"]
+		"araknid": ["hard surface modeling", "node editor", "organic modeling - dragon", "organic modeling - human"]
 	},
 	"rigging": {
 		"bugg": ["rigging 1", "rigging 2", "blend shapes", "skinning"],
@@ -61,5 +61,6 @@ labLookup = {
 	"basicmaterials": "basic materials",
 	"shadingguide": "shading guide",
 	"painteffects": "paint effects",
-	"toonshading": "toon shading"
+	"toonshading": "toon shading",
+	"nodeeditor": "node editor"
 }
