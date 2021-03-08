@@ -10,6 +10,11 @@ body {
 	background: -moz-linear-gradient(top right, #d6eff8, #e1c8c7); /* For Firefox 3.6 to 15 */
 	background: linear-gradient(to top right, #d6eff8, #e1c8c7); /* Standard syntax */
 }
+
+* {
+	scrollbar-width: thin;          /* "auto" or "thin" */
+	scrollbar-color: #8888 #dddddd;
+}
 boddy {
   background-size: 100%;
 }
@@ -228,9 +233,18 @@ h5 {
 	text-align: left;
 }
 ::-webkit-scrollbar {
-    width: 0px;   remove scrollbar space
-    display: none;
-	/*transform: translateY(-63px);*/
+    width: 10px;
+    /* display: none; */
+	transform: translateY(-63px);
+}
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+		background-color: darkgrey;
+    /* -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); */
 }
 #dumb-wrapper {
 	overflow: hidden;
@@ -239,7 +253,8 @@ div.mainbody {
 	z-index: -100;
 	overflow: -moz-scrollbars-none;
 	-ms-overflow-style: none;
-	overflow: auto;
+	overflow-y: scroll;
+	overflow-x: hidden;
 	padding-top:83px;
 	position: absolute;
 	display: block;
