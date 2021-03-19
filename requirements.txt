@@ -2,7 +2,7 @@ Cython==0.21
 DataShape==0.3.0
 Django==1.9.7
 Flask==0.10.1
-Jinja2==2.7.3
+Jinja2==2.11.3
 Mako==1.0.3
 MarkupSafe==0.23
 PIL==1.1.7
