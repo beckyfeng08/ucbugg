@@ -7,7 +7,7 @@ Mako==1.0.3
 MarkupSafe==0.23
 PIL==1.1.7
 PyAudio==0.2.8
-PyYAML==3.11
+PyYAML==5.4
 Pygments==1.6
 SQLAlchemy==0.9.7
 Sphinx==1.2.3
