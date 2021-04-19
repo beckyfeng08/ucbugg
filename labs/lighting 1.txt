@@ -63,14 +63,14 @@ Adaptive Shadows: it is conservative by default. Aggressive will result in FASTE
 Important: only the logical light sources in your scene should produce shadows! If you add an area light to just generally make the scene brighter (like you will see in the example at the end of this guide) you should turn the shadows off if it’s in the opposite direction of the source of light. Otherwise this will confuse the viewers and they won’t understand what the other light source is.
 
 
-HEADING MEDIUM: CAMERA VISIBILITY
+HEADING MEDIUM: CAMERA (PRIMARY) VISIBILITY
 
-Located in the Shape tab of the Attribute Editor. Go down to the VISIBILITY tab and check/uncheck “Camera Visibility”.
+Located in the Shape tab of the Attribute Editor. Go down to the Basic tab and check/uncheck “Primary Visibility”.
 This is off by default in area lights but on by default in environment lights. In general this is set to off if you don’t want the actual source of light visible in your scene. Having this on means that you can actually see the source of light as a lit panel:
 
 Untitled_primaryvisibility.png
 
-If the Camera Visibility is unchecked, this is what you get:
+If the Primary Visibility is unchecked, this is what you get:
 
 Untitled.png
 
@@ -252,7 +252,7 @@ Open up the scene, and the view from the 'whiteroom' camera.
 
 wr1.png
 
-There are three lights in the scene, wr_yellowLight, wr_magentaLight, and wr_cyanLight. They all are on the ceiling, above their respective pyramids. Each have a color associeted with them, and are at Intensity: 1 and Exposure: 6. The "Camera Visibility" attribute is on for all of them.
+There are three lights in the scene, wr_yellow, wr_magenta, and wr_cyan. They all are on the ceiling, above their respective pyramids. Each have a color associeted with them, and are at Intensity: 1.0 and Exposure: 6.0. The "Primary Visibility" attribute is on for all of them.
 
 If you were to render this right now, you would see this:
 
@@ -261,9 +261,9 @@ wr2.png
 Going to the attribute editor, and clicking the Refine tab (right under the basic tab), we will see emission focus. Emission focus serves to concentrate the emission of light. Increasing the focus would create a spotlight effect.
 
 For each light, change the emission focus value as follows:
-yellow - 1.0
-magenta - 10.0
-cyan - 100.0
+yellow: 1.0
+magenta: 10.0
+cyan: 100.0
 
 Now if you were to render it, this is what you would see:
 
