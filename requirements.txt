@@ -75,7 +75,7 @@ patsy==0.3.0
 pep8==1.5.7
 ply==3.4
 psutil==2.1.1
-py==1.4.25
+py==1.10.0
 pyOpenSSL==0.14
 pycosat==0.6.1
 pycparser==2.10
