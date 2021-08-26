@@ -391,8 +391,9 @@ div.fox-graphic {
 div.facilititty {
 	display: inline-block;
 	width: 15%;
-	margin-bottom: 50px;
-	margin-top: 50px;
+	margin: 10px;
+	margin-top: 25px;
+	margin-bottom: 25px;
 }
 img.sillytater {
 	width: 150px;
