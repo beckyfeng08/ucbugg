@@ -241,11 +241,15 @@ I like to play around with each controller until I understand what they do and k
 
 ball_rig.png
 
-The large red arrow on the ground is the master controller. This is typically used for initially positioning your object in the scene. We’re not going to put any animation or keyframes on the master controller. Why not? Say we animate our ball bouncing to the right, but then we find out that we placed the ball on the wrong end of the scene and that it was supposed to bounce to the left. If I had set keys on the master controller, then I would have to either change a lot of my animation or deal with constraints and a new controller. If I didn’t set any keys on the master controller, then I can just move and rotate it to reposition my entire animation!
+The large yellow rounded square is the master controller. This is typically used for initially positioning your object in the scene. We’re not going to put any animation or keyframes on the master controller. Why not? Say we animate our ball bouncing to the right, but then we find out that we placed the ball on the wrong end of the scene and that it was supposed to bounce to the left. If I had set keys on the master controller, then I would have to either change a lot of my animation or deal with constraints and a new controller. If I didn’t set any keys on the master controller, then I can just move and rotate it to reposition my entire animation!
 
-The yellow circle is the main controller. This is what we’ll use to animate the ball’s motion and rotation. When we think about applying the bouncing ball to character animation, we’ll often think of the hip as a ball. This controller would correspond to a hip controller on a character.
+The blue circle is the main controller. This is what we’ll use to animate the ball’s motion. When we think about applying the bouncing ball to character animation, we’ll often think of the hip as a ball. This controller would correspond to a hip controller on a character.
 
-The blue circles squash and stretch the ball. You can move them to the sides too.
+The green squiggly circles squash and stretch the ball. You can move them to the sides too.
+
+The red rounded square inside the main controller is the rotation controller. Why don't we just use the main controller for rotation? When we rotate our main contoller you will see that the squash and stretch controllers rotate with it. This is not ideal because we want the ball to roll while still just squashing up and down, so we have this controller which rotates the ball without rotating the squash and stretch controllers.
+
+The dark blue circle that goes from the top to bottom of the ball serves the exact opposite roll of the rotation controller. This controller will just rotate the axis of the squash and stretch. We won't be using this controller much but it would be usefull in a situation where the ball was boucning off of a wall and we needed to make it squash along the x or z axis instead of the y axis.
 
 Step 3: Get the vertical motion down for the ball
 
