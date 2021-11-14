@@ -3,12 +3,12 @@ HEADING LARGE: INTRODUCTION
 This lab will cover the basics of the XGEN hair system in Maya. We will just be going over the process of creating and shaping hair as well as rendering it. This tutorial will not go over doing dynamic hair with simulations but that can be done in XGen aswell with a few more steps.
 Note: At the time of writing this lab there seems to be a problem with XGEN using Renderman in Maya 2022, you may need to be using Maya 2020 in order for it to work.
 
-HEADING MEDIUM: SETTING UP THE SCENE
+HEADING LARGE: SETTING UP THE SCENE
 XGEN is very picky about its file structure, in order to get it to work you will need to have your project set with the model you are working with in that project.
 Make sure you have the xgenToolkit plugin loaded in the plugin manager.
 Find an object that you want to apply hair to. This can be a model from your short, or a simple sphere. In this demo I will be using the head model from Maya's built in content browser. To find this go to Windows -> General Editors -> Content Browser. The model I'm using is in Modeling/Sculpting and Base Meshes/Bipeds/BasicHead.ma. 
 HeadModel.png
-The last step is to seperate out what parts of the geometry will have hair. If you are working on a model that is entirely covered in hair you can skip this step. 
+The next step is to seperate out what parts of the geometry will have hair. If you are working on a model that is entirely covered in hair you can skip this step. 
 Make a duplicate of the geometry you want the hair to be on and select only the faces that will have hair (It may help to hide the original mesh while selecting these faces).
 HairSelect.png
 I changed the color of the duplicate mesh to make it clearer where I selected.
@@ -20,7 +20,7 @@ Unhide the base model and slightly scale up the scalp so that it sits slightly o
 HeadScalp.png
 Now make sure you save your scene. Again, XGEN is very picky about file structure, this results in some features not working if the scene is not saved.
 
-HEADING MEDIUM: APPLYING THE HAIR
+HEADING LARGE: APPLYING THE HAIR
 In the XGen tab on your shelf select the leftmost icon to open the XGen Window.
 XgenWindow.png
 Select your mesh, and press Create New Description in the new window on the right.
@@ -40,7 +40,7 @@ EyeBalls.png
 
 Pressing the left one will turn on / update the actual geometry of the hair. Pressing the right one will hide the hair. In general while shaping the hair you will want to hide the hair geometry and work just with the guide hairs so hide the hair for now as we go into grooming.
 
-HEADING MEDIUM: GROOMING
+HEADING LARGE: GROOMING
 Grooming is the process of cutting and shaping the hair similar to how you might in real life. 
 
 Here is a good resourse for a brief description on some of the grooming tools. (This guide may have some extra tools that you don't see in XGen when you use it)
@@ -59,12 +59,12 @@ FullHeadGroom.png
 Turning off the visibility of the guide hairs and pressing the eye on the left I get this hair geometry
 HairBasicShader.png
 
-HEADING MEDIUM: RENDERING
+HEADING LARGE: RENDERING
 If you were to try to render the hair we have now it will not work. First we need to go into the Preview/Output tab in XGen and in Output Settings set our renderer to Renderman.
 Renderer.png
 
-Scroll down to the Renderman Settings, click and hold the arrow next to the PxrBall to select a material.
-RendermanSettings
+Scroll down to the Renderman Settings, click and hold the arrow next to the Pixar Ball to select a material.
+RendermanSettings.png
 
 Select Create PxrMarschnerHair
 CreatePxr.png
