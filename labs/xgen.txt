@@ -87,3 +87,5 @@ Hypershade2.png
 Now you should be able to see your hair in Renderman! Make sure you light your scene well, a rim light is super important for fur and other fuzzy hair because it allows stray hairs to catch the light.
 Render.png
 
+Render your hair and submit that to BCourses along with the .ma file.
+
