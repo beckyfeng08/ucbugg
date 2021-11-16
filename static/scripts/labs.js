@@ -28,7 +28,7 @@ allLabs = {
 		"araknid": []
 	},
 	"effects": {
-		"bugg": ["bifrost", "fluids", "cloth", "paint effects", "xgen"],
+		"bugg": ["bifrost", "fluids", "cloth", /*"paint effects",*/ "xgen"],
 		"araknid": []
 	},
 	"post-production":  {
@@ -60,7 +60,7 @@ labLookup = {
 	"characteranimation": "character animation",
 	"basicmaterials": "basic materials",
 	"shadingguide": "shading guide",
-	"painteffects": "paint effects",
+	//"painteffects": "paint effects",
 	"toonshading": "toon shading",
 	"nodeeditor": "node editor",
 	"xgen" : "xgen"
