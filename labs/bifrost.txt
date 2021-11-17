@@ -38,6 +38,8 @@ Bifrost6.png
 Select the large box and the small cube and turn visibility off in the channel box. You don't want these rendering.
 Notice that the particles fall through everything. This liquid system does not know the liquid is supposed to collide with the tub yet.
 
+Select the bifrostEmitterProps1, influencing the first emitter that was created, in the outliner and open up the attribute editor and select the box under Properties > Continuous Emission.  Now when you play the simulation the basin should just be filled with water, while the emitter in the cup should be continuously releasing water. This setting can be buggy so if it stops continuously producing water, make sure to check that this box is still selected
+
 Bifrost5.png
 
 We'll fix that soon, but first let's look at some of the Bifrost's parameters.
