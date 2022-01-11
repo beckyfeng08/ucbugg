@@ -43,11 +43,22 @@ var setCurrentDate = function() {
 	// currentDate = '09/30/16';
 }
 
+function getDayOfWeek(date) {
+	const dayOfWeek = stringToDate(date).getDay();    
+	return isNaN(dayOfWeek) ? null : 
+	  ['SUNDAY', 'MONDAY', 'TUESDAY', 'WEDNESDAY', 'THURSDAY', 'FRIDAY', 'SATURDAY'][dayOfWeek];
+  }
+
+function stringToDate(str) {
+	var dateArr = str.split("/");
+	return new Date(parseInt(dateArr[2]), parseInt(dateArr[0]) - 1, parseInt(dateArr[1]));
+}
+
 var setInfo = function(date) {
 	var i = 1;
 	assType = syllabusType.charAt(0).toUpperCase() + syllabusType.slice(1);
-	$("#due-dates" + collapseDate(date)).prepend('<p class="due"> DUE <b>' + syllabusObj[date]['Tues Due'] + '</b> for MONDAY </p>' +
-						 '<p class="due"> DUE <b>' + syllabusObj[date]['Thurs Due'] + '</b> for THURSDAY </p>');
+	$("#due-dates" + collapseDate(date)).prepend('<p class="due"> DUE <b>' + syllabusObj[date]['Session 1 Due'] + '</b> for ' + getDayOfWeek(syllabusObj[date]['Session 1 Class']) + ' </p>' +
+						 '<p class="due"> DUE <b>' + syllabusObj[date]['Session 2 Due'] + '</b> for ' + getDayOfWeek(syllabusObj[date]['Session 2 Class']) + ' </p>');
 	// console.log(assType);
 	// $("#due-dates" + collapseDate(date)).empty();
 	while (assType + " Ass " + i in syllabusObj[date]) {
@@ -83,19 +94,17 @@ var updateContent = function() {
 		for (var i=0; i < keys.length; i++) {
 			// console.log(keys[i]);
 			iconType = syllabusType.charAt(0).toUpperCase() + syllabusType.slice(1) + " Icon";
-			var dateArr = keys[i].split("/");
-			var tues = new Date(parseInt(dateArr[2]) + 2000, parseInt(dateArr[0]) - 1, parseInt(dateArr[1]));    // this is now monday
-			//var thur = new Date(parseInt(dateArr[2]) + 2000, parseInt(dateArr[0]) - 1, parseInt(dateArr[1])+2);                    Add back in for Tues Thurs
-			var thur = new Date(parseInt(dateArr[2]) + 2000, parseInt(dateArr[0]) - 1, parseInt(dateArr[1])+3);                    //Remove for Tues Thurs
+			var session1 = stringToDate(syllabusObj[keys[i]]['Session 1 Class']);            
+			var session2 = stringToDate(syllabusObj[keys[i]]['Session 2 Class']);                  
 			// console.log(date,tues.toString().split(" ")[1].toUpperCase(), thur.toString().split(" ")[1].toUpperCase());
 			// $("#tues-date").html();
 			// $("#thur-date").html(thur.toString().split(" ")[1].toUpperCase() + " " + thur.getDate());
 			highlight = keys[i] == activeDate ? 'highlight' : 'normal';
 			$("#syllabus-timeline").append('<div class="timeline-piece" id="row' + collapseDate(keys[i]) + '" >' +
 					'<div class="timeline-elem-piece-week">'  +
-					'<h3 class="date" id="tues-date"> ' + tues.toString().split(" ")[1].toUpperCase() + " " + tues.getDate() + ' </h3>' +
+					'<h3 class="date" id="tues-date"> ' + session1.toString().split(" ")[1].toUpperCase() + " " + session1.getDate() + ' </h3>' +
 					'<h3 class="hyphen" > - </h3>' +
-					'<h3 class="date" id="thur-date"> ' + thur.toString().split(" ")[1].toUpperCase() + " " + thur.getDate() + ' </h3>' +
+					'<h3 class="date" id="thur-date"> ' + session2.toString().split(" ")[1].toUpperCase() + " " + session2.getDate() + ' </h3>' +
 					'</div>' +
 					'<div class="timeline-elem-piece-icon" id="icon">'  +
 					'<img src="images/syllabus icons/'+ highlight + "/" + syllabusType+'/' + data[keys[i]][iconType] + '.svg" class="syllabus-icon" id="syllabus-icon' + collapseDate(keys[i]) + '"">' +
