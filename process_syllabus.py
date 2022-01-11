@@ -16,7 +16,8 @@ import json
 #     return inner
 
 # httplib.HTTPResponse.read = patch_http_response_read(httplib.HTTPResponse.read)
-LINK = "https://docs.google.com/spreadsheets/d/1EYIf9en6oyRgH8nT5d2zFo43o_0PHaSdDGcgN090jsU/export?format=csv"
+# If you change this link, make sure you allow view permissions to all on that file
+LINK = "https://docs.google.com/spreadsheets/d/1-NQ-fivx5Qc6mQ9wxBnCa9TDMzt4W0zQW1isPsxVL30/export?format=csv"
 #LINK = "https://docs.google.com/spreadsheets/d/1EYIf9en6oyRgH8nT5d2zFo43o_0PHaSdDGcgN090jsU/export?format=csv"
 
 # import requests

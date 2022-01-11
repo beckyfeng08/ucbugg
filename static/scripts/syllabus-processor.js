@@ -4,6 +4,7 @@ var currentDate = "";
 var activeDate = "";
 var syllabusObj = {};
 
+
 var updateSyllabus = function(type) {
 	setCurrentDate();
 	if (type in syllabusTypes) {
@@ -45,7 +46,7 @@ var setCurrentDate = function() {
 var setInfo = function(date) {
 	var i = 1;
 	assType = syllabusType.charAt(0).toUpperCase() + syllabusType.slice(1);
-	$("#due-dates" + collapseDate(date)).prepend('<p class="due"> DUE <b>' + syllabusObj[date]['Tues Due'] + '</b> for TUESDAY </p>' +
+	$("#due-dates" + collapseDate(date)).prepend('<p class="due"> DUE <b>' + syllabusObj[date]['Tues Due'] + '</b> for MONDAY </p>' +
 						 '<p class="due"> DUE <b>' + syllabusObj[date]['Thurs Due'] + '</b> for THURSDAY </p>');
 	// console.log(assType);
 	// $("#due-dates" + collapseDate(date)).empty();
@@ -83,8 +84,9 @@ var updateContent = function() {
 			// console.log(keys[i]);
 			iconType = syllabusType.charAt(0).toUpperCase() + syllabusType.slice(1) + " Icon";
 			var dateArr = keys[i].split("/");
-			var tues = new Date(parseInt(dateArr[2]) + 2000, parseInt(dateArr[0]) - 1, parseInt(dateArr[1]));
-			var thur = new Date(parseInt(dateArr[2]) + 2000, parseInt(dateArr[0]) - 1, parseInt(dateArr[1])+2);
+			var tues = new Date(parseInt(dateArr[2]) + 2000, parseInt(dateArr[0]) - 1, parseInt(dateArr[1]));    // this is now monday
+			//var thur = new Date(parseInt(dateArr[2]) + 2000, parseInt(dateArr[0]) - 1, parseInt(dateArr[1])+2);                    Add back in for Tues Thurs
+			var thur = new Date(parseInt(dateArr[2]) + 2000, parseInt(dateArr[0]) - 1, parseInt(dateArr[1])+3);                    //Remove for Tues Thurs
 			// console.log(date,tues.toString().split(" ")[1].toUpperCase(), thur.toString().split(" ")[1].toUpperCase());
 			// $("#tues-date").html();
 			// $("#thur-date").html(thur.toString().split(" ")[1].toUpperCase() + " " + thur.getDate());
