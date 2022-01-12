@@ -43,21 +43,21 @@ var setCurrentDate = function() {
 	// currentDate = '09/30/16';
 }
 
-function getDayOfWeek(date) {
-	const dayOfWeek = stringToDate(date).getDay();    
+function getDayOfWeek(dateStr) {
+	const dayOfWeek = stringToDate(dateStr).getDay();    
 	return isNaN(dayOfWeek) ? null : 
 	  ['SUNDAY', 'MONDAY', 'TUESDAY', 'WEDNESDAY', 'THURSDAY', 'FRIDAY', 'SATURDAY'][dayOfWeek];
   }
 
-function stringToDate(str) {
-	var dateArr = str.split("/");
+function stringToDate(dateStr) {
+	var dateArr = dateStr.toString().split("/");
 	return new Date(parseInt(dateArr[2]), parseInt(dateArr[0]) - 1, parseInt(dateArr[1]));
 }
 
 var setInfo = function(date) {
 	var i = 1;
 	assType = syllabusType.charAt(0).toUpperCase() + syllabusType.slice(1);
-	$("#due-dates" + collapseDate(date)).prepend('<p class="due"> DUE <b>' + syllabusObj[date]['Session 1 Due'] + '</b> for ' + getDayOfWeek(syllabusObj[date]['Session 1 Class']) + ' </p>' +
+	$("#due-dates" + collapseDate(date)).prepend('<p class="due"> DUE <b>' + syllabusObj[date]['Session 1 Due'] + '</b> for ' + getDayOfWeek(date) + ' </p>' +
 						 '<p class="due"> DUE <b>' + syllabusObj[date]['Session 2 Due'] + '</b> for ' + getDayOfWeek(syllabusObj[date]['Session 2 Class']) + ' </p>');
 	// console.log(assType);
 	// $("#due-dates" + collapseDate(date)).empty();
@@ -94,7 +94,7 @@ var updateContent = function() {
 		for (var i=0; i < keys.length; i++) {
 			// console.log(keys[i]);
 			iconType = syllabusType.charAt(0).toUpperCase() + syllabusType.slice(1) + " Icon";
-			var session1 = stringToDate(syllabusObj[keys[i]]['Session 1 Class']);            
+			var session1 = stringToDate(keys[i]);            
 			var session2 = stringToDate(syllabusObj[keys[i]]['Session 2 Class']);                  
 			// console.log(date,tues.toString().split(" ")[1].toUpperCase(), thur.toString().split(" ")[1].toUpperCase());
 			// $("#tues-date").html();
