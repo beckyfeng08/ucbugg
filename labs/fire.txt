@@ -1,7 +1,7 @@
 HEADING LARGE: INTRODUCTION
 Welcome to the fire lab! 
 Download the starter file here
-
+(You may need to right click, hit "Save link as ...". If it takes you to a new page filled with text just right click on that page and "Save as". If the file downloaded ends in ".ma.txt" or anything other than ".ma" rename it to have just ".ma" and ignore the warning)
 FILE: fire.ma
 
 HEADING LARGE: A NOTE ON PLAYBACK SPEED
@@ -13,7 +13,7 @@ In this lab we will quickly create firepit using a preset. We could also create 
 fire_lab_1.png
 
 HEADING LARGE: FLUID FROM SCRATCH
-All fluid simulations in Maya need a container within which the sim takes place. A container is a 3D boundary outside of which simulation cannot take place. This container is the main component of the simulation with the majority of the settings. It consists of voxels, which you can think of as the three-dimensional pixels – the basic units of a 3D space. Decreasing the size of voxels, which is the same as increasing their number, results in a higher quality of simulation at the expense of simulation and rendering speeds. 
+All fluid simulations in Maya need a container within which the sim takes place. A container is a 3D boundary outside of which simulation cannot take place. This container is the main component of the simulation with the majority of the settings. It consists of voxels, which you can think of as the three-dimensional pixels ï¿½ the basic units of a 3D space. Decreasing the size of voxels, which is the same as increasing their number, results in a higher quality of simulation at the expense of simulation and rendering speeds. 
 Create a fluid by switching to FX menu set, and then going to Fluids -> 3D Container -> Option Box. Deselect Add Emitter and apply and close. This creates an empty container which you now need to fill with an emitter. Since we want to emit from logs we need to add them as emitters. However, we should only emit from one mesh, not several, which means we should first Mesh -> Combine all the logs (but leave out the pit). Select the combined log mesh and delete history, freeze transformations, and center the pivot. In the Outliner select Fluid Container (fluid1) and the logs geometry, then click Fluids -> Add/Edit Contents -> Emit From Object -> Option Box. Make sure emitter type is set for surface, Apply and close. If you play the animation, the fire would neither behave like fire nor will it look like it. Since it will take forever to adjust everything to get the final look, we will use a preset instead, and apply it to our models.
 
 

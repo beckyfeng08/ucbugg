@@ -1,7 +1,7 @@
 HEADING LARGE: INTRODUCTION
 
 This week we'll be rigging the fox you modeled last week! Just in case, here's a link to a clean fox model that you can download:
-
+(You may need to right click, hit "Save link as ...". If it takes you to a new page filled with text just right click on that page and "Save as". If the file downloaded ends in ".ma.txt" or anything other than ".ma" rename it to have just ".ma" and ignore the warning)
 FILE: fox_model.ma
 
 The idea behind rigging is to give your model joints which will dictate how the mesh will deform. Much like how your elbow allows your arm to bend in half.

@@ -2,6 +2,7 @@
 HEADING LARGE: INTRODUCTION
 This lab will cover simulation of water and fluids in Maya.
 Please download the starter file attached below.
+(You may need to right click, hit "Save link as ...". If it takes you to a new page filled with text just right click on that page and "Save as". If the file downloaded ends in ".ma.txt" or anything other than ".ma" rename it to have just ".ma" and ignore the warning)
 FILE: bifrost_lab_initial.ma
 Inside this file you will find an animated bowl and a tub. In this lab, you will fill the bowl and tub with water, then allow the water to simulate as the bowl tips over and falls into the tub.
 

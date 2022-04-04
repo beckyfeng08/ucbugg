@@ -15,7 +15,7 @@ DCUBE.gif
 HEADING LARGE: METHOD 1
 
 Before starting Method 1 for blendshapes, please download the following file into the scenes directory of your current maya project. 
-
+(You may need to right click, hit "Save link as ...". If it takes you to a new page filled with text just right click on that page and "Save as". If the file downloaded ends in ".ma.txt" or anything other than ".ma" rename it to have just ".ma" and ignore the warning)
 FILE: blendshape_bunny.ma
 
 Open up the blendshape_bunny file. You should see an obnoxiously pink bunny mesh staring into your soul. 
@@ -74,7 +74,7 @@ Let’s say you move the rightBlink slider to zero and then move the blink slide
 HEADING LARGE: METHOD 2
 
 Method 2 will also show how to create blendshapes for a face, but in a different way. Before getting started, download this file to the scenes directory in your current Maya project:
-
+(You may need to right click, hit "Save link as ...". If it takes you to a new page filled with text just right click on that page and "Save as". If the file downloaded ends in ".ma.txt" or anything other than ".ma" rename it to have just ".ma" and ignore the warning)
 FILE:faces.ma
 
 Most important rule for this method: when you create your duplicates, do NOT add/remove faces, edges, or vertices! They all have to be the same exact number of faces, edges, and vertices for this to work.
