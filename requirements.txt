@@ -107,7 +107,7 @@ toolz==0.7.0
 tornado==4.0.2
 traits==4.4.0
 traitsui==4.4.0
-ujson==1.33
+ujson==5.4.0
 unicodecsv==0.9.4
 virtualenv==15.0.2
 wsgiref==0.1.2
