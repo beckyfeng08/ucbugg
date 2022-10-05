@@ -322,17 +322,17 @@ For the purposes of this lab, make sure to click on the checkerboard icon next t
 
 On the sidebar in the window that results, choose 2D Textures->File.
 
-pencil_1.jpg
+pencil_1.png
 
 Once the files are created, you should see a tab called “file1” or something similar in the attribute editor. Click the folder icon to look up an image to apply to the attribute.
 
-pencil_2.jpg
+pencil_2.png
 
 Select your image.
 
 Now, do a test render! You should see something like the following:
 
-pencil_3.jpg
+pencil_3.png
 
 Congratulations, you have shaded your first object! Make sure to save your work.
 
