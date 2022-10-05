@@ -20,8 +20,8 @@ allLabs = {
 		"araknid": ["character animation"]
 	},
 	"shading": {
-		"bugg": ["basic materials", "shading guide"],
-		"araknid": ["hypershade", "toon shading"]
+		"bugg": ["basic materials", "toon shading", "shading guide"],
+		"araknid": ["hypershade"]
 	},
 	"lighting": {
 		"bugg": ["lighting 1", "lighting 2"],

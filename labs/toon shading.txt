@@ -257,8 +257,89 @@ When you render the scene now, it looks like this.
 
 <img src="https://raw.githubusercontent.com/saurabhmitra/ucbugg/gh-pages/labs/toon%20shading/intro_close.png" style="width:60%;height:60%;">
 
+HEADING LARGE: UV MAPPING & TEXTURE CREATION
+
+Download and open this file: 
+(You may need to right click, hit "Save link as ...". If it takes you to a new page filled with text just right click on that page and "Save as". If the file downloaded ends in ".ma.txt" or anything other than ".ma" rename it to have just ".ma" and ignore the warning)
+FILE: pencil_toon.ma
+
+You should see a pencil mesh sitting on top of a plane. The pencil has an AIToon shader already applied to it, called PencilAIToon.
+Let’s go into the UV mapping layout, to see the UV editor. On the top right, click the Workspace dropdown and choose “UV Editing”.
+
+uv_editing_workspace.jpg
+
+You should now see the UV editor next to your viewport.
+Now, we have to create UV coordinates for our mesh. Click Create->Camera Based at the top of the UV editor.
+
+camera_based.jpg
+
+This basically squashes your 3D object down across the camera plane, thus converting our 3D coordinates to 2D ones.
+
+But we need a map with no overlapping faces, so we have to divide our UV map up even more. We now have to mark edges as seams, and “unfold” our object.
+Think of it like peeling a tangerine - we need to take off the peel and flatten into a two-dimensional shape, so we need to cut the peel at certain points (mark seams) and then take the peel off and flatten it out (unfold).
+
+To mark seams on your object, go into edge mode and select edges, then go to the UV editor and click Cut/Sew->Cut. (Hotkey is Shift X)
+Remember that you can double-click an edge to select the whole edge loop, and shift-click to select multiple edges at once.
+
+Since our pencil is cylindrical, we want to mark an edge going down the whole thing as a seam. We also want to divide our pencil up by material, since we will be creating our own maps. So, mark the edge loops that divide the ferrule, eraser, wood part, and tip of the pencil.
+
+Once you’re done marking seams, your UV editor should look something like this:
+
+pencil_seams_marked.jpg
+
+Now to unfold the map. Save your work (as this can sometimes crash Maya), then select your whole object and click Modify->Unfold.
+
+Each section of the pencil surrounded by seams has been unwrapped.
+
+pencil_unfolded.jpg
+
+Now, we still have some overlapping parts. To fix this, select your whole object and click Modify->Layout. Now the pencil will be perfectly laid out in the 0-1 UV square, with no overlapping. Hold down right click in the UV editor and select UV shell mode, then hover over the different “shells” to figure out which one is which. This will be important very soon!
+Mine looks like this:
+
+pencil_layout.jpg
+
+Now we want to export our map and import it into photoshop or another image editor, to paint on top of it. In the UV editor, click Image->UV Snapshot…
+Then, hit “Browse” next to the filename and choose an easy-to-find location. Change the format to PNG, and keep the rest of the settings.
+
+uv_snapshot.jpg
+
+Now, open up this file it outputs in an image editor of your choice. This is the fun part - painting on the details. Create a new layer underneath the UV map, and color it black.
+
+uvs_on_black.jpg
+
+Now we can see our UV map. Since we know which UV shell corresponds to each part of our mesh, we can color them accordingly. Paint on the black layer to give your shells some color. Here, I have colored the pencil yellow with a tan wooden part pink eraser, and gray ferrule and tip.
+
+uvs_colored.jpg
+
+Now, hide the layer with the UV map in it, and export your image to an easy-to-find location.
+
+HEADING LARGE: APPLYING YOUR TEXTURES
+Finally, we have to apply our textures we created to our AIToon shader. Switch back to the “Maya Classic” workspace in the top right dropdown, and find the pencil’s AIToon shader in the Attribute Editor.
+
+In general, to add any image to a shader attribute, click the checkerboard icon beside an attribute.
+
+For the purposes of this lab, make sure to click on the checkerboard icon next to an attribute like Color under the Base tab, NOT "Input Material"!
+
+On the sidebar in the window that results, choose 2D Textures->File.
+
+pencil_1.jpg
+
+Once the files are created, you should see a tab called “file1” or something similar in the attribute editor. Click the folder icon to look up an image to apply to the attribute.
+
+pencil_2.jpg
+
+Select your image.
+
+Now, do a test render! You should see something like the following:
+
+pencil_3.jpg
+
+Congratulations, you have shaded your first object! Make sure to save your work.
+
+
+
 HEADING LARGE: Submission
-You can now submit the lab at this point. Please submit a screenshot of a full body render of your character as well as a .zip file of the entire project folder.
+You can now submit the lab at this point. Please submit your .ma file for the pencil, along with the image texture you created for the colors. Please submit a screenshot of a full body render of your character as well as a .zip file of the entire project folder.
 
 
 HEADING LARGE: Other Toon Shading Sections
