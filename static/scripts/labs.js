@@ -4,7 +4,7 @@ allLabs = {
 		"araknid": []
 	},
 	"pre-production": {
-		"bugg": ["pre-production"],
+		"bugg": ["pre-production", "production management"],
 		"araknid": []
 	},
 	"modeling": {

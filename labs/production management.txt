@@ -1,0 +1,134 @@
+HEADING LARGE: PRODUCTION MANAGEMENT
+HEADING MEDIUM: Introduction
+For UCBUGG, you will be working both individually on Lab Homework and as a team on your 30-60 second animated short. You’ll want to keep your <i> individual </i> project files separate from your <i> group </i> project files since you’ll be building assets for the labs that don’t belong in your short.
+
+We’re going to walk through making those two separate file locations; one for your <i> individual </i> lab homework files and another for your <i> group </i> project files for your short.
+
+A note before we continue: project management is challenging! You have a lot to keep track of and it’s all very abstract; so, if you find yourself confused or frustrated, remember that the course staff are more than happy to help you with any questions you have, and once you work through initial confusion, it will all make sense.
+
+HEADING LARGE: Individual Lab/Homework Directory Setup
+<i> All Group Members </i>
+You’ll be constantly collaborating and working with others for UCBUGG, so make sure your class files for UCBUGG are neatly organized and easy for you to access. 
+
+<i> For Windows </i>
+<li> 1. To start, open up your File Explorer. Look in the Navigation Pane, and expand This PC, and then expand Documents. </li>
+<li> 2. In here, create a new directory (another word for file in this case), and name it ucbugg_spring_2023 *insert your semester and year in this format*. Make sure not to leave any spaces in your file path! Maya will get mad at you if there are any spaces in your file path, and we need to keep Maya happy, kind of like an aging parent. </li>
+<li> 3. Then, inside ucbugg_spring_2023, create a new folder and name it ‘homework’. Create a second folder called ‘group’ that we’re going to use later. This is how you’ll keep your personal lab work separate from your group project work. </li>
+
+pm1.png
+
+<li> 4. Open up Maya 2022 and create a new file. You are going to use this file to create your project directory, so this can just be an empty file. </li>
+<li> 5. In your new Maya file, navigate to File > Project Window. 
+
+pm2.png
+
+<li> 6. This will open up your Project Window. This generates your project directory, which is how Maya keeps track of all the data (including textures, simulations, referenced files, and more) needed for work in Maya. </li>
+
+pm3.png
+
+<li> 7. Setting up your Project Window. </li>
+    <li> a. Click the “New” button. </li>
+    <li> b. In the ‘Current Project’ field, change the name to ‘homework_directory’ </li>
+    <li> c. In the ‘Location’ field, change the directory location to the file path we just set up. If you’re following along, it should be *your computer/username*/Documents/ucbugg_spring_2023/homework </li>
+
+pm4.png
+
+    <li> d. Don’t change anything else in this window and click on ‘Accept’ at the bottom. </li>
+
+<li> 8. Now, whenever you're going to do lab homework or make any Maya file not part of your team’s short, make sure to Set your project to ‘homework_directory’ so that everything is nice and orderly. </li>
+<li> 9. Setting your project is very easy! Just select File > Set Project, and then Navigate to the correct file path, and with the folder selected in blue, hit “Set” and you're good to go! </li>
+
+pm5.png
+
+<li> 10. Pro tip: you can copy + paste file paths, so if you have the file path open in another File Explorer tab on your desktop, you can just copy + paste and save yourself some time. </li>
+
+<i> For Mac </i> 
+# I need someone who knows Mac stuff to help write this #
+
+LARGE HEADING: Group Project Directory + Version Control Setup
+<b> What is Version Control? </b>
+For those from outside of a Computer Science or technical background (like the author of this lab), Version Control may be a new concept, but it’s pretty straightforward and understandable! For UCBUGG shorts, we recommend hosting your group directory on Google Drive Desktop because they have a user-friendly version control system. 
+
+Version Control is a system that helps track and manage changes to a set of files. You can think about Version Control as an advanced file version history, just like how you can see previous versions of Google Docs by clicking on the “last edit was made x units of time ago” text in the control bar of any Google Doc. This makes it easy to recover mistakenly deleted or otherwise lost work. 
+
+There are many systems and programs that perform Version Control. The most popular version control system is called Git, but unless you have experience with Git or GitHub (a popular web-based platform that uses Git to manage and store code), we recommend using Google Drive Desktop for your UCBUGG short’s Version Control. Git and GitHub are valuable professional skills, and the staff of UCBUGG are more than happy to help you learn those skills if you haven’t used GitHub before but know that it’s totally optional and you’ll be able to complete your UCBUGG short without it if you prefer.
+HEADING MEDIUM: Setup
+<i> All Group Members </i>
+Google Drive Desktop (Recommended) 
+<li> 1. Download Google Drive Desktop
+    <li> a. First, you’ll head to <a href="https://www.google.com/drive/download/">this link</a> or just search for “google drive for desktop” and follow the first link. </li>
+
+pm6.png
+
+    <li> b. Run GoogleDriveSetup.exe. Setup is essentially a single click. </li>
+    <li> c. Next, there will be another popup window for you to log into your Google account. </li>
+        <li> i. That will take you to a web browser-based sign-in portal, which you’ll complete the steps for. </li>
+        <li> ii. Once you have, you’ll see the ‘Success!’ screen. Close the setup app. </li>
+    <li> d. <i> For Windows </i> Open a new File Explorer Window and look at the Navigation Pane on the left-hand side. Toward the bottom, you should see a file repository called “Google Drive (G:)”.
+
+pm7.png
+
+    <li> d. <i> For Mac </i> #add something here# </li>
+
+#add mac screenshot here#
+
+    <li> f. If you see folders in there, you’ve done it! Download Complete! </li>
+
+<li> 2. Access your team’s shared Google Drive project folder. </li>
+    <li> a. Now that your Google Drive is synced to your machine, open Google Drive in your web browser. Double-check that all the files on your web browser match those in your local Google Drive (G:) folder on your computer. </li>
+    <li> b. One of your team’s Facilitators has created a Google Drive Folder for your team to store your project in and shared it with the Berkeley Gmail you’ve provided. Find that folder in the ‘shared with me’ tab and save it as a shortcut to your Google Drive at the top of your directory. </li>
+
+pm8.png
+
+    <li> c. Now you should see it appear in the Navigation Pane in Google Drive Browser. </li>
+
+pm9.png
+
+    <li> d. <i> For Windows </i> Open your local Google Drive (G:) folder on your computer’s file explorer and observe that the new shortcut is not visible in the Navigation Pane. What happened? What you’ve added to your Google Drive is a Shortcut and not a proper Folder, so it doesn’t show up in the Navigation Pane. But, when you open the top-level Google Drive (G:) in the main viewing window on File Explorer, you’ll see the shortcut! </li>
+
+pm10.png
+
+    <li> d. <i> For Mac </i> #add something here# </li>
+
+#add mac screenshot here#
+
+    <li> e. <i> For Windows </i> Now, you need to copy this shortcut somewhere easily accessible on your computer. We recommend copying it into the ucbugg_spring_2023 folder we set up earlier, or you can place it on your Desktop if you are an agent of chaos. All that matters is that you place the shortcut in a place on your computer where you can easily access it! </li>
+
+pm11.png
+
+        <li> i. Copy by dragging and dropping the shortcut from the Google Drive (G:) folder and into the destination of your choice. For our example, that will be down the file path \Documents\ucbugg_spring_2023\group, and you should be able to see the folder when you open the ‘group’ folder. </li>
+
+pm12.png
+
+    <li> e. <i> For Mac </i> #add something here# </li>
+
+<i> Project Manager Only </i>
+The next steps need only be completed by your group’s Project Manager, as they only need to be completed one time. But it’s important that you understand what’s going on, so please look over these instructions even if you’re not your team’s Project Manager. 
+
+<li> 3. Double-click on your group’s shared folder shortcut (in this example, titled ‘example_UCBUGG_short’). Take a look at the file path at the top of your File Explorer tab. You’ll see a scary looking file path that doesn’t match the file path you’d expect, but it’s ok! This is because the folder is a shortcut, but even so, you’ll be able to create a Maya project directory for your team that you’ll all be able to access. </li>
+<li> 4. Open another Maya file, and once again navigate to File > Project Window. </li>
+    <li> a. Click the “New” button. </li>
+    <li> b. In the ‘Current Project’ field, change the name to ‘*your short’s name with no spaces*_group’ </li>
+    <li> c. In the ‘Location’ field, set the directory location to the folder ‘group’ and into the group folder we set up earlier. This is on the file path from the group project folder we set up earlier, and it should read Documents/ucbugg_spring_2023/group if you’re following along on Windows. </li>
+    <li> d. Select the shortcut we placed in the ‘group’ folder earlier so that it’s highlighted in blue. Then click ‘Select’ to save the location. </li>
+    <li> e. Don’t change anything else in this window and click on ‘Accept’ at the bottom. </li>
+
+pm13.png
+
+<li> 5. Now, open up Open in Google Drive in your web browser to double-check that it worked. In your group’s folder on Google Drive web, you should see a folder by the name you set in the last step and within that a bunch of folders. </li>
+
+pm14.png
+
+pm15.png
+
+<li> 6. Now, click on the Information icon in the upper right corner of the opened group folder. This will have two tabs, “Details” and “Activity”. Use Details to manage team member access and use Activity to monitor changes made to the project and to revert to previous version of files if necessary. </li>
+
+pm16.png
+
+<li> 7. That should do it! Run a few tests of basic actions (creating/saving a file) and make sure you can see the file appear on the Google Drive web browser. </li>
+
+<i> All Group Members </i> Make sure to set your project! You’ll be switching between two project directories, your personal directory in your ‘homework’ folder for individual lab work, and your team’s directory which you created a shortcut to access from your ‘group’ folder. Don’t forget to do this every time you open Maya! 
+
+pm17.png
+
+If you have any questions, please ask the course staff! We are more than happy to help you in figuring out each aspect of animation, including project management.
