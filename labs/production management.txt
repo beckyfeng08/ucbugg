@@ -35,6 +35,34 @@ pm4.png
 
     <li> d. Don’t change anything else in this window and click on ‘Accept’ at the bottom. </li>
 
+
+
+<i> For Mac </i> 
+<li> 1. To start, open a new window in Finder. Navigate to your Documents folder by clicking Documents in the panel on the left. </li>
+<li> 2. In here, create a new folder, and name it ucbugg_spring_2023 *insert your semester and year in this format*. Make sure not to leave any spaces in your file path! Maya will get mad at you if there are any spaces in your file path, and we need to keep Maya happy, kind of like an aging parent. </li>
+<li> 3. Then, inside ucbugg_spring_2023, create a new folder and name it ‘homework’. Create a second folder called ‘group’ that we’re going to use later. This is how you’ll keep your personal lab work separate from your group project work. You can organize the folders by right-clicking, then choosing “Clean Up By -> Name”. </li>
+
+pm1.5.png
+
+<li> 4. Open up Maya 2022 and create a new file. You are going to use this file to create your project directory, so this can just be an empty file. </li>
+<li> 5. In your new Maya file, navigate to File > Project Window. </li>
+
+pm2.5.png
+
+<li> 6. This will open up your Project Window. This generates your project directory, which is how Maya keeps track of all the data (including textures, simulations, referenced files, and more) needed for work in Maya. </li>
+
+pm3.5.png
+
+<li> 7. Setting up your Project Window. </li>
+    <li> a. Click the “New” button. </li>
+    <li> b. In the ‘Current Project’ field, change the name to ‘homework_directory’ </li>
+    <li> c. In the ‘Location’ field, change the directory location to the file path we just set up. You can click the folder icon to the right to bring up a folder picker. If you’re following along, it should be /Users/*your computer username*/Documents/ucbugg_spring_2023/homework </li>
+
+pm4.5.png
+
+    <li> d. Don’t change anything else in this window and click on ‘Accept’ at the bottom. </li>
+
+<i> For All </i>
 <li> 8. Now, whenever you're going to do lab homework or make any Maya file not part of your team’s short, make sure to Set your project to ‘homework_directory’ so that everything is nice and orderly. </li>
 <li> 9. Setting your project is very easy! Just select File > Set Project, and then Navigate to the correct file path, and with the folder selected in blue, hit “Set” and you're good to go! </li>
 
@@ -42,10 +70,7 @@ pm5.png
 
 <li> 10. Pro tip: you can copy + paste file paths, so if you have the file path open in another File Explorer tab on your desktop, you can just copy + paste and save yourself some time. </li>
 
-<i> For Mac </i> 
-# I need someone who knows Mac stuff to help write this #
-
-LARGE HEADING: Group Project Directory + Version Control Setup
+HEADING LARGE: Group Project Directory + Version Control Setup
 <b> What is Version Control? </b>
 For those from outside of a Computer Science or technical background (like the author of this lab), Version Control may be a new concept, but it’s pretty straightforward and understandable! For UCBUGG shorts, we recommend hosting your group directory on Google Drive Desktop because they have a user-friendly version control system. 
 
@@ -68,9 +93,9 @@ pm6.png
 
 pm7.png
 
-    <li> d. <i> For Mac </i> #add something here# </li>
+    <li> d. <i> For Mac </i> Open Finder. You should see a Google Drive folder inside your favorites. </li>
 
-#add mac screenshot here#
+pm7.5.png
 
     <li> f. If you see folders in there, you’ve done it! Download Complete! </li>
 
@@ -111,7 +136,11 @@ The next steps need only be completed by your group’s Project Manager, as they
     <li> b. In the ‘Current Project’ field, change the name to ‘*your short’s name with no spaces*_group’ </li>
     <li> c. In the ‘Location’ field, set the directory location to the folder ‘group’ and into the group folder we set up earlier. This is on the file path from the group project folder we set up earlier, and it should read Documents/ucbugg_spring_2023/group if you’re following along on Windows. </li>
     <li> d. Select the shortcut we placed in the ‘group’ folder earlier so that it’s highlighted in blue. Then click ‘Select’ to save the location. </li>
-    <li> e. Don’t change anything else in this window and click on ‘Accept’ at the bottom. </li>
+    <li> e. The shortcuts do not show up on MacOS. To figure out the location of the workspace on your computer, navigate to the folder then open the “Edit” menu while holding down the Option key. There will be an option to “copy as pathname”. </li>
+
+pm12.5.png
+
+    <li> f. Don’t change anything else in this window and click on ‘Accept’ at the bottom. </li>
 
 pm13.png
 
