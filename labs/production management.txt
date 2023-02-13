@@ -1,4 +1,4 @@
-HEADING LARGE: PRODUCTION MANAGEMENT
+HEADING LARGE: Production Management
 HEADING MEDIUM: Introduction
 For UCBUGG, you will be working both individually on Lab Homework and as a team on your 30-60 second animated short. You’ll want to keep your <i> individual </i> project files separate from your <i> group </i> project files since you’ll be building assets for the labs that don’t belong in your short.
 
@@ -157,7 +157,7 @@ pm17.png
 
 If you have any questions, please ask the course staff! We are more than happy to help you in figuring out each aspect of animation, including project management.
 
-HEADING LARGE: SLIDE DECK
+HEADING LARGE: Slide Deck
 Review is one of the most important parts of animation. Collaboration and showing your work is how you and your team will generate new ideas, figure out what is and isn’t working, and generally find a creative rhythm. The slide deck is the setting for these reviews.
 
 <i> Project Manager </i>
@@ -167,21 +167,21 @@ pm18.png
 
 And you’re done! Feel free to make it as fancy as you like – and who doesn’t like pretty slides?
 
-<i> All Team Members <i/>
+<i> All Team Members </i>
 Confirm that all group members can see the slide deck on their own machines. It should look like this in each member’s drive:
 
 pm19.png
 
 Each week, you’ll upload screenshots of the work you do for the short. Make sure to include your name, the date you finished your work, and any notes or caveats (industry term for things you plan to fix later) you want to include in a caption below your screenshots. This will make group time much more efficient and easier, giving you more time to focus on the story, art direction, and any technical challenges you face as the semester goes on.
 
-HEADING LARGE: HOMEWORK SUBMISSION
+HEADING LARGE: Homework Submisssion
 Once you've followed the instructions on this lab, you should be able to easily access your group’s Google Drive folder. 
 
-<i> All Team Members <i/> Take the following screenshots for your homework submission:
+<i> All Team Members </i> Take the following screenshots for your homework submission:
 <li> 1. Your individual lab/homework directory open in your computer’s hard drive location (File Explorer (Windows) or Finder (Mac)). </li>
 <li> 2. Your group Google Drive folder open in your computer’s hard drive location. </li>
 <li> 3. Your group Google Drive folder open on your web browser (Google Chrome, Safari, Firefox, etc.) </li>
 <li> 4. Your individual Project Window in Maya (File > Project Window). </li>
 <li> 5. Your team’s Google Slides presentation for group time progress reviews. </li>
 
-You did it! Now, you'll be ready to keep track of all your files this semester! Go eat some ice cream, boba (do you eat boba?), or something else to celebrate. 
+You did it! Now, you'll be ready to keep track of all your files this semester! Go eat some ice cream, boba (do you eat boba?), or something else to celebrate.
