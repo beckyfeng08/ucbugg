@@ -174,7 +174,7 @@ pm19.png
 
 Each week, you’ll upload screenshots of the work you do for the short. Make sure to include your name, the date you finished your work, and any notes or caveats (industry term for things you plan to fix later) you want to include in a caption below your screenshots. This will make group time much more efficient and easier, giving you more time to focus on the story, art direction, and any technical challenges you face as the semester goes on.
 
-HEADING LARGE: Homework Submisssion
+HEADING LARGE: Homework Submission
 Once you've followed the instructions on this lab, you should be able to easily access your group’s Google Drive folder. 
 
 <i> All Team Members </i> Take the following screenshots for your homework submission:
