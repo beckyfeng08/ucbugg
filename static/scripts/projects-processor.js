@@ -4,7 +4,7 @@ var screenshots = {
 	"Omni.png": .5,
 	"restroom.png": .5,
 	"shootingSnail.png": .6,
-	"ThereYouAre.png": .5,
+	"ThereYouAre.png": .55,
 	"WindUpMouse.png": .5,
 	"VRChase.png": .75,
 	"TheConductor.png": .75,
