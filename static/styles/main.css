@@ -130,7 +130,6 @@ div.home-col p {
 	margin-bottom:0px;
 	padding-right: 40px;
 }
-
 div.col-wide {
 	width: 200%;
 }
@@ -323,8 +322,6 @@ p.announcements {
 	margin-left: -10px;
 	margin-bottom: -20px;
 }
-
-
 div.info-buttons {
 	text-align: center;
 	display: inline-block;
@@ -423,7 +420,7 @@ div.old-facilititty{
 	justify-items:left;
 }
 div.old-facilititty-individual{
-	display:block;
+	display:inline-block;
 	width: 20%;
 }
 img.old-sillytater {
