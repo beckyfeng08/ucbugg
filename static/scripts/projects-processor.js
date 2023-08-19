@@ -1,12 +1,12 @@
 // the number after each filename is roughly where in teh image the focal point is
 // must be number between 0 and 1
 var screenshots = {
-	"Omni.png": .5,
+	"Omni.png": .52,
 	"restroom.png": .5,
-	"shootingSnail.png": .6,
+	"shootingSnail.png": .5,
 	"ThereYouAre.png": .55,
 	"WindUpMouse.png": .5,
-	"VRChase.png": .75,
+	"VRChase.png": .65,
 	"TheConductor.png": .75,
 	"Chopsticks.png": .5,
 	"2tailz.png": .5,
