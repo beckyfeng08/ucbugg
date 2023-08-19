@@ -417,8 +417,16 @@ p.facilititty-body-text {
 }
 div.old-facilititty{
 	display:flex;
-	width: 80%;
 	margin: 5px;
+	width: 50%;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	justify-items:left;
+}
+div.old-facilititty-info{
+	display:flex;
+	margin: 5px;
+	width: 50%;
 	margin-top: 10px;
 	margin-bottom: 10px;
 	justify-items:left;
