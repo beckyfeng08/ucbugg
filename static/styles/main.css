@@ -418,17 +418,13 @@ p.facilititty-body-text {
 div.old-facilititty{
 	display:flex;
 	margin: 5px;
-	width: 50%;
 	margin-top: 10px;
 	margin-bottom: 10px;
 	justify-items:left;
 }
-div.old-facilititty-info{
-	display:flex;
-	margin: 5px;
-	width: 50%;
-	margin: 10px;
-	justify-items:left;
+div.old-facilititty-individual{
+	display:block;
+	width: 20%;
 }
 img.old-sillytater {
 	width: 50px;
