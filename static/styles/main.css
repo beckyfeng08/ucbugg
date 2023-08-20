@@ -413,11 +413,10 @@ p.facilititty-body-text {
 	color: #a7a9ac;
 }
 div.old-facilititty{
-	display:flex;
+	display: inline-block;
 	margin: 5px;
 	margin-top: 10px;
 	margin-bottom: 10px;
-	justify-items:left;
 }
 div.old-facilititty-individual{
 	display:inline-block;
