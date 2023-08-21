@@ -6,6 +6,8 @@ In the first rigging lab, we added a skeleton to a fox model. We're going to ret
 
 FILE: fox_and_joints.ma
 
+If you'd like, you can also follow alongside this lab with <a href="https://youtube.com/playlist?list=PLMKfrmDz1Tk12TbDqacJqX62vV5SEZct9&feature=shared">this playlist.</a>
+
 Where we left off:
 riglab1.png
 
