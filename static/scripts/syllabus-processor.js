@@ -57,8 +57,9 @@ function stringToDate(dateStr) {
 var setInfo = function(date) {
 	var i = 1;
 	assType = syllabusType.charAt(0).toUpperCase() + syllabusType.slice(1);
-	$("#due-dates" + collapseDate(date)).prepend('<p class="due"> DUE <b>' + syllabusObj[date]['Session 1 Due'] + '</b> for ' + getDayOfWeek(date) + ' </p>' +
-						 '<p class="due"> DUE <b>' + syllabusObj[date]['Session 2 Due'] + '</b> for ' + getDayOfWeek(syllabusObj[date]['Session 2 Class']) + ' </p>');
+	// Billy(2023 Fall) changed the 'getDayOfWeek(date)' to 'getDayOfWeek(date -1)', and the session 2 classes one. change it back if anything get wrong 
+	$("#due-dates" + collapseDate(date)).prepend('<p class="due"> DUE <b>' + syllabusObj[date]['Session 1 Due'] + '</b> for ' + getDayOfWeek(date - 1) + ' </p>' +
+						 '<p class="due"> DUE <b>' + syllabusObj[date]['Session 2 Due'] + '</b> for ' + getDayOfWeek(syllabusObj[date]['Session 2 Class'] - 1) + ' </p>');
 	// console.log(assType);
 	// $("#due-dates" + collapseDate(date)).empty();
 	while (assType + " Ass " + i in syllabusObj[date]) {
