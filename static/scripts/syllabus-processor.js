@@ -46,7 +46,7 @@ var setCurrentDate = function() {
 function getDayOfWeek(dateStr) {
 	const dayOfWeek = stringToDate(dateStr).getDay();    
 	return isNaN(dayOfWeek) ? null : 
-	  ['SATURDAY', 'SUNDAY', 'MONDAY', 'TUESDAY', 'WEDNESDAY', 'THURSDAY', 'FRIDAY'][dayOfWeek];
+	  ['MONDAY', 'TUESDAY', 'WEDNESDAY', 'THURSDAY', 'FRIDAY', 'SATURDAY', 'SUNDAY'][dayOfWeek];
   }
 
 function stringToDate(dateStr) {
